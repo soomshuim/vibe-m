@@ -1,5 +1,5 @@
 # VIBE-M STYLE.md
-Version: 1.0 (Modular & Playlist-Scalable)
+Version: 1.1 (Harmony Guard 추가)
 Last Updated: 2026-01-18
 Purpose: Define sound identity, prompt syntax, and expansion-safe style architecture
 
@@ -48,12 +48,29 @@ STYLE.md는 **VIBE-M 사운드의 헌법**이다.
 아래 문장은 **모든 Style Prompt에 그대로 포함**한다.
 (단어 수정 ❌, 순서 변경 ❌)
 
-> **Verse2: same melodic contour as v1, but more emotional—stronger dynamics with higher register or falsetto lift in the last 2 lines. Chorus: hook-first, repeated identically; chorus 2 bigger with backing vocals and end-line ad-libs only. Bridge: build every bar with added layers and intensity, no energy drop into chorus. Outro: instrumental fade.**
+> **Verse2: same melodic contour as v1, stronger dynamics + slightly higher register, minimal soulful runs in last 2 lines. Chorus: hook-first, repeat identically. Chorus 2 bigger with backing vocals, unison or octave unison only. No stacked harmonies, no choir-like backing vocals. End-line ad-libs only, very subtle, single-voice. Bridge: build every bar, no energy drop into chorus. Outro: instrumental fade.**
 
 이 문장은:
 - 곡의 기승전결을 고정하고
 - AI의 즉흥 구조 붕괴를 방지하며
 - 장르가 바뀌어도 "노래처럼 들리게" 만든다.
+
+### 2.1 Harmony Guard (화성 과잉 방지)
+
+Suno는 역할 미지정 시 "AI 합창단" 스타일로 과잉 서비스한다.
+아래 규칙으로 방지:
+
+| 금지 | 허용 |
+|------|------|
+| stacked harmonies | unison backing |
+| choir-like backing | octave unison only |
+| block chord harmonies | single-voice ad-libs |
+| 3도/6도 병행 화성 | call-and-response (single voice) |
+
+**핵심 원칙:**
+- "Backing vocals"의 **역할을 명시**해야 함
+- 금지만 하면 빈자리를 채우려 함 → 대체 역할 필수
+- 완전 차단보다 **타이밍 제한**이 효과적 (예: "no harmonies until last chorus")
 
 ---
 
