@@ -17,10 +17,16 @@ Rules:
 Deliverables:
 1. Seed Style Prompt (8–10 compressed tokens)
 2. Musicality Matrix (Verse2 / Chorus / Bridge rules)
-3. Allowed BPM range
-4. Allowed Key / Mode buckets
-5. Exclude Style (max 3 precise groups)
-6. Hard Constraints (Do NOT vary list)
+3. Safety Lines (Chorus2/Vocals/Guard - 3줄 압축, 반복 금지)
+4. Allowed BPM range
+5. Allowed Key / Mode buckets
+6. Exclude Style (vocal processing 중심, max 3 groups)
+7. Hard Constraints (Do NOT vary list)
+
+Safety Lines 작성 규칙:
+- 금지 문장 1회만 (반복하면 모델 둔감)
+- "하지 마" + "이렇게 해" 같이 써야 함
+- "drums/bass energy" 대신 "instrument thickness / stereo width" 사용
 
 Mandatory Check:
 Answer:

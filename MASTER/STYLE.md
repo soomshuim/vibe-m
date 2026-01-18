@@ -1,5 +1,5 @@
 # VIBE-M STYLE.md
-Version: 1.3 (Safety Lines 강화 + Chorus 2 분리)
+Version: 1.4 (Safety Lines 압축 + 긍정 방향 가드)
 Last Updated: 2026-01-18
 Purpose: Define sound identity, prompt syntax, and expansion-safe style architecture
 
@@ -48,7 +48,9 @@ STYLE.md는 **VIBE-M 사운드의 헌법**이다.
 아래 문장은 **모든 Style Prompt에 그대로 포함**한다.
 (단어 수정 ❌, 순서 변경 ❌)
 
-> **Verse2: same melodic contour as v1, stronger dynamics + slightly higher register, minimal soulful runs in last 2 lines. Chorus: hook-first, repeat identically. Chorus 2: do NOT add harmony stacks or choir layers. Chorus 2 bigger via drums/bass energy, extra guitar layer, and wider stereo instruments. Add only 1–2 tiny ad-libs at end of lines, single voice, unison, low in mix. Bridge: build every bar, no energy drop into chorus. Outro: instrumental fade.**
+> **Verse2: same melodic contour as v1, stronger dynamics + slightly higher register, minimal soulful runs in last 2 lines. Chorus: hook-first, repeat identically. Bridge: build every bar, no energy drop into chorus. Outro: instrumental fade.**
+
+*Chorus2 / Vocals / Safety는 §2.1 Safety Lines로 분리 (본문에 1회만 삽입)*
 
 이 문장은:
 - 곡의 기승전결을 고정하고
@@ -57,23 +59,19 @@ STYLE.md는 **VIBE-M 사운드의 헌법**이다.
 
 ### 2.1 Safety Lines (필수 안전 문장)
 
-**모든 Style Prompt에 반드시 포함.** Main Style과 별도로 붙인다.
+**모든 Style Prompt에 반드시 포함.** 금지 문장은 **1회로 압축**, 반복하면 모델이 둔감해짐.
 
-**기본 버전:**
+**권장 버전 (3줄 압축형):**
 ```
-No choir / no stacked harmonies / no thick harmony layers.
-Backing vocals only: single-voice unison (or octave-unison), end-line ad-libs only, very low in mix.
-No EDM vocal processing: no vocoder, no vocal chops, minimal autotune, natural lead.
-```
-
-**강화 버전 (backing vocals 트리거 회피):**
-```
-No choir / no stacked harmonies / no thick harmony layers.
-No backing vocal harmonies. If any doubles: single-voice unison (or octave-unison) only, end-line ad-libs only, very low in mix.
-No EDM vocal processing: no vocoder, no vocal chops, minimal autotune, natural lead.
+Chorus2 bigger via instruments only (extra guitar texture, slightly wider stereo, stronger bass movement), NOT via vocal layers.
+Vocals: lead only. No harmony stacks/choir. If any double: single-voice unison, very low, end-line ad-libs only.
+Keep vocals organic and intimate (no EDM-style vocal sound).
 ```
 
-> "backing vocals" → "doubles"로 우회하면 트리거 확률 감소
+**핵심 원칙:**
+- "하지 마" + "이렇게 해"를 같이 써야 모델이 다른 과장으로 안 튐
+- "drums/bass energy" 같은 표현은 클럽 드롭 트리거 위험 → **instrument thickness / stereo width / arrangement lift** 사용
+- 금지 문장 반복 ❌ → 짧고 단단하게 1회
 
 ### 2.2 Harmony Guard 원칙
 
