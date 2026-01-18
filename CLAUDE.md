@@ -11,7 +11,9 @@
 | **운영 마스터 플랜** | `MASTER/MANAGER.md` |
 | **가사 공학 규칙** | `MASTER/LYRICS.md` |
 | **사운드/스타일 가이드** | `MASTER/STYLE.md` |
-| CLI 스펙 | `vibem.md` |
+| **역할 분리 시스템** | `MASTER/ROLES.md` |
+| **역할별 프롬프트** | `MASTER/prompts/` |
+| CLI 스펙 | `MASTER/VIBE-M_Master_Plan.md` |
 | CLI 코드 | `vibem.py` |
 | 버그 패턴 | `.ai/lessons-learned.md` |
 | 현재 상태 | `.ai/SESSION.md` |
@@ -34,9 +36,11 @@
 | Style Prompt 작성 | `MASTER/STYLE.md` | 전체 |
 | 플레이리스트 프로파일 | `MASTER/STYLE.md` | Section 3 |
 | QC/Fail Fast 기준 | `MASTER/MANAGER.md` | Section 1, 3 |
+| 역할 분리/AI 작업 | `MASTER/ROLES.md` | 전체 |
+| 역할별 프롬프트 | `MASTER/prompts/` | 해당 역할 파일 |
 | FFmpeg 필터 작업 | `.ai/lessons-learned.md` | "필터 그래프 버그" 섹션 |
 | 정규화 작업 | `.ai/lessons-learned.md` | "ffmpeg-normalize 버그" 섹션 |
-| 새 커맨드 추가 | `vibem.md` | CLI 커맨드 명세 |
+| 새 커맨드 추가 | `MASTER/VIBE-M_Master_Plan.md` | CLI 커맨드 명세 |
 
 ## Workflow Checklists
 
@@ -81,7 +85,15 @@
 vibe-m/
 ├── MASTER/                 # 프로젝트 헌법
 │   ├── MANAGER.md          # 운영 마스터 플랜 (Phase 0~6)
-│   └── LYRICS.md           # 가사 공학 규칙 + 아카이브
+│   ├── LYRICS.md           # 가사 공학 규칙 + 아카이브
+│   ├── STYLE.md            # 사운드/스타일 가이드
+│   ├── ROLES.md            # 역할 분리 시스템 (SSOT)
+│   ├── VIBE-M_Master_Plan.md # CLI 스펙
+│   └── prompts/            # 역할별 프롬프트 템플릿
+│       ├── 00_system.txt
+│       ├── 01_researcher.txt
+│       ├── 02_designer.txt
+│       └── 03_variation.txt
 │
 ├── SERIES/                 # 시리즈별 프로젝트
 │   └── [Series_Name]/
@@ -95,7 +107,6 @@ vibe-m/
 │           └── output/     # (자동생성)
 │
 ├── vibem.py                # CLI 메인 코드
-├── vibem.md                # CLI 스펙
 ├── requirements.txt        # Python 의존성
 ├── CLAUDE.md               # 이 파일
 └── .ai/                    # AI 전용 메모리

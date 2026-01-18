@@ -2,11 +2,11 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-18
+> Last updated: 2026-01-18 (Evening)
 
 ## 완료된 작업
 
-### 2026-01-18
+### 2026-01-18 (오전)
 
 - [x] 프로젝트 초기 설정
   - `vibem.py` CLI 구현 (Click 기반)
@@ -20,37 +20,68 @@
   - `init` - 프로젝트 초기화
   - `clean` - 작업 폴더 정리
 
-- [x] 버그 수정
+- [x] 버그 수정 3건
   - 필터 그래프 인덱싱 오류 수정
   - ffmpeg-normalize PATH 문제 해결
   - MP3 → WAV 출력 형식 변경
 
 - [x] 테스트 완료
-  - `series/Test_Series/2026-01-18/` 테스트 프로젝트
+  - `SERIES/Test_Series/2026-01-18/` 테스트 프로젝트
   - preview 30초 미리보기 정상 확인
 
-- [x] 문서화
-  - `vibem.md` 프로젝트 구조 업데이트
-  - `CLAUDE.md` 생성
-  - `.ai/SESSION.md` 생성
-  - `.ai/lessons-learned.md` 생성
+### 2026-01-18 (오후)
 
-- [x] 폴더 네이밍 정리
-  - `TestSeries` → `Test_Series` 변경
+- [x] 프로젝트 구조 재정비
+  - `series/` → `SERIES/` 대문자 변경
+  - `MASTER/` 폴더 생성
+
+- [x] MASTER 문서 3종 완성
+  - `MANAGER.md` - 운영 마스터 플랜 (QC, Fail Fast)
+  - `LYRICS.md` - 가사 공학 규칙 (Metric Mirroring 등)
+  - `STYLE.md` - 사운드/스타일 가이드 (Playlist Profile)
+
+- [x] `/coach` 커맨드 생성
+  - `.claude/commands/coach.md`
+  - 가사 검토, Style Prompt 검토, QC 체크리스트
+
+- [x] GitHub 연동
+  - Repository: https://github.com/soomshuim/vibe-m
+  - Branch: master
+  - Initial commit 완료
+
+- [x] `/coach` 테스트
+  - LYRICS.md Reference Example 검토 → PASS
 
 ## 현재 상태
 
 - **프로젝트**: Production Ready (v1.0.0)
-- **테스트 데이터**: `series/Test_Series/2026-01-18/`
+- **GitHub**: https://github.com/soomshuim/vibe-m (master)
+- **테스트 데이터**: `SERIES/Test_Series/2026-01-18/`
   - 트랙: `01__마음밖__Sentimental__RnB-Ballad__100.mp3` (3.5분)
   - 에셋: `loop.mp4`, `thumb.jpg` 준비됨
   - preview 생성 완료 (30초)
 
+## 진행 중
+
+없음
+
+## 완료된 추가 작업
+
+### 2026-01-18 (저녁)
+
+- [x] Role System 문서화 완료
+  - `MASTER/ROLES.md` 생성 (v1.0)
+  - `MASTER/prompts/` 폴더 생성
+    - `00_system.txt` - 공유 컨텍스트
+    - `01_researcher.txt` - Seed Researcher 프롬프트
+    - `02_designer.txt` - Seed Designer 프롬프트
+    - `03_variation.txt` - Variation Designer 프롬프트
+  - `CLAUDE.md` Quick Reference 업데이트
+
 ## 다음 작업 (예정)
 
 - [ ] `pack` 커맨드로 최종 영상 생성
-- [ ] 트랙 추가하여 크로스페이드 테스트
-- [ ] 실제 유튜브 업로드 테스트
+- [ ] Lyrics Generator 구현 (보류 중)
 
 ## 알려진 이슈
 
@@ -60,7 +91,13 @@
 
 | 파일 | 용도 |
 |------|------|
-| `vibem.md` | 프로젝트 스펙 |
+| `MASTER/MANAGER.md` | 운영 마스터 플랜 |
+| `MASTER/LYRICS.md` | 가사 공학 규칙 |
+| `MASTER/STYLE.md` | 사운드/스타일 가이드 |
+| `MASTER/ROLES.md` | 역할 분리 시스템 (SSOT) |
+| `MASTER/prompts/` | 역할별 프롬프트 템플릿 |
+| `MASTER/VIBE-M_Master_Plan.md` | CLI 스펙 |
 | `vibem.py` | 메인 CLI 코드 |
 | `CLAUDE.md` | Claude 작업 지침 |
+| `.claude/commands/coach.md` | /coach 커맨드 |
 | `.ai/lessons-learned.md` | 버그 패턴 |
