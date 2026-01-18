@@ -1,5 +1,5 @@
 # VIBE-M STYLE.md
-Version: 1.2 (Safety Lines + Exclude 재설계)
+Version: 1.3 (Safety Lines 강화 + Chorus 2 분리)
 Last Updated: 2026-01-18
 Purpose: Define sound identity, prompt syntax, and expansion-safe style architecture
 
@@ -48,7 +48,7 @@ STYLE.md는 **VIBE-M 사운드의 헌법**이다.
 아래 문장은 **모든 Style Prompt에 그대로 포함**한다.
 (단어 수정 ❌, 순서 변경 ❌)
 
-> **Verse2: same melodic contour as v1, stronger dynamics + slightly higher register, minimal soulful runs in last 2 lines. Chorus: hook-first, repeat identically. Chorus 2 bigger via instruments + dynamics, not vocal layers. Add only 1–2 tiny ad-libs at end of lines, single voice, unison, low in mix. Bridge: build every bar, no energy drop into chorus. Outro: instrumental fade.**
+> **Verse2: same melodic contour as v1, stronger dynamics + slightly higher register, minimal soulful runs in last 2 lines. Chorus: hook-first, repeat identically. Chorus 2: do NOT add harmony stacks or choir layers. Chorus 2 bigger via drums/bass energy, extra guitar layer, and wider stereo instruments. Add only 1–2 tiny ad-libs at end of lines, single voice, unison, low in mix. Bridge: build every bar, no energy drop into chorus. Outro: instrumental fade.**
 
 이 문장은:
 - 곡의 기승전결을 고정하고
@@ -59,11 +59,21 @@ STYLE.md는 **VIBE-M 사운드의 헌법**이다.
 
 **모든 Style Prompt에 반드시 포함.** Main Style과 별도로 붙인다.
 
+**기본 버전:**
 ```
 No choir / no stacked harmonies / no thick harmony layers.
 Backing vocals only: single-voice unison (or octave-unison), end-line ad-libs only, very low in mix.
 No EDM vocal processing: no vocoder, no vocal chops, minimal autotune, natural lead.
 ```
+
+**강화 버전 (backing vocals 트리거 회피):**
+```
+No choir / no stacked harmonies / no thick harmony layers.
+No backing vocal harmonies. If any doubles: single-voice unison (or octave-unison) only, end-line ad-libs only, very low in mix.
+No EDM vocal processing: no vocoder, no vocal chops, minimal autotune, natural lead.
+```
+
+> "backing vocals" → "doubles"로 우회하면 트리거 확률 감소
 
 ### 2.2 Harmony Guard 원칙
 
@@ -194,7 +204,7 @@ STYLE.md의 핵심은 **Playlist Profile 분리**다.
 
 ### Group A – Vocal Processing (EDM 보이스 차단)
 ```
-autotune heavy, vocoder, vocal chop, formant shift, pitchy EDM lead, hyperpop vocal
+autotune heavy, vocoder, vocal chop, formant shift, pitchy EDM lead, hyperpop vocal, hard tune, overprocessed vocal
 ```
 
 ### Group B – EDM Signatures
