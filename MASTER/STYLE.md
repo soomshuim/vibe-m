@@ -1,5 +1,5 @@
 # VIBE-M STYLE.md
-Version: 1.4 (Safety Lines 압축 + 긍정 방향 가드)
+Version: 1.5 (제로 베이스라인 - 코러스 완전 차단)
 Last Updated: 2026-01-18
 Purpose: Define sound identity, prompt syntax, and expansion-safe style architecture
 
@@ -61,35 +61,38 @@ STYLE.md는 **VIBE-M 사운드의 헌법**이다.
 
 **모든 Style Prompt에 반드시 포함.** 금지 문장은 **1회로 압축**, 반복하면 모델이 둔감해짐.
 
-**권장 버전 (3줄 압축형):**
+**권장 버전 (2줄 완전 차단형):**
 ```
-Chorus2 bigger via instruments only (extra guitar texture, slightly wider stereo, stronger bass movement), NOT via vocal layers.
-Vocals: lead only. No harmony stacks/choir. If any double: single-voice unison, very low, end-line ad-libs only.
-Keep vocals organic and intimate (no EDM-style vocal sound).
+Lead vocal only. No backing vocals. No harmonies. No doubles. No choir.
+Chorus2 bigger only by arrangement density and stereo width of instruments, vocals unchanged.
 ```
 
 **핵심 원칙:**
-- "하지 마" + "이렇게 해"를 같이 써야 모델이 다른 과장으로 안 튐
-- "drums/bass energy" 같은 표현은 클럽 드롭 트리거 위험 → **instrument thickness / stereo width / arrangement lift** 사용
-- 금지 문장 반복 ❌ → 짧고 단단하게 1회
+- "Backing vocals" 단어 자체가 트리거 → **아예 제거**
+- "Unison", "octave unison", "ad-libs"도 보컬 레이어 트리거 → **제로 베이스라인**
+- "bigger"는 반드시 **"vocals unchanged"**로 잠금
+- 프롬프트는 짧을수록 좋음: **Core 8~10 토큰 + Safety 2줄 + Musicality 1줄**
 
-### 2.2 Harmony Guard 원칙
+### 2.2 Harmony Guard 원칙 (제로 베이스라인)
 
-| 금지 | 허용 |
-|------|------|
-| stacked harmonies | unison backing |
-| choir-like backing | octave unison only |
-| block chord harmonies | single-voice ad-libs |
-| 3도/6도 병행 화성 | call-and-response (single voice) |
+**현재 목표: 코러스 완전 제거**
+
+| 완전 금지 |
+|-----------|
+| backing vocals |
+| harmonies / doubles |
+| choir / ensemble |
+| unison / octave unison |
+| ad-libs / shouts |
 
 **핵심:**
-- "Backing vocals" 단어 자체가 트리거 → 역할 명시 필수
-- 금지만 하면 빈자리 채움 → **대체 역할 지정**
-- "커지는 방법"을 **편곡/다이내믹**으로 지정 (보컬 레이어 아님)
+- 보컬은 **Lead only** → 나머지 전부 금지
+- "Chorus2 bigger"는 **vocals unchanged**로 잠금
+- 베이스라인 잡은 후 필요시 점진적 허용
 
 **운영 팁:**
-- backing vocals가 계속 터지면 → `no backing vocals` + `no crowd-like shouts`
 - EDM 톤 재발 시 → Vocal Persona를 Pure로 스왑 후 다시 Husky로 복귀
+- 안정화 후 ad-libs 1~2개 허용 테스트 가능
 
 ---
 
@@ -195,27 +198,27 @@ STYLE.md의 핵심은 **Playlist Profile 분리**다.
 
 ---
 
-## 🚫 6. Exclude Style Rule (보컬 프로덕션 중심)
+## 🚫 6. Exclude Style Rule (합창/화성 중심)
 
 - 최대 **3개 그룹**까지만 사용
-- 장르보다 **보컬 프로덕션**을 정밀 타격
+- **합창/화성 방지에 집중**, EDM은 1~2개만
 
-### Group A – Vocal Processing (EDM 보이스 차단)
+### Group A – Choir/Harmony (최우선)
 ```
-autotune heavy, vocoder, vocal chop, formant shift, pitchy EDM lead, hyperpop vocal, hard tune, overprocessed vocal
-```
-
-### Group B – EDM Signatures
-```
-EDM drops, big room, supersaw lead, festival, sidechain pumping
+choir, gospel choir, stacked harmonies, harmony vocals, vocal ensemble, big harmonies, lush harmonies
 ```
 
-### Group C – Choir/Harmony (합창 차단)
+### Group B – Vocal Processing
 ```
-choir, gospel choir, stacked harmonies, big harmonies, ensemble vocals
+vocoder, vocal chop, hyperpop vocal, formant shift, hard tune, overprocessed vocal
 ```
 
-> 기존 "Piano" 같은 악기 금지는 트랙별 필요에 따라 선택적 적용
+### Group C – EDM (최소한만)
+```
+EDM drops, big room
+```
+
+> 악기 금지(Piano 등)는 트랙별 선택적 적용
 
 ---
 

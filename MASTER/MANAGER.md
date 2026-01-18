@@ -1,5 +1,5 @@
 # VIBE-M MANAGER.md
-Version: 1.0 (Single Source of Truth)
+Version: 1.1 (코러스 과다 QC 추가)
 Last Updated: 2026-01-18
 Role: Executive Manager / Quality Gatekeeper
 Applies To: All VIBE-M projects, series, and tracks
@@ -66,3 +66,21 @@ Manager는 다음 항목을 검토한다.
 - Style Prompt가 8~10 토큰 압축 규칙을 지키는지
 - Exclude Style이 3그룹 이내인지
 - Musicality Matrix 적용 여부
+
+### Phase 2. Track QC (3-Point Fail Fast + 코러스 검사)
+
+| 체크포인트 | 기준 | 판정 |
+|------------|------|------|
+| **Intro (0:00~0:20)** | 발음 뭉개짐/웅얼거림 | → Fail |
+| **Chorus** | 훅이 10초 내 안 잡힘 | → Hold |
+| **Chorus** | 합창/다성/EDM 보컬 톤 감지 | → **Fail** |
+| **Outro** | 끊김/클릭 노이즈 | → Fail |
+| **오디오 표준** | -14 LUFS / -1.0 dBTP 미충족 | → Fail |
+
+**코러스 과다 Fail 기준 (신규):**
+- Backing vocals / harmony layers 존재
+- Choir-like 또는 ensemble 보컬 톤
+- EDM 스타일 보컬 프로세싱 (vocoder, hard tune 등)
+- Stacked harmonies / doubles
+
+> 프롬프트로 100% 안 막히면 QC에서 하드 컷

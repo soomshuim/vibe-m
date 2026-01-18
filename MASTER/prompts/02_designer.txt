@@ -23,10 +23,11 @@ Deliverables:
 6. Exclude Style (vocal processing 중심, max 3 groups)
 7. Hard Constraints (Do NOT vary list)
 
-Safety Lines 작성 규칙:
-- 금지 문장 1회만 (반복하면 모델 둔감)
-- "하지 마" + "이렇게 해" 같이 써야 함
-- "drums/bass energy" 대신 "instrument thickness / stereo width" 사용
+Safety Lines 작성 규칙 (제로 베이스라인):
+- "backing vocals" 단어 자체 사용 금지 → "Lead vocal only. No backing vocals."
+- "unison", "ad-libs" 등도 보컬 레이어 트리거 → 제로로
+- "Chorus2 bigger" → 반드시 "vocals unchanged" 포함
+- 프롬프트는 짧게: Core 8~10 토큰 + Safety 2줄 + Musicality 1줄
 
 Mandatory Check:
 Answer:
