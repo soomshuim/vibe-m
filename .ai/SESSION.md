@@ -71,6 +71,7 @@
 
 - [x] Role System 문서화 완료
   - `MASTER/ROLES.md` 생성 (v1.0)
+  - `MASTER/QUICK_REF.md` 생성 - 사람용 운영 매뉴얼
   - `MASTER/prompts/` 폴더 생성
     - `00_system.txt` - 공유 컨텍스트
     - `01_researcher.txt` - Seed Researcher 프롬프트
@@ -95,6 +96,7 @@
 | `MASTER/LYRICS.md` | 가사 공학 규칙 |
 | `MASTER/STYLE.md` | 사운드/스타일 가이드 |
 | `MASTER/ROLES.md` | 역할 분리 시스템 (SSOT) |
+| `MASTER/QUICK_REF.md` | 사람용 운영 매뉴얼 |
 | `MASTER/prompts/` | 역할별 프롬프트 템플릿 |
 | `MASTER/VIBE-M_Master_Plan.md` | CLI 스펙 |
 | `vibem.py` | 메인 CLI 코드 |

@@ -12,6 +12,7 @@
 | **가사 공학 규칙** | `MASTER/LYRICS.md` |
 | **사운드/스타일 가이드** | `MASTER/STYLE.md` |
 | **역할 분리 시스템** | `MASTER/ROLES.md` |
+| **사람용 운영 매뉴얼** | `MASTER/QUICK_REF.md` |
 | **역할별 프롬프트** | `MASTER/prompts/` |
 | CLI 스펙 | `MASTER/VIBE-M_Master_Plan.md` |
 | CLI 코드 | `vibem.py` |
@@ -88,6 +89,7 @@ vibe-m/
 │   ├── LYRICS.md           # 가사 공학 규칙 + 아카이브
 │   ├── STYLE.md            # 사운드/스타일 가이드
 │   ├── ROLES.md            # 역할 분리 시스템 (SSOT)
+│   ├── QUICK_REF.md        # 사람용 운영 매뉴얼
 │   ├── VIBE-M_Master_Plan.md # CLI 스펙
 │   └── prompts/            # 역할별 프롬프트 템플릿
 │       ├── 00_system.txt
