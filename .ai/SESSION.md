@@ -69,7 +69,7 @@
 
 ### 2026-01-18 (저녁)
 
-- [x] Role System 문서화 완료
+- [x] Role System 문서화 완료 (`6db9639`, `cabecb6`)
   - `MASTER/ROLES.md` 생성 (v1.0)
   - `MASTER/QUICK_REF.md` 생성 - 사람용 운영 매뉴얼
   - `MASTER/prompts/` 폴더 생성
@@ -78,6 +78,7 @@
     - `02_designer.txt` - Seed Designer 프롬프트
     - `03_variation.txt` - Variation Designer 프롬프트
   - `CLAUDE.md` Quick Reference 업데이트
+  - `CHANGELOG.md` 생성
 
 ## 다음 작업 (예정)
 
@@ -103,3 +104,4 @@
 | `CLAUDE.md` | Claude 작업 지침 |
 | `.claude/commands/coach.md` | /coach 커맨드 |
 | `.ai/lessons-learned.md` | 버그 패턴 |
+| `CHANGELOG.md` | 변경 이력 |
