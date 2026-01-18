@@ -1,5 +1,5 @@
 # VIBE-M STYLE.md
-Version: 1.1 (Harmony Guard 추가)
+Version: 1.2 (Safety Lines + Exclude 재설계)
 Last Updated: 2026-01-18
 Purpose: Define sound identity, prompt syntax, and expansion-safe style architecture
 
@@ -48,17 +48,24 @@ STYLE.md는 **VIBE-M 사운드의 헌법**이다.
 아래 문장은 **모든 Style Prompt에 그대로 포함**한다.
 (단어 수정 ❌, 순서 변경 ❌)
 
-> **Verse2: same melodic contour as v1, stronger dynamics + slightly higher register, minimal soulful runs in last 2 lines. Chorus: hook-first, repeat identically. Chorus 2 bigger with backing vocals, unison or octave unison only. No stacked harmonies, no choir-like backing vocals. End-line ad-libs only, very subtle, single-voice. Bridge: build every bar, no energy drop into chorus. Outro: instrumental fade.**
+> **Verse2: same melodic contour as v1, stronger dynamics + slightly higher register, minimal soulful runs in last 2 lines. Chorus: hook-first, repeat identically. Chorus 2 bigger via instruments + dynamics, not vocal layers. Add only 1–2 tiny ad-libs at end of lines, single voice, unison, low in mix. Bridge: build every bar, no energy drop into chorus. Outro: instrumental fade.**
 
 이 문장은:
 - 곡의 기승전결을 고정하고
 - AI의 즉흥 구조 붕괴를 방지하며
 - 장르가 바뀌어도 "노래처럼 들리게" 만든다.
 
-### 2.1 Harmony Guard (화성 과잉 방지)
+### 2.1 Safety Lines (필수 안전 문장)
 
-Suno는 역할 미지정 시 "AI 합창단" 스타일로 과잉 서비스한다.
-아래 규칙으로 방지:
+**모든 Style Prompt에 반드시 포함.** Main Style과 별도로 붙인다.
+
+```
+No choir / no stacked harmonies / no thick harmony layers.
+Backing vocals only: single-voice unison (or octave-unison), end-line ad-libs only, very low in mix.
+No EDM vocal processing: no vocoder, no vocal chops, minimal autotune, natural lead.
+```
+
+### 2.2 Harmony Guard 원칙
 
 | 금지 | 허용 |
 |------|------|
@@ -67,10 +74,14 @@ Suno는 역할 미지정 시 "AI 합창단" 스타일로 과잉 서비스한다.
 | block chord harmonies | single-voice ad-libs |
 | 3도/6도 병행 화성 | call-and-response (single voice) |
 
-**핵심 원칙:**
-- "Backing vocals"의 **역할을 명시**해야 함
-- 금지만 하면 빈자리를 채우려 함 → 대체 역할 필수
-- 완전 차단보다 **타이밍 제한**이 효과적 (예: "no harmonies until last chorus")
+**핵심:**
+- "Backing vocals" 단어 자체가 트리거 → 역할 명시 필수
+- 금지만 하면 빈자리 채움 → **대체 역할 지정**
+- "커지는 방법"을 **편곡/다이내믹**으로 지정 (보컬 레이어 아님)
+
+**운영 팁:**
+- backing vocals가 계속 터지면 → `no backing vocals` + `no crowd-like shouts`
+- EDM 톤 재발 시 → Vocal Persona를 Pure로 스왑 후 다시 Husky로 복귀
 
 ---
 
@@ -176,31 +187,53 @@ STYLE.md의 핵심은 **Playlist Profile 분리**다.
 
 ---
 
-## 🚫 6. Exclude Style Rule (장르 오염 방지)
+## 🚫 6. Exclude Style Rule (보컬 프로덕션 중심)
 
 - 최대 **3개 그룹**까지만 사용
-- 광범위 단어 금지, **정밀 타격**
+- 장르보다 **보컬 프로덕션**을 정밀 타격
 
-### Allowed Examples
-- trap / 808
-- heavy EDM drops
-- shouting / screaming
-- metal distortion
+### Group A – Vocal Processing (EDM 보이스 차단)
+```
+autotune heavy, vocoder, vocal chop, formant shift, pitchy EDM lead, hyperpop vocal
+```
+
+### Group B – EDM Signatures
+```
+EDM drops, big room, supersaw lead, festival, sidechain pumping
+```
+
+### Group C – Choir/Harmony (합창 차단)
+```
+choir, gospel choir, stacked harmonies, big harmonies, ensemble vocals
+```
+
+> 기존 "Piano" 같은 악기 금지는 트랙별 필요에 따라 선택적 적용
 
 ---
 
 ## 🧱 7. Prompt Construction Order (절대 순서)
 
 Style Prompt는 반드시 아래 순서로 작성한다.
+**총 길이: 공백 포함 1000자 이내** (Suno 제한)
 
+### Main Style (압축형, 8–10 토큰)
 1. Genre / BPM / Key
 2. Playlist Profile Bias
 3. Slot A (Lead Instrument)
 4. Core Sound DNA
 5. Slot B (Groove)
 6. Vocal Persona
-7. Musicality Matrix (고정 문장)
-8. Exclude Style
+
+### Safety Lines (필수, §2.1 그대로)
+7. No choir / no stacked harmonies 문장
+8. Backing vocals 역할 지정 문장
+9. No EDM vocal processing 문장
+
+### Musicality Matrix
+10. §2 고정 문장
+
+### Exclude Style
+11. Group A/B/C 중 필요한 것만
 
 ---
 
