@@ -80,10 +80,25 @@
   - `CLAUDE.md` Quick Reference 업데이트
   - `CHANGELOG.md` 생성
 
+- [x] STYLE.md 제로 베이스라인 진화 (`fcadb70` ~ `66a7a76`)
+  - v1.1: Harmony Guard 추가
+  - v1.2: Safety Lines + Exclude 재설계
+  - v1.3: Safety Lines 강화 + Chorus 2 분리
+  - v1.4: Safety Lines 압축 + 긍정 방향 가드
+  - v1.5: 제로 베이스라인 - 코러스 완전 차단
+
+- [x] MANAGER.md v1.1 (`66a7a76`)
+  - Phase 2 Track QC에 코러스 과다 Fail 기준 추가
+
+- [x] concept.md 기록 (`b5fce3d`)
+  - Track 01~03 가사/스타일 기록
+
 ## 다음 작업 (예정)
 
-- [ ] `pack` 커맨드로 최종 영상 생성
-- [ ] Lyrics Generator 구현 (보류 중)
+- [ ] Track 02/03 파일명 확정
+- [ ] 제로 베이스라인 프롬프트로 Track 04 생성 테스트
+- [ ] QC Fail 기준 실제 적용 검증
+- [ ] (선택) ad-libs 점진적 허용 테스트
 
 ## 알려진 이슈
 
