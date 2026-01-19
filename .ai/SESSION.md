@@ -180,10 +180,21 @@
     - "Chorus peak note should sustain at least 1.5x longer than any Verse note"
     - STYLE.md + 03_variation.txt에 추가
 
+- [x] **LYRICS.md v1.2 + STYLE.md v2.0 피드백 영구 반영**
+  - **LYRICS.md v1.2:**
+    - 1.2 Ending Mirroring 강화 (품사 불일치 = FAIL)
+    - 1.9 Physical Object Anchor Rule (물성 오브젝트 앵커) 추가
+    - Case 09: Abstract Word Density (추상어 과밀) 추가
+    - Case 10: Ending 품사 불일치 추가
+  - **STYLE.md v2.0:**
+    - 4.4 Belt/Tempo Conflict Rule 추가 (Chill에서 belt 충돌)
+    - Slot F: Mood Bucket 추가 (Chill/Hazy/Ethereal/Nocturne 등)
+    - 6) Exclude 강화 (3그룹 최대, 과도한 Exclude 부작용 경고)
+
 ## 다음 작업 (예정)
 
-- [ ] Track 04 물안개 Style Prompt에 Energy Permission 블록 적용 후 재생성 테스트
-- [ ] Track 05-10 순차 제작
+- [ ] Track 05 윤곽 Suno 생성 테스트
+- [ ] Track 06-10 순차 제작
 - [ ] 10곡 완료 후 validate → pack
 
 ## 알려진 이슈

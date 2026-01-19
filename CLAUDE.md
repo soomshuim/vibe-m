@@ -82,13 +82,14 @@ Step 3. If all pass → output with QC 테이블
 | # | 규칙 | 체크 내용 |
 |---|------|----------|
 | 1.1 | Metric Mirroring | V1-V2 음절 수 동일 |
-| 1.2 | Ending Mirroring | 행 끝 품사/어미 패턴 일치 |
+| 1.2 | Ending Mirroring | **행 끝 품사 엄격 일치** (동사↔동사, 형용사↔형용사) |
 | 1.3 | Chorus Static | 3~4행, 100% 동일 반복 |
 | 1.4 | Bridge Anchor | Thesis 1라인 고정 + Scene 2~3라인 변주 |
 | 1.5 | Vocabulary Independence | 이전 트랙과 핵심 키워드 겹침 없음 |
 | 1.6 | Snapshot Hook | Chorus 1-2행 명사+동사 |
 | 1.7 | Bridge Thesis | 현상 기반 (사람 의존 X) |
 | 1.8 | V2 Escalation | 마지막 2행 신체 반응/감정 상승 |
+| 1.9 | Physical Object Anchor | **각 섹션에 물성 오브젝트 1개 이상** (추상어 과밀 금지) |
 | 2.1 | Pure Input | 괄호/영어 설명/지시어 없음 |
 
 **검증 출력 포맷:**
@@ -114,14 +115,16 @@ Section C: 키워드 축 요약 (이전 트랙과 비교)
 | S6 | Key | 조성 | "key Eb Major" |
 | S7 | Musicality Matrix | V2/Chorus/Bridge/Outro 지시 | "Verse2 same melodic contour..." |
 | S8 | Harmony Guard | 코러스/화성 금지 명시 | "No backing vocals, no choir" |
-| S9 | Chorus Expansion | Chorus2 악기만 확장 | "vocals unchanged" |
-| S10 | Chorus Layer Block | 코러스 레이어 완전 차단 문장 | "Lead vocal only throughout; absolutely no vocal layers..." |
+| S9 | Chorus Expansion | Chorus2 악기만 확장 | "vocal may intensify but no layers" |
+| S10 | Chorus Layer Block | 코러스 레이어 완전 차단 문장 | "Lead vocal remains single and dominant..." |
 | S11 | Exclude 충돌 검사 | Style 톤과 Exclude 항목 겹침 없음 | Style에 soulful → Exclude에 soulful 금지 |
+| S12 | Belt/Tempo 충돌 검사 | **Chill(70-80 BPM)에서 belt 금지** | soft airy + belt = 충돌 |
+| S13 | Exclude 그룹 수 | **최대 3그룹** | 과도한 Exclude = 부작용 |
 
 **검증 프로세스:**
 ```
 Step 1. Generate Style Prompt
-Step 2. Run self-QC against checklist (11개 슬롯)
+Step 2. Run self-QC against checklist (13개 슬롯)
 Step 3. If all pass → output FINAL
         If any fail → STOP + report missing items
 ```

@@ -1,7 +1,7 @@
 # VIBE-M STYLE.md
-Version: 1.9 (Canonical Sentence Unification)
+Version: 2.0 (Belt Conflict Rule + Mood Bucket)
 Last Updated: 2026-01-19
-Purpose: Unified canonical sentence across all docs + Energy Contract enforcement
+Purpose: Unified canonical sentence + Belt/Tempo conflict prevention + Mood variety
 
 ---
 
@@ -151,10 +151,32 @@ Include these in Style Prompt, in compressed form.
 **핵심 (v1.6):**
 - 리드 한 명이 더 세게/높게 부르는 것 = **encouraged**
 - 가성/레지스터 상승 = **allowed/encouraged**
-- "1 held note + higher register + belt" = 정량화된 폭발 이벤트
+- "1 held note + higher register + stronger dynamics" = 정량화된 폭발 이벤트
 
 **금지 (레이어만):**
 - 보컬 레이어 추가로 폭발감 만드는 것 = 금지
+
+### 4.4 Belt/Tempo Conflict Rule — NEW (v2.0)
+
+> **"belt"는 Chill/Lo-fi/Soft 트랙에서 충돌 위험이 있다.**
+
+**충돌 케이스:**
+- ❌ "soft airy tone" + "belt" → 모델이 아이돌 팝/EDM 보컬로 튐
+- ❌ "Chill R&B 76 BPM" + "belt" → 에너지 불일치
+- ❌ "minimal, intimate" + "belt" → 분위기 파괴
+
+**해결: BPM/Mood별 보컬 강도 매칭**
+
+| BPM | Mood | 보컬 지시 |
+|-----|------|----------|
+| 70-80 | Chill/Ethereal | higher register + stronger dynamics (NO belt) |
+| 80-90 | Hazy/Nocturne | higher register + controlled intensity |
+| 90-100+ | Sentimental/Warm | belt/higher register 허용 |
+
+**안전한 대체 표현:**
+- ❌ `belt/higher register` → ✅ `higher register + stronger dynamics`
+- ❌ `falsetto encouraged` → ✅ `higher register (chest-dominant)`
+- 진성 기반 유지하면서 에너지 상승 = 가장 안전
 
 ### 4.3 Do NOT Use
 
@@ -191,13 +213,37 @@ Pick values per track; keep it minimal to prevent model confusion.
 ### Slot E — Key/Mode Bucket
 - Maintain at least 3 key buckets per project (avoid fingerprint sameness)
 
-### Slot F — Vocal Persona (Mandatory)
+### Slot F — Mood Bucket (파일명용) — NEW (v2.0)
+> **Mood 슬롯이 하나로 계속 가면 플리에서 체감 변주가 줄어든다.**
+
+| Mood | 적합한 BPM | 특징 |
+|------|-----------|------|
+| **Chill** | 70-80 | 차분, 편안 |
+| **Hazy** | 75-88 | 몽환, 흐릿 |
+| **Ethereal** | 70-85 | 초현실, 공기감 |
+| **Nocturne** | 75-90 | 밤, 고요 |
+| **Sentimental** | 85-100 | 감성, 서정 |
+| **Melancholic** | 80-95 | 우울, 쓸쓸 |
+
+**적용 규칙:**
+- 10곡 플리에서 **최소 3개 Mood** 사용 권장
+- 파일명 형식: `NN__제목__Mood__Genre__BPM.mp3`
+- 같은 Mood 연속 3곡 이상 금지
+
+### Slot G — Vocal Persona (Mandatory)
 - Female husky / Female pure / Male soulful / Male soft
 - Always specify: **gender + tone + delivery**.
 
 ---
 
-## 6) Exclude Style Library (Use max 3 groups)
+## 6) Exclude Style Library (Use max 3 groups) — 강화
+
+> **Exclude가 너무 길면 모델이 "금지 리스트"에 주의를 뺏겨 보컬이 이상해질 수 있다.**
+
+**핵심 규칙:**
+- **최대 3개 그룹**만 사용 (A+B+C 또는 A+B+D 등)
+- 그룹 전체를 나열하지 말고 **핵심 항목만** 선택
+- 과도한 Exclude = 오히려 부작용
 
 Pick up to 3 groups depending on the track risk. **그룹명에 사용 목적 표기.**
 
