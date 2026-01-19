@@ -817,9 +817,11 @@ def preview(path: Path, sec: int, fade: float):
     Generate a quick preview video.
 
     Creates a fast preview by:
-    - Merging tracks with crossfade (no normalization)
-    - Trimming to specified duration
+    - Taking first N seconds from EACH track (sec / num_tracks)
+    - Merging trimmed tracks with crossfade (no normalization)
     - Rendering with loop video
+
+    This ensures all tracks are represented in the preview.
 
     Output: output/preview.mp4
     """
@@ -844,27 +846,67 @@ def preview(path: Path, sec: int, fade: float):
     # Ensure output directories
     paths.ensure_work_dirs()
 
-    # Merge tracks with crossfade
-    merged_path = paths.work_dir / 'preview_merged.wav'
+    num_tracks = len(result.tracks)
 
-    if len(result.tracks) == 1:
-        # Single track: just copy
-        log_info("Single track detected, skipping merge...")
-        shutil.copy(result.tracks[0].path, merged_path)
+    if num_tracks == 1:
+        # Single track: trim and use directly
+        log_info("Single track detected...")
+        trimmed_path = paths.work_dir / 'preview_trimmed.wav'
+        trim_duration = min(sec, result.tracks[0].duration)
+
+        if not trim_audio(result.tracks[0].path, trimmed_path, trim_duration):
+            log_error("Failed to trim audio")
+            sys.exit(1)
     else:
-        if not merge_tracks_with_crossfade(result.tracks, merged_path, fade):
+        # Multiple tracks: trim each track first, then merge
+        # Calculate duration per track (accounting for crossfade overlap)
+        # Crossfade overlaps: (num_tracks - 1) * fade seconds are shared
+        # So we need: sec + (num_tracks - 1) * fade total track time
+        total_track_time = sec + (num_tracks - 1) * fade
+        sec_per_track = total_track_time / num_tracks
+
+        log_info(f"Trimming each track to {sec_per_track:.1f}s for {sec}s preview...")
+
+        # Trim each track
+        trimmed_tracks = []
+        for i, track in enumerate(result.tracks):
+            trimmed_path_i = paths.work_dir / f'preview_track_{i:02d}.wav'
+            trim_duration = min(sec_per_track, track.duration)
+
+            log_info(f"  Trimming {track.title} to {trim_duration:.1f}s...")
+            if not trim_audio(track.path, trimmed_path_i, trim_duration):
+                log_error(f"Failed to trim track {track.title}")
+                sys.exit(1)
+
+            # Create a temporary TrackInfo with the trimmed path
+            trimmed_track = TrackInfo(
+                path=trimmed_path_i,
+                order=track.order,
+                title=track.title,
+                mood=track.mood,
+                genre=track.genre,
+                bpm=track.bpm,
+                duration=trim_duration,
+                sample_rate=track.sample_rate
+            )
+            trimmed_tracks.append(trimmed_track)
+
+        # Merge trimmed tracks with crossfade
+        merged_path = paths.work_dir / 'preview_merged.wav'
+        log_info(f"Merging {num_tracks} trimmed tracks with {fade}s crossfade...")
+
+        if not merge_tracks_with_crossfade(trimmed_tracks, merged_path, fade):
             log_error("Failed to merge tracks")
             sys.exit(1)
 
-    # Trim to preview duration
-    trimmed_path = paths.work_dir / 'preview_trimmed.wav'
-    log_info(f"Trimming to {sec}s...")
-
-    if not trim_audio(merged_path, trimmed_path, sec):
-        log_error("Failed to trim audio")
-        sys.exit(1)
+        trimmed_path = merged_path
 
     # Render video
+    # Get actual duration of the audio
+    audio_info = get_audio_info(trimmed_path)
+    audio_duration = audio_info.get('duration', 0)
+    log_info(f"Rendering video with audio duration: {audio_duration:.1f}s")
+
     if not render_video(
         trimmed_path,
         paths.loop_video,
@@ -879,6 +921,8 @@ def preview(path: Path, sec: int, fade: float):
     click.echo("")
     click.echo(click.style("PREVIEW COMPLETE", fg='green', bold=True))
     click.echo(f"Output: {paths.preview_mp4}")
+    if num_tracks > 1:
+        click.echo(f"Duration: {audio_duration:.1f}s ({num_tracks} tracks × ~{sec_per_track:.1f}s each)")
 
 
 @cli.command()

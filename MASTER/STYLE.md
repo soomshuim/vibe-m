@@ -37,6 +37,7 @@ STYLE.md는 **VIBE-M 사운드의 헌법**이다.
 - Natural breaths preserved
 - Minimal pitch correction
 - Clear Korean diction
+- **Vocal Type 명시 필수**: "Female vocal" 또는 "Male vocal" 반드시 포함
 
 > 장르가 바뀌어도
 > **"가수가 바로 귀 옆에서 부르는 느낌"은 유지한다.**
@@ -90,9 +91,72 @@ Chorus2 bigger only by arrangement density and stereo width of instruments, voca
 - "Chorus2 bigger"는 **vocals unchanged**로 잠금
 - 베이스라인 잡은 후 필요시 점진적 허용
 
+**필수 강화 문장 (Chorus2 오독 방지):**
+> Suno가 "bigger = 단체 코러스/하모니"로 오독하기 쉬움. 아래 문장 필수 포함:
+
+```
+Lead vocal only throughout; absolutely no vocal layers in chorus (no doubles, no unison, no octaves).
+```
+
 **운영 팁:**
 - EDM 톤 재발 시 → Vocal Persona를 Pure로 스왑 후 다시 Husky로 복귀
 - 안정화 후 ad-libs 1~2개 허용 테스트 가능
+
+### 2.2.1 Exclude Style 충돌 방지
+
+**원칙: Style 본문에 쓴 톤/캐릭터를 Exclude에 넣지 않는다**
+
+| 상황 | 문제 | 해결 |
+|------|------|------|
+| Style: "warm soulful tone" | Exclude에 "husky tone" 포함 | 모델이 보컬 캐릭터 혼란 → **Exclude에서 삭제** |
+| Style: "breathy delivery" | Exclude에 "breathy" 포함 | 지시 충돌 → **Exclude에서 삭제** |
+
+**Exclude 작성 규칙:**
+1. Style 본문의 Vocal Persona 키워드와 겹치는 항목 금지
+2. Exclude는 **EDM/프로세싱 계열**만 타격 (vocoder, hard tune, autotune heavy 등)
+3. 톤/캐릭터 계열 (husky, warm, breathy 등)은 Style 본문에서만 제어
+
+---
+
+## 🎰 2.3 Required Slots (필수 슬롯 체크리스트)
+
+**원칙: 하나라도 누락 시 FAIL → 출력 금지**
+
+| # | 슬롯 | 설명 | 예시 |
+|---|------|------|------|
+| S1 | Vocal Persona | gender + tone | "Male vocal, warm soulful tone" |
+| S2 | Vocal Processing | 마이크/이펙트 | "dry close-mic, minimal autotune" |
+| S3 | Lead Instrument | 메인 악기 | "Felt Piano-led" |
+| S4 | Rhythm Source | 리듬 요소 | "soft shaker, rim-only" |
+| S5 | BPM | 템포 | "80 BPM" |
+| S6 | Key | 조성 | "key Eb Major" |
+| S7 | Musicality Matrix | 섹션별 지시 | "Verse2 same melodic contour..." |
+| S8 | Harmony Guard | 코러스/화성 금지 | "No backing vocals, no choir" |
+| S9 | Chorus Expansion | Chorus2 규칙 | "vocals unchanged" |
+| S10 | Chorus Layer Block | 코러스 레이어 완전 차단 | "Lead vocal only throughout; absolutely no vocal layers..." |
+| S11 | Exclude 충돌 검사 | Style↔Exclude 톤 겹침 없음 | Style에 soulful → Exclude에 soulful 금지 |
+
+### 검증 프로세스
+
+```
+Step 1. Generate Style Prompt
+Step 2. Run self-QC against checklist (11개 슬롯)
+Step 3. If all pass → output FINAL
+        If any fail → STOP + report missing items
+```
+
+### Vocal Persona 강제 선언
+
+> **Vocal persona must be explicitly declared:**
+> - gender (male/female)
+> - vocal character (husky / soft / soulful / airy / pure / breathy 등)
+>
+> If not explicitly written, output is invalid.
+
+**목적:**
+- AI의 암묵적 추론 차단
+- 누락 사고 원천 봉쇄
+- 검증 자동화로 휴먼 에러 방지
 
 ---
 

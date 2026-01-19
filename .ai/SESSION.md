@@ -2,7 +2,7 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-18 (Evening)
+> Last updated: 2026-01-18 (Night)
 
 ## 완료된 작업
 
@@ -56,14 +56,19 @@
 
 - **프로젝트**: Production Ready (v1.0.0)
 - **GitHub**: https://github.com/soomshuim/vibe-m (master)
+- **플레이리스트 주제**: "혼자 걷는 밤, 습기와 잔향"
 - **테스트 데이터**: `SERIES/Test_Series/2026-01-18/`
-  - 트랙: `01__마음밖__Sentimental__RnB-Ballad__100.mp3` (3.5분)
+  - 트랙 3곡 완료:
+    - `01__마음밖__Sentimental__RnB-Ballad__100.mp3`
+    - `02__습기__Sentimental__Acoustic-RnB__88.mp3`
+    - `03__잔향__Hazy__AltR&B__112.mp3`
   - 에셋: `loop.mp4`, `thumb.jpg` 준비됨
-  - preview 생성 완료 (30초)
+  - preview 생성 완료 (60초, 3트랙 각 20초)
 
 ## 진행 중
 
-없음
+- [ ] Track 04-10 제작 (7곡)
+  - Track 04 가사 초안 완료 (제목: 물안개)
 
 ## 완료된 추가 작업
 
@@ -93,12 +98,29 @@
 - [x] concept.md 기록 (`b5fce3d`)
   - Track 01~03 가사/스타일 기록
 
+### 2026-01-18 (밤)
+
+- [x] vibem.py preview 버그 수정
+  - 이전: 전체 병합 후 앞 N초 자르기 (Track 01만 포함)
+  - 이후: 각 트랙 앞 N/트랙수 초씩 잘라서 병합 (모든 트랙 포함)
+  - 60초 preview = 3트랙 × 20.5초
+
+- [x] Track 02 파일명 수정
+  - `Sentimental_Acoustic-RnB` → `Sentimental__Acoustic-RnB` (언더스코어 2개)
+
+- [x] 플레이리스트 주제 확정
+  - "혼자 걷는 밤, 습기와 잔향"
+  - 키워드: 습기, 잔향, 그림자, 번짐, 희미함, 혼자, 밤
+
+- [x] Track 04-10 제작 플랜 수립
+  - `.claude/plans/rippling-finding-lecun.md`
+
 ## 다음 작업 (예정)
 
-- [ ] Track 02/03 파일명 확정
-- [ ] 제로 베이스라인 프롬프트로 Track 04 생성 테스트
-- [ ] QC Fail 기준 실제 적용 검증
-- [ ] (선택) ad-libs 점진적 허용 테스트
+- [ ] Track 04 가사 확정 + Style Prompt 작성
+- [ ] Track 04 Suno 생성 + QC
+- [ ] Track 05-10 순차 제작
+- [ ] 10곡 완료 후 validate → pack
 
 ## 알려진 이슈
 
@@ -120,3 +142,4 @@
 | `.claude/commands/coach.md` | /coach 커맨드 |
 | `.ai/lessons-learned.md` | 버그 패턴 |
 | `CHANGELOG.md` | 변경 이력 |
+| `.claude/plans/rippling-finding-lecun.md` | Track 04-10 제작 플랜 |
