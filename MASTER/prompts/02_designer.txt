@@ -17,19 +17,56 @@ Rules:
 Deliverables:
 1. Seed Style Prompt (8–10 compressed tokens)
 2. Musicality Matrix (Verse2 / Chorus / Bridge rules)
-3. Safety Lines (Chorus2/Vocals/Guard - 3줄 압축, 반복 금지)
-4. Allowed BPM range
-5. Allowed Key / Mode buckets
-6. Exclude Style (vocal processing 중심, max 3 groups)
-7. Hard Constraints (Do NOT vary list)
+3. Safety Lines (Layer prohibition only - 2줄 압축)
+4. Energy Permission (Verse2/Chorus lift - 명시적 허용)
+5. Allowed BPM range
+6. Allowed Key / Mode buckets
+7. Exclude Style (vocal processing 중심, max 3 groups)
+8. Hard Constraints (Do NOT vary list)
 
-Safety Lines 작성 규칙 (제로 베이스라인):
-- "backing vocals" 단어 자체 사용 금지 → "Lead vocal only. No backing vocals."
-- "unison", "ad-libs" 등도 보컬 레이어 트리거 → 제로로
-- "Chorus2 bigger" → 반드시 "vocals unchanged" 포함
-- 프롬프트는 짧게: Core 8~10 토큰 + Safety 2줄 + Musicality 1줄
+---
+
+Safety Lines 작성 규칙 (v1.6 Energy Permission):
+
+**금지 대상 (레이어만):**
+- "Lead vocal remains single and dominant. No stacked or choir-like harmonies."
+- "No additional vocal layers" - backing vocals, doubles, choir 금지
+
+**허용 대상 (에너지):**
+- "Vocal line may intensify dynamically (belt, higher register)"
+- "Natural vocal strain allowed"
+
+**사용 금지 표현:**
+- ❌ "vocals unchanged" → 에너지까지 억제
+- ❌ "Single lead vocal ONLY" → 너무 강압적
+- ❌ "keep SINGLE lead vocal" → 강압적
+
+**권장 표현:**
+- ✅ "Lead vocal remains single and dominant"
+- ✅ "Vocal line may intensify dynamically, but no additional vocal layers"
+- ✅ "Higher register / falsetto lift encouraged"
+
+---
+
+Energy Permission 작성 규칙 (Seed 단계 필수):
+
+> "Verse2 emotional escalation is expected, not variable."
+
+```
+Verse2 last 2 lines MUST rise in emotional intensity.
+Higher register OR light falsetto lift is encouraged.
+Natural vocal strain allowed.
+```
+
+이 블록은 Safety Lines와 분리하여 작성.
+Seed에서 "에너지 상승 권한"을 명시적으로 부여해야
+Variation에서 "무난함" 문제가 발생하지 않음.
+
+---
 
 Mandatory Check:
 Answer:
-"Can this Seed survive 10 variations without sounding templated?"
-Yes / No + reason
+1. "Can this Seed survive 10 variations without sounding templated?"
+   Yes / No + reason
+2. "Does Verse2 have explicit energy permission?"
+   Must be YES

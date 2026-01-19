@@ -2,7 +2,7 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-18 (Night)
+> Last updated: 2026-01-19
 
 ## 완료된 작업
 
@@ -132,6 +132,16 @@
   - Self-QC 3-Step 프로세스 강화
 - [x] Track 04 "물안개" MP3 생성 완료 (Suno)
 - [x] 4트랙 Preview 생성 완료 (60초)
+- [x] **STYLE.md v1.6: Energy Permission + Safety Separation**
+  - 핵심 원칙: "금지는 레이어에만, 허용은 에너지에"
+  - "vocals unchanged" → "lead vocal energy may increase, but no new vocal layers"
+  - "Single lead vocal ONLY" → "Lead vocal remains single and dominant"
+  - Verse2 에너지 상승 권한 명시적 부여 (encouraged/allowed)
+- [x] ROLES.md v1.1: Energy Permission Principle 추가
+- [x] 02_designer.txt: Safety Lines + Energy Permission 분리
+- [x] 03_variation.txt: Vocal Energy Risk Fail 조건 추가
+  - Verse2 lacks lift → FAIL
+  - Chorus sounds flat due to over-safety → FAIL
 
 ## 다음 작업 (예정)
 

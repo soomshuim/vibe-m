@@ -1,7 +1,7 @@
 # VIBE-M STYLE.md
-Version: 1.5 (Single-Lead Explosion + Zero Exception)
+Version: 1.6 (Energy Permission + Safety Separation)
 Last Updated: 2026-01-19
-Purpose: Prevent AI-chorus with zero exception, enforce single-lead V2/Chorus lift, keep prompt <= 1000 chars (EXCLUDE excluded)
+Purpose: Separate "energy permission" from "layer prohibition" to prevent flat vocals while blocking AI-chorus
 
 ---
 
@@ -32,14 +32,14 @@ Use these as the "always-on" identity baseline (pick only the essentials to stay
 
 ---
 
-## 2) Harmony Guard (Mandatory Safety Lines) — v1.5 Zero Exception
+## 2) Harmony Guard (Mandatory Safety Lines) — v1.6 Energy Permission
 
-> This block MUST appear in every Style Prompt. **예외 조항 제거** - 모델이 "지원 보컬 권리"로 해석하는 것 차단.
+> This block MUST appear in every Style Prompt. **금지는 레이어에만, 허용은 에너지에.**
 
 **초압축 Harmony Guard (붙박이 2줄)**
 ```
-Single lead vocal ONLY. No backing vocals, no doubles, no harmonies, no choir, no stacks.
-Chorus lift = single-lead belt/higher register/stronger attack (NO extra vocal layers, NO vocal sweetening).
+Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
 ```
 
 **EDM 처리 금지 (별도 1줄)**
@@ -47,44 +47,52 @@ Chorus lift = single-lead belt/higher register/stronger attack (NO extra vocal l
 No EDM vocal processing (no vocoder, no vocal chops, minimal autotune).
 ```
 
-**핵심 원칙**
-- 레이어 금지 ≠ 에너지 금지
-- "리드 한 명이 더 세게 부르는 것" = 허용/강제
-- "보컬 레이어를 늘리는 것" = 금지
-- **예외 조항 없음** - "unison OK", "ad-libs OK" 같은 문장 제거
+**핵심 원칙 (v1.6 분리)**
+- **금지 대상**: 보컬 레이어 (backing, doubles, choir, stacks)
+- **허용 대상**: 보컬 에너지 (belt, higher register, dynamics, strain)
+- "리드 한 명이 더 세게/높게 부르는 것" = 허용 (encouraged)
+- "보컬을 겹치는 것" = 금지
+
+**v1.5 → v1.6 변경점**
+- ❌ "vocals unchanged" → 모델이 "보컬 에너지 상승도 금지"로 오해
+- ✅ "vocal line may intensify dynamically" → 에너지 상승 명시 허용
+- ❌ "Single lead vocal ONLY" → 너무 강압적
+- ✅ "Lead vocal remains single and dominant" → 톤 다운
 
 **운영 팁 (Style Prompt 본문에 넣지 말 것)**
 - end-line ad-libs가 정말 필요하면 Exclude 옆 메모로 관리
 - "If any support happens..." 문장은 모델이 오해하므로 사용 금지
 
 **Reason**
-- Suno often "upgrades" chorus with harmony stacks by default
-- "지원 보컬 허용" 문장 → 모델이 "지원 보컬을 만들 권리"로 해석
-- We allow "release" via **arrangement energy + single-lead belt/lift**, not vocal layering.
+- v1.5에서 "금지 규칙이 에너지 규칙을 덮어버림" 문제 발생
+- 모델이 가성/레지스터 상승을 "보컬 변형"으로 오인 → 회피
+- 해결: "금지는 레이어에만" 명확히 분리
 
 ---
 
-## 3) Musicality Matrix (Always ON) — v1.5 정량화
+## 3) Musicality Matrix (Always ON) — v1.6 Energy Permission
 
 Include these in Style Prompt, in compressed form.
 
-- **Verse2 Lift:** same melodic contour as Verse1; **last 2 lines** = stronger dynamics + **higher-register push OR brief falsetto lift** (single lead, 1 event).
-- **Chorus Lift:** chorus first line hits peak: **single-lead belt/higher register + 1 held note (longer sustain)**. No layers, no doubles.
+- **Verse2 Lift (MUST):** same melodic contour as Verse1; **last 2 lines MUST rise in emotional intensity**: higher register OR light falsetto lift is **encouraged**. Natural vocal strain **allowed**.
+- **Chorus Lift:** chorus first line hits peak: **belt/higher register + 1 held note (longer sustain)**. Lead vocal energy may increase.
 - **Chorus Rule:** hook-first; **lyrics repeated identically**.
-- **Chorus2 Expansion:** bigger **by arrangement only** (bass/drums energy, wider stereo instruments); **keep SINGLE lead vocal (no layers)**.
+- **Chorus2 Expansion:** bigger **by arrangement** (bass/drums energy, wider stereo instruments); **lead vocal energy may increase, but no new vocal layers**.
 - **Bridge Build:** build every bar; **no energy drop into chorus**.
 - **Outro:** instrumental fade; return to minimal texture.
 
 **V2 → Chorus 연결 원칙:**
-> V2 last 2 lines (1 event: higher register push) → Chorus first line = peak (1 held note + belt)
+> V2 last 2 lines (emotional intensity rise: higher register/falsetto encouraged) → Chorus first line = peak (1 held note + belt)
 
-**금지 표현:**
-- ❌ "vocals unchanged" (에너지까지 억제할 수 있음)
-- ✅ "keep SINGLE lead vocal (no layers)" (대체 표현)
+**v1.6 표현 원칙:**
+- ❌ "vocals unchanged" → 에너지까지 억제
+- ❌ "keep SINGLE lead" → 너무 강압적
+- ✅ "lead vocal energy may increase, but no new vocal layers" → 에너지 허용 + 레이어 금지 분리
+- ✅ "higher register is encouraged" → 권한 부여
 
 ---
 
-## 4) Energy Switch (Chorus Explosion Without AI Choir) — v1.5
+## 4) Energy Switch (Chorus Explosion Without AI Choir) — v1.6
 
 > "후렴 폭발감 부족"이 뜨면 아래 2개 레버를 모두 적용.
 
@@ -98,28 +106,31 @@ Include these in Style Prompt, in compressed form.
 | Stereo | wider instruments + extra layer (pad/guitar/piano voicing) |
 | Accents | crash/ride only as impact markers (avoid over-busy) |
 
-### 4.2 Lever B: Lead Vocal Lift (정량화)
+### 4.2 Lever B: Lead Vocal Lift (에너지 허용)
 
 | 요소 | 적용 방법 |
 |------|----------|
-| Belt | chorus first line = single-lead belt/stronger attack |
+| Belt | chorus first line = stronger attack, more intensity |
 | Register | higher register than verse (noticeable lift) |
 | Held Note | **1 held note** on hook (longer sustain, event-like) |
-| Dynamics | stronger dynamics, not just same intensity |
+| Dynamics | stronger dynamics, natural vocal strain allowed |
+| Falsetto | brief falsetto lift encouraged (especially V2 ending) |
 
-**핵심:**
-- 리드 한 명이 더 세게/높게 부르는 것 = 허용/강제
-- "1 held note + higher register" = 정량화된 폭발 이벤트
+**핵심 (v1.6):**
+- 리드 한 명이 더 세게/높게 부르는 것 = **encouraged**
+- 가성/레지스터 상승 = **allowed/encouraged**
+- "1 held note + higher register + belt" = 정량화된 폭발 이벤트
 
-**금지:**
-- 레이어 추가로 폭발감 만드는 것 = 금지
+**금지 (레이어만):**
+- 보컬 레이어 추가로 폭발감 만드는 것 = 금지
 
 ### 4.3 Do NOT Use
 
 - "bigger chorus with backing vocals/harmonies" 같은 문장
 - "choir-like", "stacked", "ensemble", "thick harmony" 유도 표현
-- "vocals unchanged" → 대신 "keep SINGLE lead vocal (no layers)" 사용
-- "If any support happens..." (예외 조항 금지)
+- ❌ "vocals unchanged" → 에너지까지 억제
+- ❌ "keep SINGLE lead vocal" → 너무 강압적
+- ✅ "lead vocal energy may increase, but no new vocal layers" → 사용 권장
 
 ---
 
@@ -224,43 +235,45 @@ Step 3: 글자수 체크 (Style만 1000자 이하) → 넘으면 압축 루프
 
 ---
 
-## 9) Quick Reference — v1.5
+## 9) Quick Reference — v1.6
 
 ### 9.1 Harmony Guard 초압축 (붙박이 2줄)
 ```
-Single lead vocal ONLY. No backing vocals, no doubles, no harmonies, no choir, no stacks.
-Chorus lift = single-lead belt/higher register/stronger attack (NO extra vocal layers, NO vocal sweetening).
+Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
 ```
 
 ### 9.2 Musicality Matrix 압축
 ```
-Verse2: same melodic contour, last 2 lines stronger dynamics + higher-register push or brief falsetto lift (1 event).
-Chorus: hook-first, repeat identical; chorus first line hits peak with single-lead belt/higher register + 1 held note (no layers).
-Chorus2: bigger by arrangement only (bass/drums energy, wider stereo); keep SINGLE lead vocal (no layers).
+Verse2: same melodic contour, last 2 lines MUST rise in emotional intensity (higher register or falsetto encouraged, natural strain allowed).
+Chorus: hook-first, repeat identical; chorus first line hits peak with belt/higher register + 1 held note. Lead vocal energy may increase.
+Chorus2: bigger by arrangement (bass/drums energy, wider stereo); lead vocal energy may increase, but no new vocal layers.
 Bridge: build every bar, no energy drop into chorus.
 Outro: instrumental fade.
 ```
 
-### 9.3 V2 → Chorus Lift 연결 (정량화)
+### 9.3 V2 → Chorus Lift 연결 (에너지 허용)
 ```
-Verse2 last 2 lines: higher-register push or brief falsetto lift (single lead, 1 event).
-Chorus first line: 1 held note (longer sustain) + higher register lift (single lead, no layers).
+Verse2 last 2 lines: emotional intensity MUST rise (higher register/falsetto encouraged, natural strain allowed).
+Chorus first line: 1 held note (longer sustain) + belt/higher register. Lead vocal energy may increase.
 ```
 
-### 9.4 물안개 예시 (v1.5 적용)
+### 9.4 물안개 예시 (v1.6 적용)
 ```
 articulation, Korean Lo-fi R&B, 80 BPM, Eb Major, felt piano-led, soft shaker, hazy ambient pad, cinematic but restrained, high fidelity, wide stereo.
 Male vocal: warm soulful tone, dry close-mic, very forward, clear Korean diction, natural breaths, minimal autotune, straight delivery.
-Single lead vocal ONLY: no backing vocals, no doubles, no harmonies, no choir, no stacked layers; no EDM vocal processing.
-Verse2 same melodic contour as v1; last 2 lines stronger dynamics + higher register push or brief falsetto lift.
-Chorus hook-first, repeat identical; chorus first line hits peak with single-lead belt/higher register + 1 held note (no layers).
-Chorus2 bigger by arrangement only (bass/drums energy, wider stereo instruments); keep SINGLE lead vocal (no layers).
+Lead vocal remains single and dominant. No stacked or choir-like harmonies. Vocal line may intensify dynamically, but no additional vocal layers. No EDM vocal processing.
+Verse2 same melodic contour as v1; last 2 lines MUST rise in emotional intensity (higher register or brief falsetto encouraged).
+Chorus hook-first, repeat identical; chorus first line hits peak with belt/higher register + 1 held note. Lead vocal energy may increase.
+Chorus2 bigger by arrangement (bass/drums energy, wider stereo); lead vocal energy may increase, but no new vocal layers.
 Bridge builds every bar; no energy drop into chorus. Outro felt piano fades.
 ```
 
-### 9.5 금지 표현 vs 대체 표현
-| 금지 | 대체 |
+### 9.5 금지 표현 vs 권장 표현 (v1.6)
+| 금지 | 권장 |
 |------|------|
-| vocals unchanged | keep SINGLE lead vocal (no layers) |
+| vocals unchanged | lead vocal energy may increase, but no new vocal layers |
+| keep SINGLE lead vocal | lead vocal remains single and dominant |
+| Single lead vocal ONLY | Lead vocal remains single and dominant |
 | If any support happens... | (예외 조항 사용 금지) |
-| bigger chorus with backing vocals | bigger by arrangement only |
+| bigger chorus with backing vocals | bigger by arrangement |

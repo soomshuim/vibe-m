@@ -1,5 +1,5 @@
 # VIBE-M Role System (SSOT)
-# Version: 1.0 (2026-01-18)
+# Version: 1.1 (2026-01-19)
 # Purpose: Separate thinking to prevent duplication, drift, and algorithmic risk.
 # Scope: Defines WHY and WHAT each AI role is responsible for.
 # Prompt templates: See MASTER/prompts/
@@ -75,15 +75,28 @@ without sounding templated or triggering algorithmic duplication.
 ### Key Rule
 This role designs a **system**, not a song.
 
+### Energy Permission Principle (v1.1)
+> "금지는 레이어에만, 허용은 에너지에."
+
+**Seed 단계에서 명문화할 것:**
+- Verse2 emotional escalation is **expected and encouraged** (not variable)
+- Higher register / falsetto lift = **allowed, not prohibited**
+- Natural vocal strain = **allowed**
+- Layer prohibition ≠ Energy prohibition
+
+**금지할 것 (레이어만):**
+- Backing vocals, doubles, choir, stacks
+
 ### Output Artifacts
 - Seed Style Prompt
-- Musicality Matrix
+- Musicality Matrix (with energy permission)
 - Allowed BPM / Key / Mode buckets
 - Hard Constraints ("Do NOT vary" list)
 
 ### Sanity Check (Mandatory)
 Answer explicitly:
-"Can this Seed survive 10 variations without identity collapse?"
+1. "Can this Seed survive 10 variations without identity collapse?"
+2. "Does Verse2 have explicit energy permission?" (must be YES)
 
 ---
 

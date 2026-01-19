@@ -20,9 +20,50 @@ Steps:
 3. Predict main risk (energy, vocal clarity, monotony)
 4. Define QC focus points (Intro / Chorus / Outro)
 
+---
+
+Risk Assessment (v1.1):
+
+**Vocal Energy Risk (필수 체크):**
+| Risk | Condition | Verdict |
+|------|-----------|---------|
+| Verse2 lacks lift | No higher register or falsetto in last 2 lines | FAIL |
+| Chorus sounds flat | No belt/intensity increase from verse | BORDERLINE |
+| Over-safety suppression | "무난함" - energy dampened by layer prohibition | FAIL |
+
+**Arrangement Risk:**
+| Risk | Condition | Verdict |
+|------|-----------|---------|
+| Chorus not bigger | No arrangement lift (bass/drums/stereo) | BORDERLINE |
+| Monotony | Same energy level throughout | BORDERLINE |
+
+**Vocal Clarity Risk:**
+| Risk | Condition | Verdict |
+|------|-----------|---------|
+| Intro mumbling | Diction unclear in 0:00~0:20 | FAIL |
+| Outro noise | Click/cut noise in fade | FAIL |
+
+---
+
+Energy Permission Verification:
+
+Before finalizing, verify:
+1. Does Verse2 last 2 lines have explicit emotional intensity rise?
+2. Does Chorus first line have belt/higher register permission?
+3. Is energy increase separated from layer prohibition?
+
+If any NO → Adjust before submission.
+
+---
+
 Output Format:
 - Slot-by-slot breakdown
 - Technical, concise language
 
 Final Line:
 Verdict: SAFE / BORDERLINE / FAIL
+
+**FAIL conditions (즉시 탈락):**
+- Verse2 lacks lift or register contrast
+- Chorus sounds flat due to over-safety
+- Intro mumbling / Outro noise
