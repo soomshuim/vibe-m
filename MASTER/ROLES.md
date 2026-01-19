@@ -1,8 +1,7 @@
 # VIBE-M Role System (SSOT)
-# Version: 1.4 (2026-01-19)
+# Version: 1.5 (2026-01-19)
 # Purpose: Separate thinking to prevent duplication, drift, and algorithmic risk.
 # Scope: Defines WHY and WHAT each AI role is responsible for.
-# Prompt templates: See MASTER/prompts/
 
 ---
 
@@ -37,27 +36,19 @@ This is the cultural standard for all roles:
 ## Seed Energy Contract (Non-Negotiable)
 
 > **This contract overrides any safety or layer prohibition.**
+> **상세 규칙: STYLE.md §2~§4 참조**
 
-```
+**핵심 원칙 (4줄):**
 - Verse2 emotional escalation is REQUIRED.
 - Chorus vocal intensity MUST peak higher than Verse2.
-- Higher register OR light falsetto lift is encouraged.
-- Natural vocal strain is allowed.
-```
+- Higher register OR belt is encouraged. Natural vocal strain allowed.
+- Energy increase via vocal delivery, NOT vocal layering.
 
-**Energy increase must occur via vocal delivery, not vocal layering.**
-
-**Canonical Sentence (전 문서 동일):**
+**Canonical Sentence (SSOT: STYLE.md §9.1):**
 ```
-Lead vocal remains single and dominant.
-Vocal line may intensify dynamically (higher register, belt, or falsetto lift),
-but no additional vocal layers are added.
+Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
 ```
-
-This sentence MUST appear identically in:
-- STYLE.md
-- 02_designer.txt
-- 03_variation.txt
 
 ---
 
@@ -113,17 +104,14 @@ without sounding templated or triggering algorithmic duplication.
 ### Key Rule
 This role designs a **system**, not a song.
 
-### Energy Permission Principle (v1.1)
+### Energy Permission Principle
 > "금지는 레이어에만, 허용은 에너지에."
+> **상세: STYLE.md §2.1 Energy Permission 참조**
 
-**Seed 단계에서 명문화할 것:**
-- Verse2 emotional escalation is **expected and encouraged** (not variable)
-- Higher register / falsetto lift = **allowed, not prohibited**
-- Natural vocal strain = **allowed**
+**요약:**
 - Layer prohibition ≠ Energy prohibition
-
-**금지할 것 (레이어만):**
-- Backing vocals, doubles, choir, stacks
+- 금지: Backing vocals, doubles, choir, stacks
+- 허용: Higher register, belt, dynamics, natural strain
 
 ### Output Artifacts
 - Seed Style Prompt
@@ -175,10 +163,11 @@ SAFE / BORDERLINE / FAIL
 
 ## Boundary with Other Docs
 
-- **MANAGER.md:** QC rules & fail-fast judgment
-- **STYLE.md:** Sound vocabulary & prompt syntax (includes Slot definitions)
-- **LYRICS.md:** Lyrical engineering rules
-- **ROLES.md (this file):** Cognitive separation & responsibility
-- **prompts/:** Role-specific prompt templates (실행용)
+| 문서 | 역할 |
+|------|------|
+| MANAGER.md | QC rules & fail-fast judgment |
+| STYLE.md | Sound vocabulary & prompt syntax (SSOT for Canonical Sentence) |
+| LYRICS.md | Lyrical engineering rules |
+| ROLES.md (this file) | Cognitive separation & responsibility |
 
 This file is the constitutional layer.

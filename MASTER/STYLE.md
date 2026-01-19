@@ -1,7 +1,7 @@
 # VIBE-M STYLE.md
-Version: 2.0 (Belt Conflict Rule + Mood Bucket)
+Version: 2.3 (Exclude 기준 통일)
 Last Updated: 2026-01-19
-Purpose: Unified canonical sentence + Belt/Tempo conflict prevention + Mood variety
+Purpose: 폭발 방식만 제한 + 진성 허용 필수 + belt Exclude 금지
 
 ---
 
@@ -178,13 +178,67 @@ Include these in Style Prompt, in compressed form.
 - ❌ `falsetto encouraged` → ✅ `higher register (chest-dominant)`
 - 진성 기반 유지하면서 에너지 상승 = 가장 안전
 
-### 4.3 Do NOT Use
+### 4.5 Energy Direction Rule (에너지 방향 규칙) — v2.2
 
-- "bigger chorus with backing vocals/harmonies" 같은 문장
-- "choir-like", "stacked", "ensemble", "thick harmony" 유도 표현
-- ❌ "vocals unchanged" → 에너지까지 억제
-- ❌ "keep SINGLE lead vocal" → 너무 강압적
-- ✅ "lead vocal energy may increase, but no new vocal layers" → 사용 권장
+> **폭발은 금지하지 말고, 방식만 제한하라.**
+
+**핵심 원칙:**
+1. **에너지 지시 충돌 금지** — "soft/understated" + "폭발" 동시 사용 시 모델 혼란
+2. **진성 허용 문장 필수** — Exclude보다 Style 내 허용 문장이 더 중요
+3. **belt는 Exclude 금지** — belt 제외하면 falsetto만 남음
+
+---
+
+**Rule 1: 폭발은 금지하지 말고, 방식만 제한**
+
+| ❌ 에너지 차단 (재발 원인) | ✅ 방식 제한 (정답) |
+|---------------------------|-------------------|
+| "Chorus same energy as verse" | "Chorus reaches emotional peak via chest voice, no added layers" |
+| "Melody understated" + "intimate throughout" | "Verse intimate; Chorus opens with controlled intensity" |
+| "gentle sustained note" | "sustained note with chest voice" |
+
+---
+
+**Rule 2: 진성 허용 문장 필수**
+
+Style Prompt에 반드시 포함:
+```
+Chest voice dominant. Avoid falsetto as primary register.
+```
+
+이 문장이 Exclude의 "falsetto" 보다 더 중요함.
+
+---
+
+**Rule 3: Exclude에서 belt 절대 빼지 말 것**
+
+| ❌ 치명적 실수 | ✅ 올바른 Exclude |
+|---------------|------------------|
+| `falsetto, belt, ...` | `falsetto (as primary), choir, stacked harmonies, doubled vocals, vocoder, vocal chop, EDM drops` |
+
+**belt를 Exclude에 넣으면:**
+- 진성 고음 선택지 사라짐
+- 모델이 falsetto/head voice로 도망감
+- 가성 증가 재발
+
+**belt는:**
+- "계속 벨팅하라"가 아니라
+- "필요할 때 쓸 수 있는 선택지"로 열어둬야 함
+
+---
+
+**Exclude 작성법 (최대 8개):**
+```
+falsetto (as primary), choir, stacked harmonies, doubled vocals, vocoder, vocal chop, EDM drops, autotune heavy
+```
+
+---
+
+**성공 패턴 키워드 (여전히 유효):**
+- `conversational phrasing` — 대화체 유도
+- `controlled vibrato` — 과한 비브라토 억제
+- `dry/close-mic, very forward` — 보컬 프로덕션
+- `natural breaths, minimal pitch correction` — 자연스러움
 
 ---
 
@@ -236,12 +290,13 @@ Pick values per track; keep it minimal to prevent model confusion.
 
 ---
 
-## 6) Exclude Style Library (Use max 3 groups) — 강화
+## 6) Exclude Style Library — 강화
 
 > **Exclude가 너무 길면 모델이 "금지 리스트"에 주의를 뺏겨 보컬이 이상해질 수 있다.**
 
-**핵심 규칙:**
-- **최대 3개 그룹**만 사용 (A+B+C 또는 A+B+D 등)
+**핵심 규칙 (통일):**
+- **최대 3개 그룹** 선택 (A+B+C 또는 A+B+D 등)
+- **총 8개 키워드 이내**로 압축
 - 그룹 전체를 나열하지 말고 **핵심 항목만** 선택
 - 과도한 Exclude = 오히려 부작용
 

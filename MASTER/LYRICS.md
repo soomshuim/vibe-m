@@ -1,5 +1,5 @@
 # VIBE-M LYRICS.md
-Version: 1.2 (Physical Object Anchor + Ending Strictness)
+Version: 1.3 (Track 06 Failure Cases)
 Last Updated: 2026-01-19
 Purpose: Enforce lyrical consistency, musicality, and AI-safe input
 
@@ -288,6 +288,23 @@ Suno 가사 입력란에 다음을 **절대 넣지 않는다**.
 - V1 마지막 행이 동사인데 V2 마지막 행이 형용사
 - 예: "서 있어"(동사) vs "차가워"(형용사)
 - 결과: 멜로디 끝 처리가 다르게 재현됨, 곡의 일관성 저하
+
+### Case 11: V1-V2 행 수 불일치 (Track 06 교정) — NEW
+- V1은 4행인데 V2를 6행으로 "다른 느낌"을 주려고 시도
+- 예: V1 (4행, 22음절) vs V2 (6행, 36음절)
+- 결과: Suno가 V2를 V1 멜로디에 억지로 얹으려다 멜로디 붕괴 100%
+- **교훈: "다른 컨셉"은 행 수가 아니라 단어 선택으로 표현**
+
+### Case 12: Chorus 과다 행 (Track 06 교정) — NEW
+- Chorus를 6행으로 작성 (규칙: 3~4행)
+- 결과: 훅이 너무 길어 리스너 피로감, 반복 시 Monotony 발생
+- **교훈: Chorus는 무조건 3~4행. 길면 압축.**
+
+### Case 13: Bridge Thesis 변경 + 키워드 충돌 (Track 06 교정) — NEW
+- Bridge2 Thesis를 B1과 다르게 변경 ("적막이 더 깊어져" → "사라지는 윤곽뿐")
+- "윤곽"은 Track 02 제목 → 1.5 Vocabulary Independence 위반
+- 결과: 곡의 일관성 저하 + 플레이리스트 키워드 중복
+- **교훈: Bridge Thesis는 B1=B2 동일. 다른 트랙 제목 키워드 절대 금지.**
 
 ---
 

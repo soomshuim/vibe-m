@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-18 | v1.1.0
+> Last updated: 2026-01-19 | v1.2.0
 
 ## Quick Reference
 
@@ -14,8 +14,7 @@
 | **플레이리스트 컨셉 가이드** | `MASTER/PLAYLIST_GUIDE.md` |
 | **역할 분리 시스템** | `MASTER/ROLES.md` |
 | **사람용 운영 매뉴얼** | `MASTER/QUICK_REF.md` |
-| **역할별 프롬프트** | `MASTER/prompts/` |
-| **실행용 초압축 템플릿** | `MASTER/prompts/04_ultra_compressed.txt` |
+| **역할별 프롬프트** | `MASTER/ROLES.md` 내 정의 |
 | CLI 스펙 | `MASTER/VIBE-M_Master_Plan.md` |
 | CLI 코드 | `vibem.py` |
 | 버그 패턴 | `.ai/lessons-learned.md` |
@@ -42,7 +41,6 @@
 | 플레이리스트 프로파일 | `MASTER/STYLE.md` | Section 3 |
 | QC/Fail Fast 기준 | `MASTER/MANAGER.md` | Section 1, 3 |
 | 역할 분리/AI 작업 | `MASTER/ROLES.md` | 전체 |
-| 역할별 프롬프트 | `MASTER/prompts/` | 해당 역할 파일 |
 | FFmpeg 필터 작업 | `.ai/lessons-learned.md` | "필터 그래프 버그" 섹션 |
 | 정규화 작업 | `.ai/lessons-learned.md` | "ffmpeg-normalize 버그" 섹션 |
 | 새 커맨드 추가 | `MASTER/VIBE-M_Master_Plan.md` | CLI 커맨드 명세 |
@@ -58,7 +56,7 @@
 ```
 Step 0. LYRICS.md + 이전 트랙 키워드 확인
 Step 1. Generate 가사 초안
-Step 2. Run self-QC against checklist (9개 항목)
+Step 2. Run self-QC against checklist (10개 항목)
 Step 3. If all pass → output with QC 테이블
         If any fail → 재작성 후 Step 2 반복
         (통과할 때까지 유저에게 제안하지 않음)
@@ -68,7 +66,7 @@ Step 3. If all pass → output with QC 테이블
 ```
 Step 0. STYLE.md Required Slots 확인
 Step 1. Generate Style Prompt
-Step 2. Run self-QC against checklist (9개 슬롯)
+Step 2. Run self-QC against checklist (13개 슬롯)
 Step 3. If all pass → output with QC 테이블
         If any fail → STOP + report missing items → 재작성
 ```
@@ -119,7 +117,7 @@ Section C: 키워드 축 요약 (이전 트랙과 비교)
 | S10 | Chorus Layer Block | 코러스 레이어 완전 차단 문장 | "Lead vocal remains single and dominant..." |
 | S11 | Exclude 충돌 검사 | Style 톤과 Exclude 항목 겹침 없음 | Style에 soulful → Exclude에 soulful 금지 |
 | S12 | Belt/Tempo 충돌 검사 | **Chill(70-80 BPM)에서 belt 금지** | soft airy + belt = 충돌 |
-| S13 | Exclude 그룹 수 | **최대 3그룹** | 과도한 Exclude = 부작용 |
+| S13 | Exclude 제한 | **최대 3그룹, 8키워드** | 과도한 Exclude = 부작용 |
 
 **검증 프로세스:**
 ```
@@ -174,12 +172,7 @@ vibe-m/
 │   ├── STYLE.md            # 사운드/스타일 가이드
 │   ├── ROLES.md            # 역할 분리 시스템 (SSOT)
 │   ├── QUICK_REF.md        # 사람용 운영 매뉴얼
-│   ├── VIBE-M_Master_Plan.md # CLI 스펙
-│   └── prompts/            # 역할별 프롬프트 템플릿
-│       ├── 00_system.txt
-│       ├── 01_researcher.txt
-│       ├── 02_designer.txt
-│       └── 03_variation.txt
+│   └── VIBE-M_Master_Plan.md # CLI 스펙
 │
 ├── SERIES/                 # 시리즈별 프로젝트
 │   └── [Series_Name]/
