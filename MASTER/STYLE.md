@@ -1,7 +1,7 @@
 # VIBE-M STYLE.md
-Version: 2.3 (Exclude 기준 통일)
+Version: 2.4 (Raw Vocal Baseline)
 Last Updated: 2026-01-19
-Purpose: 폭발 방식만 제한 + 진성 허용 필수 + belt Exclude 금지
+Purpose: Raw Vocal 기본값 + 진성 강제 + 메타태그 활용
 
 ---
 
@@ -29,6 +29,50 @@ Use these as the "always-on" identity baseline (pick only the essentials to stay
 - Vocal production: **dry close-mic, very forward, natural breaths, minimal autotune**
 - Diction: **clear Korean articulation**
 - Default mood: **minimal, intimate, restrained (Verse) → release (Chorus)**
+
+---
+
+## 1.1) Default Vocal Persona (Raw Vocal Baseline) — v2.4 NEW
+
+> **husky/airy 별도 요청 없으면 이 기본값 적용**
+
+### Style Prompt 필수 키워드 (기본)
+
+**핵심 (반드시 포함):**
+```
+Raw vocal, Powerful, Solid, Direct, Intimate, Clear, Dry, Unprocessed
+```
+
+**발성 묘사 (상황에 따라 선택):**
+```
+Chest voice, Belting, Raspy, Grit
+```
+
+**목소리 톤:**
+- 남성: `Deep male vocal, Mature voice`
+- 여성: `Contralto, Mature voice` (중저음)
+
+**추천 조합 예시:**
+```
+raw vocal, direct, powerful, dry recording, chest voice dominant, clear Korean diction, no harmony
+```
+
+### 피해야 할 단어 (Exclude 또는 Style에서 제외)
+
+> **이 단어들이 Style에 있으면 얇은/가성 보컬 유발**
+
+```
+Airy, Falsetto, Harmonized, Backing vocals, Opera, Whisper, Auto-tune, Ethereal voice
+```
+
+### 적용 규칙
+
+| 요청 | 적용 |
+|------|------|
+| 기본 (별도 요청 없음) | Raw Vocal Baseline 적용 |
+| "husky" 요청 | Raspy, Grit 추가 |
+| "airy" 요청 | Airy, Breathy 허용 (예외) |
+| "soft" 요청 | Intimate, Gentle 추가, Powerful 제거 |
 
 ---
 

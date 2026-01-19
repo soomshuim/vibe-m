@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-19 | v1.2.0
+> Last updated: 2026-01-20 | v1.3.0
 
 ## Quick Reference
 
@@ -105,36 +105,46 @@ Section C: 키워드 축 요약 (이전 트랙과 비교)
 
 | # | 슬롯 | 체크 내용 | 예시 |
 |---|------|----------|------|
-| S1 | Vocal Persona | gender + tone 명시 | "Male vocal, warm soulful tone" |
-| S2 | Vocal Processing | dry/close-mic 여부 | "dry close-mic, minimal autotune" |
-| S3 | Lead Instrument | 메인 악기 | "Felt Piano-led" |
-| S4 | Rhythm Source | 리듬 요소 | "soft shaker, rim-only" |
-| S5 | BPM | 템포 | "80 BPM" |
-| S6 | Key | 조성 | "key Eb Major" |
-| S7 | Musicality Matrix | V2/Chorus/Bridge/Outro 지시 | "Verse2 same melodic contour..." |
-| S8 | Harmony Guard | 코러스/화성 금지 명시 | "No backing vocals, no choir" |
-| S9 | Chorus Expansion | Chorus2 악기만 확장 | "vocal may intensify but no layers" |
-| S10 | Chorus Layer Block | 코러스 레이어 완전 차단 문장 | "Lead vocal remains single and dominant..." |
-| S11 | Exclude 충돌 검사 | Style 톤과 Exclude 항목 겹침 없음 | Style에 soulful → Exclude에 soulful 금지 |
-| S12 | Belt/Tempo 충돌 검사 | **Chill(70-80 BPM)에서 belt 금지** | soft airy + belt = 충돌 |
+| S1 | **Raw Vocal Baseline** | `Raw, Powerful, Solid, Direct, Dry` | 기본값 (husky/airy 요청 없을 때) |
+| S2 | Vocal Persona | gender + 발성 타입 | "Contralto female" 또는 "Deep male vocal" |
+| S3 | **Chest Voice 강제** | `Chest voice dominant` 문장 | 진성 보컬 확보 |
+| S4 | Vocal Processing | dry/close-mic 여부 | "dry close-mic, Unprocessed" |
+| S5 | Lead Instrument | 메인 악기 | "Felt Piano-led" |
+| S6 | Rhythm Source | 리듬 요소 | "soft brush kit, layback groove" |
+| S7 | BPM | 템포 | "82 BPM" |
+| S8 | Key | 조성 | "Eb Major" |
+| S9 | Musicality Matrix | V2/Chorus/Bridge/Outro 지시 | "Verse2 stronger dynamics..." |
+| S10 | Harmony Guard | 레이어 금지 명시 | "No harmony, no backing vocals, no doubles" |
+| S11 | Chorus Layer Block | 코러스 레이어 완전 차단 | "Lead vocal remains single and dominant" |
+| S12 | Exclude 필수 항목 | **Airy, Falsetto, Whisper, Harmonized** | 얇은 보컬 유발 단어 차단 |
 | S13 | Exclude 제한 | **최대 3그룹, 8키워드** | 과도한 Exclude = 부작용 |
+| S14 | **모호 형용사 제거** | warm reflective, rich vibrato 등 제거 | 가성 유발 방지 |
 
 **검증 프로세스:**
 ```
-Step 1. Generate Style Prompt
-Step 2. Run self-QC against checklist (13개 슬롯)
+Step 0. husky/airy 별도 요청 있는지 확인
+Step 1. 없으면 Raw Vocal Baseline 적용
+Step 2. Run self-QC against checklist (14개 슬롯)
 Step 3. If all pass → output FINAL
         If any fail → STOP + report missing items
 ```
 
-**Exclude 작성 규칙:**
-- Style 본문의 Vocal Persona 키워드와 겹치는 항목 금지
-- Exclude는 **EDM/프로세싱 계열**만 타격 (vocoder, hard tune, autotune heavy 등)
-- 톤/캐릭터 계열 (husky, warm, breathy 등)은 Style 본문에서만 제어
+**Raw Vocal Baseline (기본값):**
+```
+Raw vocal, Powerful, Solid, Direct, Dry, Unprocessed
+Chest voice dominant. No falsetto. Strong vocal attack.
+```
 
-**Vocal Persona 강제 선언:**
-> Vocal persona must be explicitly declared as gender (male/female) + vocal character (husky/soft/soulful/airy 등).
-> If not explicitly written, output is invalid.
+**Exclude 필수 항목:**
+```
+Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
+```
+
+**피해야 할 모호한 형용사:**
+- ❌ `warm reflective tone` → Airy/Ethereal로 해석됨
+- ❌ `rich vibrato` → 가성 비브라토 유발
+- ❌ `Subtle R&B ad-libs` → 더블링으로 해석됨
+- ✅ `Raw, Powerful, Solid, Direct` → 구체적 발성 키워드
 
 ### QC 체크 시 (3-Point Fail Fast)
 > 상세: `MASTER/MANAGER.md` Phase 2

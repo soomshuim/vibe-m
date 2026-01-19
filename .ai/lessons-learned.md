@@ -2,7 +2,62 @@
 
 > 버그 패턴 및 해결책 기록
 >
-> Last updated: 2026-01-19
+> Last updated: 2026-01-20
+
+---
+
+## 🎤 보컬 프롬프트 성공/실패 패턴
+
+### Raw Vocal Baseline 성공 패턴 (Track 07)
+
+**날짜**: 2026-01-19
+
+**상황**: 가성 과다 + 더블링 코러스 + 힘없는 보컬 문제 해결
+
+**이전 실패 증상**:
+- 가성이 너무 많음
+- 더블링/코러스 레이어 과다
+- 힘있는 진성 보컬이 안 나옴
+
+**실패 원인 분석**:
+
+| 실패 키워드 | 문제 | Suno 해석 |
+|------------|------|----------|
+| `warm reflective tone` | 모호한 형용사 | Airy/Ethereal로 해석 → 가성 |
+| `rich vibrato` | 결과 묘사 | 가성 비브라토 유발 |
+| `Subtle R&B ad-libs` | 애드립 요청 | 더블링으로 해석 |
+
+**성공 패턴 (3중 안전장치)**:
+
+```
+1) Style Prompt:
+   Raw vocal, Powerful, Solid, Direct, Dry, Unprocessed
+   Chest voice dominant. No falsetto. Strong vocal attack.
+
+2) 가사 메타태그:
+   [Direct vocal, No harmony] - Verse
+   [Powerful belt, No backing vocals] - Chorus
+   [Chest voice] - Bridge
+
+3) Exclude:
+   Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
+```
+
+**핵심 인사이트**:
+
+| 원칙 | 설명 |
+|------|------|
+| 긍정형 > 부정형 | "Chest voice dominant" > "No falsetto" |
+| 구체적 > 추상적 | "Raw, Powerful, Solid" > "warm reflective" |
+| 3중 안전장치 | Style + 메타태그 + Exclude 동시 적용 |
+| 피해야 할 단어 | Airy, Falsetto, Harmonized, Whisper, Ethereal, Opera |
+
+**재발 방지 체크리스트**:
+- [ ] Style에 `Raw, Powerful, Solid, Direct` 포함?
+- [ ] `Chest voice dominant` 문장 있음?
+- [ ] Exclude에 `Airy, Falsetto, Whisper` 포함?
+- [ ] 가사에 `[Direct vocal]`, `[Powerful belt]` 메타태그 있음?
+- [ ] `warm`, `reflective`, `rich vibrato` 같은 모호한 형용사 제거?
 
 ---
 
@@ -188,6 +243,20 @@ norm_path = paths.norm_tracks_dir / f"norm_{track.path.stem}.wav"  # .wav
 ---
 
 ## 체크리스트 요약
+
+### Style Prompt 작성 시 (Raw Vocal Baseline)
+- [ ] `Raw, Powerful, Solid, Direct, Dry` 포함?
+- [ ] `Chest voice dominant` 문장 있음?
+- [ ] `Strong vocal attack` 또는 `Belting` 포함?
+- [ ] Exclude에 `Airy, Falsetto, Whisper, Harmonized` 포함?
+- [ ] 모호한 형용사 제거? (`warm reflective`, `rich vibrato` 등)
+- [ ] husky/airy 별도 요청 없으면 Raw Vocal Baseline 적용?
+
+### 가사 메타태그 적용 시
+- [ ] Verse에 `[Direct vocal, No harmony]` 있음?
+- [ ] Chorus에 `[Powerful belt, No backing vocals]` 있음?
+- [ ] Bridge에 `[Chest voice]` 있음?
+- [ ] 메타태그는 구조 태그 바로 뒤 별도 행에 배치?
 
 ### FFmpeg 작업 전
 - [ ] 필터 라벨 체인 로직 확인

@@ -1,5 +1,5 @@
 # VIBE-M LYRICS.md
-Version: 1.3 (Track 06 Failure Cases)
+Version: 1.4 (Vocal Meta Tags)
 Last Updated: 2026-01-19
 Purpose: Enforce lyrical consistency, musicality, and AI-safe input
 
@@ -232,16 +232,39 @@ Suno 가사 입력란에 다음을 **절대 넣지 않는다**.
 
 ### 2.2 허용되는 태그
 
-가사 입력에서 허용되는 태그는 아래만 가능하다.
-
-- `[intro]`
+**구조 태그 (필수):**
+- `[intro]`, `[outro]`
 - `[verse]`, `[verse1]`, `[verse2]`
 - `[bridge]`, `[bridge1]`, `[bridge2]`
 - `[chorus]`
 - `[instrumental]`
-- `[outro]`
 
-그 외 커스텀 태그 사용 금지.
+**보컬 제어 메타태그 (v1.4 NEW):**
+
+> 구조 태그와 함께 사용하여 보컬 스타일 제어
+
+| 태그 | 효과 | 사용 예시 |
+|------|------|----------|
+| `[No harmony]` | 화음/코러스 제거 | `[verse1]` 바로 뒤에 |
+| `[No backing vocals]` | 백보컬 제거 | 노래 시작 부분 |
+| `[Direct vocal]` | 단단한 보컬 강조 | |
+| `[Dry voice]` | 건조한 보컬 | |
+| `[Chest voice]` | 진성 강조 | |
+| `[No falsetto]` | 가성 제거 | |
+| `[Powerful belt]` | 벨팅 강조 | Chorus에 |
+
+**사용 예시:**
+```
+[verse1]
+[Direct voice, No harmony]
+가사 내용...
+
+[chorus]
+[Powerful belt, Chest voice]
+가사 내용...
+```
+
+**주의:** 메타태그는 구조 태그 바로 뒤 별도 행에 배치. 가사와 같은 행에 쓰지 않음.
 
 ---
 

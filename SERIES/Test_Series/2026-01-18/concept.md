@@ -432,6 +432,86 @@ falsetto, choir, stacked harmonies, doubled vocals, vocoder, vocal chop, EDM dro
 
 ---
 
+## Track 07
+
+### 파일명
+`07__문틈__Hopeful__RnB__82.mp3`
+
+### 가사
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct vocal, No harmony]
+문틈 사이로
+빛줄기 스며와
+먼지가 반짝여
+바닥에 내려
+
+[bridge1]
+[Chest voice]
+닫힌 문 앞에 서서
+손잡이를 쥐어봐도
+움직일 수 없어도
+빛만 바라보고 있어
+
+[chorus]
+[Powerful belt, No backing vocals]
+문틈 사이로
+빛이 번져와
+닿지 못해도
+여기 서 있어
+
+[verse2]
+[Direct vocal, No harmony]
+창문 사이로
+바람이 스며와
+숨결이 깊어져
+가슴이 떨려
+
+[bridge2]
+[Chest voice]
+열린 창 앞에 서서
+두 눈을 감아봐도
+돌아갈 수 없어도
+빛만 바라보고 있어
+
+[chorus]
+[Powerful belt, No backing vocals]
+문틈 사이로
+빛이 번져와
+닿지 못해도
+여기 서 있어
+
+[chorus]
+[Powerful belt, No backing vocals]
+문틈 사이로
+빛이 번져와
+닿지 못해도
+여기 서 있어
+
+[outro]
+[instrumental]
+```
+
+### Style Prompt
+```
+articulation, Korean R&B, 82 BPM, Eb Major, felt piano-led, layback groove, soft brush kit, sparse ambient pad, cinematic but restrained, wide stereo.
+Raw vocal, Powerful, Solid, Direct, Dry, Unprocessed. Contralto female, mature voice.
+Chest voice dominant throughout. No falsetto. Strong vocal attack.
+Verse2 adds tension with stronger dynamics; chorus hits peak with powerful belting and controlled vibrato.
+Lead vocal remains single and dominant. No harmony, no backing vocals, no doubles.
+Final chorus adds warmth via piano/pad only; outro piano fades.
+```
+
+### Exclude Style
+```
+Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune, doubled vocals, choir, vocal layers
+```
+
+---
+
 ## 메모
 
 - Track 01 "마음밖": Seed 곡 (Piano/Rhodes 기반)
@@ -440,6 +520,7 @@ falsetto, choir, stacked harmonies, doubled vocals, vocoder, vocal chop, EDM dro
 - Track 04 "물안개": Lo-fi R&B, Rhodes + Ambient Pad, 키워드 축 (가로등/발자국/번짐)
 - Track 05 "습기": Acoustic R&B, Nylon Guitar, 키워드 축 (유리/김/얼룩/흔적)
 - Track 06 "적막": R&B, Felt Piano, A minor, 키워드 축 (시계/방/적막/커피잔)
+- Track 07 "문틈": **Raw Vocal Baseline 적용**, Eb Major, 키워드 축 (문틈/빛줄기/먼지/손잡이)
 
 ---
 
