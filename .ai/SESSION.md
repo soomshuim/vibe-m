@@ -121,16 +121,21 @@
 
 - [x] Track 04 "물안개" 가사 + Style Prompt 완료 (`7cb2824`)
   - Lo-fi R&B, Male vocal, 80 BPM, Felt Piano
-  - 가사 QC 9/9 PASS, Style Prompt 11/11 PASS
+  - 가사 QC 9/9 PASS, Style Prompt 9/9 PASS
 - [x] 워크플로우 강화
-  - Style Prompt 체크리스트 9→11슬롯 확장
   - PLAYLIST_GUIDE.md 생성 (유튜브 인기 사례 분석)
   - LYRICS.md v1.1 (새 규칙 4개)
-  - Exclude 충돌 방지 규칙 추가
+- [x] **STYLE.md v1.5: Single-Lead Explosion + Zero Exception** (`73800c6`)
+  - Harmony Guard 예외 조항 완전 제거
+  - "vocals unchanged" → "keep SINGLE lead (no layers)" 대체
+  - Chorus/V2 Lift 정량화 (1 held note, 1 event)
+  - Self-QC 3-Step 프로세스 강화
+- [x] Track 04 "물안개" MP3 생성 완료 (Suno)
+- [x] 4트랙 Preview 생성 완료 (60초)
 
 ## 다음 작업 (예정)
 
-- [ ] Track 04 Suno 생성 + QC
+- [ ] Track 04 QC (코러스 과다 여부 확인)
 - [ ] Track 05-10 순차 제작
 - [ ] 10곡 완료 후 validate → pack
 
