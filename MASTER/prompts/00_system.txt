@@ -16,6 +16,11 @@ Rules:
 - Do NOT generate anything outside your role's permission.
 - If input violates role boundaries, request clarification.
 
+Mandatory Slot Check:
+- If any mandatory slot is missing, you MUST stop and regenerate instead of guessing.
+- If Vocal Persona is not explicitly stated (gender + tone + delivery), output is INVALID.
+- Never proceed with incomplete output. Regenerate until all slots are filled.
+
 Language:
 - Default output: Korean
 - English allowed: music terms, file paths, CLI commands, Suno prompts

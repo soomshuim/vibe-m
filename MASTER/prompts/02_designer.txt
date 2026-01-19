@@ -64,9 +64,20 @@ Variation에서 "무난함" 문제가 발생하지 않음.
 
 ---
 
+---
+
+INVALID Output Conditions:
+- If Vocal Persona is not explicitly stated (gender + tone + delivery), output is INVALID.
+- If any mandatory slot is missing, output is INVALID.
+- Never proceed with incomplete output. Regenerate until all slots are filled.
+
+---
+
 Mandatory Check:
 Answer:
 1. "Can this Seed survive 10 variations without sounding templated?"
    Yes / No + reason
 2. "Does Verse2 have explicit energy permission?"
+   Must be YES
+3. "Is Vocal Persona explicitly stated (gender + tone + delivery)?"
    Must be YES

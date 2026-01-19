@@ -1,5 +1,5 @@
 # VIBE-M Role System (SSOT)
-# Version: 1.1 (2026-01-19)
+# Version: 1.2 (2026-01-19)
 # Purpose: Separate thinking to prevent duplication, drift, and algorithmic risk.
 # Scope: Defines WHY and WHAT each AI role is responsible for.
 # Prompt templates: See MASTER/prompts/
@@ -121,6 +121,13 @@ within the Seed DNA.
 - Slot-by-slot breakdown
 - Technical, concise language
 - No poetic description
+
+### Automatic FAIL Conditions (v1.2)
+- Chorus energy feels lower or equal to Verse2 → **FAIL**
+- Chorus lacks a perceptible vocal intensity peak → **FAIL**
+- Chorus relies on vocal layering instead of energy increase → **FAIL**
+- Verse2 last 2 lines do not audibly rise in register or intensity → **FAIL**
+- Vocal Persona not explicitly stated (gender + tone + delivery) → **INVALID**
 
 ### Final Verdict
 Each output must end with:

@@ -7,6 +7,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **STYLE.md v1.7: Fail Fast Energy Check**
+  - Chorus held note 정량화: "exactly 1 held note (longer sustain than any verse note)"
+  - V2 → Chorus FAIL 조건 4개: register/intensity 미상승, 1 held note 부재, 레이어 의존
+- ROLES.md v1.2: Automatic FAIL Conditions 추가
+  - Chorus energy ≤ Verse2 → FAIL
+  - Vocal intensity peak 부재 → FAIL
+- 00_system.txt: Mandatory Slot Check 추가
+  - 슬롯 누락 시 재생성 강제
+  - Vocal Persona 누락 = INVALID
+- 02/03_designer.txt: INVALID conditions 추가
 - **STYLE.md v1.6: Energy Permission + Safety Separation**
   - 핵심 원칙: "금지는 레이어에만, 허용은 에너지에"
   - Verse2 에너지 상승 권한 명시적 부여 (encouraged/allowed/must)

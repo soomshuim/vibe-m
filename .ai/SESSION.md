@@ -142,6 +142,12 @@
 - [x] 03_variation.txt: Vocal Energy Risk Fail 조건 추가
   - Verse2 lacks lift → FAIL
   - Chorus sounds flat due to over-safety → FAIL
+- [x] **STYLE.md v1.7: Fail Fast Energy Check**
+  - Chorus held note 정량화: "exactly 1 held note"
+  - V2 → Chorus FAIL 조건 4개 추가
+- [x] ROLES.md v1.2: Automatic FAIL Conditions 추가
+- [x] 00_system.txt: Mandatory Slot Check 추가
+- [x] 02/03_designer.txt: INVALID conditions 추가
 
 ## 다음 작업 (예정)
 

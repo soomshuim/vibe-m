@@ -66,4 +66,11 @@ Verdict: SAFE / BORDERLINE / FAIL
 **FAIL conditions (즉시 탈락):**
 - Verse2 lacks lift or register contrast
 - Chorus sounds flat due to over-safety
+- Chorus energy feels lower or equal to Verse2
+- Chorus lacks a perceptible vocal intensity peak
+- Chorus relies on vocal layering instead of energy increase
 - Intro mumbling / Outro noise
+
+**INVALID conditions (출력 무효):**
+- Vocal Persona not explicitly stated (gender + tone + delivery)
+- Any mandatory slot missing

@@ -1,7 +1,7 @@
 # VIBE-M STYLE.md
-Version: 1.6 (Energy Permission + Safety Separation)
+Version: 1.7 (Fail Fast Energy Check)
 Last Updated: 2026-01-19
-Purpose: Separate "energy permission" from "layer prohibition" to prevent flat vocals while blocking AI-chorus
+Purpose: Separate "energy permission" from "layer prohibition" + enforce FAIL conditions for flat vocals
 
 ---
 
@@ -70,13 +70,13 @@ No EDM vocal processing (no vocoder, no vocal chops, minimal autotune).
 
 ---
 
-## 3) Musicality Matrix (Always ON) — v1.6 Energy Permission
+## 3) Musicality Matrix (Always ON) — v1.7 Fail Fast
 
 Include these in Style Prompt, in compressed form.
 
 - **Verse2 Lift (MUST):** same melodic contour as Verse1; **last 2 lines MUST rise in emotional intensity**: higher register OR light falsetto lift is **encouraged**. Natural vocal strain **allowed**.
-- **Chorus Lift:** chorus first line hits peak: **belt/higher register + 1 held note (longer sustain)**. Lead vocal energy may increase.
-- **Chorus Rule:** hook-first; **lyrics repeated identically**.
+- **Chorus Lift:** chorus first line hits peak: **belt/higher register + exactly 1 held note (longer sustain than any verse note)**. Lead vocal energy may increase.
+- **Chorus Rule:** hook-first; **lyrics repeated identically**. No other sustained notes should appear in chorus besides the 1 held note.
 - **Chorus2 Expansion:** bigger **by arrangement** (bass/drums energy, wider stereo instruments); **lead vocal energy may increase, but no new vocal layers**.
 - **Bridge Build:** build every bar; **no energy drop into chorus**.
 - **Outro:** instrumental fade; return to minimal texture.
@@ -84,7 +84,13 @@ Include these in Style Prompt, in compressed form.
 **V2 → Chorus 연결 원칙:**
 > V2 last 2 lines (emotional intensity rise: higher register/falsetto encouraged) → Chorus first line = peak (1 held note + belt)
 
-**v1.6 표현 원칙:**
+**v1.7 Fail Fast 조건 (위반 시 즉시 FAIL):**
+- ❌ FAIL if Verse2 last 2 lines do not audibly rise in register or intensity
+- ❌ FAIL if Chorus first line is not perceptibly higher or more intense than Verse2
+- ❌ FAIL if Chorus lacks the 1 held note event
+- ❌ FAIL if Chorus relies on vocal layering instead of energy increase
+
+**v1.6 표현 원칙 (유지):**
 - ❌ "vocals unchanged" → 에너지까지 억제
 - ❌ "keep SINGLE lead" → 너무 강압적
 - ✅ "lead vocal energy may increase, but no new vocal layers" → 에너지 허용 + 레이어 금지 분리
@@ -235,7 +241,7 @@ Step 3: 글자수 체크 (Style만 1000자 이하) → 넘으면 압축 루프
 
 ---
 
-## 9) Quick Reference — v1.6
+## 9) Quick Reference — v1.7
 
 ### 9.1 Harmony Guard 초압축 (붙박이 2줄)
 ```
@@ -269,7 +275,7 @@ Chorus2 bigger by arrangement (bass/drums energy, wider stereo); lead vocal ener
 Bridge builds every bar; no energy drop into chorus. Outro felt piano fades.
 ```
 
-### 9.5 금지 표현 vs 권장 표현 (v1.6)
+### 9.5 금지 표현 vs 권장 표현 (v1.7)
 | 금지 | 권장 |
 |------|------|
 | vocals unchanged | lead vocal energy may increase, but no new vocal layers |
@@ -277,3 +283,16 @@ Bridge builds every bar; no energy drop into chorus. Outro felt piano fades.
 | Single lead vocal ONLY | Lead vocal remains single and dominant |
 | If any support happens... | (예외 조항 사용 금지) |
 | bigger chorus with backing vocals | bigger by arrangement |
+
+### 9.6 Fail Fast 조건 요약 (v1.7)
+```
+FAIL if:
+- Verse2 last 2 lines do not audibly rise in register or intensity
+- Chorus first line is not perceptibly higher or more intense than Verse2
+- Chorus lacks the 1 held note event
+- Chorus relies on vocal layering instead of energy increase
+
+INVALID if:
+- Vocal Persona not explicitly stated (gender + tone + delivery)
+- Any mandatory slot missing
+```
