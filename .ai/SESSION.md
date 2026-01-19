@@ -115,9 +115,21 @@
 - [x] Track 04-10 제작 플랜 수립
   - `.claude/plans/rippling-finding-lecun.md`
 
+## 완료된 추가 작업
+
+### 2026-01-19
+
+- [x] Track 04 "물안개" 가사 + Style Prompt 완료 (`7cb2824`)
+  - Lo-fi R&B, Male vocal, 80 BPM, Felt Piano
+  - 가사 QC 9/9 PASS, Style Prompt 11/11 PASS
+- [x] 워크플로우 강화
+  - Style Prompt 체크리스트 9→11슬롯 확장
+  - PLAYLIST_GUIDE.md 생성 (유튜브 인기 사례 분석)
+  - LYRICS.md v1.1 (새 규칙 4개)
+  - Exclude 충돌 방지 규칙 추가
+
 ## 다음 작업 (예정)
 
-- [ ] Track 04 가사 확정 + Style Prompt 작성
 - [ ] Track 04 Suno 생성 + QC
 - [ ] Track 05-10 순차 제작
 - [ ] 10곡 완료 후 validate → pack
@@ -133,6 +145,7 @@
 | `MASTER/MANAGER.md` | 운영 마스터 플랜 |
 | `MASTER/LYRICS.md` | 가사 공학 규칙 |
 | `MASTER/STYLE.md` | 사운드/스타일 가이드 |
+| `MASTER/PLAYLIST_GUIDE.md` | 플레이리스트 컨셉 가이드 |
 | `MASTER/ROLES.md` | 역할 분리 시스템 (SSOT) |
 | `MASTER/QUICK_REF.md` | 사람용 운영 매뉴얼 |
 | `MASTER/prompts/` | 역할별 프롬프트 템플릿 |
@@ -142,4 +155,4 @@
 | `.claude/commands/coach.md` | /coach 커맨드 |
 | `.ai/lessons-learned.md` | 버그 패턴 |
 | `CHANGELOG.md` | 변경 이력 |
-| `.claude/plans/rippling-finding-lecun.md` | Track 04-10 제작 플랜 |
+| `Reference/` | 참고 자료 (인기 사례 분석 PDF)
