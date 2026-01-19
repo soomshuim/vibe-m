@@ -60,8 +60,31 @@ Output Format:
 - Slot-by-slot breakdown
 - Technical, concise language
 
+**Final Verdict Question (Must Answer Before Verdict):**
+> Does the Chorus feel more emotionally intense than Verse2 without adding layers?
+> If NO → FAIL.
+
+**Energy Reference (QC 기준):**
+> Chorus peak note should sustain at least **1.5x longer** than any Verse note.
+
 Final Line:
 Verdict: SAFE / BORDERLINE / FAIL
+
+---
+
+**PASS Criteria (필수 충족):**
+
+> PASS requires a perceptible vocal intensity peak in Chorus,
+> even with a single vocal line.
+
+- Verse2 last 2 lines: audible register/intensity rise
+- Chorus first line: perceptibly higher or more intense than Verse2
+- Chorus: 1 held note (longer sustain than any verse note) present
+- Energy increase via delivery, not layering
+
+**If output sounds "safe but unmemorable", it is FAIL.**
+
+---
 
 **FAIL conditions (즉시 탈락):**
 - Verse2 lacks lift or register contrast

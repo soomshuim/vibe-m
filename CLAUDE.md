@@ -15,6 +15,7 @@
 | **역할 분리 시스템** | `MASTER/ROLES.md` |
 | **사람용 운영 매뉴얼** | `MASTER/QUICK_REF.md` |
 | **역할별 프롬프트** | `MASTER/prompts/` |
+| **실행용 초압축 템플릿** | `MASTER/prompts/04_ultra_compressed.txt` |
 | CLI 스펙 | `MASTER/VIBE-M_Master_Plan.md` |
 | CLI 코드 | `vibem.py` |
 | 버그 패턴 | `.ai/lessons-learned.md` |

@@ -48,19 +48,25 @@ Safety Lines 작성 규칙 (v1.6 Energy Permission):
 
 ---
 
-Energy Permission 작성 규칙 (Seed 단계 필수):
+Energy Permission (Seed-Level, Non-variable):
 
-> "Verse2 emotional escalation is expected, not variable."
+> **This is NOT optional. This is the Seed's energy contract.**
 
 ```
-Verse2 last 2 lines MUST rise in emotional intensity.
+Verse2 emotional escalation is REQUIRED.
+Chorus vocal intensity MUST peak higher than Verse2.
 Higher register OR light falsetto lift is encouraged.
-Natural vocal strain allowed.
+Natural vocal strain is allowed.
 ```
 
-이 블록은 Safety Lines와 분리하여 작성.
-Seed에서 "에너지 상승 권한"을 명시적으로 부여해야
-Variation에서 "무난함" 문제가 발생하지 않음.
+**핵심 원칙:**
+- 이 블록은 Safety Lines와 **같은 섹션**에 배치 (쌍으로)
+- Seed 단계에서 "에너지 상승 권한"을 명시적으로 선언해야
+- Variation에서 "무난함" 문제가 발생하지 않음
+- **"터져도 된다"를 Seed에서 먼저 선언**해야 모든 트랙이 살아남
+
+**Without this block:**
+- 모든 베리에이션은 평균값으로 수렴 → 무난함 → FAIL
 
 ---
 
@@ -69,6 +75,7 @@ Variation에서 "무난함" 문제가 발생하지 않음.
 INVALID Output Conditions:
 - If Vocal Persona is not explicitly stated (gender + tone + delivery), output is INVALID.
 - If any mandatory slot is missing, output is INVALID.
+- **If energy feels safe or flat, the Seed is INVALID even if all safety rules pass.**
 - Never proceed with incomplete output. Regenerate until all slots are filled.
 
 ---

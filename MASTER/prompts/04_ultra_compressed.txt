@@ -1,0 +1,80 @@
+[EXECUTION PROMPT: Ultra-Compressed Style Prompt Template]
+
+Purpose: Ready-to-paste execution version for Suno Style Prompt field
+Constraint: <= 1000 chars (EXCLUDE excluded)
+
+---
+
+## Canonical Blocks (Copy & Paste)
+
+### Block A: Harmony Guard (붙박이)
+```
+Lead vocal remains single and dominant. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (higher register, belt, falsetto lift), but no additional vocal layers.
+```
+
+### Block B: Energy Contract (붙박이)
+```
+Verse2 last 2 lines MUST rise in emotional intensity (higher register or falsetto encouraged).
+Chorus first line hits peak: belt/higher register + 1 held note (longer sustain than any verse note).
+Lead vocal energy may increase dynamically.
+```
+
+### Block C: Chorus2 + Bridge + Outro (붙박이)
+```
+Chorus2 bigger by arrangement (bass/drums energy, wider stereo); vocal may intensify but no layers added.
+Bridge builds every bar; no energy drop into chorus.
+Outro instrumental fade.
+```
+
+### Block D: EDM Guard (선택)
+```
+No EDM vocal processing (no vocoder, no vocal chops, minimal autotune).
+```
+
+---
+
+## Assembly Order
+
+1. Genre/BPM/Key + Lead Inst + Rhythm
+2. Vocal Persona + Vocal Production
+3. Block A (Harmony Guard)
+4. Block B (Energy Contract)
+5. Block C (Chorus2/Bridge/Outro)
+6. Block D (if needed)
+
+---
+
+## Example: 물안개 (Ultra-Compressed)
+
+```
+Korean Lo-fi R&B, 80 BPM, Eb Major, felt piano-led, soft shaker, hazy ambient pad, cinematic but restrained, high fidelity, wide stereo.
+Male vocal: warm soulful tone, dry close-mic, very forward, clear Korean diction, natural breaths, minimal autotune.
+Lead vocal remains single and dominant. No stacked or choir-like harmonies. Vocal line may intensify dynamically, but no additional vocal layers.
+Verse2 last 2 lines MUST rise in emotional intensity (higher register or falsetto encouraged). Chorus first line hits peak: belt/higher register + 1 held note (longer sustain than any verse note). Lead vocal energy may increase.
+Chorus2 bigger by arrangement; vocal may intensify but no layers added. Bridge builds every bar. Outro felt piano fades.
+```
+
+Character count: ~750 (safe margin for variation)
+
+---
+
+## Quick Checklist Before Paste
+
+- [ ] Vocal Persona: gender + tone + delivery?
+- [ ] 1 held note: "longer sustain than any verse note" 포함?
+- [ ] Energy Contract: V2 rise + Chorus peak 명시?
+- [ ] No "vocals unchanged" / No "ONLY" 표현?
+- [ ] <= 1000 chars?
+
+---
+
+## Fail Fast (Paste 전 확인)
+
+❌ INVALID if:
+- Vocal Persona missing
+- Energy Contract missing
+- "vocals unchanged" 사용
+- > 1000 chars
+
+✅ VALID only when all checklist items pass.

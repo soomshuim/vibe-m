@@ -1,7 +1,7 @@
 # VIBE-M STYLE.md
-Version: 1.7 (Fail Fast Energy Check)
+Version: 1.9 (Canonical Sentence Unification)
 Last Updated: 2026-01-19
-Purpose: Separate "energy permission" from "layer prohibition" + enforce FAIL conditions for flat vocals
+Purpose: Unified canonical sentence across all docs + Energy Contract enforcement
 
 ---
 
@@ -70,6 +70,29 @@ No EDM vocal processing (no vocoder, no vocal chops, minimal autotune).
 
 ---
 
+## 2.1) Energy Permission (Mandatory)
+
+> **This block MUST appear with Safety Lines. 금지와 허용은 항상 쌍으로.**
+
+```
+Energy Permission:
+
+Chorus vocal may be delivered with stronger intensity or light belt.
+Higher register emphasis is encouraged.
+Natural vocal strain allowed.
+Energy increase must come from vocal delivery, not harmony layers.
+```
+
+**핵심 원칙:**
+- Safety Lines 바로 아래에 이 블록 배치 (같은 섹션, 같은 문단)
+- "금지했다" 만으로는 부족 → "금지 + 허가했다" = 살아있는 곡
+- Verse2/Chorus에서 보컬 강도(intensity) 상승은 **필수**이자 **권장**
+
+**FAIL if missing:**
+- Energy Permission 없이 Safety Lines만 있으면 → 무난함 발생 → FAIL
+
+---
+
 ## 3) Musicality Matrix (Always ON) — v1.7 Fail Fast
 
 Include these in Style Prompt, in compressed form.
@@ -82,7 +105,10 @@ Include these in Style Prompt, in compressed form.
 - **Outro:** instrumental fade; return to minimal texture.
 
 **V2 → Chorus 연결 원칙:**
-> V2 last 2 lines (emotional intensity rise: higher register/falsetto encouraged) → Chorus first line = peak (1 held note + belt)
+> V2 last 2 lines (emotional intensity rise: higher register/falsetto encouraged) → Chorus first line = peak (1 held note, longer sustain than any verse note + belt)
+
+**Energy Reference (QC 기준, 프롬프트용 아님):**
+> Chorus peak note should sustain at least **1.5x longer** than any Verse note.
 
 **v1.7 Fail Fast 조건 (위반 시 즉시 FAIL):**
 - ❌ FAIL if Verse2 last 2 lines do not audibly rise in register or intensity
@@ -234,8 +260,8 @@ Step 3: 글자수 체크 (Style만 1000자 이하) → 넘으면 압축 루프
 | S5 | BPM | 템포 명시 |
 | S6 | Key/Mode | 조성 명시 |
 | S7 | Musicality Matrix | V2 lift (1 event) + Chorus lift (1 held note) + bridge build + outro |
-| S8 | Harmony Guard | "Single lead ONLY, no backing/doubles/choir/stacks" 명시 |
-| S9 | Chorus2 Expansion | "by arrangement only; keep SINGLE lead (no layers)" 명시 |
+| S8 | Harmony Guard | "Lead vocal remains single and dominant; no additional vocal layers" 명시 |
+| S9 | Chorus2 Expansion | "bigger by arrangement; vocal may intensify but no layers added" 명시 |
 
 **If any FAIL:** regenerate and shorten until 9/9 PASS + <=1000 chars.
 
@@ -252,7 +278,7 @@ Vocal line may intensify dynamically (belt, higher register), but no additional 
 ### 9.2 Musicality Matrix 압축
 ```
 Verse2: same melodic contour, last 2 lines MUST rise in emotional intensity (higher register or falsetto encouraged, natural strain allowed).
-Chorus: hook-first, repeat identical; chorus first line hits peak with belt/higher register + 1 held note. Lead vocal energy may increase.
+Chorus: hook-first, repeat identical; chorus first line hits peak with belt/higher register + 1 held note (longer sustain than any verse note). Lead vocal energy may increase.
 Chorus2: bigger by arrangement (bass/drums energy, wider stereo); lead vocal energy may increase, but no new vocal layers.
 Bridge: build every bar, no energy drop into chorus.
 Outro: instrumental fade.
@@ -270,7 +296,7 @@ articulation, Korean Lo-fi R&B, 80 BPM, Eb Major, felt piano-led, soft shaker, h
 Male vocal: warm soulful tone, dry close-mic, very forward, clear Korean diction, natural breaths, minimal autotune, straight delivery.
 Lead vocal remains single and dominant. No stacked or choir-like harmonies. Vocal line may intensify dynamically, but no additional vocal layers. No EDM vocal processing.
 Verse2 same melodic contour as v1; last 2 lines MUST rise in emotional intensity (higher register or brief falsetto encouraged).
-Chorus hook-first, repeat identical; chorus first line hits peak with belt/higher register + 1 held note. Lead vocal energy may increase.
+Chorus hook-first, repeat identical; chorus first line hits peak with belt/higher register + 1 held note (longer sustain than any verse note). Lead vocal energy may increase.
 Chorus2 bigger by arrangement (bass/drums energy, wider stereo); lead vocal energy may increase, but no new vocal layers.
 Bridge builds every bar; no energy drop into chorus. Outro felt piano fades.
 ```

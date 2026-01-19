@@ -149,9 +149,40 @@
 - [x] 00_system.txt: Mandatory Slot Check 추가
 - [x] 02/03_designer.txt: INVALID conditions 추가
 
+### 2026-01-19 (오후)
+
+- [x] **Energy Permission 문서 일괄 강화** (무난함 방지)
+  - 문제: "금지"만 강하고 "허용"이 흩어져서 AI가 평균값(무난함)으로 수렴
+  - 해결: Safety Lines와 Energy Permission을 **항상 쌍으로** 배치
+  - **STYLE.md v1.8**: Energy Permission (Mandatory) 섹션 추가
+  - **02_designer.txt**: Seed-Level Energy Permission 블록 강화
+  - **03_variation.txt**: PASS Criteria 추가 + "safe but unmemorable = FAIL"
+  - **ROLES.md v1.3**: Team Philosophy 섹션 추가 ("무난함 = 실패" 문화 선언)
+
+- [x] **Seed Energy Contract 헌법화** (마무리 보강)
+  - **ROLES.md v1.4**: `Seed Energy Contract (Non-Negotiable)` 섹션 추가
+    - "This contract overrides any safety or layer prohibition"
+    - Canonical Sentence 전 문서 동일화 선언
+  - **STYLE.md v1.9**: Canonical Sentence Unification
+    - S8/S9 체크리스트 문장 통일 (ONLY 제거)
+  - **02_designer.txt**: "safe/flat = INVALID" 조건 추가
+  - **03_variation.txt**: Final Verdict Question 추가
+    - "Does the Chorus feel more emotionally intense than Verse2 without adding layers?"
+
+- [x] **100점 마무리 개선**
+  - **04_ultra_compressed.txt**: 실행용 초압축 프롬프트 템플릿 생성
+    - Canonical Blocks (A/B/C/D) 복붙 가능
+    - ~750 chars 예시 포함
+  - **"1 held note" 표현 통일**: 전 문서에 "longer sustain than any verse note" 고정
+    - STYLE.md 4개소
+    - 03_variation.txt 1개소
+  - **Energy Reference 정량 기준 추가** (QC용, 프롬프트용 아님)
+    - "Chorus peak note should sustain at least 1.5x longer than any Verse note"
+    - STYLE.md + 03_variation.txt에 추가
+
 ## 다음 작업 (예정)
 
-- [ ] Track 04 QC (코러스 과다 여부 확인)
+- [ ] Track 04 물안개 Style Prompt에 Energy Permission 블록 적용 후 재생성 테스트
 - [ ] Track 05-10 순차 제작
 - [ ] 10곡 완료 후 validate → pack
 

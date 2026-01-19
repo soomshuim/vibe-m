@@ -1,5 +1,5 @@
 # VIBE-M Role System (SSOT)
-# Version: 1.2 (2026-01-19)
+# Version: 1.4 (2026-01-19)
 # Purpose: Separate thinking to prevent duplication, drift, and algorithmic risk.
 # Scope: Defines WHY and WHAT each AI role is responsible for.
 # Prompt templates: See MASTER/prompts/
@@ -20,6 +20,44 @@ Each role has:
 - Clear input/output contracts
 
 Roles MUST NOT overlap unless explicitly instructed.
+
+---
+
+## Team Philosophy
+
+> **If output sounds "safe but unmemorable", it is considered a FAILURE.**
+
+This is the cultural standard for all roles:
+- "무난함"은 성공이 아니다
+- 금지만 했다 → 안전 (X) / 금지 + 허가했다 → 살아있는 곡 (O)
+- 평균값으로 수렴하는 결과물은 FAIL
+
+---
+
+## Seed Energy Contract (Non-Negotiable)
+
+> **This contract overrides any safety or layer prohibition.**
+
+```
+- Verse2 emotional escalation is REQUIRED.
+- Chorus vocal intensity MUST peak higher than Verse2.
+- Higher register OR light falsetto lift is encouraged.
+- Natural vocal strain is allowed.
+```
+
+**Energy increase must occur via vocal delivery, not vocal layering.**
+
+**Canonical Sentence (전 문서 동일):**
+```
+Lead vocal remains single and dominant.
+Vocal line may intensify dynamically (higher register, belt, or falsetto lift),
+but no additional vocal layers are added.
+```
+
+This sentence MUST appear identically in:
+- STYLE.md
+- 02_designer.txt
+- 03_variation.txt
 
 ---
 
