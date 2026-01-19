@@ -1,325 +1,266 @@
 # VIBE-M STYLE.md
-Version: 1.5 (제로 베이스라인 - 코러스 완전 차단)
-Last Updated: 2026-01-18
-Purpose: Define sound identity, prompt syntax, and expansion-safe style architecture
+Version: 1.5 (Single-Lead Explosion + Zero Exception)
+Last Updated: 2026-01-19
+Purpose: Prevent AI-chorus with zero exception, enforce single-lead V2/Chorus lift, keep prompt <= 1000 chars (EXCLUDE excluded)
 
 ---
 
-## 🎯 0. STYLE.md의 역할
+## 0) Non-Negotiables (Always ON)
 
-STYLE.md는 **VIBE-M 사운드의 헌법**이다.
+### 0.1 Prompt Length
+- **Style Prompt must be <= 1000 characters (spaces included), EXCLUDE excluded.**
+- If longer: compress descriptors into fewer tokens (8–10 token rule for core identity).
 
-이 문서는:
-- Suno가 *어떻게 연주해야 하는지*를 정의하고
-- 장르/플레이리스트가 바뀌어도 **구조는 유지**되며
-- 값(Parameter)만 교체하여 확장 가능하도록 설계된다.
+### 0.2 Pure Input Principle
+- **Lyrics field: only singable Korean text + minimal tags.**
+- All musical instructions must live in **Style Prompt**.
 
-> 가사는 LYRICS.md
-> 판단과 폐기는 MANAGER.md
-> **연주 방식과 소리의 성격은 STYLE.md**
-
----
-
-## 🧠 1. Global Sound DNA (전 트랙 공통 상수)
-
-아래 요소는 **모든 VIBE-M 트랙에 반드시 포함**된다.
-플레이리스트가 달라져도 절대 제거하지 않는다.
-
-### 1.1 Core Texture
-- High fidelity
-- Wide stereo (but not exaggerated)
-- Cinematic but restrained
-- Clean low-end, controlled dynamics
-
-### 1.2 Vocal Production (Absolute Constant)
-- Dry and close-mic
-- Very forward vocal placement
-- Natural breaths preserved
-- Minimal pitch correction
-- Clear Korean diction
-- **Vocal Type 명시 필수**: "Female vocal" 또는 "Male vocal" 반드시 포함
-
-> 장르가 바뀌어도
-> **"가수가 바로 귀 옆에서 부르는 느낌"은 유지한다.**
+### 0.3 Technical Accuracy
+- Use correct music terms: `rim-shot / rim-click` (NOT rim light).
+- Avoid overly broad excludes like "Electric keyboard" unless necessary—be precise.
 
 ---
 
-## 🎼 2. Musicality Matrix (구조 강제 문장)
+## 1) Core Sound DNA (Project Constant)
 
-아래 문장은 **모든 Style Prompt에 그대로 포함**한다.
-(단어 수정 ❌, 순서 변경 ❌)
+Use these as the "always-on" identity baseline (pick only the essentials to stay under 1000 chars).
 
-> **Verse2: same melodic contour as v1, stronger dynamics + slightly higher register, minimal soulful runs in last 2 lines. Chorus: hook-first, repeat identically. Bridge: build every bar, no energy drop into chorus. Outro: instrumental fade.**
+- Texture: **high fidelity, wide stereo, cinematic but restrained**
+- Vocal production: **dry close-mic, very forward, natural breaths, minimal autotune**
+- Diction: **clear Korean articulation**
+- Default mood: **minimal, intimate, restrained (Verse) → release (Chorus)**
 
-*Chorus2 / Vocals / Safety는 §2.1 Safety Lines로 분리 (본문에 1회만 삽입)*
+---
 
-이 문장은:
-- 곡의 기승전결을 고정하고
-- AI의 즉흥 구조 붕괴를 방지하며
-- 장르가 바뀌어도 "노래처럼 들리게" 만든다.
+## 2) Harmony Guard (Mandatory Safety Lines) — v1.5 Zero Exception
 
-### 2.1 Safety Lines (필수 안전 문장)
+> This block MUST appear in every Style Prompt. **예외 조항 제거** - 모델이 "지원 보컬 권리"로 해석하는 것 차단.
 
-**모든 Style Prompt에 반드시 포함.** 금지 문장은 **1회로 압축**, 반복하면 모델이 둔감해짐.
-
-**권장 버전 (2줄 완전 차단형):**
+**초압축 Harmony Guard (붙박이 2줄)**
 ```
-Lead vocal only. No backing vocals. No harmonies. No doubles. No choir.
-Chorus2 bigger only by arrangement density and stereo width of instruments, vocals unchanged.
+Single lead vocal ONLY. No backing vocals, no doubles, no harmonies, no choir, no stacks.
+Chorus lift = single-lead belt/higher register/stronger attack (NO extra vocal layers, NO vocal sweetening).
 ```
 
-**핵심 원칙:**
-- "Backing vocals" 단어 자체가 트리거 → **아예 제거**
-- "Unison", "octave unison", "ad-libs"도 보컬 레이어 트리거 → **제로 베이스라인**
-- "bigger"는 반드시 **"vocals unchanged"**로 잠금
-- 프롬프트는 짧을수록 좋음: **Core 8~10 토큰 + Safety 2줄 + Musicality 1줄**
+**EDM 처리 금지 (별도 1줄)**
+```
+No EDM vocal processing (no vocoder, no vocal chops, minimal autotune).
+```
 
-### 2.2 Harmony Guard 원칙 (제로 베이스라인)
+**핵심 원칙**
+- 레이어 금지 ≠ 에너지 금지
+- "리드 한 명이 더 세게 부르는 것" = 허용/강제
+- "보컬 레이어를 늘리는 것" = 금지
+- **예외 조항 없음** - "unison OK", "ad-libs OK" 같은 문장 제거
 
-**현재 목표: 코러스 완전 제거**
+**운영 팁 (Style Prompt 본문에 넣지 말 것)**
+- end-line ad-libs가 정말 필요하면 Exclude 옆 메모로 관리
+- "If any support happens..." 문장은 모델이 오해하므로 사용 금지
 
-| 완전 금지 |
-|-----------|
-| backing vocals |
-| harmonies / doubles |
-| choir / ensemble |
-| unison / octave unison |
-| ad-libs / shouts |
+**Reason**
+- Suno often "upgrades" chorus with harmony stacks by default
+- "지원 보컬 허용" 문장 → 모델이 "지원 보컬을 만들 권리"로 해석
+- We allow "release" via **arrangement energy + single-lead belt/lift**, not vocal layering.
+
+---
+
+## 3) Musicality Matrix (Always ON) — v1.5 정량화
+
+Include these in Style Prompt, in compressed form.
+
+- **Verse2 Lift:** same melodic contour as Verse1; **last 2 lines** = stronger dynamics + **higher-register push OR brief falsetto lift** (single lead, 1 event).
+- **Chorus Lift:** chorus first line hits peak: **single-lead belt/higher register + 1 held note (longer sustain)**. No layers, no doubles.
+- **Chorus Rule:** hook-first; **lyrics repeated identically**.
+- **Chorus2 Expansion:** bigger **by arrangement only** (bass/drums energy, wider stereo instruments); **keep SINGLE lead vocal (no layers)**.
+- **Bridge Build:** build every bar; **no energy drop into chorus**.
+- **Outro:** instrumental fade; return to minimal texture.
+
+**V2 → Chorus 연결 원칙:**
+> V2 last 2 lines (1 event: higher register push) → Chorus first line = peak (1 held note + belt)
+
+**금지 표현:**
+- ❌ "vocals unchanged" (에너지까지 억제할 수 있음)
+- ✅ "keep SINGLE lead vocal (no layers)" (대체 표현)
+
+---
+
+## 4) Energy Switch (Chorus Explosion Without AI Choir) — v1.5
+
+> "후렴 폭발감 부족"이 뜨면 아래 2개 레버를 모두 적용.
+
+### 4.1 Lever A: Arrangement Lift
+
+| 요소 | 적용 방법 |
+|------|----------|
+| Bass | more active movement / locked to groove |
+| Perc | shaker intensity up / add rim-click accents |
+| Drums | (if allowed) kick enters or doubles energy **for the first time** in chorus |
+| Stereo | wider instruments + extra layer (pad/guitar/piano voicing) |
+| Accents | crash/ride only as impact markers (avoid over-busy) |
+
+### 4.2 Lever B: Lead Vocal Lift (정량화)
+
+| 요소 | 적용 방법 |
+|------|----------|
+| Belt | chorus first line = single-lead belt/stronger attack |
+| Register | higher register than verse (noticeable lift) |
+| Held Note | **1 held note** on hook (longer sustain, event-like) |
+| Dynamics | stronger dynamics, not just same intensity |
 
 **핵심:**
-- 보컬은 **Lead only** → 나머지 전부 금지
-- "Chorus2 bigger"는 **vocals unchanged**로 잠금
-- 베이스라인 잡은 후 필요시 점진적 허용
+- 리드 한 명이 더 세게/높게 부르는 것 = 허용/강제
+- "1 held note + higher register" = 정량화된 폭발 이벤트
 
-**필수 강화 문장 (Chorus2 오독 방지):**
-> Suno가 "bigger = 단체 코러스/하모니"로 오독하기 쉬움. 아래 문장 필수 포함:
+**금지:**
+- 레이어 추가로 폭발감 만드는 것 = 금지
 
-```
-Lead vocal only throughout; absolutely no vocal layers in chorus (no doubles, no unison, no octaves).
-```
+### 4.3 Do NOT Use
 
-**운영 팁:**
-- EDM 톤 재발 시 → Vocal Persona를 Pure로 스왑 후 다시 Husky로 복귀
-- 안정화 후 ad-libs 1~2개 허용 테스트 가능
-
-### 2.2.1 Exclude Style 충돌 방지
-
-**원칙: Style 본문에 쓴 톤/캐릭터를 Exclude에 넣지 않는다**
-
-| 상황 | 문제 | 해결 |
-|------|------|------|
-| Style: "warm soulful tone" | Exclude에 "husky tone" 포함 | 모델이 보컬 캐릭터 혼란 → **Exclude에서 삭제** |
-| Style: "breathy delivery" | Exclude에 "breathy" 포함 | 지시 충돌 → **Exclude에서 삭제** |
-
-**Exclude 작성 규칙:**
-1. Style 본문의 Vocal Persona 키워드와 겹치는 항목 금지
-2. Exclude는 **EDM/프로세싱 계열**만 타격 (vocoder, hard tune, autotune heavy 등)
-3. 톤/캐릭터 계열 (husky, warm, breathy 등)은 Style 본문에서만 제어
+- "bigger chorus with backing vocals/harmonies" 같은 문장
+- "choir-like", "stacked", "ensemble", "thick harmony" 유도 표현
+- "vocals unchanged" → 대신 "keep SINGLE lead vocal (no layers)" 사용
+- "If any support happens..." (예외 조항 금지)
 
 ---
 
-## 🎰 2.3 Required Slots (필수 슬롯 체크리스트)
+## 5) Variation Slots (Per-Track Choices)
 
-**원칙: 하나라도 누락 시 FAIL → 출력 금지**
+Pick values per track; keep it minimal to prevent model confusion.
 
-| # | 슬롯 | 설명 | 예시 |
-|---|------|------|------|
-| S1 | Vocal Persona | gender + tone | "Male vocal, warm soulful tone" |
-| S2 | Vocal Processing | 마이크/이펙트 | "dry close-mic, minimal autotune" |
-| S3 | Lead Instrument | 메인 악기 | "Felt Piano-led" |
-| S4 | Rhythm Source | 리듬 요소 | "soft shaker, rim-only" |
-| S5 | BPM | 템포 | "80 BPM" |
-| S6 | Key | 조성 | "key Eb Major" |
-| S7 | Musicality Matrix | 섹션별 지시 | "Verse2 same melodic contour..." |
-| S8 | Harmony Guard | 코러스/화성 금지 | "No backing vocals, no choir" |
-| S9 | Chorus Expansion | Chorus2 규칙 | "vocals unchanged" |
-| S10 | Chorus Layer Block | 코러스 레이어 완전 차단 | "Lead vocal only throughout; absolutely no vocal layers..." |
-| S11 | Exclude 충돌 검사 | Style↔Exclude 톤 겹침 없음 | Style에 soulful → Exclude에 soulful 금지 |
+### Slot A — Lead Instrument (choose 1)
+- Nylon guitar-led (cold arpeggio)
+- Felt piano-led (soft voicing)
+- Rhodes/EP-led (hazy chords)
+- Ambient synth pad-led (atmospheric textures)
 
-### 검증 프로세스
-
-```
-Step 1. Generate Style Prompt
-Step 2. Run self-QC against checklist (11개 슬롯)
-Step 3. If all pass → output FINAL
-        If any fail → STOP + report missing items
-```
-
-### Vocal Persona 강제 선언
-
-> **Vocal persona must be explicitly declared:**
-> - gender (male/female)
-> - vocal character (husky / soft / soulful / airy / pure / breathy 등)
->
-> If not explicitly written, output is invalid.
-
-**목적:**
-- AI의 암묵적 추론 차단
-- 누락 사고 원천 봉쇄
-- 검증 자동화로 휴먼 에러 방지
-
----
-
-## 🧩 3. Playlist Profile System (확장 핵심)
-
-STYLE.md의 핵심은 **Playlist Profile 분리**다.
-플레이리스트가 늘어나도 아래 구조만 유지하면 된다.
-
----
-
-### 3.1 Playlist Profile Template
-
-각 플레이리스트는 아래 항목만 정의한다.
-
-- Target Mood
-- BPM Range
-- Groove Character
-- Energy Curve
-- Allowed Instrument Bias
-
----
-
-### 3.2 Profile: CHILL / EMOTIONAL (기본값)
-
-**Use Case:** 새벽, 감정, 회상, 정서적 몰입
-
-- BPM: 70–92
-- Groove: Loose / minimal / breathing
-- Energy Curve: Low → Medium (no explosive peak)
-- Instrument Bias:
-  - Nylon Guitar
-  - Felt Piano
-  - Rhodes
-  - Ambient Pad (subtle)
-
----
-
-### 3.3 Profile: RUNNING / WORKOUT
-
-**Use Case:** 러닝, 가벼운 운동, 리듬 유지
-
-- BPM: 120–150
-- Groove: Straight / driving / no swing
-- Energy Curve: Medium → High (sustain peak)
-- Instrument Bias:
-  - Bright electric guitar
-  - Punchy bass locked to kick
-  - Tight drums (kick/snare focus)
-  - Occasional claps or chants
-
-> Vocal production은 여전히 **dry & forward** 유지
-> 단, delivery는 더 confident / energetic
-
----
-
-### 3.4 Profile: DRIVING / NIGHT DRIVE
-
-**Use Case:** 야간 운전, 도시, 흐름 유지
-
-- BPM: 90–120
-- Groove: Steady / hypnotic
-- Energy Curve: Medium (flat but immersive)
-- Instrument Bias:
-  - Synth bass (controlled)
-  - Rhodes / EP
-  - Clean electric guitar riffs
-  - Minimal percussion
-
----
-
-## 🎸 4. Instrument & Groove Slots (Variation Engine)
-
-매 트랙마다 **아래 슬롯 중 일부만 교체**한다.
-(Variation Matrix와 연동)
-
-### Slot A – Lead Instrument (Choose 1)
-- Nylon guitar
-- Felt piano
-- Rhodes / EP
-- Clean electric guitar
-- Ambient synth pad
-
-### Slot B – Drum / Rhythm (Choose 1)
-- No drums
-- Soft shaker / rim-shot
+### Slot B — Rhythm Source (choose 1)
+- No drums (perc only)
+- Soft shaker + rim-shot/rim-click
 - Brush kit
-- Tight understated kick
-- Straight driving kit (running)
+- Tight understated kick (heartbeat-like)
+
+### Slot C — BPM Bucket
+- Choose within concept range (ex: 75–85 for chill nightwalk)
+
+### Slot D — Structure Emphasis
+- Hook entry timing / bridge presence / pre-chorus tension cue
+
+### Slot E — Key/Mode Bucket
+- Maintain at least 3 key buckets per project (avoid fingerprint sameness)
+
+### Slot F — Vocal Persona (Mandatory)
+- Female husky / Female pure / Male soulful / Male soft
+- Always specify: **gender + tone + delivery**.
 
 ---
 
-## 🎤 5. Vocal Persona Slot (캐릭터 유지)
+## 6) Exclude Style Library (Use max 3 groups)
 
-보컬은 **트랙의 정체성 앵커**다.
-프로젝트 내에서는 **1–2개만 사용**한다.
+Pick up to 3 groups depending on the track risk. **그룹명에 사용 목적 표기.**
 
-- Female Husky: warm, airy, intimate
-- Female Pure: clear, straight, fragile but firm
-- Male Soulful: warm, breathy, emotional
-- Male Soft: gentle, youthful, calm
+### Group A (Vocal FX) — 보컬 프로세싱 차단
+```
+autotune heavy, hard tune, vocoder, vocal chop, formant shift, hyperpop vocal, pitchy EDM lead
+```
 
-> Persona 변경은 **새 프로젝트 단위**에서만 허용
+### Group B (EDM Arr) — EDM 편곡 차단
+```
+EDM drops, big room, festival, supersaw lead, sidechain pumping
+```
+
+### Group C (Harmony/Choir) — 합창/화성 차단
+```
+choir, gospel choir, stacked harmonies, harmony stack, ensemble vocals, backing vocal layers, doubled vocals
+```
+
+### (선택) Group D (Aggressive) — 공격적 스타일 차단
+```
+shouting, screaming, metal, heavy distortion
+```
 
 ---
 
-## 🚫 6. Exclude Style Rule (합창/화성 중심)
+## 7) Prompt Assembly Template (Copy & Fill)
 
-- 최대 **3개 그룹**까지만 사용
-- **합창/화성 방지에 집중**, EDM은 1~2개만
+### 7.1 Style Prompt (<=1000 chars, EXCLUDE excluded)
 
-### Group A – Choir/Harmony (최우선)
-```
-choir, gospel choir, stacked harmonies, harmony vocals, vocal ensemble, big harmonies, lush harmonies
-```
+**순서:**
+1. Genre/BPM/Key + Lead Inst + Rhythm
+2. Vocal Persona + Vocal Production
+3. Harmony Guard (compressed)
+4. Musicality Matrix (compressed)
+5. Outro
 
-### Group B – Vocal Processing
-```
-vocoder, vocal chop, hyperpop vocal, formant shift, hard tune, overprocessed vocal
-```
-
-### Group C – EDM (최소한만)
-```
-EDM drops, big room
-```
-
-> 악기 금지(Piano 등)는 트랙별 선택적 적용
+### 7.2 Exclude (separate field)
+- Choose max 3 groups above.
 
 ---
 
-## 🧱 7. Prompt Construction Order (절대 순서)
+## 8) Self-QC Checklist (Claude must pass) — v1.5
 
-Style Prompt는 반드시 아래 순서로 작성한다.
-**총 길이: 공백 포함 1000자 이내** (Suno 제한)
+**"요소 빠짐 방지"를 구조로 강제하는 3-Step 프로세스:**
 
-### Main Style (압축형, 8–10 토큰)
-1. Genre / BPM / Key
-2. Playlist Profile Bias
-3. Slot A (Lead Instrument)
-4. Core Sound DNA
-5. Slot B (Groove)
-6. Vocal Persona
+```
+Step 1: 9-Slot 값 먼저 채우기 (빈칸 있으면 FAIL)
+Step 2: 그 값으로 Style Prompt 생성
+Step 3: 글자수 체크 (Style만 1000자 이하) → 넘으면 압축 루프
+```
 
-### Safety Lines (필수, §2.1 그대로)
-7. No choir / no stacked harmonies 문장
-8. Backing vocals 역할 지정 문장
-9. No EDM vocal processing 문장
+### 9-Slot Table (PASS/FAIL)
 
-### Musicality Matrix
-10. §2 고정 문장
+| # | 슬롯 | 체크 내용 |
+|---|------|----------|
+| S1 | Vocal Persona | gender + tone + delivery 명시 |
+| S2 | Vocal Processing | dry/close-mic + minimal autotune |
+| S3 | Lead Instrument | 메인 악기 1개 |
+| S4 | Rhythm Source | 리듬 요소 명시 |
+| S5 | BPM | 템포 명시 |
+| S6 | Key/Mode | 조성 명시 |
+| S7 | Musicality Matrix | V2 lift (1 event) + Chorus lift (1 held note) + bridge build + outro |
+| S8 | Harmony Guard | "Single lead ONLY, no backing/doubles/choir/stacks" 명시 |
+| S9 | Chorus2 Expansion | "by arrangement only; keep SINGLE lead (no layers)" 명시 |
 
-### Exclude Style
-11. Group A/B/C 중 필요한 것만
+**If any FAIL:** regenerate and shorten until 9/9 PASS + <=1000 chars.
 
 ---
 
-## 💡 8. Manager's Note
+## 9) Quick Reference — v1.5
 
-STYLE.md는 취향 문서가 아니다.
-**AI가 사고하지 않도록 만드는 안전장치**다.
+### 9.1 Harmony Guard 초압축 (붙박이 2줄)
+```
+Single lead vocal ONLY. No backing vocals, no doubles, no harmonies, no choir, no stacks.
+Chorus lift = single-lead belt/higher register/stronger attack (NO extra vocal layers, NO vocal sweetening).
+```
 
-- 값은 바꿔도 구조는 바꾸지 않는다.
-- 장르가 늘어나도 규칙은 늘리지 않는다.
-- 복잡해질수록 실패 확률은 올라간다.
+### 9.2 Musicality Matrix 압축
+```
+Verse2: same melodic contour, last 2 lines stronger dynamics + higher-register push or brief falsetto lift (1 event).
+Chorus: hook-first, repeat identical; chorus first line hits peak with single-lead belt/higher register + 1 held note (no layers).
+Chorus2: bigger by arrangement only (bass/drums energy, wider stereo); keep SINGLE lead vocal (no layers).
+Bridge: build every bar, no energy drop into chorus.
+Outro: instrumental fade.
+```
 
-단순함은 미학이 아니라
-**생존 전략**이다.
+### 9.3 V2 → Chorus Lift 연결 (정량화)
+```
+Verse2 last 2 lines: higher-register push or brief falsetto lift (single lead, 1 event).
+Chorus first line: 1 held note (longer sustain) + higher register lift (single lead, no layers).
+```
+
+### 9.4 물안개 예시 (v1.5 적용)
+```
+articulation, Korean Lo-fi R&B, 80 BPM, Eb Major, felt piano-led, soft shaker, hazy ambient pad, cinematic but restrained, high fidelity, wide stereo.
+Male vocal: warm soulful tone, dry close-mic, very forward, clear Korean diction, natural breaths, minimal autotune, straight delivery.
+Single lead vocal ONLY: no backing vocals, no doubles, no harmonies, no choir, no stacked layers; no EDM vocal processing.
+Verse2 same melodic contour as v1; last 2 lines stronger dynamics + higher register push or brief falsetto lift.
+Chorus hook-first, repeat identical; chorus first line hits peak with single-lead belt/higher register + 1 held note (no layers).
+Chorus2 bigger by arrangement only (bass/drums energy, wider stereo instruments); keep SINGLE lead vocal (no layers).
+Bridge builds every bar; no energy drop into chorus. Outro felt piano fades.
+```
+
+### 9.5 금지 표현 vs 대체 표현
+| 금지 | 대체 |
+|------|------|
+| vocals unchanged | keep SINGLE lead vocal (no layers) |
+| If any support happens... | (예외 조항 사용 금지) |
+| bigger chorus with backing vocals | bigger by arrangement only |
