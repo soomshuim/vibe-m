@@ -23,6 +23,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - Production Templates 3종 (Track Brief, Style Skeleton, Lyrics Skeleton)
   - Station QC Checklist (Listen/Lyric/Style/Exclude 검증)
   - DNA Constants vs Variables 명세
+- **PLAYLIST_GUIDE.md v1.1: Korean Lyric Positioning 3-Layer 전략**
+  - Layer 1: 재생목록 설명 (자연스럽게)
+  - Layer 2: 고정 댓글 (팬 메시지)
+  - Layer 3: 채널 About (명확하게)
+  - 템플릿 + DO/DON'T 규칙
+- **vibem.py: description.txt 우리말 가사 문구 자동 추가**
+  - "이 플레이리스트의 노래들은 모두 우리말 가사로 만들어졌습니다."
+  - "*All tracks feature Korean lyrics.*"
 
 - Track 09 "마음안": 수미상관 마지막 곡 (Track 01 "마음밖" 대응)
   - Male vocal + Powerful belt, 95 BPM, Db Major

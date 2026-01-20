@@ -644,8 +644,13 @@ def generate_description(
         else:
             current_time += track.duration
 
-    # Add hashtags
+    # Add Korean Lyric Positioning message
     lines.extend([
+        "",
+        "---",
+        "",
+        "이 플레이리스트의 노래들은 모두 우리말 가사로 만들어졌습니다.",
+        "*All tracks feature Korean lyrics.*",
         "",
         "---",
         "",
