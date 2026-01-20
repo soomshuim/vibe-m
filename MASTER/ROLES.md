@@ -1,5 +1,5 @@
 # VIBE-M Role System (SSOT)
-# Version: 1.5 (2026-01-19)
+# Version: 1.6 (2026-01-20) — S1-S9 Validation Enforcement
 # Purpose: Separate thinking to prevent duplication, drift, and algorithmic risk.
 # Scope: Defines WHY and WHAT each AI role is responsible for.
 
@@ -49,6 +49,45 @@ This is the cultural standard for all roles:
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
 Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
 ```
+
+---
+
+## S1-S9 Validation Enforcement — v1.6 NEW
+
+> **보컬 타입 누락 등 필수 슬롯 누락 방지를 구조로 강제**
+
+**원칙:**
+- 문서에 한 줄 추가로는 해결 안 됨
+- **프롬프트 생성 프로세스 자체**가 검증을 강제해야 함
+
+**모든 AI 역할(Seed Designer, Variation Designer)의 출력 필수 형식:**
+
+```
+## Output
+
+[Style Prompt 또는 Variation Plan 내용]
+
+## S1-S9 Validation Table
+
+| # | 슬롯 | 값 | 상태 |
+|---|------|---|------|
+| S1 | Vocal Persona | [gender + tone + delivery] | ✅/❌ |
+| S2 | Vocal Processing | [dry/close-mic 등] | ✅/❌ |
+| S3 | Lead Instrument | [악기명] | ✅/❌ |
+| S4 | Rhythm Source | [리듬 요소] | ✅/❌ |
+| S5 | BPM | [숫자] | ✅/❌ |
+| S6 | Key/Mode | [조성] | ✅/❌ |
+| S7 | Musicality Matrix | [V2 lift + Chorus lift + bridge] | ✅/❌ |
+| S8 | Harmony Guard | [문장 포함 여부] | ✅/❌ |
+| S9 | Chorus2 Expansion | [문장 포함 여부] | ✅/❌ |
+
+**Validation Result: [9/9 PASS] 또는 [X/9 FAIL - 재생성 필요]**
+```
+
+**강제 규칙:**
+- S1-S9 테이블 없는 출력 = **자동 INVALID**
+- S1 (Vocal Persona) 비어있음 = **즉시 FAIL, 재생성**
+- 1개라도 ❌ = 통과 불가, 재생성 후 재검증
 
 ---
 

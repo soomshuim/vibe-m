@@ -524,4 +524,100 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune, doubled vocals, 
 
 ---
 
-Last updated: 2026-01-19
+## Track 08
+
+### 파일명
+`08__빗줄기__Melancholic__RnB__85.mp3`
+
+### 가사
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct vocal, No harmony]
+빗줄기가 흐려
+아스팔트 위로
+골목이 젖어가
+혼자 걷고 있어
+
+[bridge1]
+[Chest voice]
+처마 밑에 서서
+떨어지는 빗소리
+숨을 삼켜봐도
+젖어가는 밤뿐
+
+[chorus]
+[Powerful belt, No backing vocals]
+빗줄기가 번져
+아스팔트를 적셔
+멈추지 못해
+젖어드는 나뿐
+
+[verse2]
+[Direct vocal, No harmony]
+빗줄기가 깊어
+아스팔트 끝에
+골목이 물들어
+가슴이 젖어와
+
+[bridge2]
+[Chest voice]
+우산 없이 서서
+머리 위로 빗소리
+눈을 감아봐도
+젖어가는 밤뿐
+
+[chorus]
+[Powerful belt, No backing vocals]
+빗줄기가 번져
+아스팔트를 적셔
+멈추지 못해
+젖어드는 나뿐
+
+[chorus]
+[Powerful belt, No backing vocals]
+빗줄기가 번져
+아스팔트를 적셔
+멈추지 못해
+젖어드는 나뿐
+
+[outro]
+[instrumental]
+```
+
+### Style Prompt
+```
+Korean R&B, 85 BPM, F minor, Rhodes-led, soft brush kit, rim-click, sparse ambient pad, cinematic but restrained, high fidelity, wide stereo.
+Raw vocal, Solid, Direct, Dry, Unprocessed. Contralto female, mature voice.
+Chest voice dominant throughout. No falsetto. Strong vocal attack.
+Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
+Verse2 same melodic contour as v1; last 2 lines MUST rise in emotional intensity (higher register, stronger dynamics, natural strain allowed).
+Chorus hook-first, repeat identical; chorus first line hits peak with chest voice belt + 1 held note. Lead vocal energy may increase.
+Chorus2 bigger by arrangement (bass/drums energy, wider stereo); lead vocal energy may increase, but no new vocal layers.
+Bridge builds every bar; no energy drop into chorus. Outro Rhodes fades.
+```
+
+### Exclude Style
+```
+Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune, choir, EDM drops
+```
+
+---
+
+## 메모
+
+- Track 01 "마음밖": Seed 곡 (Piano/Rhodes 기반)
+- Track 02 "윤곽": Chill R&B, Rhodes, 키워드 축 (윤곽/네온/초점/경계)
+- Track 03 "잔향": **제로 베이스라인 적용** (코러스 완전 차단 테스트)
+- Track 04 "물안개": Lo-fi R&B, Rhodes + Ambient Pad, 키워드 축 (가로등/발자국/번짐)
+- Track 05 "습기": Acoustic R&B, Nylon Guitar, 키워드 축 (유리/김/얼룩/흔적)
+- Track 06 "적막": R&B, Felt Piano, A minor, 키워드 축 (시계/방/적막/커피잔)
+- Track 07 "문틈": **Raw Vocal Baseline 적용**, Eb Major, 키워드 축 (문틈/빛줄기/먼지/손잡이)
+- Track 08 "빗줄기": **Raw Vocal + Chest Belt**, F minor, 키워드 축 (빗줄기/아스팔트/골목/처마/우산)
+
+---
+
+Last updated: 2026-01-20

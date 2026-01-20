@@ -1,7 +1,7 @@
 # VIBE-M STYLE.md
-Version: 2.4 (Raw Vocal Baseline)
-Last Updated: 2026-01-19
-Purpose: Raw Vocal 기본값 + 진성 강제 + 메타태그 활용
+Version: 2.6 (Guide Merge + DEBUG Mode + Texture Lines)
+Last Updated: 2026-01-20
+Purpose: Raw Vocal 기본값 + 진성 강제 + 커뮤니티 베스트 프랙티스 통합
 
 ---
 
@@ -19,6 +19,55 @@ Purpose: Raw Vocal 기본값 + 진성 강제 + 메타태그 활용
 - Use correct music terms: `rim-shot / rim-click` (NOT rim light).
 - Avoid overly broad excludes like "Electric keyboard" unless necessary—be precise.
 
+### 0.4 Prompt Priority Rule — v2.5 NEW
+
+> **"핵심을 앞에"** - 첫 3단어가 곡의 방향을 결정한다
+
+**규칙:**
+- Style Prompt의 첫 3-5 단어가 가장 중요
+- Genre/BPM을 반드시 앞에 배치
+- 부가 설명은 뒤로
+- 프롬프트가 짧을 때는 Major/Minor를 맨 앞에 배치 가능
+
+**예시:**
+- ✅ `Korean Lo-fi R&B, 80 BPM, Eb Major, felt piano...`
+- ✅ `Minor, Lo-fi R&B, 80 BPM, felt piano...` (짧은 프롬프트)
+- ❌ `Cinematic but restrained, high fidelity, Korean Lo-fi R&B...`
+
+### 0.5 Gravity Words (중력 우물) — v2.5 NEW
+
+> 특정 단어가 결과를 "대중적 평균값"으로 끌어당기는 현상
+
+**주의 단어 (원치 않는 경우에만 회피):**
+```
+pop, beat, bass, catchy, upbeat
+```
+
+**해석:**
+- 이 단어들이 포함되면 Suno가 "기본값" 사운드로 수렴하는 경향
+- **Pop을 원하면 "pop" 사용 OK**
+- R&B/Lo-fi를 원하는데 Pop 느낌 피하려면 → Exclude에 배치
+
+**예시:**
+- R&B 원하는데 Pop 섞임 방지: `Exclude: "Pop, dance-pop"`
+- Lo-fi 원하는데 EDM 느낌 방지: `Exclude: "EDM beats, festival"`
+
+### 0.6 Broad Genre Labels Rule — v2.6 NEW
+
+> **광범위한 장르 라벨보다 구체적 묘사가 안전하다**
+
+**원칙:**
+- 추상적 장르 라벨 대신 **구체적 악기 + 리듬 + 보컬 프로덕션** 묘사 우선
+- "Lo-fi / Chill" 같은 단어도 결과를 평준화할 수 있음
+
+**예시:**
+- ❌ `Chill R&B vibe` (추상적)
+- ✅ `felt piano-led, soft shaker, dry close-mic vocal, 80 BPM` (구체적)
+
+**적용:**
+- 장르 라벨은 첫 1-2단어로 방향 설정 후
+- 나머지는 악기/프로덕션/보컬 묘사로 채우기
+
 ---
 
 ## 1) Core Sound DNA (Project Constant)
@@ -32,15 +81,15 @@ Use these as the "always-on" identity baseline (pick only the essentials to stay
 
 ---
 
-## 1.1) Default Vocal Persona (Raw Vocal Baseline) — v2.4 NEW
+## 1.1) Default Vocal Persona (Raw Vocal Baseline) — v2.5 UPDATE
 
-> **husky/airy 별도 요청 없으면 이 기본값 적용**
+> **별도 요청 없으면 이 기본값 적용**
 
 ### Style Prompt 필수 키워드 (기본)
 
 **핵심 (반드시 포함):**
 ```
-Raw vocal, Powerful, Solid, Direct, Intimate, Clear, Dry, Unprocessed
+Raw vocal, Solid, Direct, Intimate, Clear, Dry, Unprocessed
 ```
 
 **발성 묘사 (상황에 따라 선택):**
@@ -54,7 +103,7 @@ Chest voice, Belting, Raspy, Grit
 
 **추천 조합 예시:**
 ```
-raw vocal, direct, powerful, dry recording, chest voice dominant, clear Korean diction, no harmony
+raw vocal, direct, solid, dry recording, chest voice dominant, clear Korean diction, no harmony
 ```
 
 ### 피해야 할 단어 (Exclude 또는 Style에서 제외)
@@ -70,9 +119,12 @@ Airy, Falsetto, Harmonized, Backing vocals, Opera, Whisper, Auto-tune, Ethereal 
 | 요청 | 적용 |
 |------|------|
 | 기본 (별도 요청 없음) | Raw Vocal Baseline 적용 |
+| "powerful" 요청 | Powerful, Strong attack 추가 |
 | "husky" 요청 | Raspy, Grit 추가 |
 | "airy" 요청 | Airy, Breathy 허용 (예외) |
-| "soft" 요청 | Intimate, Gentle 추가, Powerful 제거 |
+| "soft" 요청 | Intimate, Gentle 추가 |
+
+> **참고**: `Powerful`은 기본값이 아니라 **곡 컨셉에 따라 요청 시** 추가 (airy, husky와 동일)
 
 ---
 
@@ -366,6 +418,30 @@ choir, gospel choir, stacked harmonies, harmony stack, ensemble vocals, backing 
 shouting, screaming, metal, heavy distortion
 ```
 
+### 6.1 Exclude 운영 규칙 — v2.6 NEW
+
+> **Exclude는 '증상 기반 최소 세트'로 시작한다**
+
+**핵심 원칙:**
+1. **문제 발생 전**: 기본 Exclude만 사용 (2-3그룹)
+2. **문제 재발 시**: 1-2개씩만 추가 (한꺼번에 추가 금지)
+3. **우선순위**: Exclude보다 **Harmony Guard(역할 지정)**가 1순위
+
+**운영 순서:**
+```
+Step 1: Harmony Guard 문장으로 먼저 제어 시도
+Step 2: 실패 시 Exclude에 1-2개 키워드 추가
+Step 3: 여전히 실패 시 Style Prompt 자체 재검토
+```
+
+**금지:**
+- ❌ 문제 예방 목적으로 Exclude 과다 추가
+- ❌ "혹시 몰라서" 키워드 추가
+- ❌ 8개 초과 키워드
+
+**기억:**
+> "하모니 과잉"은 Exclude보다 Harmony Guard가 더 효과적이다.
+
 ---
 
 ## 7) Prompt Assembly Template (Copy & Fill)
@@ -467,3 +543,208 @@ INVALID if:
 - Vocal Persona not explicitly stated (gender + tone + delivery)
 - Any mandatory slot missing
 ```
+
+---
+
+## 10) A/B Testing Rules — v2.6 UPDATE (DEBUG/PROD Mode)
+
+> 체계적 반복으로 크레딧 절약 + 결과 예측 + 문제 추적
+
+### 10.0 PROD vs DEBUG 모드 — v2.6 NEW
+
+> **다양성 생산과 문제 디버깅은 다른 규칙이 필요하다**
+
+| 모드 | 목적 | 변경 변수 | 사용 시점 |
+|------|------|----------|----------|
+| **PROD** | 다양성 생산 | 최소 2개 슬롯 변주 | 정상 트랙 제작 |
+| **DEBUG** | 문제 원인 추적 | **1개 변수만** | 하모니/가성/EDM 보컬 재발 시 |
+
+**DEBUG 모드 예시:**
+```
+문제: Chorus에서 합창 발생
+DEBUG A: Harmony Guard 문장만 강화
+DEBUG B: Exclude에 "choir" 1개만 추가
+→ A/B 비교로 원인 특정
+```
+
+**모드 전환 기준:**
+- 2회 연속 같은 문제 발생 → DEBUG 모드 전환
+- DEBUG에서 원인 특정 후 → PROD 복귀
+
+### 10.1 한 번에 1개 변수만 (DEBUG 모드)
+
+**DEBUG 모드에서 변경 시 한 가지만:**
+- Harmony Guard 문장만 변경 OR
+- Exclude 1단어만 변경 OR
+- BPM만 변경 OR
+- 보컬 성별만 변경
+
+**금지:** 여러 변수 동시 변경 → 어떤 게 효과인지 알 수 없음
+
+### 10.2 선택 규칙
+
+- 10개 생성 → **1개만** 선택
+- 선택 이유 **1줄 메모** (concept.md에 기록)
+- "왜 이게 좋았는지" 기록해야 다음에 재현 가능
+
+### 10.3 템플릿 저장
+
+- 성공한 프롬프트 템플릿 저장
+- 다음 트랙에서 작은 변주로 재사용
+- concept.md에 "Style Prompt v1, v2..." 버전 관리
+
+### 10.4 DEBUG 기록 양식 — v2.6 NEW
+
+문제 재발 시 concept.md에 기록:
+```
+## DEBUG Log
+- 문제: [Chorus 합창 발생]
+- DEBUG A: [Harmony Guard 강화] → 결과: [실패/성공]
+- DEBUG B: [Exclude choir 추가] → 결과: [실패/성공]
+- 결론: [Exclude보다 Harmony Guard가 효과적]
+```
+
+---
+
+## 11) Co-occurrence Hints (장르 조합) — v2.5 NEW
+
+> 함께 쓰면 잘 작동하는 장르 조합
+
+### 11.1 VIBE-M 권장 조합
+
+| 기본 장르 | 조합 권장 | 조합 회피 |
+|----------|----------|----------|
+| **R&B** | Soul, Lo-fi, Acoustic, Jazz | EDM, Metal, Festival |
+| **Lo-fi** | Chill, Jazz, R&B, Ambient | Big Room, Trap, Dubstep |
+| **Ambient** | Electronic, Chill, R&B | Trap, Metal |
+| **Acoustic** | Folk, Ballad, R&B | EDM, Synth |
+| **Ballad** | Orchestral, Piano, R&B | Trap, EDM |
+
+### 11.2 사용법
+
+- **Spine 1개** (메인 장르) + **Color 1개** (보조 색깔)
+- 예: `Korean R&B` (spine) + `Lo-fi texture` (color)
+- **3개 이상 장르 스택 → 결과 혼란**
+
+**예시:**
+- ✅ `Korean Lo-fi R&B, 80 BPM` (R&B + Lo-fi)
+- ✅ `Acoustic R&B Ballad, 88 BPM` (R&B + Acoustic)
+- ❌ `Lo-fi R&B Jazz Ambient Chill` (5개 스택 → 혼란)
+
+---
+
+## 12) Tag Bank (키워드 사전) — v2.5 NEW
+
+> 상황에 맞는 키워드 선택용 참고 자료
+
+### 12.1 보컬 스타일 키워드
+
+**기본 (Raw Vocal Baseline):**
+```
+Raw, Solid, Direct, Intimate, Clear, Dry, Unprocessed
+```
+
+**요청 시 추가:**
+| 컨셉 | 키워드 |
+|------|--------|
+| Powerful | Powerful, Strong attack, Belt |
+| Husky | Raspy, Grit, Husky |
+| Airy | Airy, Breathy, Soft |
+| Warm | Warm, Soulful, Smooth |
+| Emotional | Emotional, Expressive, Heartfelt |
+
+### 12.2 분위기/감정 키워드
+
+```
+melancholic, dreamy, mysterious, hopeful, nostalgic, peaceful,
+dramatic, reflective, tender, whimsical, serene, intimate,
+bittersweet, contemplative, ethereal
+```
+
+### 12.3 프로덕션 키워드
+
+**공간감/질감:**
+```
+high fidelity, wide stereo, cinematic but restrained,
+subtle room reverb, intimate atmosphere, spacious mix,
+let the mix breathe, clear separation between instruments
+```
+
+**다이내믹:**
+```
+build intensity gradually, soft verses powerful chorus,
+dynamic range, controlled crescendo
+```
+
+### 12.4 악기/사운드 키워드
+
+**피아노 계열:**
+```
+felt piano, acoustic piano, Rhodes, electric piano, warm keys
+```
+
+**기타 계열:**
+```
+nylon guitar, acoustic guitar, cold arpeggio, fingerstyle
+```
+
+**리듬 계열:**
+```
+soft shaker, brush kit, rim-shot, rim-click, soft percussion,
+layback groove, understated kick
+```
+
+**앰비언스:**
+```
+ambient pad, hazy texture, atmospheric synth, subtle strings
+```
+
+### 12.5 Texture Lines (믹스/공간 제어) — v2.6 NEW
+
+> **복붙 가능한 믹스 질감 제어 문장 라이브러리**
+> 출처: museA 자료집 + Style Prompt Guide 2.0
+
+**공간감 (Spaciousness):**
+```
+Let the mix breathe; keep clear separation between instruments.
+Intimate small-room space; soft natural room reverb.
+Make the space feel close and personal, not wide.
+Focus on clarity rather than loudness.
+```
+
+**밀도 제어 (Density):**
+```
+Keep the arrangement spacious; avoid cluttered arrangements.
+Leave space between instruments; reduce density in the middle section.
+Build intensity gradually toward the end.
+```
+
+**악기 분리감 (Separation):**
+```
+Keep clear separation between instruments.
+Make each instrument feel distinct.
+Avoid cluttered arrangements; focus on clarity.
+```
+
+**사용법:**
+- 위 문장 중 1-2개를 Style Prompt 끝에 추가
+- 전체 추가 금지 (1000자 제한 고려)
+- "pop" 같은 평준화 키워드가 아닌 **엔지니어링 컨트롤 문장**이라 안전
+
+### 12.6 FX/Production 키워드 — v2.6 NEW
+
+> 출처: Style Prompt Guide 2.0 Tag Bank
+
+**리버브/딜레이:**
+```
+subtle room reverb, tape delay, gated reverb, long reverb tails
+```
+
+**프로덕션 FX:**
+```
+lo-fi vinyl crackle, stereo wideners, sidechain pump (EDM 시에만)
+```
+
+**Era/Influence:**
+```
+90s R&B nostalgia, 80s synth aesthetic, retro production

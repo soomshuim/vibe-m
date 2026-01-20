@@ -1,6 +1,6 @@
 # VIBE-M MANAGER.md
-Version: 1.1 (코러스 과다 QC 추가)
-Last Updated: 2026-01-18
+Version: 1.2 (A/B Testing Protocol + DEBUG Mode)
+Last Updated: 2026-01-20
 Role: Executive Manager / Quality Gatekeeper
 Applies To: All VIBE-M projects, series, and tracks
 
@@ -84,3 +84,37 @@ Manager는 다음 항목을 검토한다.
 - Stacked harmonies / doubles
 
 > 프롬프트로 100% 안 막히면 QC에서 하드 컷
+
+### Phase 2.5 A/B Testing Protocol — v1.2 NEW
+
+> **문제 재발 시 체계적 디버깅으로 원인 특정**
+> 상세 규칙: STYLE.md §10 참조
+
+**PROD vs DEBUG 모드:**
+
+| 상황 | 모드 | 규칙 |
+|------|------|------|
+| 정상 트랙 제작 | PROD | 최소 2개 슬롯 변주 |
+| 같은 문제 2회 재발 | DEBUG | **1개 변수만 변경** |
+
+**DEBUG 모드 진입 조건:**
+- 하모니/가성/EDM 보컬 문제가 **2회 연속 발생**
+- 원인 불명의 QC Fail이 반복
+
+**DEBUG 워크플로우:**
+```
+1. 문제 트랙 기록 (concept.md에 DEBUG Log)
+2. 변수 A만 변경한 버전 생성
+3. 변수 B만 변경한 버전 생성
+4. A/B 비교로 원인 특정
+5. 원인 해결 후 PROD 복귀
+```
+
+**10개 생성 시 규칙:**
+- **1개만** 선택
+- 선택 이유 **1줄 메모** 필수
+- concept.md에 기록
+
+**보컬 타입 누락 방지 (강제):**
+- S1-S9 검증표 없이 프롬프트 승인 금지
+- S1 (Vocal Persona) 비어있으면 **즉시 INVALID**

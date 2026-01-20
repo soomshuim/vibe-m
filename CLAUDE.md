@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-20 | v1.3.0
+> Last updated: 2026-01-20 | v1.5.0 (Guide 5종 검증 + GPT 피드백 통합)
 
 ## Quick Reference
 
@@ -29,7 +29,7 @@
 2. **Pure FFmpeg** - `ffmpeg-python` 또는 `subprocess`만 사용
 3. **Sequential Acrossfade** - 단순 concat 금지
 4. **Fail Fast** - 입력 검증 실패 시 즉시 종료
-5. **Pure Input Principle** - Suno 가사란에 오직 가사만 (지시어 금지)
+5. **Pure Input Principle** - Suno 가사란에 가사 + 구조 태그 + Performance Cues만 (설명형 지시어 금지)
 
 ## Auto Reference Rules
 
@@ -88,7 +88,8 @@ Step 3. If all pass → output with QC 테이블
 | 1.7 | Bridge Thesis | 현상 기반 (사람 의존 X) |
 | 1.8 | V2 Escalation | 마지막 2행 신체 반응/감정 상승 |
 | 1.9 | Physical Object Anchor | **각 섹션에 물성 오브젝트 1개 이상** (추상어 과밀 금지) |
-| 2.1 | Pure Input | 괄호/영어 설명/지시어 없음 |
+| 2.1 | Pure Input | 설명형 괄호 금지, Performance Cues `(soft)` 등은 허용 |
+| 2.4 | Length Guide | **전체 100-120 단어, 섹션당 4-6행** |
 
 **검증 출력 포맷:**
 ```
@@ -105,7 +106,8 @@ Section C: 키워드 축 요약 (이전 트랙과 비교)
 
 | # | 슬롯 | 체크 내용 | 예시 |
 |---|------|----------|------|
-| S1 | **Raw Vocal Baseline** | `Raw, Powerful, Solid, Direct, Dry` | 기본값 (husky/airy 요청 없을 때) |
+| S0 | **핵심 앞에** | Genre/BPM이 첫 5단어 내 | "Korean Lo-fi R&B, 80 BPM, ..." |
+| S1 | **Raw Vocal Baseline** | `Raw, Solid, Direct, Dry` | 기본값 (powerful/husky/airy 요청 시 추가) |
 | S2 | Vocal Persona | gender + 발성 타입 | "Contralto female" 또는 "Deep male vocal" |
 | S3 | **Chest Voice 강제** | `Chest voice dominant` 문장 | 진성 보컬 확보 |
 | S4 | Vocal Processing | dry/close-mic 여부 | "dry close-mic, Unprocessed" |
@@ -117,23 +119,28 @@ Section C: 키워드 축 요약 (이전 트랙과 비교)
 | S10 | Harmony Guard | 레이어 금지 명시 | "No harmony, no backing vocals, no doubles" |
 | S11 | Chorus Layer Block | 코러스 레이어 완전 차단 | "Lead vocal remains single and dominant" |
 | S12 | Exclude 필수 항목 | **Airy, Falsetto, Whisper, Harmonized** | 얇은 보컬 유발 단어 차단 |
-| S13 | Exclude 제한 | **최대 3그룹, 8키워드** | 과도한 Exclude = 부작용 |
+| S13 | Exclude 제한 | **최대 3그룹, 8키워드** (기본 1줄 권장) | 과도한 Exclude = 부작용 |
 | S14 | **모호 형용사 제거** | warm reflective, rich vibrato 등 제거 | 가성 유발 방지 |
 
 **검증 프로세스:**
 ```
-Step 0. husky/airy 별도 요청 있는지 확인
+Step 0. powerful/husky/airy 별도 요청 있는지 확인
 Step 1. 없으면 Raw Vocal Baseline 적용
-Step 2. Run self-QC against checklist (14개 슬롯)
+Step 2. Run self-QC against checklist (15개 슬롯)
 Step 3. If all pass → output FINAL
         If any fail → STOP + report missing items
 ```
 
 **Raw Vocal Baseline (기본값):**
 ```
-Raw vocal, Powerful, Solid, Direct, Dry, Unprocessed
-Chest voice dominant. No falsetto. Strong vocal attack.
+Raw vocal, Solid, Direct, Dry, Unprocessed
+Chest voice dominant. No falsetto.
 ```
+
+**요청 시 추가:**
+- `powerful` 요청 → Powerful, Strong attack 추가
+- `husky` 요청 → Raspy, Grit 추가
+- `airy` 요청 → Airy, Breathy 허용
 
 **Exclude 필수 항목:**
 ```
@@ -152,6 +159,24 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
 - [ ] Intro (0:00~0:20): 발음 뭉개짐/웅얼거림 → Fail
 - [ ] Chorus: 훅이 10초 내 잡지 못함 → 보류
 - [ ] Outro: 끊김/클릭 노이즈 → Fail
+
+### DEBUG vs PROD 모드 (v1.5.0 NEW)
+> 상세: `MASTER/STYLE.md` §10 + `MASTER/MANAGER.md` Phase 2.5
+
+| 모드 | 상황 | 규칙 |
+|------|------|------|
+| **PROD** | 정상 트랙 제작 | 최소 2개 슬롯 변주 |
+| **DEBUG** | 같은 문제 2회 재발 | **1개 변수만 변경** |
+
+- 하모니/가성/EDM 보컬 문제 재발 시 → DEBUG 모드 전환
+- DEBUG A/B 비교로 원인 특정 → PROD 복귀
+
+### S1-S9 Validation 강제 (v1.5.0 NEW)
+> 상세: `MASTER/ROLES.md` S1-S9 Validation Enforcement
+
+- Style Prompt/Variation 출력 시 **반드시 S1-S9 테이블 포함**
+- S1 (Vocal Persona) 비어있음 = **즉시 FAIL, 재생성**
+- 테이블 없는 출력 = **자동 INVALID**
 
 ### FFmpeg 필터 그래프 작업 시
 - [ ] Sequential acrossfade 패턴 준수

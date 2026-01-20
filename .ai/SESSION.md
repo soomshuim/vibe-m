@@ -2,7 +2,7 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-19
+> Last updated: 2026-01-20
 
 ## 완료된 작업
 
@@ -54,21 +54,21 @@
 
 ## 현재 상태
 
-- **프로젝트**: Production Ready (v1.0.0)
+- **프로젝트**: Production Ready (v1.4.0 - Suno Guide 2.0 Merge)
 - **GitHub**: https://github.com/soomshuim/vibe-m (master)
 - **플레이리스트 주제**: "혼자 걷는 밤, 습기와 잔향"
+- **문서 버전**:
+  - LYRICS.md v1.5
+  - STYLE.md v2.5
+  - CLAUDE.md v1.4.0
 - **테스트 데이터**: `SERIES/Test_Series/2026-01-18/`
-  - 트랙 3곡 완료:
-    - `01__마음밖__Sentimental__RnB-Ballad__100.mp3`
-    - `02__습기__Sentimental__Acoustic-RnB__88.mp3`
-    - `03__잔향__Hazy__AltR&B__112.mp3`
+  - 트랙 7곡 완료 (Track 01~07)
   - 에셋: `loop.mp4`, `thumb.jpg` 준비됨
-  - preview 생성 완료 (60초, 3트랙 각 20초)
 
 ## 진행 중
 
-- [ ] Track 04-10 제작 (7곡)
-  - Track 04 가사 초안 완료 (제목: 물안개)
+- [ ] Track 08-10 제작 (3곡 남음)
+  - Track 01~07 concept.md에 기록 완료
 
 ## 완료된 추가 작업
 
@@ -191,10 +191,81 @@
     - Slot F: Mood Bucket 추가 (Chill/Hazy/Ethereal/Nocturne 등)
     - 6) Exclude 강화 (3그룹 최대, 과도한 Exclude 부작용 경고)
 
+### 2026-01-20
+
+- [x] **Suno Guide 2.0 시스템 병합 완료**
+  - 외부 가이드 3종 분석 및 병합:
+    - Reddit Style Prompt Guide 2.0
+    - Section Tags 전체 목록
+    - museA Suno 자료집 (한국어)
+  - **LYRICS.md v1.4 → v1.5**
+    - 구조 태그 10종 추가 ([pre-chorus], [breakdown], [hook], [big finish] 등)
+    - Performance Cues 섹션 신규 추가 ((whispered), (belted), (soft) 등)
+    - 가사 길이 가이드라인 추가 (100-120 단어 권장)
+    - 구조 공식 옵션 추가 (Pop Standard, K-POP Standard, Storyteller)
+  - **STYLE.md v2.4 → v2.5**
+    - 0.4 Prompt Priority Rule: "핵심 앞에" (Genre/BPM 첫 5단어)
+    - 0.5 Gravity Words: 중력 우물 단어 회피 (pop, beat, bass - 원치 않는 경우만)
+    - 10) A/B Testing Rules: 한 번에 1개 변수만 변경
+    - 11) Co-occurrence Hints: 장르 조합 가이드
+    - 12) Tag Bank: 검증된 키워드 사전 (보컬/악기/프로덕션)
+    - Raw Vocal Baseline 수정: **Powerful을 기본값에서 제거** → 요청 시 추가
+  - **CLAUDE.md v1.3.0 → v1.4.0**
+    - S0 "핵심 앞에" 체크 항목 추가
+    - S1 Powerful 제거 반영
+    - 2.4 가사 길이 가이드 추가
+  - 충돌 해결:
+    - "pop" 중력 우물: "원치 않는 경우에만 회피" (Pop 원하면 사용 OK)
+    - 괄호 정책 분리: 설명형 금지 vs Performance Cues 허용
+    - Powerful: 기본값 아닌 요청 시 추가 (airy, husky와 동일 레벨)
+
+### 2026-01-20 (오후) — Guide 5종 검증 + GPT 피드백 통합
+
+- [x] **레퍼런스 가이드 5종 전수 검증**
+  - 유튜브 감성 플레이리스트 인기 사례 분석
+  - museA Suno 자료집
+  - Suno Style Prompt Guide 2.0
+  - Section Tags 전체 목록
+  - 커뮤니티/공식 자료 수렴 원리
+
+- [x] **GPT 피드백 6개 포인트 통합**
+  1. DEBUG/PROD 모드 분리 (1변수 디버깅)
+  2. Pure Lyric Input 근거 명시
+  3. Texture Lines 라이브러리 추가
+  4. 태그 경계 명확화 (필수/옵션/주의)
+  5. S1-S9 Validation 강제 출력
+  6. Exclude 운영 규칙 강화
+
+- [x] **문서 업데이트 완료**
+  - **STYLE.md v2.5 → v2.6**
+    - 0.6 Broad Genre Labels Rule
+    - 6.1 Exclude 운영 규칙
+    - 10.0 DEBUG/PROD 모드 추가
+    - 10.4 DEBUG 기록 양식
+    - 12.5 Texture Lines (믹스/공간 제어)
+    - 12.6 FX/Production 키워드
+  - **LYRICS.md v1.5 → v1.6**
+    - 2.0 Pure Lyric Input 근거 명시 (가이드와 다른 이유)
+    - 2.2 태그 경계 명확화 (필수/옵션/주의/고급)
+  - **MANAGER.md v1.1 → v1.2**
+    - Phase 2.5 A/B Testing Protocol
+    - 보컬 타입 누락 방지 강제
+  - **ROLES.md v1.5 → v1.6**
+    - S1-S9 Validation Enforcement 섹션
+    - 출력 필수 형식 정의
+  - **prompts (02_designer, 03_variation)**
+    - 🔴 MANDATORY OUTPUT FORMAT 추가
+    - S1-S9 테이블 없으면 INVALID
+  - **CLAUDE.md v1.4.0 → v1.5.0**
+    - DEBUG/PROD 모드 안내
+    - S1-S9 Validation 강제 안내
+
 ## 다음 작업 (예정)
 
-- [ ] Track 05 윤곽 Suno 생성 테스트
-- [ ] Track 06-10 순차 제작
+- [ ] Track 08 제작 (새 규칙 테스트)
+- [ ] Performance Cues 동작 검증 (Suno가 읽지 않는지 확인)
+- [ ] 새 구조 태그 동작 검증
+- [ ] Track 09-10 순차 제작
 - [ ] 10곡 완료 후 validate → pack
 
 ## 알려진 이슈

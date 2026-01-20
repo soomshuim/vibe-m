@@ -88,3 +88,31 @@ Answer:
    Must be YES
 3. "Is Vocal Persona explicitly stated (gender + tone + delivery)?"
    Must be YES
+
+---
+
+**🔴 MANDATORY OUTPUT FORMAT (v1.6):**
+
+> 출력 마지막에 반드시 S1-S9 체크리스트를 표로 붙일 것.
+> 하나라도 비어 있으면 'FAIL'로 다시 생성.
+
+```
+## S1-S9 Validation Table
+
+| # | 슬롯 | 값 | 상태 |
+|---|------|---|------|
+| S1 | Vocal Persona | [gender + tone + delivery] | ✅/❌ |
+| S2 | Vocal Processing | [dry/close-mic 등] | ✅/❌ |
+| S3 | Lead Instrument | [악기명] | ✅/❌ |
+| S4 | Rhythm Source | [리듬 요소] | ✅/❌ |
+| S5 | BPM | [숫자] | ✅/❌ |
+| S6 | Key/Mode | [조성] | ✅/❌ |
+| S7 | Musicality Matrix | [V2 lift + Chorus lift + bridge] | ✅/❌ |
+| S8 | Harmony Guard | [문장 포함 여부] | ✅/❌ |
+| S9 | Chorus2 Expansion | [문장 포함 여부] | ✅/❌ |
+
+**Validation Result: [9/9 PASS] 또는 [X/9 FAIL - 재생성 필요]**
+```
+
+**S1-S9 테이블 없는 출력 = 자동 INVALID**
+**S1 비어있음 = 즉시 FAIL, 재생성**

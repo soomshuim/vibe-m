@@ -97,3 +97,32 @@ Verdict: SAFE / BORDERLINE / FAIL
 **INVALID conditions (출력 무효):**
 - Vocal Persona not explicitly stated (gender + tone + delivery)
 - Any mandatory slot missing
+- **S1-S9 Validation Table 없음**
+
+---
+
+**🔴 MANDATORY OUTPUT FORMAT (v1.6):**
+
+> 출력 마지막에 반드시 S1-S9 체크리스트를 표로 붙일 것.
+> 하나라도 비어 있으면 'FAIL'로 다시 생성.
+
+```
+## S1-S9 Validation Table (Variation)
+
+| # | 슬롯 | Seed 값 | 변경 여부 | 상태 |
+|---|------|--------|----------|------|
+| S1 | Vocal Persona | [Seed에서 상속] | 유지/변경 | ✅/❌ |
+| S2 | Vocal Processing | [Seed에서 상속] | 유지/변경 | ✅/❌ |
+| S3 | Lead Instrument | [값] | 유지/변경 | ✅/❌ |
+| S4 | Rhythm Source | [값] | 유지/변경 | ✅/❌ |
+| S5 | BPM | [숫자] | 유지/변경 | ✅/❌ |
+| S6 | Key/Mode | [조성] | 유지/변경 | ✅/❌ |
+| S7 | Musicality Matrix | [유지] | 유지 | ✅ |
+| S8 | Harmony Guard | [유지] | 유지 | ✅ |
+| S9 | Chorus2 Expansion | [유지] | 유지 | ✅ |
+
+**Validation Result: [9/9 PASS] 또는 [X/9 FAIL - 재생성 필요]**
+```
+
+**S1-S9 테이블 없는 출력 = 자동 INVALID**
+**S1 비어있음 = 즉시 FAIL, 재생성**
