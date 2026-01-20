@@ -1483,17 +1483,9 @@ def shorts(
     # SRT dynamic lyrics (takes priority over static lyric)
     if srt:
         srt_path = Path(srt).resolve()
-        # Escape path for FFmpeg filter (colons and backslashes)
-        srt_escaped = str(srt_path).replace('\\', '/').replace(':', '\\:')
-        # Get font path for subtitles (default: Pretendard Medium)
-        font_path = str(lyric_font) if lyric_font else get_shorts_lyric_font()
-        # Build force_style with escaped commas (FFmpeg filter separator)
-        if font_path:
-            font_name = Path(font_path).stem  # e.g., "Pretendard-Medium"
-            style = f"Fontname={font_name}\\,Fontsize=28\\,Alignment=2\\,MarginV=400\\,PrimaryColour=&HFFFFFF&"
-        else:
-            style = "Fontsize=28\\,Alignment=2\\,MarginV=400\\,PrimaryColour=&HFFFFFF&"
-        srt_filter = f"subtitles='{srt_escaped}':force_style='{style}'"
+        # Simple subtitles filter without force_style (force_style causes filter chain issues)
+        # TODO: Fix force_style comma escaping to enable custom font/position
+        srt_filter = f"subtitles='{srt_path}'"
         filters.append(srt_filter)
         needs_subtitles = True
         log_info(f"SRT: {srt_path.name} (dynamic lyrics)")

@@ -2,7 +2,7 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-20
+> Last updated: 2026-01-21
 
 ## 완료된 작업
 
@@ -54,20 +54,21 @@
 
 ## 현재 상태
 
-- **프로젝트**: Production Ready (v1.4.0 - Suno Guide 2.0 Merge)
+- **프로젝트**: Production Ready (v1.9.0 - Shorts 2-Layer Subtitle)
 - **GitHub**: https://github.com/soomshuim/vibe-m (master)
 - **플레이리스트 제목**: "잠들지 못한 새벽, 이 노래들이 위로가 되길"
 - **문서 버전**:
-  - LYRICS.md v1.6
+  - LYRICS.md v1.7
   - STYLE.md v2.6
-  - CLAUDE.md v1.5.0
+  - CLAUDE.md v1.9.0
 - **작업 디렉토리**: `SERIES/잠들지_못한_새벽/vol1/`
   - 트랙 9곡 완료 (Track 01~09) **플레이리스트 완성**
-  - 에셋: `loop.mp4`, `thumb.jpg` 준비됨
+  - YouTube 공개 완료: https://youtu.be/E62sIgkPNXI
+  - Shorts 테스트 완료: `output/shorts/short_마음안.mp4`
 
 ## 진행 중
 
-- 없음 (9트랙 완료, 패키징 대기)
+- Shorts 자막 시스템 (기본 기능 완료, force_style 개선 예정)
 
 ## 완료된 추가 작업
 
@@ -302,10 +303,34 @@
 - [x] **vol1 YouTube 정보 기록** (`2636a03`)
   - concept.md에 제목/설명란 전문 기록
 
+### 2026-01-21 — Shorts 2-Layer 자막 시스템
+
+- [x] **shorts 명령어 자막 기능 확장**
+  - 위치 조정: 타이틀 45%, 가사 62.5% (하단 0-30% 금지 구역)
+  - 폰트 분리: 훅=Pretendard Black, 가사=Pretendard Medium
+  - `--title-font`, `--lyric-font` 옵션 추가
+  - `get_pretendard_font_path()` 함수 추가
+
+- [x] **SRT 자막 버그 수정**
+  - 문제: `subtitles` + `drawtext` 필터 조합 시 자막 미표시
+  - 원인: `force_style` 내부 쉼표가 FFmpeg 필터 구분자로 해석됨
+  - 해결: `force_style` 제거, 단순 `subtitles=` 필터 사용
+  - `ffmpeg-full` 필요 (subtitles/drawtext 필터 포함)
+
+- [x] **CLAUDE.md v1.9.0 업데이트**
+  - Shorts 자막 타이포그래피 스펙 (A/B/C 섹션)
+  - D. 금지 구역 섹션 추가 (하단 0-30%, 우측 중앙)
+  - Hook Copy Slot 필수 출력 형식
+  - Shorts QC 체크리스트
+
+- [x] **lessons-learned.md 업데이트**
+  - subtitles + drawtext 필터 충돌 문제 기록
+
 ## 다음 작업 (예정)
 
+- [ ] Shorts force_style 문제 해결 (폰트/위치 커스터마이즈)
 - [ ] 공개 후 고정 댓글 작성
-- [ ] Shorts 클립 제작 (선택)
+- [ ] Shorts 클립 업로드
 - [ ] vol.2 기획
 
 ## 알려진 이슈
