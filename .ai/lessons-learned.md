@@ -2,7 +2,7 @@
 
 > 버그 패턴 및 해결책 기록
 >
-> Last updated: 2026-01-20
+> Last updated: 2026-01-21
 
 ---
 
@@ -110,6 +110,46 @@ final_label = f"a{str(num_tracks-1).zfill(2)}"
 ---
 
 ## ffmpeg-normalize 버그 패턴
+
+### subtitles + drawtext 필터 충돌 (Shorts 자막)
+
+**날짜**: 2026-01-21
+
+**상황**: Shorts 영상에 SRT 자막(subtitles)과 훅 문구(drawtext)를 동시 적용
+
+**증상**:
+- `subtitles` 필터의 `force_style` 옵션 사용 시 자막이 렌더링되지 않음
+- 훅 문구(drawtext)만 표시됨
+
+**원인**:
+- `force_style` 내부의 쉼표가 FFmpeg 필터 구분자로 해석됨
+- 필터 체인이 깨져서 subtitles가 무시됨
+
+**테스트 결과**:
+```bash
+# ✅ 성공: force_style 없이 단순 subtitles
+-vf "crop=...,subtitles=/tmp/test.srt,drawtext=..."
+
+# ❌ 실패: force_style 쉼표 문제
+-vf "crop=...,subtitles=...:force_style='Fontname=X,Fontsize=28',drawtext=..."
+
+# ✅ 성공: force_style 쉼표 이스케이프
+-vf "crop=...,subtitles=...:force_style='Fontname=X\\,Fontsize=28',drawtext=..."
+```
+
+**해결 (진행 중)**:
+1. `force_style` 내부 쉼표를 `\\,`로 이스케이프
+2. 필터 순서: crop → subtitles → drawtext (subtitles가 drawtext보다 먼저)
+
+**주의사항**:
+- `ffmpeg` 기본 설치에는 subtitles/drawtext 필터 없음
+- `ffmpeg-full` 필요 (`/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg`)
+
+**재발 방지**:
+- FFmpeg 필터 옵션 내부 쉼표는 항상 이스케이프
+- 복잡한 필터 체인은 단계별로 테스트
+
+---
 
 ### PATH 문제
 
