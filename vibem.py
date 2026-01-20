@@ -46,6 +46,20 @@ AUDIO_BITRATE = '320k'
 VIDEO_CRF = 18
 VIDEO_PRESET = 'medium'
 
+# FFmpeg binary paths (ffmpeg-full has drawtext support)
+FFMPEG_FULL_PATH = '/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg'
+FFMPEG_DEFAULT = 'ffmpeg'
+
+
+def get_ffmpeg_binary(needs_drawtext: bool = False) -> str:
+    """
+    Get the appropriate FFmpeg binary path.
+    Uses ffmpeg-full when drawtext filter is needed (for text overlays).
+    """
+    if needs_drawtext and Path(FFMPEG_FULL_PATH).exists():
+        return FFMPEG_FULL_PATH
+    return FFMPEG_DEFAULT
+
 
 # =============================================================================
 # DATA CLASSES
@@ -185,6 +199,124 @@ def get_video_info(filepath: Path) -> dict:
         return {'error': f'ffprobe failed: {e.stderr.decode() if e.stderr else str(e)}'}
     except Exception as e:
         return {'error': str(e)}
+
+
+# =============================================================================
+# FONT AND TEXT OVERLAY
+# =============================================================================
+
+def get_system_font_path() -> Optional[str]:
+    """
+    Get system font path for Korean text rendering.
+    Returns None if no suitable font is found.
+    """
+    import platform
+
+    system = platform.system()
+
+    # macOS font paths
+    if system == 'Darwin':
+        font_candidates = [
+            '/System/Library/Fonts/AppleSDGothicNeo.ttc',
+            '/Library/Fonts/AppleGothic.ttf',
+            '/System/Library/Fonts/Supplemental/AppleGothic.ttf',
+        ]
+    # Linux font paths
+    elif system == 'Linux':
+        font_candidates = [
+            '/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc',
+            '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc',
+            '/usr/share/fonts/truetype/nanum/NanumGothic.ttf',
+        ]
+    # Windows font paths
+    elif system == 'Windows':
+        font_candidates = [
+            'C:/Windows/Fonts/malgun.ttf',
+            'C:/Windows/Fonts/gulim.ttc',
+        ]
+    else:
+        font_candidates = []
+
+    for font_path in font_candidates:
+        if Path(font_path).exists():
+            return font_path
+
+    return None
+
+
+def escape_ffmpeg_text(text: str) -> str:
+    """Escape special characters for FFmpeg drawtext filter."""
+    # FFmpeg drawtext requires escaping: \ ' :
+    text = text.replace('\\', '\\\\')
+    text = text.replace("'", "\\'")
+    text = text.replace(':', '\\:')
+    return text
+
+
+def build_text_overlay_filter(
+    title: Optional[str] = None,
+    title_duration: float = 4.0,
+    lyric: Optional[str] = None,
+    lyric_delay: float = 1.0,
+    font_path: Optional[str] = None,
+    title_fontsize: int = 48,
+    lyric_fontsize: int = 28,
+) -> Optional[str]:
+    """
+    Build FFmpeg filter string for 2-layer text overlay.
+
+    Layer 1 (Title): Center, appears 0-2s, fades out 2-4s
+    Layer 2 (Lyric): Bottom, fades in after delay, stays until end
+
+    Returns None if no text is provided.
+    """
+    if not title and not lyric:
+        return None
+
+    # Get font path
+    if not font_path:
+        font_path = get_system_font_path()
+
+    if not font_path:
+        log_warning("No suitable font found. Text overlay may not render correctly.")
+        font_path = "sans"  # FFmpeg fallback
+
+    filters = []
+
+    # Title filter (center, fade out)
+    if title:
+        escaped_title = escape_ffmpeg_text(title)
+        fade_start = title_duration / 2
+        fade_duration = title_duration / 2
+
+        title_filter = (
+            f"drawtext=text='{escaped_title}':"
+            f"fontfile='{font_path}':"
+            f"fontsize={title_fontsize}:"
+            f"fontcolor=white:"
+            f"x=(w-text_w)/2:"
+            f"y=(h-text_h)/2:"
+            f"enable='between(t,0,{title_duration})':"
+            f"alpha='if(lt(t,{fade_start}),1,max(0,1-(t-{fade_start})/{fade_duration}))'"
+        )
+        filters.append(title_filter)
+
+    # Lyric filter (bottom, fade in then stay)
+    if lyric:
+        escaped_lyric = escape_ffmpeg_text(lyric)
+
+        lyric_filter = (
+            f"drawtext=text='{escaped_lyric}':"
+            f"fontfile='{font_path}':"
+            f"fontsize={lyric_fontsize}:"
+            f"fontcolor=white:"
+            f"x=(w-text_w)/2:"
+            f"y=h-100:"
+            f"alpha='if(lt(t,{lyric_delay}),0,min(1,(t-{lyric_delay})/1))'"
+        )
+        filters.append(lyric_filter)
+
+    return ",".join(filters)
 
 
 # =============================================================================
@@ -1172,26 +1304,53 @@ def clean(path: Path):
 @click.argument('track_path', type=click.Path(exists=True, dir_okay=False, path_type=Path))
 @click.option('--start', required=True, help='Start time in MM:SS format (e.g., "00:45")')
 @click.option('--duration', default=30, help='Duration in seconds (default: 30)')
-def shorts(track_path: Path, start: str, duration: int):
+@click.option('--title', default=None, help='Center title text (hook phrase, appears briefly)')
+@click.option('--title-duration', default=4.0, help='Title display duration in seconds (default: 4)')
+@click.option('--lyric', default=None, help='Bottom lyric text (atmospheric, stays throughout)')
+@click.option('--lyric-delay', default=1.0, help='Lyric fade-in delay in seconds (default: 1)')
+@click.option('--font', default=None, type=click.Path(exists=True), help='Custom font file path')
+def shorts(
+    track_path: Path,
+    start: str,
+    duration: int,
+    title: Optional[str],
+    title_duration: float,
+    lyric: Optional[str],
+    lyric_delay: float,
+    font: Optional[Path],
+):
     """
     Create a YouTube Shorts video from a track segment.
 
     Takes a specific MP3 file and creates a 9:16 vertical video
     suitable for YouTube Shorts.
 
+    \b
+    2-Layer Text System:
+    - --title: Center hook phrase (0-2s display, 2-4s fade out)
+    - --lyric: Bottom atmospheric text (fade in, stays until end)
+
+    \b
     Input:
-    - TRACK_PATH: Path to the MP3 file (e.g., input/tracks/02__습기...mp3)
+    - TRACK_PATH: Path to the MP3 file
     - loop.mp4 is taken from the parent input/ directory
 
-    Processing:
-    - Extracts audio segment from --start for --duration seconds
-    - Center crops the video to 9:16 aspect ratio
-    - Loops the video to match audio duration
-
+    \b
     Output: output/shorts/short_[TrackName].mp4
 
-    Example:
-        python vibem.py shorts input/tracks/02__습기__...mp3 --start 00:45 --duration 30
+    \b
+    Examples:
+        # Basic (no text)
+        python vibem.py shorts tracks/02__윤곽__...mp3 --start 00:45 --duration 30
+
+        # With title only
+        python vibem.py shorts tracks/02__윤곽__...mp3 --start 00:45 --duration 30 \\
+            --title "잠들지 못한 새벽"
+
+        # With both title and lyric
+        python vibem.py shorts tracks/02__윤곽__...mp3 --start 00:45 --duration 30 \\
+            --title "잠들지 못한 새벽" \\
+            --lyric "젖은 골목을 혼자 걷고 있어"
     """
     click.echo(click.style("\n=== VIBEM SHORTS ===\n", fg='cyan', bold=True))
 
@@ -1251,22 +1410,35 @@ def shorts(track_path: Path, start: str, duration: int):
 
     log_info(f"Output: {output_path}")
 
-    # Build FFmpeg command
-    # Strategy:
-    # 1. Input: loop video (looped infinitely), audio (trimmed)
-    # 2. Video filter: center crop to 9:16 ratio
-    #    - For 1080p height, width = 1080 * 9 / 16 = 607.5 ≈ 608
-    #    - crop=out_w:out_h:x:y -> crop=ih*9/16:ih:(iw-ih*9/16)/2:0
-    # 3. Use -shortest to stop when audio ends
+    # Build video filter
+    # Base filter: 9:16 center crop
+    crop_filter = "crop=ih*9/16:ih:(iw-ih*9/16)/2:0"
 
-    # FFmpeg filter for 9:16 center crop
-    # crop=width:height:x:y
-    # width = ih * 9 / 16 (height-based calculation for 9:16)
-    # x = (iw - width) / 2 (center horizontally)
-    video_filter = "crop=ih*9/16:ih:(iw-ih*9/16)/2:0"
+    # Build text overlay filter if text is provided
+    text_filter = build_text_overlay_filter(
+        title=title,
+        title_duration=title_duration,
+        lyric=lyric,
+        lyric_delay=lyric_delay,
+        font_path=str(font) if font else None,
+    )
+
+    # Combine filters
+    needs_drawtext = bool(text_filter)
+    if text_filter:
+        video_filter = f"{crop_filter},{text_filter}"
+        log_info(f"Title: {title}" if title else "Title: (none)")
+        log_info(f"Lyric: {lyric}" if lyric else "Lyric: (none)")
+    else:
+        video_filter = crop_filter
+
+    # Use ffmpeg-full when drawtext is needed
+    ffmpeg_bin = get_ffmpeg_binary(needs_drawtext=needs_drawtext)
+    if needs_drawtext and ffmpeg_bin != FFMPEG_DEFAULT:
+        log_info(f"Using ffmpeg-full for text overlay")
 
     cmd = [
-        'ffmpeg', '-y',
+        ffmpeg_bin, '-y',
         # Video input: loop infinitely
         '-stream_loop', '-1',
         '-i', str(loop_video),
@@ -1274,7 +1446,7 @@ def shorts(track_path: Path, start: str, duration: int):
         '-ss', str(start_sec),
         '-t', str(duration),
         '-i', str(track_path),
-        # Filter: center crop video to 9:16
+        # Filter: center crop video to 9:16 + text overlay
         '-vf', video_filter,
         # Map streams
         '-map', '0:v',
@@ -1294,7 +1466,6 @@ def shorts(track_path: Path, start: str, duration: int):
     ]
 
     log_info("Rendering Shorts video...")
-    log_info(f"Video filter: {video_filter}")
 
     try:
         result = subprocess.run(
@@ -1324,6 +1495,10 @@ def shorts(track_path: Path, start: str, duration: int):
     click.echo("")
     click.echo(f"Track:    {track_info.title}")
     click.echo(f"Segment:  {start} + {duration}s")
+    if title:
+        click.echo(f"Title:    {title}")
+    if lyric:
+        click.echo(f"Lyric:    {lyric}")
     click.echo(f"Output:   {output_path}")
     click.echo("")
     click.echo("Ready for YouTube Shorts upload!")

@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-20 | v1.7.0 (Shorts Workflow)
+> Last updated: 2026-01-21 | v1.8.0 (Shorts 2-Layer Text)
 
 ## Quick Reference
 
@@ -215,6 +215,24 @@ Step 2. 구간 확인: "어느 구간으로 할까요? (예: 00:45 ~ 01:15)"
 Step 3. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] --duration [SEC]
 ```
 
+**⚠️ 절대 규칙: 시작/종료 시간 수정 금지**
+```
+- 사용자가 "01:35 ~ 02:15" 라고 하면 → --start 01:35 --duration 40
+- 버퍼/여유 시간 임의 추가 금지
+- 반올림/보정 금지
+- duration = 종료시간 - 시작시간 (정확히 계산)
+```
+
+**실행 전 검증 체크리스트 (필수):**
+```
+□ --start 값이 사용자 지정 시작 시간과 정확히 일치하는가?
+□ --duration 값이 (종료시간 - 시작시간)과 정확히 일치하는가?
+□ 임의로 버퍼/여유 시간을 추가하지 않았는가?
+
+→ 하나라도 미준수 시: 명령어 수정 후 재실행
+→ 실행 후 출력 duration 확인: 오차 ±2초 초과 시 원인 파악
+```
+
 **질문 예시:**
 ```
 숏츠를 만들기 전에 확인이 필요합니다:
@@ -232,6 +250,50 @@ Step 3. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] -
 ```
 
 **출력 경로:** `output/shorts/short_[TrackName].mp4`
+
+### Shorts 2-Layer 텍스트 시스템 (v1.8.0 NEW)
+
+**레이어 구조:**
+```
+Layer 1 (Title): 중앙 후킹 문구 - 0~2초 표시, 2~4초 페이드아웃
+Layer 2 (Lyric): 하단 가사 - 1초 페이드인 후 끝까지 유지
+```
+
+**CLI 옵션:**
+```bash
+python vibem.py shorts [TRACK_PATH] \
+  --start 01:35 --duration 40 \
+  --title "잠들지 못한 새벽" \
+  --title-duration 4 \
+  --lyric "여명처럼 스며들어" \
+  --lyric-delay 1 \
+  --font /path/to/font.ttf  # 선택
+```
+
+| 옵션 | 기본값 | 설명 |
+|------|--------|------|
+| `--title` | None | 중앙 타이틀 (훅 문구) |
+| `--title-duration` | 4 | 타이틀 표시 시간 (초) |
+| `--lyric` | None | 하단 가사 (분위기 레이어) |
+| `--lyric-delay` | 1 | 가사 페이드인 시작 (초) |
+| `--font` | 시스템 기본 | 커스텀 폰트 경로 |
+
+**타이밍 가이드 (40초 쇼츠 기준):**
+```
+0-2초: 타이틀 표시
+2-4초: 타이틀 페이드아웃
+1초~: 가사 페이드인 후 끝까지 유지
+```
+
+**텍스트 전략:**
+- Title = 가사 ❌, 상황/감정 선언문 ⭕ (예: "잠들지 못한 새벽")
+- Lyric = 전체 가사 ❌, 핵심 1줄 ⭕ (예: "여명처럼 스며들어")
+- 둘 동시에 중앙 점유 ❌
+
+**의존성:** 텍스트 옵션 사용 시 `ffmpeg-full` 필요
+```bash
+brew install ffmpeg-full
+```
 
 ## Project Structure
 
@@ -271,7 +333,7 @@ vibe-m/
 | `python3 vibem.py validate <path>` | 파일 검증 |
 | `python3 vibem.py preview <path> --sec 30` | 미리보기 생성 |
 | `python3 vibem.py pack <path>` | 최종 패키징 |
-| `python3 vibem.py shorts <track_path> --start MM:SS --duration SEC` | 숏츠 생성 (9:16) |
+| `python3 vibem.py shorts <track_path> --start MM:SS --duration SEC [--title "..."] [--lyric "..."]` | 숏츠 생성 (9:16, 텍스트 옵션) |
 | `python3 vibem.py clean <path>` | 작업 폴더 정리 |
 
 ## Token Saving
