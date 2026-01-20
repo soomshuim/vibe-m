@@ -62,7 +62,7 @@
   - STYLE.md v2.5
   - CLAUDE.md v1.4.0
 - **테스트 데이터**: `SERIES/Test_Series/2026-01-18/`
-  - 트랙 8곡 완료 (Track 01~08)
+  - 트랙 9곡 완료 (Track 01~09) **플레이리스트 완성**
   - 에셋: `loop.mp4`, `thumb.jpg` 준비됨
 
 ## 진행 중
@@ -262,6 +262,11 @@
 
 ### 2026-01-20 (저녁)
 
+- [x] **Track 09 "마음안" 완료** (`cb2543e`)
+  - 수미상관 마지막 곡 (Track 01 "마음밖" 대응)
+  - Male vocal + Powerful belt, 95 BPM, Db Major
+  - 키워드 축: 여명/옥상/난간/지평선
+  - 후렴: "마음 안으로 번져와 / 여명처럼 스며들어"
 - [x] **Track 08 "빗줄기" 완료** (`286ceef`)
   - Melancholic R&B, 85 BPM, F minor, Rhodes-led
   - 키워드 축: 빗줄기/아스팔트/골목/처마/우산
@@ -273,8 +278,8 @@
 
 ## 다음 작업 (예정)
 
-- [ ] Track 09-10 제작 (2곡 남음)
-- [ ] 10곡 완료 후 validate → pack
+- [ ] 9곡 MP3 생성 (Suno)
+- [ ] validate → pack (최종 패키징)
 
 ## 알려진 이슈
 

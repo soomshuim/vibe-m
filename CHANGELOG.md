@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- Track 09 "마음안": 수미상관 마지막 곡 (Track 01 "마음밖" 대응)
+  - Male vocal + Powerful belt, 95 BPM, Db Major
+  - 키워드 축: 여명/옥상/난간/지평선
+  - 후렴: "마음 안으로 번져와 / 여명처럼 스며들어"
 - Track 08 "빗줄기": Melancholic R&B, 85 BPM, F minor, Rhodes-led
   - 키워드 축: 빗줄기/아스팔트/골목/처마/우산
   - Raw Vocal + Chest Belt, Contralto female
