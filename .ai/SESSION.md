@@ -285,6 +285,23 @@
   - 제목: "잠들지 못한 새벽, 이 노래들이 위로가 되길 | 새벽 감성 R&B 🎧"
   - 예약 공개: 2026-01-20 22:00
 
+### 2026-01-20 (밤) — 문서 체계화
+
+- [x] **Korean Lyric Positioning 공식화** (`f031be5`)
+  - LYRICS.md v1.7: 한국어 가사 포지셔닝 원칙
+  - K1-K3 검증 체크리스트 추가
+  - CLAUDE.md 워크플로우에 Korean Positioning 검증 단계 추가
+- [x] **24H UNIVERSE Master Project Bible** (`8828270`)
+  - 10개 Time Station 정의 (02:00~04:30)
+  - 5개 Key/Mode Bucket 시스템
+  - Production Templates 3종
+  - Station QC Checklist
+- [x] **3-Layer Korean Positioning 전략** (`9add92d`)
+  - PLAYLIST_GUIDE.md v1.1: 재생목록/고정댓글/채널About 전략
+  - vibem.py: description.txt 우리말 가사 문구 자동 추가
+- [x] **vol1 YouTube 정보 기록** (`2636a03`)
+  - concept.md에 제목/설명란 전문 기록
+
 ## 다음 작업 (예정)
 
 - [ ] 공개 후 고정 댓글 작성
@@ -299,10 +316,11 @@
 
 | 파일 | 용도 |
 |------|------|
+| `MASTER/24H_UNIVERSE.md` | 24H Universe Bible (Time Station) |
 | `MASTER/MANAGER.md` | 운영 마스터 플랜 |
-| `MASTER/LYRICS.md` | 가사 공학 규칙 |
+| `MASTER/LYRICS.md` | 가사 공학 규칙 + Korean Positioning |
 | `MASTER/STYLE.md` | 사운드/스타일 가이드 |
-| `MASTER/PLAYLIST_GUIDE.md` | 플레이리스트 컨셉 가이드 |
+| `MASTER/PLAYLIST_GUIDE.md` | 플레이리스트 컨셉 + 3-Layer 전략 |
 | `MASTER/ROLES.md` | 역할 분리 시스템 (SSOT) |
 | `MASTER/QUICK_REF.md` | 사람용 운영 매뉴얼 |
 | `MASTER/prompts/` | 역할별 프롬프트 템플릿 |
