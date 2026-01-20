@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-20 | v1.6.0 (Korean Lyric Positioning)
+> Last updated: 2026-01-20 | v1.7.0 (Shorts Workflow)
 
 ## Quick Reference
 
@@ -204,6 +204,25 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
 - [ ] 필수 파일: `input/tracks/*.mp3`, `input/loop.mp4`, `input/thumb.jpg`
 - [ ] 파일명 형식: `NN__Title__Mood__Genre__BPM.mp3`
 
+### Shorts 생성 요청 시 (v1.7.0 NEW)
+> **원칙: 반드시 사용자에게 확인 후 생성**
+
+**"숏츠 만들어줘" 요청 시 필수 질문:**
+```
+Step 1. 트랙 번호 확인: "몇 번 트랙으로 만들까요?"
+Step 2. 구간 확인: "어느 구간으로 할까요? (예: 00:45 ~ 01:15)"
+Step 3. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] --duration [SEC]
+```
+
+**질문 예시:**
+```
+숏츠를 만들기 전에 확인이 필요합니다:
+1. 몇 번 트랙인가요? (01~09)
+2. 어느 구간인가요? (시작 MM:SS ~ 끝 MM:SS)
+```
+
+**출력 경로:** `output/shorts/short_[TrackName].mp4`
+
 ## Project Structure
 
 ```
@@ -242,6 +261,7 @@ vibe-m/
 | `python3 vibem.py validate <path>` | 파일 검증 |
 | `python3 vibem.py preview <path> --sec 30` | 미리보기 생성 |
 | `python3 vibem.py pack <path>` | 최종 패키징 |
+| `python3 vibem.py shorts <track_path> --start MM:SS --duration SEC` | 숏츠 생성 (9:16) |
 | `python3 vibem.py clean <path>` | 작업 폴더 정리 |
 
 ## Token Saving
