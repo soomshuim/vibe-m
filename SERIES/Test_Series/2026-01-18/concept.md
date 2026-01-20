@@ -536,7 +536,7 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune, doubled vocals, 
 
 [verse1]
 [Direct vocal, No harmony]
-빗줄기가 흐려
+빗줄기가 번져
 아스팔트 위로
 골목이 젖어가
 혼자 걷고 있어
@@ -564,9 +564,9 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune, doubled vocals, 
 
 [bridge2]
 [Chest voice]
-우산 없이 서서
-머리 위로 빗소리
-눈을 감아봐도
+우산 끝이 떨려
+물방울이 턱을 타
+입술을 닫아도
 젖어가는 밤뿐
 
 [chorus]
