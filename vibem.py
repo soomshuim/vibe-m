@@ -1308,6 +1308,7 @@ def clean(path: Path):
 @click.option('--title-duration', default=4.0, help='Title display duration in seconds (default: 4)')
 @click.option('--lyric', default=None, help='Bottom lyric text (atmospheric, stays throughout)')
 @click.option('--lyric-delay', default=1.0, help='Lyric fade-in delay in seconds (default: 1)')
+@click.option('--srt', default=None, type=click.Path(exists=True), help='SRT subtitle file for dynamic lyrics')
 @click.option('--font', default=None, type=click.Path(exists=True), help='Custom font file path')
 def shorts(
     track_path: Path,
@@ -1317,6 +1318,7 @@ def shorts(
     title_duration: float,
     lyric: Optional[str],
     lyric_delay: float,
+    srt: Optional[Path],
     font: Optional[Path],
 ):
     """
@@ -1326,9 +1328,10 @@ def shorts(
     suitable for YouTube Shorts.
 
     \b
-    2-Layer Text System:
+    Text Options:
     - --title: Center hook phrase (0-2s display, 2-4s fade out)
-    - --lyric: Bottom atmospheric text (fade in, stays until end)
+    - --lyric: Bottom static text (fade in, stays until end)
+    - --srt: Dynamic lyrics from SRT file (timed subtitles)
 
     \b
     Input:
@@ -1343,14 +1346,13 @@ def shorts(
         # Basic (no text)
         python vibem.py shorts tracks/02__윤곽__...mp3 --start 00:45 --duration 30
 
-        # With title only
+        # With title + static lyric
         python vibem.py shorts tracks/02__윤곽__...mp3 --start 00:45 --duration 30 \\
-            --title "잠들지 못한 새벽"
+            --title "잠들지 못한 새벽" --lyric "여명처럼 스며들어"
 
-        # With both title and lyric
+        # With title + dynamic lyrics (SRT)
         python vibem.py shorts tracks/02__윤곽__...mp3 --start 00:45 --duration 30 \\
-            --title "잠들지 못한 새벽" \\
-            --lyric "젖은 골목을 혼자 걷고 있어"
+            --title "잠들지 못한 새벽" --srt lyrics.srt
     """
     click.echo(click.style("\n=== VIBEM SHORTS ===\n", fg='cyan', bold=True))
 
@@ -1414,27 +1416,63 @@ def shorts(
     # Base filter: 9:16 center crop
     crop_filter = "crop=ih*9/16:ih:(iw-ih*9/16)/2:0"
 
-    # Build text overlay filter if text is provided
-    text_filter = build_text_overlay_filter(
-        title=title,
-        title_duration=title_duration,
-        lyric=lyric,
-        lyric_delay=lyric_delay,
-        font_path=str(font) if font else None,
-    )
+    # Determine text overlay mode
+    # Priority: SRT (dynamic) > lyric (static)
+    needs_drawtext = False
+    needs_subtitles = False
+    filters = [crop_filter]
 
-    # Combine filters
-    needs_drawtext = bool(text_filter)
-    if text_filter:
-        video_filter = f"{crop_filter},{text_filter}"
-        log_info(f"Title: {title}" if title else "Title: (none)")
-        log_info(f"Lyric: {lyric}" if lyric else "Lyric: (none)")
-    else:
-        video_filter = crop_filter
+    # SRT dynamic lyrics (takes priority over static lyric)
+    if srt:
+        srt_path = Path(srt).resolve()
+        # Escape path for FFmpeg filter (colons and backslashes)
+        srt_escaped = str(srt_path).replace('\\', '/').replace(':', '\\:')
+        # Get font path for subtitles
+        font_path = str(font) if font else get_system_font_path()
+        if font_path:
+            font_escaped = font_path.replace('\\', '/').replace(':', '\\:')
+            srt_filter = f"subtitles='{srt_escaped}':force_style='Fontname=AppleSDGothicNeo,Fontsize=28,Alignment=2,MarginV=80,PrimaryColour=&HFFFFFF&'"
+        else:
+            srt_filter = f"subtitles='{srt_escaped}':force_style='Fontsize=28,Alignment=2,MarginV=80,PrimaryColour=&HFFFFFF&'"
+        filters.append(srt_filter)
+        needs_subtitles = True
+        log_info(f"SRT: {srt_path.name} (dynamic lyrics)")
 
-    # Use ffmpeg-full when drawtext is needed
-    ffmpeg_bin = get_ffmpeg_binary(needs_drawtext=needs_drawtext)
-    if needs_drawtext and ffmpeg_bin != FFMPEG_DEFAULT:
+    # Title overlay (drawtext)
+    if title:
+        title_filter = build_text_overlay_filter(
+            title=title,
+            title_duration=title_duration,
+            lyric=None,  # Don't add static lyric if SRT is provided
+            lyric_delay=lyric_delay,
+            font_path=str(font) if font else None,
+        )
+        if title_filter:
+            filters.append(title_filter)
+            needs_drawtext = True
+            log_info(f"Title: {title}")
+
+    # Static lyric (only if no SRT)
+    if lyric and not srt:
+        lyric_filter = build_text_overlay_filter(
+            title=None,
+            title_duration=title_duration,
+            lyric=lyric,
+            lyric_delay=lyric_delay,
+            font_path=str(font) if font else None,
+        )
+        if lyric_filter:
+            filters.append(lyric_filter)
+            needs_drawtext = True
+            log_info(f"Lyric: {lyric}")
+
+    # Combine all filters
+    video_filter = ",".join(filters)
+
+    # Use ffmpeg-full when drawtext or subtitles is needed
+    needs_advanced_ffmpeg = needs_drawtext or needs_subtitles
+    ffmpeg_bin = get_ffmpeg_binary(needs_drawtext=needs_advanced_ffmpeg)
+    if needs_advanced_ffmpeg and ffmpeg_bin != FFMPEG_DEFAULT:
         log_info(f"Using ffmpeg-full for text overlay")
 
     cmd = [
@@ -1497,8 +1535,10 @@ def shorts(
     click.echo(f"Segment:  {start} + {duration}s")
     if title:
         click.echo(f"Title:    {title}")
-    if lyric:
-        click.echo(f"Lyric:    {lyric}")
+    if srt:
+        click.echo(f"SRT:      {Path(srt).name} (dynamic)")
+    elif lyric:
+        click.echo(f"Lyric:    {lyric} (static)")
     click.echo(f"Output:   {output_path}")
     click.echo("")
     click.echo("Ready for YouTube Shorts upload!")

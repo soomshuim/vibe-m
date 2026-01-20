@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-21 | v1.8.0 (Shorts 2-Layer Text)
+> Last updated: 2026-01-21 | v1.9.0 (Shorts Typography Spec)
 
 ## Quick Reference
 
@@ -251,44 +251,134 @@ Step 3. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] -
 
 **출력 경로:** `output/shorts/short_[TrackName].mp4`
 
-### Shorts 2-Layer 텍스트 시스템 (v1.8.0 NEW)
+### Shorts 2-Layer 텍스트 시스템 (v1.9.0)
 
 **레이어 구조:**
 ```
-Layer 1 (Title): 중앙 후킹 문구 - 0~2초 표시, 2~4초 페이드아웃
-Layer 2 (Lyric): 하단 가사 - 1초 페이드인 후 끝까지 유지
+Layer 1 (Title): 중앙 후킹 문구 - 0~2초만 표시, 빠르게 퇴장
+Layer 2 (Lyric): 하단 가사 - 4초 이후 등장, 끝까지 유지
 ```
 
-**CLI 옵션:**
+---
+
+### Shorts Hook Copy Slot (필수)
+
+> 쇼츠 계획 시 **반드시** 후킹 문구 제안 필요
+
+**출력 형식:**
+```
+HOOK_TITLES (3-7 단어, 5개 제안):
+1) ...
+2) ...
+3) ...
+4) ...
+5) ...
+
+HOOK_SUBTITLES (6-12 단어, 3개 제안, 선택):
+1) ...
+2) ...
+3) ...
+```
+
+**규칙:**
+- ❌ 가사 라인 그대로 사용 금지
+- ⭕ 상황/감정 선언문 (화면 타이틀용)
+- ⭕ 시리즈 컨셉/시간대 포지셔닝과 일치
+
+---
+
+### Shorts QC 체크리스트 (필수)
+
+```
+□ Hook Title 있음? (Y/N)
+□ Bottom Lyric 있음? (Y/N)
+□ 역할 분리 유지? (Title: 0-2초만, Lyric: 4초 이후 하단) (Y/N)
+□ Title이 가사가 아닌 선언문인가? (Y/N)
+
+→ 하나라도 N이면 수정 후 재생성
+```
+
+---
+
+### Shorts 자막 타이포그래피 스펙 (필수)
+
+#### A. 공통 원칙 (가독성 3종 세트)
+
+| 항목 | 값 | 비고 |
+|------|-----|------|
+| Fill (글자색) | White / Off-white | 고정 |
+| Shadow | 부드럽고 넓게 | 필수 |
+| Backplate | 반투명 바 | 배경 밝거나 복잡할 때만 |
+| Stroke (외곽선) | **금지** | 촌스러움 방지 |
+
+#### B. 하단 가사 스펙 (지속 레이어)
+
+| 항목 | 값 |
+|------|-----|
+| **위치** | 하단 여백 8-10% 위 (바닥에 붙이지 말 것) |
+| **정렬** | Center |
+| **폰트** | 산세리프 (얇게~보통) |
+| **크기** | 화면 높이의 4.5-5.5% |
+| **자간** | +1 ~ +3 |
+| **행간** | 1.0 ~ 1.1 |
+| **페이드** | In/Out 6-8프레임 (컷점프 금지) |
+
+**드랍쉐도우 (하단 가사):**
+| 항목 | 값 |
+|------|-----|
+| Opacity | 55-70% |
+| Blur | 12-18 |
+| Distance Y | 6-10 |
+| Distance X | 0 |
+| Color | Black |
+
+**백플레이트 (옵션):**
+| 항목 | 값 |
+|------|-----|
+| Shape | Rounded rectangle |
+| Opacity | 18-28% |
+| Blur | 0 (단색) |
+| Padding | 좌우 24-36px, 상하 12-16px |
+
+#### C. 중앙 타이틀 스펙 (0-2초만)
+
+| 항목 | 값 |
+|------|-----|
+| **위치** | 화면 중앙보다 살짝 아래 (중앙 -5%) |
+| **폰트 두께** | Medium ~ Semibold |
+| **크기** | 화면 높이의 7-9% |
+| **줄 수** | 1줄 권장, 최대 2줄 (행간 0.95) |
+| **등장/퇴장** | 0.2초 이내 (강한 타이틀 느낌) |
+
+**드랍쉐도우 (중앙 타이틀):**
+| 항목 | 값 |
+|------|-----|
+| Opacity | 60-80% |
+| Blur | 20-28 |
+| Distance Y | 10-16 |
+| Distance X | 0 |
+| Color | Black |
+
+---
+
+### Shorts CLI 옵션
+
 ```bash
 python vibem.py shorts [TRACK_PATH] \
   --start 01:35 --duration 40 \
   --title "잠들지 못한 새벽" \
-  --title-duration 4 \
-  --lyric "여명처럼 스며들어" \
-  --lyric-delay 1 \
-  --font /path/to/font.ttf  # 선택
+  --srt lyrics.srt \
+  --font /path/to/font.ttf
 ```
 
 | 옵션 | 기본값 | 설명 |
 |------|--------|------|
 | `--title` | None | 중앙 타이틀 (훅 문구) |
 | `--title-duration` | 4 | 타이틀 표시 시간 (초) |
-| `--lyric` | None | 하단 가사 (분위기 레이어) |
+| `--lyric` | None | 하단 고정 가사 (static) |
+| `--srt` | None | 동적 가사 SRT 파일 (dynamic) |
 | `--lyric-delay` | 1 | 가사 페이드인 시작 (초) |
 | `--font` | 시스템 기본 | 커스텀 폰트 경로 |
-
-**타이밍 가이드 (40초 쇼츠 기준):**
-```
-0-2초: 타이틀 표시
-2-4초: 타이틀 페이드아웃
-1초~: 가사 페이드인 후 끝까지 유지
-```
-
-**텍스트 전략:**
-- Title = 가사 ❌, 상황/감정 선언문 ⭕ (예: "잠들지 못한 새벽")
-- Lyric = 전체 가사 ❌, 핵심 1줄 ⭕ (예: "여명처럼 스며들어")
-- 둘 동시에 중앙 점유 ❌
 
 **의존성:** 텍스트 옵션 사용 시 `ffmpeg-full` 필요
 ```bash
