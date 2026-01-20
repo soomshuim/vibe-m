@@ -51,6 +51,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Test_Series concept.md: Track 01~04 가사/스타일 기록
 
 ### Changed
+- **첫 플레이리스트 정식 출범**: Test_Series → "잠들지 못한 새벽, 이 노래들이 위로가 되길"
+  - 디렉토리: `SERIES/Test_Series/2026-01-18/` → `SERIES/잠들지_못한_새벽/vol1/`
+  - 9트랙 완성 (Track 01~09)
 - **STYLE.md v1.5 → v1.6: Energy Permission + Safety Separation**
   - v1.5 문제: "금지 규칙이 에너지 규칙을 덮어버림" → 보컬이 무난해짐
   - v1.6 해결: "금지는 레이어에만, 허용은 에너지에" 분리

@@ -56,19 +56,18 @@
 
 - **프로젝트**: Production Ready (v1.4.0 - Suno Guide 2.0 Merge)
 - **GitHub**: https://github.com/soomshuim/vibe-m (master)
-- **플레이리스트 주제**: "혼자 걷는 밤, 습기와 잔향"
+- **플레이리스트 제목**: "잠들지 못한 새벽, 이 노래들이 위로가 되길"
 - **문서 버전**:
-  - LYRICS.md v1.5
-  - STYLE.md v2.5
-  - CLAUDE.md v1.4.0
-- **테스트 데이터**: `SERIES/Test_Series/2026-01-18/`
+  - LYRICS.md v1.6
+  - STYLE.md v2.6
+  - CLAUDE.md v1.5.0
+- **작업 디렉토리**: `SERIES/잠들지_못한_새벽/vol1/`
   - 트랙 9곡 완료 (Track 01~09) **플레이리스트 완성**
   - 에셋: `loop.mp4`, `thumb.jpg` 준비됨
 
 ## 진행 중
 
-- [ ] Track 08-10 제작 (3곡 남음)
-  - Track 01~07 concept.md에 기록 완료
+- 없음 (9트랙 완료, 패키징 대기)
 
 ## 완료된 추가 작업
 
@@ -275,10 +274,13 @@
   - bridge2 가사 개선: 물방울/턱/입술 등 신체 감각 디테일
 - [x] `/record` 커맨드 추가 (`.claude/commands/record.md`)
 - [x] Reference 가이드 PDF 5종 추가
+- [x] **첫 플레이리스트 정식 출범** (`c686ba6`)
+  - 제목: "잠들지 못한 새벽, 이 노래들이 위로가 되길"
+  - 디렉토리: `SERIES/Test_Series/2026-01-18/` → `SERIES/잠들지_못한_새벽/vol1/`
+  - 9트랙 완성 (Track 01~09)
 
 ## 다음 작업 (예정)
 
-- [ ] 9곡 MP3 생성 (Suno)
 - [ ] validate → pack (최종 패키징)
 
 ## 알려진 이슈
