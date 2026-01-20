@@ -652,13 +652,24 @@ def generate_description(
         "Hashtags:",
     ])
 
-    hashtags = []
-    for mood in sorted(all_moods):
-        hashtags.append(f"#{mood.replace(' ', '')}")
-    for genre in sorted(all_genres):
-        hashtags.append(f"#{genre.replace(' ', '')}")
+    # Common hashtags (Korean Lyric Positioning - always included)
+    common_hashtags = [
+        "#감성플레이리스트",
+        "#플레이리스트",
+        "#한국어플레이리스트",
+        "#가사좋은노래",
+    ]
 
-    lines.append(" ".join(hashtags))
+    # Track-specific hashtags (from mood/genre)
+    track_hashtags = []
+    for mood in sorted(all_moods):
+        track_hashtags.append(f"#{mood.replace(' ', '')}")
+    for genre in sorted(all_genres):
+        tag = f"#{genre.replace(' ', '').replace('-', '')}플레이리스트"
+        if tag not in track_hashtags:
+            track_hashtags.append(tag)
+
+    lines.append(" ".join(common_hashtags + track_hashtags))
 
     try:
         output_path.write_text("\n".join(lines), encoding='utf-8')
