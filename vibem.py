@@ -295,7 +295,7 @@ def build_text_overlay_filter(
             f"fontsize={title_fontsize}:"
             f"fontcolor=white:"
             f"x=(w-text_w)/2:"
-            f"y=(h-text_h)/2:"
+            f"y=h*0.45-text_h/2:"
             f"enable='between(t,0,{title_duration})':"
             f"alpha='if(lt(t,{fade_start}),1,max(0,1-(t-{fade_start})/{fade_duration}))'"
         )
@@ -311,7 +311,7 @@ def build_text_overlay_filter(
             f"fontsize={lyric_fontsize}:"
             f"fontcolor=white:"
             f"x=(w-text_w)/2:"
-            f"y=h-100:"
+            f"y=h*0.625-text_h/2:"
             f"alpha='if(lt(t,{lyric_delay}),0,min(1,(t-{lyric_delay})/1))'"
         )
         filters.append(lyric_filter)
@@ -1431,9 +1431,9 @@ def shorts(
         font_path = str(font) if font else get_system_font_path()
         if font_path:
             font_escaped = font_path.replace('\\', '/').replace(':', '\\:')
-            srt_filter = f"subtitles='{srt_escaped}':force_style='Fontname=AppleSDGothicNeo,Fontsize=28,Alignment=2,MarginV=80,PrimaryColour=&HFFFFFF&'"
+            srt_filter = f"subtitles='{srt_escaped}':force_style='Fontname=AppleSDGothicNeo,Fontsize=28,Alignment=2,MarginV=400,PrimaryColour=&HFFFFFF&'"
         else:
-            srt_filter = f"subtitles='{srt_escaped}':force_style='Fontsize=28,Alignment=2,MarginV=80,PrimaryColour=&HFFFFFF&'"
+            srt_filter = f"subtitles='{srt_escaped}':force_style='Fontsize=28,Alignment=2,MarginV=400,PrimaryColour=&HFFFFFF&'"
         filters.append(srt_filter)
         needs_subtitles = True
         log_info(f"SRT: {srt_path.name} (dynamic lyrics)")
