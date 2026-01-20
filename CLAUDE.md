@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-20 | v1.5.0 (Guide 5종 검증 + GPT 피드백 통합)
+> Last updated: 2026-01-20 | v1.6.0 (Korean Lyric Positioning)
 
 ## Quick Reference
 
@@ -57,7 +57,8 @@
 Step 0. LYRICS.md + 이전 트랙 키워드 확인
 Step 1. Generate 가사 초안
 Step 2. Run self-QC against checklist (10개 항목)
-Step 3. If all pass → output with QC 테이블
+Step 3. Korean Positioning 검증 (K1-K3) ← v1.7 NEW
+Step 4. If all pass → output with QC 테이블
         If any fail → 재작성 후 Step 2 반복
         (통과할 때까지 유저에게 제안하지 않음)
 ```
@@ -90,12 +91,16 @@ Step 3. If all pass → output with QC 테이블
 | 1.9 | Physical Object Anchor | **각 섹션에 물성 오브젝트 1개 이상** (추상어 과밀 금지) |
 | 2.1 | Pure Input | 설명형 괄호 금지, Performance Cues `(soft)` 등은 허용 |
 | 2.4 | Length Guide | **전체 100-120 단어, 섹션당 4-6행** |
+| **K1** | **Korean Only** | **한국어여야만 성립하는 가사인가?** |
+| **K2** | **Translation Loss** | **영어 번역 시 힘 빠지는 지점 있는가?** |
+| **K3** | **Dual Satisfaction** | **배경음악 OK + 읽으면 문장으로 남는가?** |
 
 **검증 출력 포맷:**
 ```
 Section A: 가사 (전문)
 Section B: QC Validation (각 항목 ✓/✗)
-Section C: 키워드 축 요약 (이전 트랙과 비교)
+Section C: Korean Positioning (K1-K3 ✓/✗) ← v1.7 NEW
+Section D: 키워드 축 요약 (이전 트랙과 비교)
 ```
 
 ---

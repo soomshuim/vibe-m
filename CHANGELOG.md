@@ -7,6 +7,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **LYRICS.md v1.7: Korean Lyric Positioning**
+  - 한국어 가사 플레이리스트 차별점 공식화
+  - 포지셔닝 원칙: 의미 있는 가사, 혼자 읽히는 언어, 소리가 먼저
+  - 가사 설계 철학: 감정 직접 표출 금지, 사물/공간/현상 중심
+  - K1-K3 한국어 검증 체크리스트 추가
+  - 메타/브랜딩 적용 규칙
+- **CLAUDE.md v1.6.0: Korean Positioning Workflow**
+  - 가사 생성 Step 3에 Korean Positioning 검증 추가
+  - 검증 출력 포맷에 Section C (K1-K3) 추가
+
 - Track 09 "마음안": 수미상관 마지막 곡 (Track 01 "마음밖" 대응)
   - Male vocal + Powerful belt, 95 BPM, Db Major
   - 키워드 축: 여명/옥상/난간/지평선
