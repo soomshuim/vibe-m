@@ -607,9 +607,92 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune, choir, EDM drops
 
 ---
 
+## Track 09 (Final - 수미상관)
+
+### 파일명
+`09__마음안__Sentimental__RnB-Ballad__95.mp3`
+
+### 가사
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct vocal, No harmony]
+옥상 끝에 서서
+지평선을 봐
+하늘이 갈라져
+여명이 번져와
+
+[bridge1]
+[Chest voice]
+난간을 잡아도
+손끝이 차가워
+숨을 내쉬어도
+밤이 걷혀가는 것뿐
+
+[chorus]
+[Powerful belt, No backing vocals]
+마음 안으로 번져와
+여명처럼 스며들어
+닫혀있던 이 밤이
+결국 열려가
+
+[verse2]
+[Direct vocal, No harmony]
+옥상 끝에 서서
+첫 빛을 맞아
+어둠이 걷혀져
+온몸이 젖어와
+
+[bridge2]
+[Chest voice]
+두 눈을 감아도
+볼이 뜨거워
+입술을 닫아도
+밤이 걷혀가는 것뿐
+
+[chorus]
+[Powerful belt, No backing vocals]
+마음 안으로 번져와
+여명처럼 스며들어
+닫혀있던 이 밤이
+결국 열려가
+
+[chorus]
+[Powerful belt, No backing vocals]
+마음 안으로 번져와
+여명처럼 스며들어
+닫혀있던 이 밤이
+결국 열려가
+
+[outro]
+[instrumental]
+```
+
+### Style Prompt
+```
+Korean R&B Ballad, 95 BPM, Db Major, Piano/Rhodes-led, soft brush kit, rim-click, subtle strings in chorus, cinematic but restrained, high fidelity, wide stereo.
+Raw vocal, Powerful, Solid, Direct, Dry, Unprocessed. Deep male vocal, mature voice.
+Chest voice dominant throughout. No falsetto. Strong vocal attack, controlled vibrato.
+Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
+Verse2 same melodic contour as v1; last 2 lines MUST rise in emotional intensity (higher register, stronger dynamics, natural strain allowed).
+Chorus hook-first, repeat identical; chorus first line hits peak with powerful chest voice belt + 1 held note. Lead vocal energy may increase.
+Chorus2 bigger by arrangement (bass/drums energy, wider stereo, subtle strings); lead vocal energy may increase, but no new vocal layers.
+Bridge builds every bar; no energy drop into chorus. Outro piano fades.
+```
+
+### Exclude Style
+```
+Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune, choir, EDM drops
+```
+
+---
+
 ## 메모
 
-- Track 01 "마음밖": Seed 곡 (Piano/Rhodes 기반)
+- Track 01 "마음밖": Seed 곡 (Piano/Rhodes 기반), **Female vocal**
 - Track 02 "윤곽": Chill R&B, Rhodes, 키워드 축 (윤곽/네온/초점/경계)
 - Track 03 "잔향": **제로 베이스라인 적용** (코러스 완전 차단 테스트)
 - Track 04 "물안개": Lo-fi R&B, Rhodes + Ambient Pad, 키워드 축 (가로등/발자국/번짐)
@@ -617,6 +700,7 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune, choir, EDM drops
 - Track 06 "적막": R&B, Felt Piano, A minor, 키워드 축 (시계/방/적막/커피잔)
 - Track 07 "문틈": **Raw Vocal Baseline 적용**, Eb Major, 키워드 축 (문틈/빛줄기/먼지/손잡이)
 - Track 08 "빗줄기": **Raw Vocal + Chest Belt**, F minor, 키워드 축 (빗줄기/아스팔트/골목/처마/우산)
+- Track 09 "마음안": **수미상관 (Track 01 대응)**, Db Major, **Male vocal + Powerful belt**, 키워드 축 (여명/옥상/난간/지평선)
 
 ---
 
