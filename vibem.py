@@ -766,6 +766,30 @@ def generate_report(
 
 
 # =============================================================================
+# UTILITY FUNCTIONS - TIME PARSING
+# =============================================================================
+
+def parse_time_string(time_str: str) -> float:
+    """
+    Parse time string in MM:SS or HH:MM:SS format to seconds.
+
+    Examples:
+        "00:45" -> 45.0
+        "01:30" -> 90.0
+        "1:05:30" -> 3930.0
+    """
+    parts = time_str.split(':')
+    if len(parts) == 2:
+        minutes, seconds = parts
+        return int(minutes) * 60 + float(seconds)
+    elif len(parts) == 3:
+        hours, minutes, seconds = parts
+        return int(hours) * 3600 + int(minutes) * 60 + float(seconds)
+    else:
+        raise ValueError(f"Invalid time format: {time_str}. Expected MM:SS or HH:MM:SS")
+
+
+# =============================================================================
 # CLI COMMANDS
 # =============================================================================
 
@@ -1142,6 +1166,167 @@ def clean(path: Path):
 
     click.echo("")
     click.echo(click.style("CLEAN COMPLETE", fg='green', bold=True))
+
+
+@cli.command()
+@click.argument('track_path', type=click.Path(exists=True, dir_okay=False, path_type=Path))
+@click.option('--start', required=True, help='Start time in MM:SS format (e.g., "00:45")')
+@click.option('--duration', default=30, help='Duration in seconds (default: 30)')
+def shorts(track_path: Path, start: str, duration: int):
+    """
+    Create a YouTube Shorts video from a track segment.
+
+    Takes a specific MP3 file and creates a 9:16 vertical video
+    suitable for YouTube Shorts.
+
+    Input:
+    - TRACK_PATH: Path to the MP3 file (e.g., input/tracks/02__습기...mp3)
+    - loop.mp4 is taken from the parent input/ directory
+
+    Processing:
+    - Extracts audio segment from --start for --duration seconds
+    - Center crops the video to 9:16 aspect ratio
+    - Loops the video to match audio duration
+
+    Output: output/shorts/short_[TrackName].mp4
+
+    Example:
+        python vibem.py shorts input/tracks/02__습기__...mp3 --start 00:45 --duration 30
+    """
+    click.echo(click.style("\n=== VIBEM SHORTS ===\n", fg='cyan', bold=True))
+
+    # Resolve paths
+    # Track path structure: .../input/tracks/NN__Title__...mp3
+    # loop.mp4 should be in: .../input/loop.mp4
+    tracks_dir = track_path.parent
+    input_dir = tracks_dir.parent
+    base_dir = input_dir.parent
+    loop_video = input_dir / 'loop.mp4'
+    shorts_output_dir = base_dir / 'output' / 'shorts'
+
+    # Validate track filename format
+    track_info = TrackInfo.from_filename(track_path)
+    if track_info is None:
+        log_error(f"Invalid track filename format: {track_path.name}")
+        log_error("Expected format: NN__Title__Mood__Genre__BPM.mp3")
+        sys.exit(1)
+
+    log_info(f"Track: {track_info.order:02d}. {track_info.title}")
+
+    # Validate loop video exists
+    if not loop_video.exists():
+        log_error(f"Loop video not found: {loop_video}")
+        log_error(f"Expected loop.mp4 in: {input_dir}")
+        sys.exit(1)
+
+    log_success(f"Loop video found: {loop_video}")
+
+    # Parse start time
+    try:
+        start_sec = parse_time_string(start)
+    except ValueError as e:
+        log_error(str(e))
+        sys.exit(1)
+
+    log_info(f"Start time: {start} ({start_sec:.1f}s)")
+    log_info(f"Duration: {duration}s")
+
+    # Get audio info to validate segment
+    audio_info = get_audio_info(track_path)
+    if 'error' in audio_info:
+        log_error(f"Failed to read audio: {audio_info['error']}")
+        sys.exit(1)
+
+    track_duration = audio_info['duration']
+    if start_sec + duration > track_duration:
+        log_warning(f"Requested segment exceeds track duration ({track_duration:.1f}s)")
+        log_warning(f"Will use remaining audio from {start}s")
+
+    # Ensure output directory
+    ensure_dir(shorts_output_dir)
+
+    # Output filename
+    output_filename = f"short_{track_info.title}.mp4"
+    output_path = shorts_output_dir / output_filename
+
+    log_info(f"Output: {output_path}")
+
+    # Build FFmpeg command
+    # Strategy:
+    # 1. Input: loop video (looped infinitely), audio (trimmed)
+    # 2. Video filter: center crop to 9:16 ratio
+    #    - For 1080p height, width = 1080 * 9 / 16 = 607.5 ≈ 608
+    #    - crop=out_w:out_h:x:y -> crop=ih*9/16:ih:(iw-ih*9/16)/2:0
+    # 3. Use -shortest to stop when audio ends
+
+    # FFmpeg filter for 9:16 center crop
+    # crop=width:height:x:y
+    # width = ih * 9 / 16 (height-based calculation for 9:16)
+    # x = (iw - width) / 2 (center horizontally)
+    video_filter = "crop=ih*9/16:ih:(iw-ih*9/16)/2:0"
+
+    cmd = [
+        'ffmpeg', '-y',
+        # Video input: loop infinitely
+        '-stream_loop', '-1',
+        '-i', str(loop_video),
+        # Audio input: seek to start and limit duration
+        '-ss', str(start_sec),
+        '-t', str(duration),
+        '-i', str(track_path),
+        # Filter: center crop video to 9:16
+        '-vf', video_filter,
+        # Map streams
+        '-map', '0:v',
+        '-map', '1:a',
+        # Video encoding
+        '-c:v', VIDEO_CODEC,
+        '-preset', VIDEO_PRESET,
+        '-crf', str(VIDEO_CRF),
+        # Audio encoding
+        '-c:a', AUDIO_CODEC,
+        '-b:a', AUDIO_BITRATE,
+        # Output settings
+        '-pix_fmt', 'yuv420p',
+        '-movflags', '+faststart',
+        '-shortest',
+        str(output_path)
+    ]
+
+    log_info("Rendering Shorts video...")
+    log_info(f"Video filter: {video_filter}")
+
+    try:
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        log_success(f"Shorts video rendered: {output_path}")
+    except subprocess.CalledProcessError as e:
+        log_error(f"FFmpeg failed: {e.stderr}")
+        sys.exit(1)
+
+    # Get output video info
+    output_info = get_video_info(output_path)
+    if 'error' not in output_info:
+        width = output_info.get('width', 0)
+        height = output_info.get('height', 0)
+        out_duration = output_info.get('duration', 0)
+        log_success(f"Output: {width}x{height}, {out_duration:.1f}s")
+
+    # Summary
+    click.echo("")
+    click.echo(click.style("=" * 50, fg='green'))
+    click.echo(click.style("SHORTS COMPLETE", fg='green', bold=True))
+    click.echo(click.style("=" * 50, fg='green'))
+    click.echo("")
+    click.echo(f"Track:    {track_info.title}")
+    click.echo(f"Segment:  {start} + {duration}s")
+    click.echo(f"Output:   {output_path}")
+    click.echo("")
+    click.echo("Ready for YouTube Shorts upload!")
 
 
 # =============================================================================
