@@ -209,7 +209,8 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
 
 **"숏츠 만들어줘" 요청 시 필수 질문:**
 ```
-Step 1. 트랙 번호 확인: "몇 번 트랙으로 만들까요?"
+Step 0. 시리즈 확인: SERIES/ 내 폴더 목록 보여주고 선택 요청
+Step 1. 트랙 번호 확인: 해당 시리즈의 트랙 목록 보여주고 선택 요청
 Step 2. 구간 확인: "어느 구간으로 할까요? (예: 00:45 ~ 01:15)"
 Step 3. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] --duration [SEC]
 ```
@@ -217,8 +218,17 @@ Step 3. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] -
 **질문 예시:**
 ```
 숏츠를 만들기 전에 확인이 필요합니다:
-1. 몇 번 트랙인가요? (01~09)
-2. 어느 구간인가요? (시작 MM:SS ~ 끝 MM:SS)
+
+1. 어떤 시리즈인가요?
+   - 잠들지_못한_새벽/vol1
+   - (기타 시리즈...)
+
+2. 몇 번 트랙인가요?
+   - 01. 마음밖
+   - 02. 윤곽
+   - ...
+
+3. 어느 구간인가요? (시작 MM:SS ~ 끝 MM:SS)
 ```
 
 **출력 경로:** `output/shorts/short_[TrackName].mp4`
