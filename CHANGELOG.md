@@ -16,6 +16,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **CLAUDE.md v1.6.0: Korean Positioning Workflow**
   - 가사 생성 Step 3에 Korean Positioning 검증 추가
   - 검증 출력 포맷에 Section C (K1-K3) 추가
+- **24H_UNIVERSE.md v1.0: Master Project Bible**
+  - 24H Universe 세계관 정의 (시간 기반 감정 스테이션)
+  - 10개 Time Station 정의 (02:00~04:30)
+  - 5개 Key/Mode Bucket 시스템
+  - Production Templates 3종 (Track Brief, Style Skeleton, Lyrics Skeleton)
+  - Station QC Checklist (Listen/Lyric/Style/Exclude 검증)
+  - DNA Constants vs Variables 명세
 
 - Track 09 "마음안": 수미상관 마지막 곡 (Track 01 "마음밖" 대응)
   - Male vocal + Powerful belt, 95 BPM, Db Major

@@ -8,6 +8,7 @@
 
 | 용도 | 파일 |
 |------|------|
+| **24H Universe Bible** | `MASTER/24H_UNIVERSE.md` |
 | **운영 마스터 플랜** | `MASTER/MANAGER.md` |
 | **가사 공학 규칙** | `MASTER/LYRICS.md` |
 | **사운드/스타일 가이드** | `MASTER/STYLE.md` |
@@ -35,6 +36,7 @@
 
 | 요청 유형 | 참조 문서 | 읽을 범위 |
 |----------|----------|----------|
+| **24H Universe 트랙 생성** | `MASTER/24H_UNIVERSE.md` | 전체 (필수) |
 | **플레이리스트 컨셉 논의/시작** | `MASTER/PLAYLIST_GUIDE.md` | 전체 (필수) |
 | 가사 작성/수정 | `MASTER/LYRICS.md` | 전체 |
 | Style Prompt 작성 | `MASTER/STYLE.md` | 전체 |
