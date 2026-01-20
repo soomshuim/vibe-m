@@ -51,6 +51,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Test_Series concept.md: Track 01~04 가사/스타일 기록
 
 ### Changed
+- **첫 플레이리스트 YouTube 업로드 완료**
+  - 제목: "잠들지 못한 새벽, 이 노래들이 위로가 되길"
+  - URL: https://youtu.be/E62sIgkPNXI
+  - 채널: soomshuim (24시간 시리즈)
 - **첫 플레이리스트 정식 출범**: Test_Series → "잠들지 못한 새벽, 이 노래들이 위로가 되길"
   - 디렉토리: `SERIES/Test_Series/2026-01-18/` → `SERIES/잠들지_못한_새벽/vol1/`
   - 9트랙 완성 (Track 01~09)

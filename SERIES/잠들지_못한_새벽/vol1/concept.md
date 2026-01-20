@@ -1,5 +1,7 @@
 # 잠들지 못한 새벽, 이 노래들이 위로가 되길
 > vol1 - 2026-01-18
+>
+> **YouTube**: https://youtu.be/E62sIgkPNXI
 
 ---
 
