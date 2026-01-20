@@ -377,7 +377,8 @@ python vibem.py shorts [TRACK_PATH] \
   --start 01:35 --duration 40 \
   --title "잠들지 못한 새벽" \
   --srt lyrics.srt \
-  --font /path/to/font.ttf
+  --title-font /path/to/heavy.otf \
+  --lyric-font /path/to/medium.otf
 ```
 
 | 옵션 | 기본값 | 설명 |
@@ -387,7 +388,12 @@ python vibem.py shorts [TRACK_PATH] \
 | `--lyric` | None | 하단 고정 가사 (static) |
 | `--srt` | None | 동적 가사 SRT 파일 (dynamic) |
 | `--lyric-delay` | 1 | 가사 페이드인 시작 (초) |
-| `--font` | 시스템 기본 | 커스텀 폰트 경로 |
+| `--title-font` | Pretendard Black | 타이틀(훅) 폰트 |
+| `--lyric-font` | Pretendard Medium | 가사 폰트 |
+
+**기본 폰트:**
+- 훅 문구: `Pretendard-Black.otf` (Heavy)
+- 가사: `Pretendard-Medium.otf`
 
 **의존성:** 텍스트 옵션 사용 시 `ffmpeg-full` 필요
 ```bash

@@ -244,6 +244,51 @@ def get_system_font_path() -> Optional[str]:
     return None
 
 
+def get_pretendard_font_path(weight: str = "Medium") -> Optional[str]:
+    """Get Pretendard font path by weight.
+
+    Available weights: Thin, ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black
+    """
+    home = Path.home()
+    font_dirs = [
+        home / "Library/Fonts",  # macOS user fonts
+        Path("/Library/Fonts"),  # macOS system fonts
+        Path("/usr/share/fonts/truetype/pretendard"),  # Linux
+    ]
+
+    for font_dir in font_dirs:
+        font_path = font_dir / f"Pretendard-{weight}.otf"
+        if font_path.exists():
+            return str(font_path)
+        # Try ttf variant
+        font_path = font_dir / f"Pretendard-{weight}.ttf"
+        if font_path.exists():
+            return str(font_path)
+
+    return None
+
+
+# Default fonts for Shorts (lazy loaded to avoid startup overhead)
+_SHORTS_TITLE_FONT: Optional[str] = None
+_SHORTS_LYRIC_FONT: Optional[str] = None
+
+
+def get_shorts_title_font() -> Optional[str]:
+    """Get default title font (Pretendard Black)."""
+    global _SHORTS_TITLE_FONT
+    if _SHORTS_TITLE_FONT is None:
+        _SHORTS_TITLE_FONT = get_pretendard_font_path("Black")
+    return _SHORTS_TITLE_FONT
+
+
+def get_shorts_lyric_font() -> Optional[str]:
+    """Get default lyric font (Pretendard Medium)."""
+    global _SHORTS_LYRIC_FONT
+    if _SHORTS_LYRIC_FONT is None:
+        _SHORTS_LYRIC_FONT = get_pretendard_font_path("Medium")
+    return _SHORTS_LYRIC_FONT
+
+
 def escape_ffmpeg_text(text: str) -> str:
     """Escape special characters for FFmpeg drawtext filter."""
     # FFmpeg drawtext requires escaping: \ ' :
@@ -258,28 +303,39 @@ def build_text_overlay_filter(
     title_duration: float = 4.0,
     lyric: Optional[str] = None,
     lyric_delay: float = 1.0,
-    font_path: Optional[str] = None,
+    title_font_path: Optional[str] = None,
+    lyric_font_path: Optional[str] = None,
     title_fontsize: int = 48,
     lyric_fontsize: int = 28,
 ) -> Optional[str]:
     """
     Build FFmpeg filter string for 2-layer text overlay.
 
-    Layer 1 (Title): Center, appears 0-2s, fades out 2-4s
-    Layer 2 (Lyric): Bottom, fades in after delay, stays until end
+    Layer 1 (Title): Center (45%), appears 0-2s, fades out 2-4s
+    Layer 2 (Lyric): Lower center (62.5%), fades in after delay, stays until end
+
+    Default fonts:
+    - Title: Pretendard Black (Heavy)
+    - Lyric: Pretendard Medium
 
     Returns None if no text is provided.
     """
     if not title and not lyric:
         return None
 
-    # Get font path
-    if not font_path:
-        font_path = get_system_font_path()
+    # Get font paths with Pretendard defaults
+    if not title_font_path:
+        title_font_path = get_shorts_title_font() or get_system_font_path()
+    if not lyric_font_path:
+        lyric_font_path = get_shorts_lyric_font() or get_system_font_path()
 
-    if not font_path:
-        log_warning("No suitable font found. Text overlay may not render correctly.")
-        font_path = "sans"  # FFmpeg fallback
+    # Fallback to FFmpeg default
+    if not title_font_path:
+        log_warning("No title font found. Text overlay may not render correctly.")
+        title_font_path = "sans"
+    if not lyric_font_path:
+        log_warning("No lyric font found. Text overlay may not render correctly.")
+        lyric_font_path = "sans"
 
     filters = []
 
@@ -291,7 +347,7 @@ def build_text_overlay_filter(
 
         title_filter = (
             f"drawtext=text='{escaped_title}':"
-            f"fontfile='{font_path}':"
+            f"fontfile='{title_font_path}':"
             f"fontsize={title_fontsize}:"
             f"fontcolor=white:"
             f"x=(w-text_w)/2:"
@@ -301,13 +357,13 @@ def build_text_overlay_filter(
         )
         filters.append(title_filter)
 
-    # Lyric filter (bottom, fade in then stay)
+    # Lyric filter (lower center, fade in then stay)
     if lyric:
         escaped_lyric = escape_ffmpeg_text(lyric)
 
         lyric_filter = (
             f"drawtext=text='{escaped_lyric}':"
-            f"fontfile='{font_path}':"
+            f"fontfile='{lyric_font_path}':"
             f"fontsize={lyric_fontsize}:"
             f"fontcolor=white:"
             f"x=(w-text_w)/2:"
@@ -1309,7 +1365,8 @@ def clean(path: Path):
 @click.option('--lyric', default=None, help='Bottom lyric text (atmospheric, stays throughout)')
 @click.option('--lyric-delay', default=1.0, help='Lyric fade-in delay in seconds (default: 1)')
 @click.option('--srt', default=None, type=click.Path(exists=True), help='SRT subtitle file for dynamic lyrics')
-@click.option('--font', default=None, type=click.Path(exists=True), help='Custom font file path')
+@click.option('--title-font', default=None, type=click.Path(exists=True), help='Title font (default: Pretendard Black)')
+@click.option('--lyric-font', default=None, type=click.Path(exists=True), help='Lyric font (default: Pretendard Medium)')
 def shorts(
     track_path: Path,
     start: str,
@@ -1319,7 +1376,8 @@ def shorts(
     lyric: Optional[str],
     lyric_delay: float,
     srt: Optional[Path],
-    font: Optional[Path],
+    title_font: Optional[Path],
+    lyric_font: Optional[Path],
 ):
     """
     Create a YouTube Shorts video from a track segment.
@@ -1427,11 +1485,11 @@ def shorts(
         srt_path = Path(srt).resolve()
         # Escape path for FFmpeg filter (colons and backslashes)
         srt_escaped = str(srt_path).replace('\\', '/').replace(':', '\\:')
-        # Get font path for subtitles
-        font_path = str(font) if font else get_system_font_path()
+        # Get font path for subtitles (default: Pretendard Medium)
+        font_path = str(lyric_font) if lyric_font else get_shorts_lyric_font()
         if font_path:
-            font_escaped = font_path.replace('\\', '/').replace(':', '\\:')
-            srt_filter = f"subtitles='{srt_escaped}':force_style='Fontname=AppleSDGothicNeo,Fontsize=28,Alignment=2,MarginV=400,PrimaryColour=&HFFFFFF&'"
+            font_name = Path(font_path).stem  # e.g., "Pretendard-Medium"
+            srt_filter = f"subtitles='{srt_escaped}':force_style='Fontname={font_name},Fontsize=28,Alignment=2,MarginV=400,PrimaryColour=&HFFFFFF&'"
         else:
             srt_filter = f"subtitles='{srt_escaped}':force_style='Fontsize=28,Alignment=2,MarginV=400,PrimaryColour=&HFFFFFF&'"
         filters.append(srt_filter)
@@ -1445,7 +1503,8 @@ def shorts(
             title_duration=title_duration,
             lyric=None,  # Don't add static lyric if SRT is provided
             lyric_delay=lyric_delay,
-            font_path=str(font) if font else None,
+            title_font_path=str(title_font) if title_font else None,
+            lyric_font_path=None,
         )
         if title_filter:
             filters.append(title_filter)
@@ -1459,7 +1518,8 @@ def shorts(
             title_duration=title_duration,
             lyric=lyric,
             lyric_delay=lyric_delay,
-            font_path=str(font) if font else None,
+            title_font_path=None,
+            lyric_font_path=str(lyric_font) if lyric_font else None,
         )
         if lyric_filter:
             filters.append(lyric_filter)
