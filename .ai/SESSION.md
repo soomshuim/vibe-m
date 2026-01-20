@@ -62,7 +62,7 @@
   - STYLE.md v2.5
   - CLAUDE.md v1.4.0
 - **테스트 데이터**: `SERIES/Test_Series/2026-01-18/`
-  - 트랙 7곡 완료 (Track 01~07)
+  - 트랙 8곡 완료 (Track 01~08)
   - 에셋: `loop.mp4`, `thumb.jpg` 준비됨
 
 ## 진행 중
@@ -260,12 +260,20 @@
     - DEBUG/PROD 모드 안내
     - S1-S9 Validation 강제 안내
 
+### 2026-01-20 (저녁)
+
+- [x] **Track 08 "빗줄기" 완료** (`286ceef`)
+  - Melancholic R&B, 85 BPM, F minor, Rhodes-led
+  - 키워드 축: 빗줄기/아스팔트/골목/처마/우산
+  - Raw Vocal + Chest Belt, Contralto female
+  - 메타태그: Direct vocal, Chest voice, Powerful belt
+  - bridge2 가사 개선: 물방울/턱/입술 등 신체 감각 디테일
+- [x] `/record` 커맨드 추가 (`.claude/commands/record.md`)
+- [x] Reference 가이드 PDF 5종 추가
+
 ## 다음 작업 (예정)
 
-- [ ] Track 08 제작 (새 규칙 테스트)
-- [ ] Performance Cues 동작 검증 (Suno가 읽지 않는지 확인)
-- [ ] 새 구조 태그 동작 검증
-- [ ] Track 09-10 순차 제작
+- [ ] Track 09-10 제작 (2곡 남음)
 - [ ] 10곡 완료 후 validate → pack
 
 ## 알려진 이슈

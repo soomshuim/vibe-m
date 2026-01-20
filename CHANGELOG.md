@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- Track 08 "빗줄기": Melancholic R&B, 85 BPM, F minor, Rhodes-led
+  - 키워드 축: 빗줄기/아스팔트/골목/처마/우산
+  - Raw Vocal + Chest Belt, Contralto female
+  - 메타태그 포함 (Direct vocal, Chest voice, Powerful belt)
 - **STYLE.md v1.7: Fail Fast Energy Check**
   - Chorus held note 정량화: "exactly 1 held note (longer sustain than any verse note)"
   - V2 → Chorus FAIL 조건 4개: register/intensity 미상승, 1 held note 부재, 레이어 의존
