@@ -1,5 +1,5 @@
 # Project Vibe-M: System Specification
-# Version: 2.0 (Production Ready)
+# Version: 2.1 (Repeat Loop)
 # Target: Python CLI Tool (`vibem`)
 
 ---
@@ -82,7 +82,7 @@ root/
 ### C. `pack`
 **목적:** 유튜브 업로드용 최종 고품질 패키지 생성.
 
-*   **옵션:** `--lufs -14 --tp -1.0 --fade 0.8`
+*   **옵션:** `--lufs -14 --tp -1.0 --fade 0.8 --repeat 2`
 *   **로직:**
     1.  **Re-Validate:** 검증 로직 재실행.
     2.  **Normalize (개별 정규화):**
@@ -91,6 +91,7 @@ root/
         *   결과물은 `work/norm_tracks/`에 저장 (원본 덮어쓰기 금지).
     3.  **Merge (병합):**
         *   정규화된 트랙들에 **Sequential Acrossfade** 적용.
+        *   `--repeat N` 옵션으로 플레이리스트 반복 횟수 지정 (기본값: 2회).
         *   안정성을 위해 `work/merged.wav`로 중간 파일 저장 허용.
     4.  **Render (최종 렌더링):**
         *   Input: `work/merged.wav` + `loop.mp4` + `thumb.jpg`.
@@ -135,8 +136,11 @@ python3 vibem.py validate SERIES/Test_Series/2026-01-18
 # 미리보기 (30초)
 python3 vibem.py preview SERIES/Test_Series/2026-01-18 --sec 30
 
-# 최종 패키징
+# 최종 패키징 (2회 반복, 기본값)
 python3 vibem.py pack SERIES/Test_Series/2026-01-18 --lufs -14 --tp -1.0 --fade 0.8
+
+# 최종 패키징 (1회만, 반복 없음)
+python3 vibem.py pack SERIES/Test_Series/2026-01-18 --repeat 1
 
 # 작업 폴더 정리
 python3 vibem.py clean SERIES/Test_Series/2026-01-18

@@ -805,7 +805,8 @@ def generate_provenance(
 def generate_description(
     tracks: list[TrackInfo],
     output_path: Path,
-    crossfade_sec: float
+    crossfade_sec: float,
+    repeat: int = 2
 ) -> bool:
     """Generate description.txt with timestamps and hashtags."""
     lines = []
@@ -816,21 +817,35 @@ def generate_description(
     all_genres = set()
 
     for track in tracks:
-        # Format timestamp as MM:SS
-        minutes = int(current_time // 60)
-        seconds = int(current_time % 60)
-        timestamp = f"{minutes:02d}:{seconds:02d}"
-
-        lines.append(f"{timestamp} {track.order:02d}. {track.title}")
-
         all_moods.add(track.mood)
         all_genres.add(track.genre)
 
-        # Next track starts after this duration minus crossfade overlap
-        if track != tracks[-1]:
-            current_time += track.duration - crossfade_sec
-        else:
-            current_time += track.duration
+    # Generate timestamps for each repeat
+    for round_num in range(1, repeat + 1):
+        if repeat > 1:
+            lines.append(f"[ {round_num}회차 ]")
+
+        for i, track in enumerate(tracks):
+            # Format timestamp as MM:SS
+            minutes = int(current_time // 60)
+            seconds = int(current_time % 60)
+            timestamp = f"{minutes:02d}:{seconds:02d}"
+
+            lines.append(f"{timestamp} {track.order:02d}. {track.title}")
+
+            # Next track starts after this duration minus crossfade overlap
+            is_last_track_of_round = (i == len(tracks) - 1)
+            is_last_round = (round_num == repeat)
+
+            if is_last_track_of_round and is_last_round:
+                # Last track of last round - no crossfade
+                current_time += track.duration
+            else:
+                # All other tracks - subtract crossfade
+                current_time += track.duration - crossfade_sec
+
+        if round_num < repeat:
+            lines.append("")  # Empty line between rounds
 
     # Add Korean Lyric Positioning message
     lines.extend([
@@ -1159,14 +1174,15 @@ def preview(path: Path, sec: int, fade: float):
 @click.option('--tp', default=DEFAULT_TRUE_PEAK, help='True peak in dBTP')
 @click.option('--fade', default=DEFAULT_CROSSFADE_SEC, help='Crossfade duration in seconds')
 @click.option('--skip-normalize', is_flag=True, help='Skip normalization step')
-def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool):
+@click.option('--repeat', default=2, help='Number of times to repeat the playlist (default: 2)')
+def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, repeat: int):
     """
     Create final deliverables for YouTube.
 
     Full production workflow:
     1. Validate project structure
     2. Normalize each track (ffmpeg-normalize)
-    3. Merge with sequential crossfade
+    3. Merge with sequential crossfade (repeated N times, default 2x)
     4. Render final video
     5. Generate artifacts (provenance, description, upload CSV, report)
 
@@ -1175,7 +1191,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool):
     click.echo(click.style("\n=== VIBEM PACK ===\n", fg='cyan', bold=True))
 
     paths = ProjectPaths(path)
-    params = {'lufs': lufs, 'tp': tp, 'fade': fade}
+    params = {'lufs': lufs, 'tp': tp, 'fade': fade, 'repeat': repeat}
 
     # Step 1: Validate
     log_info("Step 1/5: Validation...")
@@ -1232,20 +1248,24 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool):
 
         log_success("Normalization complete")
 
-    # Step 3: Merge with crossfade
-    log_info(f"Step 3/5: Merging tracks with {fade}s crossfade...")
+    # Step 3: Merge with crossfade (with repeat)
+    log_info(f"Step 3/5: Merging tracks with {fade}s crossfade (x{repeat} repeat)...")
 
-    if len(normalized_tracks) == 1:
+    # Create repeated track list for merging
+    tracks_to_merge = normalized_tracks * repeat
+    log_info(f"  Total tracks to merge: {len(tracks_to_merge)} ({len(normalized_tracks)} tracks x {repeat})")
+
+    if len(tracks_to_merge) == 1:
         log_info("Single track detected, converting to WAV...")
         (
             ffmpeg
-            .input(str(normalized_tracks[0].path))
+            .input(str(tracks_to_merge[0].path))
             .output(str(paths.merged_wav), ar=44100, ac=2)
             .overwrite_output()
             .run(capture_stdout=True, capture_stderr=True)
         )
     else:
-        if not merge_tracks_with_crossfade(normalized_tracks, paths.merged_wav, fade):
+        if not merge_tracks_with_crossfade(tracks_to_merge, paths.merged_wav, fade):
             log_error("Failed to merge tracks")
             sys.exit(1)
 
@@ -1275,7 +1295,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool):
 
     # Use original tracks for provenance (contains original hashes)
     generate_provenance(result.tracks, paths.provenance_md, params)
-    generate_description(result.tracks, paths.description_txt, fade)
+    generate_description(result.tracks, paths.description_txt, fade, repeat)
     generate_upload_csv(paths, result.tracks, paths.upload_csv)
     generate_report(result.tracks, paths.report_json, final_duration, params)
 
@@ -1292,8 +1312,9 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool):
     click.echo(f"  Upload CSV:  {paths.upload_csv}")
     click.echo(f"  Report:      {paths.report_json}")
     click.echo("")
-    click.echo(f"Total tracks:   {len(result.tracks)}")
+    click.echo(f"Total tracks:   {len(result.tracks)} (x{repeat} = {len(result.tracks) * repeat} plays)")
     click.echo(f"Final duration: {final_duration:.1f}s ({final_duration/60:.1f} min)")
+    click.echo(f"Repeat:         {repeat}x")
 
 
 @cli.command()
