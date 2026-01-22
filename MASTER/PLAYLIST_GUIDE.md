@@ -6,13 +6,13 @@ Source: Reference/유튜브 감성 플레이리스트 인기 사례 분석.pdf
 
 ---
 
-## 0. Playlist Title Generation Rules (SSOT v1.3) — soomshuim
+## 0. Playlist Title Generation Rules (SSOT v1.5) — soomshuim
 
 > **이 섹션이 soomshuim 채널의 공식 타이틀 규칙이다. Section 1은 참고 패턴일 뿐.**
 
 ### Fixed Title Structure (DO NOT CHANGE ORDER)
 ```
-[Playlist] [HH:MM] soomshuim | {TIME_STATE_PHRASE}, {MODIFIER_PHRASE} {GENRE}
+[Playlist] [AM/PM HH:MM] soomshuim | {TIME_STATE_PHRASE}, {MODIFIER_PHRASE} {GENRE}
 ```
 
 ---
@@ -20,7 +20,9 @@ Source: Reference/유튜브 감성 플레이리스트 인기 사례 분석.pdf
 ### Fixed Tokens (Must be used exactly)
 - `[Playlist]` must be included at the beginning.
 - Channel name must be exactly: `soomshuim`
-- Time must be formatted as `[HH:MM]` (24-hour format).
+- Time must be formatted as:
+  - `[AM HH:MM]` or `[PM HH:MM]`
+  - 12-hour clock only (01–12)
 - Separator must be a vertical bar: `|`
 
 ---
@@ -37,7 +39,7 @@ Choose ONE:
 - **Energizing Mode** (에너지 부여)
 - **Focusing Mode** (집중)
 
-Context Mode determines emotion and task word allowance.
+Context Mode determines modifier and emotion/energy word allowance.
 
 ---
 
@@ -46,7 +48,9 @@ Context Mode determines emotion and task word allowance.
 #### 0.1 {TIME_STATE_PHRASE} (Primary Subject — Mandatory)
 - Describes a **time-based internal or perceptual state**.
 - Time must always remain the **main subject** of the title.
-- Must be chosen from ONE of the following types:
+- Must NOT describe tasks or genres directly.
+
+Choose ONE type only:
 
 **Type A — Poetic / Abstract**
 - 하루가 멈춘 시간
@@ -63,14 +67,15 @@ Context Mode determines emotion and task word allowance.
 **Operational Rule:**
 - Alternate Type A and Type B across consecutive uploads to avoid tonal repetition.
 
-❌ Must NOT be replaced by:
-- Tasks alone (공부, 작업, 일 단독 금지)
-- Emotions alone (신나는, 설레는 단독 금지)
+**Prohibited:**
+- Task-only phrases (공부, 작업 단독 사용 금지)
+- Emotion-only phrases (신나는, 설레는 단독 사용 금지)
 
 ---
 
 #### 0.2 {MODIFIER_PHRASE} (Secondary Modifier)
-May include breathing/flow, task hints, or emotion words, as permitted by Context Mode.
+- Supports the time state with flow, task context, or energy level.
+- Must always follow {TIME_STATE_PHRASE}.
 
 **A. Breathing / Flow (Always Allowed)**
 - 조용히 숨 쉬는
@@ -82,17 +87,16 @@ May include breathing/flow, task hints, or emotion words, as permitted by Contex
 
 Rules:
 1. Task words MUST NOT be the main subject.
-2. Task words MUST appear only as supportive context.
-3. Task words must follow the time-based phrase.
-4. Task words MUST align with the defined Context Mode.
+2. Task words MUST appear only as contextual support.
+3. Task words MUST align with Context Mode.
 
-**C. Emotion Words (Context-Driven Only)**
-- Emotion words describe the **result or energy of the time**.
-- Emotion allowance is determined by Context Mode, NOT by time alone.
+**C. Emotion / Energy Words (Context-Driven Only)**
+- Emotion words describe **energy level or listening posture**, not feelings.
+- Allowed strictly by Context Mode.
 
 ---
 
-### Context Mode → Emotion Allowance Mapping
+### Context Mode → Modifier Allowance
 
 | Context Mode | Allowed | Blocked |
 |--------------|---------|---------|
@@ -103,26 +107,38 @@ Rules:
 
 ---
 
-### Time-based Emotion Defaults (Fallback Only)
-Use ONLY when Context Mode is ambiguous.
+### Time-based Defaults (Fallback Only)
+Use ONLY when Context Mode is missing or ambiguous.
 
-| Time | Default Emotion |
-|------|-----------------|
-| 00:00–05:00 | Minimal / calm |
-| 06:00–08:00 | Light / transitional |
-| 09:00–17:00 | Functional |
-| 18:00–21:00 | Energetic |
-| 22:00–24:00 | Settling |
+| Time | Default |
+|------|---------|
+| AM 12:00 – AM 05:00 | Minimal / calm |
+| AM 06:00 – AM 08:00 | Light / transitional |
+| AM 09:00 – PM 05:00 | Functional |
+| PM 06:00 – PM 09:00 | Energetic |
+| PM 10:00 – PM 11:59 | Settling |
 
 ---
 
-#### 0.3 {GENRE} (Restricted List)
-The model MUST choose ONE from the following list. No new genre phrases allowed.
+#### 0.3 {GENRE} (Mandatory, Targeting Signal)
+- Genre MUST be explicitly stated.
+- Genre exists to clarify **target listener and sound expectation**.
+- Genre must NOT override time as the primary frame.
 
-**Allowed GENRE values:**
+**Allowed GENRE values (expandable):**
+- Slow R&B 보컬
+- R&B 보컬
+- 미디엄 템포 Rock
+- Indie Rock
+- Pop Rock
 - 재즈 보컬
-- 재즈
 - Quiet Jazz Vocals
+- Vocal Pop
+
+**Rules:**
+- Use ONE genre phrase only.
+- Genre should reflect the **dominant sound texture**, not sub-influences.
+- Avoid vague genre words (Chill, Mood, Vibes).
 
 ---
 
@@ -130,22 +146,26 @@ The model MUST choose ONE from the following list. No new genre phrases allowed.
 - No emojis
 - No hashtags
 - No keyword stuffing
-- Suitable for long-form background listening
-- Must still make sense without visual context
+- Optimized for long-form background listening
+- Must be interpretable without visual context
 
 ---
 
 ### Canonical Examples
 
-**Settling Context:**
+**Settling Mode:**
 ```
-[Playlist] [04:00] soomshuim | 하루가 멈춘 시간, 조용히 숨 쉬는 재즈 보컬
+[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, 새벽 Slow R&B 보컬
 ```
 
-**Energizing Context:**
+**Energizing Mode:**
 ```
-Context Mode: Energizing
-[Playlist] [08:00] soomshuim | 하루를 밀어 올리는 시간, 경쾌하게 흐르는 재즈
+[Playlist] [AM 08:00] soomshuim | 하루를 밀어 올리는 시간, 경쾌하게 흐르는 미디엄 템포 Rock
+```
+
+**Transition Mode:**
+```
+[Playlist] [PM 06:00] soomshuim | 다시 움직이기 전의 시간, 부드럽게 이어지는 Indie Rock
 ```
 
 ---

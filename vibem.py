@@ -802,17 +802,133 @@ def generate_provenance(
         return False
 
 
+def generate_intro_and_comment(series_name: str, moods: set[str]) -> tuple[str, str]:
+    """
+    Generate custom intro paragraph and pinned comment based on series concept.
+
+    Returns: (intro_text, pinned_comment)
+    """
+    # Time/concept detection from series name
+    time_keywords = {
+        '새벽': ('dawn', '새벽'),
+        '밤': ('night', '밤'),
+        '저녁': ('evening', '저녁'),
+        '아침': ('morning', '아침'),
+        '오후': ('afternoon', '오후'),
+        '잠': ('sleep', '새벽'),
+    }
+
+    detected_time = None
+    for keyword, (eng, kor) in time_keywords.items():
+        if keyword in series_name:
+            detected_time = kor
+            break
+
+    # Default to generic if no time detected
+    if not detected_time:
+        detected_time = '밤'
+
+    # Mood-based description hints
+    mood_lower = {m.lower() for m in moods}
+    is_melancholic = any(m in mood_lower for m in ['melancholic', 'sentimental', 'sad'])
+    is_calm = any(m in mood_lower for m in ['chill', 'calm', 'ethereal', 'hazy'])
+    is_hopeful = any(m in mood_lower for m in ['hopeful', 'warm', 'bright'])
+
+    # Generate intro based on time and mood
+    if detected_time == '새벽':
+        if is_melancholic or is_calm:
+            intro = """잠이 오지 않는 밤에 듣기 좋은 노래들을 모았습니다.
+조용히 흘려듣기에도, 가만히 붙잡고 듣기에도 괜찮은 음악들입니다.
+
+이 플레이리스트의 노래들은 모두 우리말 가사로 만들어졌어요.
+익숙한 말이, 오늘은 조금 더 천천히 닿기를 바라며.
+
+🎧 이어폰 착용을 추천합니다."""
+            comment = """이 채널의 노래들은 모두 우리말 가사로 만들어졌습니다.
+익숙한 말들이 더 천천히, 더 깊게 닿기를 바랍니다.
+
+오늘도 수고 많았어요.
+여기 모인 모든 분들, 푹 주무세요. 🌙"""
+        else:
+            intro = """새벽의 고요함 속에서 듣기 좋은 노래들입니다.
+하루를 마무리하며, 혹은 새로운 하루를 준비하며.
+
+이 플레이리스트의 노래들은 모두 우리말 가사로 만들어졌어요.
+익숙한 말이, 오늘은 조금 더 가깝게 닿기를 바라며.
+
+🎧 이어폰 착용을 추천합니다."""
+            comment = """이 채널의 노래들은 모두 우리말 가사로 만들어졌습니다.
+익숙한 말들이 더 천천히, 더 깊게 닿기를 바랍니다.
+
+오늘 하루도 고생 많으셨어요.
+편안한 밤 되세요. 🌙"""
+    elif detected_time == '밤':
+        intro = """밤에 듣기 좋은 노래들을 모았습니다.
+조용히 흘려듣기에도, 가만히 집중해서 듣기에도 좋은 음악들입니다.
+
+이 플레이리스트의 노래들은 모두 우리말 가사로 만들어졌어요.
+익숙한 말이, 오늘 밤은 조금 다르게 들리기를 바라며.
+
+🎧 이어폰 착용을 추천합니다."""
+        comment = """이 채널의 노래들은 모두 우리말 가사로 만들어졌습니다.
+익숙한 말들이 더 천천히, 더 깊게 닿기를 바랍니다.
+
+오늘 하루 어떠셨나요?
+편안한 밤 보내세요. 🌃"""
+    elif detected_time == '저녁':
+        intro = """하루를 마무리하며 듣기 좋은 노래들입니다.
+분주했던 시간을 내려놓고, 잠시 쉬어가는 음악들.
+
+이 플레이리스트의 노래들은 모두 우리말 가사로 만들어졌어요.
+익숙한 말이, 오늘 저녁은 조금 더 따뜻하게 닿기를 바라며.
+
+🎧 이어폰 착용을 추천합니다."""
+        comment = """이 채널의 노래들은 모두 우리말 가사로 만들어졌습니다.
+익숙한 말들이 더 천천히, 더 깊게 닿기를 바랍니다.
+
+오늘 하루도 수고하셨어요.
+따뜻한 저녁 되세요. 🌅"""
+    elif detected_time == '아침':
+        intro = """아침에 듣기 좋은 노래들을 모았습니다.
+새로운 하루를 여는, 조용하지만 힘이 되는 음악들.
+
+이 플레이리스트의 노래들은 모두 우리말 가사로 만들어졌어요.
+익숙한 말이, 오늘 아침은 조금 더 선명하게 닿기를 바라며.
+
+🎧 이어폰 착용을 추천합니다."""
+        comment = """이 채널의 노래들은 모두 우리말 가사로 만들어졌습니다.
+익숙한 말들이 더 천천히, 더 깊게 닿기를 바랍니다.
+
+좋은 아침이에요.
+오늘 하루도 잘 보내세요. ☀️"""
+    else:  # 오후 or default
+        intro = """편안하게 듣기 좋은 노래들을 모았습니다.
+흘려듣기에도, 집중해서 듣기에도 좋은 음악들.
+
+이 플레이리스트의 노래들은 모두 우리말 가사로 만들어졌어요.
+익숙한 말이, 오늘은 조금 다르게 닿기를 바라며.
+
+🎧 이어폰 착용을 추천합니다."""
+        comment = """이 채널의 노래들은 모두 우리말 가사로 만들어졌습니다.
+익숙한 말들이 더 천천히, 더 깊게 닿기를 바랍니다.
+
+오늘 하루 어떠세요?
+좋은 시간 보내세요. 🎵"""
+
+    return intro, comment
+
+
 def generate_description(
     tracks: list[TrackInfo],
     output_path: Path,
     crossfade_sec: float,
-    repeat: int = 2
+    series_name: str = ""
 ) -> bool:
-    """Generate description.txt with timestamps and hashtags."""
+    """Generate description.txt with intro, timestamps, hashtags, and pinned comment."""
     lines = []
     current_time = 0.0
 
-    # Collect all unique hashtags
+    # Collect all unique moods/genres for context
     all_moods = set()
     all_genres = set()
 
@@ -820,47 +936,32 @@ def generate_description(
         all_moods.add(track.mood)
         all_genres.add(track.genre)
 
-    # Generate timestamps for each repeat
-    for round_num in range(1, repeat + 1):
-        if repeat > 1:
-            lines.append(f"[ {round_num}회차 ]")
+    # Generate custom intro and pinned comment
+    intro_text, pinned_comment = generate_intro_and_comment(series_name, all_moods)
 
-        for i, track in enumerate(tracks):
-            # Format timestamp as MM:SS
-            minutes = int(current_time // 60)
-            seconds = int(current_time % 60)
-            timestamp = f"{minutes:02d}:{seconds:02d}"
+    # Add intro
+    lines.append(intro_text)
+    lines.append("")
+    lines.append("━━━━━━━━━━━━━━━━━━━━━━")
 
-            lines.append(f"{timestamp} {track.order:02d}. {track.title}")
+    # Generate timestamps (single pass, no repeat labels)
+    for track in tracks:
+        minutes = int(current_time // 60)
+        seconds = int(current_time % 60)
+        timestamp = f"{minutes:02d}:{seconds:02d}"
 
-            # Next track starts after this duration minus crossfade overlap
-            is_last_track_of_round = (i == len(tracks) - 1)
-            is_last_round = (round_num == repeat)
+        lines.append(f"{timestamp} {track.order:02d}. {track.title}")
 
-            if is_last_track_of_round and is_last_round:
-                # Last track of last round - no crossfade
-                current_time += track.duration
-            else:
-                # All other tracks - subtract crossfade
-                current_time += track.duration - crossfade_sec
+        # Next track starts after this duration minus crossfade overlap
+        if track != tracks[-1]:
+            current_time += track.duration - crossfade_sec
+        else:
+            current_time += track.duration
 
-        if round_num < repeat:
-            lines.append("")  # Empty line between rounds
+    lines.append("━━━━━━━━━━━━━━━━━━━━━━")
+    lines.append("")
 
-    # Add Korean Lyric Positioning message
-    lines.extend([
-        "",
-        "---",
-        "",
-        "이 플레이리스트의 노래들은 모두 우리말 가사로 만들어졌습니다.",
-        "*All tracks feature Korean lyrics.*",
-        "",
-        "---",
-        "",
-        "Hashtags:",
-    ])
-
-    # Common hashtags (Korean Lyric Positioning - always included)
+    # Hashtags
     common_hashtags = [
         "#감성플레이리스트",
         "#플레이리스트",
@@ -868,7 +969,6 @@ def generate_description(
         "#가사좋은노래",
     ]
 
-    # Track-specific hashtags (from mood/genre)
     track_hashtags = []
     for mood in sorted(all_moods):
         track_hashtags.append(f"#{mood.replace(' ', '')}")
@@ -878,6 +978,18 @@ def generate_description(
             track_hashtags.append(tag)
 
     lines.append(" ".join(common_hashtags + track_hashtags))
+    lines.append("All tracks feature Korean lyrics.")
+
+    # Add pinned comment section
+    lines.extend([
+        "",
+        "",
+        "━━━━━━━━━━━━━━━━━━━━━━",
+        "📌 고정 댓글용",
+        "━━━━━━━━━━━━━━━━━━━━━━",
+        "",
+        pinned_comment,
+    ])
 
     try:
         output_path.write_text("\n".join(lines), encoding='utf-8')
@@ -1295,7 +1407,11 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
 
     # Use original tracks for provenance (contains original hashes)
     generate_provenance(result.tracks, paths.provenance_md, params)
-    generate_description(result.tracks, paths.description_txt, fade, repeat)
+
+    # Get series name for description context
+    series_name = paths.base.parent.name if paths.base.parent != paths.base else ""
+    generate_description(result.tracks, paths.description_txt, fade, series_name)
+
     generate_upload_csv(paths, result.tracks, paths.upload_csv)
     generate_report(result.tracks, paths.report_json, final_duration, params)
 
