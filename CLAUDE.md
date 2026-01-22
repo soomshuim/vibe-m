@@ -245,7 +245,7 @@ Step 4. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] -
 숏츠를 만들기 전에 확인이 필요합니다:
 
 1. 어떤 시리즈인가요?
-   - 잠들지_못한_새벽/vol1
+   - AM4/vol1
    - (기타 시리즈...)
 
 2. 몇 번 트랙인가요?
