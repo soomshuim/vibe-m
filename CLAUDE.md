@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-21 | v1.9.0 (Shorts Typography Spec)
+> Last updated: 2026-01-23 | v2.0.0 (Title SSOT + Shorts Typography)
 
 ## Quick Reference
 
@@ -13,6 +13,7 @@
 | **가사 공학 규칙** | `MASTER/LYRICS.md` |
 | **사운드/스타일 가이드** | `MASTER/STYLE.md` |
 | **플레이리스트 컨셉 가이드** | `MASTER/PLAYLIST_GUIDE.md` |
+| **타이틀 생성 규칙 (SSOT)** | `MASTER/PLAYLIST_GUIDE.md` §0 |
 | **역할 분리 시스템** | `MASTER/ROLES.md` |
 | **사람용 운영 매뉴얼** | `MASTER/QUICK_REF.md` |
 | **역할별 프롬프트** | `MASTER/ROLES.md` 내 정의 |
@@ -38,6 +39,7 @@
 |----------|----------|----------|
 | **24H Universe 트랙 생성** | `MASTER/24H_UNIVERSE.md` | 전체 (필수) |
 | **플레이리스트 컨셉 논의/시작** | `MASTER/PLAYLIST_GUIDE.md` | 전체 (필수) |
+| **플레이리스트 타이틀 생성** | `MASTER/PLAYLIST_GUIDE.md` | Section 0 (SSOT) |
 | 가사 작성/수정 | `MASTER/LYRICS.md` | 전체 |
 | Style Prompt 작성 | `MASTER/STYLE.md` | 전체 |
 | 플레이리스트 프로파일 | `MASTER/STYLE.md` | Section 3 |

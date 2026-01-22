@@ -1,12 +1,159 @@
 # VIBE-M PLAYLIST_GUIDE.md
-Version: 1.0
-Last Updated: 2026-01-18
+Version: 1.2
+Last Updated: 2026-01-23
 Purpose: 플레이리스트 컨셉 설계 시 참고하는 인기 사례 분석 가이드
 Source: Reference/유튜브 감성 플레이리스트 인기 사례 분석.pdf
 
 ---
 
-## 1. 제목 전략 (Title Strategy)
+## 0. Playlist Title Generation Rules (SSOT v1.3) — soomshuim
+
+> **이 섹션이 soomshuim 채널의 공식 타이틀 규칙이다. Section 1은 참고 패턴일 뿐.**
+
+### Fixed Title Structure (DO NOT CHANGE ORDER)
+```
+[Playlist] [HH:MM] soomshuim | {TIME_STATE_PHRASE}, {MODIFIER_PHRASE} {GENRE}
+```
+
+---
+
+### Fixed Tokens (Must be used exactly)
+- `[Playlist]` must be included at the beginning.
+- Channel name must be exactly: `soomshuim`
+- Time must be formatted as `[HH:MM]` (24-hour format).
+- Separator must be a vertical bar: `|`
+
+---
+
+### REQUIRED INPUT (Before Generation)
+
+#### Context Mode (Mandatory)
+Context Mode MUST be explicitly defined before title generation.
+The model MUST NOT infer Context Mode implicitly.
+
+Choose ONE:
+- **Settling Mode** (가라앉힘 / 정리)
+- **Transition Mode** (전환 / 이동)
+- **Energizing Mode** (에너지 부여)
+- **Focusing Mode** (집중)
+
+Context Mode determines emotion and task word allowance.
+
+---
+
+### Variable Slots & Rules
+
+#### 0.1 {TIME_STATE_PHRASE} (Primary Subject — Mandatory)
+- Describes a **time-based internal or perceptual state**.
+- Time must always remain the **main subject** of the title.
+- Must be chosen from ONE of the following types:
+
+**Type A — Poetic / Abstract**
+- 하루가 멈춘 시간
+- 잠들지 못한 시간
+- 하루를 풀어내는 시간
+- 다시 움직이기 전의 시간
+
+**Type B — Perceptual / Observable**
+- 소리가 낮아진 시간
+- 움직임이 느려진 시간
+- 주변이 바빠지기 전의 시간
+- 빛이 바뀌는 시간
+
+**Operational Rule:**
+- Alternate Type A and Type B across consecutive uploads to avoid tonal repetition.
+
+❌ Must NOT be replaced by:
+- Tasks alone (공부, 작업, 일 단독 금지)
+- Emotions alone (신나는, 설레는 단독 금지)
+
+---
+
+#### 0.2 {MODIFIER_PHRASE} (Secondary Modifier)
+May include breathing/flow, task hints, or emotion words, as permitted by Context Mode.
+
+**A. Breathing / Flow (Always Allowed)**
+- 조용히 숨 쉬는
+- 천천히 흐르는
+- 낮게 이어지는
+
+**B. Task-related Words (Conditionally Allowed)**
+- 공부, 작업, 일, 재택근무, 집중, 드라이빙
+
+Rules:
+1. Task words MUST NOT be the main subject.
+2. Task words MUST appear only as supportive context.
+3. Task words must follow the time-based phrase.
+4. Task words MUST align with the defined Context Mode.
+
+**C. Emotion Words (Context-Driven Only)**
+- Emotion words describe the **result or energy of the time**.
+- Emotion allowance is determined by Context Mode, NOT by time alone.
+
+---
+
+### Context Mode → Emotion Allowance Mapping
+
+| Context Mode | Allowed | Blocked |
+|--------------|---------|---------|
+| **Settling** | 차분한, 느긋한, 가라앉은 | 신나는, 설레는 |
+| **Transition** | 부드러운, 가볍게 풀리는 | Avoid extremes |
+| **Energizing** | 신나는, 경쾌한, 리드미컬한 | - |
+| **Focusing** | 집중되는, 또렷한, 안정적인 | Avoid high-arousal |
+
+---
+
+### Time-based Emotion Defaults (Fallback Only)
+Use ONLY when Context Mode is ambiguous.
+
+| Time | Default Emotion |
+|------|-----------------|
+| 00:00–05:00 | Minimal / calm |
+| 06:00–08:00 | Light / transitional |
+| 09:00–17:00 | Functional |
+| 18:00–21:00 | Energetic |
+| 22:00–24:00 | Settling |
+
+---
+
+#### 0.3 {GENRE} (Restricted List)
+The model MUST choose ONE from the following list. No new genre phrases allowed.
+
+**Allowed GENRE values:**
+- 재즈 보컬
+- 재즈
+- Quiet Jazz Vocals
+
+---
+
+### Style & Output Constraints (Critical)
+- No emojis
+- No hashtags
+- No keyword stuffing
+- Suitable for long-form background listening
+- Must still make sense without visual context
+
+---
+
+### Canonical Examples
+
+**Settling Context:**
+```
+[Playlist] [04:00] soomshuim | 하루가 멈춘 시간, 조용히 숨 쉬는 재즈 보컬
+```
+
+**Energizing Context:**
+```
+Context Mode: Energizing
+[Playlist] [08:00] soomshuim | 하루를 밀어 올리는 시간, 경쾌하게 흐르는 재즈
+```
+
+---
+
+## 1. 제목 전략 (Title Strategy) — 참고 패턴
+
+> ⚠️ **아래는 일반적인 유튜브 제목 패턴 참고용이다.**
+> **soomshuim 채널의 공식 타이틀 규칙은 Section 0을 따른다.**
 
 ### 1.1 TPO 패턴 (시간/장소/상황)
 > 음악이 필요한 순간을 정확히 포착
