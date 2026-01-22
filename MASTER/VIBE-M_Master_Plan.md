@@ -105,6 +105,20 @@ root/
         *   `upload.csv`: 컬럼 헤더 [`video_path`, `title`, `description`, `tags`, `thumbnail_path`, `visibility`].
         *   `report.json`: 트랙별 기술 통계 (Duration, Peak, Loudness).
 
+### D. `shorts`
+**목적:** YouTube Shorts용 9:16 세로 영상 생성.
+
+*   **옵션:** `--start MM:SS --duration SEC [--title "..."] [--lyric "..."] [--srt file.srt]`
+*   **로직:**
+    1.  **Input:** `input/shorts.mp4` (8~10초 짧은 영상) + 지정 트랙의 오디오 구간.
+    2.  **Video Loop:** `shorts.mp4`를 `stream_loop -1`로 오디오 길이만큼 반복.
+    3.  **Crop:** 9:16 세로 비율로 중앙 크롭.
+    4.  **Text Overlay (선택):**
+        *   `--title`: 중앙 훅 문구 (0~2초 표시, 빠르게 퇴장).
+        *   `--lyric`: 하단 고정 가사 (페이드인, 끝까지 유지).
+        *   `--srt`: 동적 가사 (SRT 자막 파일).
+    5.  **Output:** `output/shorts/short_[TrackName].mp4`.
+
 ---
 
 ## 5. 사용 예시
@@ -119,7 +133,8 @@ series/
         │   │   ├── 01__마음밖__Sentimental__RnB-Ballad__100.mp3
         │   │   ├── 02__SunsetDream__Calm__Ambient__80.mp3
         │   │   └── 03__NightRun__Energetic__EDM__128.mp3
-        │   ├── loop.mp4
+        │   ├── loop.mp4       # pack용 배경 영상
+        │   ├── shorts.mp4     # shorts용 (8~10초, 루프됨)
         │   └── thumb.jpg
         ├── work/            # (자동생성)
         └── output/          # (자동생성)
@@ -144,6 +159,14 @@ python3 vibem.py pack SERIES/Test_Series/2026-01-18 --repeat 1
 
 # 작업 폴더 정리
 python3 vibem.py clean SERIES/Test_Series/2026-01-18
+
+# 숏츠 생성 (shorts.mp4가 음악 길이만큼 루프됨)
+python3 vibem.py shorts SERIES/Test_Series/2026-01-18/input/tracks/01__마음밖__Sentimental__RnB-Ballad__100.mp3 \
+  --start 00:45 --duration 30
+
+# 숏츠 + 텍스트 오버레이
+python3 vibem.py shorts SERIES/Test_Series/2026-01-18/input/tracks/02__SunsetDream__Calm__Ambient__80.mp3 \
+  --start 01:00 --duration 40 --title "잠들지 못한 새벽" --lyric "여명처럼 스며들어"
 ```
 
 ---

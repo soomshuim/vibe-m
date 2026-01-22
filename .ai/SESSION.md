@@ -54,21 +54,36 @@
 
 ## 현재 상태
 
-- **프로젝트**: Production Ready (v1.9.0 - Shorts 2-Layer Subtitle)
+- **프로젝트**: Production Ready (v2.0.0 - Title Auto-Gen + Shorts v2)
 - **GitHub**: https://github.com/soomshuim/vibe-m (master)
-- **플레이리스트 제목**: "잠들지 못한 새벽, 이 노래들이 위로가 되길"
+- **플레이리스트 제목**: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
+- **시리즈 컨셉**: "[AM 04:00] 하루가 멈춘 시간"
 - **문서 버전**:
   - LYRICS.md v1.7
   - STYLE.md v2.6
-  - CLAUDE.md v1.9.0
+  - CLAUDE.md v2.0.0
 - **작업 디렉토리**: `SERIES/잠들지_못한_새벽/vol1/`
   - 트랙 9곡 완료 (Track 01~09) **플레이리스트 완성**
-  - YouTube 공개 완료: https://youtu.be/E62sIgkPNXI
+  - YouTube 공개 완료: https://youtu.be/i1GHmn1WZr4
   - Shorts 테스트 완료: `output/shorts/short_마음안.mp4`
 
 ## 진행 중
 
-- Shorts 자막 시스템 (기본 기능 완료, force_style 개선 예정)
+- Shorts 제작 준비 (shorts.mp4 입력 대기)
+
+## 2026-01-23 세션 완료
+
+- [x] **vibem.py: 타이틀 자동 생성**
+  - draft_description.txt 상단에 SSOT v1.5 기반 제목 초안
+  - concept.md Title Meta 파싱 + 자동 추론 fallback
+- [x] **vibem.py: shorts 커맨드 v2.0.0**
+  - loop.mp4 → shorts.mp4 변경 (8~10초 루프)
+- [x] **문서 업데이트**
+  - CLAUDE.md v2.0.0: Shorts 워크플로우
+  - VIBE-M_Master_Plan.md: Shorts 스펙 추가
+- [x] **제목/URL 변경 반영**
+  - 시리즈: "[AM 04:00] 하루가 멈춘 시간"
+  - YouTube: https://youtu.be/i1GHmn1WZr4
 
 ## 완료된 추가 작업
 
@@ -276,14 +291,14 @@
 - [x] `/record` 커맨드 추가 (`.claude/commands/record.md`)
 - [x] Reference 가이드 PDF 5종 추가
 - [x] **첫 플레이리스트 정식 출범** (`c686ba6`)
-  - 제목: "잠들지 못한 새벽, 이 노래들이 위로가 되길"
+  - 제목: "[AM 04:00] 하루가 멈춘 시간"
   - 디렉토리: `SERIES/Test_Series/2026-01-18/` → `SERIES/잠들지_못한_새벽/vol1/`
   - 9트랙 완성 (Track 01~09)
 - [x] **YouTube 업로드 완료** (`6c199c7`)
-  - URL: https://youtu.be/E62sIgkPNXI
+  - URL: https://youtu.be/i1GHmn1WZr4
   - 채널: soomshuim
   - 재생목록: "하루를 듣는 방법 | 24 Hours Playlist"
-  - 제목: "잠들지 못한 새벽, 이 노래들이 위로가 되길 | 새벽 감성 R&B 🎧"
+  - 제목: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
   - 예약 공개: 2026-01-20 22:00
 
 ### 2026-01-20 (밤) — 문서 체계화

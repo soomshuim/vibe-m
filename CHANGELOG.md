@@ -7,6 +7,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **vibem.py: 타이틀 자동 생성 (SSOT v1.5)**
+  - draft_description.txt 상단에 제목 초안 자동 생성
+  - concept.md에서 Title Meta 파싱 (Context Mode, Time, GENRE 등)
+  - 메타 없으면 트랙 정보에서 자동 추론
+- **vibem.py: shorts 커맨드 v2.0.0**
+  - 입력 변경: `loop.mp4` → `shorts.mp4` (8~10초)
+  - 짧은 영상을 음악 길이만큼 자동 루프
+  - 출력: `output/shorts/short_[TrackName].mp4` (유지)
 - **PLAYLIST_GUIDE.md v1.2: Playlist Title Generation Rules (SSOT v1.5)**
   - 타이틀 고정 구조: `[Playlist] [AM/PM HH:MM] soomshuim | {TIME_STATE_PHRASE}, {MODIFIER_PHRASE} {GENRE}`
   - Context Mode 필수 입력 (Settling/Transition/Energizing/Focusing)
@@ -22,6 +30,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **/vibem 커맨드**: 프로젝트 재개용 컨텍스트 로더
 
 ### Changed
+- **첫 플레이리스트 제목/URL 변경**
+  - 시리즈 컨셉: "[AM 04:00] 하루가 멈춘 시간"
+  - YouTube 제목: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
+  - 새 URL: https://youtu.be/i1GHmn1WZr4
+- **CLAUDE.md v2.0.0: Shorts 워크플로우 업데이트**
+  - 입력: shorts.mp4 (8~10초) 루프 방식
+  - 프로젝트 구조에 shorts.mp4 추가
+- **VIBE-M_Master_Plan.md: Shorts 커맨드 스펙 추가**
 - **커맨드 체계 변경**: .claude/commands/ → 글로벌 커맨드로 통합
   - coach, record 삭제 → 글로벌 스킬로 이전
   - /vibem 신규 추가
@@ -96,11 +112,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 - **첫 플레이리스트 YouTube 업로드 완료** (2026-01-20 22:00 공개)
-  - 제목: "잠들지 못한 새벽, 이 노래들이 위로가 되길 | 새벽 감성 R&B 🎧"
-  - URL: https://youtu.be/E62sIgkPNXI
+  - 제목: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
+  - URL: https://youtu.be/i1GHmn1WZr4
   - 채널: soomshuim
   - 재생목록: "하루를 듣는 방법 | 24 Hours Playlist"
-- **첫 플레이리스트 정식 출범**: Test_Series → "잠들지 못한 새벽, 이 노래들이 위로가 되길"
+- **첫 플레이리스트 정식 출범**: Test_Series → "[AM 04:00] 하루가 멈춘 시간"
   - 디렉토리: `SERIES/Test_Series/2026-01-18/` → `SERIES/잠들지_못한_새벽/vol1/`
   - 9트랙 완성 (Track 01~09)
 - **STYLE.md v1.5 → v1.6: Energy Permission + Safety Separation**

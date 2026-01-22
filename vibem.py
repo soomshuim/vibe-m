@@ -802,6 +802,178 @@ def generate_provenance(
         return False
 
 
+# =============================================================================
+# TITLE GENERATION (SSOT v1.5)
+# =============================================================================
+
+@dataclass
+class TitleMeta:
+    """Metadata for playlist title generation (SSOT v1.5)."""
+    context_mode: Optional[str] = None  # Settling, Transition, Energizing, Focusing
+    time_display: Optional[str] = None  # "AM 02:30" or "PM 10:00"
+    time_state_phrase: Optional[str] = None  # 잠들지 못한 시간
+    modifier_phrase: Optional[str] = None  # 천천히 흐르는
+    genre: Optional[str] = None  # Slow R&B 보컬
+
+
+def parse_title_meta(project_path: Path) -> TitleMeta:
+    """
+    Parse title metadata from concept.md.
+
+    Expected format in concept.md:
+    ```
+    ## Title Meta
+    - Context Mode: Settling
+    - Time: AM 02:30
+    - TIME_STATE_PHRASE: 잠들지 못한 시간
+    - MODIFIER_PHRASE: 천천히 흐르는
+    - GENRE: Slow R&B 보컬
+    ```
+    """
+    meta = TitleMeta()
+    concept_path = project_path / "concept.md"
+
+    if not concept_path.exists():
+        return meta
+
+    content = concept_path.read_text(encoding='utf-8')
+
+    # Parse key-value pairs
+    patterns = {
+        'context_mode': r'Context Mode[:\s]+(.+)',
+        'time_display': r'Time[:\s]+([AP]M\s*\d{1,2}:\d{2})',
+        'time_state_phrase': r'TIME_STATE_PHRASE[:\s]+(.+)',
+        'modifier_phrase': r'MODIFIER_PHRASE[:\s]+(.+)',
+        'genre': r'GENRE[:\s]+(.+)',
+    }
+
+    for key, pattern in patterns.items():
+        match = re.search(pattern, content, re.IGNORECASE)
+        if match:
+            setattr(meta, key, match.group(1).strip())
+
+    return meta
+
+
+def infer_context_mode(moods: set[str], detected_time: str) -> str:
+    """Infer Context Mode from moods and time."""
+    mood_lower = {m.lower() for m in moods}
+
+    # Mood-based inference
+    settling_moods = {'melancholic', 'sentimental', 'calm', 'hazy', 'ethereal'}
+    energizing_moods = {'energetic', 'upbeat', 'powerful', 'driving'}
+    focusing_moods = {'focused', 'steady', 'neutral'}
+
+    if settling_moods & mood_lower:
+        return 'Settling'
+    elif energizing_moods & mood_lower:
+        return 'Energizing'
+    elif focusing_moods & mood_lower:
+        return 'Focusing'
+
+    # Time-based fallback
+    time_defaults = {
+        '새벽': 'Settling',
+        '밤': 'Settling',
+        '아침': 'Transition',
+        '저녁': 'Transition',
+        '오후': 'Focusing',
+    }
+    return time_defaults.get(detected_time, 'Settling')
+
+
+def infer_time_display(detected_time: str) -> str:
+    """Infer time display from detected time keyword."""
+    time_mapping = {
+        '새벽': 'AM 02:30',
+        '밤': 'PM 11:00',
+        '아침': 'AM 07:00',
+        '저녁': 'PM 07:00',
+        '오후': 'PM 03:00',
+    }
+    return time_mapping.get(detected_time, 'PM 10:00')
+
+
+def infer_time_state_phrase(context_mode: str, phrase_type: str = 'A') -> str:
+    """Infer TIME_STATE_PHRASE based on Context Mode."""
+    phrases = {
+        'Settling': {
+            'A': '잠들지 못한 시간',
+            'B': '소리가 낮아진 시간',
+        },
+        'Transition': {
+            'A': '하루를 풀어내는 시간',
+            'B': '빛이 바뀌는 시간',
+        },
+        'Energizing': {
+            'A': '다시 움직이기 전의 시간',
+            'B': '주변이 바빠지기 전의 시간',
+        },
+        'Focusing': {
+            'A': '하루가 멈춘 시간',
+            'B': '움직임이 느려진 시간',
+        },
+    }
+    return phrases.get(context_mode, phrases['Settling']).get(phrase_type, phrases['Settling']['A'])
+
+
+def infer_modifier_phrase(context_mode: str) -> str:
+    """Infer MODIFIER_PHRASE based on Context Mode."""
+    modifiers = {
+        'Settling': '천천히 흐르는',
+        'Transition': '부드럽게 이어지는',
+        'Energizing': '경쾌하게 흐르는',
+        'Focusing': '낮게 이어지는',
+    }
+    return modifiers.get(context_mode, '조용히 흐르는')
+
+
+def infer_genre_label(genres: set[str]) -> str:
+    """Infer genre label from track genres."""
+    genre_lower = {g.lower().replace('-', ' ') for g in genres}
+
+    # Priority mapping
+    if any('rnb' in g or 'r&b' in g for g in genre_lower):
+        if any('ballad' in g for g in genre_lower):
+            return 'Slow R&B 보컬'
+        return 'R&B 보컬'
+    elif any('rock' in g for g in genre_lower):
+        if any('indie' in g for g in genre_lower):
+            return 'Indie Rock'
+        return '미디엄 템포 Rock'
+    elif any('jazz' in g for g in genre_lower):
+        return 'Quiet Jazz Vocals'
+    elif any('pop' in g for g in genre_lower):
+        return 'Vocal Pop'
+
+    # Default
+    return 'R&B 보컬'
+
+
+def generate_title(
+    meta: TitleMeta,
+    genres: set[str],
+    detected_time: str,
+    moods: set[str]
+) -> str:
+    """
+    Generate playlist title following SSOT v1.5 rules.
+
+    Format: [Playlist] [AM/PM HH:MM] soomshuim | {TIME_STATE_PHRASE}, {MODIFIER_PHRASE} {GENRE}
+    """
+    # Use meta values or infer
+    context_mode = meta.context_mode or infer_context_mode(moods, detected_time)
+    time_display = meta.time_display or infer_time_display(detected_time)
+    time_state = meta.time_state_phrase or infer_time_state_phrase(context_mode)
+    modifier = meta.modifier_phrase or infer_modifier_phrase(context_mode)
+    genre = meta.genre or infer_genre_label(genres)
+
+    # Build title
+    title = f"[Playlist] [{time_display}] soomshuim | {time_state}, {modifier} {genre}"
+
+    return title
+
+
 def generate_intro_and_comment(series_name: str, moods: set[str]) -> tuple[str, str]:
     """
     Generate custom intro paragraph and pinned comment based on series concept.
@@ -922,9 +1094,10 @@ def generate_description(
     tracks: list[TrackInfo],
     output_path: Path,
     crossfade_sec: float,
-    series_name: str = ""
+    series_name: str = "",
+    project_path: Optional[Path] = None
 ) -> bool:
-    """Generate draft_description.txt with intro, timestamps, hashtags, and pinned comment."""
+    """Generate draft_description.txt with title draft, intro, timestamps, hashtags, and pinned comment."""
     lines = []
     current_time = 0.0
 
@@ -935,6 +1108,35 @@ def generate_description(
     for track in tracks:
         all_moods.add(track.mood)
         all_genres.add(track.genre)
+
+    # Detect time from series name
+    time_keywords = {
+        '새벽': '새벽', '밤': '밤', '저녁': '저녁',
+        '아침': '아침', '오후': '오후', '잠': '새벽',
+    }
+    detected_time = '밤'  # default
+    for keyword, time_val in time_keywords.items():
+        if keyword in series_name:
+            detected_time = time_val
+            break
+
+    # === TITLE DRAFT (SSOT v1.5) ===
+    if project_path:
+        title_meta = parse_title_meta(project_path)
+    else:
+        title_meta = TitleMeta()
+
+    generated_title = generate_title(title_meta, all_genres, detected_time, all_moods)
+
+    lines.append("━━━━━━━━━━━━━━━━━━━━━━")
+    lines.append("📋 제목 초안 (SSOT v1.5)")
+    lines.append("━━━━━━━━━━━━━━━━━━━━━━")
+    lines.append(generated_title)
+    lines.append("")
+    lines.append("▸ 위 제목은 자동 생성된 초안입니다.")
+    lines.append("▸ concept.md에 Title Meta를 추가하면 커스터마이즈 가능합니다.")
+    lines.append("")
+    lines.append("")
 
     # Generate custom intro and pinned comment
     intro_text, pinned_comment = generate_intro_and_comment(series_name, all_moods)
@@ -1410,7 +1612,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
 
     # Get series name for description context
     series_name = paths.base.parent.name if paths.base.parent != paths.base else ""
-    generate_description(result.tracks, paths.draft_description, fade, series_name)
+    generate_description(result.tracks, paths.draft_description, fade, series_name, paths.base)
 
     generate_upload_csv(paths, result.tracks, paths.upload_csv)
     generate_report(result.tracks, paths.report_json, final_duration, params)
@@ -1531,7 +1733,8 @@ def shorts(
     \b
     Input:
     - TRACK_PATH: Path to the MP3 file
-    - loop.mp4 is taken from the parent input/ directory
+    - shorts.mp4 (8-10s base video) is taken from the parent input/ directory
+    - The base video is looped to match audio duration
 
     \b
     Output: output/shorts/short_[TrackName].mp4
@@ -1553,11 +1756,11 @@ def shorts(
 
     # Resolve paths
     # Track path structure: .../input/tracks/NN__Title__...mp3
-    # loop.mp4 should be in: .../input/loop.mp4
+    # shorts.mp4 should be in: .../input/shorts.mp4 (8-10s base video, will be looped)
     tracks_dir = track_path.parent
     input_dir = tracks_dir.parent
     base_dir = input_dir.parent
-    loop_video = input_dir / 'loop.mp4'
+    shorts_video = input_dir / 'shorts.mp4'
     shorts_output_dir = base_dir / 'output' / 'shorts'
 
     # Validate track filename format
@@ -1569,13 +1772,13 @@ def shorts(
 
     log_info(f"Track: {track_info.order:02d}. {track_info.title}")
 
-    # Validate loop video exists
-    if not loop_video.exists():
-        log_error(f"Loop video not found: {loop_video}")
-        log_error(f"Expected loop.mp4 in: {input_dir}")
+    # Validate shorts base video exists
+    if not shorts_video.exists():
+        log_error(f"Shorts base video not found: {shorts_video}")
+        log_error(f"Expected shorts.mp4 (8-10s) in: {input_dir}")
         sys.exit(1)
 
-    log_success(f"Loop video found: {loop_video}")
+    log_success(f"Shorts base video found: {shorts_video}")
 
     # Parse start time
     try:
@@ -1668,9 +1871,9 @@ def shorts(
 
     cmd = [
         ffmpeg_bin, '-y',
-        # Video input: loop infinitely
+        # Video input: loop shorts.mp4 infinitely to match audio duration
         '-stream_loop', '-1',
-        '-i', str(loop_video),
+        '-i', str(shorts_video),
         # Audio input: seek to start and limit duration
         '-ss', str(start_sec),
         '-t', str(duration),

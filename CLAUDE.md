@@ -206,15 +206,20 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
 - [ ] 필수 파일: `input/tracks/*.mp3`, `input/loop.mp4`, `input/thumb.jpg`
 - [ ] 파일명 형식: `NN__Title__Mood__Genre__BPM.mp3`
 
-### Shorts 생성 요청 시 (v1.7.0 NEW)
+### Shorts 생성 요청 시 (v2.0.0)
 > **원칙: 반드시 사용자에게 확인 후 생성**
+
+**입력 파일:**
+- `input/shorts.mp4` (8~10초 짧은 영상) - 사용자가 준비
+- 이 영상이 음악 구간 길이만큼 자동 루프됨
 
 **"숏츠 만들어줘" 요청 시 필수 질문:**
 ```
-Step 0. 시리즈 확인: SERIES/ 내 폴더 목록 보여주고 선택 요청
-Step 1. 트랙 번호 확인: 해당 시리즈의 트랙 목록 보여주고 선택 요청
-Step 2. 구간 확인: "어느 구간으로 할까요? (예: 00:45 ~ 01:15)"
-Step 3. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] --duration [SEC]
+Step 0. shorts.mp4 확인: input/shorts.mp4 존재 여부 체크
+Step 1. 시리즈 확인: SERIES/ 내 폴더 목록 보여주고 선택 요청
+Step 2. 트랙 번호 확인: 해당 시리즈의 트랙 목록 보여주고 선택 요청
+Step 3. 구간 확인: "어느 구간으로 할까요? (예: 00:45 ~ 01:15)"
+Step 4. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] --duration [SEC]
 ```
 
 **⚠️ 절대 규칙: 시작/종료 시간 수정 금지**
@@ -420,7 +425,8 @@ vibe-m/
 │           ├── concept.md  # (선택) 컨셉 문서
 │           ├── input/
 │           │   ├── tracks/
-│           │   ├── loop.mp4
+│           │   ├── loop.mp4      # pack용 배경 영상
+│           │   ├── shorts.mp4    # shorts용 (8~10초, 루프됨)
 │           │   └── thumb.jpg
 │           ├── work/       # (자동생성)
 │           └── output/     # (자동생성)
