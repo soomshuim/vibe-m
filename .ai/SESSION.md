@@ -326,10 +326,22 @@
 - [x] **lessons-learned.md 업데이트**
   - subtitles + drawtext 필터 충돌 문제 기록
 
+### 2026-01-23 — 타이틀 규칙 + Description 개선
+
+- [x] **PLAYLIST_GUIDE.md v1.2: Title Rules SSOT v1.5**
+  - 타이틀 고정 구조 정의
+  - Context Mode 필수 입력
+  - GENRE 확장 (R&B, Rock, Pop, Jazz)
+- [x] **vibem.py: pack --repeat 옵션 추가** (`bd048d6`)
+  - 플레이리스트 N회 반복 (기본 2회)
+- [x] **vibem.py: draft_description.txt 자동 생성** (`fbd2f64`)
+  - 커스텀 인트로 + 고정댓글 섹션
+  - Source/Derived 분리 (concept.md = SSOT)
+- [x] **CLAUDE.md v2.0.0**: 타이틀 규칙 참조 추가
+
 ## 다음 작업 (예정)
 
 - [ ] Shorts force_style 문제 해결 (폰트/위치 커스터마이즈)
-- [ ] 공개 후 고정 댓글 작성
 - [ ] Shorts 클립 업로드
 - [ ] vol.2 기획
 

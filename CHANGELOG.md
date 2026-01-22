@@ -7,6 +7,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **PLAYLIST_GUIDE.md v1.2: Playlist Title Generation Rules (SSOT v1.5)**
+  - 타이틀 고정 구조: `[Playlist] [AM/PM HH:MM] soomshuim | {TIME_STATE_PHRASE}, {MODIFIER_PHRASE} {GENRE}`
+  - Context Mode 필수 입력 (Settling/Transition/Energizing/Focusing)
+  - TIME_STATE_PHRASE Type A/B 교대 규칙
+  - GENRE 확장: R&B, Rock, Pop, Jazz 등
+- **vibem.py: pack --repeat 옵션**
+  - 플레이리스트 N회 반복 재생 (기본값 2회)
+  - description에 회차 구분 없이 단일 타임스탬프 표시
+- **vibem.py: draft_description.txt 자동 생성**
+  - 시리즈/컨셉 기반 커스텀 인트로 문단
+  - 📌 고정 댓글 섹션 (시간대별 인삿말)
+  - Source/Derived 분리 원칙 (concept.md = SSOT)
+- **/vibem 커맨드**: 프로젝트 재개용 컨텍스트 로더
+
+### Changed
+- **커맨드 체계 변경**: .claude/commands/ → 글로벌 커맨드로 통합
+  - coach, record 삭제 → 글로벌 스킬로 이전
+  - /vibem 신규 추가
+
 - **LYRICS.md v1.7: Korean Lyric Positioning**
   - 한국어 가사 플레이리스트 차별점 공식화
   - 포지셔닝 원칙: 의미 있는 가사, 혼자 읽히는 언어, 소리가 먼저
