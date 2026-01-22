@@ -101,7 +101,7 @@ root/
         *   Output: `output/final.mp4`.
     5.  **Artifacts (산출물 생성):**
         *   `provenance.md`: 원본 파일명, **SHA-256 해시값**, 처리 옵션, 타임스탬프가 포함된 표. (저작권 증빙용)
-        *   `description.txt`: 유튜브 타임스탬프 ("00:00 01 제목...") 및 해시태그.
+        *   `draft_description.txt`: 유튜브 설명란 초안 (인트로, 타임스탬프, 해시태그, 고정댓글).
         *   `upload.csv`: 컬럼 헤더 [`video_path`, `title`, `description`, `tags`, `thumbnail_path`, `visibility`].
         *   `report.json`: 트랙별 기술 통계 (Duration, Peak, Loudness).
 

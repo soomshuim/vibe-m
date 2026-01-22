@@ -401,7 +401,7 @@ class ProjectPaths:
         self.preview_mp4 = self.output_dir / 'preview.mp4'
         self.final_mp4 = self.output_dir / 'final.mp4'
         self.provenance_md = self.output_dir / 'provenance.md'
-        self.description_txt = self.output_dir / 'description.txt'
+        self.draft_description = self.output_dir / 'draft_description.txt'
         self.upload_csv = self.output_dir / 'upload.csv'
         self.report_json = self.output_dir / 'report.json'
 
@@ -924,7 +924,7 @@ def generate_description(
     crossfade_sec: float,
     series_name: str = ""
 ) -> bool:
-    """Generate description.txt with intro, timestamps, hashtags, and pinned comment."""
+    """Generate draft_description.txt with intro, timestamps, hashtags, and pinned comment."""
     lines = []
     current_time = 0.0
 
@@ -1020,7 +1020,7 @@ def generate_upload_csv(
     row = {
         'video_path': str(paths.final_mp4),
         'title': title,
-        'description': str(paths.description_txt),
+        'description': str(paths.draft_description),
         'tags': ','.join(sorted(tags)),
         'thumbnail_path': str(paths.thumbnail),
         'visibility': 'private'  # Default to private for safety
@@ -1410,7 +1410,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
 
     # Get series name for description context
     series_name = paths.base.parent.name if paths.base.parent != paths.base else ""
-    generate_description(result.tracks, paths.description_txt, fade, series_name)
+    generate_description(result.tracks, paths.draft_description, fade, series_name)
 
     generate_upload_csv(paths, result.tracks, paths.upload_csv)
     generate_report(result.tracks, paths.report_json, final_duration, params)
@@ -1424,7 +1424,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
     click.echo("Deliverables:")
     click.echo(f"  Video:       {paths.final_mp4}")
     click.echo(f"  Provenance:  {paths.provenance_md}")
-    click.echo(f"  Description: {paths.description_txt}")
+    click.echo(f"  Description: {paths.draft_description}")
     click.echo(f"  Upload CSV:  {paths.upload_csv}")
     click.echo(f"  Report:      {paths.report_json}")
     click.echo("")
