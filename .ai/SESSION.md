@@ -62,7 +62,7 @@
   - LYRICS.md v1.7
   - STYLE.md v2.6
   - CLAUDE.md v2.0.0
-- **작업 디렉토리**: `SERIES/AM4/vol1/`
+- **작업 디렉토리**: `SERIES/AM_0400/vol1/`
   - 트랙 9곡 완료 (Track 01~09) **플레이리스트 완성**
   - YouTube 공개 완료: https://youtu.be/i1GHmn1WZr4
   - Shorts 테스트 완료: `output/shorts/short_마음안.mp4`
@@ -292,7 +292,7 @@
 - [x] Reference 가이드 PDF 5종 추가
 - [x] **첫 플레이리스트 정식 출범** (`c686ba6`)
   - 제목: "[AM 04:00] 하루가 멈춘 시간"
-  - 디렉토리: `SERIES/Test_Series/2026-01-18/` → `SERIES/AM4/vol1/`
+  - 디렉토리: `SERIES/Test_Series/2026-01-18/` → `SERIES/AM_0400/vol1/`
   - 9트랙 완성 (Track 01~09)
 - [x] **YouTube 업로드 완료** (`6c199c7`)
   - URL: https://youtu.be/i1GHmn1WZr4

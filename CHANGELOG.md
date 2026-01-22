@@ -30,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **/vibem 커맨드**: 프로젝트 재개용 컨텍스트 로더
 
 ### Changed
+- **시리즈 디렉토리 변경**: `SERIES/잠들지_못한_새벽/` → `SERIES/AM_0400/`
 - **첫 플레이리스트 제목/URL 변경**
   - 시리즈 컨셉: "[AM 04:00] 하루가 멈춘 시간"
   - YouTube 제목: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
@@ -117,7 +118,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - 채널: soomshuim
   - 재생목록: "하루를 듣는 방법 | 24 Hours Playlist"
 - **첫 플레이리스트 정식 출범**: Test_Series → "[AM 04:00] 하루가 멈춘 시간"
-  - 디렉토리: `SERIES/Test_Series/2026-01-18/` → `SERIES/AM4/vol1/`
+  - 디렉토리: `SERIES/Test_Series/2026-01-18/` → `SERIES/AM_0400/vol1/`
   - 9트랙 완성 (Track 01~09)
 - **STYLE.md v1.5 → v1.6: Energy Permission + Safety Separation**
   - v1.5 문제: "금지 규칙이 에너지 규칙을 덮어버림" → 보컬이 무난해짐
