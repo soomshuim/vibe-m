@@ -356,9 +356,14 @@
 
 ## 다음 작업 (예정)
 
-- [ ] Shorts force_style 문제 해결 (폰트/위치 커스터마이즈)
-- [ ] Shorts 클립 업로드
-- [ ] vol.2 기획
+- [x] ~~Shorts force_style 문제 해결~~ → 제작 방식 변경으로 불필요
+- [x] 공개 후 고정 댓글 작성 → 완료
+- [x] Shorts 클립 업로드 → 완료
+- [ ] vol.2 기획 ← **진행 중**
+  - [x] Seed Researcher: 레퍼런스 분석 (죠지 - Boat)
+  - [x] Time Station 선정: 오후햇살 (14:00)
+  - [x] Seed Designer: Seed DNA 설계
+  - [ ] Track 01 가사/Style Prompt 생성
 
 ## 알려진 이슈
 

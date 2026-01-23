@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-23 | v2.0.0 (Title SSOT + Shorts Typography)
+> Last updated: 2026-01-23 | v2.2.0 (Style Prompt QC Workflow)
 
 ## Quick Reference
 
@@ -70,10 +70,12 @@ Step 4. If all pass → output with QC 테이블
 **Style Prompt 생성 요청 시:**
 ```
 Step 0. STYLE.md Required Slots 확인
-Step 1. Generate Style Prompt
-Step 2. Run self-QC against checklist (13개 슬롯)
-Step 3. If all pass → output with QC 테이블
-        If any fail → STOP + report missing items → 재작성
+Step 1. Generate Style Prompt (압축 버전)
+Step 2. Run self-QC against checklist (17개 슬롯)
+Step 3. 글자수 검증 (wc -c 실행, < 800자 확인) ← v2.2 NEW
+Step 4. If all pass → QC 테이블 + 글자수와 함께 output
+        If any fail → 수정 후 Step 2 반복
+        (검증 통과 전 유저에게 제안 금지)
 ```
 
 ---
@@ -93,6 +95,8 @@ Step 3. If all pass → output with QC 테이블
 | 1.7 | Bridge Thesis | 현상 기반 (사람 의존 X) |
 | 1.8 | V2 Escalation | 마지막 2행 신체 반응/감정 상승 |
 | 1.9 | Physical Object Anchor | **각 섹션에 물성 오브젝트 1개 이상** (추상어 과밀 금지) |
+| **1.10** | **Image Density** | **V1=공간, V2=감각 분리 (핵심 이미지 2개 이상 겹침 금지)** |
+| **1.11** | **Chorus Tone** | **직접 호소/명령형 최대 1개, 나머지 관조 톤** |
 | 2.1 | Pure Input | 설명형 괄호 금지, Performance Cues `(soft)` 등은 허용 |
 | 2.4 | Length Guide | **전체 100-120 단어, 섹션당 4-6행** |
 | **K1** | **Korean Only** | **한국어여야만 성립하는 가사인가?** |
@@ -130,14 +134,19 @@ Section D: 키워드 축 요약 (이전 트랙과 비교)
 | S12 | Exclude 필수 항목 | **Airy, Falsetto, Whisper, Harmonized** | 얇은 보컬 유발 단어 차단 |
 | S13 | Exclude 제한 | **최대 3그룹, 8키워드** (기본 1줄 권장) | 과도한 Exclude = 부작용 |
 | S14 | **모호 형용사 제거** | warm reflective, rich vibrato 등 제거 | 가성 유발 방지 |
+| **S15** | **글자수 제한** | **< 800자 (Suno 제한)** | 출력 전 `wc -c`로 검증 필수 |
+| **S16** | **Lead Instrument Supportive** | **`[악기]-led, supportive` 형태** | 악기 과도한 존재감 방지 |
+| **S17** | **Chorus Expansion Density** | **`arrangement density only` 명시** | 스테레오/볼륨 해석 방지 |
 
 **검증 프로세스:**
 ```
 Step 0. powerful/husky/airy 별도 요청 있는지 확인
 Step 1. 없으면 Raw Vocal Baseline 적용
-Step 2. Run self-QC against checklist (15개 슬롯)
-Step 3. If all pass → output FINAL
-        If any fail → STOP + report missing items
+Step 2. Run self-QC against checklist (17개 슬롯)
+Step 3. 글자수 검증 (wc -c < 800) ← v2.2 NEW
+Step 4. If all pass → QC 테이블과 함께 output
+        If any fail → STOP + 수정 후 Step 2 반복
+        (검증 통과 전 유저에게 제안 금지)
 ```
 
 **Raw Vocal Baseline (기본값):**
@@ -161,6 +170,56 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
 - ❌ `rich vibrato` → 가성 비브라토 유발
 - ❌ `Subtle R&B ad-libs` → 더블링으로 해석됨
 - ✅ `Raw, Powerful, Solid, Direct` → 구체적 발성 키워드
+
+---
+
+### Style Prompt Suno 최적화 규칙 (v2.2 NEW)
+
+**글자수 제한:**
+```
+- Suno Style Prompt 제한: < 800자
+- 출력 전 반드시 wc -c로 검증
+- 검증 없이 유저에게 제안 금지
+```
+
+**Lead Instrument Supportive 규칙:**
+```
+❌ Vibraphone-led (악기 과시 리스크)
+⭕ Vibraphone-led, supportive (보조 역할 명시)
+
+→ "supportive" 하나로 "주인공 아님" 각인
+→ 재즈화/솔로 과시 방지
+```
+
+**Chorus Expansion Density 규칙:**
+```
+❌ Chorus expansion by arrangement only (모호)
+⭕ Chorus expansion by arrangement density only (명확)
+
+→ 스테레오/볼륨 해석 여지 차단
+→ 보컬 스택 방지 강화
+```
+
+**Outro Motif Restate 규칙:**
+```
+❌ vibraphone solo (연주 과시 느낌)
+⭕ vibraphone restates motif softly (정리 느낌)
+
+→ 재즈 솔로 치우침 방지
+→ 플레이리스트 반복 재생 안정성 확보
+```
+
+**Style Prompt QC 출력 포맷:**
+```
+| 항목 | 상태 |
+|------|------|
+| 글자수 | [N]자 ✓/✗ (< 800) |
+| S0-S17 | ✓/✗ |
+
+→ 모든 항목 ✓ 시에만 유저에게 제안
+```
+
+---
 
 ### QC 체크 시 (3-Point Fail Fast)
 > 상세: `MASTER/MANAGER.md` Phase 2
