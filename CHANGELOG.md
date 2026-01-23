@@ -7,6 +7,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **PM_1400 vol.2 시드 트랙**: Track 01 "먼지" 가사/스타일 확정
+  - Reference: 죠지 - Boat (표류하는 느낌, R&B groove)
+  - Male vocal, Vibraphone-led, 72 BPM, Eb Major
+- **CLAUDE.md v2.2.0: Style Prompt QC 워크플로우**
+  - S15 글자수 제한 (< 800자, wc -c 검증 필수)
+  - S16 Lead Instrument Supportive 규칙
+  - S17 Chorus Expansion Density 규칙
+  - 검증 통과 전 유저 제안 금지
+- **LYRICS.md v1.8: 가사 품질 규칙 추가**
+  - 1.10 Image Density Management (V1=공간, V2=감각 분리)
+  - 1.11 Chorus Tone Rule (관조 톤, 직접 호소 최소화)
 - **vibem.py: 타이틀 자동 생성 (SSOT v1.5)**
   - draft_description.txt 상단에 제목 초안 자동 생성
   - concept.md에서 Title Meta 파싱 (Context Mode, Time, GENRE 등)

@@ -2,9 +2,25 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-21
+> Last updated: 2026-01-23
 
 ## 완료된 작업
+
+### 2026-01-23
+
+- [x] **PM_1400 vol.2 시드 트랙 설계** `c6ffe3a`
+  - Track 01 "먼지" 가사/스타일 확정
+  - Reference: 죠지 - Boat
+  - Male vocal, Vibraphone-led, 72 BPM, Eb Major
+
+- [x] **CLAUDE.md v2.2.0: Style Prompt QC 워크플로우**
+  - S15 글자수 제한 (< 800자)
+  - S16 Lead Instrument Supportive 규칙
+  - S17 Chorus Expansion Density 규칙
+
+- [x] **LYRICS.md v1.8: 가사 품질 규칙 추가**
+  - 1.10 Image Density Management
+  - 1.11 Chorus Tone Rule
 
 ### 2026-01-18 (오전)
 
@@ -54,10 +70,13 @@
 
 ## 현재 상태
 
-- **프로젝트**: Production Ready (v2.0.0 - Title Auto-Gen + Shorts v2)
+- **프로젝트**: Production Ready (v2.2.0 - Style Prompt QC Workflow)
 - **GitHub**: https://github.com/soomshuim/vibe-m (master)
-- **플레이리스트 제목**: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
-- **시리즈 컨셉**: "[AM 04:00] 하루가 멈춘 시간"
+- **vol.1 (AM_0400)**: 완료, YouTube 게시됨
+  - 제목: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
+- **vol.2 (PM_1400)**: 진행 중
+  - 제목: "[Playlist] [PM 02:00] soomshuim | 햇살에 멍해지는 시간, 느긋하게 흐르는 Soft R&B 보컬"
+  - Track 01 "먼지": 가사/스타일 확정, Suno 생성 대기
 - **문서 버전**:
   - LYRICS.md v1.7
   - STYLE.md v2.6
