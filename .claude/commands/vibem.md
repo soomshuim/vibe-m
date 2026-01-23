@@ -7,15 +7,21 @@ allowed-tools: [Read, Glob, Bash]
 
 vibe-m 프로젝트를 재개하기 위한 컨텍스트 로딩 커맨드.
 
+## 프로젝트 경로
+
+```
+~/vibe-m
+```
+
 ## 실행 절차
 
 ### 1. 프로젝트 개요 로드
 
-`CLAUDE.md` 파일을 읽어서 프로젝트 구조와 규칙을 파악한다.
+`~/vibe-m/CLAUDE.md` 파일을 읽어서 프로젝트 구조와 규칙을 파악한다.
 
 ### 2. 현재 세션 상태 로드
 
-`.ai/SESSION.md` 파일을 읽어서:
+`~/vibe-m/.ai/SESSION.md` 파일을 읽어서:
 - 진행 중인 작업
 - 최근 완료된 작업
 - 다음 할 일
@@ -23,7 +29,7 @@ vibe-m 프로젝트를 재개하기 위한 컨텍스트 로딩 커맨드.
 ### 3. 현재 시리즈 상태 확인
 
 ```bash
-ls -la SERIES/
+ls -la ~/vibe-m/SERIES/
 ```
 
 활성 시리즈 폴더와 최신 볼륨 확인.
@@ -31,8 +37,7 @@ ls -la SERIES/
 ### 4. Git 상태 확인
 
 ```bash
-git status --short
-git log --oneline -5
+cd ~/vibe-m && git status --short && git log --oneline -5
 ```
 
 ### 5. 요약 출력
