@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-25 | v2.6.0 (곡 길이 확장 규칙 + Exclude 세트 출력)
+> Last updated: 2026-01-25 | v2.6.1 (SERIES 폴더 구조 단순화 - vol1 제거)
 
 ## Quick Reference
 
@@ -263,8 +263,8 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
      → 복사-붙여넣기 시 글자수 5000자+ 초과 발생
 
 해결: Style Prompt / 가사 완성 시 .txt 파일로 저장 + pbcopy
-     → SERIES/[시리즈]/vol1/track[NN]_style.txt
-     → SERIES/[시리즈]/vol1/track[NN]_lyrics.txt
+     → SERIES/[시리즈]/track[NN]_style.txt
+     → SERIES/[시리즈]/track[NN]_lyrics.txt
 
 워크플로우:
 Step 1. 텍스트 완성 → .txt 파일로 Write
@@ -402,7 +402,8 @@ Step 4. 확인 후 실행: python vibem.py shorts [TRACK_PATH] --start [MM:SS] -
 숏츠를 만들기 전에 확인이 필요합니다:
 
 1. 어떤 시리즈인가요?
-   - AM_0400/vol1
+   - AM_0400
+   - PM_1400
    - (기타 시리즈...)
 
 2. 몇 번 트랙인가요?
@@ -572,12 +573,12 @@ brew install ffmpeg-full
 
 **SSOT 위치:**
 ```
-SERIES/[시리즈명]/vol1/concept.md
+SERIES/[시리즈명]/concept.md
 ```
 
 **예시:**
-- `SERIES/AM_0400/vol1/concept.md` ← AM 04:00 시리즈 SSOT
-- `SERIES/PM_1400/vol1/concept.md` ← PM 02:00 시리즈 SSOT
+- `SERIES/AM_0400/concept.md` ← AM 04:00 시리즈 SSOT
+- `SERIES/PM_1400/concept.md` ← PM 02:00 시리즈 SSOT
 
 **금지:**
 - ❌ 루트에 `concept_vol.*.md` 생성 금지
@@ -585,7 +586,7 @@ SERIES/[시리즈명]/vol1/concept.md
 
 **작업 시:**
 ```
-Step 1. SERIES/[시리즈]/vol1/concept.md 직접 편집
+Step 1. SERIES/[시리즈]/concept.md 직접 편집
 Step 2. 루트에 임시 파일 생성하지 않음
 Step 3. 편집 완료 후 Last updated 날짜 갱신
 ```
@@ -613,15 +614,14 @@ vibe-m/
 │
 ├── SERIES/                 # 시리즈별 프로젝트 (concept.md SSOT 위치)
 │   ├── AM_0400/            # 새벽 4시 시리즈
-│   │   └── vol1/
-│   │       ├── concept.md  # 컨셉 문서 (SSOT)
-│   │       └── input/
-│   │           ├── tracks/ # MP3 파일
-│   │           ├── loop.mp4
-│   │           └── thumb.jpg
+│   │   ├── concept.md      # 컨셉 문서 (SSOT)
+│   │   └── input/
+│   │       ├── tracks/     # MP3 파일
+│   │       ├── loop.mp4
+│   │       └── thumb.jpg
 │   └── PM_1400/            # 오후 2시 시리즈
-│       └── vol1/
-│           └── concept.md
+│       ├── concept.md
+│       └── input/
 │
 ├── vibem.py                # CLI 메인 코드
 ├── requirements.txt        # Python 의존성
