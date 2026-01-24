@@ -7,11 +7,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
-- **PM_1400 Track 07-09 추가 (9곡 확정)**
+- **PM_1400 Track 10 "깸" 추가 - 수미상관 완성 (10곡 확정)**
+  - Track 01 "멍" ↔ Track 10 "깸" 수미상관 구조
+  - 같은 BPM(74)/Key(Eb)/Lead(Clean Electric Guitar)
+  - 후렴 대칭: "멍때려요" ↔ "일어나요"
+  - punchy bass guitar, bouncy groove 스타일
+- **PM_1400 Track 07-09 추가**
   - Track 07 "온기" (Female, 70 BPM, Db Major)
   - Track 08 "그늘" → Track 07로 재배치 (Male, 72 BPM, Ab Major)
   - Track 09 "구름" → Track 08로 재배치 (Female, 76 BPM, F Major)
-  - Track 10 수미상관 대기 중
 - **CLAUDE.md v2.6: 워크플로우 개선**
   - Suno 파라미터 가이드 (W:35/I:65 기본값)
   - Style Prompt + Exclude 세트 출력 규칙
