@@ -7,6 +7,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **PM_1400 vol1 플레이리스트 완성** `7c1155e`
+  - 10곡 트랙 파일 추가, final.mp4 생성 (53.5분, x2 반복)
+  - draft_description.txt 최종안 (피드백 반영, 해시태그 8개 최적화)
 - **PM_1400 Track 10 "깸" 추가 - 수미상관 완성 (10곡 확정)**
   - Track 01 "멍" ↔ Track 10 "깸" 수미상관 구조
   - 같은 BPM(74)/Key(Eb)/Lead(Clean Electric Guitar)
@@ -26,6 +29,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - 산책/물결/먼지 2트랙 이상 간격 확보 (운율 겹침 방지)
 
 ### Changed
+- **AM_0400/PM_1400 디스크립션 포맷 통일**
+  - 제목: `[시간대] 감성 키워드 | 상황 + 장르`
+  - 해시태그 8개 최적화 (#AM04시/#PM02시 + #soomshuim)
 - **SERIES 폴더 구조 단순화** (CLAUDE.md v2.6.1)
   - vol1 폴더 제거, 파일들 상위로 이동
   - `SERIES/AM_0400/vol1/` → `SERIES/AM_0400/`
