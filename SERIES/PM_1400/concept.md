@@ -1049,8 +1049,8 @@ Airy, Falsetto, Whisper, Harmonized, Backing vocals, Choir, Cold, Dark, Intense,
 **Suno Parameters:**
 | 항목 | 값 |
 |------|-----|
-| Weirdness | 25 |
-| Style Influence | 75 |
+| Weirdness | 35 |
+| Style Influence | 65 |
 
 **가사:**
 ```
@@ -1105,8 +1105,9 @@ Airy, Falsetto, Whisper, Harmonized, Backing vocals, Choir, Cold, Dark, Intense,
 ```
 Articulation.
 Korean Alternative R&B, 74 BPM, Eb Major.
-Clean Electric Guitar-led, supportive, dry minimal groove,
-rim-click, steady pulse, no swing exaggeration.
+Clean Electric Guitar-led, supportive,
+punchy bass guitar, bouncy groove,
+rim-click with snappy snare, steady pulse.
 
 Male vocal: Solid, Direct, Raw, Dry.
 Chest voice dominant throughout.
@@ -1115,15 +1116,16 @@ Fast syllabic delivery preferred over long held notes.
 Melody stays mostly in mid register.
 Precise articulation, clear consonants.
 
-Verse1: guitar arpeggios, sparse, still waking.
-Verse2: groove locks in, slight lift, vocal forward.
+Verse1: guitar arpeggios, bass locks in early, waking feel.
+Verse2: groove tightens, bass more prominent, vocal forward.
 
 Chorus impact comes from rhythmic repetition,
+punchy bass drives the hook,
 with a brief upward melodic lift on "일어나요".
 Chorus expansion by arrangement density only.
 
 Final chorus: slightly brighter, open feel.
-Outro: guitar fades gently, open ending.
+Outro: guitar and bass fade gently, open ending.
 Feeling of continuation, not closure.
 
 Single lead vocal. No harmony, no backing vocals.
@@ -1151,7 +1153,7 @@ Falsetto, Airy, Whisper, Breathiness, Growl, Vibrato, Opera, Dramatic, High-pitc
 | 07 | 그늘 | 72 | Ab Major | Male | 35 | 65 |
 | 08 | 구름 | 76 | F Major | Female | 35 | 65 |
 | 09 | 먼지 | 72 | Eb Major | Male | 20 | 80 |
-| 10 | 깸 | 74 | Eb Major | Male | 25 | 75 |
+| 10 | 깸 | 74 | Eb Major | Male | 35 | 65 |
 
 **수미상관 구조:**
 - Track 01 "멍" ↔ Track 10 "깸"
