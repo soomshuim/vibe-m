@@ -940,9 +940,105 @@ Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir
 
 ---
 
+### Track 09: 구름
+
+**파일명:** `09__구름__Chill__Soft-RnB__76.mp3`
+
+**Keyword Axis:**
+- Primary (물성): 잔디, 풀잎, 구름, 하늘
+- Secondary (감각): 눕다, 바라보다, 흘러가다, 스치다, 번지다
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 35 |
+| Style Influence | 65 |
+
+**가사:**
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct female vocal, Relaxed]
+잔디 위에 가만히 등을 대고 누워
+풀내음이 코끝에 은은하게 번져
+머리 위로 파란 하늘이 펼쳐져
+하얀 구름 천천히 흘러가
+아무 생각 하지 않는 지금 이 시간
+세상이 다 멈춘 것만 같아
+
+[pre-chorus]
+[Chest voice, Building]
+아무 데도 안 가
+여기 흘러 있어
+
+[chorus]
+[Straight tone, Open sound]
+하늘이 넓어
+구름이 흘러
+가만히 바라봐
+그것만으로 돼
+
+[interlude]
+[instrumental]
+
+[verse2]
+[Vocal forward, Same melody as V1]
+바람결이 뺨 위를 부드럽게 스쳐
+햇살들이 눈가에 따스하게 내려
+감은 눈에 잔상이 어릿하게 번져
+모든 게 다 멀리서 돌아가
+어디로 가는진 몰라도 우린
+이대로 다 괜찮을 것 같아
+
+[pre-chorus]
+[Chest voice, Building]
+아무 데도 안 가
+이대로 있을래
+
+[chorus]
+[Straight tone, Open sound]
+하늘이 넓어
+구름이 흘러
+가만히 바라봐
+그것만으로 돼
+
+[bridge]
+[Low chest voice, Sparse, Building]
+어디로 가는지 몰라도
+흐르는 구름을 따라서
+나도 여기 흘러온 거야
+
+[chorus]
+[Full arrangement, Emotional peak]
+하늘이 넓어
+구름이 흘러
+가만히 바라봐
+그것만으로 [Longest sustain] 돼
+
+[outro]
+[Soft, Fading]
+그것만으로 돼
+
+[instrumental fade]
+```
+
+**Style Prompt:**
+```
+Articulation. Korean Soft R&B, 76 BPM, F Major. Electric Piano (Wurlitzer)-led, supportive groove, soft shaker, heartbeat kick, warm keys, open sky texture, cinematic but restrained. Female vocal: Natural, grounded, Raw, Solid, Direct, Dry. Chest voice dominant. No falsetto. Straight tone. Vocal delivery prioritizes calm airflow over projection. Verse2 same melodic contour as v1; last 2 lines rise in intensity. Chorus hook-first, repeated identically. Bridge builds every bar. Final Chorus hits peak with chest belt + 1 held note. Outro Wurlitzer fades. Single lead vocal. Density expansion only.
+```
+
+**Exclude Style:**
+```
+Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir, Intense, Dramatic, Mumbled, Rushing
+```
+
+---
+
 ## 메모
 
-**트랙 리스트 (8곡 확정, 2곡 추가 예정):**
+**트랙 리스트 (9곡 확정, 1곡 추가 예정):**
 | # | 제목 | BPM | Key | Vocal | W | I |
 |---|------|-----|-----|-------|---|---|
 | 01 | 산책 | 74 | Eb Major | Male | 25 | 75 |
@@ -953,6 +1049,7 @@ Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir
 | 06 | 돛 | 90 | Major | Male | 50 | 50 |
 | 07 | 온기 | 70 | Db Major | Female | 35 | 65 |
 | 08 | 그늘 | 72 | Ab Major | Male | 35 | 65 |
+| 09 | 구름 | 76 | F Major | Female | 35 | 65 |
 
 **배치 원칙:**
 - 그룹 A (verse-bridge-chorus 구조): 산책, 물결, 먼지, 그늘 → 연속 배치 금지
@@ -964,4 +1061,4 @@ Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir
 
 ---
 
-Last updated: 2026-01-25 (Track 08 그늘 추가, 8곡 확정)
+Last updated: 2026-01-25 (Track 09 구름 추가, 9곡 확정)
