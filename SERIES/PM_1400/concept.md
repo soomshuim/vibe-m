@@ -1036,9 +1036,110 @@ Airy, Falsetto, Whisper, Harmonized, Backing vocals, Choir, Cold, Dark, Intense,
 
 ---
 
+### Track 10: 깸
+
+**파일명:** `10__깸__Chill__Alt-RnB__74.mp3`
+
+**수미상관:** Track 01 "멍"의 대응곡 (빠져듦 ↔ 깨어남)
+
+**Keyword Axis:**
+- Primary (물성): 모니터, 턱, 손, 어깨, 알림
+- Secondary (감각): 펴지다, 뻗다, 깨다, 흩어지다
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 25 |
+| Style Influence | 75 |
+
+**가사:**
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct male vocal]
+모니터만 봐요
+눈이 초점잡혀
+시간이 흘러도
+난 천천히 펴져
+
+[pre-chorus]
+[Chest voice]
+말을 꺼내봐요
+턱을 살짝들어
+
+[chorus]
+[Mid register, rhythmic]
+알림이 또떴어
+손을 뻗어봐
+어깨가 펴져
+일어나요
+
+[interlude]
+[instrumental]
+
+[verse2]
+[Direct male vocal]
+누가 불러오면
+대답을 해봐
+입꼬리 올려봐
+머리가 깨어
+
+[pre-chorus]
+[Chest voice]
+잡념이 흩어져
+숨결이 가벼워
+
+[chorus]
+알림이 또떴어
+손을 뻗어봐
+어깨가 펴져
+일어나요
+
+[outro]
+[instrumental fade]
+```
+
+**Style Prompt:**
+```
+Articulation.
+Korean Alternative R&B, 74 BPM, Eb Major.
+Clean Electric Guitar-led, supportive, dry minimal groove,
+rim-click, steady pulse, no swing exaggeration.
+
+Male vocal: Solid, Direct, Raw, Dry.
+Chest voice dominant throughout.
+Straight tone, minimal sustain.
+Fast syllabic delivery preferred over long held notes.
+Melody stays mostly in mid register.
+Precise articulation, clear consonants.
+
+Verse1: guitar arpeggios, sparse, still waking.
+Verse2: groove locks in, slight lift, vocal forward.
+
+Chorus impact comes from rhythmic repetition,
+with a brief upward melodic lift on "일어나요".
+Chorus expansion by arrangement density only.
+
+Final chorus: slightly brighter, open feel.
+Outro: guitar fades gently, open ending.
+Feeling of continuation, not closure.
+
+Single lead vocal. No harmony, no backing vocals.
+Lead vocal remains single and dominant.
+```
+
+**Exclude Style:**
+```
+Falsetto, Airy, Whisper, Breathiness, Growl, Vibrato, Opera, Dramatic, High-pitched belting, Harmonized, Backing vocals, Choir, Intense, Mumbled
+```
+
+---
+
 ## 메모
 
-**트랙 리스트 (9곡 확정, 1곡 추가 예정):**
+**트랙 리스트 (10곡 확정):**
 | # | 제목 | BPM | Key | Vocal | W | I |
 |---|------|-----|-----|-------|---|---|
 | 01 | 멍 | 74 | Eb Major | Male | 25 | 75 |
@@ -1050,6 +1151,11 @@ Airy, Falsetto, Whisper, Harmonized, Backing vocals, Choir, Cold, Dark, Intense,
 | 07 | 그늘 | 72 | Ab Major | Male | 35 | 65 |
 | 08 | 구름 | 76 | F Major | Female | 35 | 65 |
 | 09 | 먼지 | 72 | Eb Major | Male | 20 | 80 |
+| 10 | 깸 | 74 | Eb Major | Male | 25 | 75 |
+
+**수미상관 구조:**
+- Track 01 "멍" ↔ Track 10 "깸"
+- 같은 BPM/Key/Vocal/Lead, 반대 방향 (빠져듦 ↔ 깨어남)
 
 **배치 원칙:**
 - 그룹 A (verse-bridge-chorus 구조): 산책, 물결, 먼지, 그늘 → 연속 배치 금지
@@ -1061,4 +1167,4 @@ Airy, Falsetto, Whisper, Harmonized, Backing vocals, Choir, Cold, Dark, Intense,
 
 ---
 
-Last updated: 2026-01-25 (트랙 순서 재배치 A안 적용, 9곡 확정)
+Last updated: 2026-01-25 (Track 10 "깸" 추가, 10곡 확정 - 수미상관 완성)

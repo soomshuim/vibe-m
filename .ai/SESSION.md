@@ -2,9 +2,36 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-24 (6곡 트랙 리스트 확정)
+> Last updated: 2026-01-25 (9곡 확정 + 트랙 순서 재배치)
 
 ## 완료된 작업
+
+### 2026-01-25
+
+- [x] **PM_1400 Track 07-09 추가 (9곡 확정)** `471d547`
+  - Track 07 "온기" (Female, 70 BPM, Db Major)
+  - Track 08 "그늘" → Track 07로 재배치 (Male, 72 BPM, Ab Major)
+  - Track 09 "구름" → Track 08로 재배치 (Female, 76 BPM, F Major)
+  - Track 10 수미상관 대기 중
+
+- [x] **PM_1400 트랙 순서 재배치 (A안)** `a01b253`
+  - 기존: 산책(01)이 오프닝
+  - 변경: 멍(01) → 컨셉 직결 ("햇살에 멍해지는 시간")
+  - 최종 순서: 멍(01) → 얼음(02) → 산책(03) → 온기(04) → 돛(05) → 물결(06) → 그늘(07) → 구름(08) → 먼지(09)
+  - 운율 겹침 방지: 산책/물결/먼지 2트랙 이상 간격 확보
+
+- [x] **SERIES 폴더 구조 단순화** `a01b253`
+  - vol1 폴더 제거, 파일들 상위로 이동
+  - `SERIES/AM_0400/vol1/` → `SERIES/AM_0400/`
+  - `SERIES/PM_1400/vol1/` → `SERIES/PM_1400/`
+  - CLAUDE.md v2.6.1 업데이트
+
+- [x] **CLAUDE.md v2.6 워크플로우 개선**
+  - Suno 파라미터 가이드 (W:35/I:65 기본값)
+  - Style Prompt + Exclude 세트 출력 규칙
+  - 곡 길이 확장 규칙 (구조 태그로 확장, Verse 8행 금지)
+  - 복사용 .txt 파일 저장 워크플로우
+  - S18 Articulation 필수 규칙 추가
 
 ### 2026-01-24
 
@@ -92,23 +119,22 @@
 
 ## 현재 상태
 
-- **프로젝트**: Production Ready (v2.2.0 - Style Prompt QC Workflow)
+- **프로젝트**: Production Ready (v2.6.1 - SERIES 폴더 구조 단순화)
 - **GitHub**: https://github.com/soomshuim/vibe-m (master)
 - **vol.1 (AM_0400)**: 완료, YouTube 게시됨
   - 제목: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
+  - 작업 디렉토리: `SERIES/AM_0400/`
+  - YouTube: https://youtu.be/i1GHmn1WZr4
 - **vol.2 (PM_1400)**: 진행 중
   - 제목: "[Playlist] [PM 02:00] soomshuim | 햇살에 멍해지는 시간, 느긋하게 흐르는 Soft R&B 보컬"
-  - **6곡 확정**: 산책 → 멍 → 물결 → 얼음 → 먼지 → 돛
-  - **4곡 추가 예정** (07~10)
+  - **9곡 확정 (A안)**: 멍(01) → 얼음(02) → 산책(03) → 온기(04) → 돛(05) → 물결(06) → 그늘(07) → 구름(08) → 먼지(09)
+  - **Track 10**: 수미상관 설계 대기 (멍의 대응곡)
+  - 작업 디렉토리: `SERIES/PM_1400/`
   - Suno 생성 대기
 - **문서 버전**:
-  - LYRICS.md v1.7
+  - LYRICS.md v1.8
   - STYLE.md v2.6
-  - CLAUDE.md v2.0.0
-- **작업 디렉토리**: `SERIES/AM_0400/vol1/`
-  - 트랙 9곡 완료 (Track 01~09) **플레이리스트 완성**
-  - YouTube 공개 완료: https://youtu.be/i1GHmn1WZr4
-  - Shorts 테스트 완료: `output/shorts/short_마음안.mp4`
+  - CLAUDE.md v2.6.1
 
 ## 진행 중
 
@@ -407,7 +433,9 @@
   - [x] Time Station 선정: 오후햇살 (14:00)
   - [x] Seed Designer: Seed DNA 설계
   - [x] 6곡 트랙 리스트 확정 (산책, 멍, 물결, 얼음, 먼지, 돛)
-  - [ ] 4곡 추가 (07~10)
+  - [x] 3곡 추가 (07-09: 온기, 그늘, 구름)
+  - [x] 트랙 순서 재배치 (A안: 멍 오프닝)
+  - [ ] **Track 10 수미상관 설계** (멍의 대응곡)
   - [ ] Suno 생성 및 QC
 
 ## 알려진 이슈

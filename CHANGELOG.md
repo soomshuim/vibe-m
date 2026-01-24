@@ -7,6 +7,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **PM_1400 Track 07-09 추가 (9곡 확정)**
+  - Track 07 "온기" (Female, 70 BPM, Db Major)
+  - Track 08 "그늘" → Track 07로 재배치 (Male, 72 BPM, Ab Major)
+  - Track 09 "구름" → Track 08로 재배치 (Female, 76 BPM, F Major)
+  - Track 10 수미상관 대기 중
+- **CLAUDE.md v2.6: 워크플로우 개선**
+  - Suno 파라미터 가이드 (W:35/I:65 기본값)
+  - Style Prompt + Exclude 세트 출력 규칙
+  - 곡 길이 확장 규칙 (구조 태그로 확장, Verse 8행 금지)
+  - 복사용 .txt 파일 저장 워크플로우
+- **PM_1400 트랙 순서 재배치 (A안)**
+  - 멍(01) → 얼음(02) → 산책(03) → 온기(04) → 돛(05) → 물결(06) → 그늘(07) → 구름(08) → 먼지(09)
+  - 산책/물결/먼지 2트랙 이상 간격 확보 (운율 겹침 방지)
+
+### Changed
+- **SERIES 폴더 구조 단순화** (CLAUDE.md v2.6.1)
+  - vol1 폴더 제거, 파일들 상위로 이동
+  - `SERIES/AM_0400/vol1/` → `SERIES/AM_0400/`
+  - `SERIES/PM_1400/vol1/` → `SERIES/PM_1400/`
+
 - **PM_1400 vol1 트랙 리스트 확정 (6곡)**
   - Track 01 "산책", Track 02 "멍", Track 03 "물결", Track 04 "얼음", Track 05 "먼지", Track 06 "돛"
   - 그룹 A/B/C 교차 배치로 운율 반복 방지
