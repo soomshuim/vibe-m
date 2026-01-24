@@ -696,9 +696,151 @@ Form: intro–v1–chorus–v2–bridge (build + brief drop)–final chorus–ou
 
 ---
 
+### Track 07: 온기
+
+**파일명:** `07__온기__Warm__Soft-RnB__70.mp3`
+
+**Keyword Axis:**
+- Primary (물성): 바람, 피부, 이마, 손바닥, 온기
+- Secondary (감각): 스치다, 닿다, 머무르다, 감기다
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 25 |
+| Style Influence | 75 |
+
+**가사:**
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct female vocal, Flowing]
+창문 너머로 바람이 불어와
+커튼 사이로 햇살이 스며들어
+피부 위로 뭔가 천천히 내려앉아
+나는 그 자리에 가만히 서 있어
+
+이마 위로 따스한 게 번져와
+눈을 감으면 더 선명해지는 것 같아
+손바닥을 펴면 닿는 게 있어
+아무것도 아닌 듯 전부인 것 같아
+
+[pre-chorus]
+[Chest voice, Building]
+멈춰 서 봐 잠깐만
+숨을 쉬어 봐 천천히
+지금 여기 이 공기가
+어딘가 달라진 것 같아
+
+[chorus]
+[Mid-high register, Straight tone, Emotional]
+바람이 지나간 자리에
+온기만 남아 번져가
+눈 감아도 느껴지는 게 있어
+이 순간 속에 머물러
+아무 말 없이 스며들어
+천천히 나를 감싸 안아
+
+[interlude]
+[instrumental]
+
+[verse2]
+[Direct female vocal, Deeper]
+어깨 위로 무거운 게 내려가
+숨결 하나에 몸이 풀려가는 것 같아
+손끝으로 공기를 만져보면
+차갑지도 뜨겁지도 않은 그 온도
+
+발끝부터 천천히 녹아내려
+긴장했던 게 어디론가 흘러가
+눈꺼풀이 무거워지는 이 순간
+놓아도 괜찮을 것 같아
+
+[pre-chorus]
+[Chest voice, Building]
+멈춰 서 봐 잠깐만
+숨을 쉬어 봐 천천히
+지금 여기 이 공기가
+나를 감싸고 있는 것 같아
+
+[chorus]
+바람이 지나간 자리에
+온기만 남아 번져가
+눈 감아도 느껴지는 게 있어
+이 순간 속에 머물러
+아무 말 없이 스며들어
+천천히 나를 감싸 안아
+
+[bridge]
+[Low chest voice, Intimate, Sparse]
+잡으려 하지 않아도 돼
+그냥 여기 있으면 돼
+지나가는 것들이 남기고 간
+이 온기 하나면 돼
+
+세상이 멈춘 것처럼
+나만 여기 있는 것처럼
+
+[chorus]
+[Full arrangement, Emotional peak]
+바람이 지나간 자리에
+온기만 남아 번져가
+눈 감아도 느껴지는 게 있어
+이 순간 속에 머물러
+아무 말 없이 스며들어
+천천히 나를 감싸 안아
+
+스쳐 지나간 모든 것들이
+여기 이렇게 남아 있어
+
+[outro]
+[Soft, Fading]
+온기가 번져가
+천천히 스며들어
+
+[instrumental fade]
+```
+
+**Style Prompt:**
+```
+Articulation.
+Korean Soft R&B, 70 BPM, Db Major.
+Felt Piano-led, supportive groove,
+soft brush rhythm, warm afternoon texture.
+
+Female vocal: Natural, intimate.
+Raw, Solid, Direct, Dry.
+Chest voice dominant. No falsetto.
+Straight tone. No vibrato, no ad-libs.
+
+Precise articulation, clear consonants.
+
+Verse1: piano arpeggios, sparse drums.
+Verse2: kick steady, groove deepens, vocal forward.
+Pre-chorus: tension builds.
+Chorus: full groove, melodic bass, pad widens.
+
+Bridge: piano and voice, sparse, tension rising.
+Final Chorus: chest belt pushed, high register climax,
+emotional release, density peak.
+
+Outro: fade, piano restates motif.
+
+Single lead vocal. Density expansion only.
+```
+
+**Exclude Style:**
+```
+Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir, Intense, Dramatic, Mumbled
+```
+
+---
+
 ## 메모
 
-**트랙 리스트 (6곡 확정, 4곡 추가 예정):**
+**트랙 리스트 (7곡 확정, 3곡 추가 예정):**
 | # | 제목 | BPM | Key | Vocal | W | I |
 |---|------|-----|-----|-------|---|---|
 | 01 | 산책 | 74 | Eb Major | Male | 25 | 75 |
@@ -707,10 +849,11 @@ Form: intro–v1–chorus–v2–bridge (build + brief drop)–final chorus–ou
 | 04 | 얼음 | 90 | D Major | Female | 35 | 75 |
 | 05 | 먼지 | 72 | Eb Major | Male | 20 | 80 |
 | 06 | 돛 | 90 | Major | Male | 50 | 50 |
+| 07 | 온기 | 70 | Db Major | Female | 25 | 75 |
 
 **배치 원칙:**
 - 그룹 A (verse-bridge-chorus 구조): 산책, 물결, 먼지 → 연속 배치 금지
-- 그룹 B (verse-pre-chorus-chorus 구조): 멍, 얼음 → 연속 배치 금지
+- 그룹 B (verse-pre-chorus-chorus 구조): 멍, 얼음, 온기 → 연속 배치 금지
 - 그룹 C (서사적/에코 패턴): 돛
 
 **Reference:**
@@ -718,4 +861,4 @@ Form: intro–v1–chorus–v2–bridge (build + brief drop)–final chorus–ou
 
 ---
 
-Last updated: 2026-01-24 (6곡 트랙 리스트 확정)
+Last updated: 2026-01-24 (Track 07 온기 추가, 7곡 확정)
