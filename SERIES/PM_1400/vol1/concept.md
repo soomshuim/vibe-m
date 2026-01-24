@@ -822,9 +822,127 @@ Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir
 
 ---
 
+### Track 08: 그늘
+
+**파일명:** `08__그늘__Chill__Soft-RnB__72.mp3`
+
+**Keyword Axis:**
+- Primary (물성): 그늘, 나뭇잎, 벤치, 그림자, 발목
+- Secondary (감각): 드리우다, 쉬다, 기대다, 숨다
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 35 |
+| Style Influence | 65 |
+
+**가사:**
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct male vocal]
+나뭇잎 사이로 빛이 새어
+그늘이 발목에 드리워져
+벤치에 잠깐 앉아 봐
+아무도 없는 이 자리
+
+[bridge1]
+[Chest voice, Intimate]
+여기 잠깐 쉬어가도 돼
+그림자가 나를 감싸
+
+[chorus]
+[Straight tone]
+그늘 아래 숨어 있어
+시간이 천천히 가
+여기 잠깐 기대 있어
+괜찮아 괜찮아
+
+[interlude]
+[instrumental]
+
+[verse2]
+[Vocal forward]
+바람이 나뭇잎 흔들어
+그림자가 출렁여
+[Higher register, Tight rhythm]
+눈을 감아도 느껴져
+이 자리가 좋아
+
+[bridge2]
+[Chest voice, Intimate]
+여기 잠깐 쉬어가도 돼
+아무것도 안 해도 돼
+
+[chorus]
+그늘 아래 숨어 있어
+시간이 천천히 가
+여기 잠깐 기대 있어
+괜찮아 괜찮아
+
+[bridge]
+[Low chest voice, Sparse, Building]
+햇살이 너무 뜨거워도
+여긴 늘 이대로야
+도망친 건 아닌 것 같아
+지금 이 순간만
+
+[chorus]
+[Full arrangement, Emotional peak]
+그늘 아래 숨어 있어
+시간이 천천히 가
+여기 잠깐 기대 있어
+괜찮아 [Longest sustain] 괜찮아
+
+[outro]
+[Soft, Fading]
+괜찮아 괜찮아
+
+[instrumental fade]
+```
+
+**Style Prompt:**
+```
+Articulation.
+Korean Soft R&B, 72 BPM, Ab Major.
+Soft Synth Pad-led, supportive groove,
+gentle pulse, warm shade texture.
+
+Male vocal: Natural, laid-back.
+Raw, Solid, Direct, Dry.
+Chest voice dominant. No falsetto.
+Straight tone. No vibrato, no ad-libs.
+
+Precise articulation, clear consonants.
+
+Verse1: synth pad, sparse drums, drifting.
+Verse2: kick steady, groove deepens.
+Verse2 last 2 lines: higher register, tighter rhythm, vocal push.
+
+Bridge1/2: pad and voice, intimate.
+Bridge3: sparse, tension rising, emotional commitment.
+
+Final Chorus: chest belt pushed, high register climax.
+Last "괜찮아": longest sustain in entire track.
+This single note defines the emotional peak.
+
+Outro: short fade, pad sustain.
+
+Single lead vocal. Density expansion only.
+```
+
+**Exclude Style:**
+```
+Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir, Intense, Dramatic, Mumbled
+```
+
+---
+
 ## 메모
 
-**트랙 리스트 (7곡 확정, 3곡 추가 예정):**
+**트랙 리스트 (8곡 확정, 2곡 추가 예정):**
 | # | 제목 | BPM | Key | Vocal | W | I |
 |---|------|-----|-----|-------|---|---|
 | 01 | 산책 | 74 | Eb Major | Male | 25 | 75 |
@@ -834,9 +952,10 @@ Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir
 | 05 | 먼지 | 72 | Eb Major | Male | 20 | 80 |
 | 06 | 돛 | 90 | Major | Male | 50 | 50 |
 | 07 | 온기 | 70 | Db Major | Female | 35 | 65 |
+| 08 | 그늘 | 72 | Ab Major | Male | 35 | 65 |
 
 **배치 원칙:**
-- 그룹 A (verse-bridge-chorus 구조): 산책, 물결, 먼지 → 연속 배치 금지
+- 그룹 A (verse-bridge-chorus 구조): 산책, 물결, 먼지, 그늘 → 연속 배치 금지
 - 그룹 B (verse-pre-chorus-chorus 구조): 멍, 얼음, 온기 → 연속 배치 금지
 - 그룹 C (서사적/에코 패턴): 돛
 
@@ -845,4 +964,4 @@ Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir
 
 ---
 
-Last updated: 2026-01-25 (Track 07 온기 압축 버전 확정)
+Last updated: 2026-01-25 (Track 08 그늘 추가, 8곡 확정)

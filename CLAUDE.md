@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-24 | v2.5.0 (복사용 클린 버전 규칙 추가)
+> Last updated: 2026-01-25 | v2.6.0 (곡 길이 확장 규칙 + Exclude 세트 출력)
 
 ## Quick Reference
 
@@ -78,6 +78,41 @@ Step 4. If all pass → QC 테이블 + 글자수와 함께 output
         (검증 통과 전 유저에게 제안 금지)
 Step 5. .txt 파일 저장 + pbcopy ← v2.5 NEW
         (채팅 UI 공백 문제 우회)
+Step 6. Style Prompt + Exclude 반드시 세트로 출력 ← v2.6 NEW
+        (Exclude 누락 방지)
+```
+
+**곡 길이 확장 규칙 (v2.6 NEW):**
+```
+문제: 긴 곡 필요 시 가사를 과하게 늘리면 반복감 증가
+
+해결: 가사 행 수는 유지하고, 구조 태그로 길이 확보
+     → [interlude], [instrumental], [bridge] 추가
+     → Verse 8행 이상 금지 (4행 권장)
+     → Chorus 반복 횟수로 길이 조절
+
+예시 (3분 → 4분 확장):
+❌ Verse1 4행 → 8행 (가사 2배)
+⭕ Verse1 4행 유지 + [interlude] 추가 + Chorus 3회 반복
+```
+
+**Style Prompt + Exclude 세트 출력 규칙 (v2.6 NEW):**
+```
+원칙: Style Prompt 출력 시 반드시 Exclude Style도 함께 출력
+
+출력 형식:
+### Style Prompt
+```(코드블록)
+...
+```(닫기)
+
+### Exclude Style
+```(코드블록)
+Falsetto, Airy, Whisper, ...
+```(닫기)
+
+→ 둘 중 하나만 출력 = INVALID
+→ txt 파일도 style.txt + exclude 포함 또는 별도 파일
 ```
 
 ---
