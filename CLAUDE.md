@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-24 | v2.4.0 (Articulation 필수 규칙 추가)
+> Last updated: 2026-01-24 | v2.5.0 (복사용 클린 버전 규칙 추가)
 
 ## Quick Reference
 
@@ -72,10 +72,12 @@ Step 4. If all pass → output with QC 테이블
 Step 0. STYLE.md Required Slots 확인
 Step 1. Generate Style Prompt (압축 버전)
 Step 2. Run self-QC against checklist (17개 슬롯)
-Step 3. 글자수 검증 (wc -c 실행, < 800자 확인) ← v2.2 NEW
+Step 3. 글자수 검증 (wc -c 실행, < 800자 확인)
 Step 4. If all pass → QC 테이블 + 글자수와 함께 output
         If any fail → 수정 후 Step 2 반복
         (검증 통과 전 유저에게 제안 금지)
+Step 5. .txt 파일 저장 + pbcopy ← v2.5 NEW
+        (채팅 UI 공백 문제 우회)
 ```
 
 ---
@@ -220,6 +222,22 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
 → 모든 항목 ✓ 시에만 유저에게 제안
 ```
 
+**복사용 파일 저장 규칙 (v2.5 NEW):**
+```
+문제: 채팅 UI 렌더링 시 공백이 대량 추가됨
+     → 복사-붙여넣기 시 글자수 5000자+ 초과 발생
+
+해결: Style Prompt / 가사 완성 시 .txt 파일로 저장 + pbcopy
+     → SERIES/[시리즈]/vol1/track[NN]_style.txt
+     → SERIES/[시리즈]/vol1/track[NN]_lyrics.txt
+
+워크플로우:
+Step 1. 텍스트 완성 → .txt 파일로 Write
+Step 2. wc -c로 글자수 검증
+Step 3. cat [파일] | pbcopy 로 클립보드 복사
+Step 4. 유저에게 "Cmd+V로 붙여넣기" 안내
+```
+
 ---
 
 ### Suno Parameters 필수 기록 (v2.4 NEW)
@@ -229,8 +247,8 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
 **기본값 (VIBE-M 권장):**
 | 항목 | 값 | 설명 |
 |------|-----|------|
-| **Weirdness** | 20 | 낮을수록 안정적, 높을수록 실험적 |
-| **Style Influence** | 80 | 높을수록 Style Prompt 영향력 강화 |
+| **Weirdness** | 35 | 가성 제거 + 진성 하이라이트 최적 |
+| **Style Influence** | 65 | Style Prompt 영향력 유지 |
 
 **적용 규칙:**
 ```
@@ -242,9 +260,9 @@ Step 3. 결과 QC 후 파라미터 조정 필요 시 기록
 **조정 가이드:**
 | 상황 | Weirdness | Style Influence |
 |------|-----------|-----------------|
-| 안정적 결과 원할 때 | 10-20 | 80-90 |
-| 약간의 변주 원할 때 | 30-40 | 70-80 |
-| 실험적 시도 | 50+ | 60-70 |
+| **안정적 (기본)** | **35** | **65** |
+| **공격적 (프롬프트 강화)** | **35** | **70** |
+| **실험적 (장르 변화 감수)** | **40** | **60** |
 
 ---
 

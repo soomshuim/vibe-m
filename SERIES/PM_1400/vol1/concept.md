@@ -707,8 +707,8 @@ Form: intro–v1–chorus–v2–bridge (build + brief drop)–final chorus–ou
 **Suno Parameters:**
 | 항목 | 값 |
 |------|-----|
-| Weirdness | 25 |
-| Style Influence | 75 |
+| Weirdness | 35 |
+| Style Influence | 65 |
 
 **가사:**
 ```
@@ -718,14 +718,9 @@ Form: intro–v1–chorus–v2–bridge (build + brief drop)–final chorus–ou
 [verse1]
 [Direct female vocal, Flowing]
 창문 너머로 바람이 불어와
-커튼 사이로 햇살이 스며들어
 피부 위로 뭔가 천천히 내려앉아
-나는 그 자리에 가만히 서 있어
-
 이마 위로 따스한 게 번져와
-눈을 감으면 더 선명해지는 것 같아
-손바닥을 펴면 닿는 게 있어
-아무것도 아닌 듯 전부인 것 같아
+나는 그 자리에 가만히 서 있어
 
 [pre-chorus]
 [Chest voice, Building]
@@ -749,14 +744,9 @@ Form: intro–v1–chorus–v2–bridge (build + brief drop)–final chorus–ou
 [verse2]
 [Direct female vocal, Deeper]
 어깨 위로 무거운 게 내려가
-숨결 하나에 몸이 풀려가는 것 같아
 손끝으로 공기를 만져보면
-차갑지도 뜨겁지도 않은 그 온도
-
 발끝부터 천천히 녹아내려
-긴장했던 게 어디론가 흘러가
 눈꺼풀이 무거워지는 이 순간
-놓아도 괜찮을 것 같아
 
 [pre-chorus]
 [Chest voice, Building]
@@ -780,9 +770,6 @@ Form: intro–v1–chorus–v2–bridge (build + brief drop)–final chorus–ou
 지나가는 것들이 남기고 간
 이 온기 하나면 돼
 
-세상이 멈춘 것처럼
-나만 여기 있는 것처럼
-
 [chorus]
 [Full arrangement, Emotional peak]
 바람이 지나간 자리에
@@ -791,9 +778,6 @@ Form: intro–v1–chorus–v2–bridge (build + brief drop)–final chorus–ou
 이 순간 속에 머물러
 아무 말 없이 스며들어
 천천히 나를 감싸 안아
-
-스쳐 지나간 모든 것들이
-여기 이렇게 남아 있어
 
 [outro]
 [Soft, Fading]
@@ -817,16 +801,16 @@ Straight tone. No vibrato, no ad-libs.
 
 Precise articulation, clear consonants.
 
-Verse1: piano arpeggios, sparse drums.
-Verse2: kick steady, groove deepens, vocal forward.
-Pre-chorus: tension builds.
+Verse1: piano arpeggios, sparse drums, gentle entry.
+Verse2: kick steady, groove deepens, vocal push.
+Pre-chorus: quick tension build.
 Chorus: full groove, melodic bass, pad widens.
 
-Bridge: piano and voice, sparse, tension rising.
+Bridge: piano and voice only, tension rising.
 Final Chorus: chest belt pushed, high register climax,
 emotional release, density peak.
 
-Outro: fade, piano restates motif.
+Outro: short fade, piano motif.
 
 Single lead vocal. Density expansion only.
 ```
@@ -849,7 +833,7 @@ Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir
 | 04 | 얼음 | 90 | D Major | Female | 35 | 75 |
 | 05 | 먼지 | 72 | Eb Major | Male | 20 | 80 |
 | 06 | 돛 | 90 | Major | Male | 50 | 50 |
-| 07 | 온기 | 70 | Db Major | Female | 25 | 75 |
+| 07 | 온기 | 70 | Db Major | Female | 35 | 65 |
 
 **배치 원칙:**
 - 그룹 A (verse-bridge-chorus 구조): 산책, 물결, 먼지 → 연속 배치 금지
@@ -861,4 +845,4 @@ Falsetto, Airy, Whisper, Breathiness, Vibrato, Harmonized, Backing vocals, Choir
 
 ---
 
-Last updated: 2026-01-24 (Track 07 온기 추가, 7곡 확정)
+Last updated: 2026-01-25 (Track 07 온기 압축 버전 확정)
