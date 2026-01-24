@@ -142,10 +142,21 @@ Use ONLY when Context Mode is missing or ambiguous.
 
 ---
 
-### Style & Output Constraints (Critical)
+### Style & Output Constraints (Critical) — v1.6
+
+**제목 (Title):**
 - No emojis
 - No hashtags
+
+**설명 (Description):**
+- 본문: No emojis, No hashtags
+- 하단 (구분선 이후): 해시태그 허용 (SEO용)
 - No keyword stuffing
+
+**고정 댓글 (Pinned Comment):**
+- 이모지 1개 이하 허용 (시간대 톤에 맞게)
+
+**공통:**
 - Optimized for long-form background listening
 - Must be interpretable without visual context
 

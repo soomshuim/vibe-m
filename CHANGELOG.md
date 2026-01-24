@@ -7,6 +7,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **PM_1400 vol1 트랙 리스트 확정 (6곡)**
+  - Track 01 "산책", Track 02 "멍", Track 03 "물결", Track 04 "얼음", Track 05 "먼지", Track 06 "돛"
+  - 그룹 A/B/C 교차 배치로 운율 반복 방지
+  - Female vocal (얼음) 중간 배치로 다양성 확보
+  - 4곡 추가 예정 (07~10)
+- **PM_1400 Track 02 "물결"**: Boat 악보 분석 반영 (Final_v4)
+  - Key: A Major (Boat 원곡 동일)
+  - Chord: Neo-soul extended (M9, m7)
+  - Melody: Narrow range, stepwise, speech-like rhythm
+  - Lyrics: 직접적/담백한 Boat 스타일
+  - QC Checklist: Speech-like 항목 추가
 - **PM_1400 vol.2 시드 트랙**: Track 01 "먼지" 가사/스타일 확정
   - Reference: 죠지 - Boat (표류하는 느낌, R&B groove)
   - Male vocal, Vibraphone-led, 72 BPM, Eb Major

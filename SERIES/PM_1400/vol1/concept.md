@@ -108,13 +108,428 @@ Exclude Style: Airy, Falsetto, Whisper, Harmonized, Backing vocals, Choir, Inten
 
 ## Tracks
 
-### Track 01: 먼지
+### Track 01: 산책
 
-**파일명:** `01__먼지__Warm__Soft-RnB__72.mp3`
+**파일명:** `01__산책__Chill__Alt-RnB__74.mp3`
+
+**Keyword Axis:**
+- Primary (물성): 길가, 발끝, 잎새, 신발끈, 먼지알
+- Secondary (감각): 거닐다, 옮기다, 머무르다, 나아가다
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 25 |
+| Style Influence | 75 |
+
+**가사:**
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct male vocal, No harmony]
+길가를 거닐어
+발끝이 천천히 옮겨가
+잎새가 흔들려
+나는 그 길에 머물러
+
+[bridge1]
+[Chest voice, Intimate]
+길가에 내려온 오후 햇살
+발끝 소리마저 잦아든 듯해
+이대로 걸어가도 돼
+
+[chorus]
+[High register chest voice, Straight tone]
+발끝이 느려져
+걸음은 고르게
+이 순간 조금 더 나아가자
+발끝은 천천히 가
+
+[verse2]
+[Groove locks in, Vocal forward]
+신발끈 매어봐
+햇살이 조용히 따라 와요
+발끝이 길 위에 머물러
+나도 이대로 나아가자
+
+[bridge2]
+[Chest voice, Intimate]
+손등에 남은 작은 먼지알
+어떤 길도 끝이 없는 산책
+이대로 걸어가도 돼
+
+[chorus]
+발끝이 느려져
+걸음은 고르게
+이 순간 조금 더 나아가자
+발끝은 천천히 가
+
+[chorus]
+발끝이 느려져
+걸음은 고르게
+이 순간 조금 더 나아가자
+발끝은 천천히 가
+
+[outro]
+[instrumental]
+```
+
+**Style Prompt:**
+```
+Articulation.
+Korean Indie Alt R&B, 74 BPM, Eb Major.
+Clean Electric Guitar-led, supportive R&B groove,
+rim-click, warm afternoon texture, subtle vinyl crackle.
+
+Male vocal: Solid, Direct, Raw, Dry.
+Chest voice dominant. No falsetto.
+Straight tone only. No vibrato, no ad-libs.
+High register chest voice preferred over falsetto.
+Tone is nonchalant and effortless, never dramatic.
+
+Vocal articulation is critical:
+clear consonant attack, precise syllable separation,
+no slurring, no breathy phrasing.
+
+Verse2 builds clear tension.
+Chorus contains a single, unavoidable high-note focal point:
+short, decisive high register chest note,
+straight tone, not sustained belting.
+If the chorus does not reach a high register chest note,
+the emotional intent is considered failed.
+
+Chorus hook-first, repeated identically.
+Later choruses grow only by arrangement density.
+Bridge builds every bar.
+Outro guitar fades.
+Lead vocal remains single and dominant.
+```
+
+**Exclude Style:**
+```
+Falsetto, Airy, Whisper, Breathiness, Growl, Vibrato, Opera, Dramatic, High-pitched belting, Harmonized, Backing vocals, Choir, Intense, Mumbled
+```
+
+---
+
+### Track 02: 멍
+
+**파일명:** `02__멍__Chill__Alt-RnB__74.mp3`
+
+**Keyword Axis:**
+- Primary (물성): 모니터, 턱, 엄지, 알림
+- Secondary (감각): 멈추다, 녹다, 미루다, 맞추다
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 25 |
+| Style Influence | 75 |
+
+**가사:**
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct male vocal]
+모니터만 봐요
+눈은 초점없어
+시간이 녹아도
+난 그대로 멈춰
+
+[pre-chorus]
+[Chest voice]
+말은 뒤로미뤄
+턱만 살짝들어
+
+[chorus]
+[Mid register, rhythmic]
+알림이 또떴어
+나는 멈칫해
+엄지가 멈춤
+멍때려요
+
+[interlude]
+[instrumental]
+
+[verse2]
+[Direct male vocal]
+누가 불러봐도
+대답은 늦어
+입은 웃는척만
+머리는 공백
+
+[pre-chorus]
+[Chest voice]
+잡념은 잠시꺼
+숨결만 맞춰봐
+
+[chorus]
+알림이 또떴어
+나는 멈칫해
+엄지가 멈춤
+멍때려요
+
+[outro]
+[instrumental fade]
+```
+
+**Style Prompt:**
+```
+Articulation.
+Korean Alternative R&B, 74 BPM, Eb Major.
+Clean Electric Guitar-led, dry minimal groove,
+rim-click, steady pulse, no swing exaggeration.
+
+Male vocal: Solid, Direct, Raw, Dry.
+Chest voice dominant throughout.
+Straight tone, minimal sustain.
+Fast syllabic delivery preferred over long held notes.
+Melody stays mostly in mid register.
+
+Chorus impact comes from rhythmic repetition,
+with a brief upward melodic turn on the final word only.
+Lead vocal remains single and dominant.
+```
+
+**Exclude Style:**
+```
+Falsetto, Airy, Whisper, Breathiness, Growl, Vibrato, Opera, Dramatic, High-pitched belting, Harmonized, Backing vocals, Choir, Intense, Mumbled
+```
+
+---
+
+### Track 03: 물결
+
+**파일명:** `03__물결__Chill__Alt-RnB__74.mp3`
+
+**Keyword Axis:**
+- Primary (물성): 물결, 파문, 수면, 물방울, 물가
+- Secondary (감각): 퍼지다, 번지다, 가라앉다, 떠다니다
+
+**Reference:** 죠지 - Boat (힘 뺀 고음, Straight tone, 담백한 가사)
+- Key: A Major, Extended chords (DM9 - C#m7 - Em9 - D)
+- Melody: 좁은 음역, 순차 진행, 말하듯 리듬
+- Lyrics: 직접적/일상적 표현, 짧은 프레이즈
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 20 |
+| Style Influence | 80 |
+
+**가사:**
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct male vocal, No harmony, Speech-like]
+물 위에 떠 있어
+햇살이 눈부셔 눈 감아
+바람이 불어와
+그냥 이대로 있고 싶어
+
+[bridge1]
+[Chest voice, Intimate]
+물가에 앉아 있어
+아무 생각 없이
+이대로 괜찮아
+
+[chorus]
+[High register chest voice, Straight tone]
+물결이 퍼져가
+햇살이 번져가
+눈 감아도 돼
+시간은 천천히 가
+
+[verse2]
+[Groove locks in, Vocal forward]
+손끝을 담가봐
+차갑지 않아 괜찮아
+숨을 내쉬어봐
+나도 천천히 가라앉아
+
+[bridge2]
+[Chest voice, Intimate]
+손등에 물방울
+말 안 해도 알아
+이대로 괜찮아
+
+[chorus] [Chest voice]
+물결이 퍼져가
+햇살이 번져가
+눈 감아도 돼
+시간은 천천히 가
+
+[chorus] [Chest voice]
+물결이 퍼져가
+햇살이 번져가
+눈 감아도 돼
+시간은 천천히 가
+
+[outro]
+[instrumental]
+```
+
+**Style Prompt:**
+```
+Korean Indie Alt R&B, 74 BPM, A Major, Neo-soul chords (M9, m7), Clean Electric Guitar-led supportive groove, rim-click, warm texture, subtle vinyl crackle, Male vocal: Solid, Direct, Raw, Dry, Chest dominant, No falsetto, Straight tone, No vibrato, no ad-libs, Narrow range, stepwise melody, speech-like rhythm, High chest voice over falsetto, Nonchalant tone, never dramatic, Articulation: clear consonants, precise syllables, no slurring, Verse2 tension builds, Chorus hook-first, high-note focal: short chest note, straight, not sustained, Choruses grow by density only, Bridge sparse, Outro guitar fades, Single lead vocal
+```
+
+**Exclude Style:**
+```
+Falsetto, Airy, Whisper, Breathiness, Growl, Vibrato, Opera, Dramatic, Harmonized, Backing vocals, Choir, Intense, Mumbled
+```
+
+**QC Checklist (5-Point - Boat Style):**
+| 항목 | 체크 |
+|------|------|
+| Straight Tone | 후렴 고음에서 비브라토 없이 직선으로 뻗는가 |
+| No Squeeze | 고음에서 긁는 소리(Growl) 없는가 |
+| Guitar Center | 클린 일렉 기타가 중심 잡고 있는가 |
+| Thump Kick | 킥이 심장 박동처럼 부드럽게 받쳐주는가 |
+| Speech-like | 말하듯 담백하게 부르는가 (과한 감정 표현 없음) |
+
+---
+
+### Track 04: 얼음
+
+**파일명:** `04__얼음__Groovy__Pop-RnB__90.mp3`
+
+**Keyword Axis:**
+- Primary (물성): 유리, 컵, 얼음, 시계, 메일
+- Secondary (감각): 녹다, 느슨해지다, 풀리다, 비다
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 35 |
+| Style Influence | 75 |
+
+**가사:**
+```
+[intro]
+[instrumental]
+
+[verse1]
+[Direct female vocal, Groovy]
+유리에 비친 햇살
+컵 안까지 들어와
+얼음은 말이 없고
+나는 그냥 보고 있어
+
+[pre-chorus]
+[Chest voice]
+급할 일 하나 없고
+손은 컵을 쥐고 있어
+
+[chorus]
+[Mid register, Rhythmic Hook]
+얼음이 먼저 녹아
+나도 같이 느슨해
+아무 일 아닌 척
+조금 풀려 버려
+
+[interlude]
+[instrumental]
+
+[verse2]
+[Direct female vocal]
+시계는 잘 가는데
+나는 살짝 늦고
+메일은 그대로고
+컵은 점점 비어
+
+[pre-chorus]
+[Chest voice]
+생각은 내려두고
+얼음만 따라가
+
+[chorus]
+얼음이 먼저 녹아
+나도 같이 느슨해
+아무 일 아닌 척
+조금 풀려 버려
+
+[bridge]
+[Low chest voice]
+차갑게 버티던 게
+먼저 내려앉아
+햇살은 늘 그렇듯
+아무 말도 없이
+
+[chorus]
+얼음이 먼저 녹아
+나도 같이 느슨해
+이 오후 한가운데
+딱 그 정도로
+
+[outro]
+[instrumental fade]
+```
+
+**Style Prompt:**
+```
+Articulation. Korean Pop R&B / Neo-Soul, 90 BPM, key D Major.
+
+Simple pop-oriented 4-chord loop foundation.
+Familiar chord progressions with minimal extensions.
+Neo-soul color is subtle and supportive, never complex or jazzy.
+
+Clean electric guitar with chorus effect,
+rhythmic chord stabs and muted strums.
+Simple bass ostinato (no walking bass).
+Tight rim-shot groove.
+Warm tape saturation.
+
+Female vocal: nonchalant, confident, intimate.
+Natural tone, clear diction.
+Chest voice dominant. No falsetto.
+Straight tone (no vibrato).
+Groovy syncopated phrasing.
+
+IMPORTANT:
+Lead vocal must remain a SINGLE, SOLO voice at all times.
+NO backing vocals.
+NO harmonies.
+NO stacked voices.
+NO chorus doubling.
+NO call-and-response.
+NO vocal layers of any kind.
+
+Chorus energy must come ONLY from:
+- rhythm
+- groove
+- arrangement density
+NOT from additional vocals.
+
+Single lead vocal only, dry and unprocessed.
+```
+
+**Exclude Style:**
+```
+backing vocals, harmonies, stacked voices, chorus doubling, call-and-response, vocal layers of any kind
+```
+
+---
+
+### Track 05: 먼지
+
+**파일명:** `05__먼지__Warm__Soft-RnB__72.mp3`
 
 **Keyword Axis:**
 - Primary (물성): 먼지, 햇살, 창가, 커튼, 마루
 - Secondary (감각): 떠다니다, 흐르다, 스미다, 녹다
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 20 |
+| Style Influence | 80 |
 
 **가사:**
 ```
@@ -206,11 +621,101 @@ Airy, Falsetto, Whisper, Harmonized, Backing vocals, Choir, Cold, Dark, Intense,
 
 ---
 
-## 메모
+### Track 06: 돛
 
-- Track 01 "먼지": Seed 곡 (Vibraphone + R&B groove), **Male vocal, Natural/Intimate**, 키워드 축 (먼지/햇살/창가/커튼/마루)
-- Reference: 죠지 - Boat (표류하는 느낌, 흐르는 그루브)
+**파일명:** `06__돛__Groovy__RnB__90.mp3`
+
+**Keyword Axis:**
+- Primary (물성): 빛, 눈꺼풀, 모니터, 빈칸, 손끝
+- Secondary (감각): 삼키다, 내려오다, 번지다, 붙들다
+
+**Suno Parameters:**
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 50 |
+| Style Influence | 50 |
+
+**가사:**
+```
+[intro]
+
+[verse1]
+한낮의 빛이 숨을 삼키고
+미지근한 향이 남아
+눈꺼풀은 자꾸 내려오는데
+저쪽이 이상하게 선명해
+모니터 밖 하얀 빈칸, 어딘가
+이름 없는 꿈을 향해
+
+[chorus] [Hook]
+멀어도 (멀어도)
+또렷해지지 않아도 (않아도)
+잠결이 길을 바꿔 놓아도 (놓아도)
+눈이 먼저 잠깐 내려와도
+빛은 사라지지 않아
+눈을 감아도 남아
+
+[verse2]
+낮바람이 창끝을 머금고
+하얀빛이 입술에 번져
+눈꺼풀은 다시 내려오는데
+저기는 이유 없이 선명해
+모니터 밖 하얀 칸, 어딘가
+이름 없는 쪽을 향해
+
+[bridge]
+누가 부르면 고개를 다시 들고
+빛이 번지면 눈을 더 감고
+잠깐 흐려져도 감각은 남아
+손끝이 닿는 감촉으로 지금 붙들고
+조금 더 천천히
+
+[chorus]
+멀어도 (멀어도)
+또렷해지지 않아도 (않아도)
+잠결이 길을 바꿔 놓아도 (놓아도)
+눈이 먼저 잠깐 내려와도
+빛은 사라지지 않아
+눈을 감아도 남아
+
+[outro]
+깨어남은 아직 멀고
+숨결은 계속 이어져
+
+[ending]
+```
+
+**Style Prompt:**
+```
+*Articulation.Major-key groovy R&B, 90 BPM, "ocean view" warm horizon vibe. Bass-forward pocket: round melodic bassline upfront, kick locked to bass, crisp rim/snare, soft hats, subtle perc. Rhodes/e-piano chords, light guitar arps, airy pads; very low wave ambience. Organic live-band feel, no EDM.
+Male vocal: soulful, intimate, natural; minimal runs in verses, no belting, minimal pitch correction. Verse1 & Verse2 share the same topline melody. Chorus lyrics repeat exactly each time, but the 2nd/final chorus is more emotional with natural higher mix/head notes and only a few short controlled riffs on the last two lines. Light backing harmonies in chorus; drums+bass push harder for catharsis.
+Form: intro–v1–chorus–v2–bridge (build + brief drop)–final chorus–outro quiet fade-out (strip to Rhodes + bass tail + pads, soft vocal, wave ambience fading). Avoid heavy autotune, excessive melisma, synth drops, sidechain pumping. k-pop.
+```
+
+**Exclude Style:** (없음)
 
 ---
 
-Last updated: 2026-01-23
+## 메모
+
+**트랙 리스트 (6곡 확정, 4곡 추가 예정):**
+| # | 제목 | BPM | Key | Vocal | W | I |
+|---|------|-----|-----|-------|---|---|
+| 01 | 산책 | 74 | Eb Major | Male | 25 | 75 |
+| 02 | 멍 | 74 | Eb Major | Male | 25 | 75 |
+| 03 | 물결 | 74 | A Major | Male | 20 | 80 |
+| 04 | 얼음 | 90 | D Major | Female | 35 | 75 |
+| 05 | 먼지 | 72 | Eb Major | Male | 20 | 80 |
+| 06 | 돛 | 90 | Major | Male | 50 | 50 |
+
+**배치 원칙:**
+- 그룹 A (verse-bridge-chorus 구조): 산책, 물결, 먼지 → 연속 배치 금지
+- 그룹 B (verse-pre-chorus-chorus 구조): 멍, 얼음 → 연속 배치 금지
+- 그룹 C (서사적/에코 패턴): 돛
+
+**Reference:**
+- 죠지 - Boat (힘 뺀 고음, 표류하는 느낌, 담백한 가사)
+
+---
+
+Last updated: 2026-01-24 (6곡 트랙 리스트 확정)

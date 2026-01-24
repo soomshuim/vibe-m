@@ -2,9 +2,31 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-23
+> Last updated: 2026-01-24 (6곡 트랙 리스트 확정)
 
 ## 완료된 작업
+
+### 2026-01-24
+
+- [x] **PM_1400 vol1 트랙 리스트 확정 (6곡)**
+  - Track 01 "산책" (74 BPM, Male) - 나른한 오프닝
+  - Track 02 "멍" (74 BPM, Male) - 컨셉 직결 "멍때려요"
+  - Track 03 "물결" (74 BPM, Male) - Boat 스타일
+  - Track 04 "얼음" (90 BPM, Female) - 분위기 전환
+  - Track 05 "먼지" (72 BPM, Male) - 쉼표 역할
+  - Track 06 "돛" (90 BPM, Male) - 에코 훅, 열린 마무리
+  - 그룹 A/B/C 교차 배치로 운율 반복 방지
+
+- [x] **Track 02 "물결" Boat 악보 분석 반영** (Final_v4)
+  - Key: A Major (Boat 원곡), Neo-soul chords (M9, m7)
+  - Melody: Narrow range, stepwise, speech-like rhythm
+  - Lyrics: 직접적/담백한 Boat 스타일로 전면 수정
+  - QC Checklist: Speech-like 항목 추가
+
+- [x] **프로젝트 구조 SSOT 최적화**
+  - concept 파일 통합: 루트 → SERIES/ 폴더 내로 이동
+  - 아카이브.zip, MASTER/prompts/ 삭제
+  - CLAUDE.md v2.4: Concept 파일 SSOT 규칙 추가
 
 ### 2026-01-23
 
@@ -76,7 +98,9 @@
   - 제목: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
 - **vol.2 (PM_1400)**: 진행 중
   - 제목: "[Playlist] [PM 02:00] soomshuim | 햇살에 멍해지는 시간, 느긋하게 흐르는 Soft R&B 보컬"
-  - Track 01 "먼지": 가사/스타일 확정, Suno 생성 대기
+  - **6곡 확정**: 산책 → 멍 → 물결 → 얼음 → 먼지 → 돛
+  - **4곡 추가 예정** (07~10)
+  - Suno 생성 대기
 - **문서 버전**:
   - LYRICS.md v1.7
   - STYLE.md v2.6
@@ -382,7 +406,9 @@
   - [x] Seed Researcher: 레퍼런스 분석 (죠지 - Boat)
   - [x] Time Station 선정: 오후햇살 (14:00)
   - [x] Seed Designer: Seed DNA 설계
-  - [ ] Track 01 가사/Style Prompt 생성
+  - [x] 6곡 트랙 리스트 확정 (산책, 멍, 물결, 얼음, 먼지, 돛)
+  - [ ] 4곡 추가 (07~10)
+  - [ ] Suno 생성 및 QC
 
 ## 알려진 이슈
 

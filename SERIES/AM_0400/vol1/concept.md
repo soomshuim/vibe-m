@@ -3,6 +3,8 @@
 >
 > **YouTube**: https://youtu.be/i1GHmn1WZr4
 > **재생목록**: 하루를 듣는 방법 | 24 Hours Playlist
+>
+> **SSOT 적용**: PLAYLIST_GUIDE v1.0 | LYRICS v1.6 | STYLE v1.0 (Legacy)
 
 ---
 

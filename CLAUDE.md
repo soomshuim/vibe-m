@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-23 | v2.2.0 (Style Prompt QC Workflow)
+> Last updated: 2026-01-24 | v2.4.0 (Articulation 필수 규칙 추가)
 
 ## Quick Reference
 
@@ -137,12 +137,13 @@ Section D: 키워드 축 요약 (이전 트랙과 비교)
 | **S15** | **글자수 제한** | **< 800자 (Suno 제한)** | 출력 전 `wc -c`로 검증 필수 |
 | **S16** | **Lead Instrument Supportive** | **`[악기]-led, supportive` 형태** | 악기 과도한 존재감 방지 |
 | **S17** | **Chorus Expansion Density** | **`arrangement density only` 명시** | 스테레오/볼륨 해석 방지 |
+| **S18** | **Articulation (필수)** | **`Precise articulation, clear consonants`** | 발음 명확성 확보, 웅얼거림 방지 |
 
 **검증 프로세스:**
 ```
 Step 0. powerful/husky/airy 별도 요청 있는지 확인
 Step 1. 없으면 Raw Vocal Baseline 적용
-Step 2. Run self-QC against checklist (17개 슬롯)
+Step 2. Run self-QC against checklist (18개 슬롯) ← v2.4 UPDATE
 Step 3. 글자수 검증 (wc -c < 800) ← v2.2 NEW
 Step 4. If all pass → QC 테이블과 함께 output
         If any fail → STOP + 수정 후 Step 2 반복
@@ -214,10 +215,54 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
 | 항목 | 상태 |
 |------|------|
 | 글자수 | [N]자 ✓/✗ (< 800) |
-| S0-S17 | ✓/✗ |
+| S0-S18 | ✓/✗ |
 
 → 모든 항목 ✓ 시에만 유저에게 제안
 ```
+
+---
+
+### Suno Parameters 필수 기록 (v2.4 NEW)
+
+> **트랙 생성 시 반드시 Weirdness/Style Influence 제안 및 기록**
+
+**기본값 (VIBE-M 권장):**
+| 항목 | 값 | 설명 |
+|------|-----|------|
+| **Weirdness** | 20 | 낮을수록 안정적, 높을수록 실험적 |
+| **Style Influence** | 80 | 높을수록 Style Prompt 영향력 강화 |
+
+**적용 규칙:**
+```
+Step 1. 트랙 생산 지시서 작성 시 Suno Parameters 제안
+Step 2. concept.md에 트랙별 파라미터 기록
+Step 3. 결과 QC 후 파라미터 조정 필요 시 기록
+```
+
+**조정 가이드:**
+| 상황 | Weirdness | Style Influence |
+|------|-----------|-----------------|
+| 안정적 결과 원할 때 | 10-20 | 80-90 |
+| 약간의 변주 원할 때 | 30-40 | 70-80 |
+| 실험적 시도 | 50+ | 60-70 |
+
+---
+
+### Concept 파일 최종 QC 체크리스트 (v2.3 NEW)
+
+> **린터 대체용 — concept 작성 완료 후 30초 검증**
+
+```
+□ Lyrics에 편곡 지시 없음 (Kick in, Groove locks in 등 → Style Prompt)
+□ Style Prompt에 보컬/편곡 지시 집중
+□ Style Prompt < 800자
+□ Title에 이모지/해시태그 없음
+□ Description 해시태그는 구분선(---) 아래에만
+□ Pinned comment 이모지 ≤ 1개
+□ SSOT version 명시됨
+```
+
+**FAIL 시:** 해당 항목 수정 후 재검증
 
 ---
 
@@ -466,29 +511,64 @@ python vibem.py shorts [TRACK_PATH] \
 brew install ffmpeg-full
 ```
 
+---
+
+### Concept 파일 SSOT 규칙 (v2.4 NEW)
+
+> **concept.md는 반드시 SERIES 폴더 내에만 존재**
+
+**SSOT 위치:**
+```
+SERIES/[시리즈명]/vol1/concept.md
+```
+
+**예시:**
+- `SERIES/AM_0400/vol1/concept.md` ← AM 04:00 시리즈 SSOT
+- `SERIES/PM_1400/vol1/concept.md` ← PM 02:00 시리즈 SSOT
+
+**금지:**
+- ❌ 루트에 `concept_vol.*.md` 생성 금지
+- ❌ 같은 시리즈의 concept을 여러 위치에 복사 금지
+
+**작업 시:**
+```
+Step 1. SERIES/[시리즈]/vol1/concept.md 직접 편집
+Step 2. 루트에 임시 파일 생성하지 않음
+Step 3. 편집 완료 후 Last updated 날짜 갱신
+```
+
+**이유:**
+- SSOT 위반 시 어느 파일이 최신인지 혼란
+- 트랙 추가/수정 시 누락 위험
+- 시리즈별 독립성 보장
+
+---
+
 ## Project Structure
 
 ```
 vibe-m/
 ├── MASTER/                 # 프로젝트 헌법
-│   ├── MANAGER.md          # 운영 마스터 플랜 (Phase 0~6)
-│   ├── LYRICS.md           # 가사 공학 규칙 + 아카이브
+│   ├── 24H_UNIVERSE.md     # 24시간 세계관 Bible
+│   ├── PLAYLIST_GUIDE.md   # 플레이리스트 컨셉 가이드
+│   ├── LYRICS.md           # 가사 공학 규칙
 │   ├── STYLE.md            # 사운드/스타일 가이드
-│   ├── ROLES.md            # 역할 분리 시스템 (SSOT)
+│   ├── MANAGER.md          # 운영 마스터 플랜 (Phase 0~6)
+│   ├── ROLES.md            # 역할 분리 시스템
 │   ├── QUICK_REF.md        # 사람용 운영 매뉴얼
 │   └── VIBE-M_Master_Plan.md # CLI 스펙
 │
-├── SERIES/                 # 시리즈별 프로젝트
-│   └── [Series_Name]/
-│       └── [YYYY-MM-DD]/
-│           ├── concept.md  # (선택) 컨셉 문서
-│           ├── input/
-│           │   ├── tracks/
-│           │   ├── loop.mp4      # pack용 배경 영상
-│           │   ├── shorts.mp4    # shorts용 (8~10초, 루프됨)
-│           │   └── thumb.jpg
-│           ├── work/       # (자동생성)
-│           └── output/     # (자동생성)
+├── SERIES/                 # 시리즈별 프로젝트 (concept.md SSOT 위치)
+│   ├── AM_0400/            # 새벽 4시 시리즈
+│   │   └── vol1/
+│   │       ├── concept.md  # 컨셉 문서 (SSOT)
+│   │       └── input/
+│   │           ├── tracks/ # MP3 파일
+│   │           ├── loop.mp4
+│   │           └── thumb.jpg
+│   └── PM_1400/            # 오후 2시 시리즈
+│       └── vol1/
+│           └── concept.md
 │
 ├── vibem.py                # CLI 메인 코드
 ├── requirements.txt        # Python 의존성

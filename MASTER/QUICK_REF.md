@@ -113,10 +113,9 @@ Verdict: SAFE / BORDERLINE / FAIL
 | MANAGER.md      | QC & Fail |
 | STYLE.md        | Sound DNA |
 | LYRICS.md       | Lyric Eng |
-| prompts/        | Copy-paste execution |
 
 If conflict exists:
-**MANAGER.md > STYLE.md > LYRICS.md > prompts/**
+**MANAGER.md > STYLE.md > LYRICS.md**
 
 ---
 

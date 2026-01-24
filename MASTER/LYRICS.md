@@ -1,5 +1,5 @@
 # VIBE-M LYRICS.md
-Version: 1.8 (Image Density + Chorus Tone)
+Version: 1.9 (Tag Dictionary Fixed)
 Last Updated: 2026-01-23
 Purpose: Enforce lyrical consistency, musicality, and AI-safe input
 
@@ -389,9 +389,27 @@ Suno 가사 입력란에 다음을 **절대 넣지 않는다**.
 
 ---
 
-### 2.2 허용되는 태그 — v1.6 경계 명확화
+### 2.2 허용되는 태그 — v1.9 태그 사전 고정
 
-> **VIBE-M은 태그 최소화가 원칙. 확장 태그는 필요할 때만 사용.**
+> **VIBE-M은 태그 최소화가 원칙. 허용 태그 외 사용 금지.**
+
+#### 🚫 금지 태그 (FORBIDDEN) — Lyrics에서 절대 사용 금지
+
+> **편곡/악기 지시는 반드시 Style Prompt로 이동**
+
+| 금지 태그 예시 | 이유 | 대체 위치 |
+|---------------|------|----------|
+| `[Kick in]`, `[Drums enter]` | 악기 진입 지시 | Style Prompt |
+| `[Groove locks in]` | 편곡 지시 | Style Prompt |
+| `[Subtle lift]`, `[Build up]` | 다이내믹 지시 | Style Prompt |
+| `[Pad widens]`, `[Bass enters]` | 악기 변화 지시 | Style Prompt |
+| `[Vibraphone solo]` | 악기 솔로 지시 | Style Prompt |
+
+**원칙:**
+- Lyrics = **보컬이 할 일만** (발성, 화음, 스타일)
+- Style Prompt = **악기/편곡이 할 일** (진입, 밀도, 다이내믹)
+
+---
 
 **🔴 필수 (REQUIRED) — 모든 트랙에 사용:**
 ```
@@ -450,7 +468,8 @@ Suno 가사 입력란에 다음을 **절대 넣지 않는다**.
 | `[Dry voice]` | 건조한 보컬 | |
 | `[Chest voice]` | 진성 강조 | |
 | `[No falsetto]` | 가성 제거 | |
-| `[Powerful belt]` | 벨팅 강조 | Chorus에 |
+| `[Powerful belt]` | 강한 벨팅 | Chorus에 |
+| `[Soft belt]` | 부드러운 벨팅 | Chorus에 |
 
 **사용 예시:**
 ```
