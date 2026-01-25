@@ -78,4 +78,4 @@ falsetto, airy, whisper, breathy stylization, vibrato, runs, ad-libs, melisma, b
 
 Suno Parameters
 
-W: 30 I: 60
+W: 40 I: 63

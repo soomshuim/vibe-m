@@ -8,6 +8,10 @@
 
 ### 2026-01-25 (밤) - SSOT 리팩토링 `e97da74`
 
+- [x] **바라봐줘요 seed 가사/스타일 업데이트** `c861208`
+  - 기존 분석 문서 → 트랙 생성용 가사+스타일로 교체
+  - Suno Parameters: W:30 I:60
+
 - [x] **SSOT 슬롯 체계 통일 작업**
   - 문제: 문서별 슬롯 개수 불일치 (CLAUDE.md S0-S20, STYLE.md 9-Slot, ROLES.md S1-S12)
   - 해결: CLAUDE.md를 SSOT로 지정, 다른 문서는 참조로 연결

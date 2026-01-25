@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+- **바라봐줘요 seed 가사/스타일 업데이트** `c861208`
+  - 기존 분석 문서를 트랙 생성용 가사+스타일로 교체
+  - Suno Parameters: W:30 I:60
+
 ### Added
 - **바라봐줘요 Seed Research + 골목 시드 트랙**
   - 레퍼런스 분석: 죠지 - 바라봐줘요 (67 BPM, Db Major, 확장 코드)
