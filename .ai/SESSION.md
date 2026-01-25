@@ -8,6 +8,10 @@
 
 ### 2026-01-25
 
+- [x] **AM_0400/PM_1400 실제 YouTube 제목/설명/고정댓글 기록** `f03ce6b`
+  - AM 04:00: `[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬`
+  - PM 02:00: `[Playlist] [PM 02:00] soomshuim | 햇살에 멍해지는 시간, Chilling R&B`
+
 - [x] **PM_1400 vol1 플레이리스트 완성** `7c1155e`
   - final.mp4 생성 (53.5분, x2 반복)
   - draft_description.txt 최종안, 해시태그 8개 최적화

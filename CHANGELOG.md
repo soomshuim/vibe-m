@@ -29,6 +29,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - 산책/물결/먼지 2트랙 이상 간격 확보 (운율 겹침 방지)
 
 ### Changed
+- **AM_0400/PM_1400 실제 YouTube 제목/설명/고정댓글 기록** `f03ce6b`
+  - AM 04:00: `[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬`
+  - PM 02:00: `[Playlist] [PM 02:00] soomshuim | 햇살에 멍해지는 시간, Chilling R&B`
+  - 고정 댓글 통일 (AI 협업 언급 추가)
 - **AM_0400/PM_1400 디스크립션 포맷 통일**
   - 제목: `[시간대] 감성 키워드 | 상황 + 장르`
   - 해시태그 8개 최적화 (#AM04시/#PM02시 + #soomshuim)
