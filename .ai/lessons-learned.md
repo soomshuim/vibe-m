@@ -2,7 +2,39 @@
 
 > 버그 패턴 및 해결책 기록
 >
-> Last updated: 2026-01-21
+> Last updated: 2026-01-25
+
+---
+
+## 🎛️ Suno 파라미터 성공 패턴
+
+### R&B 발라드 최적 파라미터
+
+**날짜**: 2026-01-25
+
+**장르**: Slow R&B Ballad, Lo-fi R&B, Soft R&B
+
+**성공 파라미터**:
+| 항목 | 값 | 효과 |
+|------|-----|------|
+| **Weirdness** | 35 | 가성 제거 + 진성 유지, 안정적 |
+| **Style Influence** | 65 | Style Prompt 영향력 적절히 유지 |
+
+**적용 사례**:
+- AM_0400 (Slow R&B, 9곡) - 진성 보컬 안정적
+- PM_1400 (Soft R&B, 10곡) - 담백한 톤 유지
+
+**장르별 파라미터 가이드**:
+| 장르 | Weirdness | Style Influence | 비고 |
+|------|-----------|-----------------|------|
+| **R&B 발라드** | **35** | **65** | 기본값, 안정적 |
+| **공격적 (프롬프트 강화)** | 35 | 70 | Style Prompt 의존도 높일 때 |
+| **실험적 (장르 변화 감수)** | 40 | 60 | 새로운 느낌 시도 시 |
+
+**재발 방지**:
+- R&B 발라드 계열은 W:35, I:65로 시작
+- 문제 발생 시 Style Influence 먼저 조정 (±5)
+- Weirdness는 가성/불안정 문제 시에만 조정
 
 ---
 
@@ -291,6 +323,9 @@ norm_path = paths.norm_tracks_dir / f"norm_{track.path.stem}.wav"  # .wav
 - [ ] Exclude에 `Airy, Falsetto, Whisper, Harmonized` 포함?
 - [ ] 모호한 형용사 제거? (`warm reflective`, `rich vibrato` 등)
 - [ ] husky/airy 별도 요청 없으면 Raw Vocal Baseline 적용?
+- [ ] **Articulation 포함?** (`Precise articulation, clear consonants`)
+- [ ] **Reverb 포함?** (`Moderate reverb, room ambience` 등)
+- [ ] **Sound Engineering 포함?** (`EQ balanced sound, clean mix`)
 
 ### 가사 메타태그 적용 시
 - [ ] Verse에 `[Direct vocal, No harmony]` 있음?
@@ -318,6 +353,7 @@ norm_path = paths.norm_tracks_dir / f"norm_{track.path.stem}.wav"  # .wav
 - [ ] **Chorus 3~4행 이내 확인** (Case 12)
 - [ ] **Bridge Thesis B1=B2 동일 확인** (Case 13)
 - [ ] **다른 트랙 제목 키워드 사용 금지** (Case 13)
+- [ ] **보컬 제어 메타태그 포함 확인** (구조 태그만 있고 메타태그 없으면 FAIL)
 
 ---
 

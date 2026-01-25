@@ -7,6 +7,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **바라봐줘요 Seed Research + 골목 시드 트랙**
+  - 레퍼런스 분석: 죠지 - 바라봐줘요 (67 BPM, Db Major, 확장 코드)
+  - 시드 트랙 "골목" 가사 + Style Prompt + Exclude 완성
+  - Synth piano-led, Minimal drums, Male vocal (Raw, Dry)
+  - S1-S12 Validation Table 포함
+
+### Changed
+- **SSOT 슬롯 체계 통일** (CLAUDE.md v2.6.2, STYLE.md v2.6.2, ROLES.md v1.7)
+  - CLAUDE.md를 슬롯 정의 SSOT로 지정 (S0-S20, 20개 슬롯)
+  - STYLE.md "9-Slot Table" → CLAUDE.md 참조로 변경
+  - ROLES.md S1-S12는 압축 검증용임을 명확화
+  - S10-S12 (Articulation, Reverb, Sound Engineering) 필수 강제
+
+### Added
 - **PM_1400 vol1 플레이리스트 완성** `7c1155e`
   - 10곡 트랙 파일 추가, final.mp4 생성 (53.5분, x2 반복)
   - draft_description.txt 최종안 (피드백 반영, 해시태그 8개 최적화)

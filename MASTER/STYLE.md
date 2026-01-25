@@ -1,6 +1,6 @@
 # VIBE-M STYLE.md
-Version: 2.6 (Guide Merge + DEBUG Mode + Texture Lines)
-Last Updated: 2026-01-20
+Version: 2.6.2 (Guide Merge + DEBUG Mode + Texture Lines + SSOT Slot Alignment)
+Last Updated: 2026-01-25
 Purpose: Raw Vocal 기본값 + 진성 강제 + 커뮤니티 베스트 프랙티스 통합
 
 ---
@@ -101,9 +101,21 @@ Chest voice, Belting, Raspy, Grit
 - 남성: `Deep male vocal, Mature voice`
 - 여성: `Contralto, Mature voice` (중저음)
 
+**프로덕션 필수 (v2.6.2 NEW):**
+```
+Precise articulation, clear consonants
+Moderate reverb, room ambience
+EQ balanced sound, clean mix
+```
+
+> **위 3개 키워드 없으면 QC FAIL**
+> - Articulation: 발음 명확성 확보
+> - Reverb: 공간감 제어
+> - Sound Engineering: 믹스 품질
+
 **추천 조합 예시:**
 ```
-raw vocal, direct, solid, dry recording, chest voice dominant, clear Korean diction, no harmony
+raw vocal, direct, solid, dry recording, chest voice dominant, clear Korean diction, no harmony, precise articulation, moderate reverb, EQ balanced sound
 ```
 
 ### 피해야 할 단어 (Exclude 또는 Style에서 제외)
@@ -460,31 +472,38 @@ Step 3: 여전히 실패 시 Style Prompt 자체 재검토
 
 ---
 
-## 8) Self-QC Checklist (Claude must pass) — v1.5
+## 8) Self-QC Checklist (Claude must pass) — v2.6.2 UPDATE
 
 **"요소 빠짐 방지"를 구조로 강제하는 3-Step 프로세스:**
 
 ```
-Step 1: 9-Slot 값 먼저 채우기 (빈칸 있으면 FAIL)
+Step 1: S0-S20 슬롯 값 먼저 채우기 (빈칸 있으면 FAIL)
 Step 2: 그 값으로 Style Prompt 생성
 Step 3: 글자수 체크 (Style만 1000자 이하) → 넘으면 압축 루프
 ```
 
-### 9-Slot Table (PASS/FAIL)
+### Style Prompt 슬롯 체크리스트
+
+> **SSOT: CLAUDE.md의 "Style Prompt 필수 슬롯 체크리스트" 참조**
+> 상세 슬롯 정의는 CLAUDE.md에서 관리 (S0-S20, 20개 슬롯)
+
+**핵심 슬롯 요약 (전체는 CLAUDE.md 참조):**
 
 | # | 슬롯 | 체크 내용 |
 |---|------|----------|
-| S1 | Vocal Persona | gender + tone + delivery 명시 |
-| S2 | Vocal Processing | dry/close-mic + minimal autotune |
-| S3 | Lead Instrument | 메인 악기 1개 |
-| S4 | Rhythm Source | 리듬 요소 명시 |
-| S5 | BPM | 템포 명시 |
-| S6 | Key/Mode | 조성 명시 |
-| S7 | Musicality Matrix | V2 lift (1 event) + Chorus lift (1 held note) + bridge build + outro |
-| S8 | Harmony Guard | "Lead vocal remains single and dominant; no additional vocal layers" 명시 |
-| S9 | Chorus2 Expansion | "bigger by arrangement; vocal may intensify but no layers added" 명시 |
+| S0 | 핵심 앞에 | Genre/BPM이 첫 5단어 내 |
+| S1 | Raw Vocal Baseline | Raw, Solid, Direct, Dry |
+| S2 | Vocal Persona | gender + tone + delivery 명시 |
+| S3-S4 | Vocal | Chest voice 강제 + Processing |
+| S5-S8 | Arrangement | Lead Inst + Rhythm + BPM + Key |
+| S9-S11 | Structure | Musicality Matrix + Harmony Guard + Chorus Layer Block |
+| S12-S14 | Exclude | 필수 항목 + 제한 + 모호 형용사 제거 |
+| S15-S17 | Constraints | 글자수 + Supportive + Density |
+| **S18** | **Articulation** | **Precise articulation, clear consonants** |
+| **S19** | **Reverb** | **Moderate reverb, room ambience** |
+| **S20** | **Sound Engineering** | **EQ balanced sound, clean mix** |
 
-**If any FAIL:** regenerate and shorten until 9/9 PASS + <=1000 chars.
+**If any FAIL:** regenerate and shorten until 20/20 PASS + <=1000 chars.
 
 ---
 

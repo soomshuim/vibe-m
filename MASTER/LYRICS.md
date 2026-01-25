@@ -645,35 +645,43 @@ Suno 가사 입력란에 다음을 **절대 넣지 않는다**.
 
 ## 🗂️ 5. Reference Example (Clean Input Sample)
 
+> **필수:** 구조 태그 + 보컬 제어 메타태그 세트로 작성
+> 구조 태그만 있고 메타태그 없으면 **QC FAIL**
+
 ```text
 [intro]
 [instrumental]
 
 [verse1]
+[Chest voice, No harmony]
 손끝이 차가워
 김이 서린 유리
 뿌옇게 가려진
 어제의 얼굴들
 
 [bridge1]
+[Direct vocal, Dry voice]
 마른 천을 쥐고서
 지우려는 손끝이
 도리어 번져가는
 얼룩진 마음의 흔적
 
 [chorus]
+[Soft belt, Chest voice, No harmony]
 잊혀지는 것들은
 소리도 없이 투명해
 흐려진 궤적 끝에
 잡히지 않는 너
 
 [verse2]
+[Chest voice, No harmony]
 눈끝이 따가워
 나의 작은 숨이
 여전히 남겨진
 추억의 흔적들
 
 [bridge2]
+[Direct vocal, Dry voice]
 젖은 숨을 삼키고
 다시 문지른 손끝
 더 선명해져버린

@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-25 | v2.6.1 (SERIES 폴더 구조 단순화 - vol1 제거)
+> Last updated: 2026-01-25 | v2.6.2 (SSOT 슬롯 체계 통일 - S0-S20)
 
 ## Quick Reference
 
@@ -71,7 +71,7 @@ Step 4. If all pass → output with QC 테이블
 ```
 Step 0. STYLE.md Required Slots 확인
 Step 1. Generate Style Prompt (압축 버전)
-Step 2. Run self-QC against checklist (17개 슬롯)
+Step 2. Run self-QC against checklist (20개 슬롯)
 Step 3. 글자수 검증 (wc -c 실행, < 800자 확인)
 Step 4. If all pass → QC 테이블 + 글자수와 함께 output
         If any fail → 수정 후 Step 2 반복
@@ -135,6 +135,7 @@ Falsetto, Airy, Whisper, ...
 | **1.10** | **Image Density** | **V1=공간, V2=감각 분리 (핵심 이미지 2개 이상 겹침 금지)** |
 | **1.11** | **Chorus Tone** | **직접 호소/명령형 최대 1개, 나머지 관조 톤** |
 | 2.1 | Pure Input | 설명형 괄호 금지, Performance Cues `(soft)` 등은 허용 |
+| **2.2** | **메타태그 필수** | **구조 태그만 있고 보컬 제어 메타태그 없으면 FAIL** |
 | 2.4 | Length Guide | **전체 100-120 단어, 섹션당 4-6행** |
 | **K1** | **Korean Only** | **한국어여야만 성립하는 가사인가?** |
 | **K2** | **Translation Loss** | **영어 번역 시 힘 빠지는 지점 있는가?** |
@@ -175,12 +176,14 @@ Section D: 키워드 축 요약 (이전 트랙과 비교)
 | **S16** | **Lead Instrument Supportive** | **`[악기]-led, supportive` 형태** | 악기 과도한 존재감 방지 |
 | **S17** | **Chorus Expansion Density** | **`arrangement density only` 명시** | 스테레오/볼륨 해석 방지 |
 | **S18** | **Articulation (필수)** | **`Precise articulation, clear consonants`** | 발음 명확성 확보, 웅얼거림 방지 |
+| **S19** | **Reverb (필수)** | **`Moderate reverb, room ambience`** | 공간감 제어 |
+| **S20** | **Sound Engineering (필수)** | **`EQ balanced sound, clean mix`** | 믹스 품질 확보 |
 
 **검증 프로세스:**
 ```
 Step 0. powerful/husky/airy 별도 요청 있는지 확인
 Step 1. 없으면 Raw Vocal Baseline 적용
-Step 2. Run self-QC against checklist (18개 슬롯) ← v2.4 UPDATE
+Step 2. Run self-QC against checklist (20개 슬롯) ← v2.6.2 UPDATE
 Step 3. 글자수 검증 (wc -c < 800) ← v2.2 NEW
 Step 4. If all pass → QC 테이블과 함께 output
         If any fail → STOP + 수정 후 Step 2 반복
@@ -252,7 +255,7 @@ Airy, Falsetto, Harmonized, Backing vocals, Whisper, Auto-tune
 | 항목 | 상태 |
 |------|------|
 | 글자수 | [N]자 ✓/✗ (< 800) |
-| S0-S18 | ✓/✗ |
+| S0-S20 | ✓/✗ |
 
 → 모든 항목 ✓ 시에만 유저에게 제안
 ```
@@ -337,11 +340,12 @@ Step 3. 결과 QC 후 파라미터 조정 필요 시 기록
 - 하모니/가성/EDM 보컬 문제 재발 시 → DEBUG 모드 전환
 - DEBUG A/B 비교로 원인 특정 → PROD 복귀
 
-### S1-S9 Validation 강제 (v1.5.0 NEW)
-> 상세: `MASTER/ROLES.md` S1-S9 Validation Enforcement
+### S1-S12 Validation 강제 (v2.6.2 UPDATE)
+> 상세: `MASTER/ROLES.md` S1-S12 Validation Enforcement
 
-- Style Prompt/Variation 출력 시 **반드시 S1-S9 테이블 포함**
+- Style Prompt/Variation 출력 시 **반드시 S1-S12 테이블 포함**
 - S1 (Vocal Persona) 비어있음 = **즉시 FAIL, 재생성**
+- S10-S12 (Articulation, Reverb, Sound Engineering) 누락 = **즉시 FAIL**
 - 테이블 없는 출력 = **자동 INVALID**
 
 ### FFmpeg 필터 그래프 작업 시

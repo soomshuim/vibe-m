@@ -2,11 +2,61 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-25 (9곡 확정 + 트랙 순서 재배치)
+> Last updated: 2026-01-25 (SSOT 슬롯 체계 통일)
 
 ## 완료된 작업
 
-### 2026-01-25
+### 2026-01-25 (밤) - SSOT 리팩토링 `3cf4ba1`
+
+- [x] **SSOT 슬롯 체계 통일 작업**
+  - 문제: 문서별 슬롯 개수 불일치 (CLAUDE.md S0-S20, STYLE.md 9-Slot, ROLES.md S1-S12)
+  - 해결: CLAUDE.md를 SSOT로 지정, 다른 문서는 참조로 연결
+
+- [x] **STYLE.md v2.6.2 업데이트**
+  - "9-Slot Table" → CLAUDE.md S0-S20 참조로 변경
+  - 핵심 슬롯 요약 테이블 추가 (S18 Articulation, S19 Reverb, S20 Sound Engineering 포함)
+  - 버전: v2.6 → v2.6.2
+
+- [x] **CLAUDE.md v2.6.2 업데이트**
+  - "S1-S9 Validation" → "S1-S12 Validation" 변경
+  - S10-S12 (프로덕션 필수) 누락 시 FAIL 조건 추가
+  - "17개 슬롯" → "20개 슬롯" 수정
+  - "S0-S18" → "S0-S20" 수정
+
+- [x] **ROLES.md v1.7 업데이트**
+  - SSOT 관계 명시: CLAUDE.md가 전체 슬롯 정의, ROLES.md는 압축 검증용
+  - "S1-S12 Validation Table (압축 검증용)" 명칭 변경
+  - 버전: v1.6 → v1.7
+
+- [x] **바라봐줘요 Seed Research + 골목 시드 트랙**
+  - 레퍼런스 분석: 죠지 - 바라봐줘요 (67 BPM, Db Major)
+  - 시드 트랙 "골목" 가사/Style Prompt/Exclude 완성
+  - S1-S12 Validation Table 포함 (12/12 PASS)
+
+### 2026-01-25 (저녁)
+
+- [x] **프로젝트 폴더 이동: iCloud → ~/Project**
+  - WDS, VIBE-M 폴더 로컬로 이동
+  - vibe-m → VIBE-M 대문자 변경
+  - SSH 키 신규 생성 및 GitHub 등록
+
+- [x] **concept.md 타임스탬프 2회 반복 버전 업데이트**
+  - AM_0400: 9곡 x2 (약 48분)
+  - PM_1400: 10곡 x2 (약 54분)
+
+- [x] **죠지 "바라봐줘요" Seed Research 분석**
+  - 악보 분석 (Db Major, 67 BPM, 확장 코드)
+  - 보컬 스타일: Chest voice, Raw, Dry, 기교 없음
+  - 프로덕션: Rhodes piano-led, Minimal drums
+  - 파일: `SERIES/바라봐줘요_seed_research.txt`
+
+- [x] **시드 트랙 "골목" 가사 작성**
+  - 컨셉: 혼자 걷는 저녁 산책
+  - 키워드 축: 골목/가로등/그림자/발자국/저녁
+  - 메타태그 적용: [Chest voice], [Powerful belt], [No harmony] 등
+  - QC Validation PASS
+
+### 2026-01-25 (오전)
 
 - [x] **AM_0400/PM_1400 실제 YouTube 제목/설명/고정댓글 기록** `f03ce6b`
   - AM 04:00: `[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬`
@@ -132,7 +182,7 @@
 
 ## 현재 상태
 
-- **프로젝트**: Production Ready (v2.6.1 - SERIES 폴더 구조 단순화)
+- **프로젝트**: Production Ready (v2.6.2 - SSOT 슬롯 체계 통일)
 - **GitHub**: https://github.com/soomshuim/vibe-m (master)
 - **vol.1 (AM_0400)**: 완료, YouTube 게시됨
   - 제목: "[Playlist] [AM 04:00] soomshuim | 하루가 멈춘 시간, Slow R&B 보컬"
@@ -146,11 +196,16 @@
   - Suno 생성 대기
 - **문서 버전**:
   - LYRICS.md v1.8
-  - STYLE.md v2.6
-  - CLAUDE.md v2.6.1
+  - STYLE.md v2.6.2 (SSOT 슬롯 체계 통일)
+  - CLAUDE.md v2.6.2 (SSOT 슬롯 체계 통일)
+  - ROLES.md v1.7 (S1-S12 Validation + SSOT Alignment)
 
 ## 진행 중
 
+- **바라봐줘요 스타일 테스트 트랙 제작**
+  - Seed Research 완료
+  - 시드 트랙 "골목" 가사 완료
+  - 다음: Style Prompt 작성 → Suno 생성 테스트
 - Shorts 제작 준비 (shorts.mp4 입력 대기)
 
 ## 2026-01-23 세션 완료

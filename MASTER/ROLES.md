@@ -1,5 +1,5 @@
 # VIBE-M Role System (SSOT)
-# Version: 1.6 (2026-01-20) — S1-S9 Validation Enforcement
+# Version: 1.7 (2026-01-25) — S1-S12 Validation + SSOT Alignment
 # Purpose: Separate thinking to prevent duplication, drift, and algorithmic risk.
 # Scope: Defines WHY and WHAT each AI role is responsible for.
 
@@ -52,9 +52,14 @@ Vocal line may intensify dynamically (belt, higher register), but no additional 
 
 ---
 
-## S1-S9 Validation Enforcement — v1.6 NEW
+## S1-S12 Validation Enforcement — v2.6.2 UPDATE
 
 > **보컬 타입 누락 등 필수 슬롯 누락 방지를 구조로 강제**
+>
+> **SSOT 관계:**
+> - **전체 슬롯 정의 (S0-S20)**: `CLAUDE.md` "Style Prompt 필수 슬롯 체크리스트"
+> - **출력 검증 테이블 (S1-S12)**: 이 문서 (ROLES.md) - 핵심 슬롯만 추출
+> - S1-S12는 CLAUDE.md S0-S20의 핵심 항목을 검증 출력용으로 압축한 것
 
 **원칙:**
 - 문서에 한 줄 추가로는 해결 안 됨
@@ -67,7 +72,7 @@ Vocal line may intensify dynamically (belt, higher register), but no additional 
 
 [Style Prompt 또는 Variation Plan 내용]
 
-## S1-S9 Validation Table
+## S1-S12 Validation Table (압축 검증용)
 
 | # | 슬롯 | 값 | 상태 |
 |---|------|---|------|
@@ -80,14 +85,45 @@ Vocal line may intensify dynamically (belt, higher register), but no additional 
 | S7 | Musicality Matrix | [V2 lift + Chorus lift + bridge] | ✅/❌ |
 | S8 | Harmony Guard | [문장 포함 여부] | ✅/❌ |
 | S9 | Chorus2 Expansion | [문장 포함 여부] | ✅/❌ |
+| **S10** | **Articulation** | [Precise articulation, clear consonants] | ✅/❌ |
+| **S11** | **Reverb** | [Moderate reverb, room ambience 등] | ✅/❌ |
+| **S12** | **Sound Engineering** | [EQ balanced sound, clean mix] | ✅/❌ |
 
-**Validation Result: [9/9 PASS] 또는 [X/9 FAIL - 재생성 필요]**
+**Validation Result: [12/12 PASS] 또는 [X/12 FAIL - 재생성 필요]**
+
+> 참고: 전체 S0-S20 슬롯 체크는 CLAUDE.md 참조
 ```
 
 **강제 규칙:**
-- S1-S9 테이블 없는 출력 = **자동 INVALID**
+- S1-S12 테이블 없는 출력 = **자동 INVALID**
 - S1 (Vocal Persona) 비어있음 = **즉시 FAIL, 재생성**
+- S10-S12 (프로덕션 필수) 누락 = **즉시 FAIL**
 - 1개라도 ❌ = 통과 불가, 재생성 후 재검증
+
+---
+
+## 가사 메타태그 필수 규칙 — v1.7 NEW
+
+> **구조 태그만 있고 보컬 제어 메타태그 없으면 QC FAIL**
+
+**원칙:**
+- 가사 제안 시 구조 태그 + 메타태그 세트로 작성
+- 곡의 특성에 맞는 적절한 메타태그 디자인 필수
+
+**필수 메타태그 예시:**
+```
+[verse1]
+[Chest voice, No harmony]
+가사...
+
+[chorus]
+[Powerful belt, Chest voice, No harmony]
+가사...
+```
+
+**FAIL 조건:**
+- 구조 태그만 있고 메타태그 없음 → FAIL
+- 메타태그가 곡 특성과 안 맞음 → 재디자인
 
 ---
 

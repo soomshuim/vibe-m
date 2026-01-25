@@ -1,0 +1,305 @@
+## Seed Researcher 분석 보고서
+
+### 레퍼런스: 죠지 - 바라봐줘요 (Look at Me)
+
+---
+
+### A. 기본 정보 (악보 + 웹 검색 종합)
+
+| 항목 | 값 |
+|------|-----|
+| Key | Db Major (5플랫) |
+| BPM | ~67 (Slow Ballad) |
+| 발매 | 2019.02.21 |
+| 작사/작곡 | 죠지, 박문치 |
+| 프로듀서 | 박문치 |
+
+---
+
+### B. 코드 진행 분석 (악보 기반)
+
+특징: 확장 코드(Extended Chords) 과다 사용
+
+Intro/Verse:
+Dbadd9 → GbM7/Ab → Db/Ab → Bbm9 → Db/Eb → Eb7 → Ab9sus4
+
+Pre-Chorus:
+Dbadd9 → /B → Gbadd9 → B13 → Dbadd9 → /B → GbM9 → GbmM7/A
+
+Chorus:
+DbM9 → G7-5 → GbM9 → B13 → Db/Ab → Bb13-9 → Bb7-9-13 → Db/Eb → Ab9sus4
+
+Cause → Effect:
+- add9, M9, sus4 등 확장 코드 → 날카로운 해결감 없이 "떠다니는" 느낌 유발
+- /B, /Ab 등 슬래시 코드 → 베이스 라인이 부드럽게 하행/상행 → 흐르는 듯한 전개
+- Eb7 → Ab9sus4 반복 → 완전한 해결 회피 → 아련함 지속
+
+---
+
+### C. 멜로디 분석 (악보 기반)
+
+| 특징 | 관찰 |
+|------|------|
+| 음역 | 좁음 (1옥타브 내외) |
+| 진행 | Stepwise (순차 진행 위주), 도약 최소 |
+| 리듬 | Speech-like, 말하듯 자연스러운 프레이징 |
+| 꾸밈음 | 거의 없음 (기교 배제) |
+
+Cause → Effect:
+- 좁은 음역 + 순차 진행 → 무리 없이 따라 부를 수 있는 친숙함
+- 기교 배제 → 가사 전달력 극대화, 담백함 강조
+- Speech-like 리듬 → 편지/독백 느낌
+
+---
+
+### D. 보컬 스타일 분석
+
+| 요소 | 관찰 |
+|------|------|
+| 발성 | Chest voice, 진성 위주 |
+| 톤 | 담백, 건조, 호소력 |
+| 기교 | 최소 (런/페이크 거의 없음) |
+| 비교 | 크러쉬와 유사하나 더 절제됨 |
+
+Cause → Effect:
+- 기교 없는 보컬 → 가사가 직접 전달되는 느낌 → "진심"으로 인식
+- Dry 톤 → 90년대 발라드 향수 자극
+- 절제된 표현 → 감정 과잉 없이 울림 유발
+
+---
+
+### E. 프로덕션 분석
+
+| 요소 | 관찰 |
+|------|------|
+| Lead | Electric Piano / Rhodes 계열 |
+| Rhythm | 미니멀 드럼 (또는 드럼리스 구간 존재) |
+| Bass | 부드러운 베이스, 존재감 낮음 |
+| Guitar | 기타 솔로 (후반부) |
+| 공간 | Reverb 적당, 과하지 않음 |
+
+Cause → Effect:
+- 건반 중심 → 따뜻하고 아날로그적 질감
+- 미니멀 리듬 → 보컬에 집중 유도
+- 기타 솔로 (후반) → 감정 고조 없이 여운으로 마무리
+
+---
+
+### F. 가사 구조 분석 (악보 기반)
+
+핵심 훅:
+"그간의 마음들이 모두 녹아내리면, 내가 꿈꿔왔던 것처럼 그렇게 나를 바라봐줘요"
+
+영어 삽입:
+"I'm the one who found your love"
+
+Cause → Effect:
+- 한국어 주체 + 영어 한 줄 삽입 → 감정 전환점 역할
+- "녹아내리면" → 시간/거리의 물리적 해소 이미지
+- "바라봐줘요" 반복 → 간절함의 직접 호소
+
+---
+
+### G. 왜 지루하지 않은가? (Repetition Tolerance)
+
+1. 확장 코드의 미해결감 → 같은 진행도 "떠다니는" 느낌으로 지루함 방지
+2. 보컬 다이나믹 미세 변화 → 벨팅 없이도 후반부 감정 상승
+3. 기타 솔로 삽입 → 구조적 변화 없이 청각적 환기
+4. 가사의 직접성 → 추상적 비유 없이 "바라봐줘요"로 귀결 → 명확한 감정 앵커
+
+---
+
+## Seed Designer 제안
+
+### 새 시리즈 컨셉: "기다림" (가제)
+
+| 항목 | 값 |
+|------|-----|
+| Time Station | 21:00 (저녁, 기다림의 시간) |
+| 감정 톤 | 담백, 아련, 절제된 간절함 |
+| BPM | 65-70 |
+| Key | Db Major / Ab Major (Soft Major bucket) |
+| Lead | Synth Piano (warm pad texture) |
+| Rhythm | Minimal brush or drumless |
+
+---
+
+### Seed Style Prompt (초안)
+
+```
+Korean Slow R&B Ballad, 67 BPM, Db Major
+
+Male vocal, Raw, Dry, Unprocessed, Chest voice dominant
+No falsetto, No runs, No melisma
+Speech-like phrasing, Narrow melodic range
+Precise articulation, clear consonants
+
+Synth piano-led, supportive, warm pad texture
+Minimal drums or drumless verses
+Soft bass, low presence
+Moderate reverb, room ambience
+EQ balanced sound, clean mix
+
+Verse2 subtle intensity increase by vocal weight only
+Chorus: longer sustain on hook phrase, no belt
+Bridge: single guitar line, no solo flourish
+
+No harmony, no backing vocals, no doubles
+Lead vocal remains single and dominant throughout
+```
+
+---
+
+### Exclude Style
+
+```
+Falsetto, Airy, Breathy, Whisper, Harmonized, Backing vocals, Auto-tune, Belting, Runs, Melisma
+```
+
+---
+
+### S1-S12 Validation Table
+
+| # | 슬롯 | 값 | 상태 |
+|---|------|---|------|
+| S1 | Vocal Persona | Male vocal, Raw, Dry | ✅ |
+| S2 | Vocal Processing | Unprocessed, Chest voice dominant | ✅ |
+| S3 | Lead Instrument | Synth piano-led, supportive | ✅ |
+| S4 | Rhythm Source | Minimal drums or drumless | ✅ |
+| S5 | BPM | 67 BPM | ✅ |
+| S6 | Key/Mode | Db Major | ✅ |
+| S7 | Musicality Matrix | V2 intensity + Chorus sustain + Bridge | ✅ |
+| S8 | Harmony Guard | No harmony, no backing vocals, no doubles | ✅ |
+| S9 | Chorus2 Expansion | Lead vocal remains single and dominant | ✅ |
+| S10 | Articulation | Precise articulation, clear consonants | ✅ |
+| S11 | Reverb | Moderate reverb, room ambience | ✅ |
+| S12 | Sound Engineering | EQ balanced sound, clean mix | ✅ |
+
+**Validation Result: 12/12 PASS**
+
+| 항목 | 상태 |
+|------|------|
+| Style Prompt | ✅ |
+| Exclude Style | ✅ |
+| 세트 출력 | ✅ |
+
+---
+
+### Suno Parameters (권장)
+
+| 항목 | 값 |
+|------|-----|
+| Weirdness | 30 (안정적) |
+| Style Influence | 70 (프롬프트 강화) |
+
+---
+
+### 가사 방향 제안
+
+컨셉: "기다림 → 마주침의 순간"
+
+| 트랙 | 키워드 축 | 핵심 이미지 |
+|------|----------|------------|
+| 01 | 기다림/창가/불빛 | 창문에 비친 가로등 |
+| 02 | 발자국/골목/어둠 | 익숙한 길의 낯선 그림자 |
+| 03 | 문/벨/숨 | 문 앞에서 멈춘 손 |
+
+가사 톤 가이드:
+- 직접적 고백 (비유 최소화)
+- "~줘요" 어미로 간절함 표현
+- 물리적 오브젝트 앵커 필수 (창, 불빛, 발자국 등)
+
+---
+
+## Seed Track 01: "골목" (가제)
+
+컨셉: 혼자 걷는 저녁 산책
+키워드 축: 골목/가로등/그림자/발자국/저녁
+
+### 가사
+
+```
+[intro]
+[instrumental]
+
+[verse]
+[Chest voice, No harmony]
+해가 지고 나면 골목을 걸어요
+익숙한 길인데 오늘은 낯설죠
+
+[verse]
+[Direct vocal, Dry voice]
+담벼락 그림자가 길어질 때쯤
+발자국 소리만 골목에 울려요
+
+[verse]
+[Chest voice]
+아무 생각 없이 걷다 보면 좋아요
+가로등 불빛이 하나둘 켜지죠
+
+[verse]
+[Direct vocal]
+모퉁이를 돌면 바람이 불어와
+코끝이 시려와 주머니에 손을 넣어요
+
+[pre-chorus]
+[Chest voice, No falsetto]
+어디로 가는지 몰라도 괜찮아요
+그냥 이렇게 걷는 게 좋은 밤이에요
+
+[chorus]
+[Powerful belt, Chest voice, No harmony]
+천천히 천천히 걸어가요
+서두를 것 없이 흘러가요
+저 모퉁이 끝에 뭐가 있을까
+오늘 밤은 조금 멀리 가볼까요
+
+[verse]
+[Direct vocal, Dry voice]
+문 닫은 가게 앞 의자가 보여요
+누군가 앉았던 온기가 남았을까요
+
+[verse]
+[Chest voice]
+골목 끝 편의점 불빛이 새어나와
+잠깐 들를까 하다가 그냥 지나쳐요
+
+[instrumental]
+
+[chorus]
+[Powerful belt, Chest voice, No harmony]
+천천히 천천히 걸어가요
+서두를 것 없이 흘러가요
+저 모퉁이 끝에 뭐가 있을까
+오늘 밤은 조금 멀리 가볼까요
+
+[outro]
+[instrumental]
+```
+
+### 메타태그 구성
+
+| 섹션 | 태그 | 톤 |
+|------|------|-----|
+| Verse | [Chest voice, No harmony] | 낮고 담백 |
+| Verse | [Direct vocal, Dry voice] | 건조하게 |
+| Pre-Chorus | [Chest voice, No falsetto] | 고조 직전 |
+| Chorus | [Powerful belt, Chest voice, No harmony] | 고음 벨팅 |
+
+### QC Validation
+
+| # | 규칙 | 상태 |
+|---|------|------|
+| 1.2 | Ending Mirroring (요↔죠) | PASS |
+| 1.3 | Chorus Static (4행, 동일 반복) | PASS |
+| 1.6 | Snapshot Hook | PASS |
+| 1.9 | Physical Object (골목/담벼락/가로등/모퉁이/편의점/의자) | PASS |
+| 1.11 | Chorus Tone (청유형 1개) | PASS |
+| K1-K3 | Korean Positioning | PASS |
+
+---
+
+Sources:
+- 브런치 - 바라봐줘요 분석: https://brunch.co.kr/@colloky/449
+- SongBPM - Look at Me: https://songbpm.com/@george/look-at-me
+- Ultimate Guitar - 바라봐줘요 코드: https://tabs.ultimate-guitar.com/tab/3168341
