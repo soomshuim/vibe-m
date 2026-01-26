@@ -1,6 +1,6 @@
 # VIBE-M STYLE.md
-Version: 2.6.2 (Guide Merge + DEBUG Mode + Texture Lines + SSOT Slot Alignment)
-Last Updated: 2026-01-25
+Version: 2.6.3 (Char Limit 800 Unified + SSOT Alignment)
+Last Updated: 2026-01-26
 Purpose: Raw Vocal 기본값 + 진성 강제 + 커뮤니티 베스트 프랙티스 통합
 
 ---
@@ -8,11 +8,13 @@ Purpose: Raw Vocal 기본값 + 진성 강제 + 커뮤니티 베스트 프랙티�
 ## 0) Non-Negotiables (Always ON)
 
 ### 0.1 Prompt Length
-- **Style Prompt must be <= 1000 characters (spaces included), EXCLUDE excluded.**
+- **Style Prompt must be <= 800 characters (spaces included), EXCLUDE excluded.**
 - If longer: compress descriptors into fewer tokens (8–10 token rule for core identity).
+- 800자 = Suno 안전 제한 (SSOT: CLAUDE.md S15)
 
 ### 0.2 Pure Input Principle
-- **Lyrics field: only singable Korean text + minimal tags.**
+- **가사 입력 규격은 LYRICS.md §2를 따른다** (SSOT)
+- 요약: 순수 가창 텍스트 + 구조 태그 + Performance Cues만 허용
 - All musical instructions must live in **Style Prompt**.
 
 ### 0.3 Technical Accuracy
@@ -72,7 +74,7 @@ pop, beat, bass, catchy, upbeat
 
 ## 1) Core Sound DNA (Project Constant)
 
-Use these as the "always-on" identity baseline (pick only the essentials to stay under 1000 chars).
+Use these as the "always-on" identity baseline (pick only the essentials to stay under 800 chars).
 
 - Texture: **high fidelity, wide stereo, cinematic but restrained**
 - Vocal production: **dry close-mic, very forward, natural breaths, minimal autotune**
@@ -205,7 +207,7 @@ Energy increase must come from vocal delivery, not harmony layers.
 
 Include these in Style Prompt, in compressed form.
 
-- **Verse2 Lift (MUST):** same melodic contour as Verse1; **last 2 lines MUST rise in emotional intensity**: higher register OR light falsetto lift is **encouraged**. Natural vocal strain **allowed**.
+- **Verse2 Lift (MUST):** same melodic contour as Verse1; **last 2 lines MUST rise in emotional intensity**: higher register OR light upper register lift is **encouraged**. Natural vocal strain **allowed**.
 - **Chorus Lift:** chorus first line hits peak: **belt/higher register + exactly 1 held note (longer sustain than any verse note)**. Lead vocal energy may increase.
 - **Chorus Rule:** hook-first; **lyrics repeated identically**. No other sustained notes should appear in chorus besides the 1 held note.
 - **Chorus2 Expansion:** bigger **by arrangement** (bass/drums energy, wider stereo instruments); **lead vocal energy may increase, but no new vocal layers**.
@@ -213,7 +215,7 @@ Include these in Style Prompt, in compressed form.
 - **Outro:** instrumental fade; return to minimal texture.
 
 **V2 → Chorus 연결 원칙:**
-> V2 last 2 lines (emotional intensity rise: higher register/falsetto encouraged) → Chorus first line = peak (1 held note, longer sustain than any verse note + belt)
+> V2 last 2 lines (emotional intensity rise: higher register encouraged (chest-dominant)) → Chorus first line = peak (1 held note, longer sustain than any verse note + belt)
 
 **Energy Reference (QC 기준, 프롬프트용 아님):**
 > Chorus peak note should sustain at least **1.5x longer** than any Verse note.
@@ -254,7 +256,7 @@ Include these in Style Prompt, in compressed form.
 | Register | higher register than verse (noticeable lift) |
 | Held Note | **1 held note** on hook (longer sustain, event-like) |
 | Dynamics | stronger dynamics, natural vocal strain allowed |
-| Falsetto | brief falsetto lift encouraged (especially V2 ending) |
+| Upper Register | brief upper register lift encouraged (especially V2 ending, chest-dominant) |
 
 **핵심 (v1.6):**
 - 리드 한 명이 더 세게/높게 부르는 것 = **encouraged**
@@ -458,7 +460,7 @@ Step 3: 여전히 실패 시 Style Prompt 자체 재검토
 
 ## 7) Prompt Assembly Template (Copy & Fill)
 
-### 7.1 Style Prompt (<=1000 chars, EXCLUDE excluded)
+### 7.1 Style Prompt (<=800 chars, EXCLUDE excluded)
 
 **순서:**
 1. Genre/BPM/Key + Lead Inst + Rhythm
@@ -479,7 +481,7 @@ Step 3: 여전히 실패 시 Style Prompt 자체 재검토
 ```
 Step 1: S0-S20 슬롯 값 먼저 채우기 (빈칸 있으면 FAIL)
 Step 2: 그 값으로 Style Prompt 생성
-Step 3: 글자수 체크 (Style만 1000자 이하) → 넘으면 압축 루프
+Step 3: 글자수 체크 (Style만 800자 이하) → 넘으면 압축 루프
 ```
 
 ### Style Prompt 슬롯 체크리스트
@@ -503,7 +505,7 @@ Step 3: 글자수 체크 (Style만 1000자 이하) → 넘으면 압축 루프
 | **S19** | **Reverb** | **Moderate reverb, room ambience** |
 | **S20** | **Sound Engineering** | **EQ balanced sound, clean mix** |
 
-**If any FAIL:** regenerate and shorten until 20/20 PASS + <=1000 chars.
+**If any FAIL:** regenerate and shorten until 20/20 PASS + <=800 chars.
 
 ---
 
@@ -517,7 +519,7 @@ Vocal line may intensify dynamically (belt, higher register), but no additional 
 
 ### 9.2 Musicality Matrix 압축
 ```
-Verse2: same melodic contour, last 2 lines MUST rise in emotional intensity (higher register or falsetto encouraged, natural strain allowed).
+Verse2: same melodic contour, last 2 lines MUST rise in emotional intensity (higher register encouraged (chest-dominant), natural strain allowed).
 Chorus: hook-first, repeat identical; chorus first line hits peak with belt/higher register + 1 held note (longer sustain than any verse note). Lead vocal energy may increase.
 Chorus2: bigger by arrangement (bass/drums energy, wider stereo); lead vocal energy may increase, but no new vocal layers.
 Bridge: build every bar, no energy drop into chorus.
@@ -526,7 +528,7 @@ Outro: instrumental fade.
 
 ### 9.3 V2 → Chorus Lift 연결 (에너지 허용)
 ```
-Verse2 last 2 lines: emotional intensity MUST rise (higher register/falsetto encouraged, natural strain allowed).
+Verse2 last 2 lines: emotional intensity MUST rise (higher register encouraged (chest-dominant), natural strain allowed).
 Chorus first line: 1 held note (longer sustain) + belt/higher register. Lead vocal energy may increase.
 ```
 
@@ -535,7 +537,7 @@ Chorus first line: 1 held note (longer sustain) + belt/higher register. Lead voc
 articulation, Korean Lo-fi R&B, 80 BPM, Eb Major, felt piano-led, soft shaker, hazy ambient pad, cinematic but restrained, high fidelity, wide stereo.
 Male vocal: warm soulful tone, dry close-mic, very forward, clear Korean diction, natural breaths, minimal autotune, straight delivery.
 Lead vocal remains single and dominant. No stacked or choir-like harmonies. Vocal line may intensify dynamically, but no additional vocal layers. No EDM vocal processing.
-Verse2 same melodic contour as v1; last 2 lines MUST rise in emotional intensity (higher register or brief falsetto encouraged).
+Verse2 same melodic contour as v1; last 2 lines MUST rise in emotional intensity (higher register encouraged (chest-dominant)).
 Chorus hook-first, repeat identical; chorus first line hits peak with belt/higher register + 1 held note (longer sustain than any verse note). Lead vocal energy may increase.
 Chorus2 bigger by arrangement (bass/drums energy, wider stereo); lead vocal energy may increase, but no new vocal layers.
 Bridge builds every bar; no energy drop into chorus. Outro felt piano fades.

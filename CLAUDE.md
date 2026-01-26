@@ -2,7 +2,20 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-25 | v2.6.2 (SSOT 슬롯 체계 통일 - S0-S20)
+> Last updated: 2026-01-26 | v2.7.0 (SSOT Alignment + Routing Manual)
+
+## ⚠️ SSOT 경고
+
+> **이 문서는 "사용 매뉴얼"입니다. 규칙의 SSOT가 아닙니다.**
+>
+> | 규칙 유형 | SSOT 문서 |
+> |----------|----------|
+> | 가사 규칙 | `MASTER/LYRICS.md` |
+> | Style Prompt 규칙 | `MASTER/STYLE.md` |
+> | QC/운영 규칙 | `MASTER/MANAGER.md` |
+> | 역할 분리 | `MASTER/ROLES.md` |
+>
+> **아래 체크리스트는 "요약"입니다. 충돌 시 MASTER 문서가 우선합니다.**
 
 ## Quick Reference
 
@@ -117,8 +130,8 @@ Falsetto, Airy, Whisper, ...
 
 ---
 
-### 가사 필수 슬롯 체크리스트
-> 상세: `MASTER/LYRICS.md`
+### 가사 필수 슬롯 체크리스트 (요약)
+> **SSOT: `MASTER/LYRICS.md`** — 충돌 시 원본 우선
 > **원칙: 하나라도 누락 시 FAIL → 재작성 후 통과 시 제안**
 
 | # | 규칙 | 체크 내용 |
@@ -135,7 +148,7 @@ Falsetto, Airy, Whisper, ...
 | **1.10** | **Image Density** | **V1=공간, V2=감각 분리 (핵심 이미지 2개 이상 겹침 금지)** |
 | **1.11** | **Chorus Tone** | **직접 호소/명령형 최대 1개, 나머지 관조 톤** |
 | 2.1 | Pure Input | 설명형 괄호 금지, Performance Cues `(soft)` 등은 허용 |
-| **2.2** | **메타태그 필수** | **구조 태그만 있고 보컬 제어 메타태그 없으면 FAIL** |
+| **2.2** | **메타태그 필수** | **LYRICS.md §2.2 SSOT 참조** (구조 태그 + 보컬 메타태그 세트 필수) |
 | 2.4 | Length Guide | **전체 100-120 단어, 섹션당 4-6행** |
 | **K1** | **Korean Only** | **한국어여야만 성립하는 가사인가?** |
 | **K2** | **Translation Loss** | **영어 번역 시 힘 빠지는 지점 있는가?** |
@@ -151,8 +164,8 @@ Section D: 키워드 축 요약 (이전 트랙과 비교)
 
 ---
 
-### Style Prompt 필수 슬롯 체크리스트
-> 상세: `MASTER/STYLE.md`
+### Style Prompt 필수 슬롯 체크리스트 (요약)
+> **SSOT: `MASTER/STYLE.md`** — 충돌 시 원본 우선
 > **원칙: 하나라도 누락 시 FAIL 선언 → 출력 금지**
 
 | # | 슬롯 | 체크 내용 | 예시 |

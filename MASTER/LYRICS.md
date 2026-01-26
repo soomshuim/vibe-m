@@ -1,6 +1,6 @@
 # VIBE-M LYRICS.md
-Version: 1.9 (Tag Dictionary Fixed)
-Last Updated: 2026-01-23
+Version: 1.9.1 (Vocal Meta Tag Required SSOT)
+Last Updated: 2026-01-26
 Purpose: Enforce lyrical consistency, musicality, and AI-safe input
 
 ---
@@ -392,6 +392,20 @@ Suno 가사 입력란에 다음을 **절대 넣지 않는다**.
 ### 2.2 허용되는 태그 — v1.9 태그 사전 고정
 
 > **VIBE-M은 태그 최소화가 원칙. 허용 태그 외 사용 금지.**
+
+#### ⚠️ SSOT: 보컬 메타태그 필수 규칙 — v1.9.1 NEW
+
+> **구조 태그만 있고 보컬 제어 메타태그 없으면 QC FAIL**
+
+| 규칙 | 설명 |
+|------|------|
+| 최소 요건 | 구조 태그 + 보컬 메타태그 **세트**로 작성 |
+| 필수 메타태그 | `[Chest voice]`, `[No harmony]`, `[Direct vocal]` 중 최소 1개 |
+| FAIL 조건 | 구조 태그(`[verse]`, `[chorus]`)만 있고 보컬 메타태그 없음 |
+
+**이 규칙은 LYRICS.md가 SSOT입니다. CLAUDE.md, ROLES.md는 이 규칙을 참조합니다.**
+
+---
 
 #### 🚫 금지 태그 (FORBIDDEN) — Lyrics에서 절대 사용 금지
 

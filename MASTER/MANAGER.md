@@ -1,6 +1,6 @@
 # VIBE-M MANAGER.md
-Version: 1.2 (A/B Testing Protocol + DEBUG Mode)
-Last Updated: 2026-01-20
+Version: 1.3 (Pure Input SSOT Alignment)
+Last Updated: 2026-01-26
 Role: Executive Manager / Quality Gatekeeper
 Applies To: All VIBE-M projects, series, and tracks
 
@@ -28,8 +28,10 @@ Manager는 판단하고, 차단하고, 통과시키는 존재다.
    - 오디오 지문(Audio Fingerprint) 중복 리스크 사전 차단
 
 3. Pure Input Principle
-   - Suno 가사 입력에는 가창 텍스트만 허용
-   - 모든 연출·스타일·구조 지시는 STYLE.md에서만 관리
+   - 가사 입력 규격은 **LYRICS.md §2**를 따른다 (SSOT)
+   - 요약: 순수 가창 텍스트 + 구조 태그 + Performance Cues만 허용
+   - 금지: 설명형 괄호 `(Scene:...)`, 영어 지시문, 씬/감정 설명
+   - 모든 연출·스타일 지시는 Style Prompt로 이동
 
 4. Document-Driven Operation
    - 기억, 맥락, 추측 기반 작업 금지

@@ -159,7 +159,7 @@ Group 3 (Station):  [2-3 station-specific]
 
 ---
 
-### 3.2 Template B: Style Prompt Skeleton (≤1000 chars)
+### 3.2 Template B: Style Prompt Skeleton (≤800 chars)
 
 ```
 Korean [Sub-genre] R&B, [BPM] BPM, [Key] [Mode]
