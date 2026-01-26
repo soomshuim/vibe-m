@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+- **Git LFS 설정** `06fff55`
+  - *.mp4 파일 Git LFS 추적 설정
+  - 히스토리 재작성으로 기존 대용량 파일 LFS 마이그레이션
+  - GitHub 100MB 제한 해결
+
 ### Added
 - **골목 싱글 (PM 07:00 퇴근길의 위로)** `6a538e4`
   - single.mp4: 0.5초 crossfade 루프 영상
