@@ -13,6 +13,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - PM 07:00 시리즈 첫 싱글 선공개
 
 ### Changed
+- **SSOT 정리 5단계 완료** `f1b5ee5` `2d35cb6`
+  1. MANAGER Pure Input → LYRICS §2 참조 (SSOT 통일)
+  2. 글자수 제한 1000 → 800 통일 (전 문서)
+  3. 보컬 메타태그 필수 규칙 LYRICS §2.2에 SSOT 승격
+  4. STYLE에서 falsetto 트리거 단어 제거 (→ upper register)
+  5. CLAUDE.md 역할 명확화 (사용 매뉴얼, 요약 표시)
+  - MASTER/_INDEX.md SSOT 라우터 추가
+  - 버전: MANAGER v1.3, STYLE v2.6.3, LYRICS v1.9.1, CLAUDE v2.7.0
+
 - **바라봐줘요 seed 가사/스타일 업데이트** `c861208`
   - 기존 분석 문서를 트랙 생성용 가사+스타일로 교체
   - Suno Parameters: W:30 I:60

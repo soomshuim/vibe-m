@@ -2,9 +2,20 @@
 
 > 현재 세션 상태 기록
 >
-> Last updated: 2026-01-26 (골목 싱글 추가)
+> Last updated: 2026-01-26 (SSOT 정리 5단계 완료)
 
 ## 완료된 작업
+
+### 2026-01-26 - SSOT 정리 5단계 `f1b5ee5` `2d35cb6`
+
+- [x] **SSOT 정리 5단계 완료** (GPT 피드백 기반)
+  1. MANAGER Pure Input → LYRICS §2 참조 (SSOT 통일)
+  2. 글자수 제한 1000 → 800 통일 (전 문서)
+  3. 보컬 메타태그 필수 규칙 LYRICS §2.2에 SSOT 승격
+  4. STYLE에서 falsetto 트리거 단어 제거 (→ upper register)
+  5. CLAUDE.md 역할 명확화 (사용 매뉴얼, 요약 표시)
+  - MASTER/_INDEX.md SSOT 라우터 추가
+  - 버전: MANAGER v1.3, STYLE v2.6.3, LYRICS v1.9.1, CLAUDE v2.7.0
 
 ### 2026-01-26 - 골목 싱글 `6a538e4`
 
