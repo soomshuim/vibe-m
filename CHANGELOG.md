@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+- **골목 싱글 (PM 07:00 퇴근길의 위로)** `6a538e4`
+  - single.mp4: 0.5초 crossfade 루프 영상
+  - 골목_youtube.md: 업로드 정보 (제목, 설명, 챕터, 해시태그)
+  - PM 07:00 시리즈 첫 싱글 선공개
+
 ### Changed
 - **바라봐줘요 seed 가사/스타일 업데이트** `c861208`
   - 기존 분석 문서를 트랙 생성용 가사+스타일로 교체
