@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+- **PM_1800 "퇴근길" 시리즈** `2805367` `0c6b49e` `216aee5`
+  - Track 02 "약속": 자니 벤치마킹, 100 BPM, Db Major, Neo-soul R&B
+  - Track 03 "정류장": 약속 커버 (글자수 완벽 매칭 기법), G minor 변주
+  - concept.md 전체 구조 (10곡 플랜, 감정 아크, BPM 아크)
+  - Reference/song/자니.pdf, uptown-funk.pdf 추가
+- **LYRICS.md §2.3 메타태그 동작 원리** `2805367`
+  - `[AA]` 대괄호: 구조 태그, 절대 낭독 안 됨
+  - `(BB)` 소괄호: 100% 낭독 (가사) / ~30% 인식 (톤 지시)
+  - 톤 지시는 반드시 단독 행에 배치
+  - 감정/분위기 태그 → Style Prompt로 이동 규칙
+- **CLAUDE.md v2.8.0 메타태그 검증 단계** `2805367`
+  - 가사 생성 워크플로우 Step 4 추가
+
 ### Changed
 - **Git LFS 설정** `06fff55`
   - *.mp4 파일 Git LFS 추적 설정
