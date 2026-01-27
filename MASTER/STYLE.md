@@ -8,9 +8,9 @@ Purpose: Raw Vocal 기본값 + 진성 강제 + 커뮤니티 베스트 프랙티�
 ## 0) Non-Negotiables (Always ON)
 
 ### 0.1 Prompt Length
-- **Style Prompt must be <= 800 characters (spaces included), EXCLUDE excluded.**
+- **Style Prompt 권장: <= 800자, 실제 Suno 제한: 1000자**
 - If longer: compress descriptors into fewer tokens (8–10 token rule for core identity).
-- 800자 = Suno 안전 제한 (SSOT: CLAUDE.md S15)
+- 800자 = 안전 마진, 800~1000자 허용 (SSOT: CLAUDE.md S15)
 
 ### 0.2 Pure Input Principle
 - **가사 입력 규격은 LYRICS.md §2를 따른다** (SSOT)

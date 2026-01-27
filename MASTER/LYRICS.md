@@ -1,6 +1,6 @@
 # VIBE-M LYRICS.md
-Version: 1.9.1 (Vocal Meta Tag Required SSOT)
-Last Updated: 2026-01-26
+Version: 2.0.0 (Metatag Behavior SSOT)
+Last Updated: 2026-01-27
 Purpose: Enforce lyrical consistency, musicality, and AI-safe input
 
 ---
@@ -500,7 +500,73 @@ Suno 가사 입력란에 다음을 **절대 넣지 않는다**.
 
 ---
 
-### 2.3 Performance Cues (인라인 연출) — v1.5 NEW
+### 2.3 메타태그 동작 원리 (Suno 인식 규칙) — v2.0 NEW
+
+> **"대괄호와 소괄호는 Suno에서 완전히 다르게 동작한다."**
+
+#### 2.3.1 대괄호 `[AA]` — 구조 태그 (절대 낭독 안 함)
+
+| 규칙 | 설명 |
+|------|------|
+| **동작** | 대괄호 안 텍스트는 **절대 가사로 읽지 않음** |
+| **용도** | 곡의 구조 변화 지시 (`[verse]`, `[chorus]`, `[bridge]` 등) |
+| **보컬 메타** | `[Chest voice]`, `[No harmony]` 등 보컬 제어용으로도 사용 |
+
+**올바른 사용:**
+```
+[verse1]
+[Male Vocal]
+가사 내용...
+```
+
+#### 2.3.2 소괄호 `(BB)` — 조건부 인식 (30~100%)
+
+| 상황 | Suno 인식률 | 예시 |
+|------|------------|------|
+| **코러스/애드립 가사** | 100% 낭독 | `(oh yeah)`, `(la la la)` |
+| **보컬 톤/창법 지시** | ~30% 인식 | `(husky voice)`, `(shouting)` |
+
+**톤 지시 배치 규칙:**
+- 톤 지시 명령어는 **구조 태그 바로 아래, 단독 행**에 배치해야 Suno가 명령어로 인식
+- 가사와 같은 행에 쓰면 가사로 읽힐 확률 높음
+
+**올바른 배치:**
+```
+[Verse1]
+[Male Vocal]
+(shouting)
+가사 내용...
+```
+
+**잘못된 배치:**
+```
+[Verse1]
+(shouting) 가사 내용...  ← 가사로 읽힐 수 있음
+```
+
+#### 2.3.3 금지: 감정/분위기 태그 in Lyrics
+
+| 금지 예시 | 이유 | 대체 위치 |
+|----------|------|----------|
+| `[sad, emotional piano intro]` | Suno가 이해 못함, 무시됨 | Style Prompt |
+| `[melancholic verse]` | 분위기 지시 → Style로 | Style Prompt |
+| `[dreamy, ambient]` | 악기/분위기 지시 | Style Prompt |
+
+**원칙:**
+- **Lyrics** = 구조 태그 + 보컬 메타태그 + 가사 + Performance Cues
+- **Style Prompt** = 기분, 느낌, 분위기, 악기, 편곡 지시
+
+#### 2.3.4 QC Fail 조건
+
+| # | 조건 | 결과 |
+|---|------|------|
+| F1 | 감정/분위기 태그가 Lyrics에 있음 | **FAIL → Style로 이동** |
+| F2 | 소괄호 톤 지시가 가사와 같은 행에 있음 | **FAIL → 단독 행으로 분리** |
+| F3 | 대괄호에 악기/편곡 지시 있음 | **FAIL → Style로 이동** |
+
+---
+
+### 2.4 Performance Cues (인라인 연출) — v1.5 NEW
 
 > 구조 태그 바로 뒤, 가사 전에 배치하여 보컬 연출 지시
 

@@ -2,7 +2,7 @@
 
 > YouTube Music Playlist Generator CLI
 >
-> Last updated: 2026-01-26 | v2.7.0 (SSOT Alignment + Routing Manual)
+> Last updated: 2026-01-27 | v2.8.0 (Metatag Behavior Rules)
 
 ## ⚠️ SSOT 경고
 
@@ -74,8 +74,12 @@
 Step 0. LYRICS.md + 이전 트랙 키워드 확인
 Step 1. Generate 가사 초안
 Step 2. Run self-QC against checklist (10개 항목)
-Step 3. Korean Positioning 검증 (K1-K3) ← v1.7 NEW
-Step 4. If all pass → output with QC 테이블
+Step 3. Korean Positioning 검증 (K1-K3)
+Step 4. 메타태그 검증 (v2.8 NEW):
+        - [AA] 대괄호: 구조/보컬 메타만 (감정/분위기 태그 금지)
+        - (BB) 소괄호 톤지시: 반드시 단독 행에 배치
+        - 감정/분위기 태그 발견 시 → Style로 이동
+Step 5. If all pass → output with QC 테이블
         If any fail → 재작성 후 Step 2 반복
         (통과할 때까지 유저에게 제안하지 않음)
 ```
@@ -148,6 +152,7 @@ Falsetto, Airy, Whisper, ...
 | **1.10** | **Image Density** | **V1=공간, V2=감각 분리 (핵심 이미지 2개 이상 겹침 금지)** |
 | **1.11** | **Chorus Tone** | **직접 호소/명령형 최대 1개, 나머지 관조 톤** |
 | 2.1 | Pure Input | 설명형 괄호 금지, Performance Cues `(soft)` 등은 허용 |
+| **2.3** | **메타태그 동작** | **`[AA]`=구조(낭독X), `(BB)`=조건부(톤지시 단독행), 감정태그→Style** |
 | **2.2** | **메타태그 필수** | **LYRICS.md §2.2 SSOT 참조** (구조 태그 + 보컬 메타태그 세트 필수) |
 | 2.4 | Length Guide | **전체 100-120 단어, 섹션당 4-6행** |
 | **K1** | **Korean Only** | **한국어여야만 성립하는 가사인가?** |
@@ -185,7 +190,7 @@ Section D: 키워드 축 요약 (이전 트랙과 비교)
 | S12 | Exclude 필수 항목 | **Airy, Falsetto, Whisper, Harmonized** | 얇은 보컬 유발 단어 차단 |
 | S13 | Exclude 제한 | **최대 3그룹, 8키워드** (기본 1줄 권장) | 과도한 Exclude = 부작용 |
 | S14 | **모호 형용사 제거** | warm reflective, rich vibrato 등 제거 | 가성 유발 방지 |
-| **S15** | **글자수 제한** | **< 800자 (Suno 제한)** | 출력 전 `wc -c`로 검증 필수 |
+| **S15** | **글자수 제한** | **< 800자 권장 (실제 1000자)** | 출력 전 `wc -c`로 검증, 800~1000 허용 |
 | **S16** | **Lead Instrument Supportive** | **`[악기]-led, supportive` 형태** | 악기 과도한 존재감 방지 |
 | **S17** | **Chorus Expansion Density** | **`arrangement density only` 명시** | 스테레오/볼륨 해석 방지 |
 | **S18** | **Articulation (필수)** | **`Precise articulation, clear consonants`** | 발음 명확성 확보, 웅얼거림 방지 |
