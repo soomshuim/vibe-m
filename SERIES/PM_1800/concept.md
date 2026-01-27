@@ -84,7 +84,7 @@ Track 09-10: 문을 열면 따뜻함
 | # | 제목 (가제) | 감정 아크 | BPM | Key | Vocal | 컨셉 |
 |---|------------|----------|-----|-----|-------|------|
 | 01 | (퇴근) | 해방 | 95 | Db Major | Male | 신나는 퇴근, 해방감 |
-| 02 | **약속** | 서글픔 | 100 | G minor | Male | 연락 돌리지만 다들 바빠 (자니 벤치마킹) |
+| 02 | **약속** | 서글픔 | 100 | Db Major | Male | 연락 돌리지만 다들 바빠 (자니 벤치마킹) |
 | 03 | **정류장** | 관조 | 100 | G minor | Male | 버스 정류장에서 홀로 기다림 (약속 커버) |
 | 04 | (풍경) | 관조 | 85 | G minor | Male | 스쳐가는 도시 불빛 |
 | 05 | (골목) | 친밀 | 82 | Db Major | Male | 집 근처 골목길 (기존 싱글 연계) |
@@ -135,36 +135,93 @@ Track 09-10: 문을 열면 따뜻함
 - AM_0400: 윤곽, 잔향, 물안개, 습기, 적막
 - PM_1400: 멍, 얼음, 산책, 온기, 돛, 물결
 
-### 4.4 Style Prompt
+### 4.4 가사
 
 ```
-Korean Neo-soul R&B, 100 BPM, G minor
+[intro]
+[instrumental]
 
-Rhodes-led, synth bass, layback groove,
-soft 808 hi-hat, rim-click, evening commute texture.
+[verse1]
+[Chest voice, No harmony]
+퇴근 알람이 울려
+주머니 속 폰을 꺼내
+연락처를 내려봐
+누구한테 먼저 할까
 
-Male vocal. Raw, Solid, Direct, Dry, Unprocessed.
-Conversational delivery, semi-rap phrasing.
-Chest voice dominant. No falsetto. Controlled dynamics.
-Precise articulation, clear consonants.
-Moderate reverb, room ambience.
-EQ balanced sound, clean mix.
+[pre-chorus]
+[Direct vocal, Dry voice]
+엄지가 멈칫해
+화면만 밝아져
+읽씹만 쌓여가는
+오늘도 그런 저녁
 
-Verse1: Rhodes chords, sparse bass, confessional feel, casual speech rhythm.
-Verse2: same melodic contour; last 2 lines MUST rise in emotional intensity.
-Chorus: hook-first, repeat identical; first line hits peak with 1 held note + chest voice.
-Chorus2: bigger by arrangement (bass melodic, synth widens); no new vocal layers.
-Bridge: Rhodes and voice only, builds every bar; no energy drop into chorus.
-Outro: Rhodes fades, synth pad sustain.
+[chorus]
+[Soft belt, Chest voice, No harmony]
+야 오늘 뭐해, 시간 돼?
+한잔 하자 연락 좀 해
+다들 바빠 나만 한가해
+혼자 걷는 퇴근길이야
+야 오늘 뭐해, 시간 돼?
+한잔 하자 연락 좀 해
+다들 바빠 나만 한가해
+혼자 걷는 퇴근길이야
 
-Lead vocal remains single and dominant throughout.
-No stacked or choir-like harmonies.
+[interlude]
+[instrumental]
+
+[verse2]
+[Chest voice, No harmony]
+답장 알림이 울려
+괜히 먼저 폰을 열어
+미안 오늘은 안 돼
+왜 다들 연락이 안 돼
+
+[pre-chorus]
+[Direct vocal, Dry voice]
+한숨이 새어나
+거리만 어두워
+읽씹만 쌓여가는
+오늘도 그런 저녁
+
+[chorus]
+[Soft belt, Chest voice, No harmony]
+야 오늘 뭐해, 시간 돼?
+한잔 하자 연락 좀 해
+다들 바빠 나만 한가해
+혼자 걷는 퇴근길이야
+야 오늘 뭐해, 시간 돼?
+한잔 하자 연락 좀 해
+다들 바빠 나만 한가해
+혼자 걷는 퇴근길이야
+
+[bridge]
+[Building, sparse]
+그래도 내일은 또
+누군가 시간 나겠지
+
+[chorus]
+[Powerful belt, Chest voice, No harmony]
+야 오늘 뭐해, 시간 돼?
+한잔 하자 연락 좀 해
+다들 바빠 나만 한가해
+혼자 걷는 퇴근길이야
+야 오늘 뭐해, 시간 돼?
+한잔 하자 연락 좀 해
+다들 바빠 나만 한가해
+혼자 걷는 퇴근길이야
+
+[outro]
+[instrumental]
 ```
 
-### 4.5 Exclude Style
+### 4.5 Style Prompt
 
 ```
-Autotune heavy, Vocoder, Choir, Stacked harmonies, Backing vocals, Bright, Cheerful, Dance
+Korean Neo-soul R&B, 100 BPM, Db Major
+
+Rhodes-led, electric bass very dry, layback groove, rim-click, NO 808, Male vocal, Raw, Direct, Dry, Simple melody, Chest voice dominant, No falsetto, no runs, no melisma, Precise articulation, Light room reverb, Clean mix, Verse1: Rhodes chords, sparse bass, confessional, gentle phrasing, Verse2: same contour; last 2 lines rise in intensity, Chorus: catchy singable hook, repeat identical; simple memorable melody, chest voice, Chorus2: bigger by arrangement only; no new vocal layers, Bridge: Rhodes + voice only, builds every bar, Outro: Rhodes fades, synth pad sustain, Single lead vocal throughout, No harmonies, no doubles
+
+EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, Hip-hop, Bright, Mumble
 ```
 
 ### 4.6 Suno Parameters
@@ -205,17 +262,114 @@ Autotune heavy, Vocoder, Choir, Stacked harmonies, Backing vocals, Bright, Cheer
 **Secondary (감각/상태):**
 - 기다리다, 지나가다, 놓치다, 시리다
 
-### 5.5 Style Prompt
+### 5.5 가사
 
-Track 02 "약속"과 동일 (G minor 유지)
+```
+[intro]
+
+[instrumental]
+
+[verse1]
+
+[Chest voice, No harmony]
+버스 시간이 지나
+정류장 앞 벤치 위에
+사람들이 스쳐가
+언제쯤에 버스 올까
+
+[pre-chorus]
+
+[Direct vocal, Dry voice]
+발끝이 시려와
+가로등 켜져가
+버스만 지나가는
+외로운 오늘 저녁
+
+[chorus]
+
+[Soft belt, Chest voice, No harmony]
+아 버스언제 오는거야
+혼자서서 계속 기다려
+다들타고 나만 놓쳐서
+혼자서는 정류장인데
+아 버스언제 오는거야
+혼자서서 계속 기다려
+다들타고 나만 놓쳐서
+혼자서는 정류장인데
+
+[interlude]
+
+[instrumental]
+
+[verse2]
+
+[Chest voice, No harmony]
+버스 알림이 울려
+괜히 먼저 고개 들어
+저건 내 차 아냐
+왜 다들 타는데 안 와
+
+[pre-chorus]
+
+[Direct vocal, Dry voice]
+한숨만 새어나
+거리만 어두워
+버스만 지나가는
+외로운 오늘 저녁
+
+[chorus]
+
+[Soft belt, Chest voice, No harmony]
+아 버스언제 오는거야
+혼자서서 계속 기다려
+다들타고 나만 놓쳐서
+혼자서는 정류장인데
+아 버스언제 오는거야
+혼자서서 계속 기다려
+다들타고 나만 놓쳐서
+혼자서는 정류장인데
+
+[bridge]
+
+[Building]
+그래도 버스는 와
+다음엔 탈수 있겠지
+
+[chorus]
+
+[Powerful belt, Chest voice, No harmony]
+아 버스언제 오는거야
+혼자서서 계속 기다려
+다들타고 나만 놓쳐서
+혼자서는 정류장인데
+
+[outro] [soft belt] [Fadeout]
+아 버스 이제, 오고 있어
+이제 그만 서서 기다려
+나도 타고 아무도 없어
+떠나 가는 정류장인데
+
+[instrumental]
+```
+
+### 5.6 Style Prompt
+
+Track 02 "약속" 기반 (G minor 변주)
 
 ```
 Korean Neo-soul R&B, 100 BPM, G minor
 
 Rhodes-led, electric bass very dry, layback groove, rim-click, NO 808, Male vocal, Raw, Direct, Dry, Simple melody, Chest voice dominant, No falsetto, no runs, no melisma, Precise articulation, Light room reverb, Clean mix, Verse1: Rhodes chords, sparse bass, confessional, gentle phrasing, Verse2: same contour; last 2 lines rise in intensity, Chorus: catchy singable hook, repeat identical; simple memorable melody, chest voice, Chorus2: bigger by arrangement only; no new vocal layers, Bridge: Rhodes + voice only, builds every bar, Outro: Rhodes fades, synth pad sustain, Single lead vocal throughout, No harmonies, no doubles
 
-EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, Hip-hop, Bright
+EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, Hip-hop, Bright, Mumble
 ```
+
+### 5.7 Suno Parameters
+
+| 항목 | 값 |
+|------|-----|
+| **Weirdness** | 35 |
+| **Style Influence** | 70 |
 
 ---
 
@@ -274,7 +428,7 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 
 ### 8.2 Description 키워드
 
-- 퇴근길, 저녁 7시, 귀가, 골목길
+- 퇴근길, 저녁 6시, 귀가, 골목길
 - Korean R&B, Neo-soul, 감성 플레이리스트
 - 우리말 가사
 

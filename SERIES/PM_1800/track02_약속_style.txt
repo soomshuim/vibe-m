@@ -1,19 +1,5 @@
 Korean Neo-soul R&B, 100 BPM, Db Major
 
-Rhodes-led, dry electric bass, layback groove, rim-click, NO 808.
+Rhodes-led, electric bass very dry, layback groove, rim-click, NO 808, Male vocal, Raw, Direct, Dry, Simple melody, Chest voice dominant, No falsetto, no runs, no melisma, Precise articulation, Light room reverb, Clean mix, Verse1: Rhodes chords, sparse bass, confessional, gentle phrasing, Verse2: same contour; last 2 lines rise in intensity, Chorus: catchy singable hook, repeat identical; simple memorable melody, chest voice, Chorus2: bigger by arrangement only; no new vocal layers, Bridge: Rhodes + voice only, builds every bar, Outro: Rhodes fades, synth pad sustain, Single lead vocal throughout, No harmonies, no doubles
 
-Male vocal. Raw, Direct, Dry. Simple melody.
-Chest voice dominant. No falsetto, no runs, no melisma.
-발음 똑바로. Precise articulation, clear consonants, crisp diction. Light reverb. Clean mix.
-
-Verse1: Rhodes chords, sparse bass, confessional, gentle phrasing.
-Pre-chorus: dry, building.
-Verse2: same contour; last 2 lines rise in intensity.
-Chorus: catchy hook, emotional peak; upper chest belt, push high.
-Chorus2: bigger by arrangement only; no new vocal layers.
-Bridge: Rhodes + voice only, builds every bar.
-Outro: Rhodes fades, synth pad sustain.
-
-Single lead vocal. No harmonies, no doubles.
-
-Exclude style: Autotune, Vocoder, Choir, Backing vocals, Falsetto, Airy, Whisper, Runs, Melisma, Ad-libs, Rap, Hip-hop, Mumbling
+EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, Hip-hop, Bright, Mumble
