@@ -1,6 +1,6 @@
 # PM 18:00 "퇴근길" — Concept Document
 
-> **시리즈 SSOT** | Last updated: 2026-01-28
+> **시리즈 SSOT** | Last updated: 2026-01-28 (Track 01 "Exit" 추가)
 >
 > Station: PM 18:00 | 감정: 해방 → 서글픔 → 관조 → 귀환
 
@@ -83,7 +83,7 @@ Track 09-10: 문을 열면 따뜻함
 
 | # | 제목 (가제) | 감정 아크 | BPM | Key | Vocal | 컨셉 |
 |---|------------|----------|-----|-----|-------|------|
-| 01 | (퇴근) | 해방 | 95 | Db Major | Male | 신나는 퇴근, 해방감 |
+| 01 | **Exit** | 해방 | 115 | Eb Major | Male | 문 열고 나가는 해방감 (Uptown Funk 벤치마킹) |
 | 02 | **약속** | 서글픔 | 100 | Db Major | Male | 연락 돌리지만 다들 바빠 (자니 벤치마킹) |
 | 03 | **정류장** | 관조 | 100 | G minor | Male | 버스 정류장에서 홀로 기다림 (약속 커버) |
 | 04 | (풍경) | 관조 | 85 | G minor | Male | 스쳐가는 도시 불빛 |
@@ -97,17 +97,162 @@ Track 09-10: 문을 열면 따뜻함
 ### 3.2 BPM 아크
 
 ```
-95 → 100 → 88 → 85 → 82 → 80 → 78 → 76 → 80 → 85
-[상승]  [피크]  ────[하강]────  [최저]  ──[상승]──
+115 → 100 → 100 → 85 → 82 → 80 → 78 → 76 → 80 → 85
+[피크]  ────[하강]──────────────  [최저]  ──[상승]──
 ```
 
-→ Track 02 "약속"이 에너지 피크 (자니 벤치마킹)
+→ Track 01 "탈출"이 에너지 피크 (Uptown Funk 벤치마킹, 115 BPM)
 → Track 07-08에서 최저점 (성찰)
 → Track 09-10에서 다시 상승 (귀환의 따뜻함)
 
 ---
 
-## 4. Track 02 "약속" — 자니 벤치마킹
+## 4. Track 01 "Exit" — Uptown Funk 벤치마킹
+
+### 4.1 컨셉
+
+> 문 열고 나가는 순간의 해방감. 퇴근일 수도, 여행일 수도, 일상 탈출일 수도 있는 보편적 해방.
+
+### 4.2 Reference
+
+| 항목 | 값 |
+|------|-----|
+| **Primary Reference** | Mark Ronson - Uptown Funk (feat. Bruno Mars) |
+| **BPM** | 115 |
+| **Key** | Eb Major (blues inflection) |
+| **코드 진행** | 2-chord loop (Funk 정석) |
+| **장르** | Korean Pop-Funk / R&B |
+| **보컬 특성** | Chest voice, Speech-like rhythmic delivery |
+
+### 4.3 Keyword Axis
+
+**Primary (물성/행위):**
+- 모니터, 의자, 형광등, 문, 손잡이, 신발, 가방, 복도, 출구
+
+**Secondary (감각/상태):**
+- 끄다, 나가다, 열다, 뛰다, 놀다
+
+**Hook:**
+- "문 열고 나가면 / 공기가 달라져"
+
+**Forbidden (기존 시리즈):**
+- AM_0400: 윤곽, 잔향, 물안개, 습기, 적막
+- PM_1400: 멍, 얼음, 산책, 온기, 돛, 물결
+
+### 4.4 가사
+
+```
+[Intro]
+[instrumental]
+
+[Verse 1]
+모니터 꺼버렸어
+의자가 삐걱여
+형광등 깜빡여
+이제 그만 나갈 거야
+
+[Pre-Chorus]
+문 앞에 서 있어
+손잡이를 잡았어
+숨을 한번 고르고
+
+[Whisper] [Music Stop]
+셋.   둘.  하나.
+
+[Chorus]
+문 열고 나가면
+공기가 달라져
+아무 말 안 해도
+오늘 밤은 놀거야
+
+문 열고 나가면
+하루가 일어나
+어디로 가든지
+오늘 밤은 놀거야
+
+[Interlude]
+[instrumental — groove only, no new layers]
+
+[Verse 2]
+신발 끈 묶었어
+가방을 둘러매
+뒤는 안 돌아봐
+문 닫히면 끝이야
+
+[Pre-Chorus]
+복도를 걸어가
+출구가 보이네
+숨을 한번 고르고
+
+[Whisper][Music Stop]
+셋.   둘.  하나.
+
+[Chorus]
+문 열고 나가면
+공기가 달라져
+아무 말 안 해도
+오늘 밤은 놀거야
+
+문 열고 나가면
+하루가 일어나
+어디로 가든지
+오늘 밤은 놀거야
+
+[Bridge]
+[Drop — very minimal]
+발바닥엔 열기
+도시는 아직 켜져
+
+[Final Chorus]
+문 열고 나가면
+공기가 달라져
+지금 이 순간이
+오늘 밤의 전부야
+
+문 열고 나가면
+공기가 달라져
+길이 끝나도
+오늘 밤은 놀거야
+
+[Outro]
+[instrumental — fade with groove]
+```
+
+### 4.5 Style Prompt
+
+```
+Articulation. Clean, punchy modern mix. Very short room only.
+
+Korean Funk-Pop / R&B, Neo-soul 115 BPM, Eb Major.
+Eb Major base with subtle blues inflection in melody/riffs (occasional b3, b7 feel).
+
+Harmony: very simple 2-chord loop. No jazzy extensions. Groove first.
+Drums: tight dry kit. 16th hi-hat drives energy. Clap on 2&4. Kick supportive. No big fills.
+Bass: clean funky synth bass, short rhythmic notes, locks to hats/clap.
+Keys: minimal rhythmic stabs only, leave space. No lush pads or wide cinematic layers.
+
+Arrangement: sparse verse. Pre-chorus drops to near silence.
+
+Chorus snaps back with full groove, not louder vocals.
+
+Vocal: single male lead only. Chest voice, speech-like rhythmic delivery.
+Short phrases, precise consonants. Energy from timing, not power.
+Hook: catchy, repetitive, playful and confident (not aggressive).
+Outro: hook chant + groove fade.
+
+EXCLUDE: Ballad, cinematic build, dramatic chords, heavy reverb, echo tails, vintage funk tone, lo-fi, backing vocals, harmonies, doubles
+```
+
+### 4.6 Suno Parameters
+
+| 항목 | 값 |
+|------|-----|
+| **Weirdness** | 30 |
+| **Style Influence** | 70 |
+
+---
+
+## 5. Track 02 "약속" — 자니 벤치마킹
 
 ### 4.1 컨셉
 
@@ -233,7 +378,7 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 
 ---
 
-## 5. Track 03 "정류장" — 약속 커버
+## 6. Track 03 "정류장" — 약속 커버
 
 ### 5.1 컨셉
 
@@ -373,7 +518,7 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 
 ---
 
-## 6. Exclude Strategy (시리즈 공통)
+## 7. Exclude Strategy (시리즈 공통)
 
 ### 6.1 3그룹 체계
 
@@ -396,7 +541,7 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 
 ---
 
-## 7. 가사 철학
+## 8. 가사 철학
 
 ### 7.1 시리즈 가사 톤
 
@@ -418,7 +563,7 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 
 ---
 
-## 8. YouTube 메타 (예정)
+## 9. YouTube 메타 (예정)
 
 ### 8.1 제목 (SSOT v1.5)
 
@@ -438,7 +583,7 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 
 | 트랙 | 가사 | Style Prompt | Suno 생성 | QC |
 |------|------|--------------|----------|-----|
-| 01 | - | - | - | - |
+| 01 Exit | 완료 | 완료 | - | - |
 | 02 약속 | 완료 | 완료 | - | - |
 | 03 정류장 | 완료 | 완료 | - | - |
 | 04 | - | - | - | - |
