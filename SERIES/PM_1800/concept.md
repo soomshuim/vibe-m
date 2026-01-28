@@ -1,6 +1,6 @@
 # PM 18:00 "퇴근길" — Concept Document
 
-> **시리즈 SSOT** | Last updated: 2026-01-28 (Track 01 "Exit" 추가)
+> **시리즈 SSOT** | Last updated: 2026-01-29 (Track 04 "차창밖" 추가)
 >
 > Station: PM 18:00 | 감정: 해방 → 서글픔 → 관조 → 귀환
 
@@ -86,7 +86,7 @@ Track 09-10: 문을 열면 따뜻함
 | 01 | **Exit** | 해방 | 115 | Eb Major | Male | 문 열고 나가는 해방감 (Uptown Funk 벤치마킹) |
 | 02 | **약속** | 서글픔 | 100 | Db Major | Male | 연락 돌리지만 다들 바빠 (자니 벤치마킹) |
 | 03 | **정류장** | 관조 | 100 | G minor | Male | 버스 정류장에서 홀로 기다림 (약속 커버) |
-| 04 | (풍경) | 관조 | 85 | G minor | Male | 스쳐가는 도시 불빛 |
+| 04 | **차창밖** | 관조 | 85 | G minor | Female | 버스 차창 밖 풍경, Verse-driven |
 | 05 | (골목) | 친밀 | 82 | Db Major | Male | 집 근처 골목길 (기존 싱글 연계) |
 | 06 | (가로등) | 친밀 | 80 | C minor | Female | 익숙한 거리의 온기 |
 | 07 | (현관) | 성찰 | 78 | G minor | Male | 집 앞에서 하루 정리 |
@@ -518,9 +518,128 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 
 ---
 
-## 7. Exclude Strategy (시리즈 공통)
+## 7. Track 04 "차창밖" — Verse-Driven Contemplation
 
-### 6.1 3그룹 체계
+### 7.1 컨셉
+
+> 버스 차창 밖으로 스쳐가는 도시 풍경. 코러스 없이 Verse와 Refrain만으로 구성된 관조적 구조.
+
+### 7.2 구조적 특징
+
+| 항목 | 값 |
+|------|-----|
+| **구조** | Verse-driven (No Chorus) |
+| **BPM** | 85 |
+| **Key** | G minor |
+| **Vocal** | Female, Solo only |
+| **특징** | Refrain 반복, Flat melodic contour |
+
+### 7.3 Keyword Axis
+
+**Primary (물성/행위):**
+- 창밖, 불빛, 간판, 유리창, 입김, 버스, 아파트, 그림자
+
+**Secondary (감각/상태):**
+- 흘러가다, 번지다, 멈추다, 내리다
+
+**Refrain Hook:**
+- "그냥 흘러가는거야 / 오늘도 그런거야"
+
+### 7.4 가사
+
+```
+[Intro]
+[instrumental — 16 bars, Rhodes + light brush, vinyl crackle]
+
+[Verse 1]
+[Chest voice, Soft, Solo, No harmony, No ad-libs, No Backing vocals, No Doubles]
+창밖으로 불빛이 흘러
+간판들이 번져가
+멈춰 있는 건 나뿐인 것 같아
+다들 어디론가
+
+[Interlude]
+[instrumental — drums in softly, 8 bars]
+
+[Verse 2]
+[Chest voice, Soft, Solo, No harmony, No ad-libs, No Backing vocals, No Doubles]
+유리창에 입김 불어
+손가락으로 그려
+누군가의 창에도 불이 켜져
+저 안엔 누가 살까
+
+[Interlude]
+[instrumental — drums in softly, 8 bars]
+
+[Refrain]
+[Gentle, Solo, No harmony, No ad-libs, No Backing vocals, No Doubles]
+그냥 흘러가는거야
+차창 밖 강물처럼
+그냥 흘러가는거야
+오늘도 그런거야
+
+[Interlude]
+[instrumental — drums in softly, 8 bars]
+
+[Verse 3]
+[Chest voice, Intimate, Solo, No harmony, No ad-libs, No Backing vocals, No Doubles]
+버스가 멈추면 눈이 마주쳐
+인사 없이 고개 돌려
+아파트 불빛이 하나씩 꺼져
+나도 곧 내릴 거야
+
+[Bridge]
+[Sparse, Solo, No harmony, No ad-libs, No Backing vocals, No Doubles]
+불빛이 길어져
+그림자도 길어져
+
+[Refrain]
+[Gentle, Solo, No harmony, No ad-libs, No Backing vocals, No Doubles]
+그냥 흘러가는거야
+차창 밖 강물처럼
+그냥 흘러가는거야
+오늘도 그런거야
+
+[Outro]
+[instrumental — Rhodes fades, 16 bars]
+```
+
+### 7.5 Style Prompt
+
+```
+Korean Lo-fi R&B, 85 BPM, G minor
+
+Rhodes-led, supportive, Very sparse drums, Brush kit, Minimal bass, Warm pad underneath
+Female vocal, Soft, Chest voice, Intimate, Slightly breathy
+Narrow melodic range, Stepwise motion only, No dramatic jumps, Flat even contour
+Spoken-sung delivery, Unrushed phrasing, Gentle dynamics
+No vocal bends, No ornaments, No riffs, Straight simple melody
+No hook repetition, Verse-driven arrangement, Contemplative mood
+
+SINGLE LEAD VOCAL ONLY. No harmonies. No doubles. No backing vocals. No choir. No ad-libs. No runs. No melisma. Plain and simple delivery.
+
+Intro: Rhodes + light brush, 16 bars
+Interlude: Drums enter softly, 8 bars
+Bridge: Strip to Rhodes + voice
+Outro: Rhodes fades slowly, 16 bars
+
+Moderate reverb, Warm room ambience, EQ balanced, Clean mix
+
+EXCLUDE: Harmonies, Backing vocals, Doubles, Choir, Ad-libs, Runs, Melisma, Riffs, Vocal bends, Ornaments, Falsetto, Upbeat, Energetic, Bright, Dance, Fast, Aggressive
+```
+
+### 7.6 Suno Parameters
+
+| 항목 | 값 |
+|------|-----|
+| **Weirdness** | 30 |
+| **Style Influence** | 65 |
+
+---
+
+## 8. Exclude Strategy (시리즈 공통)
+
+### 8.1 3그룹 체계
 
 | 그룹 | 목적 | 키워드 |
 |------|------|--------|
@@ -528,7 +647,7 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 | **Group B (Harmony)** | 합창/화성 차단 | Choir, Stacked harmonies, Backing vocals |
 | **Group C (Station)** | 감정 충돌 방지 | 트랙별 조정 |
 
-### 6.2 트랙별 Group C 조정
+### 8.2 트랙별 Group C 조정
 
 | 감정 아크 | Group C Exclude |
 |----------|-----------------|
@@ -541,9 +660,9 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 
 ---
 
-## 8. 가사 철학
+## 9. 가사 철학
 
-### 7.1 시리즈 가사 톤
+### 9.1 시리즈 가사 톤
 
 | 감정 아크 | 가사 톤 | 예시 |
 |----------|---------|------|
@@ -554,7 +673,7 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 | 성찰 | 독백/내면 | "하루가 저물어" |
 | 귀환 | 따뜻함/안도 | "불빛이 새어나와" |
 
-### 7.2 한국어 검증 (K1-K3)
+### 9.2 한국어 검증 (K1-K3)
 
 모든 트랙은 LYRICS.md §0.4 체크리스트 통과 필수:
 - K1: 한국어여야만 성립하는가?
@@ -563,15 +682,15 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 
 ---
 
-## 9. YouTube 메타 (예정)
+## 10. YouTube 메타 (예정)
 
-### 8.1 제목 (SSOT v1.5)
+### 10.1 제목 (SSOT v1.5)
 
 ```
 [Playlist] [PM 06:00] soomshuim | 퇴근 후, 집에 닿기 전
 ```
 
-### 8.2 Description 키워드
+### 10.2 Description 키워드
 
 - 퇴근길, 저녁 6시, 귀가, 골목길
 - Korean R&B, Neo-soul, 감성 플레이리스트
@@ -586,7 +705,7 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 | 01 Exit | 완료 | 완료 | - | - |
 | 02 약속 | 완료 | 완료 | - | - |
 | 03 정류장 | 완료 | 완료 | - | - |
-| 04 | - | - | - | - |
+| 04 차창밖 | 완료 | 완료 | - | - |
 | 05 골목 | 기존 싱글 | - | - | - |
 | 06 | - | - | - | - |
 | 07 | - | - | - | - |
