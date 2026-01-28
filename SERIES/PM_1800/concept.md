@@ -607,11 +607,12 @@ EXCLUDE: Autotune, Vocoder, Choir, Backing vocals, Runs, Melisma, Ad-libs, Rap, 
 ### 7.5 Style Prompt
 
 ```
-Korean Lo-fi R&B, 85 BPM, G minor
+Korean Lo-fi Blues R&B, 85 BPM, G minor, Blues inflection
 
+Simple 3-4 chord loop, Catchy repetitive melody, Pop-friendly progression, Blues scale melody
 Rhodes-led, supportive, Very sparse drums, Brush kit, Minimal bass, Warm pad underneath
 Female vocal, Soft, Chest voice, Intimate, Slightly breathy
-Narrow melodic range, Stepwise motion only, No dramatic jumps, Flat even contour
+Narrow melodic range, Catchy singable topline, Memorable hook melody, Easy to hum
 Spoken-sung delivery, Unrushed phrasing, Gentle dynamics
 No vocal bends, No ornaments, No riffs, Straight simple melody
 No hook repetition, Verse-driven arrangement, Contemplative mood
