@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - Track 01 "Exit": Uptown Funk 벤치마킹, 115 BPM, Eb Major, Korean Funk-Pop
   - Track 02 "약속": 자니 벤치마킹, 100 BPM, Db Major, Neo-soul R&B
   - Track 03 "정류장": 약속 커버 (글자수 완벽 매칭 기법), G minor 변주
-  - Track 04 "차창밖": Verse-driven 구조, 85 BPM, G minor, Female vocal, Solo only
+  - Track 04 "차창밖": Verse-driven 구조, 85 BPM, G minor, Female vocal, Solo only, Blues R&B
   - concept.md 전체 구조 (10곡 플랜, 감정 아크, BPM 아크)
   - Reference/song/자니.pdf, uptown-funk.pdf 추가
 - **LYRICS.md §2.3 메타태그 동작 원리** `2805367`

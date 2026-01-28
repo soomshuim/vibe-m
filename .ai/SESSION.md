@@ -6,13 +6,14 @@
 
 ## 완료된 작업
 
-### 2026-01-29 - PM_1800 Track 04 차창밖 `217fe40`
+### 2026-01-29 - PM_1800 Track 04 차창밖 `217fe40` `4401d5a`
 
 - [x] **Track 04 "차창밖" 완성**
   - 85 BPM, G minor, Female vocal
   - Verse-driven 구조 (No Chorus, Refrain만 사용)
   - Solo vocal 강제 (No harmonies, No doubles, No backing vocals)
-  - Flat melodic contour, No vocal bends/ornaments
+  - Blues R&B 장르, Blues scale melody
+  - Catchy singable topline, 3-4 chord loop
   - Intro에 vinyl crackle 추가
   - W:30 / I:65 Suno 파라미터
 
