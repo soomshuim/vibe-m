@@ -7,7 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
-- **PM_1800 "퇴근길" 시리즈** `2805367` `0c6b49e` `216aee5`
+- **PM_1800 "퇴근길" 시리즈** `2805367` `0c6b49e` `216aee5` `6a1a4ba`
+  - Track 01 "Exit": Uptown Funk 벤치마킹, 115 BPM, Eb Major, Korean Funk-Pop
   - Track 02 "약속": 자니 벤치마킹, 100 BPM, Db Major, Neo-soul R&B
   - Track 03 "정류장": 약속 커버 (글자수 완벽 매칭 기법), G minor 변주
   - concept.md 전체 구조 (10곡 플랜, 감정 아크, BPM 아크)

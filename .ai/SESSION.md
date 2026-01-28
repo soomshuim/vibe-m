@@ -6,13 +6,14 @@
 
 ## 완료된 작업
 
-### 2026-01-28 - PM_1800 퇴근길 시리즈 `216aee5`
+### 2026-01-28 - PM_1800 퇴근길 시리즈 `216aee5` `6a1a4ba`
 
 - [x] **PM_1800 "퇴근길" 시리즈 추가**
+  - Track 01 "Exit": Uptown Funk 벤치마킹, 115 BPM, Eb Major, Korean Funk-Pop
   - Track 02 "약속": 자니 벤치마킹, 100 BPM, Db Major
   - Track 03 "정류장": 약속 커버 (글자수 완벽 매칭), G minor
   - concept.md: 10곡 플랜, 감정 아크, BPM 아크, 가사 포함
-  - W:35 / I:70 Suno 파라미터
+  - W:30 / I:70 Suno 파라미터 (Track 01)
 
 - [x] **LYRICS.md §2.3 메타태그 동작 원리 추가**
   - `[AA]` = 구조 태그 (낭독 X)
