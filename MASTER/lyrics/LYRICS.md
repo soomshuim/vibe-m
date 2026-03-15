@@ -1,7 +1,7 @@
 # Wavvy LYRICS.md
 
-Version: 4.0
-Last Updated: 2026-03-14
+Version: 4.1
+Last Updated: 2026-03-15
 Purpose: Suno 가사 입력(Lyrics) 규칙 SSOT
 
 ---
@@ -38,11 +38,43 @@ Purpose: Suno 가사 입력(Lyrics) 규칙 SSOT
 - 핵심 감정/장면 키워드 2-3개
 - 시리즈 `LYRICS_DNA.md` 있으면 참조 (톤, 이미지 소재 풀)
 - 길이: 1-3줄 (짧을수록 Suno 자유도 높음)
+- **약칭 구조 포맷 권장** — 구조 태그를 압축하여 키워드 공간 확보 (§1.4 참조)
 
 **예시:**
 ```
 Korean lyrics about midday heat, hazy afternoon, drowsy rhythm
 Minimal Korean lyrics, repetitive hook chant, English hook in chorus
+```
+
+### 1.4 약칭 구조 포맷
+
+> 풀 태그(`[intro][verse 1]...`)는 200자 중 ~45%를 구조에 소모. 약칭 포맷으로 압축하면 키워드 공간이 2배+ 확보됨.
+> Suno 인식 확인 완료 (2026-03-15).
+
+**약칭 매핑:**
+
+| 약칭 | 풀 태그 |
+|------|---------|
+| I | Intro |
+| V / V1 / V2 | Verse / Verse 1 / Verse 2 |
+| PC | Pre-Chorus |
+| C | Chorus |
+| PC2 | Post-Chorus |
+| B | Bridge |
+| O | Outro |
+
+**사용법:**
+- 하이픈 연결로 1행 구조 선언: `I-V1-PC-C-PC2-V2-C-B-C-O`
+- 나머지 글자 수를 키워드에 할당
+
+**예시 (풀 태그 vs 약칭):**
+```
+# 풀 태그 (~89자 구조)
+[intro][verse 1]Minimal Korean, sunlight[pre-chorus][chorus]Hook chant[post-chorus]Ad-lib[verse 2][chorus][bridge][chorus][outro]
+
+# 약칭 (~30자 구조, 키워드 공간 +60자)
+I-V1-PC-C-PC2-V2-C-B-C-O
+Minimal Korean, midday noon heat, harsh sunlight, lunch hour pause, scene not emotion, repetitive hook chant, English hook "feel the light"
 ```
 
 ### 1.3 Do / Don't

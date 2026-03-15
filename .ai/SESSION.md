@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-03-14
+> Last updated: 2026-03-15
 
 ## 진행 중
 
@@ -15,11 +15,14 @@
   - ✅ 잔존물 정리: lessons-learned dead 섹션 삭제 + SESSION stale 메모 제거
   - ✅ Track 03 "볕 (Sunlit)" 작사 프롬프트 작성 (198자, 풀 구조+DNA)
   - ✅ LYRICS.md §1.2 소괄호 금지 규칙 반영
+  - ✅ LYRICS.md v4.1 — §1.4 약칭 구조 포맷 추가 (I-V-PC-C 등, Suno 인식 확인)
+  - ✅ Track 03 Suno 테스트: 가사 생성됨, "아침" 톤 이슈 발견 → noon 키워드 보강 필요
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
-- [ ] Track 01-04 작사 프롬프트 채우기 (선택)
+- [ ] Track 03 프롬프트 리비전 (약칭 구조 + noon 키워드 보강)
+- [ ] Track 01-02, 04 작사 프롬프트 채우기
 - [ ] Track 05-15 Style + Lyric Prompt 디자인
 - [ ] concept.md Track Map 업데이트 (제목 반영)
 - [ ] Suno 테스트 (Track 01-04)

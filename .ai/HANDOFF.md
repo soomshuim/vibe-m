@@ -2,6 +2,16 @@
 
 ---
 HANDOFF: Claude -> User
+Date: 2026-03-15 13:08:45
+Project: ~/Project/wavvy
+Agent: 혼합 (사용자 Suno 테스트 피드백 + Claude 문서 업데이트)
+Summary: LYRICS.md v4.1 — §1.4 약칭 구조 포맷 추가 (I-V-PC-C 등). Suno 인식 확인. 구조 태그 45%→15% 압축으로 키워드 공간 2배+ 확보. Track 03 테스트 결과 "아침" 톤 이슈 발견.
+Next-TODO: Track 03 프롬프트 리비전 (약칭 구조 + noon 키워드 보강). Track 01-02, 04 프롬프트.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-14 18:28:00
 Project: ~/Project/wavvy
 Agent: 혼합 (사용자 Suno 테스트 피드백 + Claude 프롬프트/문서 작성)
