@@ -22,6 +22,8 @@
   - ✅ Track 06 "그림자 (Shadow)" 신규 디자인 (E, 107, Bb Minor) → Male로 변경
   - ✅ Track 07 "낮꿈 (Daydream)" 신규 디자인 (E, 102, Db Major, Female)
   - ✅ Track 04 Suno 테스트 PASS — 가사 자체 생성 품질 우수 (만트라+서사 대비 구조)
+  - ✅ Track 05-07 Suno 테스트 PASS (2026-03-16)
+  - ✅ Track 08 "차가워진 (Cold)" 신규 디자인 (D, 112, E Minor, Male, djembe bass) + Suno PASS
   - Track 01-02는 Empty 모드 확정 (가사 없이 PASS)
   - 보컬 비율 변경: Female 70/Male 30 → **Female 60/Male 40** (F9:M6)
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
@@ -29,9 +31,7 @@
 ## 다음 할 일
 
 - [ ] Track 03 프롬프트 리비전 (약칭 구조 + noon 키워드 보강)
-- [ ] Track 05 Suno 테스트 (스타일 톤 조정 버전)
-- [ ] Track 06 Suno 테스트
-- [ ] Track 08-15 Style + Lyric Prompt 디자인 (남은 Male 4 / Female 5)
+- [ ] Track 09-15 Style + Lyric Prompt 디자인 (남은 Male 3 / Female 4)
 - [ ] concept.md Track Map 업데이트 (제목 + Style C→E 재배정 반영)
 - [ ] Wavvy 로고 핸드라이팅 애니메이션 (Canva Pro)
 - [ ] 썸네일 템플릿 제작 (Wavvy {HH:MM})

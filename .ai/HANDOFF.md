@@ -5,8 +5,8 @@ HANDOFF: Claude -> User
 Date: 2026-03-16 20:39:00
 Project: ~/Project/wavvy
 Agent: 혼합 (사용자 Suno 테스트 + Claude 프롬프트/스타일 작성)
-Summary: Track 04-07 프롬프트 디자인 완료. Track 06 Male 변경. Track 07 "낮꿈 (Daydream)" 추가. 보컬 비율 60:40으로 변경 (F9:M6). Track 04 Suno PASS.
-Next-TODO: Track 05-07 Suno 테스트. Track 08-15 디자인 (Male 4 / Female 5). concept.md Track Map 업데이트.
+Summary: Track 04-08 프롬프트 디자인 + Suno 테스트 완료. Track 01-08 전곡 PASS. Track 08 "차가워진 (Cold)" djembe bass.
+Next-TODO: Track 09-15 디자인 (Male 3 / Female 4). concept.md Track Map 업데이트.
 Commits: (이번 커밋)
 ---
 
