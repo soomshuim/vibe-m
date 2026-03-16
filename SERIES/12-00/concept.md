@@ -12,7 +12,7 @@ Last Updated: 2026-03-14
 - **테마**: 제한 없음 — 사랑, 그리움, 후회, 이별, 여유, 축제 모든 감정 허용
 - **톤**: 트랙별 자유. 점심시간 배경 연결 권장 (필수 아님)
 - **가사**: Suno 자체 작사 (작사 프롬프트 또는 비움). Style에 보컬 지시 유지
-- **보컬**: Female, Chest voice
+- **보컬**: Female 60% / Male 40% (F9:M6), Chest voice
 - **금지**: 시티팝 표현 문법 → `LYRICS_DNA.md` §6 (프롬프트 작성 시 참고)
 - **15트랙 / 60분+**
 
@@ -86,28 +86,29 @@ kalimba
 
 ## Track Map (15트랙)
 
-| # | 제목 | Style | BPM | Key | 분위기 |
-|---|------|-------|-----|-----|--------|
-| 01 | (TBD) | E | 105 | C Major | |
-| 02 | (TBD) | C | 108 | D Major | |
-| 03 | (TBD) | E | 100 | Eb Major | |
-| 04 | (TBD) | D | 110 | F Minor | |
-| 05 | (TBD) | E | 104 | Ab Major | |
-| 06 | (TBD) | C | 107 | Bb Minor | |
-| 07 | (TBD) | E | 102 | Db Major | |
-| 08 | (TBD) | D | 112 | E Minor | |
-| 09 | (TBD) | E | 106 | F# Major | |
-| 10 | (TBD) | C | 108 | A Minor | |
-| 11 | (TBD) | E | 100 | B Major | |
-| 12 | (TBD) | D | 105 | D Minor | |
-| 13 | (TBD) | E | 110 | Eb Minor | |
-| 14 | (TBD) | C | 104 | G Major | |
-| 15 | (TBD) | E | 107 | A Major | |
+| # | 제목 | Style | BPM | Key | Vocal | 상태 |
+|---|------|-------|-----|-----|-------|------|
+| 01 | 한낮 (Haze) | E | 105 | C Major | F | ✅ PASS |
+| 02 | 먼지 (Dust) | E | 105 | C Major | F | ✅ PASS |
+| 03 | 볕 (Sunlit) | D | 108 | D Major | M | ✅ PASS |
+| 04 | 무음 (Mute) | D | 110 | F Minor | F | ✅ PASS |
+| 05 | 갈증 (Thirst) | E | 104 | Ab Major | F | ✅ PASS |
+| 06 | 그림자 (Shadow) | E | 107 | Bb Minor | M | ✅ PASS |
+| 07 | 낮꿈 (Daydream) | E | 102 | Db Major | F | ✅ PASS |
+| 08 | 차가워진 (Cold) | D | 112 | E Minor | M | ✅ PASS |
+| 09 | (TBD) | E | 106 | F# Major | | |
+| 10 | (TBD) | E | 108 | A Minor | | |
+| 11 | (TBD) | E | 100 | B Major | | |
+| 12 | (TBD) | D | 105 | D Minor | | |
+| 13 | (TBD) | E | 110 | Eb Minor | | |
+| 14 | (TBD) | E | 104 | G Major | | |
+| 15 | (TBD) | E | 107 | A Major | | |
 
 ### 배분 규칙
 - **BPM**: 100-112 (Hard Gate H1)
 - **Key**: Major 8 : Minor 7 (≈50:50), 인접 트랙 같은 Key 금지
-- **Style**: E 8 : C 4 : D 3 (E 53%)
+- **Style**: E 11 : D 4 (Style C 제거)
+- **Vocal**: Female 9 : Male 6 (60:40)
 
 ---
 
