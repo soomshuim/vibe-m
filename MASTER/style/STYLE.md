@@ -30,6 +30,10 @@ Purpose: Style Prompt 핵심 규칙 (SSOT)
 **금지:** `eh, uh, hm, ah, oh, yeah, woah, ooh`
 **Style:** `No filler sounds. Clean vocal lines only.`
 
+### 0.6 Articulation First
+- **Style Prompt 첫 단어로 `Articulation.` 필수**
+- Suno가 발음/아티큘레이션을 최우선으로 인식하도록 보장
+
 ---
 
 ## 1. Core Sound DNA
@@ -151,7 +155,7 @@ Higher register emphasis is encouraged. Natural vocal strain allowed.
 | S1 | Raw Vocal | Raw, Solid, Direct, Dry |
 | S2 | Vocal Persona | gender + tone + delivery |
 | S3 | Chest voice | 진성 강제 |
-| S4 | Articulation | articulation |
+| S4 | Articulation First | Style 첫 단어 `Articulation.` |
 | S5 | Reverb | Moderate reverb, room ambience |
 | S6 | Sound Engineering | EQ balanced sound, clean mix |
 | S7 | Harmony Guard | 2줄 필수 |

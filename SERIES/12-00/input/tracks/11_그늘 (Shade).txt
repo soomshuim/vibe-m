@@ -5,7 +5,7 @@ Key: B Major
 Length: 3min+
 
 === STYLE ===
-Korean Afrobeats, Afro-Drill, 100 BPM, B Major, 808 slide bass, snappy rimshot snare, trap hi-hat rolls, syncopated African percussion, warm melodic lead, deep bass, shaker, minimal cowbell, Instrumental, no vocals, melodic synth lead carries the hook, relaxed groove, wide stereo, spacious mix, moderate reverb, room ambience, EQ balanced sound, clean mix
+Articulation. Korean Afrobeats, Afro-Drill, 100 BPM, B Major, 808 slide bass, snappy rimshot snare, trap hi-hat rolls, syncopated African percussion, warm melodic lead, deep bass, shaker, minimal cowbell, Instrumental, no vocals, melodic synth lead carries the hook, relaxed groove, wide stereo, spacious mix, moderate reverb, room ambience, EQ balanced sound, clean mix
 
 === EXCLUDE ===
 autotune heavy, vocoder, EDM drops, big room, choir, stacked harmonies, backing vocal layers, doubled vocals, kalimba, vocals, singing

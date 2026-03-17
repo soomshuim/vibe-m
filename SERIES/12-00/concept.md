@@ -26,7 +26,7 @@ Last Updated: 2026-03-14
 ### Style C — Minimal Afro
 
 ```
-Korean Afrobeats, minimal production, {BPM} BPM, {Key},
+Articulation. Korean Afrobeats, minimal production, {BPM} BPM, {Key},
 sparse arrangement, vocal-forward mix,
 soft shaker, light congas, subtle cowbell, minimal hi-hat,
 808 bass groove locked with kick, restrained low-end,
@@ -43,7 +43,7 @@ Higher register emphasis is encouraged. Natural vocal strain allowed.
 ### Style D — Afropiano
 
 ```
-Korean Afrobeats, Afropiano, {BPM} BPM, {Key},
+Articulation. Korean Afrobeats, Afropiano, {BPM} BPM, {Key},
 log drum groove, warm jazzy piano chords, rolling percussion,
 trap hi-hats, shaker rhythm, rimshot snare,
 808 bass groove locked with kick, deep low-end,
@@ -60,7 +60,7 @@ Higher register emphasis is encouraged. Natural vocal strain allowed.
 ### Style E — Afro-Drill
 
 ```
-Korean Afrobeats, Afro-Drill, {BPM} BPM, {Key},
+Articulation. Korean Afrobeats, Afro-Drill, {BPM} BPM, {Key},
 808 slide bass, snappy rimshot snare, trap hi-hat rolls,
 syncopated African percussion, dark moody melody,
 deep bass, shaker, minimal cowbell,
