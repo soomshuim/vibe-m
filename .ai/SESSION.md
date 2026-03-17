@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-03-15
+> Last updated: 2026-03-17
 
 ## 진행 중
 
@@ -24,15 +24,19 @@
   - ✅ Track 04 Suno 테스트 PASS — 가사 자체 생성 품질 우수 (만트라+서사 대비 구조)
   - ✅ Track 05-07 Suno 테스트 PASS (2026-03-16)
   - ✅ Track 08 "차가워진 (Cold)" 신규 디자인 (D, 112, E Minor, Male, djembe bass) + Suno PASS
+  - ✅ Track 09 "맥박 (Pulse)" 신규 디자인 (E, 106, F# Major, Female) + Suno PASS (2026-03-17)
+  - ✅ Track 10 "잔상 (Afterimage)" 신규 디자인 (E, 108, A Minor, Male) + Suno PASS (2026-03-17)
+  - ✅ Track 11 "그늘 (Shade)" 신규 디자인 (E, 100, B Major, Instrumental) + Suno PASS (2026-03-17)
+  - ✅ Track 12 "기다림 (Waiting)" 신규 디자인 (D, 105, D Minor, Female) + Suno PASS (2026-03-17)
   - Track 01-02는 Empty 모드 확정 (가사 없이 PASS)
   - 보컬 비율 변경: Female 70/Male 30 → **Female 60/Male 40** (F9:M6)
+  - **현황: 12/15 트랙 PASS (Track 11 Instrumental 포함)**
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
 - [ ] Track 03 프롬프트 리비전 (약칭 구조 + noon 키워드 보강)
-- [ ] Track 09-15 Style + Lyric Prompt 디자인 (남은 Male 3 / Female 4)
-- [ ] concept.md Track Map 업데이트 (제목 + Style C→E 재배정 반영)
+- [ ] Track 13-15 Style + Lyric Prompt 디자인 (남은 Female 2 / Male 2)
 - [ ] Wavvy 로고 핸드라이팅 애니메이션 (Canva Pro)
 - [ ] 썸네일 템플릿 제작 (Wavvy {HH:MM})
 

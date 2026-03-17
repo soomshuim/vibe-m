@@ -96,10 +96,10 @@ kalimba
 | 06 | 그림자 (Shadow) | E | 107 | Bb Minor | M | ✅ PASS |
 | 07 | 낮꿈 (Daydream) | E | 102 | Db Major | F | ✅ PASS |
 | 08 | 차가워진 (Cold) | D | 112 | E Minor | M | ✅ PASS |
-| 09 | (TBD) | E | 106 | F# Major | | |
-| 10 | (TBD) | E | 108 | A Minor | | |
-| 11 | (TBD) | E | 100 | B Major | | |
-| 12 | (TBD) | D | 105 | D Minor | | |
+| 09 | 맥박 (Pulse) | E | 106 | F# Major | F | ✅ PASS |
+| 10 | 잔상 (Afterimage) | E | 108 | A Minor | M | ✅ PASS |
+| 11 | 그늘 (Shade) | E | 100 | B Major | Inst | ✅ PASS |
+| 12 | 기다림 (Waiting) | D | 105 | D Minor | F | ✅ PASS |
 | 13 | (TBD) | E | 110 | Eb Minor | | |
 | 14 | (TBD) | E | 104 | G Major | | |
 | 15 | (TBD) | E | 107 | A Major | | |

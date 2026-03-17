@@ -2,6 +2,16 @@
 
 ---
 HANDOFF: Claude -> User
+Date: 2026-03-17 23:27
+Project: ~/Project/wavvy
+Agent: 혼합 (사용자 Suno 테스트 + Claude 프롬프트/스타일 작성)
+Summary: Track 09-12 프롬프트 디자인 + Suno 전곡 PASS. 09 맥박(Pulse/F), 10 잔상(Afterimage/M), 11 그늘(Shade/Inst), 12 기다림(Waiting/F). concept.md Track Map 업데이트 완료. 현황 12/15 PASS.
+Next-TODO: Track 13-15 디자인 (F2/M2 남음) + Track 03 프롬프트 리비전
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-16 20:39:00
 Project: ~/Project/wavvy
 Agent: 혼합 (사용자 Suno 테스트 + Claude 프롬프트/스타일 작성)
