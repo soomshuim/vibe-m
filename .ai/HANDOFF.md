@@ -2,6 +2,16 @@
 
 ---
 HANDOFF: Claude -> User
+Date: 2026-03-18 00:37
+Project: ~/Project/wavvy
+Agent: 혼합 (사용자 Suno 테스트 + Claude 프롬프트/스타일/문서 작성)
+Summary: Track 13 균열(Crack/M) 디자인 + Suno PASS. Articulation First 규칙 STYLE.md §0.6 추가 + concept.md 템플릿 + Track 01-13 전곡 반영. Team Meeting으로 SSOT 위치 결정. 현황 13/15 PASS.
+Next-TODO: Track 14-15 디자인 (F2/M1 남음) + Track 03 프롬프트 리비전
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-17 23:27
 Project: ~/Project/wavvy
 Agent: 혼합 (사용자 Suno 테스트 + Claude 프롬프트/스타일 작성)

@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-03-17
+> Last updated: 2026-03-18
 
 ## 진행 중
 
@@ -30,13 +30,17 @@
   - ✅ Track 12 "기다림 (Waiting)" 신규 디자인 (D, 105, D Minor, Female) + Suno PASS (2026-03-17)
   - Track 01-02는 Empty 모드 확정 (가사 없이 PASS)
   - 보컬 비율 변경: Female 70/Male 30 → **Female 60/Male 40** (F9:M6)
-  - **현황: 12/15 트랙 PASS (Track 11 Instrumental 포함)**
+  - ✅ Track 13 "균열 (Crack)" 신규 디자인 (E, 110, Eb Minor, Male) + Suno PASS (2026-03-18)
+  - ✅ STYLE.md §0.6 Articulation First 규칙 추가 + 전곡 반영 (2026-03-18)
+  - Track 01-02는 Empty 모드 확정 (가사 없이 PASS)
+  - 보컬 비율 변경: Female 70/Male 30 → **Female 60/Male 40** (F9:M6)
+  - **현황: 13/15 트랙 PASS (Track 11 Instrumental 포함)**
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
 - [ ] Track 03 프롬프트 리비전 (약칭 구조 + noon 키워드 보강)
-- [ ] Track 13-15 Style + Lyric Prompt 디자인 (남은 Female 2 / Male 2)
+- [ ] Track 14-15 Style + Lyric Prompt 디자인 (남은 Female 2 / Male 1)
 - [ ] Wavvy 로고 핸드라이팅 애니메이션 (Canva Pro)
 - [ ] 썸네일 템플릿 제작 (Wavvy {HH:MM})
 

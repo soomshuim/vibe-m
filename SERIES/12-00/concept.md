@@ -100,7 +100,7 @@ kalimba
 | 10 | 잔상 (Afterimage) | E | 108 | A Minor | M | ✅ PASS |
 | 11 | 그늘 (Shade) | E | 100 | B Major | Inst | ✅ PASS |
 | 12 | 기다림 (Waiting) | D | 105 | D Minor | F | ✅ PASS |
-| 13 | (TBD) | E | 110 | Eb Minor | | |
+| 13 | 균열 (Crack) | E | 110 | Eb Minor | M | ✅ PASS |
 | 14 | (TBD) | E | 104 | G Major | | |
 | 15 | (TBD) | E | 107 | A Major | | |
 
