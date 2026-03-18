@@ -102,7 +102,7 @@ kalimba
 | 12 | 기다림 (Waiting) | D | 105 | D Minor | F | ✅ PASS |
 | 13 | 균열 (Crack) | E | 110 | Eb Minor | M | ✅ PASS |
 | 14 | 설렘 (Flutter) | E | 104 | G Major | F | ✅ PASS |
-| 15 | 온기 (Warmth) | E | 107 | A Major | F | |
+| 15 | 온기 (Warmth) | E | 107 | A Major | F | ✅ PASS |
 | 16 | 미열 (Low Fever) | D | 103 | F# Minor | F | |
 | 17 | 진동 (Vibration) | E | 109 | C Minor | M | |
 | 18 | 얼룩 (Stain) | D | 101 | G Minor | F | |

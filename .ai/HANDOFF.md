@@ -2,6 +2,16 @@
 
 ---
 HANDOFF: Claude -> User
+Date: 2026-03-18 23:47
+Project: ~/Project/wavvy
+Agent: 혼합 (사용자 가사 직접 작성 + Claude 파일 반영/문서 업데이트)
+Summary: Track 15 온기(Warmth) 사용자 직접 가사 반영 (Chorus 영한 혼합, Verse/PC/Outro instrumental) + Suno PASS. 현황 15/20 PASS.
+Next-TODO: Track 16-20 Suno 테스트 (5곡 순차) + Track 03 프롬프트 리비전
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-18 20:23
 Project: ~/Project/wavvy
 Agent: 혼합 (사용자 Suno 테스트 + Claude 프롬프트/문서 작성)

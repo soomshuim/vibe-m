@@ -46,12 +46,14 @@
   - 보컬 비율: **F12:M7:Inst1** (60:37:5)
   - 4막 구조: 기(01-05) → 승(06-10) → 전(11-15) → 결(16-20)
   - ✅ Track 14 "설렘 (Flutter)" Suno PASS (2026-03-18)
-  - **현황: 14/20 트랙 PASS (Track 11 Instrumental 포함)**
+  - ✅ Track 15 "온기 (Warmth)" 사용자 직접 가사 작성 + Suno PASS (2026-03-18)
+    - Chorus 중심 영한 혼합 가사, Verse/Pre-Chorus/Outro instrumental
+  - **현황: 15/20 트랙 PASS (Track 11 Instrumental 포함)**
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
-- [ ] Track 14-20 Suno 테스트 (7곡 순차 진행)
+- [ ] Track 16-20 Suno 테스트 (5곡 순차 진행)
 - [ ] Track 03 프롬프트 리비전 (약칭 구조 + noon 키워드 보강)
 - [ ] Wavvy 로고 핸드라이팅 애니메이션 (Canva Pro)
 - [ ] 썸네일 템플릿 제작 (Wavvy {HH:MM})
