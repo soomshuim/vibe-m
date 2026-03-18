@@ -1,0 +1,15 @@
+Track: 온기 (Warmth)
+Type: E
+BPM: 107
+Key: A Major
+Length: 3min+
+
+=== STYLE ===
+Articulation. Korean Afrobeats, Afro-Drill, 107 BPM, A Major, 808 slide bass, snappy rimshot snare, trap hi-hat rolls, syncopated African percussion, glowing warm melody, deep bass, shaker, minimal cowbell, Female vocal: Raw, rhythmic chanting, Chest voice, Dry, percussive articulation, repetitive hook, easy cadence, wide stereo, spacious mix, moderate reverb, room ambience, EQ balanced sound, clean mix, Lead vocal remains single and dominant throughout, No stacked or choir-like harmonies, Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers, Chorus vocal may be delivered with stronger intensity or light belt, Higher register emphasis is encouraged, Natural vocal strain allowed
+
+=== EXCLUDE ===
+autotune heavy, vocoder, EDM drops, big room, choir, stacked harmonies, backing vocal layers, doubled vocals, kalimba
+
+=== LYRICS ===
+I-V1-PC-C-PC2-V2-C-B-C-O
+Minimal Korean, midday noon warmth, sunlight melting into skin, gentle heat spreading inside, comfort without reason, repetitive chant hook, English hook in chorus with Korean

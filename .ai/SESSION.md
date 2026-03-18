@@ -32,15 +32,27 @@
   - 보컬 비율 변경: Female 70/Male 30 → **Female 60/Male 40** (F9:M6)
   - ✅ Track 13 "균열 (Crack)" 신규 디자인 (E, 110, Eb Minor, Male) + Suno PASS (2026-03-18)
   - ✅ STYLE.md §0.6 Articulation First 규칙 추가 + 전곡 반영 (2026-03-18)
+  - ✅ Track 14 "설렘 (Flutter)" 디자인 (E, 104, G Major, Female) (2026-03-18)
+  - ✅ **20곡 확장 결정** — Team Meeting (Product/Design/Strategy) 전원 합의 (2026-03-18)
+  - ✅ Track 15-20 디자인 완료 + 프롬프트 파일 생성 (2026-03-18)
+    - 15 온기 (Warmth) — E, 107, A Major, F
+    - 16 미열 (Low Fever) — D, 103, F# Minor, F
+    - 17 진동 (Vibration) — E, 109, C Minor, M
+    - 18 얼룩 (Stain) — D, 101, G Minor, F
+    - 19 터짐 (Burst) — E, 111, B Minor, M
+    - 20 고요 (Stillness) — D, 100, F Major, F
+  - ✅ concept.md v5.0 — 20트랙 확장 + 배분 규칙 업데이트
   - Track 01-02는 Empty 모드 확정 (가사 없이 PASS)
-  - 보컬 비율 변경: Female 70/Male 30 → **Female 60/Male 40** (F9:M6)
-  - **현황: 13/15 트랙 PASS (Track 11 Instrumental 포함)**
+  - 보컬 비율: **F12:M7:Inst1** (60:37:5)
+  - 4막 구조: 기(01-05) → 승(06-10) → 전(11-15) → 결(16-20)
+  - ✅ Track 14 "설렘 (Flutter)" Suno PASS (2026-03-18)
+  - **현황: 14/20 트랙 PASS (Track 11 Instrumental 포함)**
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
+- [ ] Track 14-20 Suno 테스트 (7곡 순차 진행)
 - [ ] Track 03 프롬프트 리비전 (약칭 구조 + noon 키워드 보강)
-- [ ] Track 14-15 Style + Lyric Prompt 디자인 (남은 Female 2 / Male 1)
 - [ ] Wavvy 로고 핸드라이팅 애니메이션 (Canva Pro)
 - [ ] 썸네일 템플릿 제작 (Wavvy {HH:MM})
 

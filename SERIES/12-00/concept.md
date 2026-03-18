@@ -1,7 +1,7 @@
 # 12:00 Korean Afrobeats
 
-Version: 4.0
-Last Updated: 2026-03-14
+Version: 5.0
+Last Updated: 2026-03-18
 
 ---
 
@@ -12,9 +12,9 @@ Last Updated: 2026-03-14
 - **테마**: 제한 없음 — 사랑, 그리움, 후회, 이별, 여유, 축제 모든 감정 허용
 - **톤**: 트랙별 자유. 점심시간 배경 연결 권장 (필수 아님)
 - **가사**: Suno 자체 작사 (작사 프롬프트 또는 비움). Style에 보컬 지시 유지
-- **보컬**: Female 60% / Male 40% (F9:M6), Chest voice
+- **보컬**: Female 60% / Male 37% / Inst 5% (F12:M7:Inst1), Chest voice
 - **금지**: 시티팝 표현 문법 → `LYRICS_DNA.md` §6 (프롬프트 작성 시 참고)
-- **15트랙 / 60분+**
+- **20트랙 / 80분+**
 
 ---
 
@@ -84,7 +84,7 @@ kalimba
 
 ---
 
-## Track Map (15트랙)
+## Track Map (20트랙)
 
 | # | 제목 | Style | BPM | Key | Vocal | 상태 |
 |---|------|-------|-----|-----|-------|------|
@@ -101,14 +101,19 @@ kalimba
 | 11 | 그늘 (Shade) | E | 100 | B Major | Inst | ✅ PASS |
 | 12 | 기다림 (Waiting) | D | 105 | D Minor | F | ✅ PASS |
 | 13 | 균열 (Crack) | E | 110 | Eb Minor | M | ✅ PASS |
-| 14 | (TBD) | E | 104 | G Major | | |
-| 15 | (TBD) | E | 107 | A Major | | |
+| 14 | 설렘 (Flutter) | E | 104 | G Major | F | ✅ PASS |
+| 15 | 온기 (Warmth) | E | 107 | A Major | F | |
+| 16 | 미열 (Low Fever) | D | 103 | F# Minor | F | |
+| 17 | 진동 (Vibration) | E | 109 | C Minor | M | |
+| 18 | 얼룩 (Stain) | D | 101 | G Minor | F | |
+| 19 | 터짐 (Burst) | E | 111 | B Minor | M | |
+| 20 | 고요 (Stillness) | D | 100 | F Major | F | |
 
 ### 배분 규칙
 - **BPM**: 100-112 (Hard Gate H1)
-- **Key**: Major 8 : Minor 7 (≈50:50), 인접 트랙 같은 Key 금지
-- **Style**: E 11 : D 4 (Style C 제거)
-- **Vocal**: Female 9 : Male 6 (60:40)
+- **Key**: Major 10 : Minor 10 (50:50), 인접 트랙 같은 Key 금지
+- **Style**: E 13 : D 7 (65:35)
+- **Vocal**: Female 12 : Male 7 : Inst 1 (60:37:5)
 
 ---
 
