@@ -105,14 +105,14 @@ kalimba
 | 15 | 온기 (Warmth) | E | 107 | A Major | F | ✅ PASS |
 | 16 | 미열 (Low Fever) | D | 103 | F# Minor | F | |
 | 17 | 진동 (Vibration) | E | 109 | C Minor | M | |
-| 18 | 얼룩 (Stain) | D | 101 | G Minor | F | |
+| 18 | 얼룩 (Stain) | E | 102 | Db Major | F | |
 | 19 | 터짐 (Burst) | E | 111 | B Minor | M | |
 | 20 | 고요 (Stillness) | D | 100 | F Major | F | |
 
 ### 배분 규칙
 - **BPM**: 100-112 (Hard Gate H1)
-- **Key**: Major 10 : Minor 10 (50:50), 인접 트랙 같은 Key 금지
-- **Style**: E 13 : D 7 (65:35)
+- **Key**: Major 11 : Minor 9 (55:45), 인접 트랙 같은 Key 금지
+- **Style**: E 14 : D 6 (70:30)
 - **Vocal**: Female 12 : Male 7 : Inst 1 (60:37:5)
 
 ---

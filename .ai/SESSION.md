@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-03-18
+> Last updated: 2026-03-19
 
 ## 진행 중
 
@@ -38,7 +38,7 @@
     - 15 온기 (Warmth) — E, 107, A Major, F
     - 16 미열 (Low Fever) — D, 103, F# Minor, F
     - 17 진동 (Vibration) — E, 109, C Minor, M
-    - 18 얼룩 (Stain) — D, 101, G Minor, F
+    - 18 얼룩 (Stain) — E, 102, Db Major, F (Track 07 동일 스타일)
     - 19 터짐 (Burst) — E, 111, B Minor, M
     - 20 고요 (Stillness) — D, 100, F Major, F
   - ✅ concept.md v5.0 — 20트랙 확장 + 배분 규칙 업데이트
@@ -48,12 +48,15 @@
   - ✅ Track 14 "설렘 (Flutter)" Suno PASS (2026-03-18)
   - ✅ Track 15 "온기 (Warmth)" 사용자 직접 가사 작성 + Suno PASS (2026-03-18)
     - Chorus 중심 영한 혼합 가사, Verse/Pre-Chorus/Outro instrumental
-  - **현황: 15/20 트랙 PASS (Track 11 Instrumental 포함)**
+  - ✅ Track 18 "얼룩 (Stain)" → Track 07 동일 스타일로 변경 (D→E, Afropiano→Afro-Drill, 102 BPM, Db Major) (2026-03-19)
+  - ✅ Track 18 Suno PASS (2026-03-19)
+  - ✅ Track 19 "터짐 (Burst)" LYRICS QA 트리밍 208→196자 (2026-03-19)
+  - **현황: 16/20 트랙 PASS (Track 11 Instrumental 포함)**
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
-- [ ] Track 16-20 Suno 테스트 (5곡 순차 진행)
+- [ ] Track 16, 17, 19, 20 Suno 테스트 (4곡 남음)
 - [ ] Track 03 프롬프트 리비전 (약칭 구조 + noon 키워드 보강)
 - [ ] Wavvy 로고 핸드라이팅 애니메이션 (Canva Pro)
 - [ ] 썸네일 템플릿 제작 (Wavvy {HH:MM})
