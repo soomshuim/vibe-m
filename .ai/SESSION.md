@@ -39,7 +39,7 @@
     - 16 미열 (Low Fever) — D, 103, F# Minor, F
     - 17 진동 (Vibration) — E, 109, C Minor, M
     - 18 얼룩 (Stain) — E, 102, Db Major, F (Track 07 동일 스타일)
-    - 19 터짐 (Burst) — E, 111, B Minor, M
+    - 19 폭발 (Burst) — E, 111, B Minor, M
     - 20 고요 (Stillness) — D, 100, F Major, F
   - ✅ concept.md v5.0 — 20트랙 확장 + 배분 규칙 업데이트
   - Track 01-02는 Empty 모드 확정 (가사 없이 PASS)
@@ -50,15 +50,15 @@
     - Chorus 중심 영한 혼합 가사, Verse/Pre-Chorus/Outro instrumental
   - ✅ Track 18 "얼룩 (Stain)" → Track 07 동일 스타일로 변경 (D→E, Afropiano→Afro-Drill, 102 BPM, Db Major) (2026-03-19)
   - ✅ Track 18 Suno PASS (2026-03-19)
-  - ✅ Track 19 "터짐 (Burst)" LYRICS QA 트리밍 208→196자 (2026-03-19)
-  - **현황: 16/20 트랙 PASS (Track 11 Instrumental 포함)**
+  - ✅ Track 19 "폭발 (Burst)" LYRICS QA 트리밍 208→196자 (2026-03-19)
+  - ✅ Track 16-19 Suno PASS (2026-03-20) — Track 19 제목 터짐→폭발 변경
+  - ✅ Track 20 "고요 (Stillness)" Instrumental 전환 + PASS (2026-03-20)
+  - **현황: 20/20 트랙 PASS (Track 11, 20 Instrumental)**
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
-- [ ] Track 16, 17, 19, 20 Suno 테스트 (4곡 남음)
-- [ ] Track 03 프롬프트 리비전 (약칭 구조 + noon 키워드 보강)
-- [ ] Wavvy 로고 핸드라이팅 애니메이션 (Canva Pro)
+- [x] ~~Track 20 Suno 테스트~~ → Instrumental PASS (2026-03-20)
 - [ ] 썸네일 템플릿 제작 (Wavvy {HH:MM})
 
 ## 핸드오프 메모

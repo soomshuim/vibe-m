@@ -103,11 +103,11 @@ kalimba
 | 13 | 균열 (Crack) | E | 110 | Eb Minor | M | ✅ PASS |
 | 14 | 설렘 (Flutter) | E | 104 | G Major | F | ✅ PASS |
 | 15 | 온기 (Warmth) | E | 107 | A Major | F | ✅ PASS |
-| 16 | 미열 (Low Fever) | D | 103 | F# Minor | F | |
-| 17 | 진동 (Vibration) | E | 109 | C Minor | M | |
-| 18 | 얼룩 (Stain) | E | 102 | Db Major | F | |
-| 19 | 터짐 (Burst) | E | 111 | B Minor | M | |
-| 20 | 고요 (Stillness) | D | 100 | F Major | F | |
+| 16 | 미열 (Low Fever) | D | 103 | F# Minor | F | ✅ PASS |
+| 17 | 진동 (Vibration) | E | 109 | C Minor | M | ✅ PASS |
+| 18 | 얼룩 (Stain) | E | 102 | Db Major | F | ✅ PASS |
+| 19 | 폭발 (Burst) | E | 111 | B Minor | M | ✅ PASS |
+| 20 | 고요 (Stillness) | D | 100 | F Major | Inst | ✅ PASS |
 
 ### 배분 규칙
 - **BPM**: 100-112 (Hard Gate H1)

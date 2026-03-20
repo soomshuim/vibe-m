@@ -16,7 +16,7 @@
 
 ### Design Director
 - **4막 구조 제안**: 기(01-05) → 승(06-10) → 전(11-15) → 결(16-20)
-- **후반 감정 곡선**: 온기→미열→진동→얼룩→터짐→고요
+- **후반 감정 곡선**: 온기→미열→진동→얼룩→폭발→고요
 - **Track 19→20 콘트라스트**: BPM 111→100 = 앨범 최대 에너지 대비
 
 ### Strategy Consultant
@@ -54,7 +54,7 @@
 | 16 | 미열 (Low Fever) | D | 103 | F# Minor | F |
 | 17 | 진동 (Vibration) | E | 109 | C Minor | M |
 | 18 | 얼룩 (Stain) | D | 101 | G Minor | F |
-| 19 | 터짐 (Burst) | E | 111 | B Minor | M |
+| 19 | 폭발 (Burst) | E | 111 | B Minor | M |
 | 20 | 고요 (Stillness) | D | 100 | F Major | F |
 
 ### 퀄리티 스코어
