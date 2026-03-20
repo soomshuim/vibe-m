@@ -56,6 +56,7 @@ Purpose: AI 실행 설정 (How)
 | 장르 루브릭 | `MASTER/rubrics/[GENRE]_RUBRIC.md` |
 | CLI 스펙 | `MASTER/cli/SPEC.md` |
 | 워크플로우 | `MASTER/WORKFLOWS.md` |
+| **파일 리네이밍** | `MASTER/WORKFLOWS.md` §0 + 기존 시리즈 `input/tracks/*.wav` 패턴 확인 |
 | FFmpeg 버그 | `.ai/lessons-learned.md` |
 
 ---

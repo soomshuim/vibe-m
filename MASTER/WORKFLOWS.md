@@ -25,9 +25,18 @@
 ### 파일 네이밍
 | 파일명 | 용도 |
 |--------|------|
-| `{N}_{제목}.txt` | 통합 (Style + Exclude + Lyrics) |
+| `{NN}_{제목}.txt` | 통합 (Style + Exclude + Lyrics) |
+| `{NN}__{제목}__{감정}__{장르}__{BPM}.wav` | Suno 완성 오디오 |
 
-예: `02_멀어져.txt`
+예: `02_멀어져.txt`, `02__멀어져__Distant__Chillhop__87.wav`
+
+**WAV 네이밍 규칙:**
+- 구분자: 더블 언더스코어 `__`
+- 제목: **사용자가 부여한 원본 파일명** 유지 (txt 제목과 다를 수 있음)
+- 감정: 영문 (Title Case, 공백 허용)
+- 장르: 시리즈 Style Template명 (Afro-Drill, Afropiano, Chillhop 등)
+- BPM: 숫자만
+- **기존 시리즈 컨벤션 확인 필수** — 리네임 전 다른 시리즈 `input/tracks/*.wav` 참조
 
 ### 파일 포맷
 ```
