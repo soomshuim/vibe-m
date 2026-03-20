@@ -1,3 +1,12 @@
+---
+HANDOFF: Claude -> User
+Date: 2026-03-21 01:20:00
+Project: ~/Project/wavvy
+Agent: 혼합 (Claude 파이프라인/문서 + 사용자 Suno/썸네일/영상)
+Summary: 12-00 Korean Afrobeats 시리즈 PACK COMPLETE. 썸네일 확정(밀림 젬베), WAV 리네이밍 20곡, 루프 영상 팔린드롬, vfade+pack 102.7분, YouTube 메타 "리듬 맛집" 컨셉. 워크플로우 보완 2건 (WAV 네이밍 + YouTube 설명 참조).
+Next-TODO: YouTube 업로드 + Shorts 제작
+Commits: (이번 커밋)
+---
 # HANDOFF Log
 
 ---
