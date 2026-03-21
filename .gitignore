@@ -24,6 +24,10 @@ venv/
 # *.mp3
 # *.wav
 
+# Generated video files (regenerable via vfade/pack)
+**/input/loop_xfade.mp4
+**/input/loop_xfade_test.mp4
+
 # IDE
 .idea/
 .vscode/

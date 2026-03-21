@@ -62,6 +62,10 @@
   - ✅ **PACK COMPLETE** — final.mp4 102.7분, 20곡 x2, -14 LUFS (2026-03-21)
   - ✅ concept.md v5.1 — YouTube 메타데이터 완성 ("리듬 맛집" 컨셉) (2026-03-21)
   - ✅ 워크플로우 보완 2건 — WAV 네이밍 컨벤션 + YouTube 설명 참조 규칙 (2026-03-20/21)
+  - ✅ **음질 최적화 리서치** — YouTube DASH 오디오 파이프라인 조사, 4K 업스케일 무효 확인 (2026-03-21)
+  - ✅ **wavvy.py 오디오 설정 개선** — AAC 320k/44.1kHz → FLAC lossless/48kHz, generation loss 1회로 제한 (2026-03-21)
+  - ✅ **4K 리마스터** — original.mp4(네이티브 4K) → 팔린드롬 loop → vfade → pack (2026-03-21)
+  - ✅ **PACK v2 COMPLETE** — final.mkv 4K/FLAC/48kHz, 102.7분, 16GB (2026-03-21)
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
@@ -70,11 +74,12 @@
 - [x] ~~썸네일 제작~~ → 밀림 젬베 확정 (2026-03-20)
 - [x] ~~PACK~~ → 102.7분 완성 (2026-03-21)
 - [x] ~~YouTube 메타데이터~~ → concept.md v5.1 (2026-03-21)
-- [ ] YouTube 업로드
+- [ ] YouTube 업로드 (final.mkv 16GB — 업로드 시간 소요 예상)
 - [ ] Shorts 제작 (하이라이트 트랙 선정)
 
 ## 핸드오프 메모
 
 - 채널 브랜딩: `wavvy.md` §7 참조
-- 12-00 final.mp4: `SERIES/12-00/output/final.mp4` (102.7분)
+- 12-00 final.mkv: `SERIES/12-00/output/final.mkv` (4K, FLAC 48kHz, 102.7분, 16GB)
 - 썸네일 원본: `SERIES/12-00/input/thumb.psd`
+- 리서치 리포트: `report/2026-03-21_youtube-audio-quality-optimization.md`

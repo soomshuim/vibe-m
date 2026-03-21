@@ -41,10 +41,12 @@ DEFAULT_TRUE_PEAK = -1.0
 DEFAULT_PREVIEW_SEC = 30
 
 VIDEO_CODEC = 'libx264'
-AUDIO_CODEC = 'aac'
-AUDIO_BITRATE = '320k'
+AUDIO_CODEC = 'flac'
+AUDIO_CODEC_LOSSY = 'aac'
+AUDIO_BITRATE_LOSSY = '384k'
 VIDEO_CRF = 18
 VIDEO_PRESET = 'medium'
+SAMPLE_RATE = 48000
 
 # FFmpeg binary paths (ffmpeg-full has drawtext support)
 FFMPEG_FULL_PATH = '/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg'
@@ -404,7 +406,7 @@ class ProjectPaths:
 
         # Output files
         self.preview_mp4 = self.output_dir / 'preview.mp4'
-        self.final_mp4 = self.output_dir / 'final.mp4'
+        self.final_mkv = self.output_dir / 'final.mkv'
         self.provenance_md = self.output_dir / 'provenance.md'
         self.upload_csv = self.output_dir / 'upload.csv'
         self.report_json = self.output_dir / 'report.json'
@@ -595,7 +597,7 @@ def merge_tracks_with_crossfade(
     tracks: list[TrackInfo],
     output_path: Path,
     crossfade_sec: float = DEFAULT_CROSSFADE_SEC,
-    sample_rate: int = 44100
+    sample_rate: int = SAMPLE_RATE
 ) -> bool:
     """
     Merge multiple audio tracks using sequential acrossfade filter.
@@ -679,7 +681,7 @@ def normalize_track(
         '-o', str(output_path),
         '-t', str(target_lufs),
         '-tp', str(true_peak),
-        '-ar', '44100',
+        '-ar', str(SAMPLE_RATE),
         '-f',  # Force overwrite
         '-pr'  # Progress bar
     ]
@@ -729,11 +731,18 @@ def render_video(
         '-c:v', VIDEO_CODEC,
         '-preset', VIDEO_PRESET,
         '-crf', str(VIDEO_CRF),
-        '-c:a', AUDIO_CODEC,
-        '-b:a', AUDIO_BITRATE,
         '-pix_fmt', 'yuv420p',
-        '-movflags', '+faststart',
     ]
+
+    # Choose audio codec based on output container
+    output_ext = output_path.suffix.lower()
+    if output_ext == '.mkv':
+        # Lossless: FLAC in MKV (no bitrate needed)
+        cmd.extend(['-c:a', AUDIO_CODEC])
+    else:
+        # Lossy: AAC in MP4
+        cmd.extend(['-c:a', AUDIO_CODEC_LOSSY, '-b:a', AUDIO_BITRATE_LOSSY])
+        cmd.extend(['-movflags', '+faststart'])
 
     if use_shortest:
         cmd.append('-shortest')
@@ -907,8 +916,8 @@ def preprocess_loop_video(
     output_path: Path,
     crop_filter: Optional[str] = None,
     logo_path: Optional[Path] = None,
-    logo_position: tuple[int, int] = (96, 68),
-    logo_scale: float = 0.5
+    logo_position: tuple[int, int] = (192, 136),
+    logo_scale: float = 1.0
 ) -> bool:
     """
     Preprocess loop video with optional crop and logo overlay.
@@ -919,7 +928,7 @@ def preprocess_loop_video(
         crop_filter: FFmpeg crop filter string (e.g., 'crop=1920:1048:0:16,scale=1920:1080')
         logo_path: Path to logo PNG file
         logo_position: (x, y) position for logo overlay
-        logo_scale: Logo scale factor (default: 0.5 = 50%)
+        logo_scale: Logo scale factor (default: 1.0 = 100%)
 
     Returns:
         True if successful, False otherwise
@@ -1068,7 +1077,7 @@ def generate_upload_csv(
         tags.add(track.genre)
 
     row = {
-        'video_path': str(paths.final_mp4),
+        'video_path': str(paths.final_mkv),
         'title': title,
         'description': '',  # See concept.md "YouTube Draft" section for description
         'tags': ','.join(sorted(tags)),
@@ -1476,8 +1485,8 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
             processed_video_path,
             crop_filter=crop_filter,
             logo_path=logo_path,
-            logo_position=(96, 68),
-            logo_scale=0.5
+            logo_position=(192, 136),
+            logo_scale=1.0
         ):
             log_error("Video preprocessing failed")
             sys.exit(1)
@@ -1559,7 +1568,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
         (
             ffmpeg
             .input(str(tracks_to_merge[0].path))
-            .output(str(paths.merged_wav), ar=44100, ac=2)
+            .output(str(paths.merged_wav), ar=SAMPLE_RATE, ac=2)
             .overwrite_output()
             .run(capture_stdout=True, capture_stderr=True)
         )
@@ -1581,7 +1590,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
         paths.merged_wav,
         video_source,
         paths.thumbnail,
-        paths.final_mp4,
+        paths.final_mkv,
         use_shortest=True
     ):
         log_error("Failed to render video")
@@ -1609,7 +1618,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
     click.echo(click.style("=" * 50, fg='green'))
     click.echo("")
     click.echo("Deliverables:")
-    click.echo(f"  Video:       {paths.final_mp4}")
+    click.echo(f"  Video:       {paths.final_mkv}")
     click.echo(f"  Provenance:  {paths.provenance_md}")
     click.echo(f"  Upload CSV:  {paths.upload_csv}")
     click.echo(f"  Report:      {paths.report_json}")
@@ -1702,7 +1711,7 @@ def vfade(path: Path, fade: float, duration: float, test: bool, crop: bool, logo
             preprocessed_path,
             crop_filter=crop_filter,
             logo_path=logo_path,
-            logo_position=(96, 68)
+            logo_position=(192, 136)
         ):
             log_error("Preprocessing failed")
             sys.exit(1)
@@ -2022,9 +2031,9 @@ def shorts(
         '-c:v', VIDEO_CODEC,
         '-preset', VIDEO_PRESET,
         '-crf', str(VIDEO_CRF),
-        # Audio encoding
-        '-c:a', AUDIO_CODEC,
-        '-b:a', AUDIO_BITRATE,
+        # Audio encoding (Shorts = MP4, use lossy)
+        '-c:a', AUDIO_CODEC_LOSSY,
+        '-b:a', AUDIO_BITRATE_LOSSY,
         # Output settings
         '-pix_fmt', 'yuv420p',
         '-movflags', '+faststart',
