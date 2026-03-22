@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-03-21
+> Last updated: 2026-03-22
 
 ## 진행 중
 
@@ -66,6 +66,10 @@
   - ✅ **wavvy.py 오디오 설정 개선** — AAC 320k/44.1kHz → FLAC lossless/48kHz, generation loss 1회로 제한 (2026-03-21)
   - ✅ **4K 리마스터** — original.mp4(네이티브 4K) → 팔린드롬 loop → vfade → pack (2026-03-21)
   - ✅ **PACK v2 COMPLETE** — final.mkv 4K/FLAC/48kHz, 102.7분, 16GB (2026-03-21)
+  - ✅ **Shorts 제작** — Track 18 "얼룩 (Stain)" 전곡, 팔린드롬 루프 + 로고(288px, 60, 160) (2026-03-22)
+    - 영상: Downloads/loop.mov (1190x2116, 30.7s) → 팔린드롬 → 루프
+    - 로고: 288px, left 60px, top 160px
+    - Output: output/shorts/short_얼룩.mp4 (~123MB, 2:49)
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
@@ -75,7 +79,7 @@
 - [x] ~~PACK~~ → 102.7분 완성 (2026-03-21)
 - [x] ~~YouTube 메타데이터~~ → concept.md v5.1 (2026-03-21)
 - [ ] YouTube 업로드 (final.mkv 16GB — 업로드 시간 소요 예상)
-- [ ] Shorts 제작 (하이라이트 트랙 선정)
+- [x] ~~Shorts 제작~~ → Track 18 "얼룩 (Stain)" 완성 (2026-03-22)
 
 ## 핸드오프 메모
 

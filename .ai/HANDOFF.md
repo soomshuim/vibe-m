@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-03-22 16:41:00
+Project: ~/Project/wavvy
+Agent: 혼합 (사용자 영상 소스 + Claude FFmpeg/문서)
+Summary: 12-00 Shorts 제작 — Track 18 "얼룩 (Stain)" 전곡(2:49). Downloads/loop.mov 팔린드롬 루프 + 로고(288px, 60, 160). shorts.mov 삭제.
+Next-TODO: YouTube 업로드 (final.mkv + short_얼룩.mp4)
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-21 09:10:00
 Project: ~/Project/wavvy
 Agent: Claude
