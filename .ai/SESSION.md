@@ -1,8 +1,23 @@
 # Session State — Wavvy
 
-> Last updated: 2026-03-22
+> Last updated: 2026-03-27
 
 ## 진행 중
+
+- **22-00 편안한 R&B 시리즈** — 신규 플래닝 시작 (2026-03-27)
+  - 시간대: 22:00 (밤 10시) — 21:00 밤산책(City Pop)과 23:30 불면 사이
+  - 장르: 편안한 R&B
+  - 기존 R&B 시리즈 차별점 검토: 04-00(Slow R&B/불면), 14-00(Soft R&B/나른)
+  - 톤/공간/트랙수 방향 3가지 제안 → 사용자 선택 대기
+    - A. 실내 안식 (소파, 조명, 차, 이불)
+    - B. 느긋한 밤 (와인, 음악, 창밖 야경, 목욕)
+    - C. 하루 회고 (감정 정리, 잔잔한 회상)
+
+- **12-00 Korean Afrobeats 시리즈** — PACK v2 COMPLETE (2026-03-22)
+  - **현황: 20/20 트랙 PASS, PACK v2 4K/FLAC 완성, Shorts 1건 완성**
+  - 남은 작업: YouTube 업로드 (final.mkv 16GB)
+
+- **brand/logo_wavvy.psd** — 로컬 삭제 상태 (의도 확인 필요)
 
 - **12-00 Korean Afrobeats 시리즈** — Suno 자체 작사 방식 전환 완료 (2026-03-14)
   - ✅ 워크플로우 리팩토링: 풀 가사 작성 → 작사 프롬프트 / 비움
@@ -74,12 +89,9 @@
 
 ## 다음 할 일
 
-- [x] ~~Track 20 Suno 테스트~~ → Instrumental PASS (2026-03-20)
-- [x] ~~썸네일 제작~~ → 밀림 젬베 확정 (2026-03-20)
-- [x] ~~PACK~~ → 102.7분 완성 (2026-03-21)
-- [x] ~~YouTube 메타데이터~~ → concept.md v5.1 (2026-03-21)
-- [ ] YouTube 업로드 (final.mkv 16GB — 업로드 시간 소요 예상)
-- [x] ~~Shorts 제작~~ → Track 18 "얼룩 (Stain)" 완성 (2026-03-22)
+- [ ] **22-00 시리즈 concept.md 작성** — 톤/공간 확정 후 Series DNA + Style Templates + 트랙 리스트
+- [ ] YouTube 업로드 (12-00 final.mkv 16GB)
+- [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
 ## 핸드오프 메모
 

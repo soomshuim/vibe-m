@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-03-27 10:15:00
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 22-00 편안한 R&B 시리즈 플래닝 시작. 기존 R&B 시리즈(04-00/14-00) 차별점 분석 + 21-00 concept 참조. 톤/공간/트랙수 3방향 제안 (실내 안식/느긋한 밤/하루 회고). Figma MCP Server 캔버스 쓰기 개방 공유 (TDS 통합 별도 검토).
+Next-TODO: 22-00 톤/공간 확정 → concept.md 작성 → 트랙 디자인
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-22 16:41:00
 Project: ~/Project/wavvy
 Agent: 혼합 (사용자 영상 소스 + Claude FFmpeg/문서)
