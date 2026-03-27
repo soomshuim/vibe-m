@@ -1,18 +1,17 @@
-Track: 커튼 (Close)
-Type: A
-BPM: 65
-Key: D Major
+Track: 달빛 (Moonlight)
+Type: B
+BPM: 67
+Key: E Minor
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Ambient Chill R&B, 65 BPM, D Major,
-warm ambient pad, soft synth texture, sparse Rhodes chords,
-minimal percussion, soft shaker only, no kick, no snare,
-deep warm sub-bass, restrained low-end,
-Female vocal: Intimate, Gentle, Chest voice, Dry, articulation,
-soft sustained chorus, gentle emotional lift,
-spacious floating mix, wide stereo, deep warmth,
-moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
+Articulation. Korean Quiet Storm, 67 BPM, E Minor,
+felt piano-led, warm Rhodes chords, soft brush kit,
+rim-click, warm bass groove, subtle strings in chorus,
+Male vocal: Warm, Intimate, Chest voice, Dry, articulation,
+warm baritone, conversational phrasing, gentle sustained chorus hook,
+cozy intimate mix, wide stereo, warm low-end,
+moderate reverb, bedroom ambience, EQ balanced sound, clean mix.
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
 Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
 Chorus vocal may be delivered with tender intensity or gentle sustained note.
@@ -27,4 +26,4 @@ upbeat, energetic, hype, party
 
 === LYRICS ===
 I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, closing curtains, shutting out the world, private quiet space, safe gentle darkness
+Korean, chorus mostly Korean with a short English phrase, moonlight through curtain, silver glow on floor, quiet night, gentle luminance

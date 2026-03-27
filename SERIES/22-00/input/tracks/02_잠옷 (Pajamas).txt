@@ -1,16 +1,17 @@
-Track: 베개 (Sink)
-Type: C
-BPM: 63
-Key: Eb Minor
+Track: 잠옷 (Pajamas)
+Type: A
+BPM: 76
+Key: G Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Acoustic Chill R&B, 63 BPM, Eb Minor,
-nylon guitar-led, gentle finger-picked pattern, minimal arrangement,
-soft shaker, no kick, rim-click only, warm acoustic bass,
-Male vocal: Soft, Intimate, Chest voice, Dry, articulation,
-warm baritone, low register, lullaby-like phrasing, gentle melodic contour,
-organic stripped-back mix, wide stereo, natural warmth,
+Articulation. Korean Ambient Chill R&B, 76 BPM, G Major,
+warm ambient pad, soft synth texture, sparse Rhodes chords,
+minimal percussion, soft shaker only, no kick, no snare,
+deep warm sub-bass, restrained low-end,
+Male vocal: Intimate, Gentle, Chest voice, Dry, articulation,
+warm baritone, low register, soft sustained chorus, gentle emotional lift,
+spacious floating mix, wide stereo, deep warmth,
 moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
 Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
@@ -26,4 +27,4 @@ upbeat, energetic, hype, party
 
 === LYRICS ===
 I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, head on pillow, sinking in, weight of the day finally gone, soft landing
+Korean, chorus mostly Korean with a short English phrase, changing into soft clothes, shedding the day, fabric against skin, relief of comfort

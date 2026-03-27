@@ -1,17 +1,17 @@
-Track: 조명 (Dim)
-Type: C
-BPM: 77
-Key: Bb Major
+Track: 소파 (Sofa)
+Type: B
+BPM: 75
+Key: D Minor
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Acoustic Chill R&B, 77 BPM, Bb Major,
-nylon guitar-led, gentle finger-picked pattern, minimal arrangement,
-soft shaker, no kick, rim-click only, warm acoustic bass,
-Female vocal: Soft, Intimate, Chest voice, Dry, articulation,
-lullaby-like phrasing, gentle melodic contour,
-organic stripped-back mix, wide stereo, natural warmth,
-moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
+Articulation. Korean Quiet Storm, 75 BPM, D Minor,
+felt piano-led, warm Rhodes chords, soft brush kit,
+rim-click, warm bass groove, subtle strings in chorus,
+Female vocal: Warm, Intimate, Chest voice, Dry, articulation,
+conversational phrasing, gentle sustained chorus hook,
+cozy intimate mix, wide stereo, warm low-end,
+moderate reverb, bedroom ambience, EQ balanced sound, clean mix.
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
 Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
 Chorus vocal may be delivered with tender intensity or gentle sustained note.
@@ -26,4 +26,4 @@ upbeat, energetic, hype, party
 
 === LYRICS ===
 I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, dimming the lights, room softening, gentle shadows, warmth in low light
+Korean, chorus mostly Korean with a short English phrase, sinking into sofa, body releasing weight, nowhere to be, settling into stillness

@@ -106,24 +106,24 @@ upbeat, energetic, hype, party
 
 | # | 제목 | Style | BPM | Key | Vocal | 상태 |
 |---|------|-------|-----|-----|-------|------|
-| 01 | 스위치 (Off) | B | 78 | Eb Major | F | ✅ PASS |
-| 02 | 잠옷 (Comfort) | A | 76 | G Major | M | 미정 |
-| 03 | 조명 (Dim) | C | 77 | Bb Major | F | 미정 |
-| 04 | 소파 (Settle) | B | 75 | D Minor | F | 미정 |
+| 01 | 스위치 (Switch) | B | 78 | Eb Major | F | ✅ PASS |
+| 02 | 잠옷 (Pajamas) | A | 76 | G Major | M | 미정 |
+| 03 | 조명 (Lights) | C | 77 | Bb Major | F | 미정 |
+| 04 | 소파 (Sofa) | B | 75 | D Minor | F | 미정 |
 | 05 | 야경 (Nightscape) | A | 74 | F Minor | M | 미정 |
-| 06 | 목욕 (Soak) | B | 73 | Ab Major | F | 미정 |
+| 06 | 목욕 (Bath) | B | 73 | Ab Major | F | 미정 |
 | 07 | 향 (Scent) | A | 72 | E Major | M | 미정 |
 | 08 | 체온 (Warm) | C | 71 | C Major | F | 미정 |
 | 09 | 풀림 (Unwind) | C | 70 | A Minor | F | 미정 |
-| 10 | 찻잔 (Steep) | B | 72 | Db Major | M | 미정 |
-| 11 | 일기 (Pages) | C | 68 | F Major | F | 미정 |
-| 12 | 호흡 (Breathe) | A | 66 | Bb Major | Inst | 미정 |
-| 13 | 달빛 (Glow) | B | 67 | E Minor | M | 미정 |
-| 14 | 무게 (Release) | C | 66 | G Minor | F | 미정 |
-| 15 | 커튼 (Close) | A | 65 | D Major | F | 미정 |
-| 16 | 이불 (Cocoon) | B | 64 | Ab Major | F | 미정 |
-| 17 | 베개 (Sink) | C | 63 | Eb Minor | M | 미정 |
-| 18 | 눈꺼풀 (Drift) | A | 62 | C Minor | F | 미정 |
+| 10 | 찻잔 (Teacup) | B | 72 | Db Major | M | 미정 |
+| 11 | 일기 (Diary) | C | 68 | F Major | F | 미정 |
+| 12 | 호흡 (Breath) | A | 66 | Bb Major | Inst | 미정 |
+| 13 | 달빛 (Moonlight) | B | 67 | E Minor | M | 미정 |
+| 14 | 무게 (Weight) | C | 66 | G Minor | F | 미정 |
+| 15 | 커튼 (Curtain) | A | 65 | D Major | F | 미정 |
+| 16 | 이불 (Blanket) | B | 64 | Ab Major | F | 미정 |
+| 17 | 베개 (Pillow) | C | 63 | Eb Minor | M | 미정 |
+| 18 | 눈꺼풀 (Eyelid) | A | 62 | C Minor | F | 미정 |
 | 19 | 자장가 (Lullaby) | B | 61 | Gb Major | M | 미정 |
 | 20 | 꿈 (Dream) | A | 60 | A Major | F | 미정 |
 

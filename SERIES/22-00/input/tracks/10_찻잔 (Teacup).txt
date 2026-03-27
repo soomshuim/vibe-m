@@ -1,11 +1,11 @@
-Track: 달빛 (Glow)
+Track: 찻잔 (Teacup)
 Type: B
-BPM: 67
-Key: E Minor
+BPM: 72
+Key: Db Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Quiet Storm, 67 BPM, E Minor,
+Articulation. Korean Quiet Storm, 72 BPM, Db Major,
 felt piano-led, warm Rhodes chords, soft brush kit,
 rim-click, warm bass groove, subtle strings in chorus,
 Male vocal: Warm, Intimate, Chest voice, Dry, articulation,
@@ -26,4 +26,4 @@ upbeat, energetic, hype, party
 
 === LYRICS ===
 I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, moonlight through curtain, silver glow on floor, quiet night, gentle luminance
+Korean, chorus mostly Korean with a short English phrase, herbal tea before sleep, steam from cup, warm hands wrapped, sipping slowly, calm

@@ -1,15 +1,15 @@
-Track: 찻잔 (Steep)
+Track: 스위치 (Switch)
 Type: B
-BPM: 72
-Key: Db Major
+BPM: 78
+Key: Eb Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Quiet Storm, 72 BPM, Db Major,
+Articulation. Korean Quiet Storm, 78 BPM, Eb Major,
 felt piano-led, warm Rhodes chords, soft brush kit,
 rim-click, warm bass groove, subtle strings in chorus,
-Male vocal: Warm, Intimate, Chest voice, Dry, articulation,
-warm baritone, conversational phrasing, gentle sustained chorus hook,
+Female vocal: Warm, Intimate, Chest voice, Dry, articulation,
+conversational phrasing, gentle sustained chorus hook,
 cozy intimate mix, wide stereo, warm low-end,
 moderate reverb, bedroom ambience, EQ balanced sound, clean mix.
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
@@ -26,4 +26,4 @@ upbeat, energetic, hype, party
 
 === LYRICS ===
 I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, herbal tea before sleep, steam from cup, warm hands wrapped, sipping slowly, calm
+Korean, chorus mostly Korean with a short English phrase, turning off the day, switching from busy to still, quiet exhale, finally stopping
