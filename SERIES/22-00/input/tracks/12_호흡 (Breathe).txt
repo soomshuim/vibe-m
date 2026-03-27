@@ -1,0 +1,25 @@
+Track: 호흡 (Breathe)
+Type: A
+BPM: 66
+Key: Bb Major
+Length: 3min+
+
+=== STYLE ===
+Articulation. Korean Ambient Chill R&B, 66 BPM, Bb Major,
+warm ambient pad, soft synth texture, sparse Rhodes chords,
+minimal percussion, soft shaker only, no kick, no snare,
+deep warm sub-bass, restrained low-end,
+Instrumental, no vocals, melodic Rhodes carries the hook,
+meditative atmosphere, breathing room, spacious floating mix,
+wide stereo, deep warmth,
+moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
+
+=== EXCLUDE ===
+autotune heavy, vocoder, EDM drops, big room,
+choir, stacked harmonies, backing vocal layers, doubled vocals,
+powerful belt, aggressive dynamics, heavy bass drops,
+trap hi-hats, 808 slides, drill bass,
+upbeat, energetic, hype, party, vocals, singing
+
+=== LYRICS ===
+[Instrumental]

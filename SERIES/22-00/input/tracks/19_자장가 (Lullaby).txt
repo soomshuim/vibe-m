@@ -1,0 +1,29 @@
+Track: 자장가 (Lullaby)
+Type: B
+BPM: 61
+Key: Gb Major
+Length: 3min+
+
+=== STYLE ===
+Articulation. Korean Quiet Storm, 61 BPM, Gb Major,
+felt piano-led, warm Rhodes chords, soft brush kit,
+rim-click, warm bass groove, subtle strings in chorus,
+Male vocal: Warm, Intimate, Chest voice, Dry, articulation,
+warm baritone, conversational phrasing, gentle sustained chorus hook,
+cozy intimate mix, wide stereo, warm low-end,
+moderate reverb, bedroom ambience, EQ balanced sound, clean mix.
+Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
+Chorus vocal may be delivered with tender intensity or gentle sustained note.
+Higher register emphasis is allowed. Natural vocal warmth encouraged.
+
+=== EXCLUDE ===
+autotune heavy, vocoder, EDM drops, big room,
+choir, stacked harmonies, backing vocal layers, doubled vocals,
+powerful belt, aggressive dynamics, heavy bass drops,
+trap hi-hats, 808 slides, drill bass,
+upbeat, energetic, hype, party
+
+=== LYRICS ===
+I-V1-PC-C-V2-C-B-C-O
+Korean, chorus mostly Korean with a short English phrase, lullaby, gentle melody, whispered goodnight, sleep coming like a slow tide

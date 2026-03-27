@@ -24,8 +24,11 @@ Lo-fi (미학/프로덕션)
 R&B
 ├── Contemporary R&B
 ├── Alternative R&B
+├── Quiet Storm (60-90 BPM, Rhodes-led, contemplative)
+├── Chill R&B (60-85 BPM, minimal, spacious, mood genre)
 ├── Slow R&B / Slow Jam (60-75 BPM)
 ├── Soft R&B
+├── Bedroom R&B (60-85 BPM, lo-fi DIY)
 └── Neo-Soul (jazz/funk)
 ```
 
@@ -40,6 +43,9 @@ R&B
 | Slow R&B | Mid-fi | 60-75 | 감성적, 보컬 중심 |
 | Neo-Soul | Warm | 75-95 | Jazz/Funk 영향 |
 | Korean Afrobeats | Warm + Afro | 100-112 | Highlife guitar + syncopated percussion + 808 bass + Son Clave rhythm |
+| Quiet Storm | Rhodes, strings, polished | 60-90 | 사색적, 친밀한, 심야 |
+| Chill R&B | Minimal, spacious | 60-85 | 멜로우, 분위기, 스트리밍 무드 |
+| Bedroom R&B | Lo-fi DIY, raw | 60-85 | 자기성찰, 취약성 |
 | City Pop | Retro | 100-120 | 80s 일본 팝 |
 
 ---
@@ -55,6 +61,9 @@ R&B
 | Neo-Soul | neo soul | 네오소울 |
 | Korean Afrobeats | afrobeats, afropop, korean afrobeats | 아프로비츠 |
 | Soul | soul | 소울 |
+| Quiet Storm | quiet storm | 콰이엇스톰 |
+| Chill R&B | chill rnb, chilled rnb | 칠알앤비 |
+| Bedroom R&B | bedroom rnb | 베드룸알앤비 |
 | Funk | funk | 펑크 |
 
 ### Lo-fi / Chillhop

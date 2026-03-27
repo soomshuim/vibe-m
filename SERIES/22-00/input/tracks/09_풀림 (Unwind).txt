@@ -1,0 +1,29 @@
+Track: 풀림 (Unwind)
+Type: C
+BPM: 70
+Key: A Minor
+Length: 3min+
+
+=== STYLE ===
+Articulation. Korean Acoustic Chill R&B, 70 BPM, A Minor,
+nylon guitar-led, gentle finger-picked pattern, minimal arrangement,
+soft shaker, no kick, rim-click only, warm acoustic bass,
+Female vocal: Soft, Intimate, Chest voice, Dry, articulation,
+lullaby-like phrasing, gentle melodic contour,
+organic stripped-back mix, wide stereo, natural warmth,
+moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
+Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
+Chorus vocal may be delivered with tender intensity or gentle sustained note.
+Higher register emphasis is allowed. Natural vocal warmth encouraged.
+
+=== EXCLUDE ===
+autotune heavy, vocoder, EDM drops, big room,
+choir, stacked harmonies, backing vocal layers, doubled vocals,
+powerful belt, aggressive dynamics, heavy bass drops,
+trap hi-hats, 808 slides, drill bass,
+upbeat, energetic, hype, party
+
+=== LYRICS ===
+I-V1-PC-C-V2-C-B-C-O
+Korean, chorus mostly Korean with a short English phrase, stretching slowly, tension dissolving, muscles loosening, body unwinding into rest

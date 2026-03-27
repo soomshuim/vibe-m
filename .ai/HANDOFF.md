@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-03-27 20:09
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 22-00 수면 전 릴랙스 시리즈 — concept.md v1.1 + 20트랙 프롬프트 + 장르 리뉴얼(Slow R&B → Quiet Storm/Chill R&B) + QUIET_STORM_RUBRIC.md + GENRES.md 업데이트 + Team Review 반영
+Next-TODO: Track 01 재테스트(장르 변경 후) + Track 02부터 Suno 테스트 진행. 트랙 영문 제목 스타일 재검토 (번역이 아닌 한글 연장선 느낌으로)
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-27 10:15:00
 Project: ~/Project/wavvy
 Agent: Claude

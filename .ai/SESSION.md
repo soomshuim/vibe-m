@@ -4,14 +4,25 @@
 
 ## 진행 중
 
-- **22-00 편안한 R&B 시리즈** — 신규 플래닝 시작 (2026-03-27)
-  - 시간대: 22:00 (밤 10시) — 21:00 밤산책(City Pop)과 23:30 불면 사이
-  - 장르: 편안한 R&B
-  - 기존 R&B 시리즈 차별점 검토: 04-00(Slow R&B/불면), 14-00(Soft R&B/나른)
-  - 톤/공간/트랙수 방향 3가지 제안 → 사용자 선택 대기
-    - A. 실내 안식 (소파, 조명, 차, 이불)
-    - B. 느긋한 밤 (와인, 음악, 창밖 야경, 목욕)
-    - C. 하루 회고 (감정 정리, 잔잔한 회상)
+- **22-00 수면 전 릴랙스 시리즈** — concept.md v1.1 + 장르 리뉴얼 완료 (2026-03-27)
+  - 시간대: 22:00 (밤 10시) — 수면 전 의도적 이완
+  - 장르: **Quiet Storm / Chill R&B** (Slow R&B에서 전환, BPM 60-78)
+  - 테마: 다양한 수면 전 릴랙스 (이불, 목욕, 차, 향초, 야경, 일기, 명상 등)
+  - 차별점: 04:00(불면/Slow R&B) vs 22:00(이완/Quiet Storm), Belt 금지
+  - ✅ concept.md v1.0 — Series DNA + Style Templates (A/B/C) + 배분 규칙
+  - ✅ 20트랙 디자인 완료 + 프롬프트 파일 생성
+    - 4막: 전환(01-05, 74-78) → 이완(06-10, 70-73) → 고요(11-15, 65-68) → 수면(16-20, 60-64)
+    - Style A(Ambient Chill R&B)7 : B(Quiet Storm)7 : C(Acoustic Chill R&B)6
+    - F12:M7:Inst1 / Major13:Minor7
+  - ✅ LYRICS QA — 전곡 200자 이하 PASS, English hook in chorus 추가
+  - ✅ 장르 리서치 — 19소스, 92% 신뢰도 (Slow R&B ≠ 수면 릴랙스 확인)
+  - ✅ concept.md v1.1 — 장르 라벨 전환 (Slow R&B → Quiet Storm / Chill R&B)
+  - ✅ QUIET_STORM_RUBRIC.md 생성 — Hard Gates 7개 + 6-Factor 100점 + Slow Jam Drift 감지
+  - ✅ Genre Gate 섹션 추가 + GENRES.md 업데이트 (3개 장르 추가)
+  - ✅ 20트랙 프롬프트 장르 라벨 치환 + Hard Gates QA 전곡 PASS
+  - ✅ Team Review — gentle belt→gentle lift 수정, YouTube 제목 SEO 최적화
+  - ✅ Track 01 스위치 (Off) Suno PASS (이전 프롬프트 기준, 재테스트 권장)
+  - **현황: 20/20 프롬프트 완성, Suno 테스트 대기 (Track 02부터)**
 
 - **12-00 Korean Afrobeats 시리즈** — PACK v2 COMPLETE (2026-03-22)
   - **현황: 20/20 트랙 PASS, PACK v2 4K/FLAC 완성, Shorts 1건 완성**
@@ -89,7 +100,8 @@
 
 ## 다음 할 일
 
-- [ ] **22-00 시리즈 concept.md 작성** — 톤/공간 확정 후 Series DNA + Style Templates + 트랙 리스트
+- [ ] **22-00 Suno 테스트** — Track 01부터 순차 테스트 시작
+- [ ] **22-00 썸네일** — 시리즈 이미지 방향 결정
 - [ ] YouTube 업로드 (12-00 final.mkv 16GB)
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
