@@ -1,4 +1,4 @@
-Track: 커튼 (Curtain)
+Track: 비 (Rain)
 Type: A
 BPM: 65
 Key: D Major
@@ -9,8 +9,8 @@ Articulation. Korean Ambient Slow R&B, 65 BPM, D Major,
 warm ambient pad, soft synth texture, sparse Rhodes chords,
 minimal percussion, soft shaker only, no kick, no snare,
 deep warm sub-bass, restrained low-end,
-Male vocal: Intimate, Gentle, Chest voice, Dry, articulation,
-warm baritone, low register, soft sustained chorus, gentle emotional lift,
+Female vocal: Intimate, Gentle, Chest voice, Dry, articulation,
+warm tone, low register, soft sustained chorus, gentle emotional lift,
 chorus builds with emotional swell, tender vocal intensity, aching warmth,
 spacious floating mix, wide stereo, deep warmth,
 moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
@@ -28,4 +28,4 @@ upbeat, energetic, hype, party
 
 === LYRICS ===
 I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, closing curtains, shutting out the world, private quiet space, safe gentle darkness
+Korean, chorus with short English phrase, night rain on window, sound washing the day away, quiet warm room, cool rain outside, drifting toward sleep

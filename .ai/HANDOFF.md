@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-03-31 22:47
+Project: ~/Project/wavvy
+Agent: 혼합 (사용자 가사 작성 + Claude 파일 반영)
+Summary: Track 10 풀 가사 반영 + 코러스 훅 "It's okay"→"little light" 통일. Track 15 커튼→비(Rain) 주제 변경 + F 전환
+Next-TODO: Track 10부터 Suno 순차 테스트
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-31 19:41
 Project: ~/Project/wavvy
 Agent: Claude

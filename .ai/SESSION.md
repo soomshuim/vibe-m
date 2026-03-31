@@ -32,6 +32,12 @@
   - ✅ **Track 12 컨셉 변경** — 호흡 (Breath) → 창문 (Window), Inst→M 전환
   - ✅ **Track 13 제목 변경** — 달빛 (Moonlight) → 달빛 커튼 (Moonlit Curtain)
   - ✅ **Inst 트랙 폐지** — 전곡 보컬, M11:F9 (55:45)
+  - ✅ **Track 10 풀 가사 반영 + 코러스 훅 변경** — "It's okay" → **"little light"** (2026-03-31)
+    - Verse 2 "모든 걸 다 비추는 불"과 이미지 연결
+    - "I'm okay"도 "little light"로 통일
+  - ✅ **Track 15 주제 변경** — 커튼 (Curtain) → **비 (Rain)**, F 전환 (2026-03-31)
+    - 13 달빛 커튼과 주제 중복 해소
+    - Type A (Ambient Slow R&B), 65 BPM, D Major 유지
   - **현황: Track 01~09 PASS 반영 완료, Track 10~20 Suno 테스트 대기**
 
 - **12-00 Korean Afrobeats 시리즈** — PACK v2 COMPLETE (2026-03-22)
