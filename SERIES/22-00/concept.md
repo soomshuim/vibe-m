@@ -12,7 +12,7 @@ Last Updated: 2026-03-27
 - **테마**: 다양한 수면 전 릴랙스 — 이불, 목욕, 차, 향초, 야경, 일기, 스트레칭, 명상 등 제한 없음
 - **톤**: 따뜻하고 편안한. 의도적 이완. 하루를 내려놓는 시간
 - **가사**: Suno 자체 작사 (작사 프롬프트 또는 비움)
-- **보컬**: Male 50% / Female 40% / Inst 5% (M10:F8:Inst1 — 기존 F→M: 14,15,18 전환, 05,07 Type 변경)
+- **보컬**: Male 55% / Female 45% (M11:F9 — Inst 없음, 기존 F→M: 14,15,18 전환 + 12 Inst→M)
 - **20트랙 / 80분+**
 
 ### 차별점
@@ -117,8 +117,8 @@ upbeat, energetic, hype, party
 | 09 | 풀어져가 (Let it unwind) | A | 70 | A Minor | F | 미정 |
 | 10 | 작은 손 (Tiny Hand) | B | 72 | Db Major | M | 미정 |
 | 11 | 일기 (Diary) | C | 68 | F Major | F | 미정 |
-| 12 | 호흡 (Breath) | A | 66 | Bb Major | Inst | 미정 |
-| 13 | 달빛 (Moonlight) | B | 67 | E Minor | M | 미정 |
+| 12 | 창문 (Window) | A | 66 | Bb Major | M | 미정 |
+| 13 | 달빛 커튼 (Moonlit Curtain) | B | 67 | E Minor | M | 미정 |
 | 14 | 무게 (Weight) | C | 66 | G Minor | M | 미정 |
 | 15 | 커튼 (Curtain) | A | 65 | D Major | M | 미정 |
 | 16 | 이불 (Blanket) | B | 64 | Ab Major | F | 미정 |
@@ -131,7 +131,7 @@ upbeat, energetic, hype, party
 - **BPM**: 60-78 (Hard Gate — 04:00보다 낮은 템포 대역)
 - **Key**: Major 13 : Minor 7 (65:35, 따뜻한 톤 우세), 인접 트랙 같은 Key 금지
 - **Style**: A 7 : B 7 : C 6 (35:35:30)
-- **Vocal**: Female 12 : Male 7 : Inst 1 (60:35:5)
+- **Vocal**: Male 11 : Female 9 (55:45, Inst 없음)
 
 ### 4막 구조
 

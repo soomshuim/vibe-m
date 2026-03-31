@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-03-31 19:41
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 22-00 트랙 조정 3건 — Track 12 호흡→창문(Inst→M 전환), Track 13 달빛→달빛 커튼, Inst 폐지(M11:F9)
+Next-TODO: Track 10부터 Suno 순차 테스트
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-27 20:09
 Project: ~/Project/wavvy
 Agent: Claude

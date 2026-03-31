@@ -29,6 +29,9 @@
   - ✅ **보컬 비율 변경** — F12:M7:Inst1 → **M10:F8:Inst1** (Track 14,15,18 F→M 전환)
   - ✅ **코러스 감정 피크 추가** — Track 10~20 전곡 (12 Inst 제외)
     - "chorus builds with emotional swell, tender vocal intensity, aching warmth"
+  - ✅ **Track 12 컨셉 변경** — 호흡 (Breath) → 창문 (Window), Inst→M 전환
+  - ✅ **Track 13 제목 변경** — 달빛 (Moonlight) → 달빛 커튼 (Moonlit Curtain)
+  - ✅ **Inst 트랙 폐지** — 전곡 보컬, M11:F9 (55:45)
   - **현황: Track 01~09 PASS 반영 완료, Track 10~20 Suno 테스트 대기**
 
 - **12-00 Korean Afrobeats 시리즈** — PACK v2 COMPLETE (2026-03-22)
