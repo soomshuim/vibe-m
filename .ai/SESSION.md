@@ -1,28 +1,35 @@
 # Session State — Wavvy
 
-> Last updated: 2026-03-27
+> Last updated: 2026-03-31
 
 ## 진행 중
 
-- **22-00 수면 전 릴랙스 시리즈** — concept.md v1.1 + 장르 리뉴얼 완료 (2026-03-27)
+- **22-00 수면 전 릴랙스 시리즈** — Suno 테스트 + 장르/프롬프트 대폭 리뉴얼 (2026-03-31)
   - 시간대: 22:00 (밤 10시) — 수면 전 의도적 이완
-  - 장르: **Quiet Storm / Chill R&B** (Slow R&B에서 전환, BPM 60-78)
-  - 테마: 다양한 수면 전 릴랙스 (이불, 목욕, 차, 향초, 야경, 일기, 명상 등)
-  - 차별점: 04:00(불면/Slow R&B) vs 22:00(이완/Quiet Storm), Belt 금지
-  - ✅ concept.md v1.0 — Series DNA + Style Templates (A/B/C) + 배분 규칙
-  - ✅ 20트랙 디자인 완료 + 프롬프트 파일 생성
-    - 4막: 전환(01-05, 74-78) → 이완(06-10, 70-73) → 고요(11-15, 65-68) → 수면(16-20, 60-64)
-    - Style A(Ambient Chill R&B)7 : B(Quiet Storm)7 : C(Acoustic Chill R&B)6
-    - F12:M7:Inst1 / Major13:Minor7
-  - ✅ LYRICS QA — 전곡 200자 이하 PASS, English hook in chorus 추가
-  - ✅ 장르 리서치 — 19소스, 92% 신뢰도 (Slow R&B ≠ 수면 릴랙스 확인)
-  - ✅ concept.md v1.1 — 장르 라벨 전환 (Slow R&B → Quiet Storm / Chill R&B)
-  - ✅ QUIET_STORM_RUBRIC.md 생성 — Hard Gates 7개 + 6-Factor 100점 + Slow Jam Drift 감지
-  - ✅ Genre Gate 섹션 추가 + GENRES.md 업데이트 (3개 장르 추가)
-  - ✅ 20트랙 프롬프트 장르 라벨 치환 + Hard Gates QA 전곡 PASS
-  - ✅ Team Review — gentle belt→gentle lift 수정, YouTube 제목 SEO 최적화
-  - ✅ Track 01 스위치 (Off) Suno PASS (이전 프롬프트 기준, 재테스트 권장)
-  - **현황: 20/20 프롬프트 완성, Suno 테스트 대기 (Track 02부터)**
+  - 장르: **Ambient Slow R&B / Bedroom R&B** (Quiet Storm/Chill R&B에서 전환)
+  - 테마: 다양한 수면 전 릴랙스 (이불, 목욕, 향, 야경, 일기, 명상 등)
+  - 차별점: 04:00(불면/Slow R&B) vs 22:00(이완/Bedroom R&B), Belt 금지
+  - ✅ concept.md v1.0~v1.1 — 이전 이력 유지
+  - ✅ **concept.md v1.2 — 장르 2차 전환** (2026-03-31)
+    - Style A: Ambient Chill R&B → **Ambient Slow R&B**
+    - Style B: Quiet Storm → **Bedroom R&B**
+    - Style C: Acoustic Chill R&B → **Acoustic Bedroom R&B**
+    - YouTube 제목/태그 업데이트
+  - ✅ **Track 01~09 Suno PASS 버전 반영** (풀 가사 + 싱글라인 스타일)
+    - 01 스위치 (Switch) — Korean Slow R&B, F, PASS
+    - 02 잠옷 (Comfort) — Ambient Slow R&B, M, PASS (제목 Pajamas→Comfort)
+    - 03 조명 (Lights) — Acoustic Chill R&B, F, PASS
+    - 04 소파 (Sofa) — Bedroom R&B, F, PASS (Key D Minor→D Major)
+    - 05 야경 (Nightscape) — 커스텀 Bedroom R&B (lo-fi), M, PASS (Type A→B)
+    - 06 목욕 (Bath) — Bedroom R&B, F, PASS
+    - 07 향기 (Scent) — Bedroom R&B, M, PASS (제목 향→향기, Type A→B)
+    - 08 체온 (Warm) — BedroomChill R&B, F, PASS
+    - 09 풀어져가 (Let it unwind) — Ambient Slow R&B, F, PASS (제목 풀림→풀어져가, Type C→A)
+  - ✅ **Track 10 주제 변경** — 찻잔 (Teacup) → 작은 손 (Tiny Hand), 잠든 아기 테마
+  - ✅ **보컬 비율 변경** — F12:M7:Inst1 → **M10:F8:Inst1** (Track 14,15,18 F→M 전환)
+  - ✅ **코러스 감정 피크 추가** — Track 10~20 전곡 (12 Inst 제외)
+    - "chorus builds with emotional swell, tender vocal intensity, aching warmth"
+  - **현황: Track 01~09 PASS 반영 완료, Track 10~20 Suno 테스트 대기**
 
 - **12-00 Korean Afrobeats 시리즈** — PACK v2 COMPLETE (2026-03-22)
   - **현황: 20/20 트랙 PASS, PACK v2 4K/FLAC 완성, Shorts 1건 완성**
@@ -100,7 +107,8 @@
 
 ## 다음 할 일
 
-- [ ] **22-00 Suno 테스트** — Track 01부터 순차 테스트 시작
+- [ ] **22-00 Suno 테스트** — Track 10부터 순차 테스트 (01~09 PASS 완료)
+- [ ] **22-00 나머지 트랙 주제/가사 조정** — Track 11~20 Suno 테스트 진행하며
 - [ ] **22-00 썸네일** — 시리즈 이미지 방향 결정
 - [ ] YouTube 업로드 (12-00 final.mkv 16GB)
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore

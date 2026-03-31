@@ -1,22 +1,11 @@
 Track: 야경 (Nightscape)
-Type: A
+Type: B
 BPM: 74
 Key: F Minor
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Ambient Chill R&B, 74 BPM, F Minor,
-warm ambient pad, soft synth texture, sparse Rhodes chords,
-minimal percussion, soft shaker only, no kick, no snare,
-deep warm sub-bass, restrained low-end,
-Male vocal: Intimate, Gentle, Chest voice, Dry, articulation,
-warm baritone, low register, soft sustained chorus, gentle emotional lift,
-spacious floating mix, wide stereo, deep warmth,
-moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
-Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
-Chorus vocal may be delivered with tender intensity or gentle sustained note.
-Higher register emphasis is allowed. Natural vocal warmth encouraged.
+Bedroom R&B, 74 BPM, F Minor, intimate lo‑fi atmosphere, warm detuned synth pads, soft electric piano chords with gentle sidechain swell, subtle vinyl crackle, close-up dry room tone, Minimal drums with soft rim clicks, brushed hi-hats, deep but pillowy sub-bass, relaxed swing groove, Male vocal: whispery and confessional, close-mic breathiness, warm baritone with occasional falsetto lift in the chorus, understated runs and ad-lib touches between phrases, Mix focused on midrange warmth, narrow stereo on vocals, wider spread on pads and keys, tasteful plate reverb and short delay tails to enhance late-night, bedroom feel
 
 === EXCLUDE ===
 autotune heavy, vocoder, EDM drops, big room,
@@ -26,5 +15,76 @@ trap hi-hats, 808 slides, drill bass,
 upbeat, energetic, hype, party
 
 === LYRICS ===
-I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, city lights through window, night view from room, distant glow, calm watching
+[Intro]
+(Instrumental)
+
+[Verse 1]
+벽에 걸린 시계
+초침만 작게 뛰고
+내 그림자 길어져
+커튼 끝을 적시네
+멀리 번진 간판
+알 수 없는 이름들
+소리 없는 대화 같아
+오늘도 나를 불러
+
+[Pre-Chorus]
+손에 쥔 컵 식어가
+아무 데도 안 가도 돼
+이 자리에서
+천천히 번지는 밤
+
+[Chorus]
+창밖의 불빛들
+멀리서 나를 안아
+모르는 얼굴들
+다 어딘가로 흘러가
+Stay with me tonight
+아무 말도 하지 말고
+조용히 숨만 쉬며
+이 밤을 같이 바라봐
+
+[Verse 2]
+휴대폰 불 꺼두고
+유리창에 나만 남아
+안개 낀 골목 사이
+붉은 점이 숨을 쉬어
+택시 한 대 지나가
+노란 꼬리 별처럼
+닿을 수는 없지만
+괜히 맘이 따라가
+
+[Chorus]
+창밖의 불빛들
+멀리서 나를 안아
+모르는 얼굴들
+다 어딘가로 흘러가
+Stay with me tonight
+아무 말도 하지 말고
+조용히 숨만 쉬며
+이 밤을 같이 바라봐
+
+[Bridge]
+언젠가 이 방도
+추억 속 풍경 될까
+오늘의 이 정적도
+사진처럼 남을까
+혼자였던 시간들
+그리워질 것 같아
+그래서 더 눈을 감지 못해 (oh)
+
+[Chorus]
+창밖의 불빛들
+하나씩 점이 돼도
+잠들지 않는 밤
+여기에서 난 깨어나
+Stay with me tonight
+조용한 이 창가에서
+사라질 듯 머무는
+도시의 숨을 들어봐
+
+[Outro]
+조용한 방
+살짝 열린 창틀
+먼 불빛들
+아직 꺼지지 않은 밤

@@ -5,17 +5,7 @@ Key: Bb Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Acoustic Chill R&B, 77 BPM, Bb Major,
-nylon guitar-led, gentle finger-picked pattern, minimal arrangement,
-soft shaker, no kick, rim-click only, warm acoustic bass,
-Female vocal: Soft, Intimate, Chest voice, Dry, articulation,
-lullaby-like phrasing, gentle melodic contour,
-organic stripped-back mix, wide stereo, natural warmth,
-moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
-Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
-Chorus vocal may be delivered with tender intensity or gentle sustained note.
-Higher register emphasis is allowed. Natural vocal warmth encouraged.
+Articulation, Korean Acoustic Chill R&B, 77 BPM, Bb Major, nylon guitar-led, gentle finger-picked pattern, minimal arrangement, soft shaker, no kick, rim-click only, warm acoustic bass, Female vocal: Soft, Intimate, Chest voice, Dry, articulation, lullaby-like phrasing, gentle melodic contour, organic stripped-back mix, wide stereo, natural warmth, moderate reverb, intimate room ambience, EQ balanced sound, clean mix, Lead vocal remains single and dominant throughout, No stacked or choir-like harmonies, Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers, Chorus vocal may be delivered with tender intensity or gentle sustained note, Higher register emphasis is allowed, Natural vocal warmth encouraged
 
 === EXCLUDE ===
 autotune heavy, vocoder, EDM drops, big room,
@@ -25,5 +15,77 @@ trap hi-hats, 808 slides, drill bass,
 upbeat, energetic, hype, party
 
 === LYRICS ===
-I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, dimming the lights, room softening, gentle shadows, warmth in low light
+[Intro]
+살짝만 더 줄여줘
+이 방의 숨소리까지 들리게
+
+[Verse 1]
+커튼 끝에 걸린
+노을이 천천히 식고
+하루의 긴 이야기
+벽에 조용히 번져
+
+[Pre-Chorus]
+너의 옆선 따라
+그림자도 눕고
+말 안 해도 다 알 것 같아
+지금 이 온도
+
+[Chorus]
+불을 조금만 더 낮춰
+우리 둘만 남게 해
+부드럽게 번진 light
+네 얼굴만 환하게
+따뜻해지는 이 밤
+조용히 네 이름 불러
+Soft glow
+Hold me close
+사라지지 말아줘
+
+[Verse 2]
+잔 위에 남은 온기
+손끝이 먼저 알아
+시끄럽던 내 맘도
+이 조도엔 숨을 죽여
+
+[Pre-Chorus]
+네가 웃을 때면
+공기도 따라 웃고
+흔들리는 그 속눈썹에
+내 맘도 눕고
+
+[Chorus]
+불을 조금만 더 낮춰
+우리 둘만 남게 해
+부드럽게 번진 light
+네 얼굴만 환하게
+따뜻해지는 이 밤
+조용히 네 이름 불러
+Soft glow
+Hold me close
+사라지지 말아줘
+
+[Bridge]
+깊어지는 색들 사이
+우리만 또렷해져
+한 뼘 거리 이 공기마저
+따뜻해서 겁이 나
+(oh) 멈추지 말아줘
+이대로 머물러
+
+[Chorus]
+불을 조금만 더 낮춰
+숨소리만 남게 해
+부드럽게 번진 light
+네 눈동자 선명해
+따뜻해지는 이 밤
+시간마저 눌러둬
+Soft glow
+Hold me close
+오늘 여기 남아줘
+
+[Outro]
+살짝 남은 불빛
+우리 둘의 기억처럼
+천천히 숨 고르다
+너의 품에 잠들래

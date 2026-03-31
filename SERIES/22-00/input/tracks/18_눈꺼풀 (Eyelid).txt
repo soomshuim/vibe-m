@@ -5,12 +5,13 @@ Key: C Minor
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Ambient Chill R&B, 62 BPM, C Minor,
+Articulation. Korean Ambient Slow R&B, 62 BPM, C Minor,
 warm ambient pad, soft synth texture, sparse Rhodes chords,
 minimal percussion, soft shaker only, no kick, no snare,
 deep warm sub-bass, restrained low-end,
-Female vocal: Intimate, Gentle, Chest voice, Dry, articulation,
-soft sustained chorus, gentle emotional lift,
+Male vocal: Intimate, Gentle, Chest voice, Dry, articulation,
+warm baritone, low register, soft sustained chorus, gentle emotional lift,
+chorus builds with emotional swell, tender vocal intensity, aching warmth,
 spacious floating mix, wide stereo, deep warmth,
 moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.

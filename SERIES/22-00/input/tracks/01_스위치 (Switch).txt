@@ -5,17 +5,7 @@ Key: Eb Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Quiet Storm, 78 BPM, Eb Major,
-felt piano-led, warm Rhodes chords, soft brush kit,
-rim-click, warm bass groove, subtle strings in chorus,
-Female vocal: Warm, Intimate, Chest voice, Dry, articulation,
-conversational phrasing, gentle sustained chorus hook,
-cozy intimate mix, wide stereo, warm low-end,
-moderate reverb, bedroom ambience, EQ balanced sound, clean mix.
-Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
-Chorus vocal may be delivered with tender intensity or gentle sustained note.
-Higher register emphasis is allowed. Natural vocal warmth encouraged.
+Articulation, Korean Slow R&B, 78 BPM, Eb Major, felt piano-led, warm Rhodes chords, soft brush kit, rim-click, warm bass groove, subtle strings in chorus, Female vocal: Warm, Intimate, Chest voice, Dry, articulation, conversational phrasing, gentle sustained chorus hook, cozy intimate mix, wide stereo, warm low-end, moderate reverb, bedroom ambience, EQ balanced sound, clean mix, Lead vocal remains single and dominant throughout, No stacked or choir-like harmonies, Vocal line may intensify dynamically (gentle belt, higher register), but no additional vocal layers, Chorus vocal may be delivered with tender intensity or gentle sustained note, Higher register emphasis is allowed, Natural vocal warmth encouraged
 
 === EXCLUDE ===
 autotune heavy, vocoder, EDM drops, big room,
@@ -25,5 +15,83 @@ trap hi-hats, 808 slides, drill bass,
 upbeat, energetic, hype, party
 
 === LYRICS ===
-I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, turning off the day, switching from busy to still, quiet exhale, finally stopping
+[Intro]
+오늘은 여기까지
+단 한 번 숨 고르고
+
+[Verse 1]
+메신저 검은 점
+끝없이 떴다 지고
+안 읽은 말풍선
+이젠 창 밖으로
+책상 위 쌓인 일
+모른 척 덮어 두고
+나만의 저녁으로
+조용히 걸어가
+
+[Pre-Chorus]
+불빛을 하나씩 지워
+내 이름도 살짝 내려놔
+달력의 빨간 줄
+오늘은 못 본 척
+
+[Chorus]
+스위치 off
+I'm done for the day
+Turn it down
+Let it all fade away
+아무 말도 하지 마
+Just stay
+조용한 나를 안아
+스위치 off
+I'm done for the day
+
+[Verse 2]
+식탁에 늦은 밥
+전자레인지 돌고
+텅 빈 방 시곗소리
+살짝 크게 들려
+창문 살짝만 열어
+밤 공기 들이마셔
+깊게 한 번 숨 쉬고
+그제야 나도 멈춰
+
+[Pre-Chorus]
+할 일은 내일로 미뤄
+조금은 엉망이면 어때
+흐릿한 안경 너머
+내 얼굴 편해 보여
+
+[Chorus]
+스위치 off
+I'm done for the day
+Turn it down
+Let it all fade away
+아무 말도 하지 마
+Just stay
+조용한 나를 안아
+스위치 off
+I'm done for the day
+
+[Bridge]
+오늘 잘 버틴 나를
+이제는 내가 안아 줄게 (천천히)
+세상이 등 떠밀어도
+지금만큼은 멈춰 설래
+
+[Chorus]
+스위치 off
+I'm done for the day
+Turn it down
+Let it all fade away
+아무 걱정하지 마
+I'll stay
+조용한 나를 안아
+스위치 off
+I'm done for the day
+
+[Outro]
+불 다 꺼진 방 안
+고요한 숨 한 번
+오늘은 여기까지
+나 자신에게 goodnight

@@ -1,15 +1,16 @@
-Track: 찻잔 (Teacup)
+Track: 작은 손 (Tiny Hand)
 Type: B
 BPM: 72
 Key: Db Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Quiet Storm, 72 BPM, Db Major,
+Articulation. Korean Bedroom R&B, 72 BPM, Db Major,
 felt piano-led, warm Rhodes chords, soft brush kit,
 rim-click, warm bass groove, subtle strings in chorus,
 Male vocal: Warm, Intimate, Chest voice, Dry, articulation,
 warm baritone, conversational phrasing, gentle sustained chorus hook,
+chorus builds with emotional swell, tender vocal intensity, aching warmth,
 cozy intimate mix, wide stereo, warm low-end,
 moderate reverb, bedroom ambience, EQ balanced sound, clean mix.
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
@@ -26,4 +27,4 @@ upbeat, energetic, hype, party
 
 === LYRICS ===
 I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, herbal tea before sleep, steam from cup, warm hands wrapped, sipping slowly, calm
+Korean, chorus mostly Korean with a short English phrase, watching sleeping baby, tiny hand gripping my finger, overwhelming tenderness, the smallest touch makes everything okay, indirect expression — never say "baby" directly, the child is felt through warmth and small gestures

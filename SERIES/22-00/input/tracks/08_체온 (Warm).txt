@@ -5,17 +5,7 @@ Key: C Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Acoustic Chill R&B, 71 BPM, C Major,
-nylon guitar-led, gentle finger-picked pattern, minimal arrangement,
-soft shaker, no kick, rim-click only, warm acoustic bass,
-Female vocal: Soft, Intimate, Chest voice, Dry, articulation,
-lullaby-like phrasing, gentle melodic contour,
-organic stripped-back mix, wide stereo, natural warmth,
-moderate reverb, intimate room ambience, EQ balanced sound, clean mix.
-Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
-Chorus vocal may be delivered with tender intensity or gentle sustained note.
-Higher register emphasis is allowed. Natural vocal warmth encouraged.
+Articulation, Korean BedroomChill R&B, 71 BPM, C Major, nylon guitar-led, gentle finger-picked pattern, minimal arrangement, soft shaker, no kick, rim-click only, warm acoustic bass, Female vocal: Soft, Intimate, Chest voice, Dry, articulation, lullaby-like phrasing, gentle melodic contour, organic stripped-back mix, wide stereo, natural warmth, moderate reverb, intimate room ambience, EQ balanced sound, clean mix, Lead vocal remains single and dominant throughout, No stacked or choir-like harmonies, Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers, Chorus vocal may be delivered with tender intensity or gentle sustained note, Higher register emphasis is allowed, Natural vocal warmth encouraged
 
 === EXCLUDE ===
 autotune heavy, vocoder, EDM drops, big room,
@@ -25,5 +15,91 @@ trap hi-hats, 808 slides, drill bass,
 upbeat, energetic, hype, party
 
 === LYRICS ===
-I-V1-PC-C-V2-C-B-C-O
-Korean, chorus mostly Korean with a short English phrase, body warmth under covers, warm skin, heat radiating softly, cozy and safe
+[Intro]
+(instremental)
+
+[Verse 1]
+
+서로의 숨만 들려
+살에 닿는
+작은 온도 차이
+
+긴 하루 끝에
+말도 힘이 빠져서
+아무 말 없이
+네 품에 기대 있을래
+창밖은 겨울
+여긴 한여름 같아
+팔베개 위에
+내 얼굴 묻은 채로
+
+[Pre-Chorus]
+이불 끝을 잡아
+올려 덮으면
+둘만 있는
+비밀 동굴 같아
+팔과 팔이
+얽혀버린 이 자리
+시간까지
+따뜻해져 가
+
+[Chorus]
+이불 속 작은 우주
+너의 체온에 떠 있어
+몸과 몸 사이
+공기도 달콤해 (so sweet)
+살결에 배인 온기
+조용히 나를 안아줘
+이대로 멈춰
+Stay with me
+Stay
+
+[Verse 2]
+네 가슴 위에
+천천히 귀를 대면
+리듬처럼 뛰는
+심장이 날 불러
+귓가에 스치는
+따뜻한 너의 숨결
+파도처럼 와서
+모든 걱정 덮어
+
+[Chorus]
+이불 속 작은 우주
+너의 체온에 떠 있어
+몸과 몸 사이
+공기도 달콤해 (so sweet)
+살결에 배인 온기
+조용히 나를 안아줘
+이대로 멈춰
+Stay with me
+Stay
+
+[Bridge]
+밖은 차갑게
+불까지 꺼진 밤인데
+여긴 붉은 별 하나
+느리게 돌고 있어
+떨어질 수가 없어
+떨어지고 싶지도 않아
+이 작은 섬
+둘이서면 충분해 (oh)
+
+[Chorus]
+이불 속 작은 우주
+너의 체온에 떠 있어
+몸과 몸 사이
+공기도 달콤해 (so sweet)
+살결에 스미는 말들
+입술 대신 전해줘
+눈 감은 채로
+Stay with me
+Stay
+
+점점 느려져
+호흡과 맥박마저
+따뜻한 꿈 속
+너와 나만 남겨져
+
+[Outro]
+(instremental)

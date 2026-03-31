@@ -7,12 +7,12 @@ Last Updated: 2026-03-27
 
 ## Series DNA
 
-- **정체성**: 한국어 가사 × 편안한 R&B (Quiet Storm / Chill R&B)
+- **정체성**: 한국어 가사 × 편안한 R&B (Ambient Slow R&B / Bedroom R&B)
 - **시간대**: 22:00 (밤 10시) — 하루의 끝, 잠들기 전
 - **테마**: 다양한 수면 전 릴랙스 — 이불, 목욕, 차, 향초, 야경, 일기, 스트레칭, 명상 등 제한 없음
 - **톤**: 따뜻하고 편안한. 의도적 이완. 하루를 내려놓는 시간
 - **가사**: Suno 자체 작사 (작사 프롬프트 또는 비움)
-- **보컬**: Female 60% / Male 35% / Inst 5% (F12:M7:Inst1)
+- **보컬**: Male 50% / Female 40% / Inst 5% (M10:F8:Inst1 — 기존 F→M: 14,15,18 전환, 05,07 Type 변경)
 - **20트랙 / 80분+**
 
 ### 차별점
@@ -32,10 +32,10 @@ Last Updated: 2026-03-27
 > 각 템플릿 900자 이하. `STYLE.md` Writing Formula 7요소 + 22:00 특화.
 > Harmony Guard + Energy Permission 필수 포함.
 
-### Style A — Ambient Chill R&B
+### Style A — Ambient Slow R&B
 
 ```
-Articulation. Korean Ambient Chill R&B, {BPM} BPM, {Key},
+Articulation. Korean Ambient Slow R&B, {BPM} BPM, {Key},
 warm ambient pad, soft synth texture, sparse Rhodes chords,
 minimal percussion, soft shaker only, no kick, no snare,
 deep warm sub-bass, restrained low-end,
@@ -49,10 +49,10 @@ Chorus vocal may be delivered with tender intensity or gentle sustained note.
 Higher register emphasis is allowed. Natural vocal warmth encouraged.
 ```
 
-### Style B — Quiet Storm
+### Style B — Bedroom R&B
 
 ```
-Articulation. Korean Quiet Storm, {BPM} BPM, {Key},
+Articulation. Korean Bedroom R&B, {BPM} BPM, {Key},
 felt piano-led, warm Rhodes chords, soft brush kit,
 rim-click, warm bass groove, subtle strings in chorus,
 {Gender} vocal: Warm, Intimate, Chest voice, Dry, articulation,
@@ -65,10 +65,10 @@ Chorus vocal may be delivered with tender intensity or gentle sustained note.
 Higher register emphasis is allowed. Natural vocal warmth encouraged.
 ```
 
-### Style C — Acoustic Chill R&B
+### Style C — Acoustic Bedroom R&B
 
 ```
-Articulation. Korean Acoustic Chill R&B, {BPM} BPM, {Key},
+Articulation. Korean Acoustic Bedroom R&B, {BPM} BPM, {Key},
 nylon guitar-led, gentle finger-picked pattern, minimal arrangement,
 soft shaker, no kick, rim-click only, warm acoustic bass,
 {Gender} vocal: Soft, Intimate, Chest voice, Dry, articulation,
@@ -95,7 +95,7 @@ upbeat, energetic, hype, party
 
 ## Genre Gate
 
-- 루브릭: `MASTER/rubrics/QUIET_STORM_RUBRIC.md`
+- 루브릭: `MASTER/rubrics/QUIET_STORM_RUBRIC.md` (Slow R&B / Bedroom R&B 겸용)
 - 총점 85+ PASS / 개별 Factor Critical Fail 없음
 - "Slow Jam Drift" 체크 필수 (로맨틱/관능적 톤 감지 시 FAIL)
 - Evidence: `report/2026-03-27_22-00-genre-research.md`
@@ -107,23 +107,23 @@ upbeat, energetic, hype, party
 | # | 제목 | Style | BPM | Key | Vocal | 상태 |
 |---|------|-------|-----|-----|-------|------|
 | 01 | 스위치 (Switch) | B | 78 | Eb Major | F | ✅ PASS |
-| 02 | 잠옷 (Pajamas) | A | 76 | G Major | M | 미정 |
+| 02 | 잠옷 (Comfort) | A | 76 | G Major | M | 미정 |
 | 03 | 조명 (Lights) | C | 77 | Bb Major | F | 미정 |
-| 04 | 소파 (Sofa) | B | 75 | D Minor | F | 미정 |
-| 05 | 야경 (Nightscape) | A | 74 | F Minor | M | 미정 |
+| 04 | 소파 (Sofa) | B | 75 | D Major | F | 미정 |
+| 05 | 야경 (Nightscape) | B | 74 | F Minor | M | 미정 |
 | 06 | 목욕 (Bath) | B | 73 | Ab Major | F | 미정 |
-| 07 | 향 (Scent) | A | 72 | E Major | M | 미정 |
+| 07 | 향기 (Scent) | B | 72 | E Major | M | 미정 |
 | 08 | 체온 (Warm) | C | 71 | C Major | F | 미정 |
-| 09 | 풀림 (Unwind) | C | 70 | A Minor | F | 미정 |
-| 10 | 찻잔 (Teacup) | B | 72 | Db Major | M | 미정 |
+| 09 | 풀어져가 (Let it unwind) | A | 70 | A Minor | F | 미정 |
+| 10 | 작은 손 (Tiny Hand) | B | 72 | Db Major | M | 미정 |
 | 11 | 일기 (Diary) | C | 68 | F Major | F | 미정 |
 | 12 | 호흡 (Breath) | A | 66 | Bb Major | Inst | 미정 |
 | 13 | 달빛 (Moonlight) | B | 67 | E Minor | M | 미정 |
-| 14 | 무게 (Weight) | C | 66 | G Minor | F | 미정 |
-| 15 | 커튼 (Curtain) | A | 65 | D Major | F | 미정 |
+| 14 | 무게 (Weight) | C | 66 | G Minor | M | 미정 |
+| 15 | 커튼 (Curtain) | A | 65 | D Major | M | 미정 |
 | 16 | 이불 (Blanket) | B | 64 | Ab Major | F | 미정 |
 | 17 | 베개 (Pillow) | C | 63 | Eb Minor | M | 미정 |
-| 18 | 눈꺼풀 (Eyelid) | A | 62 | C Minor | F | 미정 |
+| 18 | 눈꺼풀 (Eyelid) | A | 62 | C Minor | M | 미정 |
 | 19 | 자장가 (Lullaby) | B | 61 | Gb Major | M | 미정 |
 | 20 | 꿈 (Dream) | A | 60 | A Major | F | 미정 |
 
@@ -190,9 +190,9 @@ upbeat, energetic, hype, party
 
 | Style | 보컬 |
 |-------|------|
-| A (Ambient Chill R&B) | Intimate, Gentle, Chest voice, breathy warmth |
-| B (Quiet Storm) | Warm, Intimate, Chest voice, conversational |
-| C (Acoustic Chill R&B) | Soft, Intimate, Chest voice, lullaby-like |
+| A (Ambient Slow R&B) | Intimate, Gentle, Chest voice, breathy warmth |
+| B (Bedroom R&B) | Warm, Intimate, Chest voice, conversational |
+| C (Acoustic Bedroom R&B) | Soft, Intimate, Chest voice, lullaby-like |
 
 ### 공통
 - Dry close-mic, very forward
@@ -207,7 +207,7 @@ upbeat, energetic, hype, party
 
 ### 제목
 ```
-Playlist | 22:00 | 잠들기 전, 편안한 시간 ✨ | CHILL R&B · QUIET STORM | 수면음악 · 릴랙스 | Wavvy
+Playlist | 22:00 | 잠들기 전, 편안한 시간 ✨ | SLOW R&B · BEDROOM R&B | 수면음악 · 릴랙스 | Wavvy
 ```
 
 ### 설명
@@ -231,13 +231,13 @@ All tracks feature Korean lyrics.
 🎵 Music: Wavvy
 Copyright Ⓒ Wavvy. All rights reserved.
 ──────────────
-#quietstorm #rnb #chillrnb #알앤비 #칠알앤비
+#slowrnb #bedroomrnb #rnb #알앤비 #슬로우알앤비
 #수면음악 #잠잘때듣는노래 #릴랙스 #수면전 #수면알앤비
-#latenightrnb #잠잘때듣는알앤비
+#latenightrnb #잠잘때듣는알앤비 #bedroommusic
 #playlist #플리 #한국어가사 #koreanlyrics
 #wavvy #웨이비
 ```
 
 ---
 
-Last updated: 2026-03-27
+Last updated: 2026-03-31
