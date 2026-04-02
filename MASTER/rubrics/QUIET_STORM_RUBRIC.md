@@ -48,7 +48,7 @@ Purpose: Quiet Storm / Chill R&B 장르 게이트 (22-00 시리즈)
 - PMC: "Audio Features of Sleep Music" (A급, 학술)
 - Spotify for Artists: "Behind the Playlists: R&B" (A급)
 - HookGenius: Suno R&B Prompts (B급)
-- Micro Genre Music: Quiet Storm / Bedroom R&B (B급)
+- Micro Genre Music: Quiet Storm / Chill R&B (B급)
 
 ---
 
@@ -80,7 +80,7 @@ Purpose: Quiet Storm / Chill R&B 장르 게이트 (22-00 시리즈)
 |---|------|------|
 | B1 | Piano/Rhodes | felt piano 또는 Rhodes가 리드 |
 | B2 | Brush Kit | soft brush kit + rim-click 퍼커션 |
-| B3 | Warm | 가장 따뜻한 톤, bedroom ambience |
+| B3 | Warm | 가장 따뜻한 톤, intimate ambience |
 
 ### Style C — Acoustic Chill R&B
 | # | Gate | 기준 |
@@ -100,7 +100,7 @@ Purpose: Quiet Storm / Chill R&B 장르 게이트 (22-00 시리즈)
 | F3 | 보컬 딜리버리 | 20 | Gentle/intimate chest voice, belt 없음, falsetto 유혹 없음 | STYLE.md §4.1 |
 | F4 | 편곡 절제 | 15 | Sparse, 미니멀 퍼커션, 4막 에너지 아크 준수 | concept.md 4막 구조 |
 | F5 | 구조 흐름 | 15 | V-PC-C 구조, gentle chorus lift, outro fade | concept.md Song Structure |
-| F6 | 장르 경계 | 10 | Slow Jam / Bedroom Pop lo-fi / Neo-Soul jazz-funk으로 이탈 안 함 | Evidence §1 |
+| F6 | 장르 경계 | 10 | Chill R&B / Bedroom Pop lo-fi / Neo-Soul jazz-funk으로 이탈 안 함 | Evidence §1 |
 
 ---
 

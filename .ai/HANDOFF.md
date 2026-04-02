@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-03 06:46
+Project: ~/Project/wavvy
+Agent: 혼합 (사용자 가사/Suno 작업 + Claude 파일 반영/문서/영상 파이프라인)
+Summary: 22-00 전곡 20/20 PASS + 풀 가사 입력 완료. 장르 용어 전환 (Bedroom R&B → Chill R&B / Slow Jam). txt→concept.md 통합 (Style+Lyrics). WAV 리네이밍 20곡. Track Map 정리 (01 Off, 10 작은 빛, 15 비, 18 맞잡은 손, 20 눈을 감으면). YouTube 메타 작성 + 썸네일 확정 (다크 로프트+네온 야경+파자마 DJ). 루프영상 0.6x 팔린드롬 제작. pack 진행 중 — loop 비트레이트 이슈로 CRF 조정 필요. 디스크 정리 (work/output ~52GB 확보). RUBRIC Bedroom→Chill 반영. 12-00 YouTube 업로드 완료 기록.
+Next-TODO: loop.mp4 비트레이트 최적화 → vfade → pack → YouTube 업로드. 타임스탬프 확정.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-03-31 22:47
 Project: ~/Project/wavvy
 Agent: 혼합 (사용자 가사 작성 + Claude 파일 반영)

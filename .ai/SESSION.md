@@ -1,12 +1,12 @@
 # Session State — Wavvy
 
-> Last updated: 2026-03-31
+> Last updated: 2026-04-03
 
 ## 진행 중
 
 - **22-00 수면 전 릴랙스 시리즈** — Suno 테스트 + 장르/프롬프트 대폭 리뉴얼 (2026-03-31)
   - 시간대: 22:00 (밤 10시) — 수면 전 의도적 이완
-  - 장르: **Ambient Slow R&B / Bedroom R&B** (Quiet Storm/Chill R&B에서 전환)
+  - 장르: **Ambient Slow Jam / Chill R&B** (Bedroom R&B → Chill R&B / Slow Jam 전환)
   - 테마: 다양한 수면 전 릴랙스 (이불, 목욕, 향, 야경, 일기, 명상 등)
   - 차별점: 04:00(불면/Slow R&B) vs 22:00(이완/Bedroom R&B), Belt 금지
   - ✅ concept.md v1.0~v1.1 — 이전 이력 유지
@@ -38,11 +38,20 @@
   - ✅ **Track 15 주제 변경** — 커튼 (Curtain) → **비 (Rain)**, F 전환 (2026-03-31)
     - 13 달빛 커튼과 주제 중복 해소
     - Type A (Ambient Slow R&B), 65 BPM, D Major 유지
-  - **현황: Track 01~09 PASS 반영 완료, Track 10~20 Suno 테스트 대기**
+  - ✅ **20/20 전곡 PASS + 풀 가사 입력 완료** (2026-04-02)
+  - ✅ **장르 용어 전환** — Bedroom R&B → Chill R&B, Slow R&B → Slow Jam (concept + RUBRIC + WAV 파일명)
+  - ✅ **txt → concept.md 통합** — 20곡 Style+Lyrics를 concept.md Track Details로 이동, txt 삭제
+  - ✅ **WAV 리네이밍** — `NN__제목__영문__장르__BPM.wav` 컨벤션 적용 (20곡)
+  - ✅ **Track Map 정리** — Track 01 Off, 10 작은 빛, 15 비, 18 맞잡은 손, 20 눈을 감으면
+  - ✅ **YouTube 메타 작성** — 트랙리스트 + 서정적 설명문 + 해시태그 + 썸네일/루프 컨셉 기록
+  - ✅ **썸네일 확정** — 다크 로프트 침실 + 네온 빌딩 야경 + 파자마 DJ
+  - ✅ **루프영상 제작** — 0.6x 감속 + 프레임보간 + 필름그레인 + 팔린드롬 (26.4s, 4K)
+  - ⏳ **pack 진행 중** — loop 비트레이트 이슈로 CRF 조정 중, vfade 완료
+  - **현황: 전곡 PASS, 가사 완료, 영상 패키징 진행 중**
 
 - **12-00 Korean Afrobeats 시리즈** — PACK v2 COMPLETE (2026-03-22)
   - **현황: 20/20 트랙 PASS, PACK v2 4K/FLAC 완성, Shorts 1건 완성**
-  - 남은 작업: YouTube 업로드 (final.mkv 16GB)
+  - ✅ YouTube 업로드 완료
 
 - **brand/logo_wavvy.psd** — 로컬 삭제 상태 (의도 확인 필요)
 
@@ -116,15 +125,20 @@
 
 ## 다음 할 일
 
-- [ ] **22-00 Suno 테스트** — Track 10부터 순차 테스트 (01~09 PASS 완료)
-- [ ] **22-00 나머지 트랙 주제/가사 조정** — Track 11~20 Suno 테스트 진행하며
-- [ ] **22-00 썸네일** — 시리즈 이미지 방향 결정
-- [ ] YouTube 업로드 (12-00 final.mkv 16GB)
+- [ ] **22-00 pack 완료** — loop.mp4 비트레이트 최적화 후 pack 재실행
+  - loop_xfade.mp4 23GB → CRF 26 loop (98MB, 31Mbps)로 재시도 필요
+  - 또는 vfade 스킵 + stream_loop 방식 검토
+- [ ] **22-00 YouTube 업로드** — final 영상 완성 후
+- [ ] **22-00 타임스탬프** — pack 완료 후 YouTube 설명에 정확한 시간 반영
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
 ## 핸드오프 메모
 
 - 채널 브랜딩: `wavvy.md` §7 참조
-- 12-00 final.mkv: `SERIES/12-00/output/final.mkv` (4K, FLAC 48kHz, 102.7분, 16GB)
-- 썸네일 원본: `SERIES/12-00/input/thumb.psd`
+- 12-00: YouTube 업로드 완료
+- 22-00 loop 파일 현황:
+  - `input/loop.mp4` — CRF 26 팔린드롬 (98MB, 31Mbps) ← 현재 사용 중
+  - `input/loop_hq.mp4` — CRF 23 팔린드롬 (452MB, 143Mbps) ← 백업
+  - `input/loop_xfade.mp4` — vfade 결과 (23GB) ← pack용, 삭제 가능
+- 썸네일 원본: `SERIES/22-00/input/thumb.psd`
 - 리서치 리포트: `report/2026-03-21_youtube-audio-quality-optimization.md`
