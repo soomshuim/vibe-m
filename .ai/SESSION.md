@@ -49,8 +49,9 @@
   - ✅ **PACK COMPLETE** — final.mkv 8.7GB, 137분, 20곡x2, CRF 26 (2026-04-03)
   - ✅ **YouTube 제목 확정** — "느좋 릴랙스 플리" 컨셉, 타임스탬프 20곡 반영
   - ✅ **YouTube 태그 리스트 추가** (# 없는 버전)
-  - ⏳ **YouTube 업로드 중**
-  - **현황: PACK 완료, 업로드 진행 중**
+  - ✅ **YouTube 업로드 완료** (2026-04-04)
+  - ✅ **YouTube 제목 변경** — 태그 세분화 (수면·릴랙스·카페 → 릴랙스·카페음악·매장음악·수면음악)
+  - **현황: PACK + YouTube 업로드 완료**
 
 - **12-00 Korean Afrobeats 시리즈** — PACK v2 COMPLETE (2026-03-22)
   - **현황: 20/20 트랙 PASS, PACK v2 4K/FLAC 완성, Shorts 1건 완성**
@@ -128,7 +129,7 @@
 
 ## 다음 할 일
 
-- [ ] **22-00 YouTube 업로드 완료 확인**
+- [x] ~~22-00 YouTube 업로드 완료 확인~~ (2026-04-04)
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
 ## 핸드오프 메모

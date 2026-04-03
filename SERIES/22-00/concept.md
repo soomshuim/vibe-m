@@ -207,7 +207,7 @@ upbeat, energetic, hype, party
 
 ### 제목
 ```
-Playlist | 22:00 | 느좋 릴랙스 플리 ✨ | SLOW JAM · CHILL R&B | 수면 · 릴랙스 · 카페 | Wavvy
+Playlist | 22:00 |  느좋 릴랙스 플리 ✨ | SLOW JAM · CHILL R&B | 릴랙스 · 카페음악 · 매장음악 · 수면음악 | Wavvy
 ```
 
 ### 설명
