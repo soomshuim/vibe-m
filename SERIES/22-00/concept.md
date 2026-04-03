@@ -207,7 +207,7 @@ upbeat, energetic, hype, party
 
 ### 제목
 ```
-Playlist | 22:00 | 잠들기 전, 편안한 시간 ✨ | SLOW JAM · CHILL R&B | 수면음악 · 릴랙스 | Wavvy
+Playlist | 22:00 | 느좋 릴랙스 플리 ✨ | SLOW JAM · CHILL R&B | 수면 · 릴랙스 · 카페 | Wavvy
 ```
 
 ### 설명
@@ -229,28 +229,28 @@ Playlist | 22:00 | 잠들기 전, 편안한 시간 ✨ | SLOW JAM · CHILL R&B |
 천천히, 조용히, 잠으로 향하는 모든 순간을 위한 노래들.
 우리말 가사로, 그 시간의 온도를 기록합니다.
 
-Wavvy — Music for your space, 24 hours a day.
+🎵 Track List
 ──────────────
-✨ 00:00 - 01. 스위치 (Off)
-XX:XX - 02. 잠옷 (Comfort)
-XX:XX - 03. 조명 (Lights)
-XX:XX - 04. 소파 (Sofa)
-XX:XX - 05. 야경 (Nightscape)
-XX:XX - 06. 목욕 (Bath)
-XX:XX - 07. 향기 (Scent)
-XX:XX - 08. 체온 (Warm)
-XX:XX - 09. 풀어져가 (Let it unwind)
-XX:XX - 10. 작은 빛 (Little Light)
-XX:XX - 11. 일기 (Diary)
-XX:XX - 12. 창문 (Window)
-XX:XX - 13. 달빛 커튼 (Moonlit Curtain)
-XX:XX - 14. 무게 (Weight)
-XX:XX - 15. 비 (Rain)
-XX:XX - 16. 이불 (Blanket)
-XX:XX - 17. 베개 (Pillow)
-XX:XX - 18. 맞잡은 손 (Holding Hands)
-XX:XX - 19. 자장가 (Lullaby)
-XX:XX - 20. 눈을 감으면 (When I Close My Eyes)
+0:00 - 01. 스위치 (Off)
+3:16 - 02. 잠옷 (Comfort)
+6:40 - 03. 조명 (Lights)
+9:51 - 04. 소파 (Sofa)
+12:54 - 05. 야경 (Nightscape)
+16:27 - 06. 목욕 (Bath)
+19:26 - 07. 향기 (Scent)
+23:08 - 08. 체온 (Warm)
+26:36 - 09. 풀어져가 (Let it unwind)
+30:07 - 10. 작은 빛 (Little Light)
+33:45 - 11. 일기 (Diary)
+36:37 - 12. 창문 (Window)
+40:15 - 13. 달빛 커튼 (Moonlit Curtain)
+43:42 - 14. 무게 (Weight)
+46:51 - 15. 비 (Rain)
+50:17 - 16. 이불 (Blanket)
+54:04 - 17. 베개 (Pillow)
+58:12 - 18. 맞잡은 손 (Holding Hands)
+1:01:19 - 19. 자장가 (Lullaby)
+1:05:17 - 20. 눈을 감으면 (When I Close My Eyes)
 ──────────────
 Music for your space, 24 hours a day.
 All tracks feature Korean lyrics.
@@ -263,6 +263,11 @@ Copyright Ⓒ Wavvy. All rights reserved.
 #latenightrnb #잠잘때듣는알앤비 #chillrnbplaylist
 #playlist #플리 #한국어가사 #koreanlyrics
 #wavvy #웨이비
+```
+
+### 태그
+```
+slow jam, chill rnb, rnb, 알앤비, 슬로우잼, 수면음악, 잠잘때듣는노래, 릴랙스, 수면전, 수면알앤비, late night rnb, 잠잘때듣는알앤비, chill rnb playlist, playlist, 플리, 한국어가사, korean lyrics, wavvy, 웨이비
 ```
 
 ### 썸네일
