@@ -1,0 +1,29 @@
+Track: 고백 (Confession)
+Type: A
+BPM: 114
+Key: Eb Major
+Length: 3min+
+
+=== STYLE ===
+Articulation. Korean Indie Pop, 114 BPM, Eb Major,
+bright jangly electric guitar riff, clean tone with light chorus effect,
+upbeat drum pattern, crisp snare, open hi-hat,
+warm bass groove, subtle synth pad layer,
+Female vocal: Bright, Sweet, Clear, Chest voice, articulation,
+catchy melodic hook, singalong chorus,
+warm bright mix, wide stereo, spring energy,
+moderate reverb, open room ambience, EQ balanced sound, clean mix.
+Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
+Chorus vocal may be delivered with stronger intensity or light belt.
+Higher register emphasis is encouraged. Natural vocal brightness allowed.
+
+=== EXCLUDE ===
+autotune heavy, vocoder, EDM drops, big room,
+choir, stacked harmonies, backing vocal layers, doubled vocals,
+heavy 808 bass, trap hi-hats, drill bass, dark moody,
+aggressive, gritty, distortion, shoegaze wall-of-sound
+
+=== LYRICS ===
+I-V1-PC-C-V2-PC-C-B-C-O
+Korean lyrics, gathering courage to confess, trembling voice, speaking from heart, English hook "I like you"

@@ -138,15 +138,19 @@
   - ✅ Track Map 검증 — Minor 4곡 배치 (F#m, Bm, Em, Dm), Key 중복 해소
   - 보컬: F11:M9 (55:45), Bright/Sweet/Clear 톤
   - Style: A 10 : C 6 : B 4 (50:30:20)
-  - **현황: concept v0.1 + 루브릭 완성, Suno 테스트 대기**
+  - ✅ **20곡 트랙 txt 파일 생성** — Style/Exclude/Lyrics 포맷 완비
+  - ✅ **Lyrics 약칭 포맷 적용** — `I-V1-PC-C-V2-PC-C-B-C-O` + 키워드 + English hook
+  - ✅ **Track 01 Suno 테스트 PASS** — Style A, "Here comes the wind" 훅
+  - ✅ **Track 02 Male Duet 전환** — call-and-response duet
+  - **현황: Track 01 PASS, 나머지 19곡 Suno 테스트 진행 중**
 
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
-- [ ] 13-00 Style A Suno 테스트 (1곡) → 프롬프트 튜닝
-- [ ] 13-00 Style B, C 테스트
-- [ ] 13-00 트랙 제목/테마 확정
+- [x] ~~13-00 Style A Suno 테스트~~ — Track 01 PASS (2026-04-04)
+- [ ] 13-00 Style B (Track 02 Duet), Style C 테스트
+- [ ] 13-00 나머지 트랙 Suno 테스트 진행
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
 ## 핸드오프 메모

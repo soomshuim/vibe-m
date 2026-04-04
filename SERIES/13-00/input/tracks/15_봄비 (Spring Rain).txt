@@ -1,0 +1,29 @@
+Track: 봄비 (Spring Rain)
+Type: C
+BPM: 104
+Key: D Minor
+Length: 3min+
+
+=== STYLE ===
+Articulation. Korean Indie Pop, Dream Pop, 104 BPM, D Minor,
+jangly electric guitar with shimmer reverb, bright piano chords,
+upbeat drum with soft snare, tambourine, light strings in chorus,
+warm bass groove, ethereal synth pad layer,
+Male vocal: Bright, Airy, Sweet, Chest voice, articulation,
+catchy hook with dreamy atmosphere, melodic chorus,
+warm dreamy mix, wide stereo, spring warmth with ethereal space,
+moderate-heavy reverb, open ambience, EQ balanced sound, clean mix.
+Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
+Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
+Chorus vocal may be delivered with stronger intensity or light belt.
+Higher register emphasis is encouraged. Natural vocal brightness allowed.
+
+=== EXCLUDE ===
+autotune heavy, vocoder, EDM drops, big room,
+choir, stacked harmonies, backing vocal layers, doubled vocals,
+heavy 808 bass, trap hi-hats, drill bass, dark moody,
+aggressive, gritty, distortion, shoegaze wall-of-sound
+
+=== LYRICS ===
+I-V1-PC-C-V2-PC-C-B-C-O
+Korean lyrics, sharing umbrella in spring rain, getting closer, gentle raindrops, English hook "rain on me"
