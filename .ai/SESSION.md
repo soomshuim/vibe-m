@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-03
+> Last updated: 2026-04-04
 
 ## 진행 중
 
@@ -125,20 +125,36 @@
     - 영상: Downloads/loop.mov (1190x2116, 30.7s) → 팔린드롬 → 루프
     - 로고: 288px, left 60px, top 160px
     - Output: output/shorts/short_얼룩.mp4 (~123MB, 2:49)
+- **13-00 벚꽃 산책 시리즈** — Korean Indie Pop + Dream Pop 신규 시리즈 (2026-04-04)
+  - 시간대: 13:00 — 점심 후 벚꽃길 산책
+  - 장르: **Korean Indie Pop (메인) + Dream Pop (질감)**
+  - 테마: 봄의 감정들 — 첫사랑, 설렘, 벚꽃, 햇살, 두근거림
+  - 레퍼런스: 마틴스미스 "봄 그리고 너" (핵심), 케이윌 "러브블라썸" (무드)
+  - ✅ 레퍼런스 리서치 완료 (`report/2026-04-04_13-00-reference-research.md`)
+  - ✅ 장르 딥리서치 완료 (`report/2026-04-04_indie-pop-dream-pop-genre-research.md`)
+  - ✅ `INDIE_POP_RUBRIC.md` v1.0 작성 (Hard Gate 7개, 8-Factor, Drift 6종)
+  - ✅ Genre Gate 추가 (concept.md)
+  - ✅ concept.md v0.1 — Series DNA, Style Template 3종 (A/B/C), Track Map 20곡
+  - ✅ Track Map 검증 — Minor 4곡 배치 (F#m, Bm, Em, Dm), Key 중복 해소
+  - 보컬: F11:M9 (55:45), Bright/Sweet/Clear 톤
+  - Style: A 10 : C 6 : B 4 (50:30:20)
+  - **현황: concept v0.1 + 루브릭 완성, Suno 테스트 대기**
+
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
-- [x] ~~22-00 YouTube 업로드 완료 확인~~ (2026-04-04)
+- [ ] 13-00 Style A Suno 테스트 (1곡) → 프롬프트 튜닝
+- [ ] 13-00 Style B, C 테스트
+- [ ] 13-00 트랙 제목/테마 확정
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
 ## 핸드오프 메모
 
 - 채널 브랜딩: `wavvy.md` §7 참조
 - 12-00: YouTube 업로드 완료
-- 22-00 loop 파일 현황:
-  - `input/loop.mp4` — CRF 26 팔린드롬 (98MB, 31Mbps) ← 현재 사용 중
-  - `input/loop_hq.mp4` — CRF 23 팔린드롬 (452MB, 143Mbps) ← 백업
-  - `input/loop_xfade.mp4` — vfade 결과 (23GB) ← pack용, 삭제 가능
-- 썸네일 원본: `SERIES/22-00/input/thumb.psd`
+- 22-00: YouTube 업로드 완료
+- 13-00: concept v0.1 + 루브릭 완성, Suno 테스트 대기
+  - 루브릭: `MASTER/rubrics/INDIE_POP_RUBRIC.md`
+  - 리서치: `report/2026-04-04_*.md` (2건)
 - 리서치 리포트: `report/2026-03-21_youtube-audio-quality-optimization.md`
