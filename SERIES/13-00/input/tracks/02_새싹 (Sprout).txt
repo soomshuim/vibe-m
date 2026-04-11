@@ -1,29 +1,31 @@
 Track: 새싹 (Sprout)
-Type: B
+Type: A
 BPM: 98
 Key: C Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Dream Pop, 98 BPM, C Major,
-shimmering reverb guitar, lush ethereal pad, soft glockenspiel accent,
-gentle drum with brush snare, soft kick, light tambourine,
-warm deep bass, dreamy synth texture,
-Male Duet vocal: Airy, Sweet, Gentle, Chest voice, articulation,
-floating melodic contour, sustained chorus hook, call-and-response duet,
-dreamy atmospheric mix, wide stereo, lush reverb space,
-heavy reverb, ethereal ambience, EQ balanced sound, clean mix.
+Articulation. Korean Light Pop, 98 BPM, C Major,
+bright clean electric guitar riff, polished clean tone,
+piano as chord bed only, no piano melody lead, gentle string pad,
+polished medium groove, clean crisp snare, soft hi-hat,
+warm melodic bass, subtle synth warmth,
+Male Duet vocal: Bright, Sweet, Polished, Clear, Chest voice, articulation,
+memorable hook, singalong chorus, radio-friendly, call-and-response duet,
+warm bright mix, balanced stereo, spring blossom energy,
+moderate reverb, polished ambience, EQ balanced, clean commercial mix.
 Two male voices trading lines, no stacked or choir-like harmonies.
-Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
-Chorus vocal may be delivered with tender intensity or gentle sustained note.
-Higher register emphasis is allowed. Natural vocal warmth encouraged.
+Vocal line may intensify dynamically (sweet lift, higher register), but no additional layers.
+Chorus vocal: sweet intensity or tender lift. Higher register encouraged. Natural sweetness allowed.
 
 === EXCLUDE ===
-autotune heavy, vocoder, EDM drops, big room,
+autotune heavy, vocoder, EDM drops, big room, idol group chant,
 choir, stacked harmonies, backing vocal layers, doubled vocals,
 heavy 808 bass, trap hi-hats, drill bass, dark moody,
-aggressive, gritty, distortion, shoegaze wall-of-sound
+aggressive, gritty, distortion, shoegaze wall-of-sound,
+lo-fi DIY texture, indie garage sound, noisy production,
+jangly reverb bleed, room noise, raw demo quality
 
 === LYRICS ===
 I-V1-PC-C-V2-PC-C-B-C-O
-Korean lyrics, tiny sprout breaking through soil, quiet growth, reaching for sunlight, dreamy floating mood, English hook "growing into the light"
+Korean lyrics, tiny sprout breaking through soil, quiet growth, reaching for sunlight, sweet gentle mood, English hook "growing into the light"

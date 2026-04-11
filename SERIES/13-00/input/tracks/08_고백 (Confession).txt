@@ -5,24 +5,26 @@ Key: Eb Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Indie Pop, 114 BPM, Eb Major,
-bright jangly electric guitar riff, clean tone with light chorus effect,
-upbeat drum pattern, crisp snare, open hi-hat,
-warm bass groove, subtle synth pad layer,
-Female vocal: Bright, Sweet, Clear, Chest voice, articulation,
-catchy melodic hook, singalong chorus,
-warm bright mix, wide stereo, spring energy,
-moderate reverb, open room ambience, EQ balanced sound, clean mix.
+Articulation. Korean Light Pop, 114 BPM, Eb Major,
+bright clean electric guitar riff, polished clean tone,
+piano as chord bed only, no piano melody lead, gentle string pad,
+polished medium groove, clean crisp snare, soft hi-hat,
+warm melodic bass, subtle synth warmth,
+Female vocal: Bright, Sweet, Polished, Clear, Chest voice, articulation,
+memorable hook, singalong chorus, radio-friendly,
+warm bright mix, balanced stereo, spring blossom energy,
+moderate reverb, polished ambience, EQ balanced, clean commercial mix.
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
-Chorus vocal may be delivered with stronger intensity or light belt.
-Higher register emphasis is encouraged. Natural vocal brightness allowed.
+Vocal line may intensify dynamically (sweet lift, higher register), but no additional layers.
+Chorus vocal: sweet intensity or tender lift. Higher register encouraged. Natural sweetness allowed.
 
 === EXCLUDE ===
-autotune heavy, vocoder, EDM drops, big room,
+autotune heavy, vocoder, EDM drops, big room, idol group chant,
 choir, stacked harmonies, backing vocal layers, doubled vocals,
 heavy 808 bass, trap hi-hats, drill bass, dark moody,
-aggressive, gritty, distortion, shoegaze wall-of-sound
+aggressive, gritty, distortion, shoegaze wall-of-sound,
+lo-fi DIY texture, indie garage sound, noisy production,
+jangly reverb bleed, room noise, raw demo quality
 
 === LYRICS ===
 I-V1-PC-C-V2-PC-C-B-C-O

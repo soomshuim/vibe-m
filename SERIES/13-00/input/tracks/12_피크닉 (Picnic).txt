@@ -1,28 +1,30 @@
 Track: 피크닉 (Picnic)
-Type: C
+Type: A
 BPM: 102
 Key: F Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Indie Pop, Dream Pop, 102 BPM, F Major,
-jangly electric guitar with shimmer reverb, bright piano chords,
-upbeat drum with soft snare, tambourine, light strings in chorus,
-warm bass groove, ethereal synth pad layer,
-Female vocal: Bright, Airy, Sweet, Chest voice, articulation,
-catchy hook with dreamy atmosphere, melodic chorus,
-warm dreamy mix, wide stereo, spring warmth with ethereal space,
-moderate-heavy reverb, open ambience, EQ balanced sound, clean mix.
+Articulation. Korean Light Pop, 102 BPM, F Major,
+bright clean electric guitar riff, polished clean tone,
+piano as chord bed only, no piano melody lead, gentle string pad,
+polished medium groove, clean crisp snare, soft hi-hat,
+warm melodic bass, subtle synth warmth,
+Female vocal: Bright, Sweet, Polished, Clear, Chest voice, articulation,
+memorable hook, singalong chorus, radio-friendly,
+warm bright mix, balanced stereo, spring blossom energy,
+moderate reverb, polished ambience, EQ balanced, clean commercial mix.
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (belt, higher register), but no additional vocal layers.
-Chorus vocal may be delivered with stronger intensity or light belt.
-Higher register emphasis is encouraged. Natural vocal brightness allowed.
+Vocal line may intensify dynamically (sweet lift, higher register), but no additional layers.
+Chorus vocal: sweet intensity or tender lift. Higher register encouraged. Natural sweetness allowed.
 
 === EXCLUDE ===
-autotune heavy, vocoder, EDM drops, big room,
+autotune heavy, vocoder, EDM drops, big room, idol group chant,
 choir, stacked harmonies, backing vocal layers, doubled vocals,
 heavy 808 bass, trap hi-hats, drill bass, dark moody,
-aggressive, gritty, distortion, shoegaze wall-of-sound
+aggressive, gritty, distortion, shoegaze wall-of-sound,
+lo-fi DIY texture, indie garage sound, noisy production,
+jangly reverb bleed, room noise, raw demo quality
 
 === LYRICS ===
 I-V1-PC-C-V2-PC-C-B-C-O

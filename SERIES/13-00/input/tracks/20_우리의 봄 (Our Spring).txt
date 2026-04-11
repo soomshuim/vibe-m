@@ -5,24 +5,26 @@ Key: G Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Dream Pop, 98 BPM, G Major,
-shimmering reverb guitar, lush ethereal pad, soft glockenspiel accent,
-gentle drum with brush snare, soft kick, light tambourine,
-warm deep bass, dreamy synth texture,
-Female vocal: Airy, Sweet, Gentle, Chest voice, articulation,
-floating melodic contour, sustained chorus hook,
-dreamy atmospheric mix, wide stereo, lush reverb space,
-heavy reverb, ethereal ambience, EQ balanced sound, clean mix.
+Articulation. Korean Medium Pop, Sweet Ballad, 98 BPM, G Major,
+sweet piano melody lead, warm grand piano, rich string arrangement,
+piano as lead melody, guitar minimal or absent,
+gentle medium groove, brushed snare, soft kick pulse,
+funky warm bass, subtle brass accent,
+Female vocal: Sweet, Warm, Mature, Tender, Chest voice, articulation,
+romantic melodic contour, memorable chorus hook,
+lush warm mix, wide stereo, spring romance energy,
+moderate reverb, intimate studio ambience, EQ balanced, polished commercial mix.
 Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (gentle lift, higher register), but no additional vocal layers.
-Chorus vocal may be delivered with tender intensity or gentle sustained note.
-Higher register emphasis is allowed. Natural vocal warmth encouraged.
+Vocal line may intensify dynamically (emotive lift, head voice touch), but no additional layers.
+Chorus vocal: tender belting or sweet sustained notes. Higher register encouraged. Natural warmth.
 
 === EXCLUDE ===
-autotune heavy, vocoder, EDM drops, big room,
+autotune heavy, vocoder, EDM drops, big room, idol group chant,
 choir, stacked harmonies, backing vocal layers, doubled vocals,
 heavy 808 bass, trap hi-hats, drill bass, dark moody,
-aggressive, gritty, distortion, shoegaze wall-of-sound
+aggressive, gritty, distortion, shoegaze wall-of-sound,
+lo-fi DIY texture, indie garage sound, noisy production,
+jangly reverb bleed, room noise, raw demo quality
 
 === LYRICS ===
 I-V1-PC-C-V2-PC-C-B-C-O

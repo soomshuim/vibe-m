@@ -140,9 +140,33 @@
   - Style: A 10 : C 6 : B 4 (50:30:20)
   - ✅ **20곡 트랙 txt 파일 생성** — Style/Exclude/Lyrics 포맷 완비
   - ✅ **Lyrics 약칭 포맷 적용** — `I-V1-PC-C-V2-PC-C-B-C-O` + 키워드 + English hook
-  - ✅ **Track 01 Suno 테스트 PASS** — Style A, "Here comes the wind" 훅
+  - ✅ **Track 01 Suno 테스트 PASS** — Style A, "Here comes the wind" 훅 (v0.1, 이후 v0.2에서 폐기)
   - ✅ **Track 02 Male Duet 전환** — call-and-response duet
-  - **현황: Track 01 PASS, 나머지 19곡 Suno 테스트 진행 중**
+  - 🔄 **v0.2 장르 재정의 (2026-04-11)** — Korean Indie Pop + Dream Pop → **Korean Light Pop + K-Pop Sweet Ballad**
+    - 계기: Track 01 청취 후 레퍼런스(마틴스미스·러브블라썸)와 톤 어긋남 판단. 리서치 재분석 시 두 곡 모두 "폴리시드 팝" 성향 확인 (마틴스미스 Melon "댄스·인디음악"/Light Pop 병기, 러브블라썸 Urban Soul/폴리시드 K-Pop)
+    - ✅ `concept.md` v0.1 → v0.2 — DNA/차별점/레퍼런스 해석/Style A/B/C 템플릿/Vocal Persona/Track Map 전면 재작성
+    - ✅ **Style A: Korean Light Pop** (폴리시드 클린 기타 리프 + Rhodes chord bed + 스트링 패드 + 폴리시드 미디엄 그루브)
+    - ✅ **Style B: K-Pop Sweet Ballad** (스윗 피아노 리드 + 리치 스트링 편곡 + 펑키 웜 베이스, 러브블라썸 타입)
+    - ✅ **Style C: Polished Pop Blend** (A+B 혼합 완충 구간)
+    - ✅ Style 재배분: A9:B5:C6 선언/실제 불일치 → **A13:B4:C3 (65/20/15)**
+    - ✅ BPM 범위 확장: 90-118 → **86-118** (Track 14 벚꽃 96→88, Track 05 꽃비 96→90)
+    - ✅ Vocal Persona: Airy 제거 (STYLE.md §1.1 Default 재정렬) → **Bright/Sweet/Polished/Warm**
+    - ✅ **`MASTER/rubrics/K_LIGHTPOP_RUBRIC.md` v1.0 신규 작성** (250줄)
+      - Hard Gate 7개 (H1 BPM 86-118, H3 폴리시드 클린 기타 또는 스윗 피아노 리드)
+      - Style-Specific Gates (A1 Polished Clean Guitar, B1 Sweet Piano Lead, B2 String Arrangement)
+      - 8-Factor 재설계 (F4 멜로디 악기 확장, F7 스트링/피아노 레이어)
+      - Drift 재편: Shoegaze 제거, **Indie DIY Drift** 강화, **Over-Polished Idol K-Pop Drift** 신규, K-Pop Drift 완화
+    - ✅ `MASTER/rubrics/INDIE_POP_RUBRIC.md` 삭제 (git rm, 13-00 전용이었음)
+    - ✅ `MASTER/reference/GENRES.md` Pop 섹션 확장: `Light Pop`, `Sweet Ballad` 2행 추가
+    - ✅ **20곡 txt STYLE/EXCLUDE 일괄 교체** — 900자 한도 이하 (749-808자) + LYRICS `dreamy` 잔재 4건 정리
+    - ✅ Track 01 "첫 바람" 추가 튜닝 (Suno 1차 결과 "촌스러움" 피드백 반영):
+      - **Rhodes electric piano** (piano → Rhodes, 촌스러움 해소)
+      - **Chorus 감정 고조 명시** (STYLE.md §3 Musicality Matrix 반영: emotional swell + sweet intensity lift to peak + 1 held note + Verse2 lift + Bridge build)
+      - **Soulful R&B Vocal** (Bright/Sweet/Soulful R&B/Smooth/Chest voice/melodic runs)
+    - 보컬 방향성 전환: Light Pop 베이스 + **R&B inflection vocal** (현대 Korean R&B Pop 크로스오버, 폴킴/적재/아이유 계열)
+    - **현황: Track 01 Suno 재테스트 대기, PASS 시 Style A 12곡 전체 + Style B/C에 Rhodes/Chorus build/R&B vocal 일괄 반영 예정**
+    - 플랜 파일: `~/.claude/plans/hashed-sniffing-comet.md`
+  - **현황: v0.2 문서/루브릭/txt 재작성 완료, Track 01 Suno 재테스트 대기**
 
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 

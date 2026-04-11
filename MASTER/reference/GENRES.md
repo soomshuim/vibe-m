@@ -125,8 +125,10 @@ R&B
 |------|------|------|
 | Pop | pop | 팝 |
 | K-Pop | kpop | 케이팝 |
+| Light Pop | light pop | 라이트팝 |
 | Indie Pop | indie pop | 인디팝 |
 | Synth Pop | synthpop | 신스팝 |
+| Sweet Ballad | sweet ballad | 스윗발라드 |
 
 ### Folk / Acoustic
 | 장르 | 영문 | 한글 |

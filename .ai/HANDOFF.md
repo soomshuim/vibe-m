@@ -1,5 +1,14 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-11 15:26:36
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 13-00 v0.2 장르 재정의 — Indie Pop+Dream Pop → Light Pop+Sweet Ballad. concept.md 전면 재작성 + K_LIGHTPOP_RUBRIC.md v1.0 신규 + INDIE_POP_RUBRIC.md 삭제 + GENRES.md Pop 섹션 확장 + 20곡 txt STYLE/EXCLUDE 일괄 교체 + Track 01 Rhodes/Chorus swell/Soulful R&B vocal 튜닝. 플랜 `~/.claude/plans/hashed-sniffing-comet.md`.
+Next-TODO: Track 01 Suno 재테스트 → PASS 시 Style A 12곡 + Style C 3곡에 Rhodes + Chorus build + R&B vocal 일괄 반영, Style B 4곡에도 Chorus build + R&B vocal 반영 (Rhodes는 Style B 미적용 검토). 이후 report/2026-04-11_13-00-genre-rebrand.md 작성.
+Commits: (이번 커밋)
+---
+---
+HANDOFF: Claude -> User
 Date: 2026-04-04 17:08
 Project: ~/Project/wavvy
 Agent: 혼합
