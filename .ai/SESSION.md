@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-04
+> Last updated: 2026-04-11
 
 ## 진행 중
 
@@ -164,17 +164,72 @@
       - **Chorus 감정 고조 명시** (STYLE.md §3 Musicality Matrix 반영: emotional swell + sweet intensity lift to peak + 1 held note + Verse2 lift + Bridge build)
       - **Soulful R&B Vocal** (Bright/Sweet/Soulful R&B/Smooth/Chest voice/melodic runs)
     - 보컬 방향성 전환: Light Pop 베이스 + **R&B inflection vocal** (현대 Korean R&B Pop 크로스오버, 폴킴/적재/아이유 계열)
-    - **현황: Track 01 Suno 재테스트 대기, PASS 시 Style A 12곡 전체 + Style B/C에 Rhodes/Chorus build/R&B vocal 일괄 반영 예정**
+    - ✅ **Track 01 Suno 재테스트 PASS** (2026-04-11) — Rhodes + Chorus build + Soulful R&B vocal 조합 검증
+    - ✅ **v0.2.1 전체 롤아웃** (2026-04-11) — 19개 트랙 txt 일괄 반영 완료:
+      - Style A풀세트 12곡 (02 Duet 포함): piano → **Rhodes**, vocal에 **Soulful R&B + Smooth + melodic runs**, Chorus build 2줄 구조
+      - Style B 4곡 (05/09/14/20): 그랜드 피아노 유지, vocal에 **Soulful R&B + melodic runs**, Chorus build 2줄 (tender sustained)
+      - Style C 3곡 (04/10/18): piano chord layer → **Rhodes**, vocal에 **Soulful R&B + Smooth + melodic runs**, Chorus build 2줄
+      - Track 02 Duet: `Male Duet vocal: Bright, Sweet, R&B, Clear, Chest voice, melodic runs, articulation,` (Duet 구조 유지 + R&B 살짝)
+      - 전체 20곡 STYLE 섹션 846~893자 (900자 제한 통과)
+    - ✅ concept.md Style Template 3개 동기화 (v0.2.1)
+    - 🔄 **v0.3 장르 라벨 재정의 (2026-04-11)** — `Korean Light Pop` → **`Korean Bright Pop R&B`**
+      - 계기: v0.2.1 테스트에서 R&B 느낌 안 나옴. Suno는 장르 라벨에 가장 민감.
+      - **리서치 오분류 정정**: 마틴스미스 "봄 그리고 너" = Korean Pop R&B (적재 세션 기타 증거), 케이윌 "러브블라썸" = Urban Soul = Pop R&B. Melon "댄스·인디음악" 태그를 "Light Pop"으로 곧이곧대로 받아들인 v0.2 분류 오류.
+      - 사용자 테스트 확인: `Korean Bright Pop R&B Like Spring Sprout` 라벨로 Track 02 재테스트 → R&B 느낌 확인
+      - ✅ **전 20곡 장르 라벨 통합** → `Korean Bright Pop R&B, Like Spring {Title}` (Style A/B/C 통합, 악기/BPM/분위기로만 차별화)
+      - ✅ Track 15 "Spring Rain" / Track 20 "Our Spring" 은 "Spring" 중복 방지
+      - ✅ **"Verse2 last lines rise" 제거** — 2절 지르는 지시 삭제 (사용자 요청)
+      - ✅ Rhodes / Soulful R&B vocal / Chorus build 유지
+      - ✅ concept.md Style A/B/C 템플릿 3개 + Track Map 헤더 동기화
+      - 전체 20곡 STYLE 838~898자 (900자 제한 통과, Track 01 898 최대)
+    - 🔄 **v0.4 Silky R&B 전환 (2026-04-11)** — Suno auto-gen 샘플 분석 기반 전면 재작성
+      - 계기: v0.3 테스트에서 "R&B 느낌 전혀 안 남" 피드백 → 사용자가 `봄 새싹 R&B, Korean Pop. 남성/여성` 입력으로 Suno 자동생성 → 훨씬 좋은 결과
+      - **Auto-gen Sample 1 (Male)**: `Silky midtempo Korean R&B with male vocals, warm Rhodes and soft electric piano chords over a relaxed bounce, Tight close-mic lead, subtle vocal doubles on key words, Chorus blooms with airy harmonies, light funk guitar chops, round sub-bass lift, gentle rimshots and brushed snare, intimate, hook circles like a mantra, r&b, korean pop`
+      - **Auto-gen Sample 2 (Female)**: `Silky Korean R&B / K-pop blend with female vocals; soft electric piano and warm Rhodes, gentle groove over round bass and crisp rim shots, Verses intimate close-mic'd with subtle guitar fills, pre-chorus lifts with airy pads and rising harmonies, Chorus opens brighter with stacked vocals and light synth bells, Final hook over mellow breakdown, spotlight on lead vocal, korean pop, r&b`
+      - **성별 차이 발견**: Male = `subtle vocal doubles` (미니멀), Female = **`stacked vocals + airy harmonies`** (풍부) → v0.2/v0.3 `No stacked harmonies` 룰 **과잉 제약** 판명
+      - ✅ **Style A/B/C 폐지 → Male/Female 2종 템플릿** (~490자, v0.3 대비 절반)
+      - ✅ **전 19곡 Write 롤아웃** (Track 02 제외 — 사용자 직접 완성)
+        - Male 8곡 (04, 07, 09, 11, 13, 15, 17, 19): Male 템플릿
+        - Female 11곡 (01, 03, 05, 06, 08, 10, 12, 14, 16, 18, 20): Female 템플릿
+      - ✅ EXCLUDE에서 `choir, stacked harmonies, backing vocal layers, doubled vocals` 라인 삭제 (R&B 하모니 허용)
+      - ✅ "Spring {Theme}" 가변 (Track 15 "Spring Rain", 20 "Our Spring" 중복 방지)
+      - ✅ Articulation. 필수 유지 (wavvy 규칙)
+      - ✅ `Bridge builds with emotional swell, 1 held note. Higher register encouraged.` 유지
+      - ✅ concept.md v0.4 반영 (Style Templates / Series DNA / 차별점 / 레퍼런스 분류 정정 / Track Map Template 컬럼 / Vocal Persona 재편 / Genre Gate 루브릭 재검토 메모)
+      - 전체 19곡 STYLE 482~494자 (~절반 압축), Track 02만 889자 (사용자 처리)
+      - **리서치 분류 정정 기록**: 마틴스미스 "봄 그리고 너" = Korean Pop R&B (적재 세션 기타 증거), 케이윌 "러브블라썸" = Urban Soul = Pop R&B. v0.2 "Light Pop + Sweet Ballad" 오분류는 Melon "댄스·인디음악" 태그 곧이곧대로 받아들인 것이 원인.
     - 플랜 파일: `~/.claude/plans/hashed-sniffing-comet.md`
-  - **현황: v0.2 문서/루브릭/txt 재작성 완료, Track 01 Suno 재테스트 대기**
+  - **현황: v0.4 롤아웃 완료. Track 02는 사용자 완성본 대기. 전 트랙 Suno 테스트 대기**
 
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
 ## 다음 할 일
 
-- [x] ~~13-00 Style A Suno 테스트~~ — Track 01 PASS (2026-04-04)
-- [ ] 13-00 Style B (Track 02 Duet), Style C 테스트
-- [ ] 13-00 나머지 트랙 Suno 테스트 진행
+- [x] ~~13-00 Style A Suno 테스트~~ — Track 01 PASS v0.2 (2026-04-04)
+- [x] ~~13-00 Track 01 Rhodes+R&B 재테스트~~ — PASS v0.2.1 (2026-04-11)
+- [x] ~~13-00 v0.2.1 전체 롤아웃~~ — 19곡 txt 일괄 반영 (2026-04-11)
+- [x] ~~13-00 v0.3 장르 라벨 통합~~ — Korean Bright Pop R&B, Verse2 제거 (2026-04-11)
+- [x] ~~13-00 v0.4 Silky R&B 전환~~ — Male/Female 2종 템플릿, 19곡 Write (2026-04-11)
+- [x] ~~13-00 Track 02 "새싹" PASS v0.4~~ — Male 템플릿 + 사용자 완성 가사 저장 (2026-04-11)
+- [x] ~~13-00 Track 01 "첫 바람" PASS (legacy)~~ — Korean Light R&B 구버전 유지, 사용자 완성 가사 저장 (2026-04-11)
+  - ⚠️ **예외 1건**: Track 01은 v0.4 Silky R&B 템플릿 적용 제외. 사용자가 이전 Korean Light R&B 스타일 유지 요청 (EXCLUDE에 stacked harmonies 포함)
+- [x] ~~13-00 Track 03 "햇살" PASS v0.4~~ — Female 템플릿 + 사용자 완성 가사 저장 (2026-04-11)
+- [x] ~~13-00 Track 04 "꽃길" PASS v0.4~~ — Male 템플릿 + 사용자 완성 가사 저장 (2026-04-11)
+- [x] ~~13-00 Track 05 "꽃비" PASS v0.4~~ — Female 템플릿 (F#m 90 BPM, 첫 Minor 앵커) + 사용자 완성 가사 저장 (2026-04-11)
+- [x] ~~13-00 Track 06 "눈맞춤" PASS v0.4~~ — Female 템플릿 + 사용자 완성 가사 저장 (2026-04-11)
+- [x] ~~13-00 Track 07 "두근" PASS v0.4~~ — Male 템플릿 + 데이트 대기 POV (boom boom mantra, waiting on you 훅) + 사용자 완성본 저장 (2026-04-11)
+  - B안 적용: 대화체 포기 → mantra hook + 감정 상승곡. 구조 단순화 (V-PC-C-V-PC-C-B-C). 1차 A안은 Suno에서 반복 실패했음
+- [x] ~~13-00 Track 08 "고백" DROPPED~~ — 시리즈 의도와 안 맞음, `_excluded/` 이동. 시리즈 20곡 → **19곡** 전환 (2026-04-11)
+- [x] ~~13-00 파일 리넘버링~~ — 기존 09-20 → 08-19 (고백 제외 후 연속 번호화, 2026-04-11)
+  - 새 Track Map: 01 첫바람 / 02 새싹 / 03 햇살 / 04 꽃길 / 05 꽃비 / 06 눈맞춤 / 07 두근 / **08 미소** / **09 손끝** / **10 그네** / **11 피크닉** / **12 무지개** / **13 벚꽃** / **14 봄비** / **15 눈부심** / **16 약속** / **17 노을** / **18 만개** / **19 우리의 봄**
+  - Key 순환: Track 01 = Track 19 = G Major
+  - Minor 배치: 05(F#m) / 09(Bm) / 10(Em) / 14(Dm)
+- [x] ~~13-00 Track 08 "미소" PASS v0.4~~ — Male 템플릿 + 사용자 완성 가사 저장 (2026-04-11)
+- [x] ~~13-00 Track 09 "손끝" PASS v0.4~~ — Female 템플릿 + 사용자 완성 가사 저장 (2026-04-11). **Key 변경: B Minor → B Major** (Suno 테스트 결과 Major가 자연스러움). Minor 배치 3곡으로 축소.
+- [x] ~~13-00 Track 10 "그네" PASS v0.4~~ — **Male/Female Duet 커스텀 스타일** (trading lines + thirds/fifths 화음) + 사용자 완성 가사 저장 (2026-04-11)
+  - 가사는 1인칭 회상 POV지만 Suno Duet 보이싱으로 Verse가 남녀 교대로 분할됨. 듀엣 주제 우려는 결과가 해소.
+- [ ] 13-00 나머지 9곡 Suno 테스트 (11-19, v0.4 템플릿)
+- [ ] K_LIGHTPOP_RUBRIC.md v0.4 정합성 재검토 (Korean Pop R&B 기준 업데이트)
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
 ## 핸드오프 메모

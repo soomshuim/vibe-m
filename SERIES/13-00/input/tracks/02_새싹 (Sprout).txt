@@ -1,31 +1,97 @@
 Track: 새싹 (Sprout)
-Type: A
+Type: R&B
 BPM: 98
 Key: C Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Korean Light Pop, 98 BPM, C Major,
-bright clean electric guitar riff, polished clean tone,
-piano as chord bed only, no piano melody lead, gentle string pad,
-polished medium groove, clean crisp snare, soft hi-hat,
-warm melodic bass, subtle synth warmth,
-Male Duet vocal: Bright, Sweet, Polished, Clear, Chest voice, articulation,
-memorable hook, singalong chorus, radio-friendly, call-and-response duet,
-warm bright mix, balanced stereo, spring blossom energy,
-moderate reverb, polished ambience, EQ balanced, clean commercial mix.
-Two male voices trading lines, no stacked or choir-like harmonies.
-Vocal line may intensify dynamically (sweet lift, higher register), but no additional layers.
-Chorus vocal: sweet intensity or tender lift. Higher register encouraged. Natural sweetness allowed.
+Articulation. Silky midtempo Korean R&B, Korean Pop, Like Spring Sprout, 98 BPM, C Major,
+warm Rhodes and soft electric piano chords over a relaxed bounce,
+light funk guitar chops, round sub-bass lift,
+gentle rimshots and brushed snare, intimate groove,
+Male vocal: Tight close-mic lead in verses, subtle vocal doubles on key words,
+Chorus blooms with airy harmonies, hook circles like a mantra,
+Bridge builds with emotional swell, 1 held note. Higher register encouraged.
+r&b, korean pop
 
 === EXCLUDE ===
 autotune heavy, vocoder, EDM drops, big room, idol group chant,
-choir, stacked harmonies, backing vocal layers, doubled vocals,
 heavy 808 bass, trap hi-hats, drill bass, dark moody,
 aggressive, gritty, distortion, shoegaze wall-of-sound,
 lo-fi DIY texture, indie garage sound, noisy production,
 jangly reverb bleed, room noise, raw demo quality
 
 === LYRICS ===
-I-V1-PC-C-V2-PC-C-B-C-O
-Korean lyrics, tiny sprout breaking through soil, quiet growth, reaching for sunlight, sweet gentle mood, English hook "growing into the light"
+[Intro]
+(Instrumental)
+
+[Verse 1]
+조금씩 번진 색
+연필로 칠한 마음
+티 안 나게 자라
+내 안 구석구석
+네 이름만 조용히
+되뇌이는 밤
+
+[Pre-Chorus]
+말 못 하고 접어 둔 말들
+햇살처럼 모여
+살금살금 스며드는 너
+가슴 안이 따뜻해져
+
+[Chorus]
+You're my tiny sprout inside
+growing, growing every night
+조용하게 커져 가는
+내 맘 속의 작은 꽃
+You're my tiny sprout inside
+reaching out to where you shine
+살며시 널 향해 뻗어 가
+my love, my love, my light
+
+[Verse 2]
+아주 사소한 웃음
+하루 종일 남아
+어제보다 더 크게
+심장이 또 반응해
+손끝까지 느껴져
+달콤한 이 떨림이
+
+[Pre-Chorus]
+아무 말도 못 하던 내가
+너를 따라 변해
+눈 마주친 그 순간마다
+가슴 안이 환해져 가
+
+[Chorus]
+You're my tiny sprout inside
+growing, growing every night
+조용하게 커져 가는
+내 맘 속의 작은 꽃
+You're my tiny sprout inside
+reaching out to where you shine
+살며시 널 향해 뻗어 가
+my love, my love, my light
+
+[Bridge]
+조금만 더 다가가면
+닿을 수 있을까
+숨을 고르고 네게
+살짝 말해 볼게 (hey)
+어제보다 오늘
+더 커진 이 맘을
+네 곁에서 피우고 싶어
+
+[Chorus]
+You're my tiny sprout inside
+growing, growing every night
+조용하게 커져 가는
+내 맘 속의 작은 꽃
+You're my tiny sprout inside
+reaching out to where you shine
+달콤하게 번져 가는 걸
+my love, my love, my light
+
+[Outro]
+살며시 널 향해 뻗어 가
+my love, my love, my light

@@ -1,41 +1,41 @@
 # 13:00 벚꽃 산책
 
-Version: 0.2
+Version: 0.4
 Last Updated: 2026-04-11
 
-> **v0.2 재정의**: 기존 Indie Pop + Dream Pop → **Korean Light Pop + K-Pop Sweet Ballad**
-> 근거: Track 01 청취 후 레퍼런스(마틴스미스·케이윌)와 톤 어긋남 확인. 두 곡 모두 폴리시드 팝 성향.
-> 전환 리포트: `report/2026-04-11_13-00-genre-rebrand.md`
+> **v0.4 재정의**: Korean Light Pop + K-Pop Sweet Ballad → **Silky midtempo Korean R&B (Korean Pop)**
+> 근거: v0.2.1/v0.3 테스트에서 "R&B 느낌 안 남" 피드백. Suno auto-gen 2회 샘플(`봄 새싹 R&B, Korean Pop. 남성/여성`) 분석 → Silky + Rhodes + soft EP + round bass + rim shots + intimate close-mic이 R&B DNA. 마틴스미스 "봄 그리고 너"는 실제로 Korean Pop R&B (적재 세션 기타 증거), 케이윌 "러브블라썸"은 Urban Soul = Pop R&B.
+> Style A/B/C 폐지 → **Male / Female 2종 템플릿**으로 통합. 악기/BPM/분위기는 템플릿 내 고정, Theme/BPM/Key만 트랙별 가변.
 
 ---
 
 ## Series DNA
 
-- **정체성**: 한국어 가사 × Korean Light Pop + K-Pop Sweet Ballad (폴리시드 달콤한 봄 사운드)
+- **정체성**: 한국어 가사 × Silky midtempo Korean R&B (Korean Pop R&B 계열, 마틴스미스/러브블라썸 톤)
 - **시간대**: 13:00 — 점심 후, 벚꽃길 산책
 - **테마**: 봄의 감정들 — 첫사랑, 설렘, 벚꽃, 햇살, 새 시작, 두근거림
-- **톤**: 밝고 따뜻하면서 달콤한 폴리시드 팝. 경쾌하지만 과하지 않은 에너지
+- **톤**: intimate close-mic + warm Rhodes + relaxed bounce. 폴리시드 아닌 친밀한 질감
 - **가사**: Suno 자체 작사 (작사 프롬프트 또는 비움)
-- **보컬**: Female 55% / Male 45% (F11:M9), Bright/Sweet/Polished/Warm tone
-- **20트랙 / 80분+**
+- **보컬**: Female 55% / Male 45% (F11:M9). Male = tight close-mic + subtle doubles, Female = intimate lead + stacked vocals in chorus
+- **19트랙 / 76분+** (Track 08 "고백" 제외 — 시리즈 의도와 안 맞아 drop)
 
 ### 차별점
 
 | vs | 12:00 | 14:00 | **13:00** |
 |----|-------|-------|-----------|
-| 장르 | Korean Afrobeats | Soft R&B | **Light Pop + Sweet Ballad** |
+| 장르 | Korean Afrobeats | Soft R&B | **Silky midtempo Korean R&B** |
 | 감정 | 리듬 에너지, 다양 | 나른, 멍 | **두근거림, 설렘, 달콤함** |
-| 톤 | 그루비, 뜨거운 | 무기력, 흐릿한 | **밝고 따뜻, 폴리시드 달콤** |
+| 톤 | 그루비, 뜨거운 | 무기력, 흐릿한 | **intimate close-mic, relaxed bounce** |
 | 공간 | 점심시간 바깥 | 햇살 카페 | **벚꽃길, 공원, 봄 하늘** |
-| 에너지 | 높음 (belt) | 낮음 (졸림) | **중간 (폴리시드 달콤 lift)** |
-| 메인 악기 | 808, 젬베 | Rhodes | **폴리시드 클린 기타 + 피아노 + 스트링** |
+| 에너지 | 높음 (belt) | 낮음 (졸림) | **중간 (airy harmonies + mantra hook)** |
+| 메인 악기 | 808, 젬베 | Rhodes | **warm Rhodes + soft EP + light funk guitar chops + round sub-bass + rim shots** |
 
 ### 레퍼런스
 
 | 곡 | 아티스트 | BPM | Key | 참고 포인트 |
 |---|---------|-----|-----|-----------|
-| 봄 그리고 너 | 마틴스미스 | 98 | C Major | ★ 핵심 레퍼런스 — 폴리시드 클린 일렉기타 리프, Light Pop, 봄 설렘 |
-| 러브블라썸 | 케이윌 | 86 | Db Major | ★ 질감 레퍼런스 — 스윗 피아노 리드, 스트링 편곡, 펑키 미디엄 그루브 |
+| 봄 그리고 너 | 마틴스미스 | 98 | C Major | ★ 핵심 레퍼런스 — **Korean Pop R&B** (적재 세션 기타, 레이드백 그루브, 달콤 R&B 듀오 보컬) |
+| 러브블라썸 | 케이윌 | 86 | Db Major | ★ 질감 레퍼런스 — **Korean Pop R&B (Urban Soul)**, 스윗 피아노 + 스트링 + 펑키 미디엄 |
 | 벚꽃엔딩 | 버스커 버스커 | 120 | A Major | BPM 상한 참고, 어쿠스틱 봄 클래식 |
 | 봄이 좋냐 | 10cm | 94 | C# Major | 폴리시드 팝 보컬 톤, BPM 하한 참고 |
 
@@ -44,129 +44,110 @@ Last Updated: 2026-04-11
 
 ---
 
-## Style Templates
+## Style Templates (v0.4)
 
-> 각 템플릿 900자 이하. `STYLE.md` Writing Formula 7요소 + 13:00 특화.
-> Harmony Guard + Energy Permission 필수 포함.
-> Gravity Words(§0.4) 대응: `catchy/upbeat` 구체 대체어 사용.
+> **A/B/C 폐지** → Male/Female 2종만. 악기/그루브/믹스 DNA는 템플릿 내 고정. Theme/BPM/Key만 트랙별 가변.
+> 전 템플릿 ~490자 (v0.3 대비 절반). Suno 대응성 개선.
+> Articulation. 필수 (wavvy 규칙).
 
-### Style A — Korean Light Pop (메인) — 801자
-
-```
-Articulation. Korean Light Pop, {BPM} BPM, {Key},
-bright clean electric guitar riff, polished clean tone,
-piano as chord bed only, no piano melody lead, gentle string pad,
-polished medium groove, clean crisp snare, soft hi-hat,
-warm melodic bass, subtle synth warmth,
-{Gender} vocal: Bright, Sweet, Polished, Clear, Chest voice, articulation,
-memorable hook, singalong chorus, radio-friendly,
-warm bright mix, balanced stereo, spring blossom energy,
-moderate reverb, polished ambience, EQ balanced, clean commercial mix.
-Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (sweet lift, higher register), but no additional layers.
-Chorus vocal: sweet intensity or tender lift. Higher register encouraged. Natural sweetness allowed.
-```
-
-### Style B — K-Pop Sweet Ballad (러브블라썸 타입) — 807자
+### Male Template — ~490자
 
 ```
-Articulation. Korean Medium Pop, Sweet Ballad, {BPM} BPM, {Key},
-sweet piano melody lead, warm grand piano, rich string arrangement,
-piano as lead melody, guitar minimal or absent,
-gentle medium groove, brushed snare, soft kick pulse,
-funky warm bass, subtle brass accent,
-{Gender} vocal: Sweet, Warm, Mature, Tender, Chest voice, articulation,
-romantic melodic contour, memorable chorus hook,
-lush warm mix, wide stereo, spring romance energy,
-moderate reverb, intimate studio ambience, EQ balanced, polished commercial mix.
-Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (emotive lift, head voice touch), but no additional layers.
-Chorus vocal: tender belting or sweet sustained notes. Higher register encouraged. Natural warmth.
+Articulation. Silky midtempo Korean R&B, Korean Pop, Like Spring {Theme}, {BPM} BPM, {Key},
+warm Rhodes and soft electric piano chords over a relaxed bounce,
+light funk guitar chops, round sub-bass lift,
+gentle rimshots and brushed snare, intimate groove,
+Male vocal: Tight close-mic lead in verses, subtle vocal doubles on key words,
+Chorus blooms with airy harmonies, hook circles like a mantra,
+Bridge builds with emotional swell, 1 held note. Higher register encouraged.
+r&b, korean pop
 ```
 
-### Style C — Polished Pop Blend (혼합) — 750자
+### Female Template — ~490자
 
 ```
-Articulation. Korean Light Pop, Sweet Pop, {BPM} BPM, {Key},
-clean electric guitar riff, bright piano chord layer, gentle string bed,
-polished medium groove, soft snare, warm hi-hat,
-warm melodic bass, subtle pad warmth,
-{Gender} vocal: Bright, Sweet, Warm, Clear, Chest voice, articulation,
-memorable hook with romantic warmth, melodic chorus,
-warm polished mix, wide stereo, spring blossom romance,
-moderate reverb, polished ambience, EQ balanced, clean commercial mix.
-Lead vocal remains single and dominant throughout. No stacked or choir-like harmonies.
-Vocal line may intensify dynamically (sweet lift, higher register), but no additional layers.
-Chorus vocal: sweet intensity or light tender belt. Higher register encouraged. Natural sweetness.
+Articulation. Silky midtempo Korean R&B, Korean Pop, Like Spring {Theme}, {BPM} BPM, {Key},
+warm Rhodes and soft electric piano chords over a relaxed bounce,
+light funk guitar chops, round sub-bass lift,
+gentle rimshots and brushed snare, intimate groove,
+Female vocal: intimate close-mic lead in verses,
+Chorus opens brighter with stacked vocals and airy harmonies, hook circles like a mantra,
+Bridge builds with emotional swell, 1 held note. Higher register encouraged.
+r&b, korean pop
 ```
+
+> **성별 차이 근거**: Suno auto-gen Sample 1 (male) = `subtle vocal doubles on key words` (미니멀 레이어), Sample 2 (female) = `stacked vocals + airy harmonies` (코러스 풍부). 이전 v0.2/v0.3의 `No stacked harmonies` 룰은 R&B에서 과잉 제약이었음.
+> **Track 02 새싹 (Male Duet)**: 사용자 직접 완성 — 템플릿 적용 대상 아님.
 
 ### Exclude Template (공통)
 
 ```
 autotune heavy, vocoder, EDM drops, big room, idol group chant,
-choir, stacked harmonies, backing vocal layers, doubled vocals,
 heavy 808 bass, trap hi-hats, drill bass, dark moody,
 aggressive, gritty, distortion, shoegaze wall-of-sound,
 lo-fi DIY texture, indie garage sound, noisy production,
 jangly reverb bleed, room noise, raw demo quality
 ```
 
+> v0.4: `choir, stacked harmonies, backing vocal layers, doubled vocals,` 라인 삭제 — R&B 하모니 허용 반영.
+
 ---
 
 ## Genre Gate
 
-- 루브릭: `MASTER/rubrics/K_LIGHTPOP_RUBRIC.md` (Korean Light Pop + K-Pop Sweet Ballad)
+- 루브릭: `MASTER/rubrics/K_LIGHTPOP_RUBRIC.md` — **v0.4와 정합성 재검토 필요** (Korean Pop R&B 기준으로 업데이트 필요)
 - 총점 85+ PASS / 개별 Factor Critical Fail 없음
-- Drift 체크 필수: K-Pop(완화) / K-Ballad / Indie DIY / Over-Polished Idol K-Pop / City Pop / Ambient
-- Evidence: `report/2026-04-04_13-00-reference-research.md` + `report/2026-04-11_13-00-genre-rebrand.md`
+- Drift 체크: K-Pop Idol 과잉 / Light Pop 촌스러움 / Smooth Jazz / City Pop
+- Evidence: `report/2026-04-04_13-00-reference-research.md` (마틴스미스 분류 정정 주의) + Suno auto-gen 2회 샘플
 
 ---
 
-## Track Map (20트랙)
+## Track Map (19트랙)
 
 ### 4막 구조
 
 | 막 | 트랙 | 테마 |
 |----|------|------|
 | 기 (01-05) | 봄의 도착 | 계절의 변화, 자연, 공기 |
-| 승 (06-10) | 설렘의 시작 | 만남, 첫인상, 두근거림 |
-| 전 (11-15) | 함께하는 봄 | 깊어지는 감정, 함께 걷기 |
-| 결 (16-20) | 봄의 절정 | 만개, 고백, 약속, 우리의 봄 |
+| 승 (06-09) | 설렘의 시작 | 만남, 첫인상, 두근거림 |
+| 전 (10-14) | 함께하는 봄 | 깊어지는 감정, 함께 걷기 |
+| 결 (15-19) | 봄의 절정 | 만개, 약속, 우리의 봄 |
 
-| # | 제목 | Style | BPM | Key | Vocal | 상태 |
-|---|------|-------|-----|-----|-------|------|
-| 01 | 첫 바람 (First Breeze) | A | 106 | G Major | F | |
-| 02 | 새싹 (Sprout) | A | 98 | C Major | M | B→A |
-| 03 | 햇살 (Sunbeam) | A | 112 | D Major | F | ★ Gate2 대표 |
-| 04 | 꽃길 (Flower Path) | C | 100 | A Major | M | |
-| 05 | 꽃비 (Petal Rain) | B | 90 | F# Minor | F | BPM↓ / ★ Gate2 대표 |
-| 06 | 눈맞춤 (Glance) | A | 108 | F Major | F | |
-| 07 | 두근 (Heartbeat) | A | 104 | Bb Major | M | C→A |
-| 08 | 고백 (Confession) | A | 114 | Eb Major | F | |
-| 09 | 미소 (Smile) | B | 100 | Ab Major | M | |
-| 10 | 손끝 (Fingertip) | C | 106 | B Minor | F | |
-| 11 | 그네 (Swing) | A | 110 | E Minor | M | |
-| 12 | 피크닉 (Picnic) | A | 102 | F Major | F | C→A |
-| 13 | 무지개 (Rainbow) | A | 108 | Bb Major | M | |
-| 14 | 벚꽃 (Cherry Blossom) | B | 88 | Db Major | F | BPM↓ / ★ Gate2 대표 |
-| 15 | 봄비 (Spring Rain) | A | 104 | D Minor | M | C→A |
-| 16 | 눈부심 (Dazzle) | A | 112 | A Major | F | |
-| 17 | 약속 (Promise) | A | 106 | Eb Major | M | |
-| 18 | 노을 (Sunset) | C | 100 | E Major | F | |
-| 19 | 만개 (Full Bloom) | A | 116 | B Major | M | |
-| 20 | 우리의 봄 (Our Spring) | B | 98 | G Major | F | |
+| # | 제목 | BPM | Key | Vocal | Template | Spring Theme (Suno hint) |
+|---|------|-----|-----|-------|----------|--------------------------|
+| 01 | 첫 바람 (First Breeze) | 106 | G Major | F | **Legacy** (Korean Light R&B) | — |
+| 02 | 새싹 (Sprout) | 98 | C Major | M | Male | Spring Sprout |
+| 03 | 햇살 (Sunbeam) | 112 | D Major | F | Female | Spring Sunbeam |
+| 04 | 꽃길 (Flower Path) | 100 | A Major | M | Male | Spring Flower Path |
+| 05 | 꽃비 (Petal Rain) | 90 | F# Minor | F | Female | Spring Petal Rain |
+| 06 | 눈맞춤 (Glance) | 108 | F Major | F | Female | Spring Glance |
+| 07 | 두근 (Heartbeat) | 104 | Bb Major | M | Male | Spring Heartbeat |
+| 08 | 미소 (Smile) | 100 | Ab Major | M | Male | Spring Smile |
+| 09 | 손끝 (Fingertip) | 106 | B Major | F | Female | Spring Fingertip |
+| 10 | 그네 (Swing) | 110 | E Minor | M+F | **Custom Duet** | Spring Swing |
+| 11 | 피크닉 (Picnic) | 102 | F Major | F | Female | Spring Picnic |
+| 12 | 무지개 (Rainbow) | 108 | Bb Major | M | Male | Spring Rainbow |
+| 13 | 벚꽃 (Cherry Blossom) | 88 | Db Major | F | Female | Spring Cherry Blossom |
+| 14 | 봄비 (Spring Rain) | 104 | D Minor | M | Male | Spring Rain |
+| 15 | 눈부심 (Dazzle) | 112 | A Major | F | Female | Spring Dazzle |
+| 16 | 약속 (Promise) | 106 | Eb Major | M | Male | Spring Promise |
+| 17 | 노을 (Sunset) | 100 | E Major | F | Female | Spring Sunset |
+| 18 | 만개 (Full Bloom) | 116 | B Major | M | Male | Spring Full Bloom |
+| 19 | 우리의 봄 (Our Spring) | 98 | G Major | F | Female | Our Spring |
+
+> **Dropped (참고):** Track 08 "고백 (Confession)" 은 `input/_excluded/` 로 이동 — 시리즈 의도와 안 맞아 제외 (2026-04-11). 기존 파일 09-20 은 08-19 로 리넘버링 완료.
 
 ### 배분 규칙
 
-- **BPM**: 86-118 (Hard Gate H1) — Style B 최대 2곡만 86-92 허용 (러브블라썸 하프타임 반영)
-- **Key**: Major 16 : Minor 4 (80:20) — 밝은 봄 톤, Minor는 감정 깊이용
-- **Style**: **A 13 : B 4 : C 3 (65:20:15)** — Light Pop 메인, Sweet Ballad 질감, Polished Blend 완충
-- **Vocal**: F11 : M9 (55:45)
+- **BPM**: 88-116 (실제 범위) — midtempo R&B
+- **Key**: Major 16 : Minor 3 (84:16) — 밝은 봄 톤, Minor는 감정 깊이용
+- **Template**: **Legacy 1 (Track 01) : Male 8 : Female 10** (총 19곡)
+- **Vocal**: F10 : M9 (53:47)
 - **인접 트랙 같은 Key 금지**
-- **Key 순환**: Track 01 = Track 20 = G Major (시작과 끝의 순환)
-- **Minor 배치**: 05(B, F#m) / 10(C, Bm) / 11(A, Em) / 15(A, Dm)
-- **BPM 86-92 슬롯**: 05 꽃비 90 + 14 벚꽃 88 (Style B Minor·타이틀)
-- **Gate 2 대표 3곡**: 03 햇살(A) / 14 벚꽃(B 타이틀) / 05 꽃비(B Minor 강제 검증)
+- **Key 순환**: Track 01 = Track 19 = G Major (시작과 끝의 순환)
+- **Minor 배치**: 05(F#m) / 10(Em) / 14(Dm) — Track 09 손끝은 B Minor → B Major 변경 (Suno 테스트 시 Major가 자연스러움)
+- **Spring 접두 예외**: Track 14 "Spring Rain" / 19 "Our Spring" 는 중복 방지
+- **Dropped**: Track 08 "고백 (Confession)" — 시리즈 의도와 안 맞아 제외 (2026-04-11)
 
 ---
 
@@ -207,24 +188,26 @@ jangly reverb bleed, room noise, raw demo quality
 
 ---
 
-## Vocal Persona
+## Vocal Persona (v0.4)
 
-> **v0.2 재정렬**: STYLE.md §1.1 Default Vocal Persona가 `Airy`를 "피해야 할 단어"로 명시. 13-00 v0.1이 Airy를 허용했던 것은 Default 정책 이탈이었으며, Light Pop + Sweet Ballad 재정의 시 `Polished/Warm`으로 치환하여 Default와 재일치.
+> **v0.4 재정의**: Silky R&B 기준으로 전면 재편. Male/Female 2종 + 성별별 하모니 정책 차이.
 
-| Style | 보컬 |
-|-------|------|
-| A (Light Pop) | Bright, Sweet, Polished, Clear, Chest voice |
-| B (Sweet Ballad) | Sweet, Warm, Mature, Tender, Chest voice |
-| C (Polished Pop Blend) | Bright, Sweet, Warm, Clear, Chest voice |
+| Template | 보컬 묘사 |
+|----------|----------|
+| Male | Tight close-mic lead in verses, subtle vocal doubles on key words, Chorus blooms with airy harmonies |
+| Female | intimate close-mic lead in verses, Chorus opens brighter with stacked vocals and airy harmonies |
+
+**성별 차이:** Male은 subtle doubles 중심 (미니멀 레이어), Female은 stacked vocals + airy harmonies (풍부한 코러스). Suno auto-gen 2회 샘플 증거 기반.
 
 ### 기존 wavvy 보컬과 차별점
 
-| wavvy 기본 | **13:00** |
+| wavvy 기본 | **13:00 v0.4** |
 |-----------|-----------|
-| Raw, Solid, Direct, Dry | **Bright, Sweet, Polished, Warm** |
-| Minimal reverb | **Moderate reverb (polished)** |
-| Belt 허용 (90+ BPM) | **Light sweet lift + Tender belt (Style B)** |
-| 진성 강제 | **진성 기본, head voice touch 허용(Style B만)** |
+| Raw, Solid, Direct, Dry | **Silky, Tight close-mic, intimate** |
+| Minimal reverb | **intimate groove (R&B 폴리시)** |
+| Belt 허용 (90+ BPM) | **Airy harmonies + mantra hook + 1 held note** |
+| 진성 강제 | **Close-mic 진성, higher register 허용** |
+| No stacked harmonies | **Female: stacked vocals 허용 (코러스), Male: subtle doubles** |
 
 ---
 
