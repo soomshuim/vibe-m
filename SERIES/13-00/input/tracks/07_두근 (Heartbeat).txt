@@ -5,14 +5,7 @@ Key: Bb Major
 Length: 3min+
 
 === STYLE ===
-Articulation. Silky midtempo Korean R&B, Korean Pop, Like Spring Heartbeat, 104 BPM, Bb Major,
-warm Rhodes and soft electric piano chords over a relaxed bounce,
-light funk guitar chops, round sub-bass lift,
-gentle rimshots and brushed snare, intimate groove,
-Male vocal: Tight close-mic lead in verses, subtle vocal doubles on key words,
-Chorus blooms with airy harmonies, hook circles like a mantra,
-Bridge builds with emotional swell, 1 held note. Higher register encouraged.
-r&b, korean pop
+Urban soul groove at a medium tempo with tight, rounded bass and crisp, lightly swung drums; clean rhythm guitar and warm Rhodes support a relaxed, talk-like topline, Lead male vocal is upfront, dry, and intimate with clear diction and minimal effects, while subtle stereo doubles and harmonies lift the hooks for a conversational, confessional feel, funky, soul, vocal, conversational, clear lead vocal
 
 === EXCLUDE ===
 autotune heavy, vocoder, EDM drops, big room, idol group chant,

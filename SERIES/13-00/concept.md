@@ -102,16 +102,16 @@ jangly reverb bleed, room noise, raw demo quality
 
 ---
 
-## Track Map (19트랙)
+## Track Map (21트랙)
 
 ### 4막 구조
 
 | 막 | 트랙 | 테마 |
 |----|------|------|
 | 기 (01-05) | 봄의 도착 | 계절의 변화, 자연, 공기 |
-| 승 (06-09) | 설렘의 시작 | 만남, 첫인상, 두근거림 |
-| 전 (10-14) | 함께하는 봄 | 깊어지는 감정, 함께 걷기 |
-| 결 (15-19) | 봄의 절정 | 만개, 약속, 우리의 봄 |
+| 승 (06-10) | 설렘의 시작 | 만남, 첫인상, 두근거림 |
+| 전 (11-16) | 함께하는 봄 | 깊어지는 감정, 함께 걷기 |
+| 결 (17-21) | 봄의 절정 | 만개, 약속, 우리의 봄 |
 
 | # | 제목 | BPM | Key | Vocal | Template | Spring Theme (Suno hint) |
 |---|------|-----|-----|-------|----------|--------------------------|
@@ -125,28 +125,31 @@ jangly reverb bleed, room noise, raw demo quality
 | 08 | 미소 (Smile) | 100 | Ab Major | M | Male | Spring Smile |
 | 09 | 손끝 (Fingertip) | 106 | B Major | F | Female | Spring Fingertip |
 | 10 | 그네 (Swing) | 110 | E Minor | M+F | **Custom Duet** | Spring Swing |
-| 11 | 피크닉 (Picnic) | 102 | F Major | F | Female | Spring Picnic |
-| 12 | 무지개 (Rainbow) | 108 | Bb Major | M | Male | Spring Rainbow |
-| 13 | 벚꽃 (Cherry Blossom) | 88 | Db Major | F | Female | Spring Cherry Blossom |
-| 14 | 봄비 (Spring Rain) | 104 | D Minor | M | Male | Spring Rain |
-| 15 | 눈부심 (Dazzle) | 112 | A Major | F | Female | Spring Dazzle |
-| 16 | 약속 (Promise) | 106 | Eb Major | M | Male | Spring Promise |
-| 17 | 노을 (Sunset) | 100 | E Major | F | Female | Spring Sunset |
-| 18 | 만개 (Full Bloom) | 116 | B Major | M | Male | Spring Full Bloom |
-| 19 | 우리의 봄 (Our Spring) | 98 | G Major | F | Female | Our Spring |
+| 11 | 봄 향기 (Spring Scent) | — | Major (TBD) | F | **Custom** (Neo-Soul/Funk) | — |
+| 12 | 약속 (Promise) | 100 | — | M | **Custom** (Neo-Soul) | — |
+| 13 | 피크닉 (Picnic) | 102 | F Major | F | Female | Spring Picnic |
+| 14 | 무지개 (Rainbow) | 108 | Bb Major | M | Male | Spring Rainbow |
+| 15 | 벚꽃 (Cherry Blossom) | 88 | Db Major | F | Female | Spring Cherry Blossom |
+| 16 | 봄비 (Spring Rain) | 104 | D Minor | M | Male | Spring Rain |
+| 17 | 눈부심 (Dazzle) | 112 | A Major | F | Female | Spring Dazzle |
+| 18 | 약속 (Promise) | 106 | Eb Major | M | Male | Spring Promise |
+| 19 | 노을 (Sunset) | 100 | E Major | F | Female | Spring Sunset |
+| 20 | 만개 (Full Bloom) | 116 | B Major | M | Male | Spring Full Bloom |
+| 21 | 우리의 봄 (Our Spring) | 98 | G Major | F | Female | Our Spring |
 
-> **Dropped (참고):** Track 08 "고백 (Confession)" 은 `input/_excluded/` 로 이동 — 시리즈 의도와 안 맞아 제외 (2026-04-11). 기존 파일 09-20 은 08-19 로 리넘버링 완료.
+> **Dropped (참고):** Track 08 "고백 (Confession)" 은 `input/_excluded/` 로 이동 (2026-04-11). Track 11-12 사용자 직접 제작 삽입, 기존 11-19 → 13-21 리넘버링 (2026-04-12).
+> **⚠️ 동명 트랙:** Track 12 / Track 18 모두 "약속 (Promise)" — 확인 필요
 
 ### 배분 규칙
 
 - **BPM**: 88-116 (실제 범위) — midtempo R&B
-- **Key**: Major 16 : Minor 3 (84:16) — 밝은 봄 톤, Minor는 감정 깊이용
-- **Template**: **Legacy 1 (Track 01) : Male 8 : Female 10** (총 19곡)
-- **Vocal**: F10 : M9 (53:47)
+- **Key**: Major 16+ : Minor 3 — 밝은 봄 톤, Minor는 감정 깊이용 (Track 11-12 Key TBD)
+- **Template**: **Legacy 1 (Track 01) : Custom 3 (Track 10-12) : Male 8 : Female 9** (총 21곡)
+- **Vocal**: F11 : M10 (52:48)
 - **인접 트랙 같은 Key 금지**
-- **Key 순환**: Track 01 = Track 19 = G Major (시작과 끝의 순환)
-- **Minor 배치**: 05(F#m) / 10(Em) / 14(Dm) — Track 09 손끝은 B Minor → B Major 변경 (Suno 테스트 시 Major가 자연스러움)
-- **Spring 접두 예외**: Track 14 "Spring Rain" / 19 "Our Spring" 는 중복 방지
+- **Key 순환**: Track 01 = Track 21 = G Major (시작과 끝의 순환)
+- **Minor 배치**: 05(F#m) / 10(Em) / 16(Dm) — Track 09 손끝은 B Minor → B Major 변경 (Suno 테스트 시 Major가 자연스러움)
+- **Spring 접두 예외**: Track 16 "Spring Rain" / 21 "Our Spring" 는 중복 방지
 - **Dropped**: Track 08 "고백 (Confession)" — 시리즈 의도와 안 맞아 제외 (2026-04-11)
 
 ---

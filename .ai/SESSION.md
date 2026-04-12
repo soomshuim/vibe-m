@@ -200,6 +200,16 @@
       - **리서치 분류 정정 기록**: 마틴스미스 "봄 그리고 너" = Korean Pop R&B (적재 세션 기타 증거), 케이윌 "러브블라썸" = Urban Soul = Pop R&B. v0.2 "Light Pop + Sweet Ballad" 오분류는 Melon "댄스·인디음악" 태그 곧이곧대로 받아들인 것이 원인.
     - 플랜 파일: `~/.claude/plans/hashed-sniffing-comet.md`
   - **현황: v0.4 롤아웃 완료. Track 02는 사용자 완성본 대기. 전 트랙 Suno 테스트 대기**
+  - 🔄 **트랙 삽입 + 리넘버링 (2026-04-12)** — 사용자 직접 제작 Track 11-12 삽입, 기존 11-19 → 13-21
+    - ✅ **Track 11 "봄 향기 (Spring Scent)"** — Neo-Soul/Funk, F, 사용자 직접 제작 PASS
+    - ✅ **Track 12 "약속 (Promise)"** — Neo-Soul, M, 100 BPM, 사용자 직접 제작 PASS
+    - ✅ 기존 11-19 → 13-21 파일 리넘버링 완료
+    - ✅ concept.md Track Map 21트랙 업데이트 + 4막 구조 재배분
+    - ✅ **Track 07 "두근" 스타일 교체** — v0.4 Silky R&B → Urban Soul groove (사용자 커스텀)
+    - ✅ **Track 08 "미소" 스타일 교체** — v0.4 Silky R&B → Urban Neo-Soul R&B (사용자 커스텀, jazz chords + vinyl texture)
+    - ⚠️ **동명 트랙**: Track 12 / Track 18 모두 "약속 (Promise)" — 사용자 추후 변경 예정
+    - 13~21 추가 변경 예고됨 (사용자 알림 대기)
+  - **현황: 21트랙 체제. Track 01-12 PASS. Track 13-21 Suno 테스트 + 추가 변경 대기**
 
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
@@ -228,7 +238,9 @@
 - [x] ~~13-00 Track 09 "손끝" PASS v0.4~~ — Female 템플릿 + 사용자 완성 가사 저장 (2026-04-11). **Key 변경: B Minor → B Major** (Suno 테스트 결과 Major가 자연스러움). Minor 배치 3곡으로 축소.
 - [x] ~~13-00 Track 10 "그네" PASS v0.4~~ — **Male/Female Duet 커스텀 스타일** (trading lines + thirds/fifths 화음) + 사용자 완성 가사 저장 (2026-04-11)
   - 가사는 1인칭 회상 POV지만 Suno Duet 보이싱으로 Verse가 남녀 교대로 분할됨. 듀엣 주제 우려는 결과가 해소.
-- [ ] 13-00 나머지 9곡 Suno 테스트 (11-19, v0.4 템플릿)
+- [x] ~~13-00 Track 11-12 삽입 + 리넘버링~~ — 사용자 직접 제작 2곡 삽입, 기존 11-19→13-21 (2026-04-12)
+- [x] ~~13-00 Track 07/08 스타일 교체~~ — 사용자 커스텀 Urban Soul/Neo-Soul (2026-04-12)
+- [ ] 13-00 나머지 9곡 Suno 테스트 (13-21) + 사용자 추가 변경 반영
 - [ ] K_LIGHTPOP_RUBRIC.md v0.4 정합성 재검토 (Korean Pop R&B 기준 업데이트)
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
@@ -237,7 +249,7 @@
 - 채널 브랜딩: `wavvy.md` §7 참조
 - 12-00: YouTube 업로드 완료
 - 22-00: YouTube 업로드 완료
-- 13-00: concept v0.1 + 루브릭 완성, Suno 테스트 대기
+- 13-00: 21트랙 체제, Track 01-12 PASS, Track 13-21 테스트+변경 대기
   - 루브릭: `MASTER/rubrics/INDIE_POP_RUBRIC.md`
   - 리서치: `report/2026-04-04_*.md` (2건)
 - 리서치 리포트: `report/2026-03-21_youtube-audio-quality-optimization.md`

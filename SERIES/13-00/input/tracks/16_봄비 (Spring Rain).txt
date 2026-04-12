@@ -1,0 +1,26 @@
+Track: 봄비 (Spring Rain)
+Type: R&B
+BPM: 104
+Key: D Minor
+Length: 3min+
+
+=== STYLE ===
+Articulation. Silky midtempo Korean R&B, Korean Pop, Like Spring Rain, 104 BPM, D Minor,
+warm Rhodes and soft electric piano chords over a relaxed bounce,
+light funk guitar chops, round sub-bass lift,
+gentle rimshots and brushed snare, intimate groove,
+Male vocal: Tight close-mic lead in verses, subtle vocal doubles on key words,
+Chorus blooms with airy harmonies, hook circles like a mantra,
+Bridge builds with emotional swell, 1 held note. Higher register encouraged.
+r&b, korean pop
+
+=== EXCLUDE ===
+autotune heavy, vocoder, EDM drops, big room, idol group chant,
+heavy 808 bass, trap hi-hats, drill bass, dark moody,
+aggressive, gritty, distortion, shoegaze wall-of-sound,
+lo-fi DIY texture, indie garage sound, noisy production,
+jangly reverb bleed, room noise, raw demo quality
+
+=== LYRICS ===
+I-V1-PC-C-V2-PC-C-B-C-O
+Korean lyrics, sharing umbrella in spring rain, getting closer, gentle raindrops, English hook "rain on me"
