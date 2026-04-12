@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-11
+> Last updated: 2026-04-13
 
 ## 진행 중
 
@@ -219,7 +219,13 @@
     - ✅ **concept.md v0.5** — Track Details 20곡 Style+Lyrics 통합, txt 파일 삭제
     - ✅ **Track "두근" DROP** → `_excluded/`
     - 20트랙 체제: Custom 14 / Legacy 1 / Male 2 / Female 3 / F10:M8:Duet2
-  - **현황: 20트랙 전곡 PASS. concept.md에 Style+Lyrics 통합 완료. WAV 20곡 대기.**
+  - ✅ **WAV 리네이밍** (2026-04-13) — 20곡 `NN__제목__영문__장르__BPM.wav` 컨벤션 적용, Track 07/11 BPM 100 기재
+  - ✅ **_excluded/ 삭제** (2026-04-13) — 07 두근, 20 만개 txt 정리
+  - ✅ **YouTube 메타 작성** (2026-04-13) — concept.md 최상단, "봄이라 괜히 기분 좋은 하루 🌸 | FEEL GOOD R&B · URBAN NEO-SOUL | 봄플리 · 산책 · 드라이브" 컨셉
+  - ✅ **이미지 기반 영상 제작** (2026-04-13) — loop.png(4096x2336, 벚꽃길 커플 사진) 직접 렌더, `-loop 1 -tune stillimage -r 1` 최적화
+  - ✅ **PACK COMPLETE** — final.mkv 1.3GB, 135.4분, 20곡 x2, FLAC/48kHz (2026-04-13)
+  - ✅ **YouTube 업로드 완료** (2026-04-13)
+  - **현황: 시리즈 완료**
 
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
@@ -251,9 +257,12 @@
 - [x] ~~13-00 Track 11-12 삽입 + 리넘버링~~ — 사용자 직접 제작 2곡 삽입, 기존 11-19→13-21 (2026-04-12)
 - [x] ~~13-00 Track 07/08 스타일 교체~~ — 사용자 커스텀 Urban Soul/Neo-Soul (2026-04-12)
 - [x] ~~13-00 v0.5 전면 업데이트~~ — 07 봄꽃 교체, 03/13-19 커스텀 스타일+가사, 20 만개 DROP, concept.md Track Details 통합, txt 삭제 (2026-04-12)
-- [ ] 13-00 WAV 리네이밍 (concept.md 기준)
+- [x] ~~13-00 WAV 리네이밍~~ — 20곡 `NN__제목__영문__장르__BPM.wav` 컨벤션 (2026-04-13)
+- [x] ~~13-00 YouTube 메타 작성~~ — concept.md 최상단, FEEL GOOD R&B · URBAN NEO-SOUL (2026-04-13)
+- [x] ~~13-00 영상 제작 + PACK~~ — 이미지 베이스 (loop.png 4K), final.mkv 1.3GB 135.4분 (2026-04-13)
+- [x] ~~13-00 YouTube 업로드~~ — 완료 (2026-04-13)
+- [x] ~~wavvy.py 이미지 모드 지원~~ — loop.png/jpg 감지 시 vfade 스킵, `-loop 1 -tune stillimage -r 1` 직접 렌더 (2026-04-13)
 - [ ] K_LIGHTPOP_RUBRIC.md v0.5 정합성 재검토
-- [ ] 루프 영상 소스 확보 + 썸네일 컨셉
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
 ## 핸드오프 메모

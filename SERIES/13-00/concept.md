@@ -9,6 +9,82 @@ Last Updated: 2026-04-12
 
 ---
 
+## YouTube Metadata (v2.1)
+
+### Context Mode
+Transition — 점심 후 봄 산책, 설렘과 따뜻함의 전환
+
+### 제목
+```
+Playlist | 13:00 | 봄이라 괜히 기분 좋은 하루 🌸 | FEEL GOOD R&B · URBAN NEO-SOUL | 봄플리 · 산책 · 드라이브 | Wavvy
+```
+
+### 설명
+```
+🌸 13:00, 봄 햇살이 좋은 하루
+괜히 기분 좋은 봄날 산책 - Wavvy
+
+밥을 먹고 자리에서 일어나,
+건물 밖으로 나서면 따뜻한 바람이 볼을 스치고,
+이어폰을 끼는 순간 발걸음에 봄이 붙어요.
+햇살이 어깨 위로 내려앉고,
+어디선가 꽃향기가 바람에 실려 오고,
+나란히 걷는 그 사람 옆에서 괜히 심장이 빨라지고,
+골목 카페 창가에 앉아 봄 햇살을 느끼고,
+돌아가는 길, 꽃잎이 흩날리는 공기 속을 멍하니 걷는 시간까지 —
+
+설레는 봄날의 모든 순간을 위한 노래들.
+우리말 가사로, 그 계절의 온도를 기록합니다.
+
+🌸 Track List
+──────────────
+🌸 0:00 - 01. 첫 바람 (First Breeze)
+🌸 2:56 - 02. 새싹 (Sprout)
+🌸 6:02 - 03. 햇살 (Sunbeam)
+🌸 10:02 - 04. 꽃길 (Flower Path)
+🌸 13:25 - 05. 꽃비 (Petal Rain)
+🌸 16:05 - 06. 눈맞춤 (Glance)
+🌸 18:56 - 07. 봄 꽃 (Spring Blossom)
+🌸 22:17 - 08. 미소 (Smile)
+🌸 26:25 - 09. 손끝 (Fingertip)
+🌸 29:46 - 10. 그네 (Swing)
+🌸 33:02 - 11. 봄 향기 (Spring Scent)
+🌸 35:26 - 12. 약속 (Promise)
+🌸 38:47 - 13. 피크닉 (Picnic)
+🌸 42:42 - 14. 무지개 (Rainbow)
+🌸 46:46 - 15. 벚꽃 (Cherry Blossom)
+🌸 50:40 - 16. 봄비같은 너 (You, Like Spring Rain)
+🌸 53:34 - 17. 봄 빛 (Dazzle of Spring)
+🌸 56:36 - 18. 봄의 약속 (Promise of Spring)
+🌸 59:57 - 19. 봄 노을 (Spring Sunset)
+🌸 1:03:08 - 20. 우리의 봄 (Our Spring)
+──────────────
+Music for your space, 24 hours a day.
+All tracks feature Korean lyrics.
+
+🎵 Music: Wavvy
+Copyright Ⓒ Wavvy. All rights reserved.
+──────────────
+#feelgoodrnb #urbanneosoul #neosoul #rnb #알앤비 #네오소울
+#봄플리 #벚꽃 #산책음악 #드라이브음악 #봄노래 #봄감성 #기분좋아지는노래
+#springplaylist #cherryblossommusic #koreanrnb
+#playlist #플리 #한국어가사 #koreanlyrics
+#wavvy #웨이비
+```
+
+### 태그
+```
+feel good rnb, urban neo soul, neo soul, rnb, korean rnb, 알앤비, 네오소울, 봄플리, 벚꽃, 산책음악, 드라이브음악, 봄노래, 봄감성, 기분좋아지는노래, spring playlist, cherry blossom music, playlist, 플리, 한국어가사, korean lyrics, wavvy, 웨이비
+```
+
+### 고정 댓글
+```
+오늘 점심 후 산책, 어디로 가셨어요? 🌸
+벚꽃길에서 이 플리 들으면 심장이 두 배로 뛰어요 🎵
+```
+
+---
+
 ## Series DNA
 
 - **정체성**: 한국어 가사 × Silky midtempo Korean R&B (Korean Pop R&B 계열, 마틴스미스/러브블라썸 톤)
@@ -121,11 +197,11 @@ jangly reverb bleed, room noise, raw demo quality
 | 04 | 꽃길 (Flower Path) | 100 | A Major | M | Male | Spring Flower Path |
 | 05 | 꽃비 (Petal Rain) | 90 | F# Minor | F | Female | Spring Petal Rain |
 | 06 | 눈맞춤 (Glance) | 108 | F Major | F | Female | Spring Glance |
-| 07 | 봄 꽃 (Spring Blossom) | — | — | M | **Custom** (Urban Soul) | Spring Blossom |
+| 07 | 봄 꽃 (Spring Blossom) | 100 | — | M | **Custom** (Urban Soul) | Spring Blossom |
 | 08 | 미소 (Smile) | 100 | Ab Major | M | **Custom** (Urban Neo-Soul R&B) | Spring Smile |
 | 09 | 손끝 (Fingertip) | 106 | B Major | F | Female | Spring Fingertip |
 | 10 | 그네 (Swing) | 110 | E Minor | M+F | **Custom Duet** | Spring Swing |
-| 11 | 봄 향기 (Spring Scent) | — | Major (TBD) | F | **Custom** (Neo-Soul/Funk) | — |
+| 11 | 봄 향기 (Spring Scent) | 100 | Major (TBD) | F | **Custom** (Neo-Soul/Funk) | — |
 | 12 | 약속 (Promise) | 100 | — | M | **Custom** (Neo-Soul) | — |
 | 13 | 피크닉 (Picnic) | 102 | F Major | F | **Custom** (Neo-Soul/Funk) | Spring Picnic |
 | 14 | 무지개 (Rainbow) | 108 | Bb Major | M | **Custom** (Neo-Soul/Funk) | Spring Rainbow |
@@ -212,9 +288,9 @@ jangly reverb bleed, room noise, raw demo quality
 
 ---
 
-## YouTube Metadata (TBD)
+## YouTube Metadata
 
-> PACK 완료 후 작성 예정
+> 최상단 `YouTube Draft` 섹션 참조
 
 ---
 

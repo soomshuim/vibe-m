@@ -394,9 +394,23 @@ class ProjectPaths:
 
         # Input files
         self.loop_video = self.input_dir / 'loop.mp4'
+        self.loop_image = self._find_loop_image()
         self.loop_xfade = self.input_dir / 'loop_xfade.mp4'
         self.loop_xfade_test = self.input_dir / 'loop_xfade_test.mp4'
         self.thumbnail = self.input_dir / 'thumb.jpg'
+
+    def _find_loop_image(self) -> Optional[Path]:
+        """Find loop image (loop.png or loop.jpg) if exists."""
+        for ext in ('png', 'jpg', 'jpeg'):
+            p = self.input_dir / f'loop.{ext}'
+            if p.exists():
+                return p
+        return None
+
+    @property
+    def is_image_mode(self) -> bool:
+        """True if using a static image instead of video loop."""
+        return self.loop_image is not None and not self.loop_video.exists()
 
         # Global brand assets
         self.logo = self.base.parent.parent / 'brand' / 'logo_wavvy.png'
@@ -505,15 +519,17 @@ def validate_project(paths: ProjectPaths) -> ValidationResult:
             f"  This may cause issues during merging."
         )
 
-    # Check required media files
-    if not paths.loop_video.exists():
-        result.add_error(f"Missing loop video: {paths.loop_video}")
-    else:
+    # Check required media files (loop.mp4 or loop image)
+    if paths.is_image_mode:
+        log_success(f"Loop image: {paths.loop_image.name} (static image mode)")
+    elif paths.loop_video.exists():
         video_info = get_video_info(paths.loop_video)
         if 'error' in video_info:
             result.add_error(f"Loop video integrity check failed: {video_info['error']}")
         else:
             log_success(f"Loop video: {video_info['width']}x{video_info['height']}, {video_info['duration']:.1f}s")
+    else:
+        result.add_error(f"Missing loop source: need loop.mp4 or loop.png/jpg in {paths.input_dir}")
 
     if not paths.thumbnail.exists():
         result.add_error(f"Missing thumbnail: {paths.thumbnail}")
@@ -757,6 +773,102 @@ def render_video(
             text=True,
             check=True
         )
+        log_success(f"Video rendered to: {output_path}")
+        return True
+    except subprocess.CalledProcessError as e:
+        log_error(f"Video render failed: {e.stderr}")
+        return False
+
+
+def render_video_from_image(
+    audio_path: Path,
+    image_path: Path,
+    thumbnail_path: Path,
+    output_path: Path,
+    logo_path: Optional[Path] = None,
+    logo_position: tuple = (192, 136),
+) -> bool:
+    """
+    Render final video from a static image + audio.
+
+    Uses -loop 1 with -tune stillimage and -r 1 for optimal encoding.
+    Logo overlay is applied directly in the filter graph (no preprocessing).
+    """
+    audio_info = get_audio_info(audio_path)
+    audio_duration = audio_info.get('duration', 0)
+    log_info(f"Rendering video from image with audio duration: {audio_duration:.1f}s")
+    log_info(f"  Mode: static image (-tune stillimage, 1 fps)")
+
+    # Detect image dimensions for 16:9 crop
+    probe = subprocess.run(
+        ['ffprobe', '-v', 'quiet', '-show_entries', 'stream=width,height',
+         '-of', 'csv=p=0', str(image_path)],
+        capture_output=True, text=True
+    )
+    img_w, img_h = [int(x) for x in probe.stdout.strip().split(',')[:2]]
+    target_h = int(img_w * 9 / 16)
+    # Ensure even dimensions
+    target_h = target_h - (target_h % 2)
+
+    # Build filter graph
+    if target_h != img_h:
+        crop_filter = f"crop={img_w}:{target_h}:(iw-{img_w})/2:(ih-{target_h})/2"
+        log_info(f"  Crop: {img_w}x{img_h} → {img_w}x{target_h} (16:9)")
+    else:
+        crop_filter = None
+
+    if logo_path and logo_path.exists():
+        lx, ly = logo_position
+        if crop_filter:
+            filter_complex = f"[0]{crop_filter}[bg];[1]scale=iw/2:ih/2[logo];[bg][logo]overlay={lx}:{ly}[v]"
+        else:
+            filter_complex = f"[1]scale=iw/2:ih/2[logo];[0][logo]overlay={lx}:{ly}[v]"
+        cmd = [
+            'ffmpeg', '-y',
+            '-loop', '1', '-i', str(image_path),
+            '-i', str(logo_path),
+            '-i', str(audio_path),
+            '-filter_complex', filter_complex,
+            '-map', '[v]', '-map', '2:a',
+        ]
+    else:
+        if crop_filter:
+            cmd = [
+                'ffmpeg', '-y',
+                '-loop', '1', '-i', str(image_path),
+                '-i', str(audio_path),
+                '-vf', crop_filter,
+                '-map', '0:v', '-map', '1:a',
+            ]
+        else:
+            cmd = [
+                'ffmpeg', '-y',
+                '-loop', '1', '-i', str(image_path),
+                '-i', str(audio_path),
+                '-map', '0:v', '-map', '1:a',
+            ]
+
+    cmd.extend([
+        '-c:v', VIDEO_CODEC,
+        '-tune', 'stillimage',
+        '-preset', VIDEO_PRESET,
+        '-crf', str(VIDEO_CRF),
+        '-pix_fmt', 'yuv420p',
+        '-r', '1',
+    ])
+
+    output_ext = output_path.suffix.lower()
+    if output_ext == '.mkv':
+        cmd.extend(['-c:a', AUDIO_CODEC])
+    else:
+        cmd.extend(['-c:a', AUDIO_CODEC_LOSSY, '-b:a', AUDIO_BITRATE_LOSSY])
+        cmd.extend(['-movflags', '+faststart'])
+
+    cmd.extend(['-shortest', str(output_path)])
+
+    try:
+        log_info("Running FFmpeg render (image mode)...")
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         log_success(f"Video rendered to: {output_path}")
         return True
     except subprocess.CalledProcessError as e:
@@ -1347,9 +1459,12 @@ def interactive_pack_plan(paths: ProjectPaths) -> Optional[dict]:
     click.echo(click.style("\n=== PACK PLAN MODE ===\n", fg='cyan', bold=True))
 
     # Detect current state
-    has_pillarbox = detect_pillarbox(paths.loop_video) is not None if paths.loop_video.exists() else False
+    image_mode = paths.is_image_mode
+    has_pillarbox = False if image_mode else (
+        detect_pillarbox(paths.loop_video) is not None if paths.loop_video.exists() else False
+    )
     has_logo = paths.logo.exists()
-    has_xfade = paths.loop_xfade.exists()
+    has_xfade = False if image_mode else paths.loop_xfade.exists()
 
     # Default config
     config = {
@@ -1357,13 +1472,17 @@ def interactive_pack_plan(paths: ProjectPaths) -> Optional[dict]:
         'repeat': 2,
         'crop_pillarbox': has_pillarbox,
         'logo_overlay': has_logo,
+        'image_mode': image_mode,
     }
 
     click.echo(click.style("Configure final.mp4 settings:\n", fg='yellow'))
 
     # 1. Video crossfade
     click.echo(f"  1. Video crossfade (seamless loop)")
-    if has_xfade:
+    if image_mode:
+        click.echo(click.style(f"     Image mode: {paths.loop_image.name} (vfade skipped)", fg='green'))
+        config['video_xfade'] = False
+    elif has_xfade:
         click.echo(click.style(f"     Found: {paths.loop_xfade.name}", fg='green'))
         config['video_xfade'] = click.confirm("     Use crossfaded video?", default=True)
     else:
@@ -1432,6 +1551,12 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
 
     paths = ProjectPaths(path)
 
+    # Detect image mode
+    image_mode = paths.is_image_mode
+    if image_mode:
+        log_info(f"Image mode detected: {paths.loop_image.name}")
+        log_info("  Skipping vfade/preprocessing — direct image render")
+
     # Interactive plan mode (unless -y flag)
     if not yes:
         config = interactive_pack_plan(paths)
@@ -1439,12 +1564,15 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
             sys.exit(0)
     else:
         # Default config for -y mode
-        has_pillarbox = detect_pillarbox(paths.loop_video) is not None if paths.loop_video.exists() else False
+        has_pillarbox = False if image_mode else (
+            detect_pillarbox(paths.loop_video) is not None if paths.loop_video.exists() else False
+        )
         config = {
-            'video_xfade': paths.loop_xfade.exists(),
+            'video_xfade': False if image_mode else paths.loop_xfade.exists(),
             'repeat': repeat if repeat > 0 else 2,
             'crop_pillarbox': has_pillarbox,
             'logo_overlay': paths.logo.exists(),
+            'image_mode': image_mode,
         }
 
     # Override repeat if specified via CLI
@@ -1459,47 +1587,54 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
     # Step 0: Pre-flight - prepare video (crop + logo)
     log_info("Step 0/6: Video preparation...")
 
-    # Determine video source
-    processed_video_path = paths.input_dir / 'loop_processed.mp4'
-    needs_preprocessing = False
-
-    # Priority: loop_xfade.mp4 > preprocessed > loop.mp4
-    if use_xfade and paths.loop_xfade.exists():
-        # Use existing crossfaded video (already has crop+logo from vfade)
-        video_source_for_render = paths.loop_xfade
-        log_success(f"Using crossfaded video: {paths.loop_xfade.name}")
-    elif config['crop_pillarbox'] or config['logo_overlay']:
-        # Need preprocessing (crop and/or logo)
-        needs_preprocessing = True
-        crop_filter = None
-        if config['crop_pillarbox']:
-            pillarbox = detect_pillarbox(paths.loop_video)
-            if pillarbox:
-                crop_filter = pillarbox['filter']
-                log_info(f"Will crop: {pillarbox['h']}px height")
-
-        logo_path = paths.logo if config['logo_overlay'] else None
-
-        if not preprocess_loop_video(
-            paths.loop_video,
-            processed_video_path,
-            crop_filter=crop_filter,
-            logo_path=logo_path,
-            logo_position=(192, 136),
-            logo_scale=1.0
-        ):
-            log_error("Video preprocessing failed")
-            sys.exit(1)
-
-        video_source_for_render = processed_video_path
-        log_success(f"Preprocessed video: {processed_video_path.name}")
+    if config.get('image_mode'):
+        # Image mode: skip preprocessing, render directly in Step 4
+        log_success(f"Image mode: {paths.loop_image.name} (crop+logo applied at render)")
+        params['image_mode'] = True
+        params['cleanup_processed'] = False
     else:
-        video_source_for_render = paths.loop_video
-        log_info("Using original loop video")
+        # Video mode: preprocess loop video
+        processed_video_path = paths.input_dir / 'loop_processed.mp4'
+        needs_preprocessing = False
+
+        # Priority: loop_xfade.mp4 > preprocessed > loop.mp4
+        if use_xfade and paths.loop_xfade.exists():
+            # Use existing crossfaded video (already has crop+logo from vfade)
+            video_source_for_render = paths.loop_xfade
+            log_success(f"Using crossfaded video: {paths.loop_xfade.name}")
+        elif config['crop_pillarbox'] or config['logo_overlay']:
+            # Need preprocessing (crop and/or logo)
+            needs_preprocessing = True
+            crop_filter = None
+            if config['crop_pillarbox']:
+                pillarbox = detect_pillarbox(paths.loop_video)
+                if pillarbox:
+                    crop_filter = pillarbox['filter']
+                    log_info(f"Will crop: {pillarbox['h']}px height")
+
+            logo_path = paths.logo if config['logo_overlay'] else None
+
+            if not preprocess_loop_video(
+                paths.loop_video,
+                processed_video_path,
+                crop_filter=crop_filter,
+                logo_path=logo_path,
+                logo_position=(192, 136),
+                logo_scale=1.0
+            ):
+                log_error("Video preprocessing failed")
+                sys.exit(1)
+
+            video_source_for_render = processed_video_path
+            log_success(f"Preprocessed video: {processed_video_path.name}")
+        else:
+            video_source_for_render = paths.loop_video
+            log_info("Using original loop video")
 
     # Store for later use in render step
-    params['video_source'] = video_source_for_render
-    params['cleanup_processed'] = needs_preprocessing
+    if not config.get('image_mode'):
+        params['video_source'] = video_source_for_render
+        params['cleanup_processed'] = needs_preprocessing
 
     # Step 1: Validate
     log_info("Step 1/6: Validation...")
@@ -1582,19 +1717,35 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
     # Step 4: Render video
     log_info("Step 4/6: Rendering final video...")
 
-    # Use preprocessed video if available
-    video_source = params.get('video_source', paths.loop_video)
-    log_info(f"  Video source: {video_source.name}")
+    if params.get('image_mode'):
+        # Image mode: direct render from image (fast path)
+        logo_path = paths.logo if config.get('logo_overlay') else None
+        log_info(f"  Image source: {paths.loop_image.name}")
 
-    if not render_video(
-        paths.merged_wav,
-        video_source,
-        paths.thumbnail,
-        paths.final_mkv,
-        use_shortest=True
-    ):
-        log_error("Failed to render video")
-        sys.exit(1)
+        if not render_video_from_image(
+            paths.merged_wav,
+            paths.loop_image,
+            paths.thumbnail,
+            paths.final_mkv,
+            logo_path=logo_path,
+            logo_position=(192, 136),
+        ):
+            log_error("Failed to render video")
+            sys.exit(1)
+    else:
+        # Video mode: loop video render
+        video_source = params.get('video_source', paths.loop_video)
+        log_info(f"  Video source: {video_source.name}")
+
+        if not render_video(
+            paths.merged_wav,
+            video_source,
+            paths.thumbnail,
+            paths.final_mkv,
+            use_shortest=True
+        ):
+            log_error("Failed to render video")
+            sys.exit(1)
 
     log_success("Video render complete")
 

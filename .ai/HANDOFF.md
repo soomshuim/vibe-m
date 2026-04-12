@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-13 02:36:38
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 13-00 시리즈 완료 (YouTube 업로드). WAV 20곡 리네이밍, YouTube 메타 작성(FEEL GOOD R&B · URBAN NEO-SOUL, 봄플리·산책·드라이브), 이미지 기반 영상 제작(loop.png 4K → final.mkv 1.3GB/135.4분), 업로드 완료. 부가로 wavvy.py에 이미지 모드 지원 추가 (loop.png/jpg 자동 감지 시 vfade 스킵, `-loop 1 -tune stillimage -r 1` 최적화 렌더).
+Next-TODO: K_LIGHTPOP_RUBRIC.md v0.5 정합성 재검토 / brand/logo_wavvy.psd 삭제 의도 확인
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-04-12 23:46:46
 Project: ~/Project/wavvy
 Agent: 혼합 (사용자 직접 제작 14곡 + Claude 구조 반영)
