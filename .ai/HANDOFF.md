@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-12 23:46:46
+Project: ~/Project/wavvy
+Agent: 혼합 (사용자 직접 제작 14곡 + Claude 구조 반영)
+Summary: 13-00 v0.5 전면 업데이트. 20트랙 전곡 PASS. 사용자 커스텀 14곡 (Neo-Soul/Funk/Urban Soul). concept.md에 Track Details 20곡 통합, txt 삭제.
+Next-TODO: WAV 리네이밍 + 루프영상 + 썸네일 + 패키징
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-04-12 11:05:14
 Project: ~/Project/wavvy
 Agent: 혼합 (사용자 직접 제작 + Claude 구조 반영)

@@ -209,7 +209,17 @@
     - ✅ **Track 08 "미소" 스타일 교체** — v0.4 Silky R&B → Urban Neo-Soul R&B (사용자 커스텀, jazz chords + vinyl texture)
     - ⚠️ **동명 트랙**: Track 12 / Track 18 모두 "약속 (Promise)" — 사용자 추후 변경 예정
     - 13~21 추가 변경 예고됨 (사용자 알림 대기)
-  - **현황: 21트랙 체제. Track 01-12 PASS. Track 13-21 Suno 테스트 + 추가 변경 대기**
+  - 🔄 **v0.5 전면 업데이트 (2026-04-12)** — 사용자 직접 제작 트랙 대폭 추가 + 전곡 PASS
+    - ✅ **Track 07 "두근" → "봄 꽃 (Spring Blossom)" 교체** — Urban Soul, M, 사용자 직접 제작
+    - ✅ **Track 03 "햇살" 스타일+BPM 교체** — 112→102 BPM, Neo-Soul/Funk
+    - ✅ **Track 13~19 전곡 커스텀 스타일+풀 가사 교체** (사용자 직접 제작)
+    - ✅ **Track 20 "만개" DROP** → `_excluded/`, Track 21 "우리의 봄" → 20번 M+F Duet
+    - ✅ **제목 변경 5건**: 16 봄비같은너, 17 봄빛, 18 봄의약속, 19 봄노을, 07 봄꽃
+    - ✅ **Track 20 "우리의 봄" 스타일 Funky Neo-Soul Duet** + 가사 2차 교체
+    - ✅ **concept.md v0.5** — Track Details 20곡 Style+Lyrics 통합, txt 파일 삭제
+    - ✅ **Track "두근" DROP** → `_excluded/`
+    - 20트랙 체제: Custom 14 / Legacy 1 / Male 2 / Female 3 / F10:M8:Duet2
+  - **현황: 20트랙 전곡 PASS. concept.md에 Style+Lyrics 통합 완료. WAV 20곡 대기.**
 
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
@@ -240,8 +250,10 @@
   - 가사는 1인칭 회상 POV지만 Suno Duet 보이싱으로 Verse가 남녀 교대로 분할됨. 듀엣 주제 우려는 결과가 해소.
 - [x] ~~13-00 Track 11-12 삽입 + 리넘버링~~ — 사용자 직접 제작 2곡 삽입, 기존 11-19→13-21 (2026-04-12)
 - [x] ~~13-00 Track 07/08 스타일 교체~~ — 사용자 커스텀 Urban Soul/Neo-Soul (2026-04-12)
-- [ ] 13-00 나머지 9곡 Suno 테스트 (13-21) + 사용자 추가 변경 반영
-- [ ] K_LIGHTPOP_RUBRIC.md v0.4 정합성 재검토 (Korean Pop R&B 기준 업데이트)
+- [x] ~~13-00 v0.5 전면 업데이트~~ — 07 봄꽃 교체, 03/13-19 커스텀 스타일+가사, 20 만개 DROP, concept.md Track Details 통합, txt 삭제 (2026-04-12)
+- [ ] 13-00 WAV 리네이밍 (concept.md 기준)
+- [ ] K_LIGHTPOP_RUBRIC.md v0.5 정합성 재검토
+- [ ] 루프 영상 소스 확보 + 썸네일 컨셉
 - [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
 
 ## 핸드오프 메모
@@ -249,7 +261,7 @@
 - 채널 브랜딩: `wavvy.md` §7 참조
 - 12-00: YouTube 업로드 완료
 - 22-00: YouTube 업로드 완료
-- 13-00: 21트랙 체제, Track 01-12 PASS, Track 13-21 테스트+변경 대기
+- 13-00: 20트랙 전곡 PASS, concept.md v0.5 Track Details 통합 완료, WAV 리네이밍+패키징 대기
   - 루브릭: `MASTER/rubrics/INDIE_POP_RUBRIC.md`
   - 리서치: `report/2026-04-04_*.md` (2건)
 - 리서치 리포트: `report/2026-03-21_youtube-audio-quality-optimization.md`
