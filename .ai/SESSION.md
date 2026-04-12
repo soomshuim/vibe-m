@@ -262,8 +262,9 @@
 - [x] ~~13-00 영상 제작 + PACK~~ — 이미지 베이스 (loop.png 4K), final.mkv 1.3GB 135.4분 (2026-04-13)
 - [x] ~~13-00 YouTube 업로드~~ — 완료 (2026-04-13)
 - [x] ~~wavvy.py 이미지 모드 지원~~ — loop.png/jpg 감지 시 vfade 스킵, `-loop 1 -tune stillimage -r 1` 직접 렌더 (2026-04-13)
-- [ ] K_LIGHTPOP_RUBRIC.md v0.5 정합성 재검토
-- [ ] brand/logo_wavvy.psd 삭제 의도 확인 → 커밋 또는 restore
+- [x] ~~K_LIGHTPOP_RUBRIC.md 폐기~~ — v0.5 Custom 중심 시리즈라 루브릭 불필요, 파일 삭제 (2026-04-13)
+
+_모든 작업 완료 — 대기 중인 할 일 없음_
 
 ## 핸드오프 메모
 

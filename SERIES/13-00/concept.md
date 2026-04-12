@@ -171,8 +171,7 @@ jangly reverb bleed, room noise, raw demo quality
 
 ## Genre Gate
 
-- 루브릭: `MASTER/rubrics/K_LIGHTPOP_RUBRIC.md` — **v0.4와 정합성 재검토 필요** (Korean Pop R&B 기준으로 업데이트 필요)
-- 총점 85+ PASS / 개별 Factor Critical Fail 없음
+- 루브릭: 없음 (v0.5 Custom 중심 시리즈 — 루브릭 폐기)
 - Drift 체크: K-Pop Idol 과잉 / Light Pop 촌스러움 / Smooth Jazz / City Pop
 - Evidence: `report/2026-04-04_13-00-reference-research.md` (마틴스미스 분류 정정 주의) + Suno auto-gen 2회 샘플
 
@@ -862,6 +861,4 @@ swing me back / 돌아갈 수 있다면 / swing me back / 서툴렀던 그날 / 
 
 ## TODO
 
-- [ ] 루프 영상 소스 확보 (벚꽃 영상)
-- [ ] 썸네일 컨셉
-- [ ] K_LIGHTPOP_RUBRIC.md v0.5 정합성 재검토
+- 없음 (시리즈 완료, YouTube 업로드 완료)
