@@ -399,19 +399,6 @@ class ProjectPaths:
         self.loop_xfade_test = self.input_dir / 'loop_xfade_test.mp4'
         self.thumbnail = self.input_dir / 'thumb.jpg'
 
-    def _find_loop_image(self) -> Optional[Path]:
-        """Find loop image (loop.png or loop.jpg) if exists."""
-        for ext in ('png', 'jpg', 'jpeg'):
-            p = self.input_dir / f'loop.{ext}'
-            if p.exists():
-                return p
-        return None
-
-    @property
-    def is_image_mode(self) -> bool:
-        """True if using a static image instead of video loop."""
-        return self.loop_image is not None and not self.loop_video.exists()
-
         # Global brand assets
         self.logo = self.base.parent.parent / 'brand' / 'logo_wavvy.png'
 
@@ -424,6 +411,19 @@ class ProjectPaths:
         self.provenance_md = self.output_dir / 'provenance.md'
         self.upload_csv = self.output_dir / 'upload.csv'
         self.report_json = self.output_dir / 'report.json'
+
+    def _find_loop_image(self) -> Optional[Path]:
+        """Find loop image (loop.png or loop.jpg) if exists."""
+        for ext in ('png', 'jpg', 'jpeg'):
+            p = self.input_dir / f'loop.{ext}'
+            if p.exists():
+                return p
+        return None
+
+    @property
+    def is_image_mode(self) -> bool:
+        """True if using a static image instead of video loop."""
+        return self.loop_image is not None and not self.loop_video.exists()
 
     def ensure_work_dirs(self):
         """Create work and output directories."""
@@ -820,9 +820,9 @@ def render_video_from_image(
     if logo_path and logo_path.exists():
         lx, ly = logo_position
         if crop_filter:
-            filter_complex = f"[0]{crop_filter}[bg];[1]scale=iw/2:ih/2[logo];[bg][logo]overlay={lx}:{ly}[v]"
+            filter_complex = f"[0]{crop_filter}[bg];[1]scale=iw:ih[logo];[bg][logo]overlay={lx}:{ly}[v]"
         else:
-            filter_complex = f"[1]scale=iw/2:ih/2[logo];[0][logo]overlay={lx}:{ly}[v]"
+            filter_complex = f"[1]scale=iw:ih[logo];[0][logo]overlay={lx}:{ly}[v]"
         cmd = [
             'ffmpeg', '-y',
             '-loop', '1', '-i', str(image_path),
