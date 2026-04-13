@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-13 14:50:00
+Project: ~/Project/wavvy
+Agent: Claude (+ 사용자 직접 제작 Track 01)
+Summary: 13-00 v0.5.1 재패키지 + YouTube 재업로드. Track 01 "첫 바람 (First Breeze)" → "봄이 번져 (Spring Bleeds)" 교체 (Urban Neo-Soul, 110 BPM, E Major, Female, 사용자 직접 제작). 3-way 트랙 재배열: (02 새싹, 03 햇살, 11 봄 향기, 12 약속, 13 피크닉) → (02 봄 향기, 03 약속, 11 피크닉, 12 햇살, 13 새싹). concept.md Track Map / 배분 규칙 / Series DNA / Track 01 Details / YouTube Tracklist 실제 타임스탬프(report.json 기반 1회차 누적 + acrossfade 0.8s 반영) 재계산. wavvy.py image mode 버그 수정 (ProjectPaths.__init__ 안에서 self.logo/merged_wav/final_mkv 등 할당이 is_image_mode @property 뒤 dead code로 잘못 위치 → AttributeError) + 로고 scale `iw/2:ih/2` → `iw:ih` (50% → 100%, 4K 기준 572x312 원본 크기). PACK v0.5.1 COMPLETE — final.mkv 1.4GB, 135.6분, 4096x2304 static image mode, 로고 100%. loop.png 사용자 신규 4K 이미지 교체. 세트 A wav 20개 git rm (로컬 세트 B를 SSOT로). output/final.mkv 로컬 정리.
+Next-TODO: 없음 (13-00 v0.5.1 완료)
+Commits: f3d7e93 (wavvy.py image mode fix) / c02636d (13-00 v0.5.1 재패키지)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-04-13 02:36:38
 Project: ~/Project/wavvy
 Agent: Claude
