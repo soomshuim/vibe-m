@@ -225,7 +225,16 @@
   - ✅ **이미지 기반 영상 제작** (2026-04-13) — loop.png(4096x2336, 벚꽃길 커플 사진) 직접 렌더, `-loop 1 -tune stillimage -r 1` 최적화
   - ✅ **PACK COMPLETE** — final.mkv 1.3GB, 135.4분, 20곡 x2, FLAC/48kHz (2026-04-13)
   - ✅ **YouTube 업로드 완료** (2026-04-13)
-  - **현황: 시리즈 완료**
+  - 🔄 **v0.5.1 재패키지 + YouTube 재업로드 (2026-04-13)** — Track 01 교체 + 트랙 스왑
+    - ✅ **Track 01 "첫 바람" → "봄이 번져 (Spring Bleeds)" 교체** — Urban Neo-Soul, 110 BPM, E Major, F, 사용자 직접 제작 (Warm EP + round bass + airy stacked vocals chorus)
+    - ✅ **트랙 3-way 사이클 재배열**: (기존 02 새싹, 03 햇살, 11 봄 향기, 12 약속, 13 피크닉) → 로컬 순서 (02 봄 향기, 03 약속, 11 피크닉, 12 햇살, 13 새싹)
+    - ✅ **concept.md Track Map 재배열** — 배분 규칙: Custom 15 / Male 2 (04,13) / Female 3 (05,06,09), Key 순환 01 E Major ↔ 20 G Major
+    - ✅ **YouTube Tracklist 실제 타임스탬프 재계산** — report.json 기반, 1회차 누적 + acrossfade 0.8s 반영
+    - ✅ **wavvy.py image mode 버그 수정** — `ProjectPaths.__init__` dead code (self.logo 등 `is_image_mode` property 뒤로 잘못 위치 → AttributeError) + 로고 스케일 `iw/2:ih/2` → `iw:ih` (50%→100%, 4K 기준 572x312 원본 표시)
+    - ✅ **PACK v0.5.1 COMPLETE** — final.mkv 1.4GB, 135.6분, 4096x2304 static image mode + 로고 100% (2026-04-13)
+    - ✅ **YouTube 재업로드 완료** (2026-04-13)
+    - ✅ **loop.png 교체** (사용자 제공 신규 이미지, 4096x2336)
+  - **현황: 시리즈 완료 (v0.5.1)**
 
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 

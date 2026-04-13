@@ -38,26 +38,26 @@ Playlist | 13:00 | 봄이라 괜히 기분 좋은 하루 🌸 | FEEL GOOD R&B ·
 
 🌸 Track List
 ──────────────
-🌸 0:00 - 01. 첫 바람 (First Breeze)
-🌸 2:56 - 02. 새싹 (Sprout)
-🌸 6:02 - 03. 햇살 (Sunbeam)
-🌸 10:02 - 04. 꽃길 (Flower Path)
-🌸 13:25 - 05. 꽃비 (Petal Rain)
-🌸 16:05 - 06. 눈맞춤 (Glance)
-🌸 18:56 - 07. 봄 꽃 (Spring Blossom)
-🌸 22:17 - 08. 미소 (Smile)
-🌸 26:25 - 09. 손끝 (Fingertip)
-🌸 29:46 - 10. 그네 (Swing)
-🌸 33:02 - 11. 봄 향기 (Spring Scent)
-🌸 35:26 - 12. 약속 (Promise)
-🌸 38:47 - 13. 피크닉 (Picnic)
-🌸 42:42 - 14. 무지개 (Rainbow)
-🌸 46:46 - 15. 벚꽃 (Cherry Blossom)
-🌸 50:40 - 16. 봄비같은 너 (You, Like Spring Rain)
-🌸 53:34 - 17. 봄 빛 (Dazzle of Spring)
-🌸 56:36 - 18. 봄의 약속 (Promise of Spring)
-🌸 59:57 - 19. 봄 노을 (Spring Sunset)
-🌸 1:03:08 - 20. 우리의 봄 (Our Spring)
+🌸 0:00 - 01. 봄이 번져 (Spring Bleeds)
+🌸 3:33 - 02. 봄 향기 (Spring Scent)
+🌸 5:57 - 03. 약속 (Promise)
+🌸 9:18 - 04. 꽃길 (Flower Path)
+🌸 12:41 - 05. 꽃비 (Petal Rain)
+🌸 15:21 - 06. 눈맞춤 (Glance)
+🌸 18:12 - 07. 봄 꽃 (Spring Blossom)
+🌸 21:33 - 08. 미소 (Smile)
+🌸 25:40 - 09. 손끝 (Fingertip)
+🌸 29:02 - 10. 그네 (Swing)
+🌸 32:18 - 11. 피크닉 (Picnic)
+🌸 36:14 - 12. 햇살 (Sunbeam)
+🌸 40:14 - 13. 새싹 (Sprout)
+🌸 43:20 - 14. 무지개 (Rainbow)
+🌸 47:23 - 15. 벚꽃 (Cherry Blossom)
+🌸 51:17 - 16. 봄비같은 너 (You Like Spring Rain)
+🌸 54:11 - 17. 봄 빛 (Dazzle of Spring)
+🌸 57:13 - 18. 봄의 약속 (Promise of Spring)
+🌸 1:00:34 - 19. 봄 노을 (Spring Sunset)
+🌸 1:03:45 - 20. 우리의 봄 (Our Spring)
 ──────────────
 Music for your space, 24 hours a day.
 All tracks feature Korean lyrics.
@@ -93,7 +93,7 @@ feel good rnb, urban neo soul, neo soul, rnb, korean rnb, 알앤비, 네오소�
 - **톤**: intimate close-mic + warm Rhodes + relaxed bounce. 폴리시드 아닌 친밀한 질감
 - **가사**: Suno 자체 작사 (작사 프롬프트 또는 비움)
 - **보컬**: F10 : M8 : Duet 2 (50:40:10). Male = tight close-mic + subtle doubles, Female = intimate lead + stacked vocals in chorus
-- **20트랙** (Track 08 "고백" + "만개" 제외, Track 11-12 사용자 직접 제작 삽입, "두근" → "봄 꽃" 교체)
+- **20트랙** (Track 08 "고백" + "만개" 제외, Track 02-03 사용자 직접 제작 삽입, "두근" → "봄 꽃" 교체, Track 01 "첫 바람" → "봄이 번져" 교체)
 
 ### 차별점
 
@@ -190,9 +190,9 @@ jangly reverb bleed, room noise, raw demo quality
 
 | # | 제목 | BPM | Key | Vocal | Template | Spring Theme (Suno hint) |
 |---|------|-----|-----|-------|----------|--------------------------|
-| 01 | 첫 바람 (First Breeze) | 106 | G Major | F | **Legacy** (Korean Light R&B) | — |
-| 02 | 새싹 (Sprout) | 98 | C Major | M | Male | Spring Sprout |
-| 03 | 햇살 (Sunbeam) | 102 | D Major | F | **Custom** (Neo-Soul/Funk) | Spring Sunbeam |
+| 01 | 봄이 번져 (Spring Bleeds) | 110 | E Major | F | **Custom** (Urban Neo-Soul) | Spring Bleeds |
+| 02 | 봄 향기 (Spring Scent) | 100 | Major (TBD) | F | **Custom** (Neo-Soul/Funk) | — |
+| 03 | 약속 (Promise) | 100 | — | M | **Custom** (Neo-Soul) | — |
 | 04 | 꽃길 (Flower Path) | 100 | A Major | M | Male | Spring Flower Path |
 | 05 | 꽃비 (Petal Rain) | 90 | F# Minor | F | Female | Spring Petal Rain |
 | 06 | 눈맞춤 (Glance) | 108 | F Major | F | Female | Spring Glance |
@@ -200,9 +200,9 @@ jangly reverb bleed, room noise, raw demo quality
 | 08 | 미소 (Smile) | 100 | Ab Major | M | **Custom** (Urban Neo-Soul R&B) | Spring Smile |
 | 09 | 손끝 (Fingertip) | 106 | B Major | F | Female | Spring Fingertip |
 | 10 | 그네 (Swing) | 110 | E Minor | M+F | **Custom Duet** | Spring Swing |
-| 11 | 봄 향기 (Spring Scent) | 100 | Major (TBD) | F | **Custom** (Neo-Soul/Funk) | — |
-| 12 | 약속 (Promise) | 100 | — | M | **Custom** (Neo-Soul) | — |
-| 13 | 피크닉 (Picnic) | 102 | F Major | F | **Custom** (Neo-Soul/Funk) | Spring Picnic |
+| 11 | 피크닉 (Picnic) | 102 | F Major | F | **Custom** (Neo-Soul/Funk) | Spring Picnic |
+| 12 | 햇살 (Sunbeam) | 102 | D Major | F | **Custom** (Neo-Soul/Funk) | Spring Sunbeam |
+| 13 | 새싹 (Sprout) | 98 | C Major | M | Male | Spring Sprout |
 | 14 | 무지개 (Rainbow) | 108 | Bb Major | M | **Custom** (Neo-Soul/Funk) | Spring Rainbow |
 | 15 | 벚꽃 (Cherry Blossom) | 100 | Db Major | F | **Custom** (Neo-Soul/Funk) | Spring Cherry Blossom |
 | 16 | 봄비같은 너 (You, Like Spring Rain) | 104 | D Minor | M | **Custom** (Neo-Soul/Funk) | Spring Rain |
@@ -215,15 +215,15 @@ jangly reverb bleed, room noise, raw demo quality
 
 ### 배분 규칙
 
-- **BPM**: 90-112 (실제 범위, Track 11 TBD) — midtempo R&B
-- **Key**: Major 15+ : Minor 3 — 밝은 봄 톤, Minor는 감정 깊이용 (Track 11-12 Key TBD)
-- **Template**: **Legacy 1 (Track 01) : Custom 14 : Male 2 (02,04) : Female 3 (05,06,09)** (총 20곡)
+- **BPM**: 90-112 (실제 범위) — midtempo R&B
+- **Key**: Major 16 : Minor 3 — 밝은 봄 톤, Minor는 감정 깊이용 (Track 02-03 Key TBD)
+- **Template**: **Custom 15 : Male 2 (04,13) : Female 3 (05,06,09)** (총 20곡)
 - **Vocal**: F10 : M8 : Duet 2 (50:40:10)
 - **인접 트랙 같은 Key 금지**
-- **Key 순환**: Track 01 = Track 20 = G Major (시작과 끝의 순환)
+- **Key 순환**: Track 01 E Major ↔ Track 20 G Major (Spring Bleeds 오프닝 vs Our Spring 클로징 대비)
 - **Minor 배치**: 05(F#m) / 10(Em) / 16(Dm) — Track 09 손끝은 B Minor → B Major 변경 (Suno 테스트 시 Major가 자연스러움)
-- **Spring 접두 예외**: Track 16 "Spring Rain" / 20 "Our Spring"
-- **Dropped**: Track 08 "고백" (2026-04-11) + Track 20(구) "만개" (2026-04-12)
+- **Spring 접두 예외**: Track 01 "Spring Bleeds" / Track 16 "Spring Rain" / Track 20 "Our Spring"
+- **Dropped**: Track 08 "고백" (2026-04-11) + Track 20(구) "만개" (2026-04-12) + Track 01(구) "첫 바람" (2026-04-13, "봄이 번져" 교체)
 
 ---
 
@@ -299,32 +299,69 @@ jangly reverb bleed, room noise, raw demo quality
 > **Exclude 공통**: autotune heavy, vocoder, EDM drops, big room, idol group chant, heavy 808 bass, trap hi-hats, drill bass, dark moody, aggressive, gritty, distortion, shoegaze wall-of-sound, lo-fi DIY texture, indie garage sound, noisy production, jangly reverb bleed, room noise, raw demo quality
 > **Track 01만 추가 Exclude**: choir, stacked harmonies, backing vocal layers, doubled vocals
 
-### Track 01 — 첫 바람 (First Breeze)
-**Style:** Articulation, Korean Light R&B, 106 BPM, G Major, bright clean electric guitar riff, polished clean tone, rhodes as chord bed only, no piano melody lead, gentle string pad, polished medium groove, clean crisp snare, soft hi-hat, warm melodic bass, subtle synth warmth, Female vocal: Bright, Sweet, Polished, Clear, Chest voice, articulation, memorable hook, singalong chorus, radio-friendly, warm bright mix, balanced stereo, spring blossom energy, moderate reverb, polished ambience, EQ balanced, clean commercial mix, Lead vocal remains single and dominant throughout, No stacked or choir-like harmonies, Vocal line may intensify dynamically (sweet lift, higher register), but no additional layers, Chorus vocal: sweet intensity or tender lift, Higher register encouraged, Natural sweetness allowed
-
-[Intro]
-(Instrumental)
+### Track 01 — 봄이 번져 (Spring Bleeds)
+**Style:** Urban neo-soul at 110 BPM in E major, female vocals, Warm electric piano and round bass over a laid-back pocket, lazy snares and soft rimshots, Verses stay close and conversational with tight harmonies and subtle guitar chops; chorus blooms into airy stacked vocals and a brighter synth pad, Bridge strips to vocal, snaps, and bass before the last chorus lifts with ad-lib runs and a slightly wider stereo field, soul, vocal
 
 [Verse 1]
-살짝 열린 창틈 사이로 / 먼지 대신 ��음이 들어와 / 겨울색이 벽에서 사라져 / 눈 ��니까 어제가 멀어져
+하루 종일 잠이 쏟아져
+코트 깃을 접어 넣은 채
+골목 끝에 쌓인 눈도
+물웅덩이로 번져 가네
 
 [Pre-Chorus]
-아직 조금 차가운 공기 / 내 볼을 스치고 지나가 / 어색하게 미소가 번져 / 나도 몰래 따라가
+너도 느껴? 이 공기 달라진 거
+차가운 말투 사이
+살짝 미끄러진 웃음
+괜히 맘이 먼저 풀려
 
 [Chorus]
-Here comes the wind / 내 맘을 깨우는 이름 / 잠들어 있던 나날들을 / 한 번에 깨���는 느낌 / Here comes the wind / 내 방을 채우는 rhythm / 아무 말 안 해도 알겠어 / 이제 시작되는 계절
+봄이 번져 네 눈 속에
+살짝 젖은 그 말투에
+따뜻해진 숨이 닿을 때
+우리 사이도 풀릴까
+조금 먼저, 너에게만
+계절 하나 건네 볼까
+아무렇지 않게 웃으며
+(봄이 번져, 봄이 번져)
 
 [Verse 2]
-베개 자국 남은 얼굴로 / 커튼 대신 햇살을 젖혀 봐 / 복도 끝에 쌓였던 ���숨도 / 계단처럼 밟고 내려���
+카페 유리창에 기대서
+김 서린 데다 이름 쓰고
+손가락으로 지워 보며
+너 생각이 또 새어 나와
 
 [Pre-Chorus]
-어제까지 ���거운 ���걸음 / 오늘 따라 ��볍�� 떠올라 / 하루치의 걱��을 벗고 / 숨 크게 쉬어 본다 ah
+알듯 말듯 네 맘 장난쳐
+장갑 벗은 손끝에
+살짝 스친 온기만
+혼자 여러 번 재생해
 
 [Chorus]
-Here comes the wind / 내 맘을 깨우는 이름 / 잠들어 있던 나날들을 / 한 번에 깨우는 느낌 / Here comes the wind / 내 꿈을 부르는 rhythm / 어디로 데려가도 좋아 / 이제 시작되는 계절
+봄이 번져 네 눈 속에
+살짝 젖은 그 말투에
+따뜻해진 숨이 닿을 때
+우리 사이도 풀릴까
+조금 먼저, 너에게만
+계절 하나 건네 볼까
+아무렇지 않게 웃으며
+(봄이 번져, 봄이 번져)
 
-[Outro]
-(Instrumental)
+[Bridge]
+어제까진 추운 척했는데 (왜 이래)
+네 앞에서 자꾸만 들켜 (나 어떡해)
+달력 위에 적어 둔 오늘
+시작 같아, 시작 같아 (oh)
+
+[Chorus]
+봄이 번져 네 눈 속에
+살짝 젖은 그 말투에
+따뜻해진 숨이 닿을 때
+우리 둘 다 알 것 같아
+조금 먼저, 너에게만
+마음 하나 건네 볼까
+아무렇지 않은 목소리로
+"보고 싶었어" 흘려 볼까 (hey)
+(봄이 번져, 봄이 번져)
 
 ### Track 02 — 새싹 (Sprout)
 **Style:** Articulation. Silky midtempo Korean R&B, Korean Pop, Like Spring Sprout, 98 BPM, C Major, warm Rhodes and soft electric piano chords over a relaxed bounce, light funk guitar chops, round sub-bass lift, gentle rimshots and brushed snare, intimate groove, Male vocal: Tight close-mic lead in verses, subtle vocal doubles on key words, Chorus blooms with airy harmonies, hook circles like a mantra, Bridge builds with emotional swell, 1 held note. Higher register encouraged. r&b, korean pop
