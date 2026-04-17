@@ -1,11 +1,11 @@
 Track: 카세트 (Cassette)
-Type: B (Retro Funk)
+Type: B
 BPM: 118
 Key: C Major
 Length: 3min+
 
 === STYLE ===
-Upbeat Korean funk-R&B with retro cassette-era texture at 118 BPM in C major, female vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, vintage tape warmth and subtle analog saturation, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth leads and brassy chord hits lift the choruses, with playful ad-lib layers and crowd-style backing vocals
+Upbeat Korean funk-R&B at 118 BPM in C major, female vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth chord stabs and punchy funk piano accents lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
 
 === EXCLUDE ===
 sad ballad, lo-fi whisper, idol K-pop chant, heavy trap 808, weepy ballad

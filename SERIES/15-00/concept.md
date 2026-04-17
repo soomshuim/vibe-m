@@ -32,7 +32,7 @@ Playlist | 15:00 | 오후 3시, 라디오 🎵 | KOREAN RETRO R&B · NEO-SOUL ·
   - 오후 3시 삶: 햇살 기울기, 창가, 권태, 혼자 생각, 작은 일탈
   - 감정 (봄/커플 허용): 설렘, 두근, 너와 나, 미소, 느긋한 활력
 - **가사 POV 규칙**: **"길 위에 있다"** 이미지 최소 1회 등장 (창문, 조수석, 드라이브, 신호등, 라디오 등)
-- **보컬**: F10 : M8 : Duet 2 (50:40:10) → 순수 성비 F11:M9 (약 5:5)
+- **보컬**: F11 : M7 : Duet 2 (55:35:10) → 순수 성비 F12:M8 (60:40)
 - **20트랙** (사용자 직접 제작 4곡 + 신규 설계 16곡)
 
 ### 씬 분리 규칙 (vs 13-00)
@@ -71,41 +71,44 @@ Playlist | 15:00 | 오후 3시, 라디오 🎵 | KOREAN RETRO R&B · NEO-SOUL ·
 
 ## 장르 축 — Style Template 4종
 
-### A. Doowop Pop (25% · 5곡)
+### A. Doowop Pop R&B (20% · 4곡)
 
 ```
-trendy doo-wop pop at {BPM} BPM, bright {female/male} lead with stacked background harmonies, upbeat handclap grooves, and bouncy electric bass, Punchy drum kit with layered claps on the backbeat, jangly clean guitars, and warm Rhodes chords, Lush "shoo-wa" background hooks and playful call-and-response vocals in the chorus, polished modern pop sheen with retro doo-wop flair
+pop, Bubbly doo-wop pop R&B at {BPM} BPM in {Key}, {female/male} vocals, Tight doo-wop backing stack on the hook, clean guitar chanks, playful bass walks, and bright handclaps, Verses ride a light, midtempo pocket; choruses bloom with layered harmonies and a shiny piano top line, Brief middle lift with tambourine and call-and-response ad-libs before final, higher-energy chorus, vocal, doo-wop, r&b, funky
 ```
 
-- **앵커**: Track 01 오렌지 드라이브 (F, 120 BPM) — 사용자 제작
+- **앵커**: Track 06 벚꽃 소다 봄길 (F, 120 BPM, Eb Major) — 확정 v0.3
+- **보조 앵커**: Track 01 오렌지 드라이브 (F, 120 BPM) — 사용자 제작 PASS
 - **포지션**: Track 01, 06, 10, 15, 19
+- **방향성**: **Bubbly Pop R&B 현대 팝 중심** + doo-wop 백킹 스택 하모니. 클린 기타 찬크 + 플레이풀 베이스 워크 + 핸드클랩 + 피아노 탑라인 + 탬버린 미들 리프트.
 
-### B. Funk-R&B / Neo-Soul Groove (30% · 6곡)
+### B. Funk-R&B / Neo-Soul Groove (25% · 5곡)
 
 ```
-Upbeat Korean funk-R&B at {BPM} BPM in {Key}, {female/male} vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth leads and brassy chord hits lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
+Upbeat Korean funk-R&B at {BPM} BPM in {Key}, {female/male} vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth chord stabs and punchy funk piano accents lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
 ```
 
 - **앵커**: Track 04 오늘 드라이브 (M, 120 BPM, Eb Major) — 사용자 제작
-- **포지션**: Track 04, 07, 11, 14 (Duet), 16, 18
+- **포지션**: Track 04, 11, 14 (Duet), 16, 18
 
-### C. Neo-Soul / Retro Soul (25% · 5곡)
+### C. Neo-Soul (25% · 5곡)
 
 ```
-Bouncy Korean neo-soul at {BPM} BPM in {Key}, {female/male} vocals up front with buttery stacked harmonies, Tight, syncopated drum groove and round bassline locking with clipped rhythm guitar and soft Rhodes stabs, Verses stay intimate and conversational; chorus blossoms with layered call-and-response backgrounds and airy ad-libs, Light horn pads and subtle synth bells lift the hook, with a brief breakdown that lets the vocals float before a final, feel-good chorus, r&b, soul, funky
+Bouncy Korean neo-soul at {BPM} BPM in {Key}, {female/male} vocals up front with buttery stacked harmonies, Tight, syncopated drum groove and round bassline locking with clipped rhythm guitar and soft Rhodes stabs, Verses stay intimate and conversational; chorus blossoms with layered call-and-response backgrounds and airy ad-libs, Warm wurlitzer pads and subtle chimes lift the hook, with a brief breakdown that lets the vocals float before a final, feel-good chorus, r&b, soul, funky
 ```
 
 - **앵커**: Track 05 봄 냄새 (F, 114 BPM, D Major) — 사용자 제작
 - **포지션**: Track 03, 05, 08, 12, 17
 
-### D. Modern Korean R&B (20% · 4곡)
+### D. Modern Driving R&B Groove (15% · 3곡)
 
 ```
-K-R&B at {BPM} BPM, bright {female/male} vocals over bouncy electric bass and snappy handclap groove, Tight rhythm guitars and soft synth chords in verses, choruses bloom with stacked falsetto harmonies and airy "ooh" pads, Light percussion fills keep it dancing; final hook repeats with extra ad-libs and layered call-and-response, r&b, bright, electric
+modern driving R&B groove at {BPM} BPM in {Key}, tight drums and bouncy bass under warm electric piano and clean funk guitar chops, {female/male} vocals sit intimate and conversational on verses then stretch into a wider hooky chorus with airy harmonies and light ad-libs, sunny freeway energy with windows-down feel, subtle synth pads lifting the last chorus, r&b, vocal
 ```
 
-- **앵커**: Track 09 봄 잔디에 누워 (M, 120 BPM) — 사용자 제작
-- **포지션**: Track 02, 09, 13, 20 (Duet)
+- **앵커**: Track 02 라디오를 켜고 (M, 120 BPM, E Major) — 확정 v0.3
+- **포지션**: Track 02, 13, 20 (Duet)
+- **방향성**: 선루프 에너지 + 창문 내린 드라이브감. intimate verse → wider hooky chorus 확장. 레거시 "K-R&B + snappy handclap" 제거.
 
 ---
 
@@ -113,22 +116,22 @@ K-R&B at {BPM} BPM, bright {female/male} vocals over bouncy electric bass and sn
 
 | # | 제목 | 영문 | 장르 | V | BPM | Key | 역할 |
 |---|---|---|---|---|---|---|---|
-| 01 | 오렌지 드라이브 ★ | Orange Drive | A. Doowop | F | 120 | - | 오픈 · 레트로 선언 |
-| 02 | 라디오 온 | Radio On | D. Modern R&B | M | 112 | E Major | 라디오 컨셉 도입 |
-| 03 | 조수석 | Passenger | C. Neo-Soul | F | 110 | A Minor | 내향 감성 |
+| 01 | 오렌지 드라이브 ★ | Orange Drive | ★ 예외 | F | 110 | - | 오픈 · Contemporary R&B 크루즈 |
+| 02 | 라디오를 켜고 | Turn on the Radio | D. Modern R&B | M | 120 | E Major | 라디오 컨셉 도입 |
+| 03 | 곁에서 | Passenger | C. Neo-Soul | F | 110 | A Minor | 내향 감성 |
 | 04 | 오늘 드라이브 ★ | Drive Today | B. Funk-R&B | M | 120 | Eb Major | 그루브 몰입 |
 | 05 | 봄 냄새 ★ | Smell of Spring | C. Neo-Soul | F | 114 | D Major | 봄 접점 |
-| 06 | 한 바퀴 더 | One More Lap | A. Doowop | M | 118 | F Major | Doowop 남성 |
-| 07 | 비상등 | Hazard | B. Funk-R&B | F | 116 | F# Minor | 펑키 여성 |
-| 08 | 기울어진 햇살 | Slanted Sun | C. Retro Soul | M | 112 | Bb Major | 오후 감성 피크 |
-| 09 | 봄 잔디에 누워 ★ | Lying on the Spring Grass | D. K-R&B | M | 120 | - | 바깥 확장 |
-| 10 | 믹스테이프 | Mixtape | A. Doowop | F | 122 | C Major | 레트로 포인트 |
+| 06 | 벚꽃 소다 봄길 | Cherry Blossom Soda Spring Road | A. Doowop | F | 120 | Eb Major | Bubbly Doowop R&B 여성 |
+| 07 | 달려가는 중 | Still On My Way | ★ 예외 | F | 116 | A Minor | Warm R&B 여성 |
+| 08 | 기울어진 햇살 | Slanted Sun | C. Neo-Soul | M | 112 | Bb Major | 오후 감성 피크 |
+| 09 | 잔디에 누워 ★ | Lying on the Grass | ★ 예외 | M | 112 | F Major | 바깥 확장 · Lo-fi Chill Hop |
+| 10 | 믹스테잎 | Mixtape | A. Doowop | F | 122 | C Major | Lo-fi Doowop 여성 |
 | 11 | 창문 너머 | Out the Window | B. Funk-R&B | F | 116 | G Major | 바람 몰입 |
 | 12 | 백미러 | Rearview | C. Neo-Soul | M | 108 | E Minor | 회고 감성 |
 | 13 | 주파수 | Frequency | D. Modern R&B | F | 114 | Ab Major | 모던 미드템포 |
 | 14 | 같은 방향 | Same Direction | B. Funk-R&B Duet | F+M | 116 | F Major | **듀엣 1** |
 | 15 | 15km/h | 15 km/h | A. Doowop | M | 124 | D Major | 업템포 포인트 |
-| 16 | 카세트 | Cassette | B. Retro Funk | F | 118 | C Major | 빈티지 |
+| 16 | 카세트 | Cassette | B. Funk-R&B | F | 118 | C Major | 펑키 여성 |
 | 17 | 반쯤 감은 눈 | Half-Closed Eyes | C. Neo-Soul | F | 108 | B Minor | 내면 슬로우 |
 | 18 | 눈부셔 | Dazzling | B. Funk-R&B | M | 120 | E Major | 펑키 남성 |
 | 19 | 비포장도로 | Unpaved Road | A. Doowop | F | 126 | G Major | Doowop 업템포 피크 |
@@ -137,16 +140,16 @@ K-R&B at {BPM} BPM, bright {female/male} vocals over bouncy electric bass and sn
 ★ = 사용자 직접 제작
 
 ### 배분 검증
-- **장르**: A 5곡 (01,06,10,15,19) / B 6곡 (04,07,11,14,16,18) / C 5곡 (03,05,08,12,17) / D 4곡 (02,09,13,20) = 20 ✓
-- **보컬**: F 10 / M 8 / Duet 2 ✓
+- **장르**: A 4곡 (06,10,15,19) + 예외 3곡 (01, 07, 09) / B 5곡 (04,11,14,16,18) / C 5곡 (03,05,08,12,17) / D 3곡 (02,13,20) = 20 ✓
+- **보컬**: F 11 / M 7 / Duet 2 ✓
 - **Minor 4곡**: 03, 07, 12, 17 (내향 트랙에 배치)
 - **BPM**: 108-126
 
 ### 4막 구조
 - **기 (01-05)**: 오픈 + 드라이브 몰입 + 봄 접점
-- **승 (06-10)**: Doowop M + 펑키 + 오후 피크 + 바깥 + Doowop F
+- **승 (06-10)**: Doowop F (벚꽃 소다) + Warm R&B F (달려가는 중) + 오후 피크 + 바깥 + Doowop F
 - **전 (11-15)**: B-C-D 순환 + 듀엣1 + Doowop 업템포
-- **결 (16-20)**: 빈티지 → 내면 → 펑키 → Doowop 피크 → Duet 피날레
+- **결 (16-20)**: 펑키 여성 → 내면 → 펑키 남성 → Doowop 피크 → Duet 피날레
 
 ---
 
@@ -154,12 +157,12 @@ K-R&B at {BPM} BPM, bright {female/male} vocals over bouncy electric bass and sn
 
 ### Track 01 — 오렌지 드라이브 (Orange Drive) ★
 
-- Style: A. Doowop Pop, F, 120 BPM
-- Status: 사용자 직접 제작 PASS
+- Style: ★ 예외 (Contemporary R&B Cruise), F, 110 BPM
+- Status: 사용자 직접 제작 PASS (v0.3 스타일 재확정)
 
 **Style**:
 ```
-trendy doo-wop pop at 120 BPM, bright female lead with stacked background harmonies, upbeat handclap grooves, and bouncy electric bass, Punchy drum kit with layered claps on the backbeat, jangly clean guitars, and warm Rhodes chords, Lush "shoo-wa" background hooks and playful call-and-response vocals in the chorus, polished modern pop sheen with retro doo-wop flair
+mid-tempo contemporary R&B at 110 BPM, laid-back but steady pocket, relaxed female lead with soft breathy harmonies, swung drum grooves with warm rimshots and gentle layered claps, Rounded sub bass with smooth funk-inspired slides, mellow electric piano voicings, lightly chorused clean guitar licks, and wide analog-style synth pads for a cozy late-night cruise feeling, Tasteful melismatic ad-libs in the hooks, light vocoder textures, and glossy modern R&B production with a smooth, head-nodding groove
 ```
 
 **Lyrics**:
@@ -349,18 +352,21 @@ Bouncy Korean neo-soul at 114 BPM in D major, female vocals up front with butter
 
 ---
 
-### Track 09 — 봄 잔디에 누워 (Lying on the Spring Grass) ★
+### Track 09 — 잔디에 누워 (Lying on the Grass) ★
 
-- Style: D. K-R&B, M, 120 BPM
-- Status: 사용자 직접 제작 PASS
+- Style: ★ 예외 (Lo-fi Chill Hop), M, 112 BPM, F Major
+- Status: 확정 v0.3 (풀 가사 완성, Suno 재테스트 대기)
 
 **Style**:
 ```
-K-R&B at 120 BPM, bright male vocals over bouncy electric bass and snappy handclap groove, Tight rhythm guitars and soft synth chords in verses, choruses bloom with stacked falsetto harmonies and airy "ooh" pads, Light percussion fills keep it dancing; final hook repeats with extra ad-libs and layered call-and-response, r&b, bright, electric
+Lo-fi chill hop Korean R&B at 112 BPM in F major, male vocals with close-mic intimate delivery and soft doubles, Vinyl-crackle texture and warm wurlitzer electric piano chords, muted funk guitar licks, round sub bass, laid-back lo-fi drum groove with loose swing and dusty kick, Verses stay airy and spoken-feel; choruses bloom into warm stacked harmonies and mellow ad-libs, Short stripped-down break before final chorus, hazy afternoon cruise feeling with a gentle head-nod pocket, r&b, lo-fi, chillhop
 ```
 
 **Lyrics**:
 ```
+[Intro]
+(Instrumental)
+
 [Verse 1]
 파란 돗자리도 없어
 그냥 흙냄새 묻은 잔디
@@ -418,116 +424,464 @@ K-R&B at 120 BPM, bright male vocals over bouncy electric bass and snappy handcl
 조금은 웃긴 그 계획
 구름이 장난쳐도
 오늘 그대로였으면 해
+
+[Outro]
+(instrumental)
 ```
 
-> **POV 주의**: "차에서 내려 잔디에 누운" 씬. **"멀리 자동차 소리"** 라인이 "길 위" 맥락 간접 연결. 15-00에서 **"차 → 바깥 확장"** 아크 역할로 배치됨.
+> **POV 주의**: "차에서 내려 잔디에 누운" 씬 · 커플 POV. **"멀리 자동차 소리"** Verse 2 라인이 "길 위" 맥락 간접 연결. 15-00에서 **"차 → 바깥 확장"** 아크 역할로 배치됨.
 
 ---
 
-### Track 02 — 라디오 온 (Radio On)
+### Track 02 — 라디오를 켜고 (Turn on the Radio)
 
-- Style: D. Modern R&B, M, 112 BPM, E Major
-- Status: v0.2 설계
+- Style: D. Modern R&B, M, 120 BPM, E Major
+- Status: 확정 v0.3 (풀 가사 완성)
 
 **Style**:
 ```
-K-R&B at 112 BPM in E major, bright male vocals over bouncy electric bass and snappy handclap groove, Tight rhythm guitars and soft synth chords in verses, choruses bloom with stacked falsetto harmonies and airy "ooh" pads, Light percussion fills keep it dancing; final hook repeats with extra ad-libs and layered call-and-response, warm tape hiss intro, r&b, bright, electric
+modern driving R&B groove at 120 BPM in E major, tight drums and bouncy bass under warm electric piano and clean funk guitar chops, male vocals sit intimate and conversational on verses then stretch into a wider hooky chorus with airy harmonies and light ad-libs, sunny freeway energy with windows-down feel, subtle synth pads lifting the last chorus, r&b, vocal
 ```
 
-**Lyrics Prompt**:
+**Lyrics**:
 ```
-I-V1-PC-C-V2-PC-C-B-C-O
-Korean lyrics, afternoon 3pm driver turning car radio on, FM dial tuning in, volume up slow, first notes drift, male POV gentle drive, English hook "radio on"
+[Verse 1]
+햇살이 유리창에 쏟아져
+조수석에 네 자린 비어도
+입꼬리는 괜히 올라가
+이런 날은 그냥 좋아져
+
+신호 대기 잠깐 멍하니
+대쉬보드에 손가락 드럼 치고
+생각나서 버튼 눌렀지
+익숙한 그 주파수로
+
+[Chorus]
+맑은 날엔 라디오를 켜
+(yeah) 아무 말도 필요 없어
+혼자라도 안 혼자인 것 같아
+목소리들 사이로 끼어 노래해
+
+맑은 날엔 라디오를 켜
+우리 들었던 그 노래 나올까
+창문 살짝 내려두고 따라 불러
+이 길 끝까지 계속 재생
+
+[Verse 2]
+DJ가 농담 한 마디 던져
+터지듯이 혼자 웃게 돼
+옆자리에 네가 탄 것처럼
+대답까지 나도 모르게 해
+
+"어떻게 지내" 묻는 가사에
+순간 네 이름 떠올라
+근데 오늘은 괜찮을래
+이 리듬 타고 흘려보낼래
+
+[Chorus]
+맑은 날엔 라디오를 켜
+(oh) 마음에 바람 드는 것 같아
+막혔던 말들 흩어지는 동안
+후렴 따라 부르다 보면 가벼워져
+
+맑은 날엔 라디오를 켜
+우리 얘긴 지금쯤 어딜 달릴까
+다 잊은 듯 같이 흥얼거리며
+이 길 위에서 나를 재생
 ```
 
 ---
 
-### Track 03 — 조수석 (Passenger)
+### Track 03 — 곁에서 (Passenger)
 
 - Style: C. Neo-Soul, F, 110 BPM, A Minor
-- Status: v0.2 설계
+- Status: 확정 v0.3 (풀 가사 완성)
 
 **Style**:
 ```
 Bouncy Korean neo-soul at 110 BPM in A minor, female vocals up front with buttery stacked harmonies, Tight, syncopated drum groove and round bassline locking with clipped rhythm guitar and soft Rhodes stabs, Verses stay intimate and conversational; chorus blossoms with layered call-and-response backgrounds and airy ad-libs, Light horn pads and subtle synth bells lift the hook, with a brief breakdown that lets the vocals float before a final, feel-good chorus, r&b, soul, funky
 ```
 
-**Lyrics Prompt**:
+**Lyrics**:
 ```
-I-V1-PC-C-V2-C-B-C-O
-Korean lyrics, girl in passenger seat side-glance at driver, afternoon light on face, soft unspoken anticipation, female POV shotgun, English hook "passenger seat"
+[Intro]
+(Instrumental)
+
+[Verse 1]
+창문에 비친 너
+흔들리는 선들
+말 대신 웃는 입꼬리
+조금씩 맘이 기울어
+
+신호등 밑에 멈춘
+너의 두 손은 핸들 위
+말도 없는 짧은 숨
+나보다 먼저 떨려
+
+내 얼굴 위로 내려온
+느지막한 오후 빛
+네가 힐끔 쳐다보고
+아무 말 또 못 하고
+
+[Pre-Chorus]
+괜히 창밖 구름 세고
+손톱 끝만 만지작
+가까운 너의 옆얼굴
+너는 알고 있을까
+
+[Chorus]
+옆모습으로 말해줘
+말끝에 맴도는 맘까지 (oh)
+조금만 더 느리게 가
+이 순간이 늘어지게
+
+창틀에 기대 앉아서
+너의 눈길 기다려
+말 안 해도 들려오는
+두근거림들 사이로
+
+[Verse 2]
+네 손 따라 도는 길
+익숙한데 새로워
+사소한 표지판들도
+오늘따라 반짝여
+
+라디오 소리 흐르다
+작게 볼륨 줄인 너
+우리 둘만 남은 공기
+조용해서 더 솔직해져
+
+[Chorus]
+옆모습으로 말해줘
+말끝에 맴도는 맘까지 (yeah)
+조금만 더 느리게 가
+이 순간이 늘어지게
+
+창틀에 기대 앉아서
+너의 눈길 기다려 (기다려)
+말 안 해도 들려오는
+두근거림들 사이로
+
+[Bridge]
+차창에 비친 내 눈
+네 시선이 겹쳐질 때
+아무 말도 못 한 채로
+웃음 먼저 새어 나와 (oh)
+
+살짝 틀어진 이 거리
+점점 줄어드는 간격
+다다다다 뛰는 리듬
+너도 들리는 것 같아
+
+[Chorus]
+옆모습으로 말해줘
+숨기려다 번진 맘까지
+조금만 더 느리게 가
+돌아서기 아쉽게 해
+
+이 자리에서 바라본
+너의 옆 얼굴 하나로
+말 안 해도 채워지는
+우리 둘만의 오후
+
+[Outro]
+신호 하나 더 지나
+집 앞 골목 다 와도
+한 번만 더 힐끗 봐줘
+그걸로 난 충분해
 ```
 
 ---
 
-### Track 06 — 한 바퀴 더 (One More Lap)
+### Track 06 — 벚꽃 소다 봄길 (Cherry Blossom Soda Spring Road)
 
-- Style: A. Doowop, M, 118 BPM, F Major
-- Status: v0.2 설계
+- Style: A. Doowop Pop R&B, F, 120 BPM, Eb Major
+- Status: 확정 v0.3 (풀 가사 완성, Suno 테스트 대기)
 
 **Style**:
 ```
-trendy doo-wop pop at 118 BPM in F major, bright male lead with stacked background harmonies, upbeat handclap grooves, and bouncy electric bass, Punchy drum kit with layered claps on the backbeat, jangly clean guitars, and warm Rhodes chords, Lush "shoo-wa" background hooks and playful call-and-response vocals in the chorus, polished modern pop sheen with retro doo-wop flair
+pop, Bubbly doo-wop pop R&B at 120 BPM in Eb major, female vocals, Tight doo-wop backing stack on the hook, clean guitar chanks, playful bass walks, and bright handclaps, Verses ride a light, midtempo pocket; choruses bloom with layered harmonies and a shiny piano top line, Brief middle lift with tambourine and call-and-response ad-libs before final, higher-energy chorus, vocal, doo-wop, r&b, funky
 ```
 
-**Lyrics Prompt**:
+**Lyrics**:
 ```
-I-V1-PC-C-V2-PC-C-B-C-O
-Korean lyrics, circling the block one more time reluctant to go home, streetlights on, passenger says one more lap, male POV, English hook "one more lap"
+[Verse 1]
+창문 내려
+팔 걸친 채로
+컵 홀더에 땀 맺힌 체리 소다 두고
+비뚤어진 선글라스, 머린 번져도
+무슨 방송인지도 모를 노랠 불러
+
+[Chorus]
+봄 드라이브, 나 혼자
+두 톤 같은 내 영혼 안 잔치가 시작 (oh-woah)
+초록 불빛
+또 하나의 이유, 너를 놓아줄 수 있어
+나-na, 나-na, 난 괜찮아
+볼에 닿은 햇살, 세상은 맞춰 흘러가
+봄 드라이브, 나 혼자
+한번도 못 해본 웃음을 터뜨려
+
+[Verse 2]
+낡은 청 재킷
+대시보드엔 꽃
+가죽 위를 두드리며 박자를 타고 가
+네 자리 쪽 시트엔 부스러기와 선
+작은 너의 조각들이 나와 같이 달려가
+
+[Chorus]
+봄 드라이브, 나 혼자
+두 톤 같은 내 영혼 안 잔치가 시작 (hey!)
+초록 불빛
+또 하나의 이유, 너를 놓아줄 수 있어
+나-na, 나-na, 난 괜찮아
+볼에 닿은 햇살, 세상은 맞춰 흘러가
+봄 드라이브, 나 혼자
+한번도 못 해본 웃음을 터뜨려
+
+[Bridge]
+예전엔 이 길이 싫었어
+보이는 표지판마다 네 이름 같았지
+이젠 구름들은 만화 같아
+지나쳐도 예전처럼 아프지 않아 (no way)
+볼륨을 더 올려
+걱정들이 선을 타
+멀리 날아가
+
+[Chorus]
+봄 드라이브, 나 혼자
+두 톤 같은 내 영혼 안 잔치가 시작 (oh yeah)
+초록 불빛
+또 하나의 이유, 너를 놓아줄 수 있어
+나-na, 나-na, 난 괜찮아
+볼에 닿은 햇살, 세상은 맞춰 흘러가
+봄 드라이브, 나 혼자
+상상도 못 한 이 길 매일이 사랑스러워
 ```
 
 ---
 
-### Track 07 — 비상등 (Hazard)
+### Track 07 — 달려가는 중 (Still On My Way)
 
-- Style: B. Funk-R&B, F, 116 BPM, F# Minor
-- Status: v0.2 설계
+- Style: ★ 예외 (Warm R&B), F, 116 BPM, A Minor
+- Status: 확정 v0.3 (풀 가사 완성)
 
 **Style**:
 ```
-Upbeat Korean funk-R&B at 116 BPM in F# minor, female vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth leads and brassy chord hits lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
+Warm Korean R&B at 116 BPM in A minor, female vocals with tight stacked harmonies, Clean sidechained synth pads and warm electric piano over a steady drum groove; percussive bass locks in with crisp rimshots and shakers, Verses stay intimate with close-mic lead and low-key doubles; choruses bloom into bright stacked harmonies and octave leads, Short filtered pre-chorus tension, then full-band drop on hook, with ad-lib runs dancing around the top line on the final chorus, r&b, female vocals
 ```
 
-**Lyrics Prompt**:
+**Lyrics**:
 ```
-I-V1-PC-C-V2-PC-C-B-C-O
-Korean lyrics, hazard lights blinking on roadside, thank-you flash after lane change, small signals between drivers, female POV, English hook "hazard on"
+[Verse 1]
+차창에 네 이름을
+손가락으로 적다 지워
+신호마다 너 생각
+입술 안에 맴도네
+
+[Pre-Chorus]
+오늘은 좀 더 가까이
+웃음에 취해볼까 우리
+쌓아 둔 말들 하나씩
+건너갈게 너한테로 (hey)
+
+[Chorus]
+널 보러 달려가는 중
+헤드라이트 끝에 너 있는 것 같아
+거릴 따라 심장은 쿵
+카메라처럼 네게만 맞춰져 가
+널 보러 달려가는 중
+붉어진 하늘도 우리 편인 것 같아
+생각만 해도 난 붕
+이미 네 품 안에 들어간 것 같아
+
+[Verse 2]
+네 동네 골목 입구
+익숙해진 풍경마저 떨려
+네가 올 것만 같아
+거울 보고 또 웃어 본 나
+
+[Pre-Chorus]
+조금만 더 기다려 줘
+코너만 돌면 널 안을 수 있어
+머릿속 리허설 끝에
+딱 한마디 "보고 싶었어" (ooh)
+
+[Chorus]
+널 보러 달려가는 중
+헤드라이트 끝에 너 있는 것 같아
+거릴 따라 심장은 쿵
+카메라처럼 네게만 맞춰져 가
+널 보러 달려가는 중
+붉어진 하늘도 우리 편인 것 같아
+생각만 해도 난 붕
+이미 네 품 안에 들어간 것 같아
 ```
 
 ---
 
 ### Track 08 — 기울어진 햇살 (Slanted Sun)
 
-- Style: C. Retro Soul, M, 112 BPM, Bb Major
-- Status: v0.2 설계
+- Style: C. Neo-Soul, M, 112 BPM, Bb Major
+- Status: 확정 v0.3 (풀 가사 완성)
 
 **Style**:
 ```
-Bouncy Korean neo-soul at 112 BPM in Bb major with retro soul flair, male vocals up front with buttery stacked harmonies, Tight, syncopated drum groove and round bassline locking with clipped rhythm guitar and soft Rhodes stabs, Verses stay intimate and conversational; chorus blossoms with layered call-and-response backgrounds and airy ad-libs, Light horn pads and subtle synth bells lift the hook, with a brief breakdown that lets the vocals float before a final, feel-good chorus, r&b, soul, funky
+Bouncy Korean neo-soul at 112 BPM in Bb major, male vocals up front with buttery stacked harmonies, Tight, syncopated drum groove and round bassline locking with clipped rhythm guitar and soft Rhodes stabs, Verses stay intimate and conversational; chorus blossoms with layered call-and-response backgrounds and airy ad-libs, Light horn pads and subtle synth bells lift the hook, with a brief breakdown that lets the vocals float before a final, feel-good chorus, r&b, soul, funky
 ```
 
-**Lyrics Prompt**:
+**Lyrics**:
 ```
-I-V1-PC-C-V2-C-B-C-O
-Korean lyrics, late afternoon sun slanting through windshield, golden light on dashboard, shadows stretching, male POV driving west, warm nostalgia, English hook "slanted sun"
+[Intro]
+창문 틈으로 스며든
+늦은 오후 향기
+손등을 덮는
+느릿한 온기
+
+[Verse 1]
+유리 위로 기울어져
+네가 좋아하던 색
+계기판 위 먼지까지
+다 황금처럼 웃네
+신호등도 느릿하게
+오늘은 날 잡지 못해
+
+[Pre-Chorus]
+라디오는 멀어지고
+네 얘기만 커져 와
+잡을 것도 잃을 것도
+이 길 위엔 없던 날
+
+[Chorus]
+서쪽으로 기우는 빛
+대시보드 위에 눕네
+흔들리는 그림자에
+우리 웃던 날이 겹쳐
+돌아갈 수 없단 걸 알면서
+자꾸만 그때로 가
+길 끝까지 번져 가는
+저 노을처럼
+
+[Verse 2]
+백미러에 밀려가는
+오늘 하루 표정들
+와이퍼에 걸린 채로
+안 떨어진 기억들
+손가락 끝 따라오는
+햇살이 널 닮아가네
+
+[Chorus]
+서쪽으로 기우는 빛
+대시보드 위에 눕네
+흔들리는 그림자에
+우리 웃던 날이 겹쳐
+돌아갈 수 없단 걸 알면서
+자꾸만 그때로 가
+길 끝까지 번져 가는
+저 노을처럼
+
+[Bridge]
+한 번만 더, 이 차 안에
+네가 앉아 있을 것 같아 (어디쯤이니)
+이대로라면 어둠마저
+따뜻할 것 같아
+
+[Chorus]
+서쪽으로 기우는 빛
+대시보드 위에 눕네
+길을 따라 늘어진 채
+우리의 시간을 끌어
+놓지 못한 말들이 남아서
+자꾸만 저 너머를 봐
+사라지는 하루 끝에서
+또 서쪽으로 간다
+
+[Outro]
+서쪽으로, 서쪽으로
+그때의 나를 싣고
+늘어지는 그림자만
+옆자릴 채운 채
 ```
 
 ---
 
-### Track 10 — 믹스테이프 (Mixtape)
+### Track 10 — 믹스테잎 (Mixtape)
 
-- Style: A. Doowop, F, 122 BPM, C Major
-- Status: v0.2 설계
+- Style: A. Doowop Pop R&B, F, 122 BPM, C Major
+- Status: 확정 v0.3 (풀 가사 완성)
 
 **Style**:
 ```
-trendy doo-wop pop at 122 BPM in C major, bright female lead with stacked background harmonies, upbeat handclap grooves, and bouncy electric bass, Punchy drum kit with layered claps on the backbeat, jangly clean guitars, and warm Rhodes chords, Lush "shoo-wa" background hooks and playful call-and-response vocals in the chorus, polished modern pop sheen with retro doo-wop flair
+Lo-fi chill Pop, Bubbly doo-wop pop R&B with at 122 BPM in C major, female vocals, Tight doo-wop backing stack on the hook, clean guitar chanks, playful bass walks, and bright handclaps, Verses ride a light, midtempo pocket; choruses bloom with layered harmonies and a shiny piano top line, Brief middle lift with tambourine and call-and-response ad-libs before final, higher-energy chorus, vocal, doo-wop, r&b, funky
 ```
 
-**Lyrics Prompt**:
+**Lyrics**:
 ```
-I-V1-PC-C-V2-PC-C-B-C-O
-Korean lyrics, curating a mixtape for the drive playing old favorite tracks, skipping to the song you sing along to, female POV playful mood, English hook "mixtape"
+[Intro]
+창문 열고 yeah
+봄 냄새가 나
+쌓인 CD 박스
+꺼내 보는 밤
+
+[Verse 1]
+먼지 쌓인 그 케이스
+손가락에 칠해진 과거 playlist
+스티커 붙여 둔 네 이름 옆엔
+별표 셋, 아직도 반짝해
+
+[Pre-Chorus]
+하나씩 눌러 보는 track
+이별 노랜 skip skip back
+웃음 터진 그 hook만 찾다
+뛰는 심장, 다시 loud up
+
+[Chorus]
+Mixtape, 너와 나만의 play
+볼륨을 더 올려 babe
+달리는 이 길 위에 sing along, sing along
+Mixtape, 멈추지 않게 replay
+창밖에 흘러가도 fade
+입술이 기억하는 our song, our song
+
+[Verse 2]
+라디오 DJ 말은
+한 귀로 흘려 또 chorus humming
+가사 몇 줄 틀려도 상관 없어
+네가 웃던 그 박자면 돼
+
+[Pre-Chorus]
+손가락 장난치는 tap
+비트 위에 두근대는 맘
+후렴 직전 숨 멈춘 순간
+같이 터져, 우린 shout out
+
+[Chorus]
+Mixtape, 너와 나만의 play
+볼륨을 더 올려 babe
+달리는 이 길 위에 sing along, sing along
+Mixtape, 멈추지 않게 replay
+창밖에 흘러가도 fade
+입술이 기억하는 our song, our song
+
+[Bridge]
+다 지나간 계절 같은 track들
+가끔은 또 그리워져
+근데 제일 큰 글씨로 적어 둔
+그 제목, 아직 내 heart에 적혀
+
+[Chorus]
+Mixtape, 너와 나만의 play
+볼륨을 더 올려 babe
+달리는 이 길 위에 sing along, sing along
+Mixtape, 멈추지 않게 replay
+창밖에 흘러가도 fade
+입술이 기억하는 our song, our song
+
+[Outro]
+Mixtape, oh, press play
+(la-la-la, sing along)
+네 웃음 섞인 그 day
+내 차 안에 아직도 play
 ```
 
 ---
@@ -539,7 +893,7 @@ Korean lyrics, curating a mixtape for the drive playing old favorite tracks, ski
 
 **Style**:
 ```
-Upbeat Korean funk-R&B at 116 BPM in G major, female vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth leads and brassy chord hits lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
+Upbeat Korean funk-R&B at 116 BPM in G major, female vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth chord stabs and punchy funk piano accents lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
 ```
 
 **Lyrics Prompt**:
@@ -557,7 +911,7 @@ Korean lyrics, hand out the rolled-down window, afternoon breeze, cityscape blur
 
 **Style**:
 ```
-Bouncy Korean neo-soul at 108 BPM in E minor, male vocals up front with buttery stacked harmonies, Tight, syncopated drum groove and round bassline locking with clipped rhythm guitar and soft Rhodes stabs, Verses stay intimate and conversational; chorus blossoms with layered call-and-response backgrounds and airy ad-libs, Light horn pads and subtle synth bells lift the hook, with a brief breakdown that lets the vocals float before a final, feel-good chorus, r&b, soul, funky
+Bouncy Korean neo-soul at 108 BPM in E minor, male vocals up front with buttery stacked harmonies, Tight, syncopated drum groove and round bassline locking with clipped rhythm guitar and soft Rhodes stabs, Verses stay intimate and conversational; chorus blossoms with layered call-and-response backgrounds and airy ad-libs, Warm wurlitzer pads and subtle chimes lift the hook, with a brief breakdown that lets the vocals float before a final, feel-good chorus, r&b, soul, funky
 ```
 
 **Lyrics Prompt**:
@@ -575,7 +929,7 @@ Korean lyrics, glancing at rearview mirror, past hour trailing behind, afternoon
 
 **Style**:
 ```
-K-R&B at 114 BPM in Ab major, bright female vocals over bouncy electric bass and snappy handclap groove, Tight rhythm guitars and soft synth chords in verses, choruses bloom with stacked falsetto harmonies and airy "ooh" pads, Light percussion fills keep it dancing; final hook repeats with extra ad-libs and layered call-and-response, r&b, bright, electric
+modern driving R&B groove at 114 BPM in Ab major, tight drums and bouncy bass under warm electric piano and clean funk guitar chops, female vocals sit intimate and conversational on verses then stretch into a wider hooky chorus with airy harmonies and light ad-libs, sunny freeway energy with windows-down feel, subtle synth pads lifting the last chorus, r&b, vocal
 ```
 
 **Lyrics Prompt**:
@@ -593,7 +947,7 @@ Korean lyrics, tuning between FM stations, fragments of songs, static blending, 
 
 **Style**:
 ```
-Upbeat Korean funk-R&B duet at 116 BPM in F major, male and female vocals trading call-and-response lines with tight stacked harmonies, thirds and fifths harmonies in chorus, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth leads and brassy chord hits lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
+Upbeat Korean funk-R&B duet at 116 BPM in F major, male and female vocals trading call-and-response lines with tight stacked harmonies, thirds and fifths harmonies in chorus, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth chord stabs and punchy funk piano accents lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
 ```
 
 **Lyrics Prompt**:
@@ -606,12 +960,12 @@ Korean lyrics, male female duet, two cars same direction at intersection, laughi
 
 ### Track 15 — 15km/h
 
-- Style: A. Doowop, M, 124 BPM, D Major
+- Style: A. Doowop Pop R&B, M, 124 BPM, D Major
 - Status: v0.2 설계
 
 **Style**:
 ```
-trendy doo-wop pop at 124 BPM in D major, bright male lead with stacked background harmonies, upbeat handclap grooves, and bouncy electric bass, Punchy drum kit with layered claps on the backbeat, jangly clean guitars, and warm Rhodes chords, Lush "shoo-wa" background hooks and playful call-and-response vocals in the chorus, polished modern pop sheen with retro doo-wop flair
+pop, Bubbly doo-wop pop R&B at 124 BPM in D major, male vocals, Tight doo-wop backing stack on the hook, clean guitar chanks, playful bass walks, and bright handclaps, Verses ride a light, midtempo pocket; choruses bloom with layered harmonies and a shiny piano top line, Brief middle lift with tambourine and call-and-response ad-libs before final, higher-energy chorus, vocal, doo-wop, r&b, funky
 ```
 
 **Lyrics Prompt**:
@@ -624,12 +978,12 @@ Korean lyrics, crawling through afternoon traffic at 15 kilometers per hour, no 
 
 ### Track 16 — 카세트 (Cassette)
 
-- Style: B. Retro Funk, F, 118 BPM, C Major
+- Style: B. Funk-R&B, F, 118 BPM, C Major
 - Status: v0.2 설계
 
 **Style**:
 ```
-Upbeat Korean funk-R&B with retro cassette-era texture at 118 BPM in C major, female vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, vintage tape warmth and subtle analog saturation, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth leads and brassy chord hits lift the choruses, with playful ad-lib layers and crowd-style backing vocals
+Upbeat Korean funk-R&B at 118 BPM in C major, female vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth chord stabs and punchy funk piano accents lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
 ```
 
 **Lyrics Prompt**:
@@ -647,7 +1001,7 @@ Korean lyrics, old cassette tape in glove compartment, rewinding childhood summe
 
 **Style**:
 ```
-Bouncy Korean neo-soul at 108 BPM in B minor, female vocals up front with buttery stacked harmonies, Tight, syncopated drum groove and round bassline locking with clipped rhythm guitar and soft Rhodes stabs, Verses stay intimate and conversational; chorus blossoms with layered call-and-response backgrounds and airy ad-libs, Light horn pads and subtle synth bells lift the hook, with a brief breakdown that lets the vocals float before a final, feel-good chorus, r&b, soul, funky
+Bouncy Korean neo-soul at 108 BPM in B minor, female vocals up front with buttery stacked harmonies, Tight, syncopated drum groove and round bassline locking with clipped rhythm guitar and soft Rhodes stabs, Verses stay intimate and conversational; chorus blossoms with layered call-and-response backgrounds and airy ad-libs, Warm wurlitzer pads and subtle chimes lift the hook, with a brief breakdown that lets the vocals float before a final, feel-good chorus, r&b, soul, funky
 ```
 
 **Lyrics Prompt**:
@@ -665,7 +1019,7 @@ Korean lyrics, drowsy afternoon eyes half-closed in passenger seat, dashboard bl
 
 **Style**:
 ```
-Upbeat Korean funk-R&B at 120 BPM in E major, male vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth leads and brassy chord hits lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
+Upbeat Korean funk-R&B at 120 BPM in E major, male vocals with tight stacked harmonies and call-and-response hooks, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth chord stabs and punchy funk piano accents lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
 ```
 
 **Lyrics Prompt**:
@@ -678,12 +1032,12 @@ Korean lyrics, sunlight too bright hitting the windshield, flipping down visor s
 
 ### Track 19 — 비포장도로 (Unpaved Road)
 
-- Style: A. Doowop, F, 126 BPM, G Major
+- Style: A. Doowop Pop R&B, F, 126 BPM, G Major
 - Status: v0.2 설계
 
 **Style**:
 ```
-trendy doo-wop pop at 126 BPM in G major, bright female lead with stacked background harmonies, upbeat handclap grooves, and bouncy electric bass, Punchy drum kit with layered claps on the backbeat, jangly clean guitars, and warm Rhodes chords, Lush "shoo-wa" background hooks and playful call-and-response vocals in the chorus, polished modern pop sheen with retro doo-wop flair
+pop, Bubbly doo-wop pop R&B at 126 BPM in G major, female vocals, Tight doo-wop backing stack on the hook, clean guitar chanks, playful bass walks, and bright handclaps, Verses ride a light, midtempo pocket; choruses bloom with layered harmonies and a shiny piano top line, Brief middle lift with tambourine and call-and-response ad-libs before final, higher-energy chorus, vocal, doo-wop, r&b, funky
 ```
 
 **Lyrics Prompt**:
@@ -701,7 +1055,7 @@ Korean lyrics, taking the unpaved country road off main highway, bumpy fun detou
 
 **Style**:
 ```
-K-R&B duet at 110 BPM in A major, male and female vocals trading intimate lead lines with stacked falsetto harmonies, bouncy electric bass and snappy handclap groove, Tight rhythm guitars and soft synth chords in verses, choruses bloom with stacked harmonies and airy "ooh" pads, Light percussion fills keep it dancing, final hook with call-and-response ad-libs, r&b, bright, electric, finale warmth
+modern driving R&B duet groove at 110 BPM in A major, tight drums and bouncy bass under warm electric piano and clean funk guitar chops, male and female vocals trading intimate lead lines with stacked airy harmonies, choruses stretch wider with call-and-response ad-libs, sunny freeway energy with windows-down feel, subtle synth pads lifting the last chorus, r&b, vocal, finale warmth
 ```
 
 **Lyrics Prompt**:

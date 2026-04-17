@@ -15,7 +15,21 @@
   - ✅ **Lyrics 200자 QA 통과** — 16곡 전부 200자 이내 (최대 196자)
   - ✅ **concept.md v0.2** (727줄) + **input/tracks/ txt 16개**
   - 핵심 차별점: 13-00 걷는 씬 vs 15-00 달리는 씬, 봄 테마 허용하되 "길 위" 이미지 필수
-  - **현황: 16곡 Suno 테스트 대기**
+  - ✅ **Track 06 "벚꽃 소다 봄길" 확정** (2026-04-17) — Bubbly Doowop Pop R&B, F, 120 BPM, Eb Major, 풀 가사. "한 바퀴 더 (M 118 F Major)" 전면 교체. Meghan Trainor "Dear Future Husband" 리서치 (`report/2026-04-17_track06-dear-future-husband.md`, 신뢰도 93%, 23 소스) 기반 사용자 확정
+  - ✅ **Track 07 "달려가는 중 (Still On My Way)" 확정** — Warm R&B (Glossy → Warm 재라벨), F, 116 BPM, A Minor. "비상등 (B. Funk-R&B F#m)" 전면 교체 → ★ 예외
+  - ✅ **Track 08 "기울어진 햇살" 풀 가사 확정** — C. Neo-Soul 유지, Lyrics Prompt → 풀 가사
+  - ✅ **Track 09 "잔디에 누워" 재설계** — Lo-fi Chill Hop, M, 112 BPM, F Major (BPM 사용자 92→112 수정, 제목 "봄" 제거). 기존 "봄 잔디에 누워 (D. K-R&B 120 M)" 폐기 → ★ 예외
+  - ✅ **Track 10 "믹스테잎" 확정** (제목 "믹스테이프" → "믹스테잎") — Lo-fi chill Pop + Bubbly Doowop Pop R&B, F, 122 BPM, C Major. 가사 2회 교체
+  - ✅ **Track 01 "오렌지 드라이브" 스타일 재설계** — Contemporary R&B Cruise (mid-tempo 110 BPM, laid-back late-night cruise). 가사 유지. A축 → ★ 예외
+  - ✅ **Track 02 제목 변경** — 라디오 온 → 라디오를 켜고 (Turn on the Radio), D. Modern R&B, 112→120 BPM, 풀 가사
+  - ✅ **Track 03 제목 변경** — 조수석 → 곁에서, C. Neo-Soul, 풀 가사
+  - ✅ **A축 Template 재정의** — `trendy doo-wop pop + Rhodes + shoo-wa + retro flair` → `Bubbly doo-wop pop R&B + shiny piano top + tambourine` (Track 06 앵커)
+  - ✅ **D축 Template 재정의** — `K-R&B + snappy handclap` → `Modern driving R&B groove + sunny freeway` (Track 02 앵커). 4곡 → 3곡 (09 예외로 빠짐)
+  - ✅ **"Retro" 라벨 전수 제거** — C. Retro Soul → C. Neo-Soul (Track 08), B. Retro Funk → B. Funk-R&B (Track 16). C축 섹션 제목 "Neo-Soul / Retro Soul" → "Neo-Soul" 정리
+  - ✅ **브라스/호른 제거 (미확정 6곡)** — B축 4곡 (11/14/16/18) "brassy chord hits" → "synth chord stabs + funk piano accents". C축 2곡 (12/17) "horn pads + synth bells" → "wurlitzer pads + chimes". B/C 템플릿 동기화
+  - ✅ **배분 재집계** — A 4곡 (06,10,15,19) + ★ 예외 3곡 (01 Contemporary Cruise, 07 Warm R&B, 09 Lo-fi Chill Hop) / B 5곡 / C 5곡 / D 3곡. 보컬 F11:M7:Duet2 (Track 06 M→F 전환)
+  - ✅ **리서치 리포트** — `report/2026-04-17_track06-dear-future-husband.md` (Meghan Trainor 원곡 분석 + Suno 프롬프트 베스트 프랙티스 + 한국 doowop 선례)
+  - **현황: 10곡 확정 (01-10, 풀 가사/스타일) / 10곡 미확정 (11-20) Suno 테스트 대기**
 
 - **22-00 수면 전 릴랙스 시리즈** — Suno 테스트 + 장르/프롬프트 대폭 리뉴얼 (2026-03-31)
   - 시간대: 22:00 (밤 10시) — 수면 전 의도적 이완
