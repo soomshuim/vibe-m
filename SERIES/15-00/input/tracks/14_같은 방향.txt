@@ -1,0 +1,15 @@
+Track: 같은 방향 (Same Direction)
+Type: B (Duet)
+BPM: 116
+Key: F Major
+Length: 3min+
+
+=== STYLE ===
+Upbeat Korean funk-R&B duet at 116 BPM in F major, male and female vocals trading call-and-response lines with tight stacked harmonies, thirds and fifths harmonies in chorus, Punchy, syncopated drums with crisp hi-hats and snappy claps, percussive electric piano stabs, and clean wah-inflected rhythm guitar riffs, Bass is front-and-center with lively, syncopated funk lines and occasional slap accents, Bright synth leads and brassy chord hits lift the choruses, with playful ad-lib layers and crowd-style backing vocals, groovy, danceable, and energetic while retaining a smooth neo-soul edge
+
+=== EXCLUDE ===
+sad ballad, solo vocal only, lo-fi whisper, idol K-pop chant, heavy trap 808
+
+=== LYRICS ===
+I-V1-PC-C-V2-PC-C-B-C-O
+Korean lyrics, male female duet, two cars same direction at intersection, laughing through windows, trading lines, shared drive, English hook "same direction"

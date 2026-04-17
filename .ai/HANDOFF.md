@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-17 15:52:51
+Project: ~/Project/wavvy
+Agent: Claude (+ 사용자 직접 제작 4곡)
+Summary: 15-00 "오후 3시, 라디오" 신규 시리즈 기획 v0.1~v0.2. Korean Retro R&B Drive 컨셉 (13-00과 씬 분리: 걷는 산책 vs 달리는 드라이브), 장르 4축 믹스 (A Doowop 25% / B Funk-R&B 30% / C Neo-Soul 25% / D Modern K-R&B 20%), 보컬 F10:M8:Duet2 (5:5), BPM 108-126. 사용자 제작 4곡 (Track 01 오렌지 드라이브 Doowop F / 04 오늘 드라이브 Funk-R&B M Eb Major / 05 봄 냄새 Neo-Soul F D Major / 09 봄 잔디에 누워 K-R&B M) 포함 20트랙 Track Map 확정. 신규 16곡 Style + Lyrics Prompt 설계 (약칭 I-V1-PC-C-... 구조 + 영문 키워드 + English hook + "길 위" POV 전곡 검증). Lyrics 200자 QA 통과 (최대 196자). concept.md v0.2 (727줄) + input/tracks/ txt 16개 생성.
+Next-TODO: 16곡 Suno 테스트 착수 (Track 02부터 순차 or 장르별 묶음). 사용자 제작 4곡 wav 파일 input/tracks/ 정리 대기. 전곡 PASS 후 YouTube Metadata / Genre Gate / 레퍼런스 보강.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-04-13 14:50:00
 Project: ~/Project/wavvy
 Agent: Claude (+ 사용자 직접 제작 Track 01)

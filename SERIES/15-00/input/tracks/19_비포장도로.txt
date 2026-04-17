@@ -1,0 +1,15 @@
+Track: 비포장도로 (Unpaved Road)
+Type: A
+BPM: 126
+Key: G Major
+Length: 3min+
+
+=== STYLE ===
+trendy doo-wop pop at 126 BPM in G major, bright female lead with stacked background harmonies, upbeat handclap grooves, and bouncy electric bass, Punchy drum kit with layered claps on the backbeat, jangly clean guitars, and warm Rhodes chords, Lush "shoo-wa" background hooks and playful call-and-response vocals in the chorus, polished modern pop sheen with retro doo-wop flair
+
+=== EXCLUDE ===
+sad ballad, aggressive rap, heavy trap 808, EDM drop, idol K-pop chant
+
+=== LYRICS ===
+I-V1-PC-C-V2-PC-C-B-C-O
+Korean lyrics, taking the unpaved country road off main highway, bumpy fun detour, car bouncing slightly on gravel, female POV adventure spirit, English hook "off the map"

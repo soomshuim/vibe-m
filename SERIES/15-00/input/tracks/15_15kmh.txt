@@ -1,0 +1,15 @@
+Track: 15km/h
+Type: A
+BPM: 124
+Key: D Major
+Length: 3min+
+
+=== STYLE ===
+trendy doo-wop pop at 124 BPM in D major, bright male lead with stacked background harmonies, upbeat handclap grooves, and bouncy electric bass, Punchy drum kit with layered claps on the backbeat, jangly clean guitars, and warm Rhodes chords, Lush "shoo-wa" background hooks and playful call-and-response vocals in the chorus, polished modern pop sheen with retro doo-wop flair
+
+=== EXCLUDE ===
+sad ballad, aggressive rap, heavy trap 808, EDM drop, idol K-pop chant
+
+=== LYRICS ===
+I-V1-PC-C-V2-PC-C-B-C-O
+Korean lyrics, crawling through afternoon traffic at 15 kilometers per hour, no rush slow cruise, radio filling the wait, male POV patient smile, English hook "fifteen k"

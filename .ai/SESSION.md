@@ -1,8 +1,21 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-13
+> Last updated: 2026-04-17
 
 ## 진행 중
+
+- **15-00 오후 3시, 라디오 — 신규 시리즈 기획** (2026-04-17)
+  - 시간대: 15:00 — 점심 후 오후 3시, 드라이브 씬
+  - 컨셉: **Korean Retro R&B Drive** — 13-00과 씬 분리 (산책 vs 드라이브)
+  - 장르 4축 믹스: A. Doowop Pop (25%) / B. Funk-R&B (30%) / C. Neo-Soul/Retro Soul (25%) / D. Modern K-R&B (20%)
+  - BPM 108-126, 보컬 F10:M8:Duet2 (5:5), Minor 4곡 (03/07/12/17)
+  - ✅ **사용자 제작 4곡** — Track 01 오렌지 드라이브 (Doowop F, 120), 04 오늘 드라이브 (Funk-R&B M, 120, Eb Major), 05 봄 냄새 (Neo-Soul F, 114, D Major), 09 봄 잔디에 누워 (K-R&B M, 120)
+  - ✅ **Track Map 20곡** — 4막 구조, Key 전곡 확정
+  - ✅ **신규 16곡 Style + Lyrics Prompt 설계** — 약칭 구조 (I-V1-PC-C-...), 영문 키워드 + English hook, "길 위" POV 전곡 검증
+  - ✅ **Lyrics 200자 QA 통과** — 16곡 전부 200자 이내 (최대 196자)
+  - ✅ **concept.md v0.2** (727줄) + **input/tracks/ txt 16개**
+  - 핵심 차별점: 13-00 걷는 씬 vs 15-00 달리는 씬, 봄 테마 허용하되 "길 위" 이미지 필수
+  - **현황: 16곡 Suno 테스트 대기**
 
 - **22-00 수면 전 릴랙스 시리즈** — Suno 테스트 + 장르/프롬프트 대폭 리뉴얼 (2026-03-31)
   - 시간대: 22:00 (밤 10시) — 수면 전 의도적 이완
@@ -273,7 +286,9 @@
 - [x] ~~wavvy.py 이미지 모드 지원~~ — loop.png/jpg 감지 시 vfade 스킵, `-loop 1 -tune stillimage -r 1` 직접 렌더 (2026-04-13)
 - [x] ~~K_LIGHTPOP_RUBRIC.md 폐기~~ — v0.5 Custom 중심 시리즈라 루브릭 불필요, 파일 삭제 (2026-04-13)
 
-_모든 작업 완료 — 대기 중인 할 일 없음_
+- [ ] 15-00 16곡 Suno 테스트 (Track 02부터 순차 or 장르별 묶음)
+- [ ] 15-00 사용자 제작 4곡 wav 파일 `input/tracks/` 정리
+- [ ] 15-00 YouTube Metadata / Genre Gate / 레퍼런스 보강 (전곡 PASS 후)
 
 ## 핸드오프 메모
 

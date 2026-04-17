@@ -1,0 +1,15 @@
+Track: 오후 세 시 (3 O'Clock)
+Type: D (Duet)
+BPM: 110
+Key: A Major
+Length: 3min+
+
+=== STYLE ===
+K-R&B duet at 110 BPM in A major, male and female vocals trading intimate lead lines with stacked falsetto harmonies, bouncy electric bass and snappy handclap groove, Tight rhythm guitars and soft synth chords in verses, choruses bloom with stacked harmonies and airy "ooh" pads, Light percussion fills keep it dancing, final hook with call-and-response ad-libs, r&b, bright, electric, finale warmth
+
+=== EXCLUDE ===
+sad ballad, solo vocal only, aggressive rap, idol K-pop chant, heavy autotune
+
+=== LYRICS ===
+I-V1-PC-C-V2-C-B-C-O
+Korean lyrics, male female duet closing the day at 3pm, radio still on, sun tilting lower, drive ending moment lingers, shared finale, English hook "three o'clock"

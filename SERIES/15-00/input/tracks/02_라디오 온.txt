@@ -1,0 +1,15 @@
+Track: 라디오 온 (Radio On)
+Type: D
+BPM: 112
+Key: E Major
+Length: 3min+
+
+=== STYLE ===
+K-R&B at 112 BPM in E major, bright male vocals over bouncy electric bass and snappy handclap groove, Tight rhythm guitars and soft synth chords in verses, choruses bloom with stacked falsetto harmonies and airy "ooh" pads, Light percussion fills keep it dancing; final hook repeats with extra ad-libs and layered call-and-response, warm tape hiss intro, r&b, bright, electric
+
+=== EXCLUDE ===
+sad ballad, aggressive rap, idol K-pop chant, heavy autotune, EDM drop
+
+=== LYRICS ===
+I-V1-PC-C-V2-PC-C-B-C-O
+Korean lyrics, afternoon 3pm driver turning car radio on, FM dial tuning in, volume up slow, first notes drift, male POV gentle drive, English hook "radio on"
