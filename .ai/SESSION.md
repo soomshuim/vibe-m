@@ -1,35 +1,15 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-17
+> Last updated: 2026-04-19
 
 ## 진행 중
 
-- **15-00 오후 3시, 라디오 — 신규 시리즈 기획** (2026-04-17)
-  - 시간대: 15:00 — 점심 후 오후 3시, 드라이브 씬
-  - 컨셉: **Korean Retro R&B Drive** — 13-00과 씬 분리 (산책 vs 드라이브)
-  - 장르 4축 믹스: A. Doowop Pop (25%) / B. Funk-R&B (30%) / C. Neo-Soul/Retro Soul (25%) / D. Modern K-R&B (20%)
-  - BPM 108-126, 보컬 F10:M8:Duet2 (5:5), Minor 4곡 (03/07/12/17)
-  - ✅ **사용자 제작 4곡** — Track 01 오렌지 드라이브 (Doowop F, 120), 04 오늘 드라이브 (Funk-R&B M, 120, Eb Major), 05 봄 냄새 (Neo-Soul F, 114, D Major), 09 봄 잔디에 누워 (K-R&B M, 120)
-  - ✅ **Track Map 20곡** — 4막 구조, Key 전곡 확정
-  - ✅ **신규 16곡 Style + Lyrics Prompt 설계** — 약칭 구조 (I-V1-PC-C-...), 영문 키워드 + English hook, "길 위" POV 전곡 검증
-  - ✅ **Lyrics 200자 QA 통과** — 16곡 전부 200자 이내 (최대 196자)
-  - ✅ **concept.md v0.2** (727줄) + **input/tracks/ txt 16개**
-  - 핵심 차별점: 13-00 걷는 씬 vs 15-00 달리는 씬, 봄 테마 허용하되 "길 위" 이미지 필수
-  - ✅ **Track 06 "벚꽃 소다 봄길" 확정** (2026-04-17) — Bubbly Doowop Pop R&B, F, 120 BPM, Eb Major, 풀 가사. "한 바퀴 더 (M 118 F Major)" 전면 교체. Meghan Trainor "Dear Future Husband" 리서치 (`report/2026-04-17_track06-dear-future-husband.md`, 신뢰도 93%, 23 소스) 기반 사용자 확정
-  - ✅ **Track 07 "달려가는 중 (Still On My Way)" 확정** — Warm R&B (Glossy → Warm 재라벨), F, 116 BPM, A Minor. "비상등 (B. Funk-R&B F#m)" 전면 교체 → ★ 예외
-  - ✅ **Track 08 "기울어진 햇살" 풀 가사 확정** — C. Neo-Soul 유지, Lyrics Prompt → 풀 가사
-  - ✅ **Track 09 "잔디에 누워" 재설계** — Lo-fi Chill Hop, M, 112 BPM, F Major (BPM 사용자 92→112 수정, 제목 "봄" 제거). 기존 "봄 잔디에 누워 (D. K-R&B 120 M)" 폐기 → ★ 예외
-  - ✅ **Track 10 "믹스테잎" 확정** (제목 "믹스테이프" → "믹스테잎") — Lo-fi chill Pop + Bubbly Doowop Pop R&B, F, 122 BPM, C Major. 가사 2회 교체
-  - ✅ **Track 01 "오렌지 드라이브" 스타일 재설계** — Contemporary R&B Cruise (mid-tempo 110 BPM, laid-back late-night cruise). 가사 유지. A축 → ★ 예외
-  - ✅ **Track 02 제목 변경** — 라디오 온 → 라디오를 켜고 (Turn on the Radio), D. Modern R&B, 112→120 BPM, 풀 가사
-  - ✅ **Track 03 제목 변경** — 조수석 → 곁에서, C. Neo-Soul, 풀 가사
-  - ✅ **A축 Template 재정의** — `trendy doo-wop pop + Rhodes + shoo-wa + retro flair` → `Bubbly doo-wop pop R&B + shiny piano top + tambourine` (Track 06 앵커)
-  - ✅ **D축 Template 재정의** — `K-R&B + snappy handclap` → `Modern driving R&B groove + sunny freeway` (Track 02 앵커). 4곡 → 3곡 (09 예외로 빠짐)
-  - ✅ **"Retro" 라벨 전수 제거** — C. Retro Soul → C. Neo-Soul (Track 08), B. Retro Funk → B. Funk-R&B (Track 16). C축 섹션 제목 "Neo-Soul / Retro Soul" → "Neo-Soul" 정리
-  - ✅ **브라스/호른 제거 (미확정 6곡)** — B축 4곡 (11/14/16/18) "brassy chord hits" → "synth chord stabs + funk piano accents". C축 2곡 (12/17) "horn pads + synth bells" → "wurlitzer pads + chimes". B/C 템플릿 동기화
-  - ✅ **배분 재집계** — A 4곡 (06,10,15,19) + ★ 예외 3곡 (01 Contemporary Cruise, 07 Warm R&B, 09 Lo-fi Chill Hop) / B 5곡 / C 5곡 / D 3곡. 보컬 F11:M7:Duet2 (Track 06 M→F 전환)
-  - ✅ **리서치 리포트** — `report/2026-04-17_track06-dear-future-husband.md` (Meghan Trainor 원곡 분석 + Suno 프롬프트 베스트 프랙티스 + 한국 doowop 선례)
-  - **현황: 10곡 확정 (01-10, 풀 가사/스타일) / 10곡 미확정 (11-20) Suno 테스트 대기**
+- **15-00 오후 3시, 라디오 — 시리즈 리셋** (2026-04-19)
+  - 리셋 계기: 확정 13곡 분석 시 Funky 4곡 + Neo-Soul 계열 9곡으로 수렴, 원 기획 4축(Doowop/Funk-R&B/Neo-Soul/Modern R&B) 균형 실제 구현 실패. **Funky Neo-Soul R&B 하이브리드 시리즈**로 자연 재편된 상태. "Retro" 라벨 잔존 + ★ 예외 카테고리 정체성 약화 등 누적 불일치
+  - 리셋 범위: `SERIES/15-00/concept.md` 전량 (1000줄+) + `input/tracks/` txt 17개 git rm, 빈 스켈레톤 재생성
+  - 보존: `report/2026-04-17_track06-dear-future-husband.md` 리서치 리포트, `.ai/HANDOFF.md` 2026-04-17 엔트리 2건
+  - 새 접근: Suno PASS 곡 데이터를 처음부터 누적 → 충분히 쌓이면 시리즈 DNA / 배분 / 4막 구조 역추출 → Track 20까지 설계
+  - **현황: concept.md 빈 스켈레톤 상태, Suno PASS 곡 입력 대기**
 
 - **22-00 수면 전 릴랙스 시리즈** — Suno 테스트 + 장르/프롬프트 대폭 리뉴얼 (2026-03-31)
   - 시간대: 22:00 (밤 10시) — 수면 전 의도적 이완
@@ -300,9 +280,9 @@
 - [x] ~~wavvy.py 이미지 모드 지원~~ — loop.png/jpg 감지 시 vfade 스킵, `-loop 1 -tune stillimage -r 1` 직접 렌더 (2026-04-13)
 - [x] ~~K_LIGHTPOP_RUBRIC.md 폐기~~ — v0.5 Custom 중심 시리즈라 루브릭 불필요, 파일 삭제 (2026-04-13)
 
-- [ ] 15-00 16곡 Suno 테스트 (Track 02부터 순차 or 장르별 묶음)
-- [ ] 15-00 사용자 제작 4곡 wav 파일 `input/tracks/` 정리
-- [ ] 15-00 YouTube Metadata / Genre Gate / 레퍼런스 보강 (전곡 PASS 후)
+- [ ] 15-00 Suno PASS 곡 정보 누적 입력 (제목 / Style / 가사) → concept.md Track Details에 트랙별 기재
+- [ ] 15-00 충분히 쌓이면 시리즈 DNA / 배분 / 4막 구조 역추출
+- [ ] 15-00 Track 20까지 설계 및 YouTube Metadata / 레퍼런스 보강
 
 ## 핸드오프 메모
 

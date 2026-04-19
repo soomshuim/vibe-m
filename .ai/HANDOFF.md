@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-19 00:17:04
+Project: ~/Project/wavvy
+Agent: Claude (+ 사용자 Suno PASS 확정본 11곡)
+Summary: 15-00 사용자 확정본 11곡 순차 반영 후 시리즈 리셋. 2026-04-18 세션에서 Track 01(Urban Neo-Soul F 120 D), 02(Modern R&B M 120 E, Key 표기 제거), 03(Neo-Soul F 110 Am + Exclude), 06(Doo-Wop+Urban Neo-Soul 하이브리드 F 120 E, Eb→E Key 변경), 07(Urban Neo-Soul F 120 E, Warm R&B 116 Am→120 E 재확정), 08(Neo-Soul M 112 Bb + Exclude), 09(Urban Neo-Soul F 120 E, Lo-fi Chill Hop M 112 F→F 120 E 재확정 + M→F 전환), 10(Lo-fi chill Texture + Bubbly Doowop F 122 C + Exclude, 라벨 "Pop"→"Texture"), 11(창문 너머→창문 내려, Funky Neo-Soul R&B 하이브리드 M 120 G, F→M 전환, 풀가사 신규), 12(백미러→잠깐 도망가자, Funky Contemporary R&B 하이브리드 F 120 G, C→B 축 이동, M→F, Em→G, 주제 회고→바다 탈출), 13(주파수→플레이리스트, Modern driving Neo-Soul Funky R&B F 114 Ab) 반영. 누적 분석 결과 원 기획 4축(Doowop/Funk/Neo-Soul/Modern) 균형 실제 구현 실패 → Funky Neo-Soul R&B 하이브리드 시리즈로 자연 재편됨. Minor 배치 4→2곡 축소(03/17), 보컬 F12:M6:Duet2, 배분 B 5→6/C 5→4곡. 2026-04-19 시리즈 리셋 결정: concept.md(~1000줄+) + input/tracks/ txt 17개 git rm, 빈 스켈레톤 재생성. 리서치 리포트 `report/2026-04-17_track06-dear-future-husband.md` + HANDOFF 2026-04-17 엔트리 2건 보존.
+Next-TODO: Suno PASS 곡 정보 누적 입력 재시작 (트랙별 제목/Style/가사 받으면 concept.md Track Details에 누적). 충분히 쌓이면 시리즈 DNA/배분/4막 구조 역추출 → Track 20까지 재설계. 시리즈 라벨 결정 (후보: "Korean Funky Neo-Soul R&B Drive").
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-04-17 23:49:49
 Project: ~/Project/wavvy
 Agent: Claude
