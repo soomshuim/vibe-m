@@ -1,6 +1,6 @@
 # 15-00 오후 3시, 라디오
 
-Playlist | 15:00 | 오후 3시, 라디오 🎵 | FUNKY R&B · URBAN NEO-SOUL | 오후 3시 · 드라이브 · 라디오
+Playlist | 15:00 | 🕶️ 바람 좋은 날의 드라이브 | FUNKY R&B · URBAN NEO-SOUL | 드라이브 · 바람 · 봄
 
 ---
 
@@ -39,27 +39,27 @@ Playlist | 15:00 | 오후 3시, 라디오 🎵 | FUNKY R&B · URBAN NEO-SOUL | �
 
 ---
 
-## YouTube Metadata v1.1 (2026-04-19 Team 회의 반영 — 드라이브 메인 전환)
+## YouTube Metadata v1.3 (2026-04-19 감성 부제 — "바람 좋은 날의 드라이브")
 
 ### Context Mode
-Afternoon Drive — 오후 3시, 창문 내리고 드라이브. Funky Neo-Soul 그루브로 일상 환기 + 커플 설렘 + 혼자 탈출 서사 혼재. 라디오는 레트로 시대감 양념으로만 유지.
+Breezy Afternoon Drive — 창문 내리고 바람 맞으며 달리는 드라이브. 평일/주말 무관 범용 타겟팅. Funky Neo-Soul 그루브 + 커플 설렘 + 혼자 탈출 서사 혼재.
 
 ### 제목
 ```
-Playlist | 15:00 | 오후 3시 드라이브 🧡 | FUNKY R&B · URBAN NEO-SOUL | 드라이브 · 오후 · 봄 | Wavvy
+Playlist | 15:00 | 🕶️ 바람 좋은 날의 드라이브 | FUNKY R&B · URBAN NEO-SOUL | 드라이브 · 바람 · 봄 | Wavvy
 ```
 
 ### 설명
 ```
-🧡 15:00, 오후 3시의 햇살
-창문을 내리고 시동을 거는 시간 - Wavvy
+🕶️ 15:00, 바람 좋은 날의 드라이브
+창문 내리고 달리는 시간 - Wavvy
 
 차에 올라 시동을 걸고,
 창문을 내리면 바람이 먼저 조수석에 앉고,
 라디오 주파수를 돌리다 익숙한 그 노래가 흘러나오고,
 신호등 앞에서 혼자 박자를 타고,
 햇살이 대시보드 위로 길게 눕는 오후,
-평일 한가운데 일상을 훌쩍 넘어가는 순간까지 —
+창문 열고 훌쩍 달리고 싶어지는 순간까지 —
 
 오후의 펑키한 그루브와 따뜻한 햇살을 위한 노래들.
 우리말 가사로, 그 시간의 온도를 기록합니다.
@@ -89,9 +89,9 @@ All tracks feature Korean lyrics.
 🎵 Music: Wavvy
 Copyright Ⓒ Wavvy. All rights reserved.
 ──────────────
-#드라이브음악 #드라이브플레이리스트 #오후드라이브 #봄드라이브
+#드라이브음악 #드라이브플레이리스트 #봄드라이브 #오후드라이브 #바람좋은날 #창문열고달리는
 #funkyrnb #urbanneosoul #neosoul #rnb #알앤비 #네오소울 #펑키
-#오후플리 #오후감성 #기분좋은음악 #평일환기
+#드라이브플리 #오후플리 #기분좋은음악
 #retrornb #라디오음악 #doowop #복고감성
 #afternoonplaylist #drivemusic #koreanrnb
 #playlist #플리 #한국어가사 #koreanlyrics
@@ -100,15 +100,15 @@ Copyright Ⓒ Wavvy. All rights reserved.
 
 > ⚠️ 타임스탬프는 **패키징 단계에서 실제 WAV 러닝타임 기반 재계산** (report.json 기반, acrossfade 0.8s 반영)
 
-### 태그 (드라이브 우선 재정렬)
+### 태그 (드라이브 + 바람 우선)
 ```
-드라이브음악, 드라이브 플레이리스트, 오후 드라이브, 봄 드라이브, funky rnb, urban neo soul, neo soul, rnb, korean rnb, 알앤비, 네오소울, 펑키, 오후플리, 오후감성, 기분좋은음악, 평일환기, retro rnb, 라디오음악, doo-wop, 복고감성, afternoon playlist, drive music, korean lyrics, playlist, 플리, 한국어가사, wavvy, 웨이비
+드라이브음악, 드라이브 플레이리스트, 봄 드라이브, 오후 드라이브, 바람 좋은 날, 창문열고달리는, funky rnb, urban neo soul, neo soul, rnb, korean rnb, 알앤비, 네오소울, 펑키, 드라이브플리, 오후플리, 기분좋은음악, retro rnb, 라디오음악, doo-wop, 복고감성, afternoon playlist, drive music, korean lyrics, playlist, 플리, 한국어가사, wavvy, 웨이비
 ```
 
 ### 고정 댓글
 ```
-오늘 오후 3시, 어디로 달리셨어요? 🧡
-창문 내리고 이 플리 틀면 평일이 주말 같아요 🎵
+창문 열고 어디로 달리셨어요? 🕶️
+바람 좋은 날엔 이 플리 틀고 달려보세요 🎵
 ```
 
 ### 썸네일 컨셉 (2026-04-19 드라이브 메인 반영)

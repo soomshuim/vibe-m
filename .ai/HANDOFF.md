@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-19 22:00:00
+Project: ~/Project/wavvy
+Agent: Claude (+ 사용자 피드백)
+Summary: 15-00 WAV 16곡 리네임 + YouTube Metadata v1.3 확정. WAV: `NN__제목__영문__장르__BPM.wav` 컨벤션(22-00 선례) 적용, 원 파일명 "NN. 제목" → 신 넘버링 01-16 기반 재명명. 12번 체리소다봄길 파일이 원 "6."으로 잘못 들어왔던 것 수정. 제목은 v1.1 `오후 3시 드라이브` → v1.2 (사용자 레퍼런스 복붙 유사 폐기) → **v1.3 `🕶️ 바람 좋은 날의 드라이브`** 확정. 주말/평일 무관 범용 타겟팅으로 방향 전환(사용자 피드백 "주말 단어 빼고 창문·바람·드라이브 키워드로"). 주제 태그 `드라이브 · 바람 · 봄`, 이모지 🕶️ (드라이브 선글라스), 해시태그 `#바람좋은날 #창문열고달리는` 추가, `#주말드라이브` 제거. 설명/고정 댓글/상단 라벨 동기화.
+Next-TODO: **(다음 세션) 썸네일 작업** — Midjourney 프롬프트 3안 + 이미지 생성 + YouTube 업로드용 + loop.png(4K). 이후 validate → preview → pack(이미지 모드) → YouTube Metadata 타임스탬프 재계산 → 업로드.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-04-19 21:23:09
 Project: ~/Project/wavvy
 Agent: Claude (+ 사용자 Suno PASS 확정본 16곡 · /team 회의)
