@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-19 21:23:09
+Project: ~/Project/wavvy
+Agent: Claude (+ 사용자 Suno PASS 확정본 16곡 · /team 회의)
+Summary: 15-00 시리즈 재설계 완료. Suno PASS 16곡 정보 입력 (함께/그레이투그린/오렌지/라디오/달려가는중/체리소다봄길/오늘드라이브/밝은공기냄새/같은재생목록/창문내려/잠깐도망가자/잔디에누워/기울어진햇살/곁에서/봄냄새/믹스테잎). **16곡 완결 결정**. Series DNA v1.0 역추출 — 라벨 `FUNKY R&B · URBAN NEO-SOUL | 오후 3시 · 드라이브 · 라디오`, BPM 120 중심, F11:M5:Duet0, Minor 2곡(5 달려가는중 Em / 11 곁에서 Am). Track Map v1.0 4막 구조 확정. 미정 Key 3곡 Db Major 임시 (⚠ Db 5곡 중복 플래그). 달려가는 중 Key 정정 (prompt E Major → 실제 E Minor). 체리소다봄길 가사 미세 변경(네온/파티/바람). 주제 규칙 완화(드라이브는 무드 기준). YouTube Metadata v1.1 작성. **/team 회의(Trade-off Discussion, Marketing+Product+Growth+QA PASS)** — 라디오 vs 드라이브 → 드라이브 메인 결정(콘텐츠 실체 8+곡 + 트래픽 볼륨 + 브랜드 직관성 3중 근거, 13-00과 Cannibalize 아닌 Bundle 효과). 제목 `오후 3시 드라이브`, 태그 `드라이브 · 오후 · 봄`, 썸네일 후보 2 "창문 내린 드라이브" 우선. 회의 기록 `meetings/2026-04-19_15-00-radio-vs-drive.md`.
+Next-TODO: WAV 정리 + 패키징(16곡 체제 타이트 러닝타임, acrossfade 0.8s 반영). 썸네일 Midjourney 프롬프트 3안 작성. 실제 패키징 후 YouTube Metadata 타임스탬프 재계산(report.json 기반). 13-00 YouTube Analytics로 드라이브 키워드 유입 검증(옵션). Db Major 5곡 중복 추후 조정.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-04-19 00:17:04
 Project: ~/Project/wavvy
 Agent: Claude (+ 사용자 Suno PASS 확정본 11곡)
