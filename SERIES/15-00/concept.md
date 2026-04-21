@@ -67,21 +67,38 @@ Playlist | 15:00 | 🕶️ 바람 좋은 날의 드라이브 | FUNKY R&B · URBA
 🧡 Track List
 ──────────────
 🧡 0:00 - 01. 오렌지 드라이브 (Orange Drive)
-🧡 TBD  - 02. 라디오를 켜고 (Turn on the Radio)
-🧡 TBD  - 03. 봄 냄새 (Smell of Spring)
-🧡 TBD  - 04. 오늘 드라이브 (Drive Today)
-🧡 TBD  - 05. 달려가는 중 (Still On My Way)
-🧡 TBD  - 06. 창문 내려 (Window Down)
-🧡 TBD  - 07. 잠깐 도망가자 (Let's Get Away)
-🧡 TBD  - 08. 그레이 투 그린 (Grey To Green)
-🧡 TBD  - 09. 같은 재생목록 (Playlist)
-🧡 TBD  - 10. 기울어진 햇살 (Slanted Sun)
-🧡 TBD  - 11. 곁에서 (Passenger)
-🧡 TBD  - 12. 체리, 소다, 봄길 (Cherry, Soda, Spring Road)
-🧡 TBD  - 13. 밝은 공기 냄새 (Bright Air)
-🧡 TBD  - 14. 함께 (With You)
-🧡 TBD  - 15. 잔디에 누워 (Lying on the Grass)
-🧡 TBD  - 16. 믹스테잎 (Mixtape)
+🧡 3:16 - 02. 라디오를 켜고 (Turn on the Radio)
+🧡 5:40 - 03. 봄 냄새 (Smell of Spring)
+🧡 7:46 - 04. 오늘 드라이브 (Drive Today)
+🧡 11:04 - 05. 달려가는 중 (Still On My Way)
+🧡 13:33 - 06. 창문 내려 (Window Down)
+🧡 16:53 - 07. 잠깐 도망가자 (Let's Get Away)
+🧡 20:01 - 08. 그레이 투 그린 (Grey To Green)
+🧡 22:49 - 09. 같은 재생목록 (Playlist)
+🧡 26:27 - 10. 기울어진 햇살 (Slanted Sun)
+🧡 29:40 - 11. 곁에서 (Passenger)
+🧡 33:31 - 12. 체리, 소다, 봄길 (Cherry, Soda, Spring Road)
+🧡 36:27 - 13. 밝은 공기 냄새 (Bright Air)
+🧡 40:26 - 14. 함께 (With You)
+🧡 44:00 - 15. 잔디에 누워 (Lying on the Grass)
+🧡 47:41 - 16. 믹스테잎 (Mixtape)
+─────
+🧡 50:36 - 01. 오렌지 드라이브 (반복)
+🧡 53:53 - 02. 라디오를 켜고
+🧡 56:17 - 03. 봄 냄새
+🧡 58:23 - 04. 오늘 드라이브
+🧡 1:01:41 - 05. 달려가는 중
+🧡 1:04:10 - 06. 창문 내려
+🧡 1:07:30 - 07. 잠깐 도망가자
+🧡 1:10:37 - 08. 그레이 투 그린
+🧡 1:13:26 - 09. 같은 재생목록
+🧡 1:17:04 - 10. 기울어진 햇살
+🧡 1:20:17 - 11. 곁에서
+🧡 1:24:08 - 12. 체리, 소다, 봄길
+🧡 1:27:04 - 13. 밝은 공기 냄새
+🧡 1:31:03 - 14. 함께
+🧡 1:34:37 - 15. 잔디에 누워
+🧡 1:38:18 - 16. 믹스테잎
 ──────────────
 Music for your space, 24 hours a day.
 All tracks feature Korean lyrics.
@@ -97,8 +114,6 @@ Copyright Ⓒ Wavvy. All rights reserved.
 #playlist #플리 #한국어가사 #koreanlyrics
 #wavvy #웨이비
 ```
-
-> ⚠️ 타임스탬프는 **패키징 단계에서 실제 WAV 러닝타임 기반 재계산** (report.json 기반, acrossfade 0.8s 반영)
 
 ### 태그 (드라이브 + 바람 우선)
 ```

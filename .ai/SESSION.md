@@ -1,8 +1,28 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-19 22:00
+> Last updated: 2026-04-20 00:18
 
 ## 진행 중
+
+- **15-00 PACK + YouTube 업로드 완료** (2026-04-20 00:18)
+  - ✅ **썸네일 v1.0 확정** — `🕶️ AFTERNOON DRIVE` (Wavvy 로고 좌상단 + 15:00 / 메인 텍스트 하단 / 채널 카피 1줄). 후보 비교: DRIVE(평범) / WEEKEND DRIVE(v1.3 결정과 충돌) / GOING OUT(밤 뉘앙스+드라이브 SEO 누락) / NOON DRIVE(noon=12시 의미 충돌) → **AFTERNOON DRIVE** (시간대 명시 + 13-00 차별 + SEO)
+  - ✅ **loop.png 4K 제작** — 5504x3072 해안 도로 + 빨간 컨버터블, 채도 조정 후 v2 적용
+  - ✅ **wavvy.py crop 버그 수정** — 이미지가 16:9보다 넓을 때 (target_h > img_h) width crop 분기 추가. 기존 코드는 height만 crop → 5504x3072 (1.79:1) 케이스에서 5504x3096 (height 늘리기) 시도 → FFmpeg `Invalid too big size` 에러. 13-00 (4096x2336, 1.75:1)은 height crop으로 작동했으나 미처리 분기 발견
+  - ✅ **PACK COMPLETE** — `output/final.mkv` 1.27GB, 101.2분, 5460x3072 (16:9 width crop), 16곡 x2, FLAC/48kHz, 로고 overlay (192,136), CRF 18 medium preset
+  - ✅ **YouTube Metadata 타임스탬프 재계산** — concept.md TBD 16곡 채움 + 2회차 추가 (acrossfade 0.8s 반영, report.json 기반). 마지막 트랙 1:38:18 + 175.72s = 1:41:14 (final_duration 정확 일치)
+  - ✅ **YouTube 업로드 완료**
+  - **현황: 시리즈 완료**
+
+- **다른 시리즈 썸네일 텍스트 영문화 검토** (2026-04-20)
+  - 06-00 MORNING JOG (기존 WORKOUT → BPM 100-130 가벼운 조깅에 더 정확)
+  - 11-00 LO-FI 또는 LO-FI FOCUS (LoFi Girl 그림자 우려, 컨셉 시각화 위해 변형 권장)
+  - 14-00 SUNLIT DAZE (햇살에 멍해지는 시간 직역)
+  - 18-00 WAY HOME 또는 GOLDEN HOUR (NEO-SOUL 장르명 → 활동/시간 전환)
+  - 21-00 CITY POP (장르명 그대로, 트렌드성 강함)
+  - 04-00 SLEEPLESS (불면 상태 직격)
+  - 12-00 AFROBEATS (장르명, 글로벌 트렌드)
+  - **결정 framework**: 장르 specificity + brand power + search traffic 3박자 통과 시 GENRE, 아니면 ACTIVITY/STATE
+  - **현황: 텍스트 안 결정, 사용자가 PSD 직접 작업 (커밋된 thumb.jpg/psd 다수)**
 
 - **15-00 오후 3시, 라디오 — 시리즈 리셋** (2026-04-19)
   - 리셋 계기: 확정 13곡 분석 시 Funky 4곡 + Neo-Soul 계열 9곡으로 수렴, 원 기획 4축(Doowop/Funk-R&B/Neo-Soul/Modern R&B) 균형 실제 구현 실패. **Funky Neo-Soul R&B 하이브리드 시리즈**로 자연 재편된 상태. "Retro" 라벨 잔존 + ★ 예외 카테고리 정체성 약화 등 누적 불일치
@@ -311,10 +331,15 @@
 - [ ] 15-00 미정 Key 3곡 확정 (2 라디오를 켜고 / 8 그레이 투 그린 / 14 함께)
 - [x] ~~15-00 YouTube Metadata 작성~~ — v1.3 확정 `🕶️ 바람 좋은 날의 드라이브` (2026-04-19)
 - [x] ~~15-00 WAV 파일 리네임~~ — 16곡 `NN__제목__영문__장르__BPM.wav` 컨벤션 (2026-04-19)
-- [ ] **(다음 세션) 15-00 썸네일 작업** — Midjourney 프롬프트 3안 + 이미지 생성 + YouTube 업로드용 + loop.png (4K)
-- [ ] 15-00 validate / preview → pack (이미지 모드 or 루프 영상)
-- [ ] 15-00 YouTube Metadata 타임스탬프 재계산 (report.json 기반, acrossfade 0.8s)
-- [ ] 15-00 YouTube 업로드
+- [x] ~~15-00 썸네일 작업~~ — `🕶️ AFTERNOON DRIVE` v1.0 확정, loop.png 4K 제작 (2026-04-20)
+- [x] ~~15-00 pack~~ — final.mkv 1.27GB / 101.2분 / 5460x3072 / 16곡 x2 (2026-04-20)
+- [x] ~~15-00 YouTube Metadata 타임스탬프 재계산~~ — concept.md TBD 16곡 채움 + 2회차 추가 (2026-04-20)
+- [x] ~~15-00 YouTube 업로드~~ — 완료 (2026-04-20)
+- [x] ~~wavvy.py crop 버그 수정~~ — 이미지 16:9보다 넓은 케이스 width crop 분기 추가 (2026-04-20)
+
+- [ ] 다른 시리즈 썸네일 텍스트 영문화 적용 (검토 완료, PSD 작업 진행 중)
+  - 04-00: SLEEPLESS / 06-00: MORNING JOG / 11-00: LO-FI(또는 LO-FI FOCUS) / 12-00: AFROBEATS
+  - 14-00: SUNLIT DAZE / 18-00: WAY HOME(또는 GOLDEN HOUR) / 21-00: CITY POP
 
 ## 핸드오프 메모
 

@@ -807,13 +807,18 @@ def render_video_from_image(
     )
     img_w, img_h = [int(x) for x in probe.stdout.strip().split(',')[:2]]
     target_h = int(img_w * 9 / 16)
-    # Ensure even dimensions
     target_h = target_h - (target_h % 2)
 
-    # Build filter graph
-    if target_h != img_h:
+    if target_h < img_h:
+        # Image taller than 16:9 → crop height (keep width)
         crop_filter = f"crop={img_w}:{target_h}:(iw-{img_w})/2:(ih-{target_h})/2"
         log_info(f"  Crop: {img_w}x{img_h} → {img_w}x{target_h} (16:9)")
+    elif target_h > img_h:
+        # Image wider than 16:9 → crop width (keep height)
+        target_w = int(img_h * 16 / 9)
+        target_w = target_w - (target_w % 2)
+        crop_filter = f"crop={target_w}:{img_h}:(iw-{target_w})/2:(ih-{img_h})/2"
+        log_info(f"  Crop: {img_w}x{img_h} → {target_w}x{img_h} (16:9)")
     else:
         crop_filter = None
 

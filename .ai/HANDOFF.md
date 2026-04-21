@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-20 00:18:00
+Project: ~/Project/wavvy
+Agent: Claude (+ 사용자 loop.png/thumb 작업 + YouTube 업로드)
+Summary: 15-00 PACK + YouTube 업로드 완료. 썸네일 v1.0 `🕶️ AFTERNOON DRIVE` 확정(후보 비교: DRIVE 평범 / WEEKEND DRIVE v1.3 충돌 / GOING OUT 밤 뉘앙스 / NOON DRIVE noon=12시 의미 충돌 → AFTERNOON DRIVE = 시간대 명시 + 13-00 차별 + SEO). loop.png 4K 5504x3072 해안 도로 + 빨간 컨버터블(채도 조정 v2). **wavvy.py crop 버그 수정** — 이미지 16:9보다 넓은 케이스(target_h > img_h) width crop 분기 추가. 기존 코드는 height만 crop → 5504x3072(1.79:1) 케이스에서 height 늘리기(5504x3096) 시도 → FFmpeg `Invalid too big size` 에러. 13-00(1.75:1)은 height crop으로 작동했으나 미처리 분기 발견. **PACK COMPLETE** final.mkv 1.27GB / 101.2분 / 5460x3072 / 16곡 x2 / FLAC 48kHz / 로고 overlay (192,136). YouTube Metadata 타임스탬프 재계산(concept.md TBD 16곡 + 2회차 추가, acrossfade 0.8s). 마지막 트랙 1:38:18 + 175.72s = 1:41:14 정확 일치. 다른 시리즈 영문 텍스트 후보 결정(04 SLEEPLESS / 06 MORNING JOG / 11 LO-FI / 12 AFROBEATS / 14 SUNLIT DAZE / 18 WAY HOME 또는 GOLDEN HOUR / 21 CITY POP), 결정 framework 정리. 사용자가 PSD 직접 작업.
+Next-TODO: 다른 시리즈 PSD 마무리 → 영상 제작 → YouTube 업로드. 11-00 LO-FI vs LO-FI FOCUS 최종 결정. 18-00 WAY HOME vs GOLDEN HOUR 최종 결정.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-04-19 22:00:00
 Project: ~/Project/wavvy
 Agent: Claude (+ 사용자 피드백)
