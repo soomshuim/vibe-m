@@ -1,5 +1,15 @@
 ---
 HANDOFF: Claude -> User
+Date: 2026-04-25
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 20-00 빡센 힙합 시리즈 기획 Phase 1(리서치) + Phase 2(/team) 완료. **Wavvy 첫 힙합 시리즈**. 4축 모델 확정(Rage·KC 레이블 / K-Drill·Fleeky Bang / 모던 하드코어 붐뱁·B-Free×Hukky Odyssey.1 / 하드코어 트랩 젊은 씬·Ash Island·ZENE·Loopy·EK·KWAII). 2차 딥리서치(10 parallel agents, 신뢰도 88%, 소스 180+, ~1,500줄 리포트) — 4축 × 악기·프로덕션·보컬·믹싱 전수 + 2026 글로벌 트렌드 + Korean 현지화 + Suno V5.5 최적화 프롬프트 20개 템플릿. /team Trade-off Discussion(Marketing·Product·Growth·Design + QA Reviewer) 5 안건 만장 합의: **시리즈명 `🌃 AFTER HOURS` / 부제 `밤 여덟시 하드 힙합`**, 하이브리드 포지셔닝(After Hours 프레임 × Dark City 미학), 20곡 배분 **4:5:7:4** (Rage/K-Drill/모던 하드코어 붐뱁/하드코어 트랩), 썸네일 블루아워 도시 실루엣+네온 악센트+Wavvy 로고 좌상단, Suno V5.5 1,000자 Style 필드(LYRICS 200자 QA 분리). 힙합 장르 가사 룰 예외 메모리 저장(`feedback-wavvy-genre-lyrics-rules.md`). 리서치 오류 6건 교정: AMADU=2019(NOISEMASTERMINSU 프로듀싱, Dingo X DAMOIM Part 2) / Deepflow `Legacy` 2024 미존재(2024 핵심 = Garion 3 Executive Producer) / Loopy The Cohort·AOMG 미소속(실제: MKIT RAIN 2016-22→AI0213→UNWANTED WRLD, MARNI 2024.04 = Rage 컨셉) / ZENE THE ZILLA(이상용 1991 춘천) ≠ 조광일 / KC=레이블(Sik-K·HAON·Vangdale·NOWIMYOUNG·JMIN) / 한국 Jersey Drill 전담 아티스트 미정립. 산출물: `SERIES/20-00/report/2026-04-24_hard-hiphop-4axis-musical-deep.md` + `meetings/2026-04-25_20-00-hard-hiphop-positioning.md`.
+Next-TODO: (1) concept.md v0.1 스캘폴딩 — DNA · 4축 Style 템플릿 · Track Map 20곡 · YouTube 메타 초안. (2) 썸네일 Midjourney 프롬프트 3안 — 블루아워 도시 + 네온 악센트 (After Hours 테마). (3) Suno 4축×1곡 1차 테스트 — 품질 확인 → 20곡 확장 가부 결정.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> User
 Date: 2026-04-20 00:18:00
 Project: ~/Project/wavvy
 Agent: Claude (+ 사용자 loop.png/thumb 작업 + YouTube 업로드)

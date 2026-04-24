@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Changed
+- **20-00 `🌃 AFTER HOURS` 시리즈 기획 착수 — 4축 딥리서치 + /team 결정** — Wavvy 첫 힙합 시리즈. 1차 서브장르 리서치(3축→4축 확장) + 2차 4축 음악적 특성 딥리서치(신뢰도 88%, 소스 180+, 10 parallel researcher agents). /team Trade-off Discussion(Marketing/Product/Growth/Design + QA) 5 안건 만장 합의: **`🌃 AFTER HOURS`** 하이브리드 포지셔닝(After Hours 프레임 + Dark City 미학), 20곡 배분 **4:5:7:4** (Rage/K-Drill/모던 하드코어 붐뱁/하드코어 트랩 젊은 씬), 썸네일 블루아워 도시 실루엣+네온 악센트, Suno V5.5 1,000자 Style 필드 활용. 리서치 오류 6건 교정(AMADU=2019 / Deepflow `Legacy` 미존재 / Loopy The Cohort·AOMG 미소속 / ZENE≠조광일 / KC=레이블(솔로X) / Jersey Drill 한국 미정립). 산출물: `SERIES/20-00/report/2026-04-24_hard-hiphop-4axis-musical-deep.md` + `meetings/2026-04-25_20-00-hard-hiphop-positioning.md`
 - **Track 03 작사 프롬프트 + LYRICS.md 소괄호 금지** — Track 03 "볕 (Sunlit)" 작사 프롬프트 작성 (198자, 풀 구조+DNA 반영). LYRICS.md §1.2 소괄호 사용 금지 규칙 반영
 - **리팩토링 후 잔존물 정리** — lessons-learned.md dead 가사 섹션 삭제(66줄) + 용어 업데이트(가사 작성→Suno 입력), SESSION.md stale 핸드오프 메모 3건 제거
 - **워크플로우 리팩토링 — Suno 자체 작사 전환** — LYRICS.md v4.0 (§1 Lyric Prompt Guide), WORKFLOWS.md v2.0 (3단계), RUBRIC 가사→보컬 체크리스트 전환, LYRICS_DNA.md 역할 재정의, REFERENCE_SAMPLE/FAILURE_CASES 삭제. Track 01-04 제목 변경 + 가사 제거.

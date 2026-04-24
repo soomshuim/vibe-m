@@ -1,8 +1,28 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-20 00:18
+> Last updated: 2026-04-25
 
 ## 진행 중
+
+- **20-00 `🌃 AFTER HOURS` 시리즈 기획 착수** (2026-04-25) — Wavvy 첫 힙합 시리즈
+  - ✅ **4축 모델 확정** — 1 Rage/Aggressive Trap (KC 레이블 Sik-K·HAON·Vangdale + FDT 크루) / 2 K-Drill NY·UK (Fleeky Bang·Blase·Silkybois·deadbois·NO:EL) / 3 모던 하드코어 붐뱁 (B-Free×Hukky·Owen·Huckleberry P·Paloalto·Kid Milli·QM) / 4 하드코어 트랩 젊은 씬 (ZENE THE ZILLA·Ash Island·Loopy·EK·KWAII)
+  - ✅ **핵심 룰** — 힙합 장르는 기존 Wavvy 가사 룰(설명/메타/직접 표출 금지) 예외 적용. "시간 감성 표현"만이 코어 (사용자 2026-04-24 지정). 메모리 저장: `feedback-wavvy-genre-lyrics-rules.md`
+  - ✅ **2차 딥리서치 완료** — 10 parallel researcher agents, 신뢰도 88%, 소스 180+. Output: `SERIES/20-00/report/2026-04-24_hard-hiphop-4axis-musical-deep.md` (리포트 ~1,500줄, 4축 × 악기·프로덕션·보컬·믹싱 전수 + 2026 글로벌 트렌드 + Korean 현지화 + Suno V5.5 최적화)
+  - ✅ **/team Trade-off Discussion** — Marketing Director + Product Leader + Growth Expert + Design Director + QA Reviewer(Round 2). 5 안건 만장 합의
+    - 시리즈명: **`🌃 AFTER HOURS`** / 부제 `밤 여덟시 하드 힙합`
+    - 포지셔닝: 하이브리드 (After Hours 감정 프레임 × Dark City 시각 미학)
+    - 20곡 배분: **4:5:7:4** (Rage 4 / K-Drill 5 / 모던 하드코어 붐뱁 7 / 하드코어 트랩 4)
+    - 썸네일: 블루아워 도시 실루엣 + 네온 악센트 + Wavvy 로고 좌상단 (Option B + 네온)
+    - Suno: V5.5 1,000자 Style 필드 활용, LYRICS 200자 QA 규칙 유지
+    - 회의 기록: `meetings/2026-04-25_20-00-hard-hiphop-positioning.md`
+  - ✅ **리서치 오류 6건 교정**
+    - AMADU (I'MMA DO) = **2019-12-03** (2024 X). NOISEMASTERMINSU 프로듀싱, Dingo X DAMOIM Part 2
+    - Deepflow `Legacy` 2024 = **미존재**. 2024 핵심 = Garion 3 Executive Producer
+    - Loopy The Cohort 소속 = **X**. AOMG 정식 사인 = **X**. 실제 경로: MKIT RAIN(2016-22) → AI0213(2022) → UNWANTED WRLD(2023-). `MARNI`(2024.04) = Rage 컨셉 앨범
+    - ZENE THE ZILLA(이상용, 1991 춘천) ≠ 조광일 (SMTM 10 우승자 별개)
+    - KC는 레이블/콜렉티브 (Sik-K 설립 2023~, 멤버 Sik-K·HAON·Vangdale·NOWIMYOUNG·JMIN). 솔로 X
+    - 한국 Jersey Drill 전담 아티스트 **미정립**. Fleeky Bang은 NY/UK drill
+  - **현황: concept.md v0.1 스캘폴딩 대기**
 
 - **15-00 PACK + YouTube 업로드 완료** (2026-04-20 00:18)
   - ✅ **썸네일 v1.0 확정** — `🕶️ AFTERNOON DRIVE` (Wavvy 로고 좌상단 + 15:00 / 메인 텍스트 하단 / 채널 카피 1줄). 후보 비교: DRIVE(평범) / WEEKEND DRIVE(v1.3 결정과 충돌) / GOING OUT(밤 뉘앙스+드라이브 SEO 누락) / NOON DRIVE(noon=12시 의미 충돌) → **AFTERNOON DRIVE** (시간대 명시 + 13-00 차별 + SEO)
