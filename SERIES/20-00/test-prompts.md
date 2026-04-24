@@ -18,14 +18,14 @@
 **가사 파일**: `input/tracks/불붙은 paycheck (Paycheck on Fire).txt`
 **구조**: Intro → V1 → Refrain① → V2 → V3 → Refrain② → V4 → V5 → Refrain③ → V6 → Outro (Refrain 3번, V6 뒤 Outro 직행 — final drop 유도 차단)
 
-### Style Prompt
+### Style Prompt (v3 — Paycheck 확정 버전)
 ```
-Korean rage trap, 150 BPM, distorted 808 bass with pitch slides hard clipped, bright bell lead synth, supersaw 7-voice detuned sustained stab, pitched-up vocal chop sample top layer, rolling 1/16 hi-hats with 32nd triplet burst, pitched-up screamed male rap vocal, high density ad-lib layer, mosh pit energy aggressive, raw lo-fi saturation master loud, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
+Korean rage trap, 150 BPM, same 2-bar trap drum loop throughout no beat switch no final lift, distorted sliding 808 bass hard clipped low end, rolling 1/16 hi-hats steady, supersaw 7-voice detuned sustained stab, simple dark bell melody, screamed raw shouted male Korean rap, chest voice, dry close vocal, sharp articulation, dense ad-libs between rap lines, raw uncut rage energy, gritty lo-fi saturation, hard rap only
 ```
 
-### EXCLUDE
+### EXCLUDE (v2 — rage 특화 13종)
 ```
-k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX
+EDM drop, vocal chop, vocal stutter, pitch-shifted vocals, beat switch, drum fill, double-time drums, halftime switch, breakbeat, glitch drums, riser, sung hook, 32nd triplet burst
 ```
 
 ### LYRICS (Suno Custom Mode 풀 가사 입력 — Verse 6 확장)
@@ -142,29 +142,34 @@ paycheck 불붙어, 계속 burn
 
 ---
 
-## 🔪 테스트 곡 2 — Style B (K-Drill) `Rewrite`
+## 🔪 테스트 곡 2 — Style B (K-Drill) `Rewrite` — **통과 (2026-04-25 4차)**
 
-**제목**: `Rewrite` (한글: `씬에 침 뱉어`) — Suno 샘플 PASS 가사 재활용
-**컨셉**: 씬 디스 · 가짜 vs 진짜 · 판 뒤집기 · 한국 슬랭 직격
+**제목**: `Rewrite` (한글: `씬에 침 뱉어`) — 사용자 4차 재설계 최종 확정
+**컨셉**: 씬 디스 · 가짜 vs 진짜 · 판 접기 · 한국 슬랭 직격
 **가사 파일**: `input/tracks/씬에 침 뱉어 (Spit on the Scene).txt`
+**구조**: Intro → V1 (16 bar) → Refrain① (4 bar) → V2 (16 bar) → Refrain② (4 bar) → V3 (16 bar) → Refrain③ (4 bar) → V4 (16 bar) → Outro (4 Verse × 16 bar = 64 bar + Refrain 4회 × 4 bar = 16 bar, Pre-Hook 제거, Final Hook 제거 — final drop 유도 차단)
 
 ### Style Prompt
 ```
 NY drill, Brooklyn drill hybrid, 140 BPM, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop D minor, menacing atmosphere, aggressive guttural male rap deadpan flow, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, crisp articulation
 ```
 
-### EXCLUDE
+### EXCLUDE (v2 — K-Drill 특화 13종)
 ```
-k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX
+k-pop, melodic singing, sung hook, four-on-the-floor, drum fill, beat switch, double-time drums, halftime switch, arpeggiated synth, electronic riser, amapiano, jersey club, trap 808 sustain
 ```
 
 ### LYRICS (Suno Custom Mode 풀 가사 입력)
 ```
+[Intro]
+(Instrumental, same 2-bar drum loop)
+
 [Verse 1]
+(Shouted male Korean rap, dry voice, same drum loop)
 씬에 발 담근 척, 니 꼴 좀 봐
 겉만 번지르르, 속은 다 가짜
 난 말 안 섞어, 네 냄새는 trash
-입만 터는 kid, 손은 늘 mash
+입만 터는 kid, 손은 늘 crash
 
 니 crew는 구멍, 다 새는 비밀
 난 빡세게 달려, 눈빛은 lethal
@@ -172,23 +177,24 @@ k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung h
 난 여기서 살아, 매 장면 찢어
 
 건들면 바로 back, 넌 겁나지
-허세로만 버텨, 결국에 꺾이지
+허세로만 버텨, 결국엔 꺾이지
 내 혀는 razor, 네 이름은 stain
-판 뒤집는 순간, 기억해 my name
+판 뒤집는 순간, 전부 다 freeze
 
-[Pre-Hook]
-들어와 봐, feel the tension
-네 입 닫아, no permission
-한 번 더 봐, 이 scene is mine
-니 얕은 폼은 다 out of line
+말보다 먼저 난 발로 증명
+니 폼은 얇아, 다 보여 투명
+한 번 더 밟아, 이 판은 내 lane
+끝까지 밀어, I don't play
 
-[Hook]
-씬에 침 뱉어, 씬에 침 뱉어
-너흰 다 fake, 씬에 침 뱉어
-씬에 침 뱉어, 씬에 침 뱉어
-난 안 비켜, 씬에 침 뱉어
+[Refrain]
+(Shouted rap refrain, dry voice, same drum loop)
+씬에 침 뱉어, 너흰 다 fake
+난 안 비켜, I own this place
+씬에 침 뱉어, no mistake
+네 판을 찢어, I leave no trace
 
 [Verse 2]
+(Shouted male Korean rap, dry voice, same drum loop)
 너의 자랑거리? 다 남의 말
 복붙한 swag, 완전 밑천 탈탈
 난 골목 끝까지, 발자국 박아
@@ -204,23 +210,71 @@ X on my chest, 난 표식처럼
 I do it raw, you do it for likes
 난 진짜로 와, 넌 그냥 likes
 
-[Pre-Hook]
-들어와 봐, feel the tension
-네 입 닫아, no permission
-한 번 더 봐, 이 scene is mine
-니 얕은 폼은 다 out of line
+네 spotlight 꺼져, 남는 건 dust
+가짜들 사이로 번지는 rust
+끝까지 버텨, I never fold
+이 판을 씹어, 내 방식대로
 
-[Hook]
-씬에 침 뱉어, 씬에 침 뱉어
-너흰 다 fake, 씬에 침 뱉어
-씬에 침 뱉어, 씬에 침 뱉어
-난 안 비켜, 씬에 침 뱉어
+[Refrain]
+(Shouted rap refrain, dry voice, same drum loop)
+씬에 침 뱉어, 너흰 다 fake
+난 안 비켜, I own this place
+씬에 침 뱉어, no mistake
+네 판을 찢어, I leave no trace
 
-[Final Hook]
-씬에 침 뱉어, 씬에 침 뱉어
-너흰 다 fake, 씬에 침 뱉어
-씬에 침 뱉어, 씬에 침 뱉어
-난 안 비켜, 씬에 침 뱉어
+[Verse 3]
+(Shouted male Korean rap, dry voice, same drum loop)
+니가 만든 이미지, 다 얇은 가면
+벗겨진 다음엔 남는 건 화면
+말끝마다 flex, 근데 속은 비어
+내 한 줄이면 네 자리도 휘어
+
+난 바닥을 긁어도 올라온 놈
+넌 포장만 바꿔도 똑같은 폼
+피 묻은 발자국, 아직도 뛰어
+니 이름 지워, 이 판에서 비켜
+
+입 닫아, 이제 네 차례는 끝
+눈 굴려봤자 다 보여 네 틈
+내 flow는 locked, 네 박자는 slip
+한 번 더 밟아, 더 깊숙이 grip
+
+이 판의 룰 따윈 씹고서 지나
+가짜들 위로 난 불씨를 심어
+끝까지 밀어, 난 절대 안 무너져
+네 씬을 태워, 뒤도 안 돌아봐
+
+[Refrain]
+(Shouted rap refrain, dry voice, same drum loop)
+씬에 침 뱉어, 너흰 다 fake
+난 안 비켜, I own this place
+씬에 침 뱉어, no mistake
+네 판을 찢어, I leave no trace
+
+[Verse 4]
+(Shouted male Korean rap, dry voice, same drum loop)
+네 목소린 noise, 난 볼륨을 꺼
+가면을 찢어, 다 드러난 허점
+허세는 무너져, 숨만 더 가빠
+끝까지 버텨도 넌 이미 바닥
+
+난 불 붙은 line, 넌 젖은 성냥
+한 번에 꺼져, 남는 건 잔향
+네 crew는 흩어져, 말만 더 길어
+난 흔적도 없이 네 자릴 밀어
+
+비겁한 변명은 입가에 붙어
+네 이름 밑줄엔 운빨만 묻어
+난 운보다 날카로운 감
+이 판의 바닥에 새겨진 흠
+
+마지막 장면도 내가 다 가져
+넌 끝까지 cheap, 난 절대 안 져
+씬에 침 뱉고 난 자리를 갈라
+네 판을 접어, 흔적도 안 남겨
+
+[Outro]
+(Instrumental fade, same 2-bar drum loop)
 ```
 
 ### 체크포인트
@@ -231,6 +285,9 @@ I do it raw, you do it for likes
 - [ ] Menace 톤 + deadpan delivery
 - [ ] 한국어 된소리 악센트 (꼴 / 꺾이지 / 뒤집는)
 - [ ] 훅 `씬에 침 뱉어` 반복성
+- [ ] **Refrain 4회 모두 동일 에너지 유지** (마지막 Refrain 이후 Outro 직행, Final Hook/drop 없음)
+- [ ] V1(지적) / V2(진정성) / V3(가면 디스) / V4(반격·판 접기) 서사 구분 가능
+- [ ] **전체 길이 2:30 이상** (Verse 4 × 16행 + Refrain 4회 = 충분한 러닝타임)
 
 ---
 
@@ -240,20 +297,24 @@ I do it raw, you do it for likes
 **컨셉**: 바닥에서 올라오는 서사 · 밤 그라인드 · 펜에서 마이크까지 · 한국 거리에서 무대까지
 **가사 방향**: Suno 작사 프롬프트 테스트 (자체 생성)
 
-### Style Prompt
+### Style Prompt (v2 — concept.md §Style C 동기화)
 ```
-modern hardcore boom bap, 한국 힙합, 90 BPM, chopped 70s-80s soul or ballad sample loop with vinyl crackle, dusty drum break MPC swing 58%, warm upright bass, acoustic kick snappy snare rim shot DJ scratches, confident lyrical male rap chest voice multi-syllable rhymes, analog saturation head-nodding groove, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, articulation
+modern hardcore boom bap, 한국 힙합, 90 BPM, chopped 70s-80s soul or ballad sample loop with vinyl crackle, dusty drum break MPC swing 58%, warm upright bass, acoustic kick snappy snare rim shot DJ scratches, confident lyrical male rap, chest voice dry close vocal, multi-syllable rhymes, analog saturation head-nodding groove, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
 ```
 
-### EXCLUDE
+### EXCLUDE (v2 — 모던 하드코어 붐뱁 특화 13종)
 ```
-trap, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX
+trap, melodic singing, sung hook, four-on-the-floor, drum fill, beat switch, double-time drums, halftime switch, arpeggiated synth, electronic riser, synth FX, EDM FX, auto-tune
 ```
+
+### 구조
+Intro → V1 (16 bar) → Hook (4-8 bar) → V2 (16 bar) → Hook → V3 (16 bar) → Outro
+(3 Verse × 16 bar = 48 bar + Hook 2-3회, Bridge 생략)
 
 ### LYRICS 프롬프트 (작사 지시 포맷)
 ```
-I-V1-H-V2-H-V3-O
-modern Korean boom bap rap lyrics. Korean heavy 95 percent. dense multi-syllable internal rhymes. about come up from the bottom, night grind pen to mic, Korean street to stage, hustle scars and self-made story, chest voice confident lyrical flow, hook Come Up two bars repeat, no bridge.
+I-V1(16)-H(4-8)-V2(16)-H-V3(16)-O
+modern Korean boom bap rap lyrics. Korean heavy 95 percent. dense multi-syllable internal rhymes. Verse 16 bars each (4 lines × 4 blocks). about come up from the bottom, night grind pen to mic, Korean street to stage, hustle scars and self-made story, chest voice confident lyrical flow, hook Come Up two bars repeat, no bridge.
 ```
 
 ### 체크포인트
@@ -274,20 +335,24 @@ modern Korean boom bap rap lyrics. Korean heavy 95 percent. dense multi-syllable
 **컨셉**: 편집증 · 불신 · 밤의 그림자 · 거리 코드 · 아무도 믿지 않는다
 **가사 방향**: Suno 작사 프롬프트 테스트 (자체 생성)
 
-### Style Prompt
+### Style Prompt (v2 — concept.md §Style D 동기화, 비트 고정 앞쪽 + chest voice)
 ```
-Korean dark hardcore trap, 142 BPM, heavy 808 bass sustain decay sidechained to kick slight distortion, punchy kick fast hi-hat triplet rolls minimal clap on 3, dark atmospheric synth pad muted electric guitar chord minor key, dark pitched vocal sample loop minor key, melancholic trap rap husky male rap vocal high-speed flow, dark tonal balance compressed master, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
+Korean dark hardcore trap, 142 BPM, locked drum pattern throughout no fills no switch-up no beat switch no final lift, heavy 808 bass sustain decay sidechained to kick slight distortion, punchy kick fast hi-hat triplet rolls minimal clap on 3, dark atmospheric synth pad muted electric guitar chord minor key, dark pitched vocal sample loop minor key, melancholic trap rap husky male rap vocal, chest voice high-speed flow, dark tonal balance compressed master, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
 ```
 
-### EXCLUDE
+### EXCLUDE (v2 — 하드코어 트랩 특화 13종, Rage drift 차단)
 ```
-melodic singing, k-pop, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX
+melodic singing, k-pop, sung hook, four-on-the-floor, drum fill, beat switch, double-time drums, halftime switch, EDM drop, pitch-shifted vocals, glitch drums, arpeggiated synth, electronic riser
 ```
+
+### 구조
+Intro → V1 (16 bar) → Pre-Hook (4 bar) → Hook (8 bar) → V2 (16 bar) → Pre-Hook → Hook → Outro
+(2 Verse × 16 bar = 32 bar + Pre-Hook 2회 × 4 bar + Hook 2회 × 8 bar, Bridge 금지)
 
 ### LYRICS 프롬프트 (작사 지시 포맷)
 ```
-I-V1-PH-H-V2-PH-H-O
-Korean dark hardcore trap rap lyrics. perfect rhyme mix Korean with English. about paranoia at night shadows behind me trust no one street code never lost watching my back, husky melancholic delivery high-speed flow, English chant hook PARANOIA four lines, no bridge, minimal Skrrt ad-lib.
+I-V1(16)-PH(4)-H(8)-V2(16)-PH-H-O
+Korean dark hardcore trap rap lyrics. perfect rhyme mix Korean with English. Verse 16 bars each (4 lines × 4 blocks). about paranoia at night shadows behind me trust no one street code never lost watching my back, husky melancholic delivery high-speed flow, English chant hook PARANOIA four lines, no bridge, minimal Skrrt ad-lib.
 ```
 
 ### 체크포인트

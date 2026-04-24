@@ -75,22 +75,41 @@ Playlist | 20:00 | 🌃 AFTER HOURS | HARD HIP-HOP · DARK CITY · NIGHT GRIND |
 
 **대상**: KC 레이블(Sik-K·HAON·Vangdale) + FDT 크루(Ourealgoat·LIL GIMCHI·호미들) 계열
 
-**BPM**: 140-160 (허브 148-152)
+**BPM**: 140-160 (허브 148-152, Paycheck 150)
 **Key**: Minor 우세, Anthem은 Major
-**보컬**: Male, pitch-up/screamed auto-tune, 영어 의성어 애드립 허용
+**보컬**: Male, screamed raw shouted / chest voice dry close, 영어 의성어 애드립 허용 (autotune 의존 금지)
 
-**Suno Style Prompt**
+**Suno Style Prompt (v3 — Paycheck 확정 버전)**
 ```
-Korean rage trap, 148 BPM, distorted 808 bass with pitch slides hard clipped, bell lead synth, supersaw 7-voice detuned, pitched-up vocal chop sample top layer, rolling hi-hats with 32nd triplet roll, screamed autotune male rap vocal, pitched-up ad-libs high density, mosh pit energy aggressive, raw lo-fi saturation, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
+Korean rage trap, 150 BPM, same 2-bar trap drum loop throughout no beat switch no final lift, distorted sliding 808 bass hard clipped low end, rolling 1/16 hi-hats steady, supersaw 7-voice detuned sustained stab, simple dark bell melody, screamed raw shouted male Korean rap, chest voice, dry close vocal, sharp articulation, dense ad-libs between rap lines, raw uncut rage energy, gritty lo-fi saturation, hard rap only
 ```
 
-**EXCLUDE**: `k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
+> **v3 설계 포인트** (2026-04-25 외부 분석 + Paycheck 최종본):
+> - 비트 고정 지시(`same 2-bar trap drum loop throughout no beat switch no final lift`)를 **맨 앞**에 배치 (Suno 우선순위)
+> - `vocal chop` 키워드 **삭제** (후반 EDM drop 유도 원인)
+> - `supersaw` 유지 — 완전 제거 시 rage 정체성 상실 (내부 키워드 `sustained stab`으로 조정)
+> - `screamed autotune` → `screamed raw shouted + chest voice + dry close` (autotune 의존 제거, Wavvy Chest voice DNA 유지)
+> - `mosh pit energy aggressive` → `raw uncut rage energy` (rage 용어는 유지하되 mosh pit 제거)
+> - `32nd triplet roll`/`pitched-up ad-libs layer` 삭제 (후반 폭주·layer 개념이 drop 유도)
 
-**가사 구조 권장**
-- Intro → Hook (16 bar) → Verse 1 (16 bar) → Hook → Verse 2 → Hook → Outro (cut)
-- 영어 슬로건 훅 + 한국어 버스
-- 애드립 영어 위주 (`Yuh!` `What!` `Huh!` `Slatt!`)
-- 가사 밀도 낮음, 반복 훅 중심
+**EXCLUDE (v2 — rage 특화 13종)**: `EDM drop, vocal chop, vocal stutter, pitch-shifted vocals, beat switch, drum fill, double-time drums, halftime switch, breakbeat, glitch drums, riser, sung hook, 32nd triplet burst`
+
+> **v2 설계 포인트**:
+> - v1 공통 10종에서 제거: `k-pop, melodic singing, four-on-the-floor, arpeggiated synth, synth FX, EDM FX` (A축 맥락에서 불필요하거나 Style Prompt positive와 중복)
+> - rage 특화 11종 추가: EDM drop 전환 · vocal chop/stutter/pitch-shift · beat switch · double-time drums · halftime switch · breakbeat · glitch drums · riser · 32nd triplet burst
+> - 유지: `drum fill, sung hook`
+
+**가사 구조 권장 (Paycheck 확정 버전)**
+- **구조**: Intro → V1 → Refrain① → V2 → V3 → Refrain② → V4 → V5 → Refrain③ → V6 → Outro
+- **메타태그**: `[Intro]` `[Verse 1-6]` `[Refrain]` `[Outro]` — **`[Hook]`/`[Final Hook]`/`[Drop]` 금지** (Hook 8행×2회 + Final Hook 구조 자체가 Suno drop/lift 유도)
+- **Refrain 4행 축약** — Hook 8행 대신 4행으로 짧게, Final Refrain 삭제 (V6 뒤 Outro 직행 → final drop 차단)
+- **Verse 16 bar 표준** (§LYRICS 원칙 5번 준용) — 4행 × 4블록 = 16행 기본
+  - Verse 수: 2-3 × 16 bar (64행) 또는 4-6 × 16 bar (최대 96행) 모두 허용
+  - **예외 (Paycheck 완성 트랙)**: V6 × 8행 = 총 48행. 다른 A축 3곡(Track 03/07/18) 신규 제작 시 **16 bar 표준 적용**
+- **라임 스킴**: Verse별 2-3 라임 축 교차 설계 (Paycheck 예시: V1 -eep/-eat · V2 -ack · V3 -ire/-own · V4 -op/-ight · V5 -ay/-est · V6 -urn/-ine)
+- **영어 슬로건 훅** + 한국어 버스 (Paycheck 예시: `불붙은 paycheck`)
+- **애드립 영어 위주** (`Yuh!` `What!` `Huh!` `Slatt!`) — `dense ad-libs between rap lines` (layer 개념 제거)
+- **서사 아크 자유** — 6단 서사(Paycheck 예시: 허슬→의심 극복→크루/자립→반격/증명→상승/지속→최종 선언)는 참고용이며 필수 아님. 주제는 후술 §LYRICS 가이드 자유.
 
 ### Style B: K-Drill (NY/UK) (5곡)
 
@@ -98,21 +117,34 @@ Korean rage trap, 148 BPM, distorted 808 bass with pitch slides hard clipped, be
 
 **BPM**: 138-145 (140 공통, 하프타임 체감 70)
 **Key**: Minor 주력 (D minor, F minor)
-**보컬**: Male, menace/deadpan, 된소리·거센소리 악센트 활용
+**보컬**: Male, menace/deadpan + chest voice dry close, 된소리·거센소리 악센트 활용
 
-**Suno Style Prompt**
+**Suno Style Prompt (v2 — 비트 고정 앞쪽 + chest voice)**
 ```
-NY drill, Brooklyn drill, 140 BPM, sliding 808 bass portamento, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 pattern, snare on beat 4 off-beat, dark orchestral strings, cinematic piano motif minor key, menacing atmosphere, aggressive male rap deadpan guttural, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, crisp articulation
+NY drill, Brooklyn drill, 140 BPM, locked drum pattern throughout no fills no switch-up no beat switch, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 pattern, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano motif minor key, menacing atmosphere, aggressive male rap deadpan guttural, chest voice dry close vocal, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, crisp articulation
 ```
 
-**EXCLUDE**: `k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
+> **v2 설계 포인트**:
+> - `locked drum pattern throughout no fills no switch-up no beat switch`를 BPM 뒤 **맨 앞**에 배치 (A축 v3 패턴 준용)
+> - `chest voice dry close vocal` 추가 (Wavvy Chest DNA 강화, deadpan tone과 친화적)
+> - `flipped soul sample pitched-up chop`은 **유지** (Drill 시그니처 — A축 vocal chop 제거와 구분)
+
+**EXCLUDE (v2 — K-Drill 특화 13종)**: `k-pop, melodic singing, sung hook, four-on-the-floor, drum fill, beat switch, double-time drums, halftime switch, arpeggiated synth, electronic riser, amapiano, jersey club, trap 808 sustain`
+
+> **v2 설계 포인트**:
+> - 유지 (7종): `k-pop, melodic singing, sung hook, four-on-the-floor, drum fill, arpeggiated synth, electronic riser`
+> - `double-time switch` → `double-time drums, halftime switch` 분리 (Paycheck v2 패턴)
+> - Drill 특화 추가: `beat switch` (하프타임 체감 전환 민감), `amapiano, jersey club` (2024-2026 hybrid drift), `trap 808 sustain` (Drill slide vs Trap sustain 구분)
+> - 제거 (`synth FX, EDM FX`): Drill 맥락에선 `electronic riser`로 커버됨
 
 **가사 구조 권장**
-- Intro (피아노 16 bar) → Verse 1 (16 bar) → Pre-Hook → Hook (8 bar) → Verse 2 → Pre-Hook → Hook
+- Intro (피아노 16 bar) → Verse 1 (16 bar) → Pre-Hook → Refrain (4-8 bar) → Verse 2 → Pre-Hook → Refrain → Outro 직행
 - **Bridge 금지** (Suno가 노래로 변주)
+- **[Final Hook] 금지** — `[Refrain]` 통일, 마지막 Refrain 뒤 Outro 직행 (final drop 유도 차단, Rewrite 파일 준용)
 - Ad-libs: `(Grr!)` `(Bow!)` `(Pow!)` `(Gang!)` 파렌테시스 inline
 - 도시 · 지역번호(서울 02, 부산 051 등) · 동네 · 음식(만두/떡볶이/닭갈비) 한국적 위협 은유
 - 한국어 90% + 영어 hook 10%
+- Verse 16 bar 표준 (Rewrite 5차 확정: V1-V4 각 16행 = 64 bar, Pre-Hook 제거 + Refrain 4회 교대)
 
 ### Style C: 모던 하드코어 붐뱁 (7곡)
 
@@ -120,14 +152,24 @@ NY drill, Brooklyn drill, 140 BPM, sliding 808 bass portamento, flipped soul sam
 
 **BPM**: 86-95 (88-92 sweet spot)
 **Key**: 다양
-**보컬**: Male, chest voice dominance, 다음절 라임 · 내재 라임
+**보컬**: Male, chest voice dominance + dry close, 다음절 라임 · 내재 라임 (auto-tune 금지)
 
-**Suno Style Prompt**
+**Suno Style Prompt (v2 — chest voice 구문 독립 배치)**
 ```
-modern hardcore boom bap, 한국 힙합, 90 BPM, chopped 70s-80s soul or ballad sample loop with vinyl crackle, dusty drum break MPC swing 58%, warm upright bassline, acoustic kick snappy snare rim shot, DJ scratches, confident lyrical male rap in Korean chest voice multi-syllable rhymes, analog saturation head-nodding groove, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
+modern hardcore boom bap, 한국 힙합, 90 BPM, chopped 70s-80s soul or ballad sample loop with vinyl crackle, dusty drum break MPC swing 58%, warm upright bassline, acoustic kick snappy snare rim shot, DJ scratches, confident lyrical male rap, chest voice dry close vocal, multi-syllable rhymes, analog saturation head-nodding groove, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
 ```
 
-**EXCLUDE**: `trap, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
+> **v2 설계 포인트**:
+> - `confident lyrical male rap in Korean chest voice multi-syllable rhymes` → 분리 배치 `confident lyrical male rap, chest voice dry close vocal, multi-syllable rhymes` (chest voice 구문 독립 → Wavvy DNA 강조)
+> - Style Prompt 앞쪽 비트 고정 배치는 **생략** (C축은 loop 장르라 drop 위험 낮음, sample loop 태그가 이미 비트 고정 역할)
+> - `breakbeat` EXCLUDE **금지** (boom bap과 친척 장르 — 혼동 위험)
+
+**EXCLUDE (v2 — 모던 하드코어 붐뱁 특화 13종)**: `trap, melodic singing, sung hook, four-on-the-floor, drum fill, beat switch, double-time drums, halftime switch, arpeggiated synth, electronic riser, synth FX, EDM FX, auto-tune`
+
+> **v2 설계 포인트**:
+> - 유지 (9종): `trap, melodic singing, sung hook, four-on-the-floor, drum fill, arpeggiated synth, electronic riser, synth FX, EDM FX`
+> - `double-time switch` → `double-time drums, halftime switch` 분리 (Paycheck v2 패턴)
+> - C축 특화 추가: `beat switch` (loop 장르라 switch 치명), `auto-tune` (Boom bap 정체성 핵심 — 80s-90s chest voice 무드 유지, C축에서만 추가)
 
 **가사 구조 권장**
 - Intro (샘플 loop 4-8 bar) → Verse 1 (16 bar 밀도 최대) → Hook (4-8 bar 라이트) → Verse 2 → Hook → Verse 3 → Outro (hook repeat)
@@ -141,14 +183,27 @@ modern hardcore boom bap, 한국 힙합, 90 BPM, chopped 70s-80s soul or ballad 
 
 **BPM**: 140-150
 **Key**: Minor 주력 (다크 톤)
-**보컬**: Male, husky/muddy/distorted, ad-lib 미니멀
+**보컬**: Male, husky/muddy/distorted + chest voice, ad-lib 미니멀
 
-**Suno Style Prompt**
+**Suno Style Prompt (v2 — 비트 고정 앞쪽 + chest voice, Rage 인접 경계)**
 ```
-Korean dark hardcore trap, 142 BPM, heavy 808 sustain decay punchy kick, fast hi-hat rolls triplet, minimal clap on 3, sidechained sub bass slight distortion, dark synth pad minor piano stabs muted electric guitar chord, dark pitched vocal sample loop minor key, melancholic trap rap husky male rap vocal high-speed flow in Korean, dark tonal balance, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
+Korean dark hardcore trap, 142 BPM, locked drum pattern throughout no fills no switch-up no beat switch no final lift, heavy 808 sustain decay punchy kick, fast hi-hat rolls triplet, minimal clap on 3, sidechained sub bass slight distortion, dark synth pad minor piano stabs muted electric guitar chord, dark pitched vocal sample loop minor key, melancholic trap rap husky male rap vocal, chest voice high-speed flow in Korean, dark tonal balance, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
 ```
 
-**EXCLUDE**: `melodic singing, k-pop, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
+> **v2 설계 포인트** (Rage 인접 장르 → drop/switch 위험 최고):
+> - `locked drum pattern throughout no fills no switch-up no beat switch no final lift`를 BPM 뒤 **맨 앞**에 배치 (A축 v3 패턴 준용, D축은 Rage의 변종이라 차단 지시 강화 필요)
+> - `husky male rap vocal`에 `chest voice` 추가 (Wavvy DNA + husky와 공존 가능, `dry close`는 husky 공간감과 상충하여 제외)
+> - `dark pitched vocal sample loop` **유지** — D축 시그니처 (A축 `vocal chop` 제거 ≠ D축 sample loop은 다른 역할)
+> - `fast hi-hat rolls triplet` **유지** — D축 시그니처 (A축 `32nd triplet burst` 차단과 구분 — EXCLUDE에서도 D축은 32nd triplet 제외)
+
+**EXCLUDE (v2 — 하드코어 트랩 특화 13종, Rage drift 차단 강화)**: `melodic singing, k-pop, sung hook, four-on-the-floor, drum fill, beat switch, double-time drums, halftime switch, EDM drop, pitch-shifted vocals, glitch drums, arpeggiated synth, electronic riser`
+
+> **v2 설계 포인트**:
+> - 유지 (7종): `melodic singing, k-pop, sung hook, four-on-the-floor, drum fill, arpeggiated synth, electronic riser`
+> - `double-time switch` → `double-time drums, halftime switch` 분리
+> - D축 특화 추가 (Rage drift 차단): `beat switch`, `EDM drop` (Rage 최다 drift 패턴), `pitch-shifted vocals`, `glitch drums`
+> - 제거: `synth FX, EDM FX` — `EDM drop + arpeggiated synth + electronic riser` 조합으로 충분 커버
+> - **포함하지 않음**: `32nd triplet burst`, `vocal chop` — D축은 Rage와 구분되는 시그니처 요소(triplet roll / pitched vocal sample loop)이므로 EXCLUDE하면 장르 정체성 손상
 
 **가사 구조 권장**
 - Intro → Verse 1 (16 bar) → Pre-Hook → Hook (chant) → Verse 2 (16 bar) → Pre-Hook → Hook → Outro
@@ -258,11 +313,12 @@ Playlist | 20:00 | 🌃 AFTER HOURS | HARD HIP-HOP · DARK CITY · NIGHT GRIND |
 ### 축별 가사 가이드
 
 **Style A (Rage)**
-- 반복 훅 중심, 가사 밀도 낮음
-- 영어 슬로건 OK (`ESCAPE` `GONE` `LIGHTS OUT`)
-- 애드립 스택 허용 (파렌테시스 inline)
-- 메타태그: `[Intro]` `[Hook]` `[Verse]` `[Drop]` `[Outro]`
-- 주제: 해방, 점화, 폭발, 네온, 엑스터시
+- **Refrain 4행 축약 + Verse 6 × 8행** (Paycheck 확정 구조) 또는 Verse 16 bar 표준 2택
+- 영어 슬로건 훅 OK (`ESCAPE` `GONE` `LIGHTS OUT` / Paycheck 예시 `불붙은 paycheck`)
+- 애드립 스택 허용 (파렌테시스 inline) — `dense ad-libs between rap lines`
+- **메타태그**: `[Intro]` `[Verse]` `[Refrain]` `[Outro]` — **`[Hook]`/`[Final Hook]`/`[Drop]` 금지** (Final Hook/Drop 구조가 Suno final lift 유도)
+- V(마지막) 뒤 Outro 직행 (final drop 차단)
+- 주제: 해방, 점화, 폭발, 네온, 엑스터시, 허슬, 그라인드 (서사 아크는 자유)
 
 **Style B (K-Drill)**
 - 위협·menace 톤, 한국적 비유 (음식·지역·동네)

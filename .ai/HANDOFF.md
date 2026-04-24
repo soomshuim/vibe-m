@@ -1,4 +1,14 @@
 ---
+HANDOFF: Claude -> User (20-00 Paycheck 인사이트 B~D 확산 + EXCLUDE 축별 특화 13종 + Rewrite 4차 수용 + Verse 16 bar 표기)
+Date: 2026-04-25 03:26
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 20-00 AFTER HOURS — Paycheck Rage v3 인사이트를 A타입 기본 플랜(concept.md §Style A)에 반영 완료(5차 "일단 통과" 해결): v3 Style Prompt(`same 2-bar trap drum loop throughout no beat switch no final lift` 앞쪽, `screamed raw shouted + chest voice dry close vocal`, autotune 제거, `raw uncut rage energy`) + EXCLUDE v2 rage 13종 + 가사 구조(Refrain 4행, `[Hook]/[Final Hook]/[Drop]` 금지 메타태그). **서사 아크 6단 "자유"로 격하** (사용자 피드백 "서사 아크는 필수가 아냐"). **B/C/D 축별 EXCLUDE 특화 재설계** (각 13종, 공통 5종 `sung hook, drum fill, beat switch, double-time drums, halftime switch`): B K-Drill `+ amapiano, jersey club, trap 808 sustain` (hybrid drift 차단) / C Boom bap `+ auto-tune` (80s-90s chest voice 보존) / D Hard Trap `+ EDM drop, pitch-shifted vocals, glitch drums` (Rage drift 차단 최강화, `32nd triplet burst`/`vocal chop` 미포함 — D축 시그니처). **B/D Style Prompt 비트 고정 앞쪽 배치** (D축 `no beat switch no final lift` 최강) + **B/C/D chest voice 명시 강화** (Wavvy DNA). **Rewrite(씬에 침 뱉어) 4차+5차 재설계 수용**: 4차 V1-V6 → V1-V4 (V5/V6 삭제), Pre-Hook 제거, Refrain 4회 교대, Refrain 가사 고유화(뱉어/place/mistake/trace), V3/V4 완전 교체(가면 디스 / 반격·판 접기), V1/V2 부분 수정; 5차 EXCLUDE 수정 Rage v2 오적용 → B축 특화 13종 (사용자 "rage 전용 exclude는 내 실수"). **test-prompts.md §곡 1/2/3/4 동기화** — Style Prompt v2/v3 + EXCLUDE 축별 특화. **Verse 16 bar 표준 표기 반영** (사용자 "플랜+테스트 프롬프트 V1~V6 16마디 반영 안 됨"): concept.md §Style A "Verse 2택" → 16 bar 단일 표준 + Paycheck 완성 예외 / §Style B "V3-V6 NEW" → "V1-V4 64 bar" 정정 / test-prompts.md §곡 2 구조 bar 표기, §곡 3 `I-V1(16)-H(4-8)-V2(16)-H-V3(16)-O`, §곡 4 `I-V1(16)-PH(4)-H(8)-V2(16)-PH-H-O` + LYRICS 프롬프트 `Verse 16 bars each (4 lines × 4 blocks)` 추가. **Paycheck 미변경** (사용자 "paycheck은 신경쓰지 말고 이미 완성").
+Next-TODO: (1) Suno V5.5 4곡 재테스트 (§곡 1 Paycheck v3 / §곡 2 Rewrite 4차 / §곡 3 Come Up C v2 / §곡 4 Paranoia D v2). (2) 각 축 FAIL 패턴 관찰 → EXCLUDE v2 특화 조정 여부 판단. (3) 3+ PASS 시 20곡 확장. (4) A축 Paycheck 제외 3곡(Track 03/07/18) 신규 제작 시 Verse 16 bar 표준 적용. (5) 3번 제목(`Come Up` 올라와) / 4번 제목(`Paranoia` 편집) 사용자 확인.
+Commits: (이번 record)
+---
+
+---
 HANDOFF: Claude -> User (Rage Style v3 + Verse 16 bar 표준 + Paycheck/Rewrite Verse 6 확장 → Suno 재테스트 대기)
 Date: 2026-04-25 02:43
 Project: ~/Project/wavvy
