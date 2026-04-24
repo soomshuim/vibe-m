@@ -1,8 +1,47 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-25 (3차 업데이트 — Suno 가사 품질 이슈 + 다음 세션 경로 미결정)
+> Last updated: 2026-04-25 (4차 업데이트 — Suno 프롬프트 10단 방어막 구축 + 4곡 재설계)
 
 ## 진행 중
+
+- **20-00 Suno 프롬프트 대대적 튜닝** (2026-04-25 4차) — Wavvy 첫 힙합 시리즈 방어막 구축
+  - ✅ **샘플링 키워드 4축 전부 추가** (사용자 요청: 샘플 소스 영어 무관)
+    - A Rage: `pitched-up vocal chop sample top layer`
+    - B K-Drill: `flipped soul sample melodic hook pitched-up chop`
+    - C Boom bap: `chopped 70s-80s soul or ballad sample loop with vinyl crackle` (Korean 한정 → 범용)
+    - D Hard Trap: `dark pitched vocal sample loop minor key`
+  - ✅ **`singing in Korean` → `rapping in Korean`** 전 프롬프트 교체 — 보컬 드리프트 방지 (멜로딕 싱잉 차단)
+  - ✅ **EXCLUDE 3 → 10종 확장** (V5.5 안정, 12-00 선례 9개 근거)
+    - 공통 6종: `melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
+    - 축별 1종: A/B/D `k-pop` · C `trap`
+    - 각 증상 → EXCLUDE 매핑: 멜로딕 싱잉 / 테크노 쿵짝 / 드럼 필인-배속 전환 / 훅 노래화 / 전자 아르페지오-스터터 반복 / sweep-riser-EDM FX 삽입
+  - ✅ **Style Prompt Positive 다층 지시** (전축 공통 꼬리)
+    - `locked drum pattern throughout no fills no switch-up`
+    - `hard rap only no singing`
+    - `no arp synth no stutter loop`
+    - `rapping in Korean`
+  - ✅ **보컬 디스크립터 rap 밀도 강화**
+    - A Rage: `screamed autotune male vocal` → `screamed autotune male rap vocal`
+    - D Hard Trap: `husky male vocal` → `husky male rap vocal`
+  - ✅ **악기 디스크립터 반복 키워드 제거**
+    - D Hard Trap: `muted electric guitar arpeggio minor key` → `muted electric guitar chord minor key`
+    - A Rage (test): `supersaw 7-voice detuned short staccato loop` → `supersaw 7-voice detuned sustained stab`
+  - ✅ **Bridge 제거 + Chorus/Pre-Chorus → Hook/Pre-Hook**
+    - 4축 가사 구조 권장에서 Bridge 섹션 제거 (`[Bridge]`가 노래로 변주 유도 원인)
+    - concept.md §LYRICS 가이드 메타태그 업데이트 (Style B/D)
+    - 약칭 구조 `B` 제거, `PH = Pre-Hook` 도입 (20-00 전용)
+    - test-prompts.md BLOCK/INSOMNIA 약칭: `I-V1-H-V2-H-B-H-O` → `I-V1-PH-H-V2-PH-H-O`
+  - ✅ **4곡 재설계**
+    - **1 `Paycheck`** (한글 `불붙은 paycheck`) — A Rage / Suno 샘플 PASS 가사 Custom Mode 풀 가사 입력. 새벽 허슬·돈·바닥→상승
+    - **2 `Rewrite`** (한글 `씬에 침 뱉어`) — B K-Drill / Suno 샘플 PASS 가사 Custom Mode. 씬 디스·가짜 vs 진짜·판 뒤집기. 사용자 공유 프롬프트(`NY Drill Hiphop, rap lyrics. Korean. perfect rhyme use korean with english. about disrespect the scene with strong korean slang.`) 결과 PASS
+    - **3 `Come Up`** (한글 `올라와`) — C Boom bap 작사 프롬프트. 바닥→상승 서사·밤 그라인드·펜→마이크·한국 거리→무대
+    - **4 `Paranoia`** (한글 `편집`) — D Hard Trap 작사 프롬프트. 편집증·불신·밤 그림자·거리 코드
+  - ✅ **가사 파일 2건 저장** — `SERIES/20-00/input/tracks/` 폴더 생성
+    - `불붙은 paycheck (Paycheck on Fire).txt` — Suno 샘플 FAIL 판정 가사(SESSION 2026-04-25 3차) + Bridge 제거 + [Pre-Chorus]→[Pre-Hook] + [Chorus]→[Hook]
+    - `씬에 침 뱉어 (Spit on the Scene).txt` — Suno 샘플 PASS + Bridge 제거 + [Pre-Chorus]→[Pre-Hook] + [Chorus]→[Hook] + [Final Chorus]→[Final Hook]
+  - ✅ **test-prompts.md 헤더 업데이트** — 곡 1/2 Custom Mode 풀 가사 재활용, 곡 3/4 작사 프롬프트 테스트 명시
+  - ✅ **FAIL 대응표 5행 추가** (테크노 쿵짝 / 드럼 빨라짐 / 훅 노래화 / 전자 반복 / Bridge 노래화 / Chorus 태그 / Sweep-EDM FX)
+  - **현황**: Suno V5.5 4곡 재테스트 대기 (곡 1/2 Custom Mode 풀 가사 / 곡 3/4 Suno 자체 작사). 3+ PASS 시 20곡 확장 진행
 
 - **20-00 `🌃 AFTER HOURS` 시리즈 기획 착수** (2026-04-25) — Wavvy 첫 힙합 시리즈
   - ✅ **4축 모델 확정** — 1 Rage/Aggressive Trap (KC 레이블 Sik-K·HAON·Vangdale + FDT 크루) / 2 K-Drill NY·UK (Fleeky Bang·Blase·Silkybois·deadbois·NO:EL) / 3 모던 하드코어 붐뱁 (B-Free×Hukky·Owen·Huckleberry P·Paloalto·Kid Milli·QM) / 4 하드코어 트랩 젊은 씬 (ZENE THE ZILLA·Ash Island·Loopy·EK·KWAII)

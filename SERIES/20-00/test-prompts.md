@@ -1,6 +1,7 @@
 # 20-00 🌃 AFTER HOURS — Suno 1차 테스트 프롬프트 (4축 × 1곡)
 
 > 생성일: 2026-04-25 | Suno V5.5 | 목적: 4축 Style Template 품질 검증 → 20곡 확장 가부 결정
+> 업데이트 2026-04-25: 곡 1(Paycheck) / 곡 2(Rewrite)는 Suno 샘플 PASS 가사 재활용 (Custom Mode 풀 가사 입력). 곡 3(Come Up) / 곡 4(Paranoia)는 작사 프롬프트 테스트.
 
 **테스트 전략:**
 1. 각 프롬프트로 **Suno에서 2-3회 생성** → 가장 좋은 것 선택
@@ -10,162 +11,213 @@
 
 ---
 
-## 🔥 테스트 곡 1 — Style A (Rage)
+## 🔥 테스트 곡 1 — Style A (Rage) `Paycheck`
 
-**가칭**: `ESCAPE` (퇴근 직후 점화)
-**컨셉**: 사무실 문 닫자마자 몸이 튕겨나가는 해방감, 고속도로 질주
+**제목**: `Paycheck` (한글: `불붙은 paycheck`) — Suno 샘플 PASS 가사 재활용
+**컨셉**: 새벽 허슬 · 돈 · 바닥에서 올라오는 에너지 · 허세 없는 그라인드
+**가사 파일**: `input/tracks/불붙은 paycheck (Paycheck on Fire).txt`
 
-### Style Prompt (약 200자)
+### Style Prompt
 ```
-Korean rage trap, 150 BPM, distorted 808 bass with pitch slides hard clipped, bright bell lead synth, supersaw 7-voice detuned short staccato loop, rolling 1/16 hi-hats with 32nd triplet burst, pitched-up screamed male vocal, high density ad-lib layer, mosh pit energy aggressive, raw lo-fi saturation master loud, singing in Korean, sharp articulation
+Korean rage trap, 150 BPM, distorted 808 bass with pitch slides hard clipped, bright bell lead synth, supersaw 7-voice detuned sustained stab, pitched-up vocal chop sample top layer, rolling 1/16 hi-hats with 32nd triplet burst, pitched-up screamed male rap vocal, high density ad-lib layer, mosh pit energy aggressive, raw lo-fi saturation master loud, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
 ```
 
 ### EXCLUDE
 ```
-k-pop, melodic singing, slow ballad
+k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX
 ```
 
-### LYRICS 프롬프트 (~180자, 한국어 가사 생성 가이드)
+### LYRICS (Suno Custom Mode 풀 가사 입력)
 ```
-[Intro]
-(Yuh!) (What!)
+[Verse 1]
+새벽부터 hustle, I don't sleep
+손에 번진 ink, got receipts
+한 장 더 쌓아, keep it neat
+너네 말은 too cheap, 내 발은 street
+
+가방엔 꿈이랑 bills and plans
+밑바닥에서 we made our stance
+웃음은 짧게, 내 눈은 cash
+한 번 더 밀어, no second chance
+
+[Pre-Hook]
+Wait, wait, 숨 고르고
+Run it up, 더 높이고
+번개처럼 call me, I go
+잡아봐도 I don't fold
 
 [Hook]
-숨 막히는 하루 끝에 질러 ESCAPE
-밤이 열리는 소리 내 엔진 ESCAPE
-가라 가라 가라 가라
-이 밤이 내 거야 ESCAPE
+불붙은 paycheck, make it stack
+불붙은 paycheck, never back
+불붙은 paycheck, check that swag
+불붙은 paycheck, on the track
 
-[Verse]
-빌딩 창문 꺼지면 내가 켜져
-아스팔트 튕기는 심장 박자
-(Slatt!) (Huh!)
-이 네온이 날 끌어당겨
-오늘만 내 차선 내가 점령
+불붙은 paycheck, make it loud
+불붙은 paycheck, in the crowd
+우린 올라가, no lag, no cap
+불붙은 paycheck, on the map
+
+[Verse 2]
+네가 던진 doubt, I threw it back
+발끝엔 grind, in my backpack
+밤새워 써, then I attack
+꿈이 내 code, I don't lack
+
+형, 나 좀 봐, I came from dust
+지갑은 light but the will is tough
+한 글자씩 쌓아, trust the rush
+끝까지 가, yeah, that's enough
+
+[Pre-Hook]
+Wait, wait, 숨 고르고
+Run it up, 더 높이고
+번개처럼 call me, I go
+잡아봐도 I don't fold
 
 [Hook]
-(반복)
+불붙은 paycheck, make it stack
+불붙은 paycheck, never back
+불붙은 paycheck, check that swag
+불붙은 paycheck, on the track
 
-[Outro]
-(cut)
+불붙은 paycheck, make it loud
+불붙은 paycheck, in the crowd
+우린 올라가, no lag, no cap
+불붙은 paycheck, on the map
+
+[Hook]
+불붙은 paycheck, make it stack
+불붙은 paycheck, never back
+불붙은 paycheck, check that swag
+불붙은 paycheck, on the track
+
+불붙은 paycheck, make it loud
+불붙은 paycheck, in the crowd
+우린 올라가, no lag, no cap
+불붙은 paycheck, on the map
 ```
 
 ### 체크포인트
 - [ ] BPM 140-160 범위
 - [ ] 왜곡 808 + bell lead 선명
-- [ ] 영어 훅 `ESCAPE` + 한국어 버스 혼합 자연스러움
+- [ ] 훅 `불붙은 paycheck` 반복성 + 한국어 버스 자연스러움
 - [ ] Pitched-up 보컬 적용
 - [ ] 애드립 밀도
 
 ---
 
-## 🔪 테스트 곡 2 — Style B (K-Drill)
+## 🔪 테스트 곡 2 — Style B (K-Drill) `Rewrite`
 
-**가칭**: `BLOCK` (우리 동네 · 지역 프라이드)
-**컨셉**: 자기 구역 인정 요구, 위협 톤, 한국적 비유(지역번호·음식)
+**제목**: `Rewrite` (한글: `씬에 침 뱉어`) — Suno 샘플 PASS 가사 재활용
+**컨셉**: 씬 디스 · 가짜 vs 진짜 · 판 뒤집기 · 한국 슬랭 직격
+**가사 파일**: `input/tracks/씬에 침 뱉어 (Spit on the Scene).txt`
 
-### Style Prompt (약 200자)
+### Style Prompt
 ```
-NY drill, Brooklyn drill hybrid, 140 BPM, sliding 808 bass portamento long notes, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop D minor, menacing atmosphere, aggressive guttural male rap deadpan flow, singing in Korean, crisp articulation
+NY drill, Brooklyn drill hybrid, 140 BPM, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop D minor, menacing atmosphere, aggressive guttural male rap deadpan flow, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, crisp articulation
 ```
 
 ### EXCLUDE
 ```
-k-pop, melodic singing, bright
+k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX
 ```
 
-### LYRICS 프롬프트 (~190자)
+### LYRICS (Suno Custom Mode 풀 가사 입력)
 ```
-[Intro]
-(Grr!) (Bow!)
-우리 동네 02
-
 [Verse 1]
-신호등 꺼지면 내 구역 시작
-(Pow!)
-야식 트럭 연기 올라 하늘 막고
-(Gang!)
-떡볶이 김처럼 내 숨 뱉어
-너네 눈빛 흔들리면 그게 끝
+씬에 발 담근 척, 니 꼴 좀 봐
+겉만 번지르르, 속은 다 가짜
+난 말 안 섞어, 네 냄새는 trash
+입만 터는 kid, 손은 늘 mash
+
+니 crew는 구멍, 다 새는 비밀
+난 빡세게 달려, 눈빛은 lethal
+너흰 hype만 좇아, 금방 식어
+난 여기서 살아, 매 장면 찢어
+
+건들면 바로 back, 넌 겁나지
+허세로만 버텨, 결국에 꺾이지
+내 혀는 razor, 네 이름은 stain
+판 뒤집는 순간, 기억해 my name
+
+[Pre-Hook]
+들어와 봐, feel the tension
+네 입 닫아, no permission
+한 번 더 봐, 이 scene is mine
+니 얕은 폼은 다 out of line
 
 [Hook]
-BLOCK BLOCK BLOCK 02
-내 구역 내 땅 우리 동네
-BLOCK BLOCK BLOCK 02
-잠깐 들러도 빈손 못 가
+씬에 침 뱉어, 씬에 침 뱉어
+너흰 다 fake, 씬에 침 뱉어
+씬에 침 뱉어, 씬에 침 뱉어
+난 안 비켜, 씬에 침 뱉어
 
 [Verse 2]
-대로변 네온 내 이름 부르고
-지하철 막차도 날 기다려
-이 도시 내 이름 새기고
-밤마다 반복 같은 얘기
+너의 자랑거리? 다 남의 말
+복붙한 swag, 완전 밑천 탈탈
+난 골목 끝까지, 발자국 박아
+네가 쌓은 체면, 한 번에 박살
+
+X on my chest, 난 표식처럼
+네 편한 룰은 다 깨져버려
+말 돌리지 마, 직진이 답
+난 한 번 치고, 다시 또 slap
+
+니 팬들 앞에서도 숨지 못해
+표정 다 굳어, 손끝이 떨려
+I do it raw, you do it for likes
+난 진짜로 와, 넌 그냥 likes
+
+[Pre-Hook]
+들어와 봐, feel the tension
+네 입 닫아, no permission
+한 번 더 봐, 이 scene is mine
+니 얕은 폼은 다 out of line
 
 [Hook]
-(반복)
+씬에 침 뱉어, 씬에 침 뱉어
+너흰 다 fake, 씬에 침 뱉어
+씬에 침 뱉어, 씬에 침 뱉어
+난 안 비켜, 씬에 침 뱉어
 
-[Bridge]
-(Grr!) 02 gang
-(Bow!) 02 gang
-
-[Outro]
-(cut)
+[Final Hook]
+씬에 침 뱉어, 씬에 침 뱉어
+너흰 다 fake, 씬에 침 뱉어
+씬에 침 뱉어, 씬에 침 뱉어
+난 안 비켜, 씬에 침 뱉어
 ```
 
 ### 체크포인트
 - [ ] BPM 138-145 범위
 - [ ] Sliding 808 portamento 선명
 - [ ] 3+3+2 tresillo hi-hat 패턴
-- [ ] Snare off-beat (2마디당 4박)
+- [ ] Snare off-beat
 - [ ] Menace 톤 + deadpan delivery
-- [ ] 한국어 된소리 악센트
-- [ ] `(Grr!)` `(Bow!)` `(Pow!)` `(Gang!)` 애드립 작동
+- [ ] 한국어 된소리 악센트 (꼴 / 꺾이지 / 뒤집는)
+- [ ] 훅 `씬에 침 뱉어` 반복성
 
 ---
 
-## 📼 테스트 곡 3 — Style C (모던 하드코어 붐뱁)
+## 📼 테스트 곡 3 — Style C (모던 하드코어 붐뱁) `Come Up`
 
-**가칭**: `CLOCK OUT` (퇴근 자전 서사)
-**컨셉**: 퇴근길 자기 응시, 회사 생활 관찰, 막차 · 한강 · 고시원 레퍼런스
+**제목**: `Come Up` (한글: `올라와`)
+**컨셉**: 바닥에서 올라오는 서사 · 밤 그라인드 · 펜에서 마이크까지 · 한국 거리에서 무대까지
+**가사 방향**: Suno 작사 프롬프트 테스트 (자체 생성)
 
-### Style Prompt (약 200자)
+### Style Prompt
 ```
-modern hardcore boom bap, 한국 힙합, 90 BPM, chopped Korean soul sample loop, dusty drum break MPC swing 58%, vinyl crackle warm upright bass, acoustic kick snappy snare rim shot DJ scratches, confident lyrical male rap chest voice multi-syllable rhymes, analog saturation head-nodding groove, singing in Korean, articulation
+modern hardcore boom bap, 한국 힙합, 90 BPM, chopped 70s-80s soul or ballad sample loop with vinyl crackle, dusty drum break MPC swing 58%, warm upright bass, acoustic kick snappy snare rim shot DJ scratches, confident lyrical male rap chest voice multi-syllable rhymes, analog saturation head-nodding groove, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, articulation
 ```
 
 ### EXCLUDE
 ```
-trap, 808, auto-tune
+trap, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX
 ```
 
-### LYRICS 프롬프트 (~195자)
+### LYRICS 프롬프트 (작사 지시 포맷)
 ```
-[Intro]
-(샘플 loop 4 bars)
-
-[Verse 1]
-여섯시 반 정각 엘리베이터 문 열리면
-하루 종일 눌러둔 내 숨도 같이 나와
-회의실 목소리 아직 내 귓가에 맴돌아도
-한강 바람은 그걸 모두 지워주지
-월요일 또 찾아오겠지만 지금은 금요일
-막차 한 대 놓쳐도 괜찮아 내 하루 내 거니까
-(Uh!)
-
-[Hook]
-시계가 돌아 Clock Out
-하루가 끝나 Clock Out
-
-[Verse 2]
-고시원 창문 너머 지는 해 주황으로
-내가 못 본 하늘을 오늘도 놓쳤어도
-펜 대신 마이크 잡은 이 시간만은 내 거
-기록된 모든 한숨이 여기서 라임으로
-
-[Hook]
-(반복)
-
-[Outro]
-(샘플 loop fade)
+I-V1-H-V2-H-V3-O
+modern Korean boom bap rap lyrics. Korean heavy 95 percent. dense multi-syllable internal rhymes. about come up from the bottom, night grind pen to mic, Korean street to stage, hustle scars and self-made story, chest voice confident lyrical flow, hook Come Up two bars repeat, no bridge.
 ```
 
 ### 체크포인트
@@ -173,60 +225,33 @@ trap, 808, auto-tune
 - [ ] 샘플 loop + 더스티 드럼
 - [ ] MPC swing 느낌 (58%)
 - [ ] Vinyl crackle 질감
-- [ ] 다음절 라임 (나와/맴돌아도 · 지워주지/내 거니까 · 주황으로/놓쳤어도/라임으로)
+- [ ] 다음절 라임 + 내재 라임 밀도
 - [ ] Chest voice + 명료한 발음
 - [ ] 평균 라인 12-18 음절 밀도
+- [ ] 훅 `Come Up` 반복성 + 자서전 서사 성립
 
 ---
 
-## 🌑 테스트 곡 4 — Style D (하드코어 트랩 젊은 씬)
+## 🌑 테스트 곡 4 — Style D (하드코어 트랩 젊은 씬) `Paranoia`
 
-**가칭**: `INSOMNIA` (불면 · 새벽 직전 내면)
-**컨셉**: 잠 못 드는 밤, 천장 보며 반복되는 생각, 도시 고독
+**제목**: `Paranoia` (한글: `편집`)
+**컨셉**: 편집증 · 불신 · 밤의 그림자 · 거리 코드 · 아무도 믿지 않는다
+**가사 방향**: Suno 작사 프롬프트 테스트 (자체 생성)
 
-### Style Prompt (약 200자)
+### Style Prompt
 ```
-Korean dark hardcore trap, 142 BPM, heavy 808 bass sustain decay sidechained to kick slight distortion, punchy kick fast hi-hat triplet rolls minimal clap on 3, dark atmospheric synth pad muted electric guitar arpeggio minor key, melancholic trap rap husky male vocal high-speed flow, dark tonal balance compressed master, singing in Korean, sharp articulation
+Korean dark hardcore trap, 142 BPM, heavy 808 bass sustain decay sidechained to kick slight distortion, punchy kick fast hi-hat triplet rolls minimal clap on 3, dark atmospheric synth pad muted electric guitar chord minor key, dark pitched vocal sample loop minor key, melancholic trap rap husky male rap vocal high-speed flow, dark tonal balance compressed master, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
 ```
 
 ### EXCLUDE
 ```
-melodic singing, k-pop, ballad
+melodic singing, k-pop, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX
 ```
 
-### LYRICS 프롬프트 (~195자)
+### LYRICS 프롬프트 (작사 지시 포맷)
 ```
-[Intro]
-(dark pad fade in)
-
-[Verse 1]
-천장의 무늬가 매일 달라져 보여
-새벽 세시 이 방 혼자 남아
-머릿속 소음이 TV처럼 켜져
-리모컨 끄는 법 난 아직 몰라
-(Skrrt!)
-
-[Hook]
-Insomnia 오늘도
-Insomnia 또 다시
-눈감아도 꿈이 없어
-Insomnia 내 도시
-
-[Verse 2]
-도시 불빛 창문 넘어 흘러
-그림자마다 내 얼굴 걸어
-잠 못 드는 밤마다 난 쌓여
-먼지처럼 쌓여 사라지게
-
-[Bridge: Breakdown]
-(808 drop)
-반복 반복 반복
-
-[Hook]
-(반복)
-
-[Outro]
-(멜랑콜릭 fade)
+I-V1-PH-H-V2-PH-H-O
+Korean dark hardcore trap rap lyrics. perfect rhyme mix Korean with English. about paranoia at night shadows behind me trust no one street code never lost watching my back, husky melancholic delivery high-speed flow, English chant hook PARANOIA four lines, no bridge, minimal Skrrt ad-lib.
 ```
 
 ### 체크포인트
@@ -236,6 +261,7 @@ Insomnia 내 도시
 - [ ] Husky/멜랑콜릭 male 보컬
 - [ ] 고속 플로우 + 명료도
 - [ ] Ad-lib 미니멀 (`Skrrt!` 1회만)
+- [ ] 훅 `PARANOIA` 반복성 + 불신 서사
 
 ---
 
@@ -263,7 +289,14 @@ Insomnia 내 도시
 |-----|-----|-----|
 | K-pop 드리프트 | `k-pop` EXCLUDE 누락 | EXCLUDE 추가 |
 | 멜로딕 싱잉 섞임 | `melodic singing` EXCLUDE 누락 | EXCLUDE 추가 |
-| 영어 vocal 섞임 | `singing in Korean` 위치 앞쪽 | 프롬프트 맨 뒤로 이동 |
+| 테크노 쿵짝 변주 (4/4 킥) | `four-on-the-floor` 드리프트 | EXCLUDE `four-on-the-floor` 추가 |
+| 중간 드럼 빨라짐 (쪼개기 격상) | drum fill / double-time switch 삽입 | EXCLUDE `drum fill, double-time switch` + Style Prompt `locked drum pattern throughout no fills no switch-up` |
+| 훅이 노래로 빠짐 (rapping in Korean + melodic singing EXCLUDE 있음에도) | `male vocal` 단어가 singing 유도 / `rap` 밀도 부족 | `male vocal` → `male rap vocal` + Style Prompt `hard rap only no singing` + EXCLUDE `sung hook` |
+| 중간 전자 반복 효과 (아르페지오/스터터) | `arpeggio` / `staccato loop` 키워드가 반복 유도 | `arpeggio` → `chord`, `staccato loop` → `sustained stab` + Style Prompt `no arp synth no stutter loop` + EXCLUDE `arpeggiated synth` |
+| Bridge에서 노래로 변주 | `[Bridge]` 메타태그가 섹션 변화 유도 | Bridge 섹션 제거 (4축 전부) + 약칭 구조 `B` 제거 |
+| Chorus가 노래로 빠짐 (메타태그 레벨) | `[Chorus]` / `[Pre-Chorus]` 태그가 노래 유도 | `[Hook]` / `[Pre-Hook]`로 교체 (약칭 `H` / `PH`) |
+| 섹션 전환 sweep/riser / EDM FX 삽입 | synth 효과음 드리프트 | EXCLUDE `electronic riser, synth FX, EDM FX` 추가 |
+| 영어 vocal 섞임 | `rapping in Korean` 위치 앞쪽 | 프롬프트 맨 뒤로 이동 |
 | BPM 빗나감 | BPM 태그 뒤쪽 | 장르 태그 바로 뒤로 |
 | Auto-tune 과다 (Style C 붐뱁) | 태그 순서 문제 | `no auto-tune` 명시 추가 |
 | Female vocal 섞임 | 보컬 태그 불명확 | `male rap` 강조 |

@@ -79,13 +79,12 @@ Playlist | 20:00 | 🌃 AFTER HOURS | HARD HIP-HOP · DARK CITY · NIGHT GRIND |
 **Key**: Minor 우세, Anthem은 Major
 **보컬**: Male, pitch-up/screamed auto-tune, 영어 의성어 애드립 허용
 
-**Suno Style Prompt (200자 템플릿)**
+**Suno Style Prompt**
 ```
-Korean rage trap, 148 BPM, distorted 808 bass with pitch slides hard clipped, bell lead synth, supersaw 7-voice detuned, rolling hi-hats with 32nd triplet roll, screamed autotune male vocal, pitched-up ad-libs high density, mosh pit energy aggressive, raw lo-fi saturation, singing in Korean, sharp articulation
+Korean rage trap, 148 BPM, distorted 808 bass with pitch slides hard clipped, bell lead synth, supersaw 7-voice detuned, pitched-up vocal chop sample top layer, rolling hi-hats with 32nd triplet roll, screamed autotune male rap vocal, pitched-up ad-libs high density, mosh pit energy aggressive, raw lo-fi saturation, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
 ```
-(약 200자)
 
-**EXCLUDE**: `k-pop, melodic singing, slow ballad`
+**EXCLUDE**: `k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
 
 **가사 구조 권장**
 - Intro → Hook (16 bar) → Verse 1 (16 bar) → Hook → Verse 2 → Hook → Outro (cut)
@@ -101,16 +100,16 @@ Korean rage trap, 148 BPM, distorted 808 bass with pitch slides hard clipped, be
 **Key**: Minor 주력 (D minor, F minor)
 **보컬**: Male, menace/deadpan, 된소리·거센소리 악센트 활용
 
-**Suno Style Prompt (200자 템플릿)**
+**Suno Style Prompt**
 ```
-NY drill, Brooklyn drill, 140 BPM, sliding 808 bass portamento, sharp tresillo hi-hats 3+3+2 pattern, snare on beat 4 off-beat, dark orchestral strings, cinematic piano motif minor key, menacing atmosphere, aggressive male rap deadpan guttural, singing in Korean, crisp articulation
+NY drill, Brooklyn drill, 140 BPM, sliding 808 bass portamento, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 pattern, snare on beat 4 off-beat, dark orchestral strings, cinematic piano motif minor key, menacing atmosphere, aggressive male rap deadpan guttural, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, crisp articulation
 ```
-(약 198자)
 
-**EXCLUDE**: `k-pop, melodic singing, bright`
+**EXCLUDE**: `k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
 
 **가사 구조 권장**
-- Intro (피아노 16 bar) → Verse 1 (16 bar) → Hook (8 bar) → Verse 2 → Hook → Bridge → Hook
+- Intro (피아노 16 bar) → Verse 1 (16 bar) → Pre-Hook → Hook (8 bar) → Verse 2 → Pre-Hook → Hook
+- **Bridge 금지** (Suno가 노래로 변주)
 - Ad-libs: `(Grr!)` `(Bow!)` `(Pow!)` `(Gang!)` 파렌테시스 inline
 - 도시 · 지역번호(서울 02, 부산 051 등) · 동네 · 음식(만두/떡볶이/닭갈비) 한국적 위협 은유
 - 한국어 90% + 영어 hook 10%
@@ -123,13 +122,12 @@ NY drill, Brooklyn drill, 140 BPM, sliding 808 bass portamento, sharp tresillo h
 **Key**: 다양
 **보컬**: Male, chest voice dominance, 다음절 라임 · 내재 라임
 
-**Suno Style Prompt (200자 템플릿)**
+**Suno Style Prompt**
 ```
-modern hardcore boom bap, 한국 힙합, 90 BPM, chopped soul sample loop, dusty drum break MPC swing 58%, vinyl crackle warm bassline, acoustic kick snappy snare rim shot, DJ scratches, confident lyrical male rap in Korean chest voice multi-syllable rhymes, analog saturation head-nodding groove, sharp articulation
+modern hardcore boom bap, 한국 힙합, 90 BPM, chopped 70s-80s soul or ballad sample loop with vinyl crackle, dusty drum break MPC swing 58%, warm upright bassline, acoustic kick snappy snare rim shot, DJ scratches, confident lyrical male rap in Korean chest voice multi-syllable rhymes, analog saturation head-nodding groove, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
 ```
-(약 202자 — 200자 초과 시 `DJ scratches` 또는 `chest voice` 축약 가능)
 
-**EXCLUDE**: `trap, 808, auto-tune`
+**EXCLUDE**: `trap, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
 
 **가사 구조 권장**
 - Intro (샘플 loop 4-8 bar) → Verse 1 (16 bar 밀도 최대) → Hook (4-8 bar 라이트) → Verse 2 → Hook → Verse 3 → Outro (hook repeat)
@@ -145,16 +143,16 @@ modern hardcore boom bap, 한국 힙합, 90 BPM, chopped soul sample loop, dusty
 **Key**: Minor 주력 (다크 톤)
 **보컬**: Male, husky/muddy/distorted, ad-lib 미니멀
 
-**Suno Style Prompt (200자 템플릿)**
+**Suno Style Prompt**
 ```
-Korean dark hardcore trap, 142 BPM, heavy 808 sustain decay punchy kick, fast hi-hat rolls triplet, minimal clap on 3, sidechained sub bass slight distortion, dark synth pad minor piano stabs muted electric guitar, melancholic trap rap husky male vocal high-speed flow in Korean, dark tonal balance, sharp articulation
+Korean dark hardcore trap, 142 BPM, heavy 808 sustain decay punchy kick, fast hi-hat rolls triplet, minimal clap on 3, sidechained sub bass slight distortion, dark synth pad minor piano stabs muted electric guitar chord, dark pitched vocal sample loop minor key, melancholic trap rap husky male rap vocal high-speed flow in Korean, dark tonal balance, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, sharp articulation
 ```
-(약 203자)
 
-**EXCLUDE**: `melodic singing, k-pop, ballad`
+**EXCLUDE**: `melodic singing, k-pop, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
 
 **가사 구조 권장**
-- Intro → Verse 1 → Hook (chant) → Verse 2 → Hook → Bridge (breakdown) → Hook → Outro
+- Intro → Verse 1 → Pre-Hook → Hook (chant) → Verse 2 → Pre-Hook → Hook → Outro
+- **Bridge 금지** (Suno가 노래로 변주, breakdown도 제거)
 - Ad-lib 미니멀 (`Skrrt!` `Uh!` 정도)
 - 주제: 고립 · 불안 · 불면 · 자기혐오 · 야경 · 도시 고독 · 분노
 - 한국어 85% + 영어 hook 15%
@@ -269,7 +267,7 @@ Playlist | 20:00 | 🌃 AFTER HOURS | HARD HIP-HOP · DARK CITY · NIGHT GRIND |
 - 위협·menace 톤, 한국적 비유 (음식·지역·동네)
 - 크루 chant 훅 (`Gang Gang Gang`, `우리 동네`, `02` 등)
 - Ad-libs: `(Grr!)` `(Bow!)` `(Pow!)` `(Gang!)`
-- 메타태그: `[Intro]` `[Verse]` `[Hook]` `[Bridge]` `[Outro]`
+- 메타태그: `[Intro]` `[Verse]` `[Pre-Hook]` `[Hook]` `[Outro]` (Bridge 금지)
 - 주제: 도시, 지역, 위협, 경계, 크루
 
 **Style C (모던 하드코어 붐뱁)**
@@ -283,7 +281,7 @@ Playlist | 20:00 | 🌃 AFTER HOURS | HARD HIP-HOP · DARK CITY · NIGHT GRIND |
 - 다크한 내면, 공격성과 고립 혼합
 - 멜랑콜릭 훅 + husky 플로우
 - Ad-lib 미니멀
-- 메타태그: `[Intro]` `[Verse]` `[Hook]` `[Bridge: Breakdown]` `[Outro]`
+- 메타태그: `[Intro]` `[Verse]` `[Pre-Hook]` `[Hook]` `[Outro]` (Bridge 금지)
 - 주제: 불면, 고독, 불안, 자기혐오, 밤 도시, 내면 압력
 
 ---
@@ -293,7 +291,15 @@ Playlist | 20:00 | 🌃 AFTER HOURS | HARD HIP-HOP · DARK CITY · NIGHT GRIND |
 ### Style 필드
 - **V5.5 1,000자 한도** 활용 (200자 한도는 V4 기준, 안전 설계는 200자)
 - 축별 Style Template 기본 사용, 필요 시 개별 곡 특화 태그 추가
-- 한국어 락: `singing in Korean` 맨 뒤 1개 (과부하 금지)
+- 한국어 락: `rapping in Korean` 맨 뒤 1개 (과부하 금지)
+- **`singing` 단어 사용 금지** — Suno가 멜로딕 싱잉으로 드리프트. 힙합 시리즈는 `rapping` / `rap vocal` / `rap delivery` 사용
+- **`four-on-the-floor` EXCLUDE 필수** — 힙합 본연의 syncopated 킥 패턴이 테크노/하우스식 4/4 킥(쿵짝쿵짝)으로 드리프트 방지 (4축 전부 적용)
+- **`drum fill, double-time switch` EXCLUDE 필수** — 곡 중간 드럼이 갑자기 쪼개져 빨라지는 switch-up/fill 삽입 방지. Style Prompt `locked drum pattern throughout no fills no switch-up` positive 지시와 병행
+- **`sung hook` EXCLUDE + `hard rap only no singing` positive 필수** — `rapping in Korean` + `melodic singing` EXCLUDE만으론 훅이 여전히 노래로 빠짐. 보컬 디스크립터에 `rap` 단어 밀도 확보 (예: `male vocal` 금지, `male rap vocal` 사용)
+- **`arpeggiated synth` EXCLUDE + `no arp synth no stutter loop` positive** — 곡 중간 전자 아르페지오/스터터 반복 효과 방지. 악기 디스크립터에 `arpeggio` 단어 금지 (예: `electric guitar arpeggio` → `electric guitar chord`, `short staccato loop` → `sustained stab`)
+- **`[Bridge]` 메타태그 금지** — Suno가 bridge 섹션에서 멜로딕 싱잉으로 드리프트. 4축 전부 Bridge 제거
+- **`[Chorus]` / `[Pre-Chorus]` → `[Hook]` / `[Pre-Hook]`** — 힙합 맥락 강제. Chorus 용어는 Suno가 노래 섹션으로 해석. 약칭 구조에서도 `PH = Pre-Hook`, `H = Hook` 사용 (20-00 시리즈 전용 약칭)
+- **`electronic riser, synth FX, EDM FX` EXCLUDE 필수** — 섹션 전환 sweep/riser, EDM 임팩트, synth 효과음 삽입 차단. 악기명(`supersaw`, `bell lead synth`, `synth pad`)은 남기고 **효과음성 FX만** 타겟팅
 
 ### LYRICS 필드
 - **한국어 Hangul 직접 입력** (Romanized 비권장)
@@ -301,8 +307,9 @@ Playlist | 20:00 | 🌃 AFTER HOURS | HARD HIP-HOP · DARK CITY · NIGHT GRIND |
 - 본 시리즈 LYRICS 200자 QA = **메타태그 제외한 순수 가사 텍스트 기준**
 
 ### EXCLUDE 필드
-- **최대 3개** (4+ arrangement 불안정)
+- **V5.5 기준 10개까지 확장** (V4는 3개 한도, 12-00 Afrobeats 선례 9개 안정)
 - 축별 복붙 라인 (상기 Style Template 참조)
+- 본 시리즈 기본 10종: `[축별 장르 드리프트], melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
 
 ### 생성 전략
 1. 동일 Prompt로 **2-3회 생성** → 가장 좋은 것 선택

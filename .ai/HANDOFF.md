@@ -1,4 +1,14 @@
 ---
+HANDOFF: Claude -> User (Suno 프롬프트 10단 방어막 구축 완료 → Suno V5.5 4곡 재테스트 대기)
+Date: 2026-04-25 01:48
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 20-00 AFTER HOURS Suno V5.5 프롬프트 대대적 튜닝 — 가사·보컬·드럼·전자 드리프트 다층 차단. **Style Prompt**: 샘플링 키워드 4축(A `pitched-up vocal chop` / B `flipped soul sample` / C `chopped 70s-80s soul/ballad` / D `dark pitched vocal sample loop`, 샘플 소스 영어 무관) + Positive 공통 꼬리(`locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean`) + 보컬 rap 밀도(A/D `male vocal`→`male rap vocal`) + 악기 반복 키워드 제거(D `arpeggio`→`chord`, A `staccato loop`→`sustained stab`). **EXCLUDE 3→10종**: `[축별 장르], melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX` (12-00 Afrobeats 9개 선례 근거 V5.5 안정). **가사 구조**: Bridge 금지(4축) + `[Chorus]`/`[Pre-Chorus]` → `[Hook]`/`[Pre-Hook]` + 약칭 `PH` 도입(20-00 전용) + BLOCK/INSOMNIA 약칭 `I-V1-H-V2-H-B-H-O` → `I-V1-PH-H-V2-PH-H-O`. **4곡 재설계**: 1 `Paycheck`(불붙은 paycheck·A Rage·Custom Mode 풀 가사) / 2 `Rewrite`(씬에 침 뱉어·B K-Drill·Custom Mode 풀 가사·사용자 샘플 프롬프트 PASS) / 3 `Come Up`(올라와·C Boom bap·작사 프롬프트) / 4 `Paranoia`(편집·D Hard Trap·작사 프롬프트). **산출물**: `SERIES/20-00/concept.md` + `test-prompts.md` + `input/tracks/` 가사 2건(Bridge 제거 + Pre-Hook/Hook 적용) + FAIL 대응표 5행 추가.
+Next-TODO: (1) Suno V5.5에서 4곡 재테스트 — 1/2 Custom Mode 풀 가사 입력 · 3/4 작사 프롬프트 자체 생성. (2) 각 곡 2-3회 생성 → 최선 선택 → 장르 충실도 · 보컬 톤 · BPM · 믹스 품질 체크. (3) 3+ PASS 시 20곡 확장 진행 / 3 미만이면 FAIL 패턴 식별 후 추가 튜닝. (4) 3/4번 제목(`Come Up`/`Paranoia`) 사용자 리뷰 — 교체 원하면 알림.
+Commits: (이번 record)
+---
+
+---
 HANDOFF: Claude -> User/다음 세션 Claude (Suno 가사 품질 FAIL + Claude 재작성 FAIL → 경로 3개 미결정, 다음 세션 이어감)
 Date: 2026-04-25 00:44 (3차 record — 세션 마감)
 Project: ~/Project/wavvy
