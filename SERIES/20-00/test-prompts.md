@@ -13,9 +13,10 @@
 
 ## 🔥 테스트 곡 1 — Style A (Rage) `Paycheck`
 
-**제목**: `Paycheck` (한글: `불붙은 paycheck`) — Suno 샘플 PASS 가사 재활용
-**컨셉**: 새벽 허슬 · 돈 · 바닥에서 올라오는 에너지 · 허세 없는 그라인드
+**제목**: `Paycheck` (한글: `불붙은 paycheck`) — Suno 원본 + Claude Verse 6 확장 버전
+**컨셉**: 허슬 → 의심 극복 → 크루/자립 → 반격/증명 → 상승/지속 → 최종 선언 6단 서사
 **가사 파일**: `input/tracks/불붙은 paycheck (Paycheck on Fire).txt`
+**구조**: Intro → V1 → Refrain① → V2 → V3 → Refrain② → V4 → V5 → Refrain③ → V6 → Outro (Refrain 3번, V6 뒤 Outro 직행 — final drop 유도 차단)
 
 ### Style Prompt
 ```
@@ -27,9 +28,13 @@ Korean rage trap, 150 BPM, distorted 808 bass with pitch slides hard clipped, br
 k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX
 ```
 
-### LYRICS (Suno Custom Mode 풀 가사 입력)
+### LYRICS (Suno Custom Mode 풀 가사 입력 — Verse 6 확장)
 ```
+[Intro]
+(Instrumental, same 2-bar drum loop)
+
 [Verse 1]
+(Shouted male Korean rap, dry voice, same drum loop)
 새벽부터 hustle, I don't sleep
 손에 번진 ink, got receipts
 한 장 더 쌓아, keep it neat
@@ -40,24 +45,15 @@ k-pop, melodic singing, four-on-the-floor, drum fill, double-time switch, sung h
 웃음은 짧게, 내 눈은 cash
 한 번 더 밀어, no second chance
 
-[Pre-Hook]
-Wait, wait, 숨 고르고
-Run it up, 더 높이고
-번개처럼 call me, I go
-잡아봐도 I don't fold
-
-[Hook]
+[Refrain]
+(Shouted rap refrain, dry voice, same drum loop)
 불붙은 paycheck, make it stack
 불붙은 paycheck, never back
-불붙은 paycheck, check that swag
-불붙은 paycheck, on the track
-
-불붙은 paycheck, make it loud
-불붙은 paycheck, in the crowd
 우린 올라가, no lag, no cap
 불붙은 paycheck, on the map
 
 [Verse 2]
+(Shouted male Korean rap, dry voice, same drum loop)
 네가 던진 doubt, I threw it back
 발끝엔 grind, in my backpack
 밤새워 써, then I attack
@@ -68,33 +64,70 @@ Run it up, 더 높이고
 한 글자씩 쌓아, trust the rush
 끝까지 가, yeah, that's enough
 
-[Pre-Hook]
-Wait, wait, 숨 고르고
-Run it up, 더 높이고
-번개처럼 call me, I go
-잡아봐도 I don't fold
+[Verse 3]
+(Shouted male Korean rap, dry voice, same drum loop)
+내 형제들, tied by fire
+한 놈도 안 비어, we go higher
+손 맞잡으면, 더 entire
+등 뒤를 믿어, 우리 wire
 
-[Hook]
+진흙에서 쌓아, built my own
+땀으로 박았어, 이건 stone
+혼자서 걸었지, never thrown
+이 길 끝까지, fully grown
+
+[Refrain]
+(Shouted rap refrain, dry voice, same drum loop)
 불붙은 paycheck, make it stack
 불붙은 paycheck, never back
-불붙은 paycheck, check that swag
-불붙은 paycheck, on the track
-
-불붙은 paycheck, make it loud
-불붙은 paycheck, in the crowd
 우린 올라가, no lag, no cap
 불붙은 paycheck, on the map
 
-[Hook]
+[Verse 4]
+(Shouted male Korean rap, dry voice, same drum loop)
+비웃던 입들, 이젠 just drop
+멈춤 없는 engine, 난 non-stop
+한 발 더 디뎌, top of top
+수많은 얼굴들, 이젠 prop
+
+새긴 이름은, black on white
+어둠 속에서, I see light
+한 번 잡으면, gone too tight
+끝까지 밀어, that's my fight
+
+[Verse 5]
+(Shouted male Korean rap, dry voice, same drum loop)
+아직 끝 아냐, just halfway
+새벽마다 시작, I pave my way
+말 대신 action, that's what I say
+하루도 안 쉬어, every day
+
+이름 뒤에 brand, built from chest
+거친 길 뚫어, passed every test
+안 눕는 나, can't take rest
+매일 깊어져, I'm my best
+
+[Refrain]
+(Shouted rap refrain, dry voice, same drum loop)
 불붙은 paycheck, make it stack
 불붙은 paycheck, never back
-불붙은 paycheck, check that swag
-불붙은 paycheck, on the track
-
-불붙은 paycheck, make it loud
-불붙은 paycheck, in the crowd
 우린 올라가, no lag, no cap
 불붙은 paycheck, on the map
+
+[Verse 6]
+(Shouted male Korean rap, dry voice, same drum loop)
+paycheck 불붙어, 계속 burn
+매일 한 걸음, my own turn
+지나온 발자국, well earned
+아직 갈 길 멀어, more to learn
+
+새벽부터 밤까지, on the grind
+어둠을 뚫어, 내 빛 shine
+지나온 길은, 100% mine
+다시 go, one more time
+
+[Outro]
+(Instrumental fade, same 2-bar drum loop)
 ```
 
 ### 체크포인트
@@ -103,6 +136,9 @@ Run it up, 더 높이고
 - [ ] 훅 `불붙은 paycheck` 반복성 + 한국어 버스 자연스러움
 - [ ] Pitched-up 보컬 적용
 - [ ] 애드립 밀도
+- [ ] **전체 길이 2:30 이상** (Verse 6 확장 효과 검증)
+- [ ] Refrain 3회 모두 동일 에너지 유지 (마지막 Refrain 이후 Outro 직행, final drop 없음)
+- [ ] V3(크루) / V4(반격) / V5(상승) / V6(최종) 서사 구분 가능
 
 ---
 

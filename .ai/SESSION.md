@@ -1,8 +1,45 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-25 (4차 업데이트 — Suno 프롬프트 10단 방어막 구축 + 4곡 재설계)
+> Last updated: 2026-04-25 (5차 업데이트 — Rage Trap Style v3 + Verse 16 bar 표준 + 2곡 Verse 6 확장)
 
 ## 진행 중
+
+- **20-00 Paycheck/Rewrite 가사 Verse 6 확장 + Rage Style v3 + Verse 16 bar 표준 정립** (2026-04-25 5차)
+  - ✅ **외부 분석 검토** — GPT-5 등 다른 세션에서 받은 Rage Trap 비트 스위치 트러블슈팅 분석 (~14단 진단). 핵심 새 인사이트 수용:
+    - `supersaw`가 EDM 드롭 트리거 (그러나 완전 제거 시 rage 정체성 상실 → supersaw 유지, 다른 요소로 균형)
+    - Style Prompt 앞쪽이 Suno 우선순위 → 비트 고정 지시 앞쪽 배치
+    - Hook 8행 × 2회 + Final Hook 구조 자체가 Suno drop 유도 → Refrain 4행 축약 + Final 삭제
+    - `rage trap` 용어 후반 폭주 해석 경향 (단, 완화하면 rage 상실 → 용어 유지 + 내부 키워드 조정)
+    - Cover / Extend / 파라미터 낮춤 운영 처방
+  - ✅ **Rage Style Prompt v3 도출** — 균형점: `Korean rage trap, 150 BPM, same 2-bar trap drum loop throughout no beat switch no final lift, distorted sliding 808 bass hard clipped low end, rolling 1/16 hi-hats steady, supersaw 7-voice detuned sustained stab, simple dark bell melody, screamed raw shouted male Korean rap, chest voice, dry close vocal, sharp articulation, dense ad-libs between rap lines, raw uncut rage energy, gritty lo-fi saturation, hard rap only`
+    - 비트 고정 앞쪽 / supersaw 유지 / rage 정체성 유지 / `32nd triplet burst` 삭제 / `vocal chop` 삭제 / `mosh pit energy` → `raw uncut rage energy` / `loud master` 삭제 / `high density ad-lib layer` → `dense ad-libs between rap lines` (layer 제거)
+  - ✅ **EXCLUDE v2 13종** — rage 특화 (기존 10종과 상당히 다름)
+    - `EDM drop, vocal chop, vocal stutter, pitch-shifted vocals, beat switch, drum fill, double-time drums, halftime switch, breakbeat, glitch drums, riser, sung hook, 32nd triplet burst`
+    - 제거: `k-pop, melodic singing, four-on-the-floor, arpeggiated synth, synth FX, EDM FX`
+    - 추가: `EDM drop, vocal chop, vocal stutter, pitch-shifted vocals, beat switch, double-time drums, halftime switch, breakbeat, glitch drums, riser, 32nd triplet burst`
+  - ✅ **Paycheck 가사 Verse 6 확장** — `input/tracks/불붙은 paycheck (Paycheck on Fire).txt`
+    - 기존 Verse 2개 × 8행 + Hook 반복 → Verse 6개 × 8행 + Refrain 3번 구조
+    - 서사 아크 6단: 허슬(V1) → 의심 극복(V2) → 크루/자립(V3 NEW) → 반격/증명(V4 NEW) → 상승/지속(V5 NEW) → 최종 선언(V6 NEW)
+    - 기존 V3(shade/sent it back) 폐기 — V2와 80% 유사 문제
+    - Refrain 배치: V1 뒤 / V2-V3 뒤 / V4-V5 뒤 · V6 뒤 Outro 직행 (final drop 유도 차단)
+    - 라임 스킴 6Verse 교차 설계: V1 -eep · V2 -ack · V3 -ire/-own · V4 -op/-ight · V5 -ay/-est · V6 -urn/-ine
+    - Paycheck 파일에 `=== STYLE ===` / `=== EXCLUDE ===` 섹션 추가 (12-00 Afrobeats 포맷 준용)
+  - ✅ **Rewrite(씬에 침 뱉어) 가사 Verse 6 확장** — `input/tracks/씬에 침 뱉어 (Spit on the Scene).txt`
+    - V1/V2 12행 → 16행 확장 (각 4번째 블록 추가: V1 fake/week/peek/freak, V2 fake/make/stay/retake)
+    - V3-V6 NEW 16행씩 작성 (크루/반격/장악/선언)
+    - 구조: V1 → Pre-Hook → Refrain → V2 → V3 → Refrain → V4 → V5 → Pre-Hook → Refrain → V6 → Outro
+    - Pre-Hook 2번 (drill tension 빌드 특성 유지), Refrain 3번
+    - `[Hook]/[Final Hook]` → `[Refrain]` 통일 (Paycheck 구조와 통일)
+  - ✅ **Verse 16 bar 표준 정립** — `concept.md §LYRICS 작성 가이드` 기본 원칙 5번 추가
+    - "힙합 씬 표준. 짧은 Verse(8 bars)는 Suno 조기 종료 유도 + 곡 길이 1분대 문제 원인. 4행 × 4블록 = 16행이 기본"
+    - Style D 가사 구조 권장에 Verse bar 표기 통일 (`Verse 1 (16 bar) → Pre-Hook → Hook (chant) → Verse 2 (16 bar) → ...`)
+    - Style A/B/C는 기존부터 16 bar 표기 있었음
+  - ⚠️ **부분 미반영** — "일단 통과":
+    - concept.md Style A Template Style Prompt + EXCLUDE 전체 반영 실패 (Edit old_string mismatch)
+    - test-prompts.md 1번 Paycheck Style Prompt + EXCLUDE v3/v2 반영 보류
+    - paycheck.txt에만 Style v3 + EXCLUDE v2 반영됨 (파일 간 불일치 상태 의도적 유지)
+  - **현황**: Suno V5.5 재테스트 대기 — Paycheck/Rewrite 풀 가사 + Style A 기존(미반영)으로 먼저 생성 → 결과 보고 concept.md / test-prompts.md 전체 반영 여부 결정
+  - **남은 TODO**: (1) 3/4번 제목(`Come Up`/`Paranoia`) 사용자 확인. (2) concept.md Style A Template 반영 재시도 or 통과 확정. (3) Rewrite 파일 Style + EXCLUDE 섹션 추가 여부.
 
 - **20-00 Suno 프롬프트 대대적 튜닝** (2026-04-25 4차) — Wavvy 첫 힙합 시리즈 방어막 구축
   - ✅ **샘플링 키워드 4축 전부 추가** (사용자 요청: 샘플 소스 영어 무관)

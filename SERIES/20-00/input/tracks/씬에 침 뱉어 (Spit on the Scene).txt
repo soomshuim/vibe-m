@@ -4,10 +4,34 @@ BPM: TBD
 Key: TBD
 Saved: 2026-04-25
 Source: Suno V5.5 — user prompt `NY Drill Hiphop, rap lyrics. Korean. perfect rhyme use korean with english. about disrepect the scene with strong korean slang.`
+Edit:
+  - 2026-04-25 1차: Bridge 섹션 제거 (20-00 규칙 적용)
+  - 2026-04-25 2차: [Pre-Chorus]/[Chorus]/[Final Chorus] → [Pre-Hook]/[Refrain] 메타태그 교체 ([Hook] → [Refrain] 통일)
+  - 2026-04-25 3차: Verse 16 bar 표준 적용 (V1/V2 12행 → 16행 확장) + Verse 6까지 확장 (V3-V6 NEW) + 서사 아크 재설계
+
+서사 아크:
+  - V1: 가짜 씬 지적
+  - V2: 내 진정성 증명 (unedited / one take)
+  - V3: 내 크루/진짜 동료 (NEW)
+  - V4: 반격/판 뒤집기 (NEW)
+  - V5: 씬 장악/증명된 위치 (NEW)
+  - V6: 최종 선언/씬에 남는다 (NEW)
+
+라임 스킴 (각 Verse 4블록 × 4행):
+  - V1: 봐/가짜/trash/mash · 비밀/lethal/식어/찢어 · 겁나지/꺾이지/stain/name · fake/week/peek/freak
+  - V2: 남의 말/탈탈/박아/박살 · 표식처럼/깨져버려/답/slap · 숨지 못해/떨려/likes/likes · fake/make/stay/retake
+  - V3: real/feel/wheel/seal · strong/wrong/small/fall · check/reject/present/asset · fact/intact/pact/impact
+  - V4: shut/forgot/stop/drop · sharp/mark/flash/clash · out/route/mount/count · owned/throned/gone/shown
+  - V5: trend/end/defend/attend · move/prove/groove/rule · zone/known/grown/own · same/name/claim/flame
+  - V6: firm/earn/turn/burn · write/right/fight/bright · stays/ways/phase/raise · truth/roof/move/prove
 
 === LYRICS ===
 
+[Intro]
+(Instrumental, same 2-bar drum loop)
+
 [Verse 1]
+(Shouted male Korean rap, dry voice, same drum loop)
 씬에 발 담근 척, 니 꼴 좀 봐
 겉만 번지르르, 속은 다 가짜
 난 말 안 섞어, 네 냄새는 trash
@@ -23,19 +47,27 @@ Source: Suno V5.5 — user prompt `NY Drill Hiphop, rap lyrics. Korean. perfect 
 내 혀는 razor, 네 이름은 stain
 판 뒤집는 순간, 기억해 my name
 
+숨죽이고 보기만, 팔로워 다 fake
+한 줄 올려 놓고, 자랑 매 week
+나올 얼굴 없지, 다 뒤에 peek
+내 그림자만으로, 너네 freak
+
 [Pre-Hook]
+(Menacing, tension build, same drum loop)
 들어와 봐, feel the tension
 네 입 닫아, no permission
 한 번 더 봐, 이 scene is mine
 니 얕은 폼은 다 out of line
 
-[Hook]
+[Refrain]
+(Shouted chant refrain, dry voice, same drum loop)
 씬에 침 뱉어, 씬에 침 뱉어
 너흰 다 fake, 씬에 침 뱉어
 씬에 침 뱉어, 씬에 침 뱉어
 난 안 비켜, 씬에 침 뱉어
 
 [Verse 2]
+(Shouted male Korean rap, dry voice, same drum loop)
 너의 자랑거리? 다 남의 말
 복붙한 swag, 완전 밑천 탈탈
 난 골목 끝까지, 발자국 박아
@@ -51,20 +83,119 @@ X on my chest, 난 표식처럼
 I do it raw, you do it for likes
 난 진짜로 와, 넌 그냥 likes
 
+I'm unedited, 한 줄 없어 fake
+진짜 상처도 내 bars로 make
+너는 filter 뒤에, 숨어서 stay
+내 one take, 넌 retake retake
+
+[Verse 3]
+(Shouted male Korean rap, dry voice, same drum loop)
+내 crew는 작지만, 전부 real
+밤을 같이 찢어, same feel
+말 없이 움직여, steady wheel
+거품 없는 bars로, we seal
+
+형제라 부르면, 피보다 strong
+한 길로 가면, we never wrong
+등 뒤 맡기는, 숫자는 small
+진짜 앞에선, 가짜 다 fall
+
+한 놈씩 쳐다봐, 눈으로 check
+너처럼 흔들리면, 바로 reject
+약속한 시간에, 전부 present
+진심이 우리, only asset
+
+가짜 link 말고, 우리는 fact
+같이 쌓은 족적, sealed intact
+한 놈도 안 이탈, fully pact
+씬에 우리 ink, deep impact
+
+[Refrain]
+(Shouted chant refrain, dry voice, same drum loop)
+씬에 침 뱉어, 씬에 침 뱉어
+너흰 다 fake, 씬에 침 뱉어
+씬에 침 뱉어, 씬에 침 뱉어
+난 안 비켜, 씬에 침 뱉어
+
+[Verse 4]
+(Shouted male Korean rap, dry voice, same drum loop)
+허세 떨던 입들, 이제 다 shut
+trending하던 트윗, 다 forgot
+너네 hype cycle, 금방 stop
+내가 돈 벌 때, 너넨 just drop
+
+반격의 bar, 한 줄마다 sharp
+너네 약점은, 내 scope의 mark
+판 뒤집는 moment, 눈 깜빡 flash
+한 번만 쳐도, 전부 clash
+
+이름 지워져, 네 brand는 out
+내 흔적만 남아, 길 위 route
+너는 trend 뒤, 나는 mount
+가짜 팔로워, all just count
+
+scene은 내 거야, 이제 owned
+무너진 왕좌에, 내가 throned
+너의 loud talk, 이제 gone
+난 그냥 여기, 매일 shown
+
+[Verse 5]
+(Shouted male Korean rap, dry voice, same drum loop)
+자리 잡았지, legit trend
+말 없이 왕위, natural end
+이의 있어? go head, defend
+판 흔들면, I attend
+
+모두 지켜본다, 내 one move
+한 발 더 뗄수록, 증거 prove
+돌아볼 일 없어, keep my groove
+앞만 보고 간다, new rule
+
+각색 없이 raw, 이게 내 zone
+한 번 붙으면 결과, 다 known
+살아남는 자만, 계속 grown
+씬은 이제 mine, my own
+
+trend 지나도, I stay same
+매 곡이 증거, write my name
+의심하던 놈들, 이제 claim
+한 마디면 끝, I'm the flame
+
 [Pre-Hook]
+(Menacing, tension build, same drum loop)
 들어와 봐, feel the tension
 네 입 닫아, no permission
 한 번 더 봐, 이 scene is mine
 니 얕은 폼은 다 out of line
 
-[Hook]
+[Refrain]
+(Shouted chant refrain, dry voice, same drum loop)
 씬에 침 뱉어, 씬에 침 뱉어
 너흰 다 fake, 씬에 침 뱉어
 씬에 침 뱉어, 씬에 침 뱉어
 난 안 비켜, 씬에 침 뱉어
 
-[Final Hook]
-씬에 침 뱉어, 씬에 침 뱉어
-너흰 다 fake, 씬에 침 뱉어
-씬에 침 뱉어, 씬에 침 뱉어
-난 안 비켜, 씬에 침 뱉어
+[Verse 6]
+(Shouted male Korean rap, dry voice, same drum loop)
+씬에 뿌리 내려, deep and firm
+한 해 한 해, more I earn
+입 닫고 쌓아, that's my turn
+fake들은 fade, 나는 burn
+
+매일 한 줄씩, 이름 write
+sharp한 bar만, 내 right
+어제의 나와, 오늘 fight
+멈춤 없어, I shine bright
+
+가짜들 사라져, 내 자리 stays
+씬에 깊이 박혀, everlasting ways
+흔적은 selfish, 이건 my phase
+씬 안에 내가, always raise
+
+마지막 bar는, 오직 one truth
+진짜만 남아, 이게 내 roof
+한 번 시작하면, 계속 move
+끝까지 간다, 끝까지 prove
+
+[Outro]
+(Instrumental fade, same 2-bar drum loop)

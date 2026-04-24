@@ -151,7 +151,7 @@ Korean dark hardcore trap, 142 BPM, heavy 808 sustain decay punchy kick, fast hi
 **EXCLUDE**: `melodic singing, k-pop, four-on-the-floor, drum fill, double-time switch, sung hook, arpeggiated synth, electronic riser, synth FX, EDM FX`
 
 **가사 구조 권장**
-- Intro → Verse 1 → Pre-Hook → Hook (chant) → Verse 2 → Pre-Hook → Hook → Outro
+- Intro → Verse 1 (16 bar) → Pre-Hook → Hook (chant) → Verse 2 (16 bar) → Pre-Hook → Hook → Outro
 - **Bridge 금지** (Suno가 노래로 변주, breakdown도 제거)
 - Ad-lib 미니멀 (`Skrrt!` `Uh!` 정도)
 - 주제: 고립 · 불안 · 불면 · 자기혐오 · 야경 · 도시 고독 · 분노
@@ -253,6 +253,7 @@ Playlist | 20:00 | 🌃 AFTER HOURS | HARD HIP-HOP · DARK CITY · NIGHT GRIND |
 2. **한국어 가사 유지** (95%+ 권장, 훅·애드립 영어 OK)
 3. **Chest voice + Articulation 유지** (Wavvy Brand DNA)
 4. **200자 LYRICS QA 규칙 유지** (Style 필드와 별개)
+5. **Verse = 16 bars 표준** — 힙합 씬 표준. 짧은 Verse(8 bars)는 Suno 조기 종료 유도 + 곡 길이 1분대 문제 원인. 4행 × 4블록 = 16행이 기본. 기존 8행 Verse(Paycheck 등)는 차기 확장 시 16행 맞출 것
 
 ### 축별 가사 가이드
 

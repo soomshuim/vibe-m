@@ -1,4 +1,14 @@
 ---
+HANDOFF: Claude -> User (Rage Style v3 + Verse 16 bar 표준 + Paycheck/Rewrite Verse 6 확장 → Suno 재테스트 대기)
+Date: 2026-04-25 02:43
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 20-00 AFTER HOURS 외부 분석(GPT-5 등 타 세션 Rage Trap 비트 스위치 트러블슈팅) 검토 후 균형점 도출. **Rage Style v3**: 비트 고정 앞쪽 배치 + `supersaw` 유지(rage 정체성) + `32nd triplet burst` `vocal chop` `mosh pit energy` `loud master` 삭제 + `dense ad-libs between rap lines` + `raw uncut rage energy` + `rolling 1/16 hi-hats steady`. **EXCLUDE v2 13종** rage 특화 (`EDM drop, vocal chop, vocal stutter, pitch-shifted vocals, beat switch, drum fill, double-time drums, halftime switch, breakbeat, glitch drums, riser, sung hook, 32nd triplet burst`). **Paycheck(불붙은 paycheck) Verse 6 확장**: 서사 아크 6단(허슬→의심→크루→반격→상승→선언), V3 V2 복붙 문제 폐기, Refrain 3번(V6 뒤 Outro 직행), 각 Verse 라임 교차, Style+EXCLUDE 섹션 추가. **Rewrite(씬에 침 뱉어) Verse 6 확장**: V1/V2 12→16행, V3-V6 NEW 16행, 구조 `V1→PH→R→V2→V3→R→V4→V5→PH→R→V6→Outro` (Pre-Hook 2번, Refrain 3번, [Hook]→[Refrain] 통일). **Verse 16 bar 표준 정립**: concept.md §LYRICS 원칙 5번 추가 + Style D Verse bar 표기 통일. **부분 미반영**(사용자 "일단 통과"): concept.md Style A Template + test-prompts.md 1번 Style/EXCLUDE v3/v2 보류, paycheck.txt만 반영 (파일 간 불일치 의도적).
+Next-TODO: (1) Suno V5.5 재테스트 — Paycheck(풀 가사 V1-V6) / Rewrite(풀 가사 V1-V6) Custom Mode. (2) 3+ PASS 시 concept.md Style A / test-prompts.md 전체 v3/v2 반영 재시도. (3) 3/4번 제목(Come Up/Paranoia) 사용자 확인 후 적용. (4) Rewrite 파일 Style+EXCLUDE 섹션 추가 여부 결정. (5) Suno 곡 길이 검증 — 6 Verse 16 bar 기준 3:30-5:00 목표.
+Commits: (이번 record)
+---
+
+---
 HANDOFF: Claude -> User (Suno 프롬프트 10단 방어막 구축 완료 → Suno V5.5 4곡 재테스트 대기)
 Date: 2026-04-25 01:48
 Project: ~/Project/wavvy
