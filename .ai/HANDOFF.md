@@ -1,4 +1,14 @@
 ---
+HANDOFF: Claude -> User/다음 세션 Claude (Suno 가사 품질 FAIL + Claude 재작성 FAIL → 경로 3개 미결정, 다음 세션 이어감)
+Date: 2026-04-25 00:44 (3차 record — 세션 마감)
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 20-00 AFTER HOURS Suno 1차 테스트 실제 생성 결과 **가사 품질 FAIL**. 사용자 공유 샘플(가칭 "불붙은 paycheck" 훅)은 Suno 영어 rap 데이터 드리프트 기본값 — 영어 50%+ 범벅 + 미국 믹스테입 B급 클리셰(I don't sleep / got receipts / make it stack / no second chance) + 20-00 시간 감성 전무 + 메타 가사 촌스러움("Korean to English, check that swag"). **Style Prompt의 `singing in Korean` 태그만으로는 가사 내용 드리프트 방지 불가** — Suno는 영어 rap 학습 비중 절대적이라 Custom Mode로 가사 주입 필요. Claude가 ESCAPE 가사 재작성 시도했으나 **역시 FAIL** — (1) 라임 밀도 0 (어미 반복 "뒤집어/뒤집어" 수준), (2) 서정시·미문체로 빠짐("엘리베이터 거울에 내가 두 명" 등 래퍼 1인칭 아님), (3) 힙합 구어체·펀치라인·swag 부재, (4) Wavvy 사물·공간 중심 룰 집착으로 힙합 본연의 구어 어투 훼손. Claude 한계 인정 — 한국 하드 힙합 가사는 Huckleberry P / Paloalto / Fleeky Bang / HAON / QM 급 라임 craft + 구어 리듬감 필요, AI 1발 생성 무리. **다음 세션 경로 3개 미결정**: (A) 사용자 리드 + Claude 라임/구조 어시스트 — 15-00 방식(사용자 직접 제작 14/20) 계승. (B) 실존 Korean hard rap 5-10곡 가사 분석 → 라임 패턴·어휘 풀·구어 리듬 추출 문서화 → Suno Custom Lyrics 인젝션 + Claude 작성 템플릿. (C) Suno 자동 cherry-pick 반복. **Claude 추천: B + A 조합**.
+Next-TODO: (1) 다음 세션 시작 시 경로 A/B/C 또는 조합 선택. (2) B 선택 시: KC BUST IT DOWN / HAON 꼴통 / Fleeky Bang MY NAME IS / Odyssey.1 금도끼 은도끼 / QM 개미 / Huckleberry P READMISSION 트랙 등 실존 가사 수집·분석. (3) A 선택 시: 사용자가 ESCAPE 1-2 bar 초안 제시 → Claude 보강. (4) 경로 확정 후 Suno 4곡 재테스트 → 3+ PASS 시 20곡 확장. 산출물 보존: `SERIES/20-00/concept.md` v0.1 + `test-prompts.md` (4곡 Style Prompt는 음악 프로덕션용으로 유효, LYRICS 샘플만 재작성 대상).
+Commits: (이번 record)
+---
+
+---
 HANDOFF: Claude -> User (Suno 1차 테스트 4곡 프롬프트 준비 완료, 사용자 생성 대기)
 Date: 2026-04-25 (2차 record)
 Project: ~/Project/wavvy

@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-25 (2차 업데이트)
+> Last updated: 2026-04-25 (3차 업데이트 — Suno 가사 품질 이슈 + 다음 세션 경로 미결정)
 
 ## 진행 중
 
@@ -36,8 +36,27 @@
     - 3 `CLOCK OUT` (Boom bap, 90 BPM) — 퇴근 자전 서사·한강·막차
     - 4 `INSOMNIA` (Hard Trap, 142 BPM) — 불면·새벽 직전 내면
     - 각 곡: Style Prompt 200자 + EXCLUDE 3개 + LYRICS 샘플(메타태그 포함 ~190자) + 체크포인트 + FAIL 시 튜닝 가이드
-  - **현황: 사용자 Suno 테스트 대기 (4곡 × 2-3회 생성 → PASS/FAIL 피드백)**
-  - **종료 기준**: 3개 이상 PASS 시 Style Template 확정 → 20곡 확장 진행
+  - ⚠️ **Suno 1차 테스트 결과 (2026-04-25 3차)** — **가사 품질 FAIL**
+    - 사용자 공유 Suno 자동 생성 샘플("불붙은 paycheck" 훅) 분석 결과:
+      - 영어 비중 50%+ (미국 믹스테입 B급 클리셰: "I don't sleep / got receipts / keep it neat / no second chance / make it stack / check that swag")
+      - 훅 의미 없음 ("불붙은 paycheck" = 불+월급봉투 억지 비유)
+      - Suno 영어 rap 데이터 드리프트 기본값 (2010s 느낌)
+      - 20-00 시간 감성 제로 (퇴근/밤/도시/네온/한강/막차/야근 레퍼런스 전무)
+      - "Korean to English, check that swag" 메타 가사 자체가 촌스러움
+    - 근본 원인: `singing in Korean` 태그만으로는 **가사 내용 드리프트 방지 불가**. Suno는 영어 rap 학습 비중 절대적
+    - **Claude의 ESCAPE 재작성 시도도 실패**:
+      - 라임 밀도 0 (어미 반복 "뒤집어/뒤집어" 수준)
+      - 서정시·미문체로 빠짐 ("엘리베이터 거울에 내가 두 명")
+      - 힙합 구어체·펀치라인·swag 부재
+      - 래퍼 1인칭 아닌 3인칭 관찰자 시점
+      - "Wavvy 사물·공간 중심" 룰에 집착해 힙합 본연의 구어 어투 훼손
+  - 🔄 **다음 세션 경로 3개 제안 (미결정)**
+    - **A. 사용자 리드 + Claude 라임/구조 어시스트** — 사용자 1-2 bar 초안 → Claude 라임 보강·플로우 튜닝. 15-00 방식(사용자 직접 제작 14/20) 계승
+    - **B. 실존 Korean hard rap 가사 5-10곡 분석 → 라임 패턴·어휘 풀·구어 리듬 추출 문서** — KC BUST IT DOWN / HAON 꼴통 / Fleeky MY NAME IS / Odyssey.1 금도끼은도끼 등 레퍼런스 기반 스타일 템플릿
+    - **C. Suno 자동 가사 + cherry-pick 반복** — 재생성 여러 번 후 PASS 가사만 선택, 나머지 사용자 재작성
+    - **Claude 추천: B + A 조합** (레퍼런스 분석 → 사용자 리드 + Claude 어시스트)
+  - **현황: 사용자 다음 세션에 경로 선택 + Suno 테스트 재개 예정**
+  - **종료 기준 (미변경)**: 4곡 중 3개 이상 가사+음악 PASS 시 20곡 확장 진행
 
 - **15-00 PACK + YouTube 업로드 완료** (2026-04-20 00:18)
   - ✅ **썸네일 v1.0 확정** — `🕶️ AFTERNOON DRIVE` (Wavvy 로고 좌상단 + 15:00 / 메인 텍스트 하단 / 채널 카피 1줄). 후보 비교: DRIVE(평범) / WEEKEND DRIVE(v1.3 결정과 충돌) / GOING OUT(밤 뉘앙스+드라이브 SEO 누락) / NOON DRIVE(noon=12시 의미 충돌) → **AFTERNOON DRIVE** (시간대 명시 + 13-00 차별 + SEO)
