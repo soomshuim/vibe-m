@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-25
+> Last updated: 2026-04-25 (2차 업데이트)
 
 ## 진행 중
 
@@ -22,7 +22,22 @@
     - ZENE THE ZILLA(이상용, 1991 춘천) ≠ 조광일 (SMTM 10 우승자 별개)
     - KC는 레이블/콜렉티브 (Sik-K 설립 2023~, 멤버 Sik-K·HAON·Vangdale·NOWIMYOUNG·JMIN). 솔로 X
     - 한국 Jersey Drill 전담 아티스트 **미정립**. Fleeky Bang은 NY/UK drill
-  - **현황: concept.md v0.1 스캘폴딩 대기**
+  - ✅ **concept.md v0.1 스캘폴딩 완료** (2026-04-25) — `SERIES/20-00/concept.md` 생성
+    - Series DNA v0.1 (기존 12 시리즈 대비 포지션)
+    - 핵심 원칙: 힙합 가사 룰 예외 명시 (Chest voice · Articulation · 한국어 95%+는 유지)
+    - 4축 Style Templates (A Rage / B K-Drill / C Boom bap / D Hard Trap) — 각 200자 Style Prompt + EXCLUDE 3개 포함
+    - Track Map v0.1 4막 × 20곡 스켈레톤 (개별 곡 TBD, 15-00 역추출 방식 계승)
+    - YouTube Metadata v0.1 초안
+    - LYRICS 축별 작성 가이드
+    - Suno V5.5 생성 규칙 + QA 체크리스트
+  - ✅ **Suno 1차 테스트 프롬프트 4곡 준비 완료** — `SERIES/20-00/test-prompts.md`
+    - 1 `ESCAPE` (Rage, 150 BPM) — 퇴근 직후 점화·해방
+    - 2 `BLOCK` (K-Drill, 140 BPM) — 우리 동네·지역 프라이드 (02)
+    - 3 `CLOCK OUT` (Boom bap, 90 BPM) — 퇴근 자전 서사·한강·막차
+    - 4 `INSOMNIA` (Hard Trap, 142 BPM) — 불면·새벽 직전 내면
+    - 각 곡: Style Prompt 200자 + EXCLUDE 3개 + LYRICS 샘플(메타태그 포함 ~190자) + 체크포인트 + FAIL 시 튜닝 가이드
+  - **현황: 사용자 Suno 테스트 대기 (4곡 × 2-3회 생성 → PASS/FAIL 피드백)**
+  - **종료 기준**: 3개 이상 PASS 시 Style Template 확정 → 20곡 확장 진행
 
 - **15-00 PACK + YouTube 업로드 완료** (2026-04-20 00:18)
   - ✅ **썸네일 v1.0 확정** — `🕶️ AFTERNOON DRIVE` (Wavvy 로고 좌상단 + 15:00 / 메인 텍스트 하단 / 채널 카피 1줄). 후보 비교: DRIVE(평범) / WEEKEND DRIVE(v1.3 결정과 충돌) / GOING OUT(밤 뉘앙스+드라이브 SEO 누락) / NOON DRIVE(noon=12시 의미 충돌) → **AFTERNOON DRIVE** (시간대 명시 + 13-00 차별 + SEO)

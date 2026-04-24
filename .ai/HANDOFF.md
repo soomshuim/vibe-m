@@ -1,4 +1,14 @@
 ---
+HANDOFF: Claude -> User (Suno 1차 테스트 4곡 프롬프트 준비 완료, 사용자 생성 대기)
+Date: 2026-04-25 (2차 record)
+Project: ~/Project/wavvy
+Agent: Claude
+Summary: 20-00 AFTER HOURS 시리즈 기획 Phase 3 (concept.md v0.1 + Suno 테스트 준비) 완료. **concept.md v0.1** (`SERIES/20-00/concept.md`) 스캘폴딩: Series DNA v0.1 + 힙합 가사 룰 예외 원칙 명시 + 4축 Style Templates(A Rage/B K-Drill/C Boom bap/D Hard Trap, 각 200자 Prompt + EXCLUDE 3) + Track Map v0.1 4막×20곡 스켈레톤(15-00 역추출 방식 계승, 개별 곡 TBD) + YouTube Metadata v0.1 + LYRICS 축별 가이드 + Suno V5.5 생성 규칙 + QA 체크리스트. **Suno 1차 테스트 프롬프트 4곡** (`SERIES/20-00/test-prompts.md`): (1) ESCAPE/Rage 150BPM 퇴근 점화 (2) BLOCK/K-Drill 140BPM 지역 프라이드 02 (3) CLOCK OUT/Boom bap 90BPM 퇴근 서사 (4) INSOMNIA/Hard Trap 142BPM 불면 내면. 각 곡: Style Prompt 200자 + EXCLUDE 3개 + LYRICS 샘플(메타태그 포함 ~190자) + 축별 체크포인트 + FAIL 시 튜닝 가이드. 종료 기준: 3개 이상 PASS 시 Style Template 확정 → 20곡 확장.
+Next-TODO: (1) 사용자 Suno V5.5에서 4곡 각 2-3회 생성 → 최선 1개씩 선택. (2) PASS/FAIL 피드백 → Style 튜닝 or 20곡 확장 결정. (3) 20곡 PASS 누적 후 DNA/배분/4막 구조 역추출 → Track Map v1.0 확정.
+Commits: (이번 커밋)
+---
+
+---
 HANDOFF: Claude -> User
 Date: 2026-04-25
 Project: ~/Project/wavvy
