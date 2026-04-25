@@ -1,4 +1,21 @@
 ---
+HANDOFF: Claude -> User (20-00 /team 리서치 갭 점검 5/5 PASS — P0 리서치 2건 호출 대기)
+Date: 2026-04-25 21:55
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 20-00 concept.md v0.2 작성 전 추가 리서치 필요 점검 /team 회의 (Music Production Engineer / Music Data Analyst / A&R Genre Specialist + QA Round 2 인라인) **5/5 PASS**. 만장 합의: **P0 갭 2건 신규 리서치 필요** — (1) Korean Tuned Singing Rage Trap 정밀 분석 (B축 핵심, 1162줄 §3.6.2/3.6.3에 부분만 있음, Sik-K K-FLIP+ polished / Lil Moshpit GroovyRoom / Loopy MARNI / HAON SMTM12 후속 / 글로벌 dry vs tuned 비교 / Suno 키워드 분리), (2) Workout K-rap 페르소나 + 한국 운동 BGM 사례 (페르소나 가설 검증 — 차트 30대 = 멜로딕 트랩 우세 vs Workout = 빡센 트랩 가설 정합 미검증, 헬스/PT/홈트 BGM 트렌드, Spotify Korea Workout, 1세션 길이, BPM 분포). P1/P2 갭(YUMDDA·EK YAHO·dry/tuned Suno 키워드 분리표·Workout BPM 표준·K-Drill Workout 무드 전환)은 concept 작성 + Suno 테스트로 흡수. **핵심 위험**: Workout K-rap 페르소나 검증 안 하면 시리즈 가설 자체 흔들림. 시리즈 라벨 `💪 AFTER HOURS WORKOUT` 초안 OK 사용자 확인 / 통과 가사 복원 pending.
+Next-TODO:
+  (1) **researcher 2 에이전트 병렬 호출** — Korean Tuned Singing Rage Trap 정밀 분석 + Workout K-rap 페르소나·운동 BGM 사례 (1-2시간 예상)
+  (2) **결과 → 종합 보충 리포트** — `report/2026-04-25_workout-tuned-rage-supplement.md`
+  (3) **concept.md v0.2 재작성** — 신 4축 Style Templates 4종 + 보너스 빡센 붐뱁 + Workout 배치 룰 + EXCLUDE v3 + Track Map v0.2 + 시리즈 라벨 `💪 AFTER HOURS WORKOUT`
+  (4) 통과 가사 복원 결정 (사용자, pending)
+Key-Files:
+  - 회의: `~/Project/wavvy/meetings/2026-04-25_20-00-pre-concept-research-gaps.md`
+  - 보유 자산 4건: `report/2026-04-24_hard-hiphop-4axis-musical-deep.md` (1162줄) / `report/2026-04-25_chart-vs-awards-validation.md` / `report/2026-04-25_k-hiphop-trap-trends-deep.md` / `report/2026-04-25_suno-boom-bap-prompt-engineering-gpt.md`
+Commits: (이번 record commit)
+---
+
+---
 HANDOFF: Claude -> User (20-00 새 정체성 합의 — Workout + 빡센 트랩 4축 + 보너스 붐뱁, concept.md v0.2 작성 대기)
 Date: 2026-04-25 21:10
 Project: ~/Project/wavvy

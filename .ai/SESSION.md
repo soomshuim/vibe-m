@@ -463,9 +463,13 @@
 | **20-00 새 시리즈 정체성 합의 — Workout 컨셉 + 빡센 트랩 위주** | 사용자 결정: After Hours 퇴근/내면 → **AFTER HOURS WORKOUT** (저녁 8시 운동·그라인드). 페르소나: 25-35 직장인 헬스/PT/홈트/러닝. **빡센 트랩 위주 + Rage Trap dry voice + tuned singing 양립**. 새 4축: A Rage Dry Voice 5-6 / B Rage Tuned Singing 4-5 / C Hardcore Trap 5-6 / D K-Drill Workout 액센트 3-4 + **보너스 빡센 붐뱁 1-2** = 총 19-22곡. |
 | **GPT 빡센 붐뱁 딥리서치 자료 보존** | 사용자 제공 `Downloads/deep-research-report.md` (311줄, Suno 붐뱁 프롬프트 엔지니어링). 1162줄 §5 모던과 보완적 — 90s-2000s 정통 + 한국 토착 레퍼런스 3건(가리온 `무투/금기어` / 데드피 `Check My Swag` 공식 inst / 제이호 `LOCALS ONLY` 위스퍼 톤) + Suno 추천 프롬프트 6개 + Exclude 디테일. 보존: `SERIES/20-00/report/2026-04-25_suno-boom-bap-prompt-engineering-gpt.md` (출처 표기 추가). |
 
+| **/team 회의 — concept.md v0.2 작성 전 리서치 갭 점검** | Music Production Engineer / Music Data Analyst / A&R Genre Specialist (Workout 도메인 흡수) + QA Round 2 인라인. **5/5 PASS**. 만장 합의: P0 갭 2건(Korean Tuned Singing Rage Trap 음악 디테일 + Workout K-rap 페르소나·운동 BGM 사례) 신규 리서치 필요 → P1/P2 갭(YUMDDA / EK YAHO / dry/tuned Suno 키워드 분리표 / Workout BPM 표준)은 concept 작성 + Suno 테스트로 흡수. 핵심 위험: Workout K-rap 페르소나 검증 안 하면 시리즈 가설 자체 흔들림 (차트 30대 = 멜로딕 트랩 우세 vs Workout = 빡센 트랩 가설 정합 미검증). 회의: `meetings/2026-04-25_20-00-pre-concept-research-gaps.md` |
+
 ### 다음 단계
-- **20-00 시리즈 라벨 확정** — `💪 AFTER HOURS WORKOUT` / 부제 `밤 여덟시 워크아웃 트랩` (이모지 검토 가능)
-- **통과 가사 복원 결정** — `불붙은 paycheck` (A Dry Voice 정합 ✅) / `씬에 침 뱉어` (D K-Drill 톤 검증 △) git history(commit `ec04577` 이전)에서 복원 가능
+- **20-00 시리즈 라벨 확정** — `💪 AFTER HOURS WORKOUT` 초안 OK (사용자 확인)
+- **통과 가사 복원** — pending (보류, 사용자 결정)
+- **P0 리서치 2건 병렬 호출** — (1) Korean Tuned Singing Rage Trap 정밀 분석 (Sik-K K-FLIP+ / Lil Moshpit / Loopy MARNI / HAON SMTM12 후속 / 글로벌 dry vs tuned 비교 / Suno 키워드 분리) + (2) Workout K-rap 페르소나 + 한국 운동 BGM 사례 (헬스/PT/홈트 BGM, Spotify Korea Workout, Workout 1세션 길이, BPM 분포)
+- **결과 → 종합 보충 리포트 작성** — `report/2026-04-25_workout-tuned-rage-supplement.md`
 - **concept.md v0.2 재작성** — 신 4축 + 보너스 붐뱁 Style Templates + Track Map (Workout 배치 룰: 워밍업/메인 푸시/하이 인텐시티/그라인드 지속/쿨다운+마지막 폭발) + EXCLUDE
 
 ## 다음 할 일
