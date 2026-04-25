@@ -1,0 +1,31 @@
+Track: Yang Gang
+Type: C
+BPM: 150
+Key: Minor
+Length: 4:00
+
+=== STYLE ===
+Korean hip-hop/trap with halftime bounce at a loose 150 BPM feel, punchy 808 slides, crisp rapid hi-hats, and glitchy digital ear candy; verse rides sparse drums and bass with half-mumbled confident flows, pre-chorus tightens with filtered chops and rising noise, chorus lands on a chanty gang hook with doubled ad-libs and callouts, Vocal delivery is youthful, close-mic, with stacked whispers on key phrases, tape-stutter fills, reverse swells, and short delay throws on the hook, Bright, aggressive, internet-native mix with glossy low end and playful edge, theme, rap, playful, emotional, glitch, hip-hop
+
+=== LYRICS ===
+[Verse 1]
+새벽에 떠 있는 내 코인
+차트는 춤춰, 우린 still going
+텅 빈 지갑도 웃어버려
+댓글창 속에서 꿈을 키워
+
+(생략 — 2 Verse + 2 Pre-Chorus + 2 Chorus + Bridge + Final Chorus 구조)
+
+[Chorus]
+Yang Gang, Yang Gang
+우린 흔들려도 가
+Yang Gang, Yang Gang
+밈 위에 꿈을 쌓아
+...
+
+=== META ===
+RUBRIC v1.3 매칭: C Hardcore Trap (chant gang hook 변종)
+PASS 일자: 2026-04-26
+사용자 평가: 생각보다 아주 좋았어. 결과는 minor + 확실한 workout 컨셉.
+v0.3 변경: Style Prompt와 결과 갭 (Style은 bright/playful, 결과는 minor/workout). 결과 우선.
+v0.3 변경: [Pre-Chorus] [Chorus] [Bridge] [Final Chorus] 메타태그 인정

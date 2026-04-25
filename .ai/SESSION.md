@@ -1,8 +1,52 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-26 (9차 업데이트 — HARD_HIPHOP_RUBRIC v1.1 + 자동화 스크립트 2건 + Hard 60% 정책 반영)
+> Last updated: 2026-04-26 (10차 업데이트 — 7곡 PASS 검토 + RUBRIC v1.3 + concept v0.3 + 13곡 분포 + F축 신설 + 변주 6곡 전략)
 
 ## 진행 중
+
+- **20-00 7곡 일괄 검토 + RUBRIC v1.3 + concept v0.3 + 13곡 분포 + F축 신설** (2026-04-26 10차)
+  - ✅ **7곡 일괄 검토 PASS** (사용자 결과물 정성 평가 우선)
+    - 1. Rewrite (D K-Drill) — 90점, NY/Brooklyn drill hybrid
+    - 2. Bottom to the Top (C lazy monotone) — chest voice + 808
+    - 3. Fake (C 디스 sarcastic) — Hook "Fake! Fake!" 강력
+    - 4. Boomerang (C 디스 sarcastic) — Hook "부메랑" 강력
+    - 5. Paycheck (A Rage Dry, 매칭 정정 B→A) — 대만족 / 가사 메타 우선
+    - 6. Cold Stack (F Faster Dark Trap, 신규 축) — 새로운 스타일
+    - 7. Yang Gang (C chant gang hook) — 결과 minor + workout
+  - ✅ **/coach 옵션 2 채택** (B축 우선 + boombap 보너스 + 변주 베이스 활용 균형)
+  - ✅ **RUBRIC v1.3 보정 7개 항목** (`MASTER/rubrics/HARD_HIPHOP_RUBRIC.md`):
+    1. H4 한국어 비중 룰 → 권장만 감점 X (코드스위치는 한국 본가 표준)
+    2. 메타태그 [Bridge] [Pre-Chorus] [Chorus] [Final Chorus] **인정** (이전 v1.0 금지 룰 폐지)
+    3. **F축 신설** — Faster Dark Trap 165-180 BPM hub (Cold Stack 후행 인정)
+    4. C축 톤 분기 4가지 명시 (husky/distorted/muddy / lazy monotone deadpan / 디스 sarcastic / chant gang hook)
+    5. B축 introspective laid-back 변종 명시 (Travis Scott Astroworld)
+    6. BPM 룰 확장 140-160 → 140-180
+    7. 사운드 우선 정책 명문화 — "가사 내용 크게 중요하지 않아, 사운드 톤앤매너만" (사용자 정정)
+  - ✅ **concept.md v0.2 → v0.3** (`SERIES/20-00/concept.md`)
+    - 곡수 20곡 → **13곡 축소** (사용자 "지금까지 7곡 + 변주 6곡")
+    - 분포: **A 2 / B 2 / C 4 / D 2 / E 1 / F 2 = 13곡** (Hard A+C+D+F = 10곡 77%, Hard 60% 정책 충족)
+    - 변주 6곡 슬롯: A 변주 1 / B 신규 2 / D 변주 1 / F 변주 1 / E 보너스 신규 1
+    - Track Map 4막 × 13곡 스켈레톤 재작성
+    - 5축 + 보너스 Style Templates (7곡 PASS Style Prompt 그대로 인용)
+    - EXCLUDE v4 (F축 추가)
+    - QA 체크리스트 사운드 우선
+  - ✅ **`check_series_gate.sh` v1.3 수정**:
+    - TARGET 13곡 + F축 추가
+    - Hard 60% minimum threshold (정확 60% → 60%+ 충족)
+    - 시리즈 길이 60-90분 → **40-65분** (13곡 기준)
+    - S6 룰 완화 (마지막 1-2곡 중 하나는 B/E)
+    - 12-00 시리즈로 재테스트 통과 (다른 RUBRIC FAIL 정상)
+  - ✅ **7곡 메타 파일 생성** (`SERIES/20-00/input/tracks/03~11_*.txt`)
+    - Track Map v0.3 슬롯 정착 (03/04/05/07/08/10/11)
+    - Style Prompt + 가사 요약 + RUBRIC 매칭 + PASS 일자 메타
+    - 변주 슬롯 비어 있음 (01/02/06/09/12/13)
+  - ⚠️ **남은 변주 6곡** (사용자 작업, 1-2시간):
+    - A 변주 1 (Paycheck Style 베이스, 신규 가사)
+    - B 신규 2 (베이스 없음, RUBRIC v1.3 §Style B Suno Prompt 2종 활용)
+    - D 변주 1 (Rewrite Style 베이스, 다른 가사)
+    - F 변주 1 (Cold Stack Style 베이스, 다른 가사)
+    - E 보너스 신규 1 (붐뱁 Style)
+  - **남은 TODO**: (1) 변주 6곡 Suno 작업. (2) 6곡 결과 PASS/FAIL → RUBRIC v1.4 미세 조정 필요 시. (3) 13곡 누적 후 `check_series_gate.sh` PASS 검증. (4) 시리즈 패키징 (썸네일·YouTube 메타). (5) 미해결 5건 다음 라운드 (Loopy MARNI 청취 / K-FLIP+ BPM / 헬스 인플루언서 BGM / Spotify Korea Workout / YouTube Music).
 
 - **20-00 HARD_HIPHOP_RUBRIC v1.1 + 자동화 스크립트 2건 + Hard 60% 정책 반영** (2026-04-26 9차)
   - ✅ **/team Decision Meeting** (실행 플랜): PL + EL Round 1 + QA Round 2 만장 (평균 93점). 순서: 루브릭 v1.0 → 사용자 검토 → 스크립트 + Suno 병렬. MVP 정책 (스크립트 50 키워드 + 6 게이트, 단위 테스트 v1.1). 회의록: `meetings/2026-04-26_20-00-genre-gate-execution-plan.md`

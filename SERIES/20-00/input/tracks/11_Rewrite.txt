@@ -1,0 +1,35 @@
+Track: Rewrite (씬에 침 뱉어)
+Type: D
+BPM: 140
+Key: D Minor
+Length: 3:00
+
+=== STYLE ===
+NY drill, Brooklyn drill hybrid, 140 BPM, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop D minor, menacing atmosphere, aggressive guttural male rap deadpan flow, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, crisp articulation
+
+=== EXCLUDE ===
+EDM drop, vocal chop, vocal stutter, pitch-shifted vocals, beat switch, drum fill, double-time drums, halftime switch, breakbeat, glitch drums, riser, sung hook, 32nd triplet burst
+
+=== LYRICS ===
+[Intro]
+(Instrumental, same 2-bar drum loop)
+
+[Verse 1]
+씬에 발 담근 척, 니 꼴 좀 봐
+겉만 번지르르, 속은 다 가짜
+난 말 안 섞어, 네 냄새는 trash
+입만 터는 kid, 손은 늘 crash
+
+(생략 — 4 Verse × 16 + 3 Refrain 구조)
+
+[Refrain]
+씬에 침 뱉어, 너흰 다 fake
+난 안 비켜, I own this place
+씬에 침 뱉어, no mistake
+네 판을 찢어, I leave no trace
+
+=== META ===
+RUBRIC v1.3 매칭: D K-Drill (NY/Brooklyn drill hybrid)
+PASS 일자: 2026-04-26
+8-Factor: 90/100 PASS
+사용자 평가: 결과물 OK

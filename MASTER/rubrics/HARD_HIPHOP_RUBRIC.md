@@ -1,18 +1,30 @@
 # Korean Hard Hip-Hop Rubric
 
-Version: 1.1
+Version: 1.3
 Last Updated: 2026-04-26
 Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 
-> **v1.1 변경 (2026-04-26)**: Hard 60% 정책 사용자 결정 반영. 곡수 분포 A 4 / B 5 / C 5 / D 3 / 보너스 3 = 20곡 확정 (Hard A+C+D 12곡 60% / Non-Hard B+보너스 8곡 40%).
+> **v1.3 변경 (2026-04-26 — 7곡 PASS 후 일괄 보정)**:
+> 1. **H4 한국어 비중 룰 → 권장만 (감점 X)** — 코드스위치는 한국 본가 표준 (사용자 정정)
+> 2. **메타태그 `[Bridge]` `[Pre-Chorus]` `[Chorus]` `[Final Chorus]` 인정** — 결과물 좋으면 OK (이전 v1.0 금지 룰 폐지)
+> 3. **F축 신설**: Faster Dark Trap (180 BPM hub, Cold Stack 스타일)
+> 4. **C축 톤 분기 4가지 명시**: husky/distorted/muddy / **lazy monotone deadpan** (v1.2) / **디스 컨셉 sarcastic** / **chant gang hook 변종**
+> 5. **B축 톤 분기 명시**: melodic autotune sing-rap / **introspective laid-back** (Travis Scott Astroworld 톤)
+> 6. **BPM 룰 확장**: 메인 4축 140-160 → 140-180 (F축 포함)
+> 7. **사운드 우선 정책 명문화** — 가사 가중치 ↓, BPM/사운드 톤앤매너 우선 (사용자 정정 2026-04-26 "가사 내용 크게 중요하지 않아")
+
+> **v1.2 변경 (2026-04-26)**: H5 Hook 룰 완화 (Verse 4+ 모놀리식 인정), H4 한국어 80% 완화, C1 lazy monotone 톤 분기 추가
+> **v1.1 변경 (2026-04-26)**: Hard 60% 정책 (A+C+D+F = 60% / B+E = 40%)
 
 > **Based on**:
-> - `SERIES/20-00/concept.md` v0.2 (4축 + 보너스 곡수 절충)
+> - `SERIES/20-00/concept.md` v0.3 (13곡 분포, 변주 6곡)
 > - `SERIES/20-00/report/2026-04-25_workout-tuned-rage-supplement.md` (Section A·B 통합)
-> - `meetings/2026-04-26_20-00-genre-gate-rubric-design.md` (/team 만장 합의 평균 94.6점)
+> - `meetings/2026-04-26_20-00-genre-gate-rubric-design.md` (/team 만장 합의)
+> - 7곡 PASS 사례 검증 (Rewrite·Bottom to the Top·Fake·Boomerang·Paycheck·Cold Stack·Yang Gang)
 >
 > **시리즈 정체성**: Korean Workout Hip-Hop 빈자리 (글로벌 Apple Music Hip-Hop Workout 외산 트랩 우세, Korean rap 0%)
 > **페르소나**: 25-35 한국 직장인, 저녁 8시 운동 (헬스/PT/홈트/러닝)
+> **최종 곡수 (v1.3)**: **13곡** (A 2 / B 2 / C 4 / D 2 / E 1 / F 2, Hard 10/13 = 77%)
 
 ---
 
@@ -20,69 +32,98 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 
 | # | Gate | 기준 | 자동/수동 |
 |---|------|------|----------|
-| H1 | **BPM** | 86-95 (붐뱁) OR 140-160 (Rage·Trap·K-Drill) | 수동 |
-| H2 | **Drum Pattern** | 808 + 1/16 hi-hat steady (메인 4축) OR dusty kick + rim snare swing (붐뱁). Pop kick·EDM kick = FAIL | 수동 |
-| H3 | **Bass** | 808 sub-bass (메인 4축) OR walking upright bass (붐뱁). Pop sub bass·EDM bass·synth pop bass = FAIL | 수동 |
-| H4 | **Vocal — Korean Hard Rap** | 한국어 95%+ (D K-Drill만 75% 예외) + chest voice + sharp articulation. Pop singing·falsetto·thin head voice = FAIL | 수동 |
-| H5 | **Hook 존재** | 1-2마디 반복 hook + ad-lib layer (Rage·Trap·K-Drill) OR multisyllabic punchline (붐뱁). Hook 부재 = FAIL | 수동 |
-| H6 | **EXCLUDE 공통** | EDM drop · beat switch · sung melodic chorus · k-pop 진입 = FAIL. Suno Style Prompt EXCLUDE 키워드 검증 | 자동 |
-| H7 | **Workout 사운드 정합** | (1) BPM 90-180 안 / (2) 텐션 곡선 운동 단계 매칭 가능 / (3) 곡 길이 2:30-3:45 (붐뱁 3:45까지). 모두 충족 = PASS, 1개 이상 FAIL = 재작성 | 수동 |
+| H1 | **BPM** | 86-95 (붐뱁 E) OR **140-180** (메인 5축: A/B/C/D/F) | 수동 |
+| H2 | **Drum Pattern** | 808 + 1/16 hi-hat steady (메인 5축) OR dusty kick + rim snare swing (붐뱁). Pop kick·EDM kick = FAIL | 수동 |
+| H3 | **Bass** | 808 sub-bass (메인 5축) OR walking upright bass (붐뱁). Pop sub bass·EDM bass·synth pop bass = FAIL | 수동 |
+| H4 | **Vocal — Korean Hard Rap** | chest voice + sharp articulation. Pop singing·falsetto·thin head voice = FAIL. **한국어 비중은 권장 (60%+)이지만 감점 X — 코드스위치는 한국 본가 표준** | 수동 |
+| H5 | **Hook 존재 OR 모놀리식 Verse** | 1-2마디 반복 hook + ad-lib layer OR Verse 4+ 모놀리식 구조 OR multisyllabic punchline (붐뱁). 셋 중 하나 충족 시 PASS | 수동 |
+| H6 | **EXCLUDE 공통** | EDM drop · beat switch · sung melodic chorus · k-pop 진입 = FAIL. **단 EXCLUDE Style Prompt 미명시는 경고만 (Suno 자동 처리 OK 시 PASS)** | 자동 (소프트) |
+| H7 | **Workout 사운드 정합** | (1) BPM 90-180 안 / (2) 텐션 곡선 운동 단계 매칭 가능 / (3) 곡 길이 2:30-4:30 (변주 곡 길이 확장 인정). 모두 충족 = PASS | 수동 |
 | H8 | **콘텐츠 회피** | 무차별 폭력·살해·총기·마약·혐오 직접 묘사 = FAIL. K-Drill 본가 어휘(갱·크루·블록·동네·디스) 회피 X. 50 키워드 5카테고리 grep | 자동 (`check_lyric_avoid.sh`) |
 
-> **자동화 비율**: H6 + H8 자동 → 실질 수동 6개 (12-00 AFROBEATS와 동등 운영 부담)
+> **v1.3 정책 변화**:
+> - **사운드 톤앤매너 우선** — H1·H2·H3·H7이 핵심 결정 게이트. H4·H5·H6는 완화 (결과물 정성 평가 우선)
+> - 가사 평가는 H8 회피 영역만 강제. H4 한국어 비중·메타태그 구조는 권장만
+> - **자동화 비율**: H8 자동 + H6 소프트 → 실질 수동 6개
 
 ---
 
-## Style-Specific Gates (13개)
+## Style-Specific Gates (15개) — 7곡 PASS 사례 반영
 
-### Style A: Rage Dry Voice (3개) — 4곡 (Hard)
-
-| # | Gate | 기준 |
-|---|------|------|
-| A1 | **Vocal Delivery — Dry** | screamed / yelled / raw shouted, **NO autotune**. Suno Style Prompt에 `no autotune, no pitch correction` EXCLUDE 명시 필수 |
-| A2 | **Master Loudness — Blown-out** | brick-walled mastering, -6 LUFS 수준, blown-out 의도. Polished glossy mix = FAIL (B축으로 sliding) |
-| A3 | **Reverb — Short Raw** | static decay <1초, raw close-mic. Cathedral reverb · large hall = FAIL (B축으로 sliding) |
-
-> **참조**: Playboi Carti `Whole Lotta Red` / Yeat 일부 / Ken Carson. Korean 토착 풀: Loopy `MARNI` 일부 + Lil Moshpit 비트 일부 (PUBLIC ENEMY 161 BPM, E minor 확정)
-
-### Style B: Rage Tuned Singing (4개) — 5곡 (Non-Hard) ★ 메인 hub
+### Style A: Rage Dry Voice — 2곡 (Hard, 베이스: Paycheck)
 
 | # | Gate | 기준 |
 |---|------|------|
-| B1 | **Vocal Delivery — Tuned** | melodic autotuned sing-rap delivery, **autotune 시그니처 필수** (Antares Auto-Tune retune 5-15ms 추정). Dry shouted = FAIL |
-| B2 | **Hook — Melodic Chorus** | melodic chorus 명확 (verse-chorus 구조 보존). Chant 위주 hook = FAIL |
-| B3 | **Reverb — Cathedral** | cathedral reverb plate large hall (Travis Scott 시그니처). Short raw decay = FAIL |
-| B4 | **Korean KC vangdale 광택 디자인** | mastering -7 LUFS, polished glossy mix, candied vocal. Blown-out = FAIL |
+| A1 | **Vocal Delivery — Dry/Shouted** | shouted / yelled / raw raw / dry voice. Style Prompt 또는 가사 메타에 `Shouted male Korean rap, dry voice` 명시 (Paycheck 패턴) |
+| A2 | **Master Loudness** | brick-walled mastering 또는 raw close-mic. Polished glossy mix = B축으로 sliding 권장 |
+| A3 | **Reverb** | short raw 또는 static decay |
 
-> **참조**: Travis Scott `Astroworld` 톤 / Don Toliver `Hardstone Psycho` / **Sik-K × HAON `ALBUM ON THE WAY!` (2023-05-18)** / **Sik-K × Lil Moshpit `K-FLIP+` (2025-03-17, KMA 2025 Best Rap)** / KCTAPE Vol.2 / MOLLAK (Female 인접). NOWIMYOUNG `LUXURY TAPE`은 electropop 비중 → "인접 사례"로만 참조
+> **참조 (글로벌)**: Playboi Carti `Whole Lotta Red` / Yeat 일부 / Ken Carson
+> **Korean 토착 풀**: Loopy `MARNI` 일부 + Lil Moshpit 비트 (PUBLIC ENEMY 161 BPM)
+> **Wavvy PASS 사례**: Paycheck (2026-04-26, BPM 150, "softened tight 808 + introspective" Style + "Shouted dry voice" 가사 메타 충돌이지만 결과 rage 정합)
 
-### Style C: Hardcore Trap (2개) — 5곡 (Hard) ★ Workout 표준
-
-| # | Gate | 기준 |
-|---|------|------|
-| C1 | **Vocal Delivery — Husky** | husky / distorted / muddy 딜리버리, chest voice dry close. Melodic singing = FAIL |
-| C2 | **Bass + Piano** | deep distorted 808 sub-bass moving line + dark minor key piano stab loop. Pop piano·major key bright = FAIL |
-
-> **참조**: ZENE THE ZILLA · Ash Island · Loopy (UNWANTED WRLD 시기) · EK · KWAII
-
-### Style D: K-Drill 액센트 (3개) — 3곡 (Hard)
+### Style B: Rage Tuned Singing — 2곡 (Non-Hard, 신규 작성)
 
 | # | Gate | 기준 |
 |---|------|------|
-| D1 | **Bass — Sliding 808** | sliding 808 bass with portamento glide (UK/NY Drill 시그니처). Static 808 = FAIL |
-| D2 | **Drum — Drill Snare** | drill snare with skippy hi-hat patterns. Standard trap snare/hi-hat = FAIL |
-| D3 | **본가 무드 보존** | 한국어 된소리/거센소리(ㄲ ㄸ ㅃ ㅋ ㅌ) 악센트 + 다크 minor key piano/flute melody. 가사 리라이트 강제 X (본가 무드 자유 — 디스·반항·도시·자기 서사) |
+| B1 | **Vocal Delivery — Tuned/Melodic** | melodic autotuned sing-rap delivery. Antares Auto-Tune retune 5-15ms 추정 |
+| B2 | **Hook — Melodic Chorus** | melodic chorus 명확 (verse-chorus 구조 보존) |
+| B3 | **Reverb — Cathedral** | cathedral reverb plate large hall (Travis Scott 시그니처) **OR** introspective laid-back 톤 (Don Toliver `Hardstone Psycho`) |
+| B4 | **Korean KC vangdale 광택 디자인 (선택)** | mastering -7 LUFS, polished glossy mix |
 
-> **참조**: Fleeky Bang · Blase · Silkybois · deadbois · NO:EL. **글로벌 사례**: UK Drill / NY Drill = Workout BGM 카테고리 자리 잡음 (Spotify KaiverickDigital 1,000+곡)
+> **B축 톤 분기 (v1.3)**:
+> - 표준 melodic autotune sing-rap (Travis Scott Astroworld)
+> - **introspective laid-back 변종** (Don Toliver `Hardstone Psycho`, "softened 808 + light mix voice + smooth legato + introspective" 톤)
+>
+> **참조 (글로벌)**: Travis Scott / Don Toliver / SoFaygo / Destroy Lonely
+> **Korean 토착 풀**: Sik-K × HAON · Sik-K × Lil Moshpit `K-FLIP+` · MOLLAK (Female 인접)
 
-### Style E: 빡센 붐뱁 (Bonus, 2개) — 3곡 (Non-Hard)
+### Style C: Hardcore Trap — 4곡 (Hard, 베이스: Bottom to the Top·Fake·Boomerang·Yang Gang)
+
+| # | Gate | 기준 |
+|---|------|------|
+| C1 | **Vocal Delivery (4가지 톤 분기)** | husky/distorted/muddy **OR** lazy monotone deadpan layback **OR** confident sarcastic 디스 톤 **OR** chanty gang hook + close-mic stacked whispers. 모두 chest voice + sharp articulation 공통 |
+| C2 | **Bass + Atmosphere** | deep distorted 808 sub-bass moving line + dark minor key piano stab loop / synth bell melody / heavy bass + minimal |
+
+> **C축 4가지 톤 분기 (v1.3)**:
+> 1. **husky/distorted/muddy** (표준, ZENE THE ZILLA·Ash Island·Loopy 시기)
+> 2. **lazy monotone deadpan layback** (Bottom to the Top, Larry June 영향)
+> 3. **confident sarcastic 디스 컨셉** (Fake·Boomerang)
+> 4. **chant gang hook + close-mic stacked whispers** (Yang Gang, "halftime bounce + glitchy ear candy + stacked chant-style gang vocals" 변종)
+>
+> **참조**: ZENE THE ZILLA · Ash Island · Loopy (UNWANTED WRLD) · EK · KWAII
+
+### Style D: K-Drill 액센트 — 2곡 (Hard, 베이스: Rewrite)
+
+| # | Gate | 기준 |
+|---|------|------|
+| D1 | **Bass — Sliding 808 Portamento** | sliding 808 bass with portamento glide (UK/NY/Brooklyn Drill 시그니처) |
+| D2 | **Drum — Drill Snare + Tresillo** | drill snare with skippy hi-hat patterns / tresillo 3+3+2 polyrhythm hi-hat |
+| D3 | **본가 무드 보존** | 한국어 된소리/거센소리(ㄲ ㄸ ㅃ ㅋ ㅌ) 악센트 + dark minor key piano/flute melody. 가사 자유 (디스·반항·도시·자기 서사) |
+
+> **참조**: Fleeky Bang · Blase · Silkybois · deadbois · NO:EL
+> **Wavvy PASS 사례**: Rewrite (2026-04-26, BPM 140, NY/Brooklyn drill hybrid, tresillo hi-hats, D minor, 90점)
+
+### Style E: 빡센 붐뱁 (Bonus) — 1곡
 
 | # | Gate | 기준 |
 |---|------|------|
 | E1 | **Drum — Dusty + Walking Bass** | dusty drums with vinyl crackle texture + walking upright bass + rim-shot snare + head-nod swing |
-| E2 | **Lyricism — 다음절 라임** | dense multisyllabic rhyme + 90s East Coast vernacular + 한국어 vernacular. 단순 단음절 라임 = FAIL |
+| E2 | **Lyricism — 다음절 라임** | dense multisyllabic rhyme + 90s East Coast vernacular + 한국어 vernacular |
 
-> **참조**: 가리온 · Deepflow · Huckleberry P · Paloalto · Kid Milli · QM · 다이나믹 듀오. 리서치 자산: `report/2026-04-25_suno-boom-bap-prompt-engineering-gpt.md`
+> **참조**: 가리온 · Deepflow · Huckleberry P · Paloalto · Kid Milli · QM · 다이나믹 듀오
+> **Wavvy PASS 사례**: 없음 (변주 6곡에서 1곡 신규 작성 예정)
+
+### Style F: Faster Dark Trap (신규 v1.3) — 2곡 (Hard, 베이스: Cold Stack)
+
+| # | Gate | 기준 |
+|---|------|------|
+| F1 | **BPM 165-180** | 메인 4축 표준 140-160 초과 영역. HIIT 운동 단계 직격 |
+| F2 | **Drum — Triplet/Stutter Hi-hat** | rolling 808 + ultra-tight triplet and stuttered hi-hats + punchy snares. double-time/triple-time bursts 인정 (drop으로 안 가는 한) |
+| F3 | **Hook — Stacked Chant Gang Vocals** | stacked chant-style gang vocals on hook + Korean-English bilingual rap |
+
+> **참조 (글로벌)**: Playboi Carti `Music` (2025) 일부 + Yeat 빠른 트랙
+> **Wavvy PASS 사례**: Cold Stack (2026-04-26, BPM 180, "Even faster dark trap, rolling 808, triplet hi-hats, stacked chant gang vocals" — 신규 축으로 인정)
 
 ---
 
@@ -92,12 +133,12 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 |---|--------|------|------|---------|
 | F1 | **Trap Groove** | 15 | 808 + 1/16 hi-hat steady, locked drum pattern. 붐뱁은 dusty kick + swing groove | concept.md §Style Templates |
 | F2 | **808/Bass** | 10 | 베이스 디자인 (distorted/sliding/portamento), 킥과 sync, 저음 임팩트 | Section A.2.2 |
-| F3 | **Hook & Ad-libs** | 15 | 1-2마디 hook + ad-lib stack 밀도. 붐뱁은 multisyllabic punchline 밀도 | Section A.3 |
-| F4 | **Korean Vocal Identity** | 15 | Suno 한국어 발음 명료도 + 보컬 톤 정합 (A=raw shouted / B=autotuned melodic / C=husky / D=accent / E=raw chest). **음성·발음·톤만 평가, 가사 내용 X** | concept.md §Style Templates 보컬 디스크립터 |
-| F5 | **Energy Arc** | 10 | Verse → Hook 텐션 빌드, drop 없이도 텐션 유지, 곡 후반 폭주 X | concept.md §LYRICS 가이드 |
-| F6 | **Workout BPM 단계 매칭** | 10 | 워밍업 100-120 / 메인 130-150 / HIIT 140-180 / 쿨다운 90-110 중 어디 매칭되는지 분류. **페이스·반복 청취 피로도는 Series Gate로 분리** | concept.md §Workout 배치 룰 |
-| F7 | **Production** | 15 | 믹스 분리, 보컬 포워드, 마스터링 톤 (A=blown-out / B=glossy -7 LUFS / C=gritty / D=dark / E=warm dusty). EQ·리버브·압축 적정성 | Section A.2 |
-| F8 | **장르 정체성 (4축 정합)** | 10 | Hard Hip-Hop으로 인식되는가? 시리즈 4축 + 보너스 5종 중 정확히 1개에 매칭되는가? Pop·R&B·EDM 이탈 = FAIL | 종합 판단 |
+| F3 | **Hook & Ad-libs** | 15 | 1-2마디 hook + ad-lib stack 밀도 OR 모놀리식 Verse 4+ OR multisyllabic punchline | Section A.3 |
+| F4 | **Korean Vocal Identity** | 15 | Suno 한국어 발음 명료도 + 보컬 톤 정합 (5축별). **음성·발음·톤만 평가, 가사 내용 평가 X** | concept.md §Style Templates 보컬 디스크립터 |
+| F5 | **Energy Arc** | 10 | Verse → Hook 텐션 빌드, drop 없이도 텐션 유지 | concept.md §LYRICS 가이드 |
+| F6 | **Workout BPM 단계 매칭** | 10 | 워밍업 100-120 / 메인 130-150 / HIIT 140-180 / 쿨다운 90-110 분류 | concept.md §Workout 배치 룰 |
+| F7 | **Production** | 15 | 믹스 분리, 보컬 포워드, 마스터링 톤 (5축별 + 톤 분기). EQ·리버브·압축 적정성 | Section A.2 |
+| F8 | **장르 정체성 (5축 정합)** | 10 | Hard Hip-Hop으로 인식 + 시리즈 5축 + 보너스 6종 중 정확히 1개에 매칭 | 종합 판단 |
 
 ---
 
@@ -110,39 +151,36 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 | <70 | **FAIL** | 재작성 |
 
 **CRITICAL FAIL**: 개별 Factor ≤ 배점의 30% = 즉시 FAIL
-- F1 ≤4 / F2 ≤3 / F3 ≤4 / F4 ≤4 / F5 ≤3 / F6 ≤3 / F7 ≤4 / F8 ≤3
+
+> **v1.3 정책**: **결과물 정성 평가 우선**. 사용자가 "결과물 만족"이라 판정하면 RUBRIC 점수와 무관하게 PASS 가능. 단 H1·H2·H3·H7 (사운드 핵심 4개) 위반 시 사운드 정합성 명시적 검토 필요
 
 ---
 
-## Series Gates (6개) — 시리즈 단위 자동 검증
-
-> **곡 단위 게이트와 분리**. 시리즈 운영 BGM 카테고리 진입 자격 검증. 자동화 스크립트 1건으로 통합 (`check_series_gate.sh`).
+## Series Gates (6개) — 시리즈 단위 자동 검증 (v1.3 13곡 기준)
 
 | # | Gate | 기준 | 자동/수동 |
 |---|------|------|----------|
-| S1 | **곡수 분포 + Hard 60%** | **A 4 / B 5 / C 5 / D 3 / 보너스 3 = 20곡 확정** + **Hard(A+C+D)=12곡(60%)** + **Non-Hard(B+보너스)=8곡(40%)** | 자동 |
-| S2 | **BPM 분포** | 워밍업(100-120) 2-3곡 / 메인(130-150) 8-9곡 / HIIT(140-180) 5-6곡 / 쿨다운(90-110) 2-3곡 | 자동 |
-| S3 | **A·B 인접 회피** | A Dry Voice 트랙 직후 B Tuned Singing 트랙 직접 인접 배치 금지 (청취 피로). Track Map 시퀀스 검증 | 자동 |
-| S4 | **시리즈 길이** | 60-90분 (1세션 정합 88.1%, 직장인 운동 30분-2시간 88.1% 분포) | 자동 |
-| S5 | **Track 01 = 워밍업** | Track 01은 B축 멜로딕 (BPM 100-120). 텐션 점진 빌드 | 자동 |
-| S6 | **마지막 2-3곡 = 멜로딕 마무리** | Track N-1 / N-2는 B + 보너스 붐뱁 (BPM 90-115). 운동 종료 후 호흡 정리 + YouTube replay 친화 | 자동 |
-
-> **시리즈 PASS** = 6개 모두 충족. 1개라도 FAIL → Track Map 재조정 (개별 곡은 PASS면 유지, 배치만 변경)
+| S1 | **곡수 분포 + Hard 60%** | **A 2 / B 2 / C 4 / D 2 / E 1 / F 2 = 13곡 확정** + **Hard(A+C+D+F)=10곡(77%)** + **Non-Hard(B+E)=3곡(23%)**. Hard 60%+ 충족 | 자동 |
+| S2 | **BPM 분포** | 워밍업(100-120) 1-2곡 / 메인(130-150) 6-7곡 / HIIT(140-180) 3-4곡 / 쿨다운(90-110) 1-2곡 | 자동 |
+| S3 | **A·B 인접 회피** | A Dry Voice 트랙 직후 B Tuned Singing 트랙 직접 인접 배치 금지 | 자동 |
+| S4 | **시리즈 길이** | **40-65분** (13곡 기준, 곡당 평균 3:00-4:30) | 자동 |
+| S5 | **Track 01 = 워밍업** | Track 01은 B축 멜로딕 (BPM 100-120) | 자동 |
+| S6 | **마지막 2-3곡 = 멜로딕 마무리** | Track N-1 / N-2는 B + 보너스 붐뱁 (BPM 90-115) | 자동 |
 
 ---
 
-## Style Checklist (수동 청취 보조)
+## Style Checklist (수동 청취 보조, v1.3 5축+1보너스)
 
-| # | 항목 | A Dry | B Tuned | C Hardcore | D K-Drill | E 붐뱁 | 체크 |
-|---|------|:-:|:-:|:-:|:-:|:-:|:-:|
-| 1 | BPM 범위 정합 | 148-160 | 140-160 | 140-150 | 140-146 | 86-95 | ☐ |
-| 2 | 보컬 톤 정합 | raw shouted | autotuned melodic | husky | 한국어 악센트 | raw chest | ☐ |
-| 3 | 베이스 디자인 정합 | hard clipped 808 | distorted 808 portamento | deep 808 sub-bass | sliding 808 portamento | walking upright bass | ☐ |
-| 4 | 드럼 패턴 정합 | 1/16 hi-hat + 32nd roll | 1/16 hi-hat + snare on 3 | rolling 1/16 hi-hat | drill snare + skippy hi-hat | dusty kick + rim shot swing | ☐ |
-| 5 | 마스터링 톤 정합 | blown-out -6 LUFS | glossy -7 LUFS | gritty | dark | warm dusty | ☐ |
-| 6 | EXCLUDE 정체성 보호 | no autotune | no dry shouted | no melodic singing | no amapiano | no auto-tune | ☐ |
-| 7 | Korean 가창 95%+ (D 75%) | ☐ | ☐ | ☐ | ☐ (75%+) | ☐ | ☐ |
-| 8 | Workout BPM 단계 분류 | 메인/HIIT | 워밍업/쿨다운/메인 | 메인/HIIT | HIIT | 쿨다운 | ☐ |
+| # | 항목 | A Dry | B Tuned | C Hardcore | D K-Drill | E 붐뱁 | F Faster | 체크 |
+|---|------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 | BPM 범위 | 148-160 | 140-160 | 140-150 | 140-146 | 86-95 | 165-180 | ☐ |
+| 2 | 보컬 톤 | shouted dry | autotuned melodic / introspective | husky / lazy / sarcastic / chant | 한국어 악센트 | raw chest | bilingual + chant | ☐ |
+| 3 | 베이스 | hard clipped 808 | distorted 808 portamento / softened tight 808 | deep 808 sub-bass | sliding 808 portamento | walking upright bass | rolling 808 | ☐ |
+| 4 | 드럼 패턴 | 1/16 hi-hat | 1/16 hi-hat + snare on 3 | rolling 1/16 hi-hat | drill snare + tresillo | dusty kick + rim shot | triplet/stutter hi-hat | ☐ |
+| 5 | 마스터링 톤 | blown-out -6 LUFS | glossy -7 LUFS / introspective | gritty / lazy / minimal | dark | warm dusty | high-contrast | ☐ |
+| 6 | EXCLUDE 정체성 보호 | no autotune | no dry shouted | varies (4 톤 분기) | no amapiano | no auto-tune | varies | ☐ |
+| 7 | Korean 가창 (권장만) | 60%+ | 60%+ | 60%+ | 60%+ (D는 50%+) | 80%+ | 50%+ | ☐ |
+| 8 | Workout BPM 단계 | 메인/HIIT | 워밍업/쿨다운/메인 | 메인/HIIT | HIIT | 쿨다운 | HIIT | ☐ |
 
 ---
 
@@ -151,24 +189,24 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 ### 곡 단위 (Suno PASS 직후)
 
 ```
-1. Hard Gates 8개 검사 (자동 H6/H8 + 수동 6개)
-   → 1개라도 FAIL = 재작성, 멈춤
+1. Hard Gates 8개 검사 (자동 H8 + 소프트 H6 + 수동 6개)
+   → 1개라도 FAIL = 재작성
+   → 단 H4 한국어 비중·메타태그 구조는 권장만 (감점 X)
 2. Style-Specific Gates 검사 (해당 Style의 2-4개)
    → 1개라도 FAIL = 재작성
 3. 8-Factor Scoring (100점)
-   → 85+ PASS → tracks/ 폴더 정착
-   → 70-84 BORDERLINE → 문제 Factor 수정 후 재평가
-   → <70 FAIL → 재작성
-4. Critical Fail (개별 Factor ≤30%) 별도 체크
+   → 85+ PASS / 70-84 BORDERLINE / <70 FAIL
+4. **결과물 정성 평가 우선** — 사용자 판정이 RUBRIC 점수보다 우선
+5. PASS 시 tracks/ 폴더 정착 + Type 메타 라벨링 (A/B/C/D/E/F)
 ```
 
-### 시리즈 단위 (15곡+ 누적 후)
+### 시리즈 단위 (10곡+ 누적 후)
 
 ```
-5. check_series_gate.sh 실행
-   → S1-S6 6개 자동 검증
-   → 1개라도 FAIL = Track Map 재조정 (개별 곡 PASS는 유지)
-6. 전곡 PASS + 시리즈 PASS → YouTube Metadata + 패키징
+6. check_series_gate.sh 실행
+   → S1-S6 6개 자동 검증 (13곡 기준)
+   → 1개라도 FAIL = Track Map 재조정
+7. 전곡 PASS + 시리즈 PASS → YouTube Metadata + 패키징
 ```
 
 ---
@@ -186,28 +224,39 @@ FAIL
   매칭 키워드: 마약 (3회: "코카인", "필로폰", "LSD")
 ```
 
-### `check_series_gate.sh`
+### `check_series_gate.sh` (v1.3 13곡 기준)
 
 ```bash
 $ ./MASTER/scripts/check_series_gate.sh SERIES/20-00/
-S1 곡수 분포 + Hard 60%: PASS (A:4 B:5 C:5 D:3 E:3 = 20곡 / Hard:12 Non-Hard:8)
-S2 BPM 분포: PASS (워밍업:3 메인:8 HIIT:6 쿨다운:3 = 20곡)
+S1 곡수 분포 + Hard 60%: PASS (A:2 B:2 C:4 D:2 E:1 F:2 = 13곡 / Hard:10 Non-Hard:3 = 77%)
+S2 BPM 분포: PASS (워밍업:2 메인:7 HIIT:3 쿨다운:1 = 13곡)
 S3 A·B 인접 회피: PASS
-S4 시리즈 길이: PASS (78분 12초)
+S4 시리즈 길이: PASS (52분 30초)
 S5 Track 01 워밍업: PASS (Track 01 B축, BPM 110)
-S6 마지막 2-3곡 멜로딕: PASS (Track 19 A BPM 148 — Hard 60% 보강 / Track 20 B BPM 105)
+S6 마지막 2-3곡 멜로딕: PASS (Track 12 B BPM 105 / Track 13 E BPM 92)
 
 종합: PASS
 ```
 
 ---
 
-## v1.0 검증 (2026-04-26 /team 만장 합의)
+## v1.3 검증 (2026-04-26 — 7곡 PASS 사례 + 사용자 정정 통합)
 
-- **참석**: Product Leader + Marketing Director + Engineering Lead Round 1 + QA Reviewer Round 2
-- **합의 점수**: 평균 94.6점, 모든 Gate 개별 PASS
-- **G5 운영 효율 BORDERLINE 90**: Style Gate 13개 다소 많음 → 추후 11개 축소 옵션 (B 4→3, D 3→2). 강제 X, 운영 시 부담 발생하면 재검토
-- **회의록**: `meetings/2026-04-26_20-00-genre-gate-rubric-design.md` + `meetings/2026-04-26_20-00-genre-gate-execution-plan.md`
+**7곡 PASS 사례 RUBRIC 정합성 후행 검증**:
+| # | 곡 | Style | BPM | 매칭 | RUBRIC v1.3 PASS 여부 |
+|---|------|------|:---:|------|:----:|
+| 1 | Rewrite | D K-Drill | 140 | NY/Brooklyn drill | ✅ |
+| 2 | Bottom to the Top | C lazy | 150 | lazy monotone | ✅ (C1 톤 분기 추가로) |
+| 3 | Fake | C 디스 | 140 | sarcastic 디스 | ✅ (C1 톤 분기 추가로) |
+| 4 | Boomerang | C 디스 | 150 | sarcastic 디스 | ✅ |
+| 5 | Paycheck | A Dry | 150 | shouted dry | ✅ (가사 메타 우선) |
+| 6 | Cold Stack | F Faster | 180 | rolling 808 + triplet | ✅ (F축 신설) |
+| 7 | Yang Gang | C chant | 150 | halftime + chant gang | ✅ (C1 chant 톤 분기) |
+
+**보정 사항**:
+- v1.0/v1.1: 7곡 중 **0곡 통과** (한국어 95% 룰·메타태그 금지·Hook 룰·Style Gate 부족)
+- v1.2: 7곡 중 **1-2곡 borderline**
+- v1.3: 7곡 중 **7곡 모두 PASS** (사용자 결과물 평가와 일치)
 
 ---
 
@@ -215,13 +264,14 @@ S6 마지막 2-3곡 멜로딕: PASS (Track 19 A BPM 148 — Hard 60% 보강 / Tr
 
 | 문서 | 용도 |
 |------|------|
-| `SERIES/20-00/concept.md` v0.2 | Style Templates 전문 + Suno Style Prompt + EXCLUDE v3 |
+| `SERIES/20-00/concept.md` v0.3 | 13곡 분포 + 변주 6곡 슬롯 + Track Details 7곡 누적 |
 | `SERIES/20-00/report/2026-04-25_workout-tuned-rage-supplement.md` | Section A 키워드 분리표 + Section B 페르소나 검증 |
-| `SERIES/20-00/report/2026-04-24_hard-hiphop-4axis-musical-deep.md` | 1차 1162줄 딥리서치 (4축 음악적 디테일) |
-| `MASTER/rubrics/AFROBEATS_RUBRIC.md` | 12-00 형식 참고 (Hard Gates + Style + 8-Factor) |
+| `SERIES/20-00/report/2026-04-24_hard-hiphop-4axis-musical-deep.md` | 1차 1162줄 딥리서치 |
+| `MASTER/rubrics/AFROBEATS_RUBRIC.md` | 12-00 형식 참고 |
 | `MASTER/scripts/check_lyric_avoid.sh` | 가사 회피 자동 검사 |
-| `MASTER/scripts/check_series_gate.sh` | 시리즈 게이트 자동 검사 |
+| `MASTER/scripts/check_series_gate.sh` | 시리즈 게이트 자동 검사 (v1.3 13곡 기준) |
+| 메모리 `feedback_wavvy-lyrics-vs-sound-separation.md` | 가사 vs 사운드 분리 룰 |
 
 ---
 
-*HARD_HIPHOP_RUBRIC v1.0 — 2026-04-26 작성. /team 만장 합의 + concept.md v0.2 + 보충 리포트 통합.*
+*HARD_HIPHOP_RUBRIC v1.3 — 2026-04-26 작성. 7곡 PASS 사례 후행 검증 + 사용자 정정 통합.*

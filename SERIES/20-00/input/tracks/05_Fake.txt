@@ -1,0 +1,32 @@
+Track: Fake
+Type: C
+BPM: 140
+Key: Minor
+Length: 3:30
+
+=== STYLE ===
+Trap, hip hop, rap, aggressive, 140BPM
+
+=== LYRICS META ===
+[Rap Song]
+(Strict unpitched Korean boom bap rap only, flat cadence, no melody, no singing)
+
+=== LYRICS ===
+[Verse 1]
+네 체인은 반짝여, 근데 전부 다 rented
+카메라 꺼지면 너는 조용해, ended
+가사는 borrowed, 네 flow는 template
+입만 열면 또 flex, 근데 속은 empty
+
+(생략 — 3 Verse + 3 Chorus "Fake! Fake!" 구조)
+
+[Chorus]
+Fake (Fake) Fake (Fake) Fake (Fake) ...
+너희 랩은 전부 다
+Rented chain, borrowed track
+No real pen, no real facts
+
+=== META ===
+RUBRIC v1.3 매칭: C Hardcore Trap (sarcastic 디스 컨셉)
+PASS 일자: 2026-04-26
+사용자 평가: 결과물 괜찮음. 실제로는 trap.

@@ -6,24 +6,43 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 
 ## Series Status
 
-- **착수**: 2026-04-25 (Phase 1 리서치 + Phase 2 /team 4단계 진화 + Phase 3 P0 갭 보충 리서치 완료)
-- **시리즈 유형**: **Wavvy 첫 힙합 시리즈** (기존 R&B·Lo-fi·Afrobeats·Neo-Soul·City Pop과 결 다름)
-- **시리즈 정체성**: **Korean Workout Hip-Hop 빈자리 채우기** — 글로벌 Apple Music Hip-Hop Workout 카테고리는 외산 트랩 우세, Korean rap 0% 빈자리
-- **최종 트랙 수 목표**: **20곡 (Hard 60% / Non-Hard 40% 정책)**
-- **배분 (Hard 60% v1.1)**: **A 4 / B 5 / C 5 / D 3 / 보너스 3 = 20곡**
-  - **Hard 12곡 (60%)** = A Rage Dry 4 + C Hardcore Trap 5 + D K-Drill 3
-  - **Non-Hard 8곡 (40%)** = B Rage Tuned 5 + 보너스 빡센 붐뱁 3
-  - 시리즈 정체성 "빡센 힙합" 우선 정책 (사용자 결정 2026-04-26)
-- **워크플로우**: 15-00 모델 계승 — Suno PASS 곡 누적 → 충분히 쌓이면 DNA / Workout 단계 배치 역추출
-- **현황 가설 검증**: **CONDITIONAL PASS** (보충 리포트 §B0)
+- **착수**: 2026-04-25 / **현재 v0.3**: 2026-04-26 (7곡 PASS 후 13곡 분포 확정)
+- **시리즈 유형**: **Wavvy 첫 힙합 시리즈**
+- **시리즈 정체성**: **Korean Workout Hip-Hop 빈자리 채우기** — 글로벌 Apple Music Hip-Hop Workout 외산 트랩 우세, Korean rap 0%
+- **최종 트랙 수 (v0.3 확정)**: **13곡** (7 PASS + 6 변주)
+- **곡수 분포 (v0.3 확정)**: **A 2 / B 2 / C 4 / D 2 / E 1 / F 2 = 13곡**
+  - **Hard 10곡 (77%)** = A Rage Dry 2 + C Hardcore Trap 4 + D K-Drill 2 + F Faster Dark Trap 2
+  - **Non-Hard 3곡 (23%)** = B Rage Tuned 2 + 보너스 빡센 붐뱁 1
+  - Hard 60% 정책 충족
+- **워크플로우**: 15-00 모델 계승 + 7곡 PASS 베이스 변주 전략 (v0.3 신규)
 
-**참고 자료:**
-- 1차 1162줄 딥리서치: `report/2026-04-24_hard-hiphop-4axis-musical-deep.md` (신뢰도 88%)
+**현재 누적 (7/13)**:
+| # | 곡 | 매칭 | 베이스 |
+|---|------|------|------|
+| 1 | Rewrite | D K-Drill | 변주 D 신규 1곡용 |
+| 2 | Bottom to the Top | C Hardcore (lazy monotone) | C 베이스 풍부 |
+| 3 | Fake | C Hardcore (sarcastic 디스) | C 베이스 풍부 |
+| 4 | Boomerang | C Hardcore (sarcastic 디스) | C 베이스 풍부 |
+| 5 | Paycheck | A Rage Dry | A 변주 1곡용 |
+| 6 | Cold Stack | F Faster Dark Trap (180 BPM) | F 변주 1곡용 |
+| 7 | Yang Gang | C Hardcore (chant gang hook) | C 베이스 풍부 |
+
+**남은 6곡 변주 슬롯**:
+| # | 축 | 베이스 | 비고 |
+|---|------|------|------|
+| 8 | A 변주 | Paycheck Style | shouted dry, BPM 145-155 |
+| 9-10 | B 신규 ×2 | (베이스 없음, 신규 작성) | melodic autotune 또는 introspective laid-back |
+| 11 | D 변주 | Rewrite Style | NY/Brooklyn drill, BPM 140-146 |
+| 12 | F 변주 | Cold Stack Style | faster dark trap, BPM 165-180 |
+| 13 | E 보너스 신규 | (가리온·Huckleberry P 톤) | 빡센 붐뱁, BPM 86-95 |
+
+**참고 자료**:
+- 1차 1162줄 딥리서치: `report/2026-04-24_hard-hiphop-4axis-musical-deep.md`
 - 차트 검증: `report/2026-04-25_chart-vs-awards-validation.md`
 - K-Hiphop 트랩 트렌드: `report/2026-04-25_k-hiphop-trap-trends-deep.md`
-- GPT 빡센 붐뱁 프롬프트 엔지니어링: `report/2026-04-25_suno-boom-bap-prompt-engineering-gpt.md`
-- **Workout-Tuned Rage 보충 (P0 갭)**: `report/2026-04-25_workout-tuned-rage-supplement.md` (전체 평균 신뢰도 72%)
-- /team 회의록: `meetings/2026-04-25_20-00-{hard-hiphop-positioning, 4axis-realignment, music-detail-audit, pre-concept-research-gaps}.md`
+- GPT 빡센 붐뱁: `report/2026-04-25_suno-boom-bap-prompt-engineering-gpt.md`
+- Workout-Tuned Rage 보충: `report/2026-04-25_workout-tuned-rage-supplement.md`
+- 회의록: `meetings/2026-04-26_20-00-genre-gate-{rubric-design,execution-plan}.md`
 
 ---
 
@@ -32,472 +51,399 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 **메인 페르소나**: 25-35 한국 직장인, 헬스 / PT / 홈트 / 러닝 (저녁 8시 운동 시간대)
 
 **검증 결과 (Section B, Confidence 88%)**:
-- 직장인 운동 1·2·3위 = **헬스 30.9% > 걷기 21.6% > 러닝 12%** (세계일보 2024-09)
-- **76.4% 퇴근 후 저녁 운동** — 헬스장 피크 6-8시
-- 1세션 **30분-2시간 88.1%** (시리즈 60-90분 정합)
-- 30대 헬스장 매장 이용률 **25.6%** (전 연령 강세)
-- 30대 러닝 소비 증가율 **+232%** (1위)
-
-**시리즈 라벨 `💪 AFTER HOURS WORKOUT` PASS 근거 충족.**
+- 직장인 운동 1·2·3위 = 헬스 30.9% > 걷기 21.6% > 러닝 12% (세계일보 2024-09)
+- 76.4% 퇴근 후 저녁 운동, 헬스장 피크 6-8시
+- 1세션 30분-2시간 88.1% / 30대 헬스장 매장 25.6% / 30대 러닝 +232%
 
 ---
 
-## 🔥 핵심 원칙 (힙합 예외 룰)
+## 🔥 핵심 원칙 (사용자 정정 2026-04-26)
 
-### 가사 룰 (기존 Wavvy 룰 예외 적용)
+### 가사 룰 — 자유 + 회피 영역만
 
-`wavvy.md` §5 기본 가사 룰:
-- ~~설명적 문장 금지~~
-- ~~감정 직접 표출 금지~~
-- ~~메타 표현 금지~~
+`wavvy.md` §5 기본 가사 룰 (설명·감정 직접 표출·메타 표현 금지) **적용 제외** (힙합 본질):
 
-→ **본 시리즈(힙합)는 장르 본질상 직접 서사·bar·메타가 DNA이므로 위 금지 항목 적용 제외.**
-→ **유지**: 한국어 가사 95%+ (B축 K-Drill만 75% 예외) / Chest-dominant 보컬 / Articulation (Brand DNA Constants)
-→ **코어**: 일반 하드 힙합 자유 서사 (퇴근·도시·그라인드·내면·자기 서사·디스·자랑·반항 모두 OK). **가사는 Workout 어휘 강제 X** — Workout 정합은 **사운드(BPM·에너지·페이스)에서만** 달성
+**v0.3 정책 (사용자 정정)**:
+- **가사 내용은 크게 중요하지 않음** — 시리즈 정합은 **사운드(BPM·에너지·페이스·톤앤매너)**에서만 달성
+- **한국어 비중 권장 60%+ (감점 X, 코드스위치는 한국 본가 표준)**
+- **메타태그 [Bridge] [Pre-Chorus] [Chorus] [Final Chorus] 인정** (이전 v0.2 금지 룰 폐지) — 결과물 좋으면 OK
+- **회피 영역만 명시**: 무차별 폭력·살해·총기·마약·혐오 직접 묘사 회피
+- **K-Drill 본가 어휘(갱·크루·블록·동네·디스·flex·돈·자랑·반항) 보존**
 
 ### 장르 특이 룰
 
-- **A. Rage Dry Voice**: Carti·Yeat 계열. Pitch-up baby voice 한국어 적용 시 받침 문제 → 영어 의성어 혼용 OK. autotune 의존 금지
-- **B. Rage Tuned Singing**: Sik-K·HAON·Travis Scott 계열. Sing-rap melodic hook + autotune **시그니처**. Korean 가창 자연스러움
-- **C. Hardcore Trap**: ZENE·Ash Island·Loopy·EK·KWAII 계열. Husky/distorted/muddy 딜리버리 허용
-- **D. K-Drill 액센트**: Fleeky Bang·Blase 계열. 본가 무드 자유 (디스·반항·도시·자기 서사). 단 **무차별 폭력·살해·총·마약 직접 묘사는 Wavvy 브랜드 톤상 회피** (페르소나 25-35 직장인 + YouTube 알고리즘 친화)
-- **보너스. 빡센 붐뱁**: 다이나믹 듀오·가리온·Huckleberry P 계열. 라이리시즘 밀도 최대, 다음절 라임
+- **A. Rage Dry**: shouted/yelled/raw dry voice. autotune 의존 X
+- **B. Rage Tuned**: melodic autotuned sing-rap **OR introspective laid-back** (Travis Scott Astroworld 톤)
+- **C. Hardcore Trap (4가지 톤 분기)**: husky/distorted/muddy / lazy monotone deadpan / sarcastic 디스 컨셉 / chant gang hook 변종
+- **D. K-Drill 액센트**: NY/Brooklyn drill. 본가 무드 자유. 가사 리라이트 강제 X
+- **E. 빡센 붐뱁 (Bonus)**: 가리온·Huckleberry P 라이리시즘. 다음절 라임
+- **F. Faster Dark Trap (신규 v0.3)**: 165-180 BPM, rolling 808 + triplet/stutter hi-hats + stacked chant gang vocals + bilingual rap
 
 ---
 
-## Series DNA v0.2
+## Series DNA v0.3
 
-**포지션 대비 기존 Wavvy 시리즈:**
-- 12-00 `Korean Afrobeats` — 한낮 정오, 공격적 그루브
-- 13-00 `FEEL GOOD R&B · URBAN NEO-SOUL` — 봄 오후 커플 설렘
-- 14-00 `Soft R&B` — 오후 햇살에 멍해지는 시간
-- 15-00 `FUNKY R&B · URBAN NEO-SOUL` — 오후 3시 바람 좋은 드라이브
-- 16-00 `감성 락` — 교차점
-- 18-00 `Neo-Soul` — 퇴근길 전환
-- **20-00 `KOREAN HARD HIP-HOP · WORKOUT · NIGHT GRIND`** — 퇴근 직후 운동·그라인드·도시 텐션
-- 21-00 `City Pop` — 밤산책 사색
-- 22-00 `Ambient Slow R&B` — 수면 전 이완
+**시간 서사**: 18-00(퇴근 전환) → 19-00(공백) → **20-00(운동 피크)** → 21-00(사색) → 22-00(이완)
 
-**시간 서사**: 18-00(퇴근 전환) → 19-00(공백/식사) → **20-00(운동 피크)** → 21-00(사색) → 22-00(이완)
+**시리즈 정체성**:
+1. Korean Workout Hip-Hop 빈자리
+2. **5축 + 보너스** (A Dry / B Tuned / C Hardcore 4톤 분기 / D K-Drill / E 보너스 붐뱁 / F Faster Dark Trap)
+3. 저녁 8시 + 운동 글로벌 블루오션
+4. Korean 로컬 샘플 전략
 
-**시리즈 정체성:**
-1. **Korean Workout Hip-Hop의 빈자리** — 글로벌 Apple Music Hip-Hop Workout 카테고리는 외산 트랩(Future·Migos·Young Thug·Gunna·Kanye) 우세, Korean rap 0%. Wavvy가 빈자리 채움.
-2. **4축 + 보너스** = 단일 톤이 아닌 스펙트럼 (Rage Dry ↔ Rage Tuned ↔ Hardcore Trap ↔ K-Drill 액센트 + 보너스 빡센 붐뱁)
-3. **저녁 8시 + 운동** 글로벌 블루오션 — 시간대 × 운동 × 힙합 조합 선례 부재
-4. **Korean 로컬 샘플 전략** (KC K-FLIP+ 모델) — 한국 인디 록/힙합/발라드/포크 샘플링으로 현지화
-
-**시그니처 요소 (4축 + 보너스 공통):**
-- BPM: **86-95 (붐뱁 보너스)**, **140-160 (Rage·Trap 메인 hub)**, **140-146 (K-Drill)**
-- Key: Minor 우세 (다크 무드), Major는 anthem·드롭 곡
-- 보컬: Male-dominant (한국 하드 힙합 남성 중심), Chest voice 주력
-- 테마: 운동 · 그라인드 · 야경 · 퇴근 · 자기극복 · 심박수 · 세트 · 한계 돌파
+**시그니처 요소**:
+- BPM: 86-95 (붐뱁 E) / 140-180 (메인 5축)
+- Key: Minor 우세 (다크 무드)
+- 보컬: Male-dominant + chest voice + sharp articulation
+- 톤: 다크 + raw + workout 텐션
 
 ---
 
-## Style Templates (4축 + 보너스 1)
+## Style Templates (5축 + 보너스)
 
-### Style A: Rage Dry Voice (4곡)
+### Style A: Rage Dry Voice (2곡, Hard) — 베이스: Paycheck
 
-**참조 아티스트**: Playboi Carti `Whole Lotta Red` (2020) / `Music` (2025) / Yeat 일부 / Ken Carson
+**참조**: Playboi Carti `Whole Lotta Red` / Yeat 일부 / Ken Carson
+**Korean 토착**: Loopy `MARNI` 일부 + Lil Moshpit 비트 (PUBLIC ENEMY 161 BPM)
 
-**Korean 토착 사례 풀 (확정)**:
-- Loopy `MARNI` (2024-04-11) 일부 — **컨셉상 Rage**, 보컬은 melodic 비중 큼 (실제 청취 검증 필요)
-- Lil Moshpit 비트 일부 (KC `K-FLIP+` 2025-03-17) — **PUBLIC ENEMY 161 BPM, E minor 확정** (tread 영역)
+**BPM**: 148-160 (Paycheck 150)
+**Key**: Minor 우세
+**보컬**: Male, shouted/yelled raw dry
 
-> **한국 Dry 진영 풀 부족**: 5-6곡 채우기 어려움. **3-4곡 권장 (절충안)** — Section A 권장 2-3 / Section B 권장 5-6의 중간.
-
-**BPM**: 148-160 (허브 150-152)
-**Key**: E minor / G minor / A minor 우세
-**보컬**: Male, screamed raw shouted / chest voice dry close / 영어 의성어 애드립 허용 / autotune 의존 금지
-
-**Suno Style Prompt (Section A.3.2 + Paycheck v3 통합)**:
+**Suno Style Prompt (Paycheck PASS 베이스)**:
 ```
-Korean rage trap dry voice, 150 BPM, same 2-bar trap drum loop throughout no beat switch no final lift, hard clipped 808 distorted bass blown-out, rolling 1/16 hi-hats steady with 32nd triplet roll, supersaw 7-voice detuned staccato, hyper-bright FM bell stabs, screamed raw shouted male Korean rap, close-mic chest voice dry, sharp articulation, dense ad-libs raw shouted, raw uncut rage energy, gritty lo-fi saturation, blown-out master, hard rap only no singing, rapping in Korean
+Korean trap, 150 BPM, steady 2-bar drum loop, softened but tight 808 bass with controlled saturation, crisp but relaxed 1/16 hi-hats, mellow detuned synth pads replacing aggressive supersaw stabs, subtle dark bell melody, laid-back conversational male Korean rap in chest and light mix voice, smooth legato delivery, close but gently compressed vocal, minimal ad-libs used as soft echoes, restrained yet focused energy, introspective hard rap feel
 ```
 
-**EXCLUDE (Section A.3.4 — Dry 정체성 보호)**:
+**가사 메타 (실제 결과 결정)**:
 ```
-no autotune, no pitch correction, no melodic hooks, no clean polished vocals, no falsetto, no formant shift, no sung hook, EDM drop, vocal chop, vocal stutter, beat switch, drum fill, double-time drums, halftime switch, breakbeat, glitch drums, riser, k-pop, ballad, slow tempo, acoustic, chill, soft pop chorus
+(Shouted male Korean rap, dry voice, same drum loop)
 ```
 
-**v3 → A축 보강 포인트**:
-- `screamed autotune` → `screamed raw shouted + chest voice + dry close` (autotune 의존 제거, Wavvy Chest voice DNA 유지)
-- `no autotune` 명시적 EXCLUDE 추가 (autotune 흘러들어오면 B축 Tuned 쪽으로 sliding)
-- `hyper-bright FM bell stabs` 추가 (Section A.3.2)
+> **변주 1곡 슬롯**: BPM 145-155 / 다른 가사 컨셉 / Style Prompt 동일
 
 ---
 
-### Style B: Rage Tuned Singing (5곡) ★ 메인 hub
+### Style B: Rage Tuned Singing (2곡, Non-Hard) — 신규 작성
 
-**참조 아티스트**: Travis Scott `Astroworld` 톤 / Don Toliver `Hardstone Psycho` (2024-06) / SoFaygo / Destroy Lonely
-
-**Korean 토착 사례 풀 (확정 — Section A.1 검증)**:
-- **Sik-K × HAON `ALBUM ON THE WAY!`** (2023-05-18, KC) — 한국 최초 정식 Rage 라벨링
-- **HAON `HAONOAH`** (2024-03-29, Warner) — Rage-adjacent 일부
-- **KC `KCTAPE Vol.2`** (2024-07-30) — vangdale 광택 디자인
-- **Sik-K × Lil Moshpit `K-FLIP+`** (2025-03-17, KMA 2025 Best Rap & Hip-hop Album)
-- **Lil Moshpit `THRILL` feat. HAON** (2025-03)
-- **Jvcki Wai × Vangdale `MOLLAK`** (2025-07-04) — Female Korean Tuned Singing Rage 인접 (hyperpop+trap 융합)
-
-> **NOWIMYOUNG `LUXURY TAPE` (2025-10-23) 주의**: autotune 시그니처지만 **electropop 비중** → B축 직접 편입 부적합. "인접 사례"로만 참조.
-
-**KC Sik-K "sing-song rapping" 시그니처가 한국 Tuned Singing Rage의 자연스러운 중심.**
+**참조**: Travis Scott `Astroworld` / Don Toliver `Hardstone Psycho` / Sik-K × HAON / Sik-K × Lil Moshpit `K-FLIP+`
 
 **BPM**: 140-160 (메인 hub 145-152)
-**Key**: 가변 (melodic hook 위주이므로 Major/Minor 혼용)
-**보컬**: Male, melodic autotuned + sing-rap delivery, Antares Auto-Tune retune 5-15ms 추정 / formant 거의 안 건드림 / cathedral reverb plate large hall
+**Key**: 가변
+**보컬**: Male, melodic autotuned sing-rap **OR** introspective laid-back
 
-**Suno Style Prompt (Section A.3.6 권장 템플릿 + KC 시그니처 반영)**:
+**Suno Style Prompt (표준)**:
 ```
-Korean tuned singing rage trap, 148 BPM, melodic autotuned male vocal, T-Pain heavy autotune sing-rap delivery, supersaw lead 8-voice detuned arpeggiated, distorted 808 portamento moving bass, 1/16 hi-hat with 32nd triplet roll snare on 3, Korean folk sample chop atmospheric texture (Kim Sawol style), clean glossy mix vangdale-style mastering, candied melodic hook with high-density adlib stack, cathedral reverb plate large hall, Travis Scott vocal style with Korean KC vangdale glossy mix, hard rap with melodic hook, singing in Korean with English code-switch hook
-```
-
-**EXCLUDE (Section A.3.4 — Tuned 정체성 보호)**:
-```
-no dry shouted vocals, no raw screamed vocals, no blown-out mix, no punk vocal, no growl, no mumble rap, EDM drop, vocal chop, vocal stutter, beat switch, drum fill, double-time drums, halftime switch, breakbeat, glitch drums, riser, k-pop ballad, slow tempo, acoustic, chill, soft pop chorus, amapiano, jersey club
+Korean tuned singing rage trap, 148 BPM, melodic autotuned male vocal, T-Pain heavy autotune sing-rap delivery, supersaw lead 8-voice detuned arpeggiated, distorted 808 portamento moving bass, 1/16 hi-hat with 32nd triplet roll snare on 3, Korean folk sample chop atmospheric texture, clean glossy mix vangdale-style mastering, candied melodic hook with high-density adlib stack, cathedral reverb plate large hall, Travis Scott vocal style with Korean KC vangdale glossy mix, hard rap with melodic hook, singing in Korean with English code-switch hook
 ```
 
-**페르소나 매칭 (Section A.4.5)**: 25-35 직장인 = **"성취감 빌드업"(Travis Scott Astroworld 톤)** > **"순수 분노"(Carti 톤)**. vangdale 광택 디자인 + Sik-K sing-song = **"세련된 그라인드"** 톤.
+**Suno Style Prompt (introspective laid-back 변종)**:
+```
+Korean tuned singing rage trap introspective, 145 BPM, melodic autotuned male vocal, Don Toliver Hardstone Psycho style, light mix voice with smooth legato delivery, softened tight 808 with controlled saturation, mellow detuned synth pads, warm cathedral reverb large hall, restrained yet focused energy, polished glossy mix
+```
+
+> **신규 작성 2곡**: B축 베이스 7곡에 없음 → 위 2개 Style Prompt 활용 신규 작성
 
 ---
 
-### Style C: Hardcore Trap (5곡) ★ Workout 표준
+### Style C: Hardcore Trap (4곡, Hard) — 베이스: Bottom to the Top·Fake·Boomerang·Yang Gang
 
-**참조 아티스트**: ZENE THE ZILLA · Ash Island · Loopy (UNWANTED WRLD 시기) · EK · KWAII
+**참조**: ZENE THE ZILLA · Ash Island · Loopy (UNWANTED WRLD) · EK · KWAII
 
-**BPM**: 140-150 (Workout 130-150 권장 영역과 매칭)
-**Key**: Minor 우세 (다크 무드)
-**보컬**: Male, husky / distorted / muddy 딜리버리, chest voice dry close vocal, sharp articulation
+**BPM**: 140-150
+**Key**: Minor 우세
+**보컬**: 4가지 톤 분기 (모두 chest voice + sharp articulation 공통)
 
-**Suno Style Prompt**:
+#### C1. Lazy Monotone Layback (Bottom to the Top 베이스)
 ```
-Korean hardcore trap workout, 145 BPM, locked drum pattern throughout no fills no switch-up, deep distorted 808 sub-bass moving line, rolling 1/16 hi-hats with occasional 1/32 burst, dark minor key piano stab loop, husky male Korean rap vocal chest voice dry close vocal sharp articulation, ZENE THE ZILLA Ash Island style, gritty atmospheric texture, hard rap only no singing, rapping in Korean
+Korean lazy trap, 150 BPM, same 16-bar trap drum loop throughout no beat switch no final lift, distorted sliding 808 bass hard clipped low end, rolling 1/16 hi-hats steady, supersaw 7-voice detuned sustained stab, simple dark bell melody, dry and lazy layback style male Korean rap, chest voice, dry close vocal, sharp articulation, dense ad-libs between rap lines, raw energy, hard rap only
 ```
 
-**EXCLUDE (축별 특화 13종)**:
+#### C2. Sarcastic 디스 (Fake / Boomerang 베이스)
 ```
-sung hook, drum fill, beat switch, double-time drums, halftime switch, EDM drop, vocal chop, pitch-shifted vocals, glitch drums, melodic singing, k-pop, autotune, riser
+confident flow, dark trap, rap, sarcastic attitude, hip-hop, punchy 808, minimal, heavy bass, theme, fake, tone
 ```
+또는 boom bap 메타와 hybrid:
+```
+Trap, hip hop, rap, aggressive, 140-150BPM
+```
+
+#### C3. Chant Gang Hook (Yang Gang 베이스)
+```
+Korean hip-hop/trap with halftime bounce at a loose 150 BPM feel, punchy 808 slides, crisp rapid hi-hats, and glitchy digital ear candy; verse rides sparse drums and bass with half-mumbled confident flows, pre-chorus tightens with filtered chops and rising noise, chorus lands on a chanty gang hook with doubled ad-libs and callouts, Vocal delivery is youthful, close-mic, with stacked whispers on key phrases, tape-stutter fills, reverse swells, and short delay throws on the hook, Bright, aggressive, internet-native mix with glossy low end and playful edge, theme, rap, playful, emotional, glitch, hip-hop
+```
+
+#### C4. Husky/Distorted/Muddy (표준, ZENE 톤 — 미사용 예비)
+
+> **C 베이스 풍부**: 4곡 모두 PASS, 변주 추가 X (이미 4곡 충족)
 
 ---
 
-### Style D: K-Drill 액센트 (3곡)
+### Style D: K-Drill 액센트 (2곡, Hard) — 베이스: Rewrite
 
-**참조 아티스트**: Fleeky Bang · Blase · Silkybois · deadbois · NO:EL
+**참조**: Fleeky Bang · Blase · Silkybois · deadbois · NO:EL
 
-> **글로벌 사례 (Section B.5 검증)**: UK Drill / NY Drill = Workout BGM 카테고리 자리 잡음 (Spotify KaiverickDigital 1,000+곡, fitleague DRILL WORKOUT 등). Korean Drill 동일 포지셔닝 가능성.
+**BPM**: 140-146 (Rewrite 140)
+**Key**: Minor 우세
+**보컬**: Male, 한국어 된소리/거센소리 악센트
 
-**BPM**: 140-146 (Workout 130-150 정합)
-**Key**: Minor 우세 (다크 무드)
-**보컬**: Male, 한국어 된소리/거센소리(ㄲ/ㄸ/ㅃ/ㅋ/ㅌ) 악센트 활용, 한국어 75% + 영어 코드스위치 25%
-
-**Suno Style Prompt**:
+**Suno Style Prompt (Rewrite PASS 베이스)**:
 ```
-Korean drill workout, 142 BPM, sliding 808 bass with portamento glide, drill snare with skippy hi-hat patterns, dark minor key piano + flute melody, NY drill UK drill hybrid groove, aggressive male Korean rap with English code-switch, chest voice sharp Korean accent (ㄲ ㄸ ㅃ ㅋ ㅌ articulation), Fleeky Bang Blase style, hard rap only no singing
+NY drill, Brooklyn drill hybrid, 140 BPM, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop D minor, menacing atmosphere, aggressive guttural male rap deadpan flow, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, crisp articulation, ‑EDM drop, ‑vocal chop, ‑vocal stutter, ‑pitch-shifted vocals, ‑beat switch, ‑drum fill, ‑double-time drums, ‑halftime switch, ‑breakbeat, ‑glitch drums, ‑riser, ‑sung hook, ‑32nd triplet burst
 ```
 
-**EXCLUDE**:
-```
-sung hook, drum fill, beat switch, double-time drums, halftime switch, amapiano, jersey club, trap 808 sustain, EDM drop, melodic singing, autotune ballad, k-pop, slow tempo
-```
-
-**가사 가이드 (브랜드 톤 보정만)**:
-- **자유 영역**: 디스·반항·도시·자기 서사·자랑·grind 모두 OK (본가 K-Drill 무드 살림)
-- **회피 영역**: 무차별 폭력·살해 묘사·총기·마약 직접 묘사 (Wavvy 브랜드 톤 + YouTube 알고리즘)
-- **페르소나 정합**: 25-35 직장인 컨텍스트가 자연스럽지만 **강제 아님**. 본가 어휘(된소리·거센소리 악센트)는 그대로 유지
+> **변주 1곡 슬롯**: BPM 142-146 / 다른 가사 컨셉 / Style Prompt 동일 (또는 UK Drill로 변경)
 
 ---
 
-### Bonus: 빡센 붐뱁 (3곡)
+### Style E: 빡센 붐뱁 (Bonus, 1곡) — 신규 작성
 
-**Workout 배치 의의**: 워크아웃 메인 BGM 일변도(Rage·Trap)에서 **세트 사이 회복 인터벌** 역할. 차트 30대 친숙 + 헬스 인터벌 정합.
-
-**참조 아티스트**: 가리온 · Deepflow · Huckleberry P · Paloalto · Kid Milli · QM · 다이나믹 듀오
-
-**리서치 자산**: `report/2026-04-25_suno-boom-bap-prompt-engineering-gpt.md` 활용
+**참조**: 가리온 · Deepflow · Huckleberry P · Paloalto · Kid Milli · QM · 다이나믹 듀오
 
 **BPM**: 86-95 (붐뱁 표준)
 **Key**: Minor 우세
-**보컬**: Male, raw chest voice dry close vocal, 라이리시즘 밀도 최대 (다음절 라임 + 내재 라임)
 
-**Suno Style Prompt (GPT 붐뱁 자료 P1/P2 통합)**:
+**Suno Style Prompt (GPT 붐뱁 자료 베이스)**:
 ```
 Korean modern hardcore boom bap, 92 BPM, dusty drums with vinyl crackle texture, chopped 70s-80s soul or ballad sample loop, walking upright bass, rim-shot snare, head-nod swing groove with slight humanized swing, raw male Korean rap chest voice dry close vocal sharp articulation dense multisyllabic rhyme, 90s East Coast hardcore boom bap with Korean vernacular, Garion Deepflow Huckleberry P style, hard rap only no singing
 ```
 
-**EXCLUDE**:
-```
-auto-tune, sung hook, melodic singing, trap 808 sustain, EDM drop, drum fill, double-time drums, halftime switch, riser, k-pop ballad, slow ballad, acoustic chill
-```
+> **Workout 배치 의의**: 트랩 일변도 사이 정통 90s 톤 인터벌 + 30대 친숙
 
 ---
 
-## EXCLUDE v3 — 축별 특화 요약표
+### Style F: Faster Dark Trap (신규 v0.3, 2곡, Hard) — 베이스: Cold Stack
+
+**참조**: Playboi Carti `Music` (2025) 일부 / Yeat 빠른 트랙
+
+**BPM**: 165-180 (Cold Stack 180)
+**Key**: Minor 우세
+**보컬**: Korean-English bilingual rap with chant gang vocals
+
+**Suno Style Prompt (Cold Stack PASS 베이스)**:
+```
+Even faster dark trap around 180 BPM with relentless rolling 808 basslines, ultra-tight triplet and stuttered hi-hats, and hard, punchy snares driving a nonstop forward momentum; verses ride on stripped-back, brooding drums and eerie detuned synth bells, with energy pushed by tempo and rhythmic density instead of EDM-style effects, while the hook drops into heavier sub-bass, aggressive brass stabs, and stacked chant-style gang vocals on the main phrases, Male Korean-English bilingual rap with sharper double-time and occasional triple-time bursts, dense ad-libs tucked rhythmically around the lead, gritty low-register harmonies, subtle glitchy delay throws on key English words, and a hard-edged, high-contrast mix with heavy low-end impact and dark atmospheric textures focused on raw trap sonics
+```
+
+> **변주 1곡 슬롯**: BPM 165-180 / 다른 가사 컨셉 / Style Prompt 동일
+
+---
+
+## EXCLUDE v4 — 축별 특화 요약표 (v0.3 5축 + 보너스)
 
 | 축 | 정체성 보호 EXCLUDE | 공통 EXCLUDE (Workout) |
 |----|---------------------|----------------------|
 | **A. Rage Dry** | `no autotune, no pitch correction, no melodic hooks, no clean polished vocals, no falsetto, no formant shift, no sung hook` | `k-pop, ballad, slow tempo, acoustic, chill, soft pop chorus` |
 | **B. Rage Tuned** | `no dry shouted vocals, no raw screamed vocals, no blown-out mix, no punk vocal, no growl, no mumble rap` | `k-pop ballad, slow tempo, acoustic, chill, soft pop chorus, amapiano, jersey club` |
-| **C. Hardcore Trap** | `sung hook, melodic singing, autotune` | `k-pop, beat switch, drum fill, EDM drop, vocal chop, pitch-shifted vocals, glitch drums, riser` |
-| **D. K-Drill 액센트** | `amapiano, jersey club, trap 808 sustain` | `k-pop, sung hook, beat switch, EDM drop, melodic singing, autotune ballad, slow tempo` |
-| **보너스. 빡센 붐뱁** | `auto-tune, sung hook, melodic singing, trap 808 sustain` | `EDM drop, drum fill, double-time drums, riser, k-pop ballad, slow ballad, acoustic chill` |
+| **C. Hardcore Trap** | `varies (4 톤 분기)`. 공통: `melodic singing, autotune ballad` | `k-pop, beat switch, drum fill, EDM drop, vocal chop, pitch-shifted vocals, glitch drums, riser` |
+| **D. K-Drill** | `amapiano, jersey club, trap 808 sustain` | `k-pop, sung hook, beat switch, EDM drop, melodic singing, autotune ballad, slow tempo` |
+| **E. 빡센 붐뱁** | `auto-tune, sung hook, melodic singing, trap 808 sustain` | `EDM drop, drum fill, double-time drums, riser, k-pop ballad, slow ballad, acoustic chill` |
+| **F. Faster Dark Trap (신규)** | `beat switch (drop으로 가는 경우만), sung melodic hook, k-pop` | `slow tempo, ballad, acoustic, chill` (double-time/triple-time bursts는 인정) |
+
+> **v0.3 정책 변화**: EXCLUDE Style Prompt 미명시는 경고만 (Suno 자동 처리 OK 시 PASS)
 
 ---
 
-## Track Map v0.2 (Workout 배치 룰)
+## Track Map v0.3 (4막 × 13곡, Hard 77%)
 
-### 운동 단계별 BPM 매칭 (Section B.4 + Section A.4)
+### 운동 단계별 BPM 매칭
 
 | 운동 단계 | 분량 | BPM 영역 | 추천 축 |
 |----------|------|---------|--------|
-| **워밍업** | 5-10분 | 100-120 | B축 멜로딕 트랙 (Rage Tuned 발라드성) |
-| **메인 웨이트** | 30-60분 | 130-150 | C축 (Hardcore Trap) + A축 (Rage Dry) + 보너스 (붐뱁) |
-| **HIIT/카디오** | 10-20분 | 140-180 | C축 (Hardcore Trap) + D축 (K-Drill 액센트) |
-| **쿨다운** | 5-10분 | 90-110 | B축 (발라드성) + 보너스 (붐뱁 인터벌) |
+| **워밍업** | 5-10분 | 100-120 | B축 멜로딕 |
+| **메인 웨이트** | 30-45분 | 130-150 | C축 4톤 + A축 + 보너스 |
+| **HIIT/카디오** | 10-15분 | 140-180 | F축 (180) + C축 + D축 |
+| **쿨다운** | 5-10분 | 90-115 | B축 + 보너스 붐뱁 |
 
-→ **시리즈 트랙리스트 자체가 1회 운동 세션 BGM으로 직접 작동.**
-
-### 4막 × 20곡 스켈레톤 (개별 곡 TBD, Hard 12 / Non-Hard 8)
+### 4막 × 13곡 스켈레톤 (개별 곡 정착 매핑)
 
 ```
-[1막. 워밍업 진입] — 3곡 (B축 멜로딕 위주, Non-Hard 인트로)
-01. (TBD) — B Rage Tuned, BPM 110-115, 워밍업 진입
-02. (TBD) — B Rage Tuned, BPM 118-125, 텐션 빌드
-03. (TBD) — Bonus 붐뱁, BPM 92, 그라인드 모드 전환 (인터벌)
+[1막. 워밍업 진입] — 2곡 (B축 멜로딕)
+01. (TBD-B 신규 1) — B Rage Tuned, BPM 110-115, 워밍업 진입
+02. (TBD-B 신규 2) — B Rage Tuned introspective, BPM 120-130, 텐션 빌드
 
-[2막. 메인 웨이트] — 8곡 (C 메인 + A 텐션 + B 멜로딕 + 보너스 인터벌)
-04. (TBD) — C Hardcore Trap, BPM 142, 메인 진입
-05. (TBD) — A Rage Dry, BPM 150, raw 폭발
-06. (TBD) — B Rage Tuned, BPM 148, anthem hook (A 직후 청취 피로 해소)
-07. (TBD) — C Hardcore Trap, BPM 145
-08. (TBD) — Bonus 붐뱁, BPM 88, 세트 사이 인터벌
-09. (TBD) — A Rage Dry, BPM 152, raw 텐션
-10. (TBD) — B Rage Tuned, BPM 145, melodic anthem (A 직후)
-11. (TBD) — C Hardcore Trap, BPM 145, 메인 종료
+[2막. 메인 웨이트] — 7곡 (C 4톤 + A 2 + 보너스 1 인터벌)
+03. Bottom to the Top — C Hardcore (lazy monotone), BPM 150 ✅
+04. Paycheck — A Rage Dry, BPM 150 ✅
+05. Fake — C Hardcore (sarcastic 디스), BPM 140 ✅
+06. (TBD-A 변주) — A Rage Dry, BPM 152, 신규 가사
+07. Boomerang — C Hardcore (sarcastic 디스), BPM 150 ✅
+08. Yang Gang — C Hardcore (chant gang hook), BPM 150 ✅
+09. (TBD-E 보너스 신규) — E 빡센 붐뱁, BPM 92, 세트 사이 인터벌
 
-[3막. HIIT/카디오] — 6곡 (C + D + A 빠른 BPM 위주)
-12. (TBD) — D K-Drill 액센트, BPM 142, NY/UK Drill 무드
-13. (TBD) — C Hardcore Trap, BPM 148
-14. (TBD) — A Rage Dry, BPM 158, 마지막 폭발
-15. (TBD) — D K-Drill 액센트, BPM 144
-16. (TBD) — C Hardcore Trap, BPM 150
-17. (TBD) — D K-Drill 액센트, BPM 146
+[3막. HIIT/카디오] — 3곡 (F + D + F)
+10. Cold Stack — F Faster Dark Trap, BPM 180 ✅
+11. Rewrite — D K-Drill, BPM 140 ✅
+12. (TBD-F 변주) — F Faster Dark Trap, BPM 175, 신규 가사
 
-[4막. 쿨다운 + 마무리] — 3곡 (B + 보너스 붐뱁)
-18. (TBD) — Bonus 붐뱁, BPM 90, 호흡 정리
-19. (TBD) — A Rage Dry, BPM 148, 마지막 raw 회상 (Hard 60% 정책 보강)
-20. (TBD) — B Rage Tuned, BPM 105, 멜로딕 마무리
+[4막. 쿨다운 + 마무리] — 1곡 (D + 마무리)
+13. (TBD-D 변주) — D K-Drill, BPM 142, 마지막 폭발 또는 멜로딕 outro
 ```
 
-**운동 1회 = 60-90분 / 20곡 (1세션 정합 88.1%)**
+**주의사항**:
+- S5 Track 01 = B축 워밍업 (B 신규 1 슬롯 정합)
+- S6 마지막 2-3곡 멜로딕 — 13번 D축이 마지막이라 S6 룰 변경 검토 (또는 13 대신 보너스 붐뱁 추가 → 14곡)
+- S3 A·B 인접 회피 — 04 A → 05 C / 06 A → 07 C로 인접 회피 ✅
 
-**Hard 60% 분배 검증**: A 4(05·09·14·19) + C 5(04·07·11·13·16) + D 3(12·15·17) = 12곡 (60%) / B 5(01·02·06·10·20) + 보너스 3(03·08·18) = 8곡 (40%)
+**운동 1회 = 40-65분 / 13곡 (1세션 정합)**
 
-### Workout 배치 원칙
-
-1. **Track 01 = 워밍업 진입** — B축 멜로딕 (텐션 점진 빌드)
-2. **Track 03-04 사이 = 메인 진입 시그널** — A 또는 C 트랜지션
-3. **메인 7-9곡 = C 베이스 + A·B 텐션 다양화 + 보너스 붐뱁 인터벌**
-4. **HIIT 영역 = C + D 빠른 BPM**
-5. **마지막 2-3곡 = B 멜로딕 + 보너스 붐뱁** (운동 종료 후 호흡 정리)
-6. **A·B 인접 배치 회피** — Dry vs Tuned 충돌 청취 피로
-
-### 통과 가사 복원 후보 (사용자 결정 대기)
-
-git history `ec04577` 이전 commit에서 복원 가능:
-- **`불붙은 paycheck (Paycheck on Fire)`** (A Rage Dry Voice 정합 ✅) — 메인 웨이트 슬롯
-- **`씬에 침 뱉어 (Spit on the Scene)`** (D K-Drill 톤 검증 △ — 본가 K-Drill 무드 유지) — HIIT 슬롯
-
-**복원 결정**: 사용자 pending
+**Hard 77% 분배 검증**: A 2(04·06) + C 4(03·05·07·08) + D 2(11·13) + F 2(10·12) = 10곡 (77%) / B 2(01·02) + 보너스 1(09) = 3곡 (23%)
 
 ---
 
-## LYRICS 작성 가이드
+## LYRICS 작성 가이드 (v0.3 — 자유 정책)
 
 ### 공통 원칙
 
-1. **한국어 95%+** (B축 K-Drill만 75% 예외, 본가 영어 어휘 침투 패턴 인정)
-2. **메타태그**: `[Intro]`, `[Verse 1]` `[Verse 2]` `[Verse 3]` `[Verse 4]`, `[Refrain]`, `[Pre-Hook]`, `[Hook]`, `[Outro]`. **`[Final Hook]` `[Drop]` `[Bridge]` 금지** (Suno drop 유도)
-3. **Verse 16 bar 표준** — 4행 × 4블록 = 16행 (8 bar는 Suno 조기 종료 유도 + 1분대 길이 문제)
-4. **Refrain 4행 축약** — Hook 8행 × 2회 + Final Hook 구조는 Suno drop 유도, Refrain 4행 교대 구조 사용
-5. **서사 아크 자유** — 6단 강제 X (Paycheck 6단은 예시 수준)
-6. **주제 자유** — 일반 하드 힙합 자유 서사 (퇴근·도시·자기 서사·디스·자랑·반항·내면). **Workout 어휘 강제 X**. 단 Wavvy 브랜드 톤상 무차별 폭력·살해·총기·마약 직접 묘사는 회피
+1. **주제 자유** — 일반 하드 힙합 자유 서사 (퇴근·도시·디스·자랑·반항·내면·코인·운동·자기 서사). Workout 어휘 강제 X
+2. **한국어 비중 권장 60%+** (감점 X, 코드스위치는 한국 본가 표준)
+3. **메타태그 자유** — `[Intro]` `[Verse]` `[Refrain]` `[Hook]` `[Pre-Hook]` 권장. **`[Bridge]` `[Pre-Chorus]` `[Chorus]` `[Final Chorus]` 인정** (v0.3 신규)
+4. **회피 영역만**: 무차별 폭력·살해·총기·마약·혐오 직접 묘사
+5. **Verse 16 bar 표준** (옵션) — 8 bar 짧은 곡도 결과물 좋으면 OK
 
-### 축별 가사 구조 권장
+### 축별 가사 구조 (권장만)
 
-| 축 | 곡 길이 표준 | 구조 약칭 | bar 표기 |
-|----|------------|----------|----------|
-| A. Rage Dry | 2:30-3:30 | `I-V1(16)-R-V2(16)-R-V3(16)-R-O` | Verse 16 bar 표준 |
-| B. Rage Tuned | 3:00-3:45 | `I-V1(16)-PH-H-V2(16)-PH-H-V3(16)-O` | Verse 16 bar + Pre-Hook 4 bar + Hook 8 bar |
-| C. Hardcore Trap | 3:00-3:30 | `I-V1(16)-H(8)-V2(16)-H-V3(16)-O` | Verse 16 bar + Hook 8 bar |
-| D. K-Drill 액센트 | 2:30-3:00 | `I-V1(16)-PH(4)-H(8)-V2(16)-PH-H-O` | Verse 16 bar + Pre-Hook 4 bar + Hook 8 bar |
-| 보너스. 붐뱁 | 3:00-3:45 | `I-V1(16)-H(8)-V2(16)-H-V3(16)-O` | Verse 16 bar + Hook 8 bar (전통 East Coast) |
-
-### 주제 어휘 풀 (제안 — 강제 X)
-
-일반 하드 힙합 어휘 자유. Wavvy 시간대(저녁 8시 / 퇴근 후 / 밤) 정합 어휘는 자연스러운 보조:
-
-**자유 영역**:
-- 퇴근 / 야근 / 새벽 / 도시 / 야경 / 거리 / 그라인드 / 자기 서사 / 디스 / 자랑 / 반항 / 내면
-- 한계 돌파 / 변화 / 거울 / 어제의 나 (자기 극복 서사)
-- 운동·헬스·러닝 어휘는 자연스러우면 OK, 강제 X
-
-**회피 영역 (Wavvy 브랜드 톤)**:
-- 무차별 폭력·살해 묘사 / 총기·마약 직접 묘사 / 혐오 발언
+| 축 | 곡 길이 | 구조 약칭 |
+|----|------------|----------|
+| A. Rage Dry | 2:30-4:00 | 자유 (Paycheck = 6 Verse + 3 Refrain) |
+| B. Rage Tuned | 3:00-3:45 | I-V1-PH-H-V2-PH-H-O (또는 자유) |
+| C. Hardcore | 3:00-4:00 | 자유 (Verse + Hook 또는 모놀리식) |
+| D. K-Drill | 2:30-3:30 | I-V1-R-V2-R-V3-R-V4-O (Rewrite 패턴) |
+| E. 붐뱁 | 3:00-4:00 | I-V1-H-V2-H-V3-O |
+| F. Faster Dark | 2:30-3:30 | V1-PC-C-V2-PC-C-Bridge-C (Cold Stack 패턴) |
 
 ---
 
 ## Suno V5.5 생성 규칙
 
-### V5.5 메모
-
-- V5.5 = V5와 audio engine·prompt syntax·metatag system·character limits **모두 동일** (Section A.3.1)
-- 신규: 보이스 클로닝 / Custom Models / My Taste
-- → **본 Suno 프롬프트는 V5/V5.5 공통 적용**
-
-### Style Field (1,000자)
-
-- 200-300자 권장 (Suno 우선순위 = 앞쪽)
-- **비트 고정 지시 맨 앞 배치** (`same 2-bar trap drum loop throughout no beat switch no final lift`)
-- BPM 명시 필수
-- 보컬 디스크립터 명확 (raw shouted vs autotuned vs husky)
-- 샘플 소스 영어 무관 (`Korean folk sample chop`, `chopped 70s-80s soul or ballad sample loop`)
-- 끝에 `singing in Korean` (B축은 `with English code-switch hook`)
-
-### Lyrics Field (200자 QA)
-
-- 메타태그 `[Verse 1]` 등 포함 200자 이내
-- Custom Mode 풀 가사 입력 시 200자 룰 무관
-- `Verse 16 bars each (4 lines × 4 blocks)` 명시 권장 (Suno 자동 작사 시)
+- V5.5 = V5와 audio engine·prompt syntax·metatag system 동일
+- Style Field 200-1000자
+- BPM 명시 권장 (단 Style 디스크립터로도 Suno 추정 가능)
+- EXCLUDE 명시 권장 (단 미명시 시 경고만, 결과 좋으면 OK)
+- Custom Mode 풀 가사 권장
 
 ### 생성 횟수
-
 - 곡당 2-3회 생성 → 최선 1개 선택
-- 3+ PASS 후 곡수 확장 (현재 4곡 1차 테스트 → 19-21곡 확장)
-
-### Cover / Extend / 파라미터
-
-- Cover: 보컬·구조 유지하면서 비트만 교체 (외부 분석 처방)
-- Extend: 후반 폭주 시 앞부분만 keep + 뒤 reroll
-- Weirdness 35 (기본) / Style Influence 65 (기본) — Rage 시 Weirdness 40-50 시도 가능
+- 결과물 정성 평가 우선 — 사용자 판정이 RUBRIC 점수보다 우선
 
 ---
 
-## QA 체크리스트
+## QA 체크리스트 (v0.3 — 사운드 우선)
 
 ### 곡별 PASS 기준
 
-- [ ] BPM 정합 (4축별 표준 ±5)
-- [ ] 보컬 톤 정합 (A=raw shouted / B=autotuned melodic / C=husky / D=accent / 보너스=raw chest)
-- [ ] 비트 고정 (drop·beat switch 없음)
-- [ ] 한국어 95%+ (B축 K-Drill 75% 예외)
-- [ ] 메타태그 금지 항목 미사용 (`[Final Hook]` `[Drop]` `[Bridge]`)
-- [ ] Verse 16 bar 준수 (Paycheck 완성 8행 예외)
-- [ ] 주제 자유 (Workout 어휘 강제 X) / 회피 영역 미사용 (무차별 폭력·살해·총기·마약 직접 묘사)
-- [ ] 곡 길이 2:30-3:45 (붐뱁 3:45까지)
+- [ ] H1 BPM 정합 (E 86-95 / 메인 5축 140-180)
+- [ ] H2 Drum + H3 Bass 정합 (5축별 표준)
+- [ ] H4 보컬 톤 정합 (chest voice + 5축별 톤 분기)
+- [ ] H5 Hook OR 모놀리식 Verse OR multisyllabic punchline
+- [ ] H6 EXCLUDE 검증 (소프트, 자동 OK 시 PASS)
+- [ ] H7 Workout 사운드 정합 (BPM 90-180, 곡 길이 2:30-4:30)
+- [ ] H8 콘텐츠 회피 자동 grep (50 키워드 5카테고리)
+- [ ] **결과물 정성 평가** — 사용자 판정 우선
 
-### 시리즈 PASS 기준 (20곡 누적 후)
+### 시리즈 PASS 기준 (13곡 기준)
 
-- [ ] 4축 + 보너스 곡수 배분 (A 4 / B 5 / C 5 / D 3 / 보너스 3 = 20곡, Hard 60%)
-- [ ] BPM 분포 (워밍업 100-120, 메인 130-150, HIIT 140-160, 쿨다운 90-110)
-- [ ] Workout 1회 세션 정합 (60-90분, 사운드 페이스)
-- [ ] A·B 인접 배치 회피
-- [ ] D축 가사 회피 영역 검증 (무차별 폭력·살해·총기·마약 직접 묘사 없음)
+- [ ] S1 곡수 분포 + Hard 60% (A 2 / B 2 / C 4 / D 2 / E 1 / F 2 = 13곡, Hard 77%)
+- [ ] S2 BPM 분포 (워밍업 1-2 / 메인 6-7 / HIIT 3-4 / 쿨다운 1-2)
+- [ ] S3 A·B 인접 회피
+- [ ] S4 시리즈 길이 40-65분
+- [ ] S5 Track 01 = B축 + BPM 100-120
+- [ ] S6 마지막 곡 정책 (현재 13번 D축 → S6 룰 검토 필요)
 
 ### FAIL 패턴 대응표
 
 | FAIL 패턴 | 원인 | 대응 |
 |-----------|------|------|
-| 후반 EDM drop 발생 | `vocal chop` / `riser` 키워드 | EXCLUDE 추가 + Style Prompt 앞쪽 비트 고정 강화 |
-| 보컬 melodic화 (A축) | autotune 누출 | `no autotune, no pitch correction` EXCLUDE 추가 |
-| 보컬 dry화 (B축) | mumble rap 진입 | `no dry shouted, no mumble rap` EXCLUDE 추가 |
-| 영어 비중 50%+ | Suno 영어 rap 데이터 드리프트 | Custom Mode 풀 가사 입력 |
-| 1분대 곡 길이 | Verse 8 bar 조기 종료 | Verse 16 bar 표준 적용 |
-| 가사 미국 클리셰 (got receipts·check that swag) | Suno 자체 작사 | Custom Mode 풀 가사 직접 작성 |
+| 후반 EDM drop | vocal chop·riser 키워드 | EXCLUDE 명시 추가 |
+| 보컬 melodic화 (A축) | autotune 누출 | `no autotune, no pitch correction` 추가 |
+| 보컬 dry화 (B축) | mumble rap 진입 | `no dry shouted, no mumble rap` 추가 |
+| BPM 180 곡에서 double-time fill | F축 drop 유도 위험 | Style Prompt에서 "double-time bursts"만 (drop X) 명시 |
 
 ---
 
-## YouTube Metadata v0.2 (초안)
+## YouTube Metadata v0.3 (초안)
 
 ### 제목 후보
-
-- `[20:00] 💪 AFTER HOURS WORKOUT — KOREAN HARD HIP-HOP · 저녁 8시 운동 · 그라인드 BGM`
+- `[20:00] 💪 AFTER HOURS WORKOUT — KOREAN HARD HIP-HOP · 저녁 8시 운동`
 - `밤 여덟시 운동 BGM · KOREAN HARD HIP-HOP · 헬스장 · 러닝 · 홈트`
-- `Korean Workout Hip-Hop · After Hours · 저녁 8시 그라인드 트랩`
 
 ### 태그
-
-`힙합` `한국힙합` `K-힙합` `운동BGM` `헬스장BGM` `러닝BGM` `홈트BGM` `트랩` `Rage` `Hardcore Trap` `K-Drill` `붐뱁` `퇴근후운동` `저녁운동` `그라인드` `Workout` `Sik-K` `HAON` `Loopy`
+`힙합` `한국힙합` `K-힙합` `운동BGM` `헬스장BGM` `러닝BGM` `홈트BGM` `트랩` `Rage` `Hardcore Trap` `K-Drill` `Faster Trap` `붐뱁` `퇴근후운동` `저녁운동` `그라인드` `Workout`
 
 ### 해시태그
-
 `#운동BGM #헬스장음악 #KoreanHipHop #WorkoutHipHop #저녁8시운동 #그라인드 #트랩 #Rage`
 
-### 썸네일 컨셉 (제안)
-
-- 메인: 헬스장 어두운 배경 + 네온 악센트 (붉은/파란) + 실루엣
-- 옵션 A: 운동기구 + 빛 번짐
-- 옵션 B: 도시 야경 + 러닝 실루엣
+### 썸네일 컨셉
+- 메인: 헬스장 어두운 배경 + 네온 악센트 + 실루엣
 - Wavvy 로고 좌상단
 
-### 설명 템플릿
+---
 
-```
-💪 AFTER HOURS WORKOUT
-밤 여덟시, 퇴근 직후. 25-35 직장인의 헬스·PT·홈트·러닝.
+## Track Details — 7곡 PASS 누적 (2026-04-26)
 
-Korean Hard Hip-Hop으로 채워진 운동 BGM 1세션 (60-90분).
-Rage / Hardcore Trap / K-Drill 액센트 / 빡센 붐뱁 인터벌.
+### Track 03. Bottom to the Top — C Hardcore (lazy monotone)
+- BPM 150 / Style: Korean lazy trap, supersaw 7-voice detuned, dry layback chest voice
+- 가사: 6 Verse 모놀리식, 한국어 ~80%, "바닥부터 목줄 잡고 위로 뚫어"
+- 매칭: C1 lazy monotone deadpan layback (RUBRIC v1.3 톤 분기)
 
-[Tracklist]
-00:00 — Track 01 (TBD)
-...
+### Track 04. Paycheck — A Rage Dry
+- BPM 150 / Style: Korean trap, softened tight 808, mellow detuned synth pads (Style Prompt) + Shouted dry voice (가사 메타, 실제 결과)
+- 가사: 6 Verse + 3 Refrain, 한국어 ~50%, "불붙은 paycheck, make it stack"
+- 매칭: A Rage Dry (Style 충돌이지만 가사 메타 + 결과 우선)
 
-#운동BGM #KoreanHipHop #WorkoutHipHop
-```
+### Track 05. Fake — C Hardcore (sarcastic 디스)
+- BPM 140 / Style: Trap, hip hop, rap, aggressive (짧은 Style)
+- 가사: 3 Verse + 3 Chorus, 한국어 ~40-50%, "Fake (Fake) 너희 랩은 전부 다"
+- 매칭: C2 sarcastic 디스 컨셉
+
+### Track 07. Boomerang — C Hardcore (sarcastic 디스)
+- BPM (미명시) / Style: confident flow, dark trap, sarcastic, punchy 808
+- 가사: 2 Verse + 2 Hook + Bridge + Outro, 한국어 ~60-65%, "부메랑, 부메랑"
+- 매칭: C2 sarcastic 디스
+
+### Track 08. Yang Gang — C Hardcore (chant gang hook)
+- BPM 150 / Style: Korean hip-hop/trap halftime bounce, glitchy, playful
+- 실제 결과: Minor + Workout 컨셉 (Style과 결과 갭, 결과 우선)
+- 가사: 2 Verse + 2 Pre-Chorus + 2 Chorus + Bridge + Final Chorus, 한국어 ~80%, "Yang Gang, Yang Gang"
+- 매칭: C3 chant gang hook 변종
+
+### Track 10. Cold Stack — F Faster Dark Trap (신규 축)
+- BPM 180 / Style: Even faster dark trap, rolling 808, triplet/stutter hi-hats, stacked chant gang vocals
+- 가사: 2 Verse + 2 Pre-Chorus + 3 Chorus + Bridge, 한국어 ~50%, "Cold stack, cold stack"
+- 매칭: F Faster Dark Trap (신규 축 신설)
+
+### Track 11. Rewrite — D K-Drill
+- BPM 140 / Style: NY/Brooklyn drill hybrid, sliding 808 portamento, tresillo 3+3+2 hi-hats, D minor
+- 가사: 4 Verse × 16 + 3 Refrain, 한국어 ~70-75%, "씬에 침 뱉어"
+- 매칭: D K-Drill (90점 PASS)
 
 ---
 
-## Sources Reference (요약)
+## 미해결 / 다음 라운드
 
-| 문서 | 신뢰도 | 활용 |
-|------|--------|------|
-| `2026-04-24_hard-hiphop-4axis-musical-deep.md` (1162줄) | 88% | 4축 음악적 디테일 / Suno V5.5 프롬프트 템플릿 / 글로벌 트렌드 |
-| `2026-04-25_chart-vs-awards-validation.md` | 75% | 차트 vs 시상식 갭 검증 (시리즈 가설 1차 FAIL 근거) |
-| `2026-04-25_k-hiphop-trap-trends-deep.md` | 80% | 2025 K-Hiphop 트랩 영역 / Lil Moshpit·Trap-Soul 토착 정의 |
-| `2026-04-25_suno-boom-bap-prompt-engineering-gpt.md` | 70% | 빡센 붐뱁 Suno 프롬프트 + Korean 토착 레퍼런스 |
-| **`2026-04-25_workout-tuned-rage-supplement.md` (P0 갭 보충)** | **72%** | **Korean Tuned Singing Rage 정밀 + Suno 키워드 분리표 + Workout 적용 검증** |
-
----
-
-## 미해결 / 다음 라운드 (Section A.6 + B5 통합)
-
-1. **Loopy `MARNI` 11곡 곡별 BPM/Key + 실제 청취 보컬 처리 분류** — A축 채택 전 필수 (Confidence 40%)
-2. **K-FLIP+ 10곡 곡별 BPM** — PUBLIC ENEMY 161 외 미확보 (B축 정밀 BPM 매칭용)
-3. **Reddit r/SunoAI 직접 검증 게시물** — 가이드 출처에서만 5개 확보, Discord/YouTube 튜토리얼 직접 시청 필요
-4. **vangdale·Lil Moshpit 인터뷰** — 보컬 체인 정확 수치 (retune speed/formant/reverb decay)
-5. **JMIN 솔로 트랙별 분석** — KC 5번째 멤버, 데이터 부족
-6. **헬스 인플루언서 직접 사용 사례** — 김계란/심으뜸/피지컬갤러리 운동 영상 BGM AHA Music·Shazam 식별 (Section B3 미완)
-7. **Spotify Korea 공식 워크아웃 플레이리스트** 직접 분석 (Section B1 미완)
-8. **YouTube Music (점유율 1위)** 한국 운동 자동 추천 트랙 장르 분포
+1. **변주 6곡 작업** (사용자, 1-2시간)
+   - A 변주 1 (Paycheck Style 베이스, 신규 가사)
+   - B 신규 2 (베이스 없음, 위 Style Prompt 2종 활용)
+   - D 변주 1 (Rewrite Style 베이스)
+   - F 변주 1 (Cold Stack Style 베이스)
+   - E 보너스 신규 1 (붐뱁 Style 베이스)
+2. **변주 6곡 PASS/FAIL 판정** → RUBRIC v1.4 미세 조정 (필요 시)
+3. **Track Map 4막 × 13곡 확정** → 시리즈 패키징
+4. **Loopy MARNI 청취 검증 / K-FLIP+ BPM** (다음 라운드)
+5. **헬스 인플루언서 BGM AHA Music** (다음 라운드)
 
 ---
 
-## 정정 사항 (Section A.7 반영)
+## v0.3 정정 사항
 
-1. **SMTM12 시점**: **2026-01-15 프리미어, 2026-04-02 결승, HAON 우승**. 1차 1162줄 리포트는 명시 안 됨 — 본 v0.2에서 명시.
-2. **Loopy `MARNI` 메인 프로듀서 = SanityTooFye** (일부 자료의 Dayrick은 잘못)
-3. **NOWIMYOUNG B축 정합성**: electropop 비중 → 단순 편입 부적합, "인접 사례"로만 참조
-4. **Female Korean Tuned Singing Rage 인접 사례 = MOLLAK (Jvcki Wai × Vangdale 2025-07-04)** — 1차 리포트 §3.5 "Female 부재" 부분 정정
-
----
-
-## Track Details (개별 곡 — Suno PASS 시 누적)
-
-> 워크플로우 15-00 모델 계승. Suno 1차 테스트 4곡(Paycheck 등) 결과 누적 후 시리즈 DNA / Workout 단계 배치 역추출.
-
-(개별 트랙 정보는 Suno PASS 시 추가)
+1. **곡수 분포 20곡 → 13곡 축소** (사용자 결정 2026-04-26 "지금까지 7곡 + 변주 6곡")
+2. **F축 신설** — Cold Stack 사례 후행 인정 (180 BPM Faster Dark Trap)
+3. **C축 4가지 톤 분기** — 7곡 PASS 사례 후행 매칭
+4. **B축 introspective 변종** — Paycheck/Travis Scott 톤 인정
+5. **가사 룰 자유 정책 강화** — "가사 내용 크게 중요하지 않아, 사운드 톤앤매너만" (사용자 정정)
+6. **메타태그 [Bridge] [Pre-Chorus] [Chorus] [Final Chorus] 인정** (이전 v0.2 금지 룰 폐지)
+7. **Hard 60% 정책 유지** (Hard A+C+D+F 10/13 = 77%)
 
 ---
 
-*concept.md v0.2 — 2026-04-25 작성. P0 갭 보충 리서치(Section A·B 통합) 반영.*
+*concept.md v0.3 — 2026-04-26 작성. 7곡 PASS 후 13곡 분포 확정 + 5축 + 보너스 + 변주 전략.*

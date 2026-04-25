@@ -1,0 +1,43 @@
+Track: Paycheck (불붙은 paycheck)
+Type: A
+BPM: 150
+Key: Minor
+Length: 4:30
+
+=== STYLE ===
+Korean trap, 150 BPM, steady 2-bar drum loop, softened but tight 808 bass with controlled saturation, crisp but relaxed 1/16 hi-hats, mellow detuned synth pads replacing aggressive supersaw stabs, subtle dark bell melody, laid-back conversational male Korean rap in chest and light mix voice, smooth legato delivery, close but gently compressed vocal, minimal ad-libs used as soft echoes, restrained yet focused energy, introspective hard rap feel
+
+=== LYRICS META (실제 결과 결정) ===
+(Shouted male Korean rap, dry voice, same drum loop)
+
+=== LYRICS ===
+[Intro]
+(Instrumental, same 2-bar drum loop)
+
+[Verse 1]
+새벽부터 hustle, I don't sleep
+손에 번진 ink, got receipts
+한 장 더 쌓아, keep it neat
+너네 말은 too cheap, 내 발은 street
+
+가방엔 꿈이랑 bills and plans
+밑바닥에서 we made our stance
+웃음은 짧게, 내 눈은 cash
+한 번 더 밀어, no second chance
+
+[Refrain]
+불붙은 paycheck, make it stack
+불붙은 paycheck, never back
+우린 올라가, no lag, no cap
+불붙은 paycheck, on the map
+
+[Verse 2-6 + Refrain × 2]
+(생략 — 6 Verse + 3 Refrain 구조)
+
+[Outro]
+(Instrumental fade, same 2-bar drum loop)
+
+=== META ===
+RUBRIC v1.3 매칭: A Rage Dry (Style Prompt "introspective"이지만 가사 메타 "Shouted dry" + 실제 결과 rage 정합)
+PASS 일자: 2026-04-26
+사용자 평가: 대만족

@@ -1,4 +1,26 @@
 ---
+HANDOFF: Claude -> User (7곡 PASS + RUBRIC v1.3 + concept v0.3 + 13곡 분포 확정 + F축 신설 — 변주 6곡 작업 대기)
+Date: 2026-04-26
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 사용자 작성 7곡 일괄 검토 (Rewrite·Bottom to the Top·Fake·Boomerang·Paycheck·Cold Stack·Yang Gang) → 모두 PASS (사용자 결과물 정성 평가 우선). 검토 중 RUBRIC v1.0/v1.1로는 0곡 통과 발견 → /coach 옵션 2 채택 후 RUBRIC v1.3 일괄 보정 7개 항목 (한국어 비중 권장만/메타태그 [Bridge]/[Chorus] 인정/F축 신설 165-180 BPM/C축 4톤 분기/B축 introspective 변종/BPM 140-180/사운드 우선 정책). concept v0.3 곡수 20→13 축소 + Hard 60% 정책 유지 (A 2/B 2/C 4/D 2/E 1/F 2 = 13곡, Hard A+C+D+F = 10곡 77%) + 변주 6곡 슬롯 명시. check_series_gate.sh v1.3 수정 (13곡 + F축 + Hard threshold + 길이 40-65분 + S6 완화). 7곡 메타 파일 생성 (Track Map v0.3 슬롯 03/04/05/07/08/10/11). **Paycheck 매칭 정정** B Tuned → A Rage Dry (가사 메타 "Shouted dry" + 실제 결과 우선). 메모리 `feedback_wavvy-lyrics-vs-sound-separation.md` v1.3 정책에 강하게 반영.
+Next-TODO:
+  (1) **변주 6곡 Suno 작업** (사용자, 1-2시간) — A 변주 1(Paycheck 베이스) / B 신규 2(RUBRIC §Style B 프롬프트 2종) / D 변주 1(Rewrite 베이스) / F 변주 1(Cold Stack 베이스) / E 보너스 1(붐뱁 신규)
+  (2) 6곡 결과 PASS/FAIL → 필요 시 RUBRIC v1.4 미세 조정
+  (3) 13곡 누적 후 `check_series_gate.sh` PASS 검증
+  (4) 시리즈 패키징 (썸네일 Midjourney + YouTube 메타 v0.3)
+  (5) 미해결 5건 다음 라운드 (Loopy MARNI 청취 / K-FLIP+ BPM / 헬스 인플루언서 BGM AHA Music / Spotify Korea Workout / YouTube Music)
+Key-Files:
+  - 루브릭 v1.3: `~/Project/wavvy/MASTER/rubrics/HARD_HIPHOP_RUBRIC.md`
+  - 컨셉 v0.3: `~/Project/wavvy/SERIES/20-00/concept.md` (13곡 분포 + 변주 슬롯 + 5축 + 보너스)
+  - 7곡 메타: `~/Project/wavvy/SERIES/20-00/input/tracks/03~11_*.txt`
+  - 스크립트: `~/Project/wavvy/MASTER/scripts/check_series_gate.sh` v1.3 + `check_lyric_avoid.sh`
+  - 회의록: `meetings/2026-04-26_20-00-genre-gate-{rubric-design,execution-plan}.md`
+  - 보충 리서치: `SERIES/20-00/report/2026-04-25_workout-tuned-rage-supplement.md`
+Commits: (이번 record)
+---
+
+---
 HANDOFF: Claude -> User (HARD_HIPHOP_RUBRIC v1.1 + 자동화 스크립트 2건 + Hard 60% 정책 완료 — Suno V5.5 5곡 1차 테스트 대기)
 Date: 2026-04-26
 Project: ~/Project/wavvy

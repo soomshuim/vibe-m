@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # check_series_gate.sh
-# 시리즈 단위 게이트 자동 검증 (HARD_HIPHOP_RUBRIC v1.1 S1-S6)
+# 시리즈 단위 게이트 자동 검증 (HARD_HIPHOP_RUBRIC v1.3 S1-S6, 13곡 기준)
 #
 # 사용법:
 #   ./check_series_gate.sh <시리즈 디렉토리>
@@ -10,7 +10,7 @@
 #   - <시리즈>/input/tracks/NN_*.txt 형식
 #   - 각 .txt 파일 헤더에 다음 메타:
 #       Track: <제목>
-#       Type: A | B | C | D | E
+#       Type: A | B | C | D | E | F
 #       BPM: <숫자>
 #       Key: <키>
 #       Length: <시간>
@@ -20,24 +20,25 @@
 
 set -uo pipefail
 
-# === 정책 (HARD_HIPHOP_RUBRIC v1.1) ===
-TARGET_TOTAL=20
-TARGET_A=4
-TARGET_B=5
-TARGET_C=5
-TARGET_D=3
-TARGET_E=3
-HARD_PCT=60   # A+C+D = 12 / 20 = 60%
+# === 정책 (HARD_HIPHOP_RUBRIC v1.3, 13곡 분포) ===
+TARGET_TOTAL=13
+TARGET_A=2
+TARGET_B=2
+TARGET_C=4
+TARGET_D=2
+TARGET_E=1
+TARGET_F=2
+HARD_PCT_MIN=60   # Hard A+C+D+F 최소 60% (실제 v1.3 = 77%)
 
 # BPM 영역
 WARMUP_MIN=100;  WARMUP_MAX=120
 MAIN_MIN=130;    MAIN_MAX=150
-HIIT_MIN=140;    HIIT_MAX=180   # 메인과 일부 겹침 허용
-COOLDOWN_MIN=90; COOLDOWN_MAX=110
+HIIT_MIN=140;    HIIT_MAX=180   # 메인과 일부 겹침 허용 + F축 165-180 영역
+COOLDOWN_MIN=90; COOLDOWN_MAX=115   # B/E 멜로딕 마무리 영역
 
-# 시리즈 길이 (분)
-LENGTH_MIN_MIN=60
-LENGTH_MAX_MIN=90
+# 시리즈 길이 (분, v1.3 13곡 기준)
+LENGTH_MIN_MIN=40
+LENGTH_MAX_MIN=65
 
 # === 파싱 ===
 parse_track() {
@@ -94,7 +95,7 @@ main() {
   fi
 
   # 카운트
-  local count_a=0 count_b=0 count_c=0 count_d=0 count_e=0
+  local count_a=0 count_b=0 count_c=0 count_d=0 count_e=0 count_f=0
   local count_warmup=0 count_main=0 count_hiit=0 count_cooldown=0
   local total_seconds=0
   local seq_types=()
@@ -116,6 +117,7 @@ main() {
       C) count_c=$((count_c + 1));;
       D) count_d=$((count_d + 1));;
       E) count_e=$((count_e + 1));;
+      F) count_f=$((count_f + 1));;
       *) echo "WARN: $file Type 미인식 ('$type')" >&2;;
     esac
 
@@ -138,25 +140,25 @@ main() {
     fi
   done
 
-  # === S1: 곡수 분포 + Hard 60% ===
-  local hard=$((count_a + count_c + count_d))
+  # === S1: 곡수 분포 + Hard 60% (v1.3: A+C+D+F = Hard) ===
+  local hard=$((count_a + count_c + count_d + count_f))
   local nonhard=$((count_b + count_e))
   local hard_actual_pct=0
   if [ "$total" -gt 0 ]; then hard_actual_pct=$((hard * 100 / total)); fi
-  local s1_detail="(A:$count_a B:$count_b C:$count_c D:$count_d E:$count_e = ${total}곡 / Hard:${hard} Non-Hard:${nonhard} = ${hard_actual_pct}%)"
-  if [ "$count_a" -eq "$TARGET_A" ] && [ "$count_b" -eq "$TARGET_B" ] && [ "$count_c" -eq "$TARGET_C" ] && [ "$count_d" -eq "$TARGET_D" ] && [ "$count_e" -eq "$TARGET_E" ] && [ "$total" -eq "$TARGET_TOTAL" ] && [ "$hard_actual_pct" -eq "$HARD_PCT" ]; then
-    check_pass "S1 곡수 분포 + Hard 60%" "  $s1_detail"
+  local s1_detail="(A:$count_a B:$count_b C:$count_c D:$count_d E:$count_e F:$count_f = ${total}곡 / Hard:${hard} Non-Hard:${nonhard} = ${hard_actual_pct}%)"
+  if [ "$count_a" -eq "$TARGET_A" ] && [ "$count_b" -eq "$TARGET_B" ] && [ "$count_c" -eq "$TARGET_C" ] && [ "$count_d" -eq "$TARGET_D" ] && [ "$count_e" -eq "$TARGET_E" ] && [ "$count_f" -eq "$TARGET_F" ] && [ "$total" -eq "$TARGET_TOTAL" ] && [ "$hard_actual_pct" -ge "$HARD_PCT_MIN" ]; then
+    check_pass "S1 곡수 분포 + Hard 60%+" "  $s1_detail"
   else
-    check_fail "S1 곡수 분포 + Hard 60%" "  $s1_detail (목표: A:${TARGET_A} B:${TARGET_B} C:${TARGET_C} D:${TARGET_D} E:${TARGET_E} = ${TARGET_TOTAL}곡 / Hard ${HARD_PCT}%)"
+    check_fail "S1 곡수 분포 + Hard 60%+" "  $s1_detail (목표: A:${TARGET_A} B:${TARGET_B} C:${TARGET_C} D:${TARGET_D} E:${TARGET_E} F:${TARGET_F} = ${TARGET_TOTAL}곡 / Hard ${HARD_PCT_MIN}%+)"
   fi
 
-  # === S2: BPM 분포 ===
+  # === S2: BPM 분포 (v1.3 13곡 기준) ===
   local bpm_classified=$((count_warmup + count_main + count_hiit + count_cooldown))
   local s2_detail="(워밍업:$count_warmup 메인:$count_main HIIT:$count_hiit 쿨다운:$count_cooldown = ${bpm_classified}곡)"
-  if [ "$count_warmup" -ge 2 ] && [ "$count_warmup" -le 3 ] && [ "$count_main" -ge 8 ] && [ "$count_main" -le 9 ] && [ "$count_hiit" -ge 5 ] && [ "$count_hiit" -le 6 ] && [ "$count_cooldown" -ge 2 ] && [ "$count_cooldown" -le 3 ]; then
+  if [ "$count_warmup" -ge 1 ] && [ "$count_warmup" -le 2 ] && [ "$count_main" -ge 6 ] && [ "$count_main" -le 7 ] && [ "$count_hiit" -ge 3 ] && [ "$count_hiit" -le 4 ] && [ "$count_cooldown" -ge 1 ] && [ "$count_cooldown" -le 2 ]; then
     check_pass "S2 BPM 분포" "  $s2_detail"
   else
-    check_fail "S2 BPM 분포" "  $s2_detail (목표: 워밍업 2-3 / 메인 8-9 / HIIT 5-6 / 쿨다운 2-3)"
+    check_fail "S2 BPM 분포" "  $s2_detail (목표 v1.3: 워밍업 1-2 / 메인 6-7 / HIIT 3-4 / 쿨다운 1-2)"
   fi
 
   # === S3: A·B 인접 회피 ===
@@ -194,7 +196,8 @@ main() {
     check_fail "S5 Track 01 워밍업 B축" "  $s5_detail (목표: B축 BPM ${WARMUP_MIN}-${WARMUP_MAX})"
   fi
 
-  # === S6: 마지막 2-3곡 = 멜로딕 마무리 (B+E, BPM 90-115) ===
+  # === S6: 마지막 2-3곡 = 멜로딕 마무리 (B+E 권장, BPM 90-115) ===
+  # v1.3: 13곡에서는 마지막 1-2곡만 검사 (S6 룰 완화)
   local last_idx=$((total - 1))
   local penult_idx=$((total - 2))
   local last_type="${seq_types[$last_idx]:-?}"
@@ -203,14 +206,22 @@ main() {
   local penult_bpm="${seq_bpms[$penult_idx]:-0}"
   local s6_detail="(Track ${total} ${last_type} BPM ${last_bpm} / Track $((total-1)) ${penult_type} BPM ${penult_bpm})"
   local s6_ok=1
-  # 마지막 곡: B 또는 E + BPM 90-115
-  if ! { [ "$last_type" = "B" ] || [ "$last_type" = "E" ]; } || [ "$last_bpm" -lt 90 ] || [ "$last_bpm" -gt 115 ]; then
+  # 마지막 또는 직전 곡 중 하나는 B/E + BPM 90-115 (둘 중 하나만 충족하면 PASS)
+  local last_melodic=0
+  local penult_melodic=0
+  if { [ "$last_type" = "B" ] || [ "$last_type" = "E" ]; } && [ "$last_bpm" -ge 90 ] && [ "$last_bpm" -le 115 ]; then
+    last_melodic=1
+  fi
+  if { [ "$penult_type" = "B" ] || [ "$penult_type" = "E" ]; } && [ "$penult_bpm" -ge 90 ] && [ "$penult_bpm" -le 115 ]; then
+    penult_melodic=1
+  fi
+  if [ "$last_melodic" -eq 0 ] && [ "$penult_melodic" -eq 0 ]; then
     s6_ok=0
   fi
   if [ "$s6_ok" -eq 1 ]; then
     check_pass "S6 마지막 멜로딕 마무리" "  $s6_detail"
   else
-    check_fail "S6 마지막 멜로딕 마무리" "  $s6_detail (목표: 마지막 곡 B 또는 E + BPM 90-115)"
+    check_fail "S6 마지막 멜로딕 마무리" "  $s6_detail (목표: 마지막 1-2곡 중 하나는 B 또는 E + BPM 90-115)"
   fi
 
   # === 출력 ===

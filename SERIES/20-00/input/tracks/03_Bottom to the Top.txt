@@ -1,0 +1,52 @@
+Track: Bottom to the Top
+Type: C
+BPM: 150
+Key: Minor
+Length: 4:00
+
+=== STYLE ===
+Korean lazy trap, 150 BPM, same 16-bar trap drum loop throughout no beat switch no final lift, distorted sliding 808 bass hard clipped low end, rolling 1/16 hi-hats steady, supersaw 7-voice detuned sustained stab, simple dark bell melody, dry and lazy layback style male Korean rap, chest voice, dry close vocal, sharp articulation, dense ad-libs between rap lines, raw energy, hard rap only
+
+=== EXCLUDE ===
+EDM drop, vocal chop, vocal stutter, pitch-shifted vocals, beat switch, drum fill, double-time drums, halftime switch, breakbeat, glitch drums, riser, sung hook, 32nd triplet burst
+
+=== LYRICS ===
+[Rap Song]
+(Strict monotone spoken Korean rap, flat pitch delivery, no melody, no singing, no chorus)
+
+[Intro]
+(Instrumental, dusty boom bap loop)
+
+[Verse 1]
+(Strict monotone spoken rap, flat pitch delivery, dry thin male voice, same drum loop)
+바닥에 붙은 발, 박자에 박힌 밤
+잠은 뒤로 밀어, 펜끝은 긁는 방
+빈 지갑 접어 넣고, 숨은 긴장감
+단칸방 벽에 새겨 둔 diagram
+
+헛된 말들 씹고 난 더 깊게 파
+입만 산 놈들 사이, 결과로 답
+네가 뱉은 조롱까지 연료로 삼아
+식은 눈빛 속에서도 독기는 살아
+
+한 글자 두 글자, 박자마다 깎아
+거친 숨 눌러 담아 라인마다 박아
+낮엔 무표정, 밤엔 더 차가워
+무너진 자리에서 이를 갈고 올라서
+
+no luck, no pass, 내 길은 벌어
+두 손의 굳은살이 계약서처럼 걸어
+바닥부터 목줄 잡고 위로 뚫어
+첫 마디 뱉는 순간 판이 전부 흔들려
+
+[Verse 2-6]
+(생략 — 6 Verse 모놀리식 구조, Refrain/Hook 부재)
+
+[Outro]
+(Instrumental fade, same boom bap loop)
+
+=== META ===
+RUBRIC v1.3 매칭: C Hardcore Trap (lazy monotone deadpan layback)
+PASS 일자: 2026-04-26
+8-Factor 추정: 88/100 PASS
+사용자 평가: 결과물 만족

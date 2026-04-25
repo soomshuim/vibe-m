@@ -1,0 +1,31 @@
+Track: Cold Stack
+Type: F
+BPM: 180
+Key: Minor
+Length: 3:00
+
+=== STYLE ===
+Even faster dark trap around 180 BPM with relentless rolling 808 basslines, ultra-tight triplet and stuttered hi-hats, and hard, punchy snares driving a nonstop forward momentum; verses ride on stripped-back, brooding drums and eerie detuned synth bells, with energy pushed by tempo and rhythmic density instead of EDM-style effects, while the hook drops into heavier sub-bass, aggressive brass stabs, and stacked chant-style gang vocals on the main phrases, Male Korean-English bilingual rap with sharper double-time and occasional triple-time bursts, dense ad-libs tucked rhythmically around the lead, gritty low-register harmonies, subtle glitchy delay throws on key English words, and a hard-edged, high-contrast mix with heavy low-end impact and dark atmospheric textures focused on raw trap sonics
+
+=== LYRICS ===
+[Verse 1]
+계획 들고 왔지, not a prayer
+주머니엔 grit, yeah, I was there
+첫차 타고 출근, late-night grind
+작은 win 쌓아, one step at a time
+
+(생략 — 2 Verse + 2 Pre-Chorus + 3 Chorus + Bridge 구조)
+
+[Chorus]
+Cold stack, cold stack, 쌓여 rise
+돈은 머릿속, clear eyes
+Cold stack, cold stack, never fold
+바닥에서 올려, now it's gold
+Cold stack, cold stack, 내 이름 말해
+I don't chase, I build my lane, yeah
+
+=== META ===
+RUBRIC v1.3 매칭: F Faster Dark Trap (신규 축 신설)
+PASS 일자: 2026-04-26
+사용자 평가: 정성적으로 좋았어. 새로운 스타일.
+v0.3 변경: F축 신설 (165-180 BPM, rolling 808 + triplet hi-hats + chant gang vocals)

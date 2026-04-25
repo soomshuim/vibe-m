@@ -1,0 +1,30 @@
+Track: Boomerang (부메랑)
+Type: C
+BPM: 145
+Key: Minor
+Length: 3:45
+
+=== STYLE ===
+confident flow, dark trap, rap, sarcastic attitude, hip-hop, punchy 808, minimal, heavy bass, theme, fake, tone
+
+=== LYRICS ===
+[Intro]
+Boomerang, boomerang,
+네가 뱉은 말끝, 결국 전부 네 자리로 되돌아와 bang.
+쌓아 둔 비난과 얕은 웃음, 그대로 네 얼굴에 남아—
+네 입에서 나온 날선 말들, 부메랑처럼 튕겨, hater, you're a clown.
+
+[Verse 1] (12행)
+[Hook] (8행)
+[Verse 2] (12행)
+[Hook] (8행)
+[Bridge] (6행)
+[Outro] (5행)
+
+(생략 — 가사 전문은 별도 보관)
+
+=== META ===
+RUBRIC v1.3 매칭: C Hardcore Trap (sarcastic 디스 컨셉)
+PASS 일자: 2026-04-26
+사용자 평가: 부메랑 정성적으로 괜찮았어. 통과.
+v0.3 변경: [Bridge] 메타태그 인정
