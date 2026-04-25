@@ -455,12 +455,14 @@
 | **Loopy `Gear 2` 장르 검증** | 트랩 (붐뱁 아님). 근거: 힙합엘이/나무위키 "aggressive trap beats 강점", Loopy 본인 "초기 trap 시기 대표곡", 프로듀서 Denis The Menace + 808/hi-hat roll 컨벤션. 20-00 D축 분류 정합 (단 Loopy 후기곡과 구분 필요, 시기 명시 권장). |
 | **2026 글로벌 트렌드 외부 리서치 (Plugg 1순위)** | researcher 5에이전트 병렬. PluggnB Splice +342.8% (2024 가장 빠른 성장), Sexy Drill 차트, Drift Phonk Spotify 1위. 1순위 4축 안: A Rage / B K-Drill+Sexy Drill / C PluggnB / D Hardcore Trap + 붐뱁 보너스. |
 | **2026 국힙 신규 리서치 (사용자 정정 반영)** | researcher. KHA 2026 Sik-K Artist of the Year + KMA 2026 Effie 6관왕 + 붐뱁 H2 2025 모멘텀 약화 검증. **글로벌 추천 무효화**: PluggnB·Sexy Drill·Phonk 모두 K-rap 진입 사례 부족. Hyperpop·Digicore가 진짜 2026 국힙 부상 트렌드. |
-| **/team 4축 재편안 검증 회의** | Marketing/Product/Growth/Design + QA Round 2 인라인. **5/5 PASS**. A안 보정 (35/20/25/10+5) 만장 합의: Rage 4→7 격상(KC + EK 흡수 후보), K-Drill 5→4 축소, Hardcore Trap 4→5(YUMDDA 추가), Hyperpop·Digicore Edge 2곡(Sion+Effie raged 한정), 모던 붐뱁 7→1-2 보너스. Track Map 배치 순서 룰(Track 01 Rage 인트로 / 09-10 Hyperpop / 12-13 보너스) 추가. 회의: `meetings/2026-04-25_20-00-4axis-realignment.md` |
+| **/team 4축 재편안 검증 회의** | Marketing/Product/Growth/Design + QA Round 2 인라인. **5/5 PASS**. A안 보정 (35/20/25/10+5) 만장 합의: Rage 4→7 격상(KC + EK 흡수 후보), K-Drill 5→4 축소, Hardcore Trap 4→5(YUMDDA 추가), Hyperpop·Digicore Edge 2곡(Sion+Effie raged 한정), 모던 붐뱁 7→1-2 보너스. 회의: `meetings/2026-04-25_20-00-4axis-realignment.md` |
+| **음악 디테일 조사 충분성 검증 회의** | Music Production Engineer / Music Data Analyst / A&R Genre Specialist + QA Round 2. Critical 갭 3건(YUMDDA / Sion eigensinn / Effie raged) + Major 갭 2건(EK YAHO 분류 / 멜랑콜릭 Rage 한국 사례) 식별. 회의: `meetings/2026-04-25_20-00-music-detail-audit.md` |
+| **차트·청자 검증 신규 리서치 (사용자 의심 정정)** | researcher. 사용자 "진짜 Korean 2026 trend에 적합한가?" 의심 정확. **시상식 직반영 4축 안 FAIL**: 벅스 2025 힙합/R&B TOP30에서 Rage/Drill/Hyperpop 진입 0-1곡, 멜로딕 트랩/Trap-Soul 8-10곡 / KT지니 30대 1위 G-DRAGON `TOO BAD` / Effie 본인 "보수적 청자는 내 음악 싫어한다" 인용. 사용자 첫 직감(트렌디 트랩 비트 기반) 재확인. 리포트: `SERIES/20-00/report/2026-04-25_chart-vs-awards-validation.md` |
+| **20-00 시리즈 산출물 전면 리셋** | 사용자 결정: 기존 4축 안 폐기. 삭제: `concept.md` v0.1(437줄) / `test-prompts.md`(414줄) / `input/tracks/` 가사 2건(Paycheck Rage / Rewrite K-Drill). 보존: 1162줄 deep dive 리포트 + 미팅 노트 4건 + 차트 검증 리포트 (audit trail). 새 방향은 사용자와 별도 논의 예정. |
 
 ### 다음 단계
-- 20-00 concept.md v0.2 재작성 (신 4축 Style Templates 4종 + Track Map v0.2 + EXCLUDE v3 axis 특화)
-- Suno 1차 테스트 추가 곡: `Come Up` 붐뱁 보너스 슬롯 + Sion 스타일 Hyperpop·Digicore 1곡 신규 (`Paranoia` D는 C Hardcore Trap으로 재라벨)
-- /director 호출 (concept.md v0.2 재작성 + 보존 자산 무손실)
+- **20-00 새 방향 논의** — 차트 정합 멜로딕 트랩/Trap-Soul 코어 vs 빡센 정통 vs 하이브리드 (사용자 결정 대기)
+- 새 방향 확정 후 concept.md 재작성
 
 ## 다음 할 일
 

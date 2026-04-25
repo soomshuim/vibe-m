@@ -1,4 +1,23 @@
 ---
+HANDOFF: Claude -> User (20-00 산출물 전면 리셋 — 차트·청자 검증 후 새 방향 논의 대기)
+Date: 2026-04-25 20:15
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 20-00 AFTER HOURS 시리즈 산출물(concept.md v0.1 + test-prompts.md + 통과 가사 2건) **전면 삭제**. 트리거: 사용자 의심 "진짜 Korean 2026 trend에 적합한가?" 검증 → 차트·청자 데이터 신규 리서치 결과 **시상식 직반영 4축 안 FAIL**. 핵심 발견: 벅스 2025 힙합/R&B TOP30에서 Rage/Drill/Hyperpop 진입 0-1곡 (멜로딕 트랩/Trap-Soul 8-10곡 차지), KT지니 30대 1위 G-DRAGON `TOO BAD`(협업 트랩), Effie 본인 "보수적 청자는 내 음악 싫어한다"(Dazed). KHA/KMA 시상식 = 평론·서브컬처 영역, 차트·30대 직장인 = 멜로딕 트랩 영역 갭 명확. 사용자 첫 직감("2026 트렌디 트랩 비트 기반")이 정합 검증됨. 회의 기록 3건 + 차트 검증 리포트 1건 audit trail 보존.
+Next-TODO:
+  (1) **새 방향 논의 (사용자와 별도 세션)** — 차트 정합 멜로딕 트랩/Trap-Soul 코어 / 빡센 정통(시상식·인디) / 하이브리드 중 시리즈 정체성 결정
+  (2) 새 방향 확정 후 concept.md v0.2 재작성 (배분 / Style Templates / Track Map / Suno 프롬프트)
+  (3) 통과 가사 2건은 삭제됨 — 새 방향에서 재활용 가능 시 git history(commit ec04577 이전)에서 복원 가능
+  (4) 1162줄 deep dive 리포트는 보존 — 새 방향에서 일부 액센트(Rage·Drill·Trap) 활용 시 학습 자산으로 참조
+Key-Files:
+  - 차트 검증 리포트: `~/Project/wavvy/SERIES/20-00/report/2026-04-25_chart-vs-awards-validation.md`
+  - 1차 딥리서치: `~/Project/wavvy/SERIES/20-00/report/2026-04-24_hard-hiphop-4axis-musical-deep.md` (1162줄, 보존)
+  - 미팅 노트 3건: `meetings/2026-04-25_20-00-{hard-hiphop-positioning,4axis-realignment,music-detail-audit}.md`
+  - 삭제 자산 (git history 복원 가능): concept.md v0.1 / test-prompts.md / 가사 2건
+Commits: (이번 리셋 record commit)
+---
+
+---
 HANDOFF: Claude -> User (20-00 4축 재편 /team 만장 합의 — concept.md v0.2 재작성 대기)
 Date: 2026-04-25 16:30
 Project: ~/Project/wavvy
