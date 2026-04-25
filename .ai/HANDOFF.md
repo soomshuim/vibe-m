@@ -1,4 +1,24 @@
 ---
+HANDOFF: Claude -> User (💪 AFTER HOURS WORKOUT concept.md v0.2 + P0 갭 보충 리서치 통합 완료 — Suno V5.5 5곡 1차 테스트 대기)
+Date: 2026-04-26
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 20-00 P0 갭 보충 리서치 2건 병렬(researcher × 2) 완료 후 concept.md v0.2 작성. **Section A** Korean Tuned Singing Rage Trap 정밀(KC 라인업 + Loopy MARNI + MOLLAK 검증, 글로벌 Dry vs Tuned 보컬 체인 비교, Suno V5/V5.5 키워드 분리표 Dry/Tuned 정체성 보호 EXCLUDE 분리, Korean 권장 프롬프트 2종) — 신뢰도 72%. **Section B** Workout K-rap 페르소나 + 한국 운동 BGM(Bugs·Melon·Apple Music 7건 큐레이션 분석, 직장인 헬스 30.9%·러닝 +232%·76.4% 저녁 운동, 시리즈 가설 **CONDITIONAL PASS** + Korean Workout Hip-Hop 빈자리 채우기 명분) — 신뢰도 80%. **concept.md v0.2** (497줄): 시리즈 라벨 `💪 AFTER HOURS WORKOUT` 확정, 신 4축 + 보너스 곡수 **A 3-4 / B 5 / C 5-6 / D 3 / 보너스 2-3 = 18-21곡**(Section A·B 권장 절충), Style Templates 5종(Section A.3 분리표 + Paycheck v3 통합), EXCLUDE v3 축별 특화표, **Workout 배치 룰** 운동 단계별 BPM 매칭(워밍업 100-120 → 메인 130-150 → HIIT 140-180 → 쿨다운 90-110), Track Map v0.2 4막 × 19-21곡 스켈레톤, LYRICS 가이드 + QA 체크리스트 + YouTube Metadata v0.2. **정정 사항 4건**: SMTM12 2026-04-02 HAON 우승 / Loopy MARNI 메인 PD SanityTooFye / NOWIMYOUNG electropop B축 부적합 / MOLLAK Female Korean Tuned Singing Rage 인접 신규. **사용자 피드백 정정** "가사까지 workout일 필요는 없어. 트랙 톤앤매너(BPM/에너지)만 workout스러우면 돼" → 가사 가이드 전반 수정(Workout 어휘 강제 제거 / D축 K-Drill 가사 리라이트 강제 제거 / 회피 영역만: 무차별 폭력·살해·총기·마약 직접 묘사). 메모리 저장: `feedback_wavvy-lyrics-vs-sound-separation.md` (시리즈 컨셉 정합 = 사운드 영역, 가사는 자유).
+Next-TODO:
+  (1) **통과 가사 2건 복원 결정** (사용자, pending) — `불붙은 paycheck` (A Rage Dry ✅) / `씬에 침 뱉어` (D K-Drill 본가 무드) git history `ec04577` 이전 commit에서 복원 가능
+  (2) **Suno V5.5 5곡 1차 테스트** — A Dry / B Tuned / C Hardcore / D K-Drill / 보너스 붐뱁 각 1곡, 가사 자유 작성 (Workout 어휘 강제 X)
+  (3) 3+ PASS 시 19-21곡 확장
+  (4) 미해결 5건 다음 라운드 — Loopy MARNI 청취 검증 / K-FLIP+ BPM / 헬스 인플루언서 BGM 식별 / Spotify Korea 워크아웃 / YouTube Music 운동 추천 트랙 분포
+Key-Files:
+  - 메인 산출물: `~/Project/wavvy/SERIES/20-00/concept.md` v0.2 (497줄)
+  - 보충 리서치: `~/Project/wavvy/SERIES/20-00/report/2026-04-25_workout-tuned-rage-supplement.md` (50KB, Section A + B)
+  - 메모리: `~/.claude/projects/-Users-zenkim-office/memory/feedback_wavvy-lyrics-vs-sound-separation.md`
+  - 1162줄 1차 딥리서치 / 차트 검증 / K-hiphop 트랩 트렌드 / GPT 빡센 붐뱁 (보존)
+  - /team 회의록 4건 (보존)
+Commits: (이번 record commit)
+---
+
+---
 HANDOFF: Claude -> User (20-00 /team 리서치 갭 점검 5/5 PASS — P0 리서치 2건 호출 대기)
 Date: 2026-04-25 21:55
 Project: ~/Project/wavvy

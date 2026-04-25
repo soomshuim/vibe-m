@@ -1,8 +1,39 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-25 (6차 업데이트 — Paycheck 인사이트 B~D 축 확산 + EXCLUDE 축별 특화 13종 + Rewrite 4차 재설계 수용 + Verse 16 bar 표기)
+> Last updated: 2026-04-26 (7차 업데이트 — 💪 AFTER HOURS WORKOUT concept.md v0.2 + P0 갭 보충 리서치 2건 통합 + 가사 vs 사운드 분리 룰 정립)
 
 ## 진행 중
+
+- **20-00 `💪 AFTER HOURS WORKOUT` concept.md v0.2 + P0 갭 보충 리서치 통합 + 가사 가이드 정정** (2026-04-26 7차)
+  - ✅ **P0 갭 보충 리서치 2건 병렬 호출** (researcher × 2, 각 백그라운드, 약 10-19분):
+    - **Section A** (Korean Tuned Singing Rage Trap 정밀): 시간순 정리 2023-2026 / KC 라인업(Sik-K·HAON·Lil Moshpit·Vangdale·NOWIMYOUNG·JMIN) + Loopy MARNI + Jvcki Wai MOLLAK 검증 / K-FLIP+ PUBLIC ENEMY 161 BPM E minor 확정 / 글로벌 Dry vs Tuned 보컬 체인 비교(Carti·Yeat·Travis·Don Toliver retune speed·formant·reverb tail) / Suno V5/V5.5 키워드 분리표(Dry/Tuned 정체성 보호 EXCLUDE 분리) / 검증된 Suno Rage 프롬프트 5건 / Korean 권장 프롬프트 템플릿 2종. 신뢰도 72%
+    - **Section B** (Workout K-rap 페르소나 + 한국 운동 BGM): Bugs/Melon/Apple Music 7건 큐레이션 분석 → 한국 헬스장 큐레이션 = K-pop·외산 팝·EDM 우세, 빡센 트랩 0% / "격하게 운동할 때 듣는 힙합" Apple Music 15곡 = 외산 트랩·Rage rap 80%+ Korean rap 0% **빈자리** / 직장인 헬스 30.9%(1위)·러닝 +232%(30대 1위)·76.4% 저녁 운동·헬스장 매장 30대 25.6% / K-Drill BPM·사운드 PASS 가사 무드 부조화 / 시리즈 가설 **CONDITIONAL PASS** + Korean Workout Hip-Hop 빈자리 채우기 명분. 신뢰도 80%
+    - 산출물: `SERIES/20-00/report/2026-04-25_workout-tuned-rage-supplement.md` (50KB)
+  - ✅ **concept.md v0.2 작성** (497줄, 신규 — v0.1 리셋 후 새로 작성):
+    - **시리즈 라벨 `💪 AFTER HOURS WORKOUT`** 확정 (Section B 페르소나 검증 PASS)
+    - **신 4축 + 보너스 곡수 절충안**: A Rage Dry 3-4 / B Rage Tuned 5 / C Hardcore Trap 5-6 / D K-Drill 액센트 3 / 보너스 빡센 붐뱁 2-3 = **18-21곡** (Section A 권장 A 2-3 + Section B 권장 A 5-6 가운데 절충)
+    - **Style Templates 5종** Section A.3 Suno 키워드 분리표 인용 + Paycheck v3 통합 + KC vangdale 광택 디자인 시그니처 반영
+    - **EXCLUDE v3 축별 특화표** (A Dry/B Tuned 정체성 보호 분리)
+    - **Workout 배치 룰** (운동 단계별 BPM 매칭): 워밍업 100-120 (B) → 메인 130-150 (C+A+보너스) → HIIT 140-180 (C+D) → 쿨다운 90-110 (B+보너스 붐뱁)
+    - **Track Map v0.2** 4막 × 19-21곡 스켈레톤 + 배치 원칙 (Track 01 워밍업 / A·B 인접 회피 / 마지막 2-3곡 멜로딕)
+    - **LYRICS 가이드** Verse 16 bar 표준 + 메타태그 금지 (`[Final Hook]`/`[Drop]`/`[Bridge]`) + Refrain 4행 축약
+    - **QA 체크리스트** 곡별 + 시리즈 + FAIL 패턴 대응표
+    - **YouTube Metadata v0.2** 초안 (제목/태그/해시태그/설명 템플릿)
+  - ✅ **정정 사항 v0.2 반영** (Section A.7):
+    - SMTM12 = **2026-01-15 프리미어 / 2026-04-02 결승 / HAON 우승** (1차 1162줄 리포트 명시 안 됨)
+    - Loopy `MARNI` 메인 PD = **SanityTooFye** (일부 자료의 Dayrick은 잘못)
+    - NOWIMYOUNG = electropop 비중 → B축 단순 편입 부적합, "인접 사례"로만
+    - MOLLAK (Jvcki Wai × Vangdale 2025-07-04) = **Female Korean Tuned Singing Rage 인접 신규 사례** (1차 §3.5 "Female 부재" 정정)
+  - ✅ **사용자 피드백 정정** (2026-04-26): "가사까지 workout일 필요는 없어. 그냥 트랙들의 톤앤매너(BPM이나 에너지)만 workout스러우면 돼"
+    - **§핵심 원칙 → 코어**: "운동 텐션 + 그라인드 정서 표현" → "일반 하드 힙합 자유 서사. Workout 어휘 강제 X — Workout 정합은 사운드(BPM·에너지·페이스)에서만"
+    - **§Style D**: "K-Drill Workout 액센트" → "K-Drill 액센트". 가사 리라이트 필수 → 본가 무드 자유. 회피 영역만 명시 (무차별 폭력·살해·총기·마약 직접 묘사)
+    - **§LYRICS 공통 원칙 6번**: "Workout 어휘 우선" → "주제 자유 (퇴근·도시·디스·자랑·반항·내면). 회피 영역만"
+    - **§주제 어휘 풀**: 운동 어휘 강제 → 자유 영역 + 회피 영역
+    - **§QA 체크리스트**: "Workout 어휘 정합" → "주제 자유 / 회피 영역 미사용"
+    - **§D축 통과 가사 복원**: "Workout 가사 리라이트 필수" → "본가 K-Drill 무드 유지"
+    - 메모리 저장: `~/.claude/projects/-Users-zenkim-office/memory/feedback_wavvy-lyrics-vs-sound-separation.md` (시리즈 컨셉 정합 = 사운드 영역, 가사는 자유)
+  - ⚠️ **미해결**: (1) 통과 가사 2건 복원 결정 — `불붙은 paycheck` (A Rage Dry 정합 ✅) / `씬에 침 뱉어` (D K-Drill 본가 무드 유지) git history `ec04577` 이전 commit에서 복원 가능, 사용자 결정 대기. (2) Loopy MARNI 11곡 곡별 BPM/Key + 보컬 처리 청취 검증 (Confidence 40%). (3) K-FLIP+ 10곡 곡별 BPM (PUBLIC ENEMY 161 외 미확보). (4) 헬스 인플루언서 BGM AHA Music·Shazam 직접 식별. (5) Spotify Korea 공식 워크아웃 플레이리스트 직접 분석.
+  - **남은 TODO**: (1) 통과 가사 2건 복원 결정. (2) Suno V5.5 5곡 1차 테스트 (A Dry / B Tuned / C Hardcore / D K-Drill / 보너스 붐뱁 각 1곡). (3) 3+ PASS 시 19-21곡 확장. (4) 미해결 5건 다음 라운드.
 
 - **20-00 Paycheck 인사이트 B~D 확산 + EXCLUDE 축별 특화 + Rewrite 4차 수용 + Verse 16 bar 표기** (2026-04-25 6차)
   - ✅ **concept.md §Style A 반영 완료** (5차 "일단 통과" 해결) — v3 Style Prompt (`same 2-bar trap drum loop throughout no beat switch no final lift` 앞쪽, `screamed raw shouted + chest voice dry close vocal`, autotune 제거, `raw uncut rage energy`, `dense ad-libs between rap lines`) + EXCLUDE v2 rage 13종 + 가사 구조 (Refrain 4행, `[Hook]/[Final Hook]/[Drop]` 금지 메타태그)
