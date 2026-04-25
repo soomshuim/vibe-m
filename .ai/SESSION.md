@@ -1,8 +1,39 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-26 (8차 업데이트 — 20-00 장르 게이트(루브릭) v1.0 /team 합의)
+> Last updated: 2026-04-26 (9차 업데이트 — HARD_HIPHOP_RUBRIC v1.1 + 자동화 스크립트 2건 + Hard 60% 정책 반영)
 
 ## 진행 중
+
+- **20-00 HARD_HIPHOP_RUBRIC v1.1 + 자동화 스크립트 2건 + Hard 60% 정책 반영** (2026-04-26 9차)
+  - ✅ **/team Decision Meeting** (실행 플랜): PL + EL Round 1 + QA Round 2 만장 (평균 93점). 순서: 루브릭 v1.0 → 사용자 검토 → 스크립트 + Suno 병렬. MVP 정책 (스크립트 50 키워드 + 6 게이트, 단위 테스트 v1.1). 회의록: `meetings/2026-04-26_20-00-genre-gate-execution-plan.md`
+  - ✅ **사용자 정책 결정**: **Hard 비중 60%** (A Rage Dry + C Hardcore Trap + D K-Drill = 12곡 / B Tuned + 보너스 붐뱁 = 8곡, 20곡 확정)
+  - ✅ **HARD_HIPHOP_RUBRIC.md v1.1 작성** (225줄) — 4단 구조: Hard Gates 8 + Style-Specific Gates 13 + 8-Factor Scoring 100점 + Series Gates 6
+    - Hard Gates 8개 (H6/H8 자동화 → 실질 수동 6개)
+    - Style Gates 13개 (A 3 + B 4 + C 2 + D 3 + E 2)
+    - 8-Factor 100점 (Trap Groove 15 / 808 10 / Hook&Adlib 15 / Korean Vocal 15 음성만 / Energy 10 / Workout BPM 10 / Production 15 / 장르 정체성 10)
+    - Series Gates 6개 모두 자동화
+    - Style Checklist 8축 표 + 운영 워크플로우 + 자동화 스크립트 인터페이스 예시
+  - ✅ **`MASTER/scripts/check_lyric_avoid.sh` 작성** — H8 가사 회피 자동 검사
+    - 50 키워드 5카테고리: 폭력·살해(10) / 마약(10) / 혐오(10) / 자해·자살(10) / 노골적 성행위(10)
+    - **K-Drill 본가 어휘(갱·크루·블록·동네·디스·flex·돈·자랑·반항) 회피 X 보존**
+    - PASS/FAIL + 매칭 키워드 카테고리별 출력
+    - 단일 파일 + 디렉토리 모두 지원
+    - 테스트 통과 (PASS 케이스 / FAIL 케이스 정확)
+  - ✅ **`MASTER/scripts/check_series_gate.sh` 작성** — S1-S6 시리즈 자동 검증
+    - 트랙 메타 파일 헤더 파싱 (Type/BPM/Length)
+    - S1 곡수 분포 + Hard 60% (A 4/B 5/C 5/D 3/E 3 = 20곡 / Hard 12·Non-Hard 8)
+    - S2 BPM 4단계 분포 (워밍업 100-120 / 메인 130-150 / HIIT 140-180 / 쿨다운 90-110)
+    - S3 A·B 인접 회피 (시퀀스 검증)
+    - S4 시리즈 길이 60-90분 합산
+    - S5 Track 01 = B축 + BPM 100-120
+    - S6 마지막 곡 = B 또는 E + BPM 90-115
+    - 12-00 시리즈로 작동 테스트 통과 (다른 RUBRIC이라 FAIL 정상)
+  - ✅ **concept.md v0.2 → v0.2.1 업데이트** (Hard 60% 반영)
+    - §Series Status 배분: A 4 / B 5 / C 5 / D 3 / 보너스 3 = 20곡 (Hard 60% 명시)
+    - §Style Templates 곡수: A 4 / C 5 / 보너스 3 (각 헤더 수정)
+    - §Track Map v0.2 4막 × 20곡 스켈레톤 재작성 (Track 19에 A Rage Dry 추가로 Hard 60% 보강 / 마지막 Track 20만 B 멜로딕)
+    - §QA 시리즈 PASS 기준: A 4 / B 5 / C 5 / D 3 / 보너스 3 = 20곡 Hard 60%
+  - **남은 TODO**: (1) **Suno V5.5 5곡 1차 테스트** (A Dry / B Tuned / C Hardcore / D K-Drill / 보너스 붐뱁 각 1) → 루브릭 v1.1 PASS/FAIL 판정. (2) 통과 가사 2건 복원 결정 (사용자 pending) — `불붙은 paycheck` (A) / `씬에 침 뱉어` (D) git history `ec04577` 이전. (3) 5곡 테스트 결과 기반 루브릭 v1.2 미세 조정. (4) 미해결 5건 다음 라운드 (Loopy MARNI 청취 / K-FLIP+ BPM / 헬스 인플루언서 BGM / Spotify Korea Workout / YouTube Music).
 
 - **20-00 시리즈 장르 게이트(루브릭) v1.0 설계 — /team 만장 합의** (2026-04-26 8차)
   - ✅ **/team Trade-off Discussion** (Product Leader + Marketing Director + Engineering Lead Round 1 + QA Reviewer Round 2)

@@ -9,8 +9,11 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 - **착수**: 2026-04-25 (Phase 1 리서치 + Phase 2 /team 4단계 진화 + Phase 3 P0 갭 보충 리서치 완료)
 - **시리즈 유형**: **Wavvy 첫 힙합 시리즈** (기존 R&B·Lo-fi·Afrobeats·Neo-Soul·City Pop과 결 다름)
 - **시리즈 정체성**: **Korean Workout Hip-Hop 빈자리 채우기** — 글로벌 Apple Music Hip-Hop Workout 카테고리는 외산 트랩 우세, Korean rap 0% 빈자리
-- **최종 트랙 수 목표**: **20곡 (18-21 범위)**
-- **배분**: **A 3-4 / B 5 / C 5-6 / D 3 / 보너스 2-3** (Section A·B 권장 절충)
+- **최종 트랙 수 목표**: **20곡 (Hard 60% / Non-Hard 40% 정책)**
+- **배분 (Hard 60% v1.1)**: **A 4 / B 5 / C 5 / D 3 / 보너스 3 = 20곡**
+  - **Hard 12곡 (60%)** = A Rage Dry 4 + C Hardcore Trap 5 + D K-Drill 3
+  - **Non-Hard 8곡 (40%)** = B Rage Tuned 5 + 보너스 빡센 붐뱁 3
+  - 시리즈 정체성 "빡센 힙합" 우선 정책 (사용자 결정 2026-04-26)
 - **워크플로우**: 15-00 모델 계승 — Suno PASS 곡 누적 → 충분히 쌓이면 DNA / Workout 단계 배치 역추출
 - **현황 가설 검증**: **CONDITIONAL PASS** (보충 리포트 §B0)
 
@@ -93,7 +96,7 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 
 ## Style Templates (4축 + 보너스 1)
 
-### Style A: Rage Dry Voice (3-4곡)
+### Style A: Rage Dry Voice (4곡)
 
 **참조 아티스트**: Playboi Carti `Whole Lotta Red` (2020) / `Music` (2025) / Yeat 일부 / Ken Carson
 
@@ -158,7 +161,7 @@ no dry shouted vocals, no raw screamed vocals, no blown-out mix, no punk vocal, 
 
 ---
 
-### Style C: Hardcore Trap (5-6곡) ★ Workout 표준
+### Style C: Hardcore Trap (5곡) ★ Workout 표준
 
 **참조 아티스트**: ZENE THE ZILLA · Ash Island · Loopy (UNWANTED WRLD 시기) · EK · KWAII
 
@@ -205,7 +208,7 @@ sung hook, drum fill, beat switch, double-time drums, halftime switch, amapiano,
 
 ---
 
-### Bonus: 빡센 붐뱁 (2-3곡)
+### Bonus: 빡센 붐뱁 (3곡)
 
 **Workout 배치 의의**: 워크아웃 메인 BGM 일변도(Rage·Trap)에서 **세트 사이 회복 인터벌** 역할. 차트 30대 친숙 + 헬스 인터벌 정합.
 
@@ -254,39 +257,41 @@ auto-tune, sung hook, melodic singing, trap 808 sustain, EDM drop, drum fill, do
 
 → **시리즈 트랙리스트 자체가 1회 운동 세션 BGM으로 직접 작동.**
 
-### 4막 × 19-21곡 스켈레톤 (개별 곡 TBD)
+### 4막 × 20곡 스켈레톤 (개별 곡 TBD, Hard 12 / Non-Hard 8)
 
 ```
-[1막. 워밍업 진입] — 1-3곡 (B축 멜로딕)
-01. (TBD) — B Rage Tuned, BPM 110-120, 워밍업 진입
-02. (TBD) — B Rage Tuned, BPM 120-130, 텐션 빌드
-03. (TBD) — A Rage Dry, BPM 130-140, 메인 진입 시그널
+[1막. 워밍업 진입] — 3곡 (B축 멜로딕 위주, Non-Hard 인트로)
+01. (TBD) — B Rage Tuned, BPM 110-115, 워밍업 진입
+02. (TBD) — B Rage Tuned, BPM 118-125, 텐션 빌드
+03. (TBD) — Bonus 붐뱁, BPM 92, 그라인드 모드 전환 (인터벌)
 
-[2막. 메인 웨이트] — 7-9곡 (C 메인 + A·B·보너스 혼합)
-04. (TBD) — C Hardcore Trap, BPM 140-145
-05. (TBD) — B Rage Tuned, BPM 145-150, anthem hook
-06. (TBD) — A Rage Dry, BPM 150-155, raw 텐션
-07. (TBD) — Bonus 붐뱁, BPM 92, 세트 사이 인터벌
-08. (TBD) — C Hardcore Trap, BPM 145
-09. (TBD) — B Rage Tuned, BPM 148, melodic anthem
-10. (TBD) — A Rage Dry, BPM 152
+[2막. 메인 웨이트] — 8곡 (C 메인 + A 텐션 + B 멜로딕 + 보너스 인터벌)
+04. (TBD) — C Hardcore Trap, BPM 142, 메인 진입
+05. (TBD) — A Rage Dry, BPM 150, raw 폭발
+06. (TBD) — B Rage Tuned, BPM 148, anthem hook (A 직후 청취 피로 해소)
+07. (TBD) — C Hardcore Trap, BPM 145
+08. (TBD) — Bonus 붐뱁, BPM 88, 세트 사이 인터벌
+09. (TBD) — A Rage Dry, BPM 152, raw 텐션
+10. (TBD) — B Rage Tuned, BPM 145, melodic anthem (A 직후)
 11. (TBD) — C Hardcore Trap, BPM 145, 메인 종료
 
-[3막. HIIT/카디오] — 5-6곡 (C + D 액센트)
-12. (TBD) — C Hardcore Trap, BPM 150
-13. (TBD) — D K-Drill 액센트, BPM 142, NY/UK Drill 무드
-14. (TBD) — C Hardcore Trap, BPM 155
+[3막. HIIT/카디오] — 6곡 (C + D + A 빠른 BPM 위주)
+12. (TBD) — D K-Drill 액센트, BPM 142, NY/UK Drill 무드
+13. (TBD) — C Hardcore Trap, BPM 148
+14. (TBD) — A Rage Dry, BPM 158, 마지막 폭발
 15. (TBD) — D K-Drill 액센트, BPM 144
-16. (TBD) — A Rage Dry, BPM 158, 마지막 폭발
+16. (TBD) — C Hardcore Trap, BPM 150
 17. (TBD) — D K-Drill 액센트, BPM 146
 
-[4막. 쿨다운] — 2-3곡 (B + 보너스 붐뱁)
-18. (TBD) — Bonus 붐뱁, BPM 88, 호흡 정리
-19. (TBD) — B Rage Tuned, BPM 105, 멜로딕 마무리
-20. (TBD) — Bonus 붐뱁, BPM 90, 세션 종료
+[4막. 쿨다운 + 마무리] — 3곡 (B + 보너스 붐뱁)
+18. (TBD) — Bonus 붐뱁, BPM 90, 호흡 정리
+19. (TBD) — A Rage Dry, BPM 148, 마지막 raw 회상 (Hard 60% 정책 보강)
+20. (TBD) — B Rage Tuned, BPM 105, 멜로딕 마무리
 ```
 
-**운동 1회 = 60-90분 / 19-21곡 (1세션 정합 88.1%)**
+**운동 1회 = 60-90분 / 20곡 (1세션 정합 88.1%)**
+
+**Hard 60% 분배 검증**: A 4(05·09·14·19) + C 5(04·07·11·13·16) + D 3(12·15·17) = 12곡 (60%) / B 5(01·02·06·10·20) + 보너스 3(03·08·18) = 8곡 (40%)
 
 ### Workout 배치 원칙
 
@@ -391,9 +396,9 @@ git history `ec04577` 이전 commit에서 복원 가능:
 - [ ] 주제 자유 (Workout 어휘 강제 X) / 회피 영역 미사용 (무차별 폭력·살해·총기·마약 직접 묘사)
 - [ ] 곡 길이 2:30-3:45 (붐뱁 3:45까지)
 
-### 시리즈 PASS 기준 (19-21곡 누적 후)
+### 시리즈 PASS 기준 (20곡 누적 후)
 
-- [ ] 4축 + 보너스 곡수 배분 (A 3-4 / B 5 / C 5-6 / D 3 / 보너스 2-3)
+- [ ] 4축 + 보너스 곡수 배분 (A 4 / B 5 / C 5 / D 3 / 보너스 3 = 20곡, Hard 60%)
 - [ ] BPM 분포 (워밍업 100-120, 메인 130-150, HIIT 140-160, 쿨다운 90-110)
 - [ ] Workout 1회 세션 정합 (60-90분, 사운드 페이스)
 - [ ] A·B 인접 배치 회피

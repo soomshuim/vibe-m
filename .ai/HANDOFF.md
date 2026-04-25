@@ -1,4 +1,25 @@
 ---
+HANDOFF: Claude -> User (HARD_HIPHOP_RUBRIC v1.1 + 자동화 스크립트 2건 + Hard 60% 정책 완료 — Suno V5.5 5곡 1차 테스트 대기)
+Date: 2026-04-26
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 20-00 장르 게이트 v1.0 합의 직후 /team Decision Meeting (실행 플랜, PL+EL+QA Round 2, 평균 93점) → 사용자 **Hard 60% 정책 결정** (A Rage Dry + C Hardcore Trap + D K-Drill = 12곡 / B Tuned + 보너스 붐뱁 = 8곡, 20곡 확정) → 산출물 4건 즉시 실행. **(1) HARD_HIPHOP_RUBRIC.md v1.1** (225줄): Hard Gates 8 + Style-Specific Gates 13 (A 3 + B 4 + C 2 + D 3 + E 2) + 8-Factor Scoring 100점 + Series Gates 6, Hard 60% 정책 반영, 자동화 스크립트 인터페이스 예시. **(2) check_lyric_avoid.sh**: H8 가사 회피 자동 검사 50 키워드 5카테고리(폭력·살해/마약/혐오/자해/노골적성), K-Drill 본가 어휘(갱·크루·블록·flex) 보존, 단일 파일+디렉토리 지원, PASS/FAIL + 매칭 키워드 카테고리별 출력. **(3) check_series_gate.sh**: S1-S6 시리즈 자동 검증 (트랙 메타 파일 Type/BPM/Length 파싱, 곡수+Hard 60%/BPM 4단계/A·B 인접 회피/60-90분/Track 01 B축 워밍업/마지막 곡 B 또는 E + BPM 90-115). 12-00 시리즈로 작동 테스트 통과 (다른 RUBRIC FAIL 정상). **(4) concept.md v0.2 → v0.2.1**: §Series Status 배분 + §Style Templates 곡수 + §Track Map 4막 × 20곡 스켈레톤 재작성 (Track 19 A 추가로 Hard 60% 보강) + §QA 시리즈 PASS 기준 v1.1 동기화.
+Next-TODO:
+  (1) **Suno V5.5 5곡 1차 테스트** (사용자 작업, 1-2시간) — A Dry / B Tuned / C Hardcore / D K-Drill / 보너스 붐뱁 각 1곡 (가사 자유)
+  (2) 5곡 결과 → 루브릭 v1.1 PASS/FAIL 판정 → v1.2 미세 조정
+  (3) 통과 가사 2건 복원 결정 (사용자 pending) — `불붙은 paycheck` (A) / `씬에 침 뱉어` (D) git history `ec04577` 이전
+  (4) 3+ PASS 시 20곡 본격 확장
+  (5) 미해결 5건 다음 라운드 — Loopy MARNI 청취 / K-FLIP+ BPM / 헬스 인플루언서 BGM AHA Music / Spotify Korea Workout / YouTube Music
+Key-Files:
+  - 루브릭: `~/Project/wavvy/MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` v1.1 (225줄)
+  - 스크립트: `~/Project/wavvy/MASTER/scripts/check_lyric_avoid.sh` + `check_series_gate.sh`
+  - 컨셉: `~/Project/wavvy/SERIES/20-00/concept.md` v0.2.1 (Hard 60% 반영)
+  - 회의록: `meetings/2026-04-26_20-00-genre-gate-{rubric-design,execution-plan}.md`
+  - 보충 리서치: `SERIES/20-00/report/2026-04-25_workout-tuned-rage-supplement.md` (Section A·B)
+Commits: (이번 record)
+---
+
+---
 HANDOFF: Claude -> User (20-00 장르 게이트 v1.0 /team 만장 합의 — HARD_HIPHOP_RUBRIC.md 작성 + 자동화 스크립트 2건 대기)
 Date: 2026-04-26
 Project: ~/Project/wavvy
