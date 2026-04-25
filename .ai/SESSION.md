@@ -459,10 +459,14 @@
 | **음악 디테일 조사 충분성 검증 회의** | Music Production Engineer / Music Data Analyst / A&R Genre Specialist + QA Round 2. Critical 갭 3건(YUMDDA / Sion eigensinn / Effie raged) + Major 갭 2건(EK YAHO 분류 / 멜랑콜릭 Rage 한국 사례) 식별. 회의: `meetings/2026-04-25_20-00-music-detail-audit.md` |
 | **차트·청자 검증 신규 리서치 (사용자 의심 정정)** | researcher. 사용자 "진짜 Korean 2026 trend에 적합한가?" 의심 정확. **시상식 직반영 4축 안 FAIL**: 벅스 2025 힙합/R&B TOP30에서 Rage/Drill/Hyperpop 진입 0-1곡, 멜로딕 트랩/Trap-Soul 8-10곡 / KT지니 30대 1위 G-DRAGON `TOO BAD` / Effie 본인 "보수적 청자는 내 음악 싫어한다" 인용. 사용자 첫 직감(트렌디 트랩 비트 기반) 재확인. 리포트: `SERIES/20-00/report/2026-04-25_chart-vs-awards-validation.md` |
 | **20-00 시리즈 산출물 전면 리셋** | 사용자 결정: 기존 4축 안 폐기. 삭제: `concept.md` v0.1(437줄) / `test-prompts.md`(414줄) / `input/tracks/` 가사 2건(Paycheck Rage / Rewrite K-Drill). 보존: 1162줄 deep dive 리포트 + 미팅 노트 4건 + 차트 검증 리포트 (audit trail). 새 방향은 사용자와 별도 논의 예정. |
+| **2026 K-Hiphop 트랩 영역 정밀 트렌드 리서치** | researcher. 벅스 2025 TOP30 분포 재검증(멜로딕/Trap-Soul 8-10 / 협업 트랩 3-4 / Rage·Drill·Hyperpop 0-1). 핵심 발견: Lil Moshpit=Lee Hwi-min=GroovyRoom 절반 (Sik-K K-FLIP Rage 프로듀서가 멜로딕 트랩 메인) → 멜로딕 ↔ Rage 양립 시그널. dress 프로듀서 BIG Naughty `Hero Death` + Mark `Fraktsiya` 동시 (멜로딕 ↔ K-drill 양립). Trap-Soul 한국 토착 = DEAN/Crush/Colde/pH-1/BIBI. 리포트: `SERIES/20-00/report/2026-04-25_k-hiphop-trap-trends-deep.md` |
+| **20-00 새 시리즈 정체성 합의 — Workout 컨셉 + 빡센 트랩 위주** | 사용자 결정: After Hours 퇴근/내면 → **AFTER HOURS WORKOUT** (저녁 8시 운동·그라인드). 페르소나: 25-35 직장인 헬스/PT/홈트/러닝. **빡센 트랩 위주 + Rage Trap dry voice + tuned singing 양립**. 새 4축: A Rage Dry Voice 5-6 / B Rage Tuned Singing 4-5 / C Hardcore Trap 5-6 / D K-Drill Workout 액센트 3-4 + **보너스 빡센 붐뱁 1-2** = 총 19-22곡. |
+| **GPT 빡센 붐뱁 딥리서치 자료 보존** | 사용자 제공 `Downloads/deep-research-report.md` (311줄, Suno 붐뱁 프롬프트 엔지니어링). 1162줄 §5 모던과 보완적 — 90s-2000s 정통 + 한국 토착 레퍼런스 3건(가리온 `무투/금기어` / 데드피 `Check My Swag` 공식 inst / 제이호 `LOCALS ONLY` 위스퍼 톤) + Suno 추천 프롬프트 6개 + Exclude 디테일. 보존: `SERIES/20-00/report/2026-04-25_suno-boom-bap-prompt-engineering-gpt.md` (출처 표기 추가). |
 
 ### 다음 단계
-- **20-00 새 방향 논의** — 차트 정합 멜로딕 트랩/Trap-Soul 코어 vs 빡센 정통 vs 하이브리드 (사용자 결정 대기)
-- 새 방향 확정 후 concept.md 재작성
+- **20-00 시리즈 라벨 확정** — `💪 AFTER HOURS WORKOUT` / 부제 `밤 여덟시 워크아웃 트랩` (이모지 검토 가능)
+- **통과 가사 복원 결정** — `불붙은 paycheck` (A Dry Voice 정합 ✅) / `씬에 침 뱉어` (D K-Drill 톤 검증 △) git history(commit `ec04577` 이전)에서 복원 가능
+- **concept.md v0.2 재작성** — 신 4축 + 보너스 붐뱁 Style Templates + Track Map (Workout 배치 룰: 워밍업/메인 푸시/하이 인텐시티/그라인드 지속/쿨다운+마지막 폭발) + EXCLUDE
 
 ## 다음 할 일
 

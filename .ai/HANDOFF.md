@@ -1,4 +1,23 @@
 ---
+HANDOFF: Claude -> User (20-00 새 정체성 합의 — Workout + 빡센 트랩 4축 + 보너스 붐뱁, concept.md v0.2 작성 대기)
+Date: 2026-04-25 21:10
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 20-00 산출물 전면 리셋 후 새 시리즈 정체성 합의. (1) **2026 K-Hiphop 트랩 영역 정밀 리서치** (researcher) — 벅스 2025 TOP30 분포 재검증 + Lil Moshpit=GroovyRoom 절반/dress 프로듀서 양립 시그널/Trap-Soul 한국 토착 정의 발굴. (2) **새 컨셉**: After Hours → **AFTER HOURS WORKOUT** (저녁 8시 운동·그라인드, 25-35 직장인 헬스/PT/홈트/러닝). (3) **새 4축**: A Rage Dry Voice 5-6 / B Rage Tuned Singing 4-5 / C Hardcore Trap 5-6 / D K-Drill Workout 액센트 3-4 + **보너스 빡센 붐뱁 1-2** = 총 19-22곡. (4) **GPT 빡센 붐뱁 자료 보존** — Suno 붐뱁 프롬프트 엔지니어링 + 한국 토착 정통 레퍼런스 3건(가리온/데드피/제이호). 1162줄 §5 모던과 보완적.
+Next-TODO:
+  (1) 시리즈 라벨 확정 — `💪 AFTER HOURS WORKOUT` / 부제 `밤 여덟시 워크아웃 트랩` (이모지 검토 가능)
+  (2) 통과 가사 복원 결정 — `불붙은 paycheck` (A Dry Voice 정합 ✅) / `씬에 침 뱉어` (D K-Drill 톤 검증 △) git history(commit `ec04577` 이전)에서 복원 가능
+  (3) **concept.md v0.2 재작성** — 신 4축 Style Templates 4종 + 보너스 붐뱁 Style Template + Track Map (Workout 배치 룰: 워밍업 B → 메인 푸시 A+C → 하이 인텐시티 A+D → 그라인드 지속 C+B → 쿨다운+마지막 폭발 B→A → 보너스 붐뱁 인터벌 위치) + EXCLUDE
+  (4) Suno 1차 테스트 — A Dry Voice + B Tuned Singing + C Hardcore Trap + D K-Drill + Boom Bap 5곡 (보너스 1곡은 정통 90s 가리온/데드피 무드, GPT 추천 프롬프트 P1/P2/P4 활용)
+Key-Files:
+  - 새 트렌드 리포트: `~/Project/wavvy/SERIES/20-00/report/2026-04-25_k-hiphop-trap-trends-deep.md`
+  - 차트 검증 리포트: `~/Project/wavvy/SERIES/20-00/report/2026-04-25_chart-vs-awards-validation.md`
+  - GPT 빡센 붐뱁 자료: `~/Project/wavvy/SERIES/20-00/report/2026-04-25_suno-boom-bap-prompt-engineering-gpt.md` (출처 표기 추가)
+  - 1차 1162줄 딥리서치: `~/Project/wavvy/SERIES/20-00/report/2026-04-24_hard-hiphop-4axis-musical-deep.md` (Rage §3 + Hardcore Trap §6 자산 활용)
+Commits: (이번 record commit)
+---
+
+---
 HANDOFF: Claude -> User (20-00 산출물 전면 리셋 — 차트·청자 검증 후 새 방향 논의 대기)
 Date: 2026-04-25 20:15
 Project: ~/Project/wavvy
