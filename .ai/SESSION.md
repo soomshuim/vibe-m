@@ -445,6 +445,23 @@
 
 - **MASTER 문서 v3.2 완료** — Writing Formula + 워크플로우 분리 (2026-03-08)
 
+## 현재 세션 (2026-04-25)
+
+### 완료된 작업
+
+| 작업 | 비고 |
+|------|------|
+| **20-00 K-Drill 통과 샘플 vs 게이트 정합성 점검** | `씬에 침 뱉어` (Rewrite 4차 PASS)가 음악 게이트(BPM/Style Prompt/EXCLUDE/구조) 충족, 가사 게이트(한국어 95%+ vs 실측 75%, Ad-libs `(Grr!)/(Bow!)` 부재, 크루 chant 부재) 미달 발견. 옵션 A(K-Drill 본가 NY/Brooklyn drill 영어 어휘 침투 인정 → §QA / §Style B / §LYRICS 가이드 동기화) 권장 결론. |
+| **Loopy `Gear 2` 장르 검증** | 트랩 (붐뱁 아님). 근거: 힙합엘이/나무위키 "aggressive trap beats 강점", Loopy 본인 "초기 trap 시기 대표곡", 프로듀서 Denis The Menace + 808/hi-hat roll 컨벤션. 20-00 D축 분류 정합 (단 Loopy 후기곡과 구분 필요, 시기 명시 권장). |
+| **2026 글로벌 트렌드 외부 리서치 (Plugg 1순위)** | researcher 5에이전트 병렬. PluggnB Splice +342.8% (2024 가장 빠른 성장), Sexy Drill 차트, Drift Phonk Spotify 1위. 1순위 4축 안: A Rage / B K-Drill+Sexy Drill / C PluggnB / D Hardcore Trap + 붐뱁 보너스. |
+| **2026 국힙 신규 리서치 (사용자 정정 반영)** | researcher. KHA 2026 Sik-K Artist of the Year + KMA 2026 Effie 6관왕 + 붐뱁 H2 2025 모멘텀 약화 검증. **글로벌 추천 무효화**: PluggnB·Sexy Drill·Phonk 모두 K-rap 진입 사례 부족. Hyperpop·Digicore가 진짜 2026 국힙 부상 트렌드. |
+| **/team 4축 재편안 검증 회의** | Marketing/Product/Growth/Design + QA Round 2 인라인. **5/5 PASS**. A안 보정 (35/20/25/10+5) 만장 합의: Rage 4→7 격상(KC + EK 흡수 후보), K-Drill 5→4 축소, Hardcore Trap 4→5(YUMDDA 추가), Hyperpop·Digicore Edge 2곡(Sion+Effie raged 한정), 모던 붐뱁 7→1-2 보너스. Track Map 배치 순서 룰(Track 01 Rage 인트로 / 09-10 Hyperpop / 12-13 보너스) 추가. 회의: `meetings/2026-04-25_20-00-4axis-realignment.md` |
+
+### 다음 단계
+- 20-00 concept.md v0.2 재작성 (신 4축 Style Templates 4종 + Track Map v0.2 + EXCLUDE v3 axis 특화)
+- Suno 1차 테스트 추가 곡: `Come Up` 붐뱁 보너스 슬롯 + Sion 스타일 Hyperpop·Digicore 1곡 신규 (`Paranoia` D는 C Hardcore Trap으로 재라벨)
+- /director 호출 (concept.md v0.2 재작성 + 보존 자산 무손실)
+
 ## 다음 할 일
 
 - [x] ~~13-00 Style A Suno 테스트~~ — Track 01 PASS v0.2 (2026-04-04)

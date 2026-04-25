@@ -1,4 +1,24 @@
 ---
+HANDOFF: Claude -> User (20-00 4축 재편 /team 만장 합의 — concept.md v0.2 재작성 대기)
+Date: 2026-04-25 16:30
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 20-00 AFTER HOURS 4축 재편 /team Trade-off Discussion 5/5 PASS. 트리거: (1) C축 모던 하드코어 붐뱁 Suno V5.5 생성 난이도 + (2) 글로벌 추천(Plugg 메인) K-rap 사례 부족 검증 + (3) 2025 H2 붐뱁 모멘텀 약화. 신규 리서치 2회: 글로벌 5 researcher(PluggnB Splice +342.8% 등) → 국힙 정정 1 researcher(KHA 2026 Sik-K Artist of the Year + KMA 2026 Effie 6관왕). **새 4축 (35/20/25/10+5)** 만장 합의: A Rage 7곡(KC+EK 흡수 후보, 공격 4+멜랑콜릭 3 톤 분기) / B K-Drill 4곡 / C Hardcore Trap 5곡(YUMDDA 추가) / D Hyperpop·Digicore Edge 2곡(Sion `eigensinn` + Effie raged 한정) + Modern Boom Bap 보너스 1-2곡. 폐기: PluggnB·Sexy Drill·Phonk(K-rap 사례 부족), 붐뱁 메인 7곡 → 보너스. 보존: Paycheck/Rewrite 통과 가사 2건 + Style Prompt 노하우 + EXCLUDE v2 13종 + After Hours/Dark City 정체성. Track Map 배치 순서 룰 추가(Track 01 Rage 인트로 / 09-10 Hyperpop / 12-13 보너스). 부수 작업: K-Drill 통과 샘플(씬에 침 뱉어) 게이트 정합성 점검(가사 한국어 75% / Ad-libs 부재 발견, 옵션 A 본가 인정 권장) + Loopy Gear 2 장르 트랩 검증 완료.
+Next-TODO:
+  (1) **concept.md v0.2 재작성** — 신 4축 Style Templates 4종 (A Rage 톤 분기 / B K-Drill / C Hardcore Trap / D Hyperpop·Digicore Edge) + Track Map v0.2 (배치 순서 룰) + EXCLUDE v3 axis 특화
+  (2) Suno 1차 테스트 추가 — Come Up 붐뱁 보너스 슬롯 테스트 + Sion 스타일 Hyperpop·Digicore 1곡 신규 (Paranoia D는 C Hardcore Trap 재라벨)
+  (3) **/director 호출** — concept.md v0.2 재작성 + 보존 자산 무손실 + 회의 결과 반영
+  (4) §QA 공통 한국어 95%+ 룰 → §Style B 75% 예외 명시(K-Drill 본가 영어 어휘 침투 패턴 인정)
+  (5) §LYRICS 작성 가이드 §Style B 메타태그 [Hook] → [Refrain] 동기화 (Rewrite 4차 확정 패턴)
+Key-Files:
+  - 회의 기록: `~/Project/wavvy/meetings/2026-04-25_20-00-4axis-realignment.md`
+  - 4축 v0.1: `~/Project/wavvy/SERIES/20-00/concept.md`
+  - 1차 딥리서치: `~/Project/wavvy/SERIES/20-00/report/2026-04-24_hard-hiphop-4axis-musical-deep.md` (1162줄, 보존)
+  - 통과 가사 2건: `~/Project/wavvy/SERIES/20-00/input/tracks/불붙은 paycheck (Paycheck on Fire).txt` + `씬에 침 뱉어 (Spit on the Scene).txt`
+Commits: (이번 회의 record commit)
+---
+
+---
 HANDOFF: Claude -> User (20-00 Paycheck 인사이트 B~D 확산 + EXCLUDE 축별 특화 13종 + Rewrite 4차 수용 + Verse 16 bar 표기)
 Date: 2026-04-25 03:26
 Project: ~/Project/wavvy
