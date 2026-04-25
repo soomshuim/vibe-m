@@ -1,8 +1,24 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-26 (7차 업데이트 — 💪 AFTER HOURS WORKOUT concept.md v0.2 + P0 갭 보충 리서치 2건 통합 + 가사 vs 사운드 분리 룰 정립)
+> Last updated: 2026-04-26 (8차 업데이트 — 20-00 장르 게이트(루브릭) v1.0 /team 합의)
 
 ## 진행 중
+
+- **20-00 시리즈 장르 게이트(루브릭) v1.0 설계 — /team 만장 합의** (2026-04-26 8차)
+  - ✅ **/team Trade-off Discussion** (Product Leader + Marketing Director + Engineering Lead Round 1 + QA Reviewer Round 2)
+  - ✅ **5개 안건 만장 합의** (평균 94.6점, 모든 Gate 개별 PASS, G5 90 BORDERLINE)
+    - **안건 1 — Hard Gates 8개**: BPM(86-95 OR 140-160) / Drum Pattern / Bass / Vocal Korean Hard Rap / Hook / EXCLUDE 공통 / Workout 사운드 정합 / 콘텐츠 회피 (H6/H8 자동화)
+    - **안건 2 — Style-Specific Gates 13개**: A Dry 3(no autotune/blown-out/short reverb) + B Tuned 4(autotune 시그니처/melodic chorus/cathedral reverb/KC vangdale 광택) + C Hardcore 2(husky/distorted 808+dark piano) + D K-Drill 3(sliding 808/drill snare/된소리+다크) + E 붐뱁 2(dusty drum/라이리시즘). **A1 vs B1 = 시리즈 핵심 차별점** (Section A.3.4 EXCLUDE 분리표 게이트화)
+    - **안건 3 — 8-Factor Scoring 100점**: F1 Trap Groove 15 / F2 808 10 / F3 Hook&Adlib 15 / F4 Korean Vocal Identity 15(음성·발음·톤만, 가사 X) / F5 Energy Arc 10 / F6 Workout BPM 단계 매칭 10 / F7 Production 15 / F8 장르 정체성 10. 판정 85+ PASS / 70-84 BORDERLINE / <70 FAIL / Critical Fail = 개별 Factor ≤30%
+    - **안건 4 — 가사 자유 정책 게이트 반영**: F4 음성만 / 가사 = Hard Gate H8 회피 영역 자동 grep 50개 키워드 5카테고리(폭력·살해/마약/혐오/자해/노골적성) / K-Drill 본가 어휘(갱·크루·블록·동네·디스) 보존 / 라이리시즘은 보너스 붐뱁 E2만 점수화
+    - **안건 5 — Series Gates 6개**: S1 곡수 분포(A 3-4/B 5/C 5-6/D 3/보너스 2-3=18-21곡) / S2 BPM 분포(워밍업 100-120 / 메인 130-150 / HIIT 140-180 / 쿨다운 90-110) / S3 A·B 인접 회피 / S4 60-90분 / S5 Track 01 워밍업 B축 / S6 마지막 2-3곡 멜로딕(B+보너스). 6개 모두 자동화 가능
+  - ✅ **충돌 해소 3건**:
+    - MD "H7 자동화 부담" vs EL "자동 grep 비용 0" → **EL 승**
+    - EL "F6 점수화 어려움" vs PL "곡 단위 평가 필요" → **PL 절충 (BPM 단계 분류만)**
+    - EL "Style Gate 16개 너무 많음" vs PL "13개 축소" → **PL 승 (C·D BPM Hard Gate 중복 제거)**
+  - ✅ **QA Round 2 판정**: PASS (평균 94.6, 모든 Gate ≥90, G5 운영 효율만 BORDERLINE 90 — Style Gate 13개 다소 많음 추후 11개 축소 검토 가능)
+  - **남은 TODO**: (1) `MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` v1.0 작성 (위 4단 구조). (2) 자동화 스크립트 2개 — `MASTER/scripts/check_lyric_avoid.sh` (가사 회피 50 키워드 grep) + `MASTER/scripts/check_series_gate.sh` (S1-S6 자동 검증). (3) Suno 1차 5곡 테스트 (A/B/C/D/보너스 각 1) → 루브릭 v1.0 PASS/FAIL 판정 → v1.1 조정. (4) 통과 가사 2건 복원 결정 (사용자 pending).
+  - **산출물**: `meetings/2026-04-26_20-00-genre-gate-rubric-design.md`
 
 - **20-00 `💪 AFTER HOURS WORKOUT` concept.md v0.2 + P0 갭 보충 리서치 통합 + 가사 가이드 정정** (2026-04-26 7차)
   - ✅ **P0 갭 보충 리서치 2건 병렬 호출** (researcher × 2, 각 백그라운드, 약 10-19분):

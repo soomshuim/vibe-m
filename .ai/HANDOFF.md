@@ -1,4 +1,25 @@
 ---
+HANDOFF: Claude -> User (20-00 장르 게이트 v1.0 /team 만장 합의 — HARD_HIPHOP_RUBRIC.md 작성 + 자동화 스크립트 2건 대기)
+Date: 2026-04-26
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 20-00 시리즈 장르 게이트(루브릭) 설계 /team Trade-off Discussion 합의 도달. **참석**: Product Leader + Marketing Director + Engineering Lead Round 1 + QA Reviewer Round 2. **합의 (평균 94.6점, 모든 Gate 개별 PASS, G5 운영 효율 BORDERLINE 90)**: 4단 구조 — (1) **Hard Gates 8개** [BPM 86-95 OR 140-160 / Drum / Bass / Vocal Korean Hard Rap 95%+ (D K-Drill 75% 예외) / Hook / EXCLUDE 공통 / Workout 사운드 정합 / 콘텐츠 회피], H6+H8 자동화로 실질 수동 6개. (2) **Style-Specific Gates 13개** [A 3 + B 4 + C 2 + D 3 + E 2], **A1 no autotune vs B1 autotune 필수가 시리즈 핵심 차별점** (Section A.3.4 EXCLUDE 분리표 그대로 게이트화), B4 KC vangdale 광택 디자인 시그니처, D3 한국어 된소리/거센소리 본가 무드. (3) **8-Factor Scoring 100점** [F1 Trap Groove 15 / F2 808 10 / F3 Hook&Adlib 15 / F4 Korean Vocal 15 (음성만, 가사 X) / F5 Energy 10 / F6 Workout BPM 단계 10 / F7 Production 15 / F8 장르 정체성 10], 판정 85+ PASS / 70-84 BORDERLINE / <70 FAIL. (4) **Series Gates 6개** [S1 곡수 분포 / S2 BPM 분포 4단계 / S3 A·B 인접 회피 / S4 60-90분 / S5 Track 01 워밍업 / S6 마지막 2-3곡 멜로딕], 6개 모두 자동화. **가사 자유 정책 반영**: F4 음성만 / 가사 H8 회피 영역 자동 grep 50개 키워드 5카테고리 / K-Drill 본가 어휘(갱·크루·블록) 보존 / 라이리시즘 E2 보너스 붐뱁만. **충돌 해소 3건**: MD H7 자동화 부담→EL 비용 0 / EL F6 점수화 어려움→PL BPM 단계 분류만 / EL Style 16개→PL 13개 축소(중복 제거).
+Next-TODO:
+  (1) **`MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` v1.0 작성** — Hard 8 + Style 13 + 8-Factor 100점 + Series 6 (4단 구조 그대로)
+  (2) **자동화 스크립트 2건 작성**:
+      - `MASTER/scripts/check_lyric_avoid.sh` (가사 회피 50 키워드 5카테고리 grep)
+      - `MASTER/scripts/check_series_gate.sh` (S1-S6 자동 검증)
+  (3) **Suno 1차 5곡 테스트** (A Dry / B Tuned / C Hardcore / D K-Drill / 보너스 붐뱁 각 1) → 루브릭 v1.0으로 PASS/FAIL 판정 → v1.1 조정
+  (4) 통과 가사 2건 복원 결정 (사용자 pending) — `불붙은 paycheck` (A) / `씬에 침 뱉어` (D) git history `ec04577` 이전
+Key-Files:
+  - 회의록: `~/Project/wavvy/meetings/2026-04-26_20-00-genre-gate-rubric-design.md`
+  - 메인 산출물 (전 단계): `~/Project/wavvy/SERIES/20-00/concept.md` v0.2 (497줄)
+  - 보충 리서치: `~/Project/wavvy/SERIES/20-00/report/2026-04-25_workout-tuned-rage-supplement.md` (50KB)
+  - 12-00 형식 참고: `~/Project/wavvy/MASTER/rubrics/AFROBEATS_RUBRIC.md`
+Commits: (이번 record commit)
+---
+
+---
 HANDOFF: Claude -> User (💪 AFTER HOURS WORKOUT concept.md v0.2 + P0 갭 보충 리서치 통합 완료 — Suno V5.5 5곡 1차 테스트 대기)
 Date: 2026-04-26
 Project: ~/Project/wavvy
