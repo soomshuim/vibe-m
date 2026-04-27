@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # check_series_gate.sh
-# 시리즈 단위 게이트 자동 검증 (HARD_HIPHOP_RUBRIC v1.3 S1-S6, 13곡 기준)
+# 시리즈 단위 게이트 자동 검증 (HARD_HIPHOP_RUBRIC v1.4 S1-S7, 20곡 기준)
 #
 # 사용법:
 #   ./check_series_gate.sh <시리즈 디렉토리>
@@ -10,25 +10,29 @@
 #   - <시리즈>/input/tracks/NN_*.txt 형식
 #   - 각 .txt 파일 헤더에 다음 메타:
 #       Track: <제목>
+#       Order: <숫자>  (선택, 번호 없는 PASS 파일 정렬용)
 #       Type: A | B | C | D | E | F
 #       BPM: <숫자>
 #       Key: <키>
 #       Length: <시간>
+#       Vocal: Male | Female
 #
 # 출력:
-#   S1-S6 각 게이트 PASS/FAIL + 종합
+#   S1-S7 각 게이트 PASS/FAIL + 종합
 
 set -uo pipefail
 
-# === 정책 (HARD_HIPHOP_RUBRIC v1.3, 13곡 분포) ===
-TARGET_TOTAL=13
-TARGET_A=2
-TARGET_B=2
-TARGET_C=4
-TARGET_D=2
-TARGET_E=1
-TARGET_F=2
-HARD_PCT_MIN=60   # Hard A+C+D+F 최소 60% (실제 v1.3 = 77%)
+# === 정책 (HARD_HIPHOP_RUBRIC v1.4, 20곡 분포) ===
+TARGET_TOTAL=20
+TARGET_A=3
+TARGET_B=4
+TARGET_C=5
+TARGET_D=3
+TARGET_E=2
+TARGET_F=3
+TARGET_MALE=14
+TARGET_FEMALE=6
+HARD_PCT_MIN=60   # Hard A+C+D+F 최소 60% (실제 v1.4 = 70%)
 
 # BPM 영역
 WARMUP_MIN=100;  WARMUP_MAX=120
@@ -36,9 +40,9 @@ MAIN_MIN=130;    MAIN_MAX=150
 HIIT_MIN=140;    HIIT_MAX=180   # 메인과 일부 겹침 허용 + F축 165-180 영역
 COOLDOWN_MIN=90; COOLDOWN_MAX=115   # B/E 멜로딕 마무리 영역
 
-# 시리즈 길이 (분, v1.3 13곡 기준)
-LENGTH_MIN_MIN=40
-LENGTH_MAX_MIN=65
+# 시리즈 길이 (분, v1.4 20곡 기준)
+LENGTH_MIN_MIN=60
+LENGTH_MAX_MIN=90
 
 # === 파싱 ===
 parse_track() {
@@ -47,9 +51,15 @@ parse_track() {
   grep -E "^${field}:" "$file" | head -1 | sed -E "s/^${field}:[[:space:]]*//" | tr -d '\r'
 }
 
-# 트랙 번호 (파일명 NN_... 또는 NN__...)
-track_number() {
+# 트랙 순서 (Order 메타 우선, 없으면 파일명 NN_... 또는 NN__...)
+track_order() {
   local file="$1"
+  local order
+  order=$(parse_track "$file" "Order")
+  if [ -n "$order" ]; then
+    printf "%s" "$order" | sed 's/^0*//'
+    return
+  fi
   basename "$file" | sed -E 's/^([0-9]+).*/\1/' | sed 's/^0*//'
 }
 
@@ -84,9 +94,15 @@ main() {
 
   # 트랙 파일 수집 (정렬)
   local track_files=()
-  while IFS= read -r -d '' file; do
-    track_files+=("$file")
-  done < <(find "$tracks_dir" -maxdepth 1 -name "*.txt" -type f -print0 | sort -z)
+  while IFS= read -r -d '' entry; do
+    track_files+=("${entry#*$'\t'}")
+  done < <(
+    while IFS= read -r -d '' file; do
+      order=$(track_order "$file")
+      if [ -z "$order" ]; then order=999; fi
+      printf "%03d\t%s\0" "$order" "$file"
+    done < <(find "$tracks_dir" -maxdepth 1 -name "*.txt" -type f -print0) | sort -z -n
+  )
 
   local total=${#track_files[@]}
   if [ "$total" -eq 0 ]; then
@@ -97,15 +113,18 @@ main() {
   # 카운트
   local count_a=0 count_b=0 count_c=0 count_d=0 count_e=0 count_f=0
   local count_warmup=0 count_main=0 count_hiit=0 count_cooldown=0
+  local count_male=0 count_female=0 count_vocal_unknown=0
   local total_seconds=0
   local seq_types=()
   local seq_bpms=()
 
   for file in "${track_files[@]}"; do
-    local type bpm length
+    local type bpm length vocal vocal_lc
     type=$(parse_track "$file" "Type")
     bpm=$(parse_track "$file" "BPM")
     length=$(parse_track "$file" "Length")
+    vocal=$(parse_track "$file" "Vocal")
+    vocal_lc=$(printf "%s" "$vocal" | tr '[:upper:]' '[:lower:]')
 
     seq_types+=("$type")
     seq_bpms+=("$bpm")
@@ -121,11 +140,18 @@ main() {
       *) echo "WARN: $file Type 미인식 ('$type')" >&2;;
     esac
 
+    # Vocal 카운트
+    case "$vocal_lc" in
+      *female*) count_female=$((count_female + 1));;
+      *male*) count_male=$((count_male + 1));;
+      *) count_vocal_unknown=$((count_vocal_unknown + 1));;
+    esac
+
     # BPM 영역 분류 (우선순위: 워밍업 > 쿨다운 > HIIT > 메인)
-    if [ -n "$bpm" ] && [ "$bpm" -ge "$COOLDOWN_MIN" ] && [ "$bpm" -le "$COOLDOWN_MAX" ]; then
-      count_cooldown=$((count_cooldown + 1))
-    elif [ -n "$bpm" ] && [ "$bpm" -ge "$WARMUP_MIN" ] && [ "$bpm" -le "$WARMUP_MAX" ]; then
+    if [ -n "$bpm" ] && [ "$bpm" -ge "$WARMUP_MIN" ] && [ "$bpm" -le "$WARMUP_MAX" ]; then
       count_warmup=$((count_warmup + 1))
+    elif [ -n "$bpm" ] && [ "$bpm" -ge "$COOLDOWN_MIN" ] && [ "$bpm" -le "$COOLDOWN_MAX" ]; then
+      count_cooldown=$((count_cooldown + 1))
     elif [ -n "$bpm" ] && [ "$bpm" -gt "$MAIN_MAX" ] && [ "$bpm" -le "$HIIT_MAX" ]; then
       count_hiit=$((count_hiit + 1))
     elif [ -n "$bpm" ] && [ "$bpm" -ge "$MAIN_MIN" ] && [ "$bpm" -le "$MAIN_MAX" ]; then
@@ -140,7 +166,7 @@ main() {
     fi
   done
 
-  # === S1: 곡수 분포 + Hard 60% (v1.3: A+C+D+F = Hard) ===
+  # === S1: 곡수 분포 + Hard 60% (v1.4: A+C+D+F = Hard) ===
   local hard=$((count_a + count_c + count_d + count_f))
   local nonhard=$((count_b + count_e))
   local hard_actual_pct=0
@@ -152,13 +178,13 @@ main() {
     check_fail "S1 곡수 분포 + Hard 60%+" "  $s1_detail (목표: A:${TARGET_A} B:${TARGET_B} C:${TARGET_C} D:${TARGET_D} E:${TARGET_E} F:${TARGET_F} = ${TARGET_TOTAL}곡 / Hard ${HARD_PCT_MIN}%+)"
   fi
 
-  # === S2: BPM 분포 (v1.3 13곡 기준) ===
+  # === S2: BPM 분포 (v1.4 20곡 기준) ===
   local bpm_classified=$((count_warmup + count_main + count_hiit + count_cooldown))
   local s2_detail="(워밍업:$count_warmup 메인:$count_main HIIT:$count_hiit 쿨다운:$count_cooldown = ${bpm_classified}곡)"
-  if [ "$count_warmup" -ge 1 ] && [ "$count_warmup" -le 2 ] && [ "$count_main" -ge 6 ] && [ "$count_main" -le 7 ] && [ "$count_hiit" -ge 3 ] && [ "$count_hiit" -le 4 ] && [ "$count_cooldown" -ge 1 ] && [ "$count_cooldown" -le 2 ]; then
+  if [ "$count_warmup" -ge 1 ] && [ "$count_warmup" -le 3 ] && [ "$count_main" -ge 8 ] && [ "$count_main" -le 11 ] && [ "$count_hiit" -ge 5 ] && [ "$count_hiit" -le 7 ] && [ "$count_cooldown" -ge 1 ] && [ "$count_cooldown" -le 3 ]; then
     check_pass "S2 BPM 분포" "  $s2_detail"
   else
-    check_fail "S2 BPM 분포" "  $s2_detail (목표 v1.3: 워밍업 1-2 / 메인 6-7 / HIIT 3-4 / 쿨다운 1-2)"
+    check_fail "S2 BPM 분포" "  $s2_detail (목표 v1.4: 워밍업 1-3 / 메인 8-11 / HIIT 5-7 / 쿨다운 1-3)"
   fi
 
   # === S3: A·B 인접 회피 ===
@@ -197,41 +223,60 @@ main() {
   fi
 
   # === S6: 마지막 2-3곡 = 멜로딕 마무리 (B+E 권장, BPM 90-115) ===
-  # v1.3: 13곡에서는 마지막 1-2곡만 검사 (S6 룰 완화)
   local last_idx=$((total - 1))
   local penult_idx=$((total - 2))
+  local antepenult_idx=$((total - 3))
   local last_type="${seq_types[$last_idx]:-?}"
   local last_bpm="${seq_bpms[$last_idx]:-0}"
   local penult_type="${seq_types[$penult_idx]:-?}"
   local penult_bpm="${seq_bpms[$penult_idx]:-0}"
-  local s6_detail="(Track ${total} ${last_type} BPM ${last_bpm} / Track $((total-1)) ${penult_type} BPM ${penult_bpm})"
+  local antepenult_type="?"
+  local antepenult_bpm="0"
+  if [ "$total" -ge 3 ]; then
+    antepenult_type="${seq_types[$antepenult_idx]:-?}"
+    antepenult_bpm="${seq_bpms[$antepenult_idx]:-0}"
+  fi
+  local s6_detail="(Track ${total} ${last_type} BPM ${last_bpm} / Track $((total-1)) ${penult_type} BPM ${penult_bpm} / Track $((total-2)) ${antepenult_type} BPM ${antepenult_bpm})"
   local s6_ok=1
-  # 마지막 또는 직전 곡 중 하나는 B/E + BPM 90-115 (둘 중 하나만 충족하면 PASS)
+  # 마지막 2-3곡 중 하나는 B/E + BPM 90-115 (하나 이상 충족하면 PASS)
   local last_melodic=0
   local penult_melodic=0
+  local antepenult_melodic=0
   if { [ "$last_type" = "B" ] || [ "$last_type" = "E" ]; } && [ "$last_bpm" -ge 90 ] && [ "$last_bpm" -le 115 ]; then
     last_melodic=1
   fi
   if { [ "$penult_type" = "B" ] || [ "$penult_type" = "E" ]; } && [ "$penult_bpm" -ge 90 ] && [ "$penult_bpm" -le 115 ]; then
     penult_melodic=1
   fi
-  if [ "$last_melodic" -eq 0 ] && [ "$penult_melodic" -eq 0 ]; then
+  if { [ "$antepenult_type" = "B" ] || [ "$antepenult_type" = "E" ]; } && [ "$antepenult_bpm" -ge 90 ] && [ "$antepenult_bpm" -le 115 ]; then
+    antepenult_melodic=1
+  fi
+  if [ "$last_melodic" -eq 0 ] && [ "$penult_melodic" -eq 0 ] && [ "$antepenult_melodic" -eq 0 ]; then
     s6_ok=0
   fi
   if [ "$s6_ok" -eq 1 ]; then
     check_pass "S6 마지막 멜로딕 마무리" "  $s6_detail"
   else
-    check_fail "S6 마지막 멜로딕 마무리" "  $s6_detail (목표: 마지막 1-2곡 중 하나는 B 또는 E + BPM 90-115)"
+    check_fail "S6 마지막 멜로딕 마무리" "  $s6_detail (목표: 마지막 2-3곡 중 하나는 B 또는 E + BPM 90-115)"
+  fi
+
+  # === S7: 보컬 성별 분포 (남성 14 / 여성 6) ===
+  local s7_detail="(Male:$count_male Female:$count_female Unknown:$count_vocal_unknown = ${total}곡)"
+  if [ "$count_male" -eq "$TARGET_MALE" ] && [ "$count_female" -eq "$TARGET_FEMALE" ] && [ "$count_vocal_unknown" -eq 0 ] && [ "$total" -eq "$TARGET_TOTAL" ]; then
+    check_pass "S7 보컬 성별 분포" "  $s7_detail"
+  else
+    check_fail "S7 보컬 성별 분포" "  $s7_detail (목표: Male:${TARGET_MALE} Female:${TARGET_FEMALE}, 모든 트랙 Vocal 메타 필요)"
   fi
 
   # === 출력 ===
   printf "%b" "$RESULTS"
   echo ""
+  local total_gates=$((PASS_COUNT + FAIL_COUNT))
   if [ "$FAIL_COUNT" -eq 0 ]; then
-    echo "종합: PASS (${PASS_COUNT}/6 게이트)"
+    echo "종합: PASS (${PASS_COUNT}/${total_gates} 게이트)"
     exit 0
   else
-    echo "종합: FAIL (${FAIL_COUNT}/6 게이트 FAIL)"
+    echo "종합: FAIL (${FAIL_COUNT}/${total_gates} 게이트 FAIL)"
     exit 1
   fi
 }

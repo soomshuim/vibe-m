@@ -1,4 +1,37 @@
 ---
+HANDOFF: Codex -> User (20-00 Track 06 클럽 열기 개사 + Ad-lib Pocket 버전)
+Date: 2026-04-28 01:24:18
+Project: ~/Project/wavvy
+Agent: Codex
+Summary: 20-00 이어작업. Track 03 `Bottom to the Top`은 호흡이 여전히 약하지만 사용자 최종 PASS로 기록. Track 06 `Overtime Flame`은 사무실 야근불에서 after-hours club heat 콘셉트로 개사. 도입부는 8 bars instrumental / 808 bass lead only / no vocal / no ad-lib / no hook / no bell melody로 고정하고, bell melody는 Verse 1 이후 진입하도록 STYLE/EXCLUDE/LYRICS/META에 모두 반영. 호흡 문제는 `Break - No Vocal` 대신 A/B verse 사이 `[Ad-lib Pocket]`을 쓰는 방식으로 정리. `chant` 표현은 파일에서 제거하고, 포켓은 구호가 아니라 짧은 rapper aside(`huh/yeah/uh`)로 처리. `check_lyric_avoid.sh`는 Track 06 기준 PASS.
+Next-TODO: Track 06 현 버전으로 Suno 생성 후 (1) intro 808-only 준수, (2) bell melody가 intro 이후에만 나오는지, (3) Ad-lib Pocket이 숨표로 들리는지, (4) 클럽 열기 콘셉트가 어색하지 않은지 검수. 이후 draft 5곡(02/06/09/12/13) 생성/검수와 14-20 추가 7곡 설계 진행.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Codex -> User (20-00 최종 20곡 체제 + 남성 14 / 여성 6 확정)
+Date: 2026-04-27
+Project: ~/Project/wavvy
+Agent: Codex
+Summary: 20-00 `AFTER HOURS WORKOUT` 이어작업. 기존 13곡 작업 세트는 유지하되, 사용자 정정에 따라 최종 시리즈를 **20곡**으로 복원. 최종 축 분포는 **A 3 / B 4 / C 5 / D 3 / E 2 / F 3 = 20곡**, Hard A+C+D+F = 14곡(70%). 최종 보컬 성별은 **남성 14곡 / 여성 6곡**으로 확정. 현재 13곡 계획상 M9/F4이므로 추가 7곡은 M5/F2로 배정: 14 B Male, 15 C Male, 16 A Male, 17 F Male, 18 D Female, 19 B Female, 20 E Male. 01/03/05/07/08/10 txt 헤더에 누락된 `Vocal: Male` 메타만 보강해 현재 13곡 카운트와 concept를 일치시켰다. `concept.md` v0.4, `HARD_HIPHOP_RUBRIC.md` v1.4, `check_series_gate.sh` v1.4로 동기화했고, 게이트 스크립트에 S7 Vocal 성별 검사를 추가.
+LLC-Update: 02 LLC는 이전 버전 톤으로 고정. 158 BPM은 유지하되 melodic autotuned female vocal, workout-ready night trap pace, punchy tight 808 with controlled saturation, driving 1/16 hi-hats, polished glossy mix로 되돌림.
+Length-Policy: 2026-04-28 사용자 피드백 "3분이 안되네 좀 짧아" 반영. 신규/draft는 실제 출력 최소 3:20 목표. `Length:` 메타만 믿지 말고 가사 본문에서 3개 verse 또는 2개 24-bar verse 이상 확보. 02 LLC는 Verse 3 + Final Chorus 추가, 09는 Verse 4 추가, 12는 Verse 3 + 반복 Final Chorus 지시 추가.
+Vocal-Policy: 최종 20곡 기준 **남성 14 / 여성 6**. 기존 PASS 트랙은 실제 음원 성별 우선, txt에서 임의 재라벨링 금지. 전곡 확정 전 `Vocal:` 메타를 채워 S7 자동 검증.
+Verification: `bash -n MASTER/scripts/check_series_gate.sh` PASS. `check_lyric_avoid.sh SERIES/20-00/input/tracks` PASS 13/13. `check_series_gate.sh SERIES/20-00/`는 20곡 기준 expected FAIL (현재 13곡, M9/F4, 47:00).
+Next-TODO:
+  (1) **Suno V5.5에서 현재 draft 5곡 생성/검수** — Night Rider는 PASS 버전 유지, 02/06/09/12/13은 8마디 호흡 룰 + 3:20 이상 길이 룰 유지
+  (2) **14-20 추가 7곡 설계/작사** — 남성 5 / 여성 2 배정 유지
+  (3) 20곡 모두 PASS 후 **강-약-중-강-약** 흐름으로 최종 순서 재배치
+  (4) 오디오 파일 리네임 (`NN__제목__영문__장르__BPM.wav`)
+  (5) YouTube Metadata v0.4 확정 + 썸네일/loop.png + 패키징
+Key-Files:
+  - PASS/Draft 작업 세트: `SERIES/20-00/input/tracks/Night Rider.txt`, `LLC (Low Light Code).txt`, `06_Overtime Flame.txt`, `09_Block Signal.txt`, `12_Black Interval.txt`, `13_Dust Timer.txt`
+  - Track Map: `SERIES/20-00/concept.md`
+  - 검증 스크립트: `MASTER/scripts/check_series_gate.sh`, `MASTER/scripts/check_lyric_avoid.sh`
+Commits: (미커밋)
+---
+
+---
 HANDOFF: Claude -> User (7곡 PASS + RUBRIC v1.3 + concept v0.3 + 13곡 분포 확정 + F축 신설 — 변주 6곡 작업 대기)
 Date: 2026-04-26
 Project: ~/Project/wavvy

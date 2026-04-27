@@ -3,9 +3,10 @@ Type: D
 BPM: 140
 Key: D Minor
 Length: 3:00
+Vocal: Male
 
 === STYLE ===
-NY drill, Brooklyn drill hybrid, 140 BPM, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop D minor, menacing atmosphere, aggressive guttural male rap deadpan flow, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, crisp articulation
+NY drill, Brooklyn drill hybrid, 140 BPM, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop D minor, menacing but controlled atmosphere, deadpan male Korean drill rap with crisp articulation, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, less raw but still tense
 
 === EXCLUDE ===
 EDM drop, vocal chop, vocal stutter, pitch-shifted vocals, beat switch, drum fill, double-time drums, halftime switch, breakbeat, glitch drums, riser, sung hook, 32nd triplet burst
@@ -21,6 +22,7 @@ EDM drop, vocal chop, vocal stutter, pitch-shifted vocals, beat switch, drum fil
 입만 터는 kid, 손은 늘 crash
 
 (생략 — 4 Verse × 16 + 3 Refrain 구조)
+(운영: 각 16마디 Verse는 8마디 + 짧은 crew ad-lib/snare pocket + 8마디로 운용)
 
 [Refrain]
 씬에 침 뱉어, 너흰 다 fake
@@ -33,3 +35,4 @@ RUBRIC v1.3 매칭: D K-Drill (NY/Brooklyn drill hybrid)
 PASS 일자: 2026-04-26
 8-Factor: 90/100 PASS
 사용자 평가: 결과물 OK
+운영 룰: PASS 트랙 유지. guttural/raw 과잉은 낮추되 140 BPM·sliding 808·tresillo hi-hat은 유지.

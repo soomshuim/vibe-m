@@ -3,12 +3,14 @@ Type: A
 BPM: 150
 Key: Minor
 Length: 4:30
+Vocal: Male
 
 === STYLE ===
-Korean trap, 150 BPM, steady 2-bar drum loop, softened but tight 808 bass with controlled saturation, crisp but relaxed 1/16 hi-hats, mellow detuned synth pads replacing aggressive supersaw stabs, subtle dark bell melody, laid-back conversational male Korean rap in chest and light mix voice, smooth legato delivery, close but gently compressed vocal, minimal ad-libs used as soft echoes, restrained yet focused energy, introspective hard rap feel
+Korean trap, 150 BPM, steady 2-bar drum loop, softened but tight 808 bass with controlled saturation, crisp but relaxed 1/16 hi-hats, mellow detuned synth pads replacing aggressive supersaw stabs, subtle dark bell melody, laid-back conversational male Korean rap in chest and light mix voice, smooth legato delivery, close but gently compressed vocal, minimal ad-libs used as soft echoes, restrained yet focused energy, less raw but still punchy, introspective hard rap feel
 
 === LYRICS META (실제 결과 결정) ===
 (Shouted male Korean rap, dry voice, same drum loop)
+(Controlled shout, not over-screamed. Keep 150 BPM and the same 2-bar drum loop.)
 
 === LYRICS ===
 [Intro]
@@ -32,7 +34,7 @@ Korean trap, 150 BPM, steady 2-bar drum loop, softened but tight 808 bass with c
 불붙은 paycheck, on the map
 
 [Verse 2-6 + Refrain × 2]
-(생략 — 6 Verse + 3 Refrain 구조)
+(생략 — 6 Verse + 3 Refrain 구조. 각 긴 Verse는 8마디마다 짧은 breath/ad-lib pocket 권장)
 
 [Outro]
 (Instrumental fade, same 2-bar drum loop)
@@ -41,3 +43,4 @@ Korean trap, 150 BPM, steady 2-bar drum loop, softened but tight 808 bass with c
 RUBRIC v1.3 매칭: A Rage Dry (Style Prompt "introspective"이지만 가사 메타 "Shouted dry" + 실제 결과 rage 정합)
 PASS 일자: 2026-04-26
 사용자 평가: 대만족
+운영 룰: PASS 트랙 유지. 재생성/변주 시 과도한 raw/screamed 질감은 낮추고 150 BPM·tight 808·crisp hi-hat은 유지.

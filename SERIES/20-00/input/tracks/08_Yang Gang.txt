@@ -3,9 +3,10 @@ Type: C
 BPM: 150
 Key: Minor
 Length: 4:00
+Vocal: Male
 
 === STYLE ===
-Korean hip-hop/trap with halftime bounce at a loose 150 BPM feel, punchy 808 slides, crisp rapid hi-hats, and glitchy digital ear candy; verse rides sparse drums and bass with half-mumbled confident flows, pre-chorus tightens with filtered chops and rising noise, chorus lands on a chanty gang hook with doubled ad-libs and callouts, Vocal delivery is youthful, close-mic, with stacked whispers on key phrases, tape-stutter fills, reverse swells, and short delay throws on the hook, Bright, aggressive, internet-native mix with glossy low end and playful edge, theme, rap, playful, emotional, glitch, hip-hop
+Korean hip-hop/trap with halftime bounce at a loose 150 BPM feel, punchy 808 slides, crisp rapid hi-hats, and glitchy digital ear candy; verse rides sparse drums and bass with half-mumbled confident flows, pre-chorus tightens with filtered chops and controlled noise, chorus lands on a chanty gang hook with doubled ad-libs and callouts, Vocal delivery is youthful, close-mic, with stacked whispers on key phrases, tape-stutter fills, reverse swells, and short delay throws on the hook, bright but minor-compatible, less raw but still energetic, internet-native mix with glossy low end and playful edge, theme, rap, playful, emotional, glitch, hip-hop
 
 === LYRICS ===
 [Verse 1]
@@ -15,6 +16,7 @@ Korean hip-hop/trap with halftime bounce at a loose 150 BPM feel, punchy 808 sli
 댓글창 속에서 꿈을 키워
 
 (생략 — 2 Verse + 2 Pre-Chorus + 2 Chorus + Bridge + Final Chorus 구조)
+(운영: Verse는 8마디 단위로 호흡. Chorus는 chant gang hook 반복으로 숨 확보)
 
 [Chorus]
 Yang Gang, Yang Gang
@@ -29,3 +31,4 @@ PASS 일자: 2026-04-26
 사용자 평가: 생각보다 아주 좋았어. 결과는 minor + 확실한 workout 컨셉.
 v0.3 변경: Style Prompt와 결과 갭 (Style은 bright/playful, 결과는 minor/workout). 결과 우선.
 v0.3 변경: [Pre-Chorus] [Chorus] [Bridge] [Final Chorus] 메타태그 인정
+운영 룰: PASS 트랙 유지. playful/chant gang hook은 유지하되 raw 질감은 낮추고 150 BPM halftime bounce·rapid hi-hat은 유지.

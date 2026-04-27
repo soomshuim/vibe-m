@@ -3,9 +3,10 @@ Type: C
 BPM: 145
 Key: Minor
 Length: 3:45
+Vocal: Male
 
 === STYLE ===
-confident flow, dark trap, rap, sarcastic attitude, hip-hop, punchy 808, minimal, heavy bass, theme, fake, tone
+confident flow, dark trap, rap, sarcastic attitude, hip-hop, 145 BPM, punchy 808, minimal, heavy bass, controlled edge, less raw but still hard and rhythmic, theme, fake, tone
 
 === LYRICS ===
 [Intro]
@@ -15,8 +16,10 @@ Boomerang, boomerang,
 네 입에서 나온 날선 말들, 부메랑처럼 튕겨, hater, you're a clown.
 
 [Verse 1] (12행)
+(운영: 8행 뒤 짧은 breath/ad-lib pocket)
 [Hook] (8행)
 [Verse 2] (12행)
+(운영: 8행 뒤 짧은 breath/ad-lib pocket)
 [Hook] (8행)
 [Bridge] (6행)
 [Outro] (5행)
@@ -28,3 +31,4 @@ RUBRIC v1.3 매칭: C Hardcore Trap (sarcastic 디스 컨셉)
 PASS 일자: 2026-04-26
 사용자 평가: 부메랑 정성적으로 괜찮았어. 통과.
 v0.3 변경: [Bridge] 메타태그 인정
+운영 룰: PASS 트랙 유지. 부메랑 hook과 sarcastic 톤은 유지하되 raw 질감은 낮추고 145 BPM·punchy 808은 유지.

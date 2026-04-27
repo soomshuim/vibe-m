@@ -1,0 +1,55 @@
+Track: Block Signal (블록 신호)
+Type: D
+BPM: 142
+Key: D Minor
+Length: 3:45
+Vocal: Female
+Status: DRAFT - Suno test pending
+
+=== STYLE ===
+NY drill, Brooklyn drill hybrid, 142 BPM, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop D minor, menacing but controlled atmosphere, deadpan female Korean drill rap with crisp articulation, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, less raw but still tense
+
+=== EXCLUDE ===
+amapiano, jersey club, trap 808 sustain, k-pop, sung hook, beat switch, EDM drop, melodic singing, autotune ballad, slow tempo, vocal chop, vocal stutter, pitch-shifted vocals, riser
+
+=== LYRICS ===
+[Rap Song]
+(Female Korean drill rap. Deadpan, crisp consonants. Target actual runtime 3:30-3:50. Use four 16-bar drill verses plus four refrains; do not shorten to two verses. Drill verses must breathe every 8 bars: 8-bar run, short crew ad-lib or snare pocket, then next 8-bar run. Theme: block signal, night intersection, crew text, city code, quiet confidence, scene disrespect without explicit violence. Preserve K-Drill mood but avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+
+[Intro]
+(Instrumental, dark piano loop and sliding 808)
+
+[Verse 1]
+(16 bars total, split 8 + crew ad-lib/snare pocket + 8. Korean-dominant. Hard consonants, short internal rhymes, no sung melody.)
+
+[Refrain]
+(4 bars. Chant phrase: "블록 신호, sign on" / "signal on". Deadpan, not sung.)
+
+[Verse 2]
+(16 bars total, split 8 + crew ad-lib/snare pocket + 8. More pressure, city/block imagery, no direct violent imagery.)
+
+[Refrain]
+(4 bars. Repeat with ad-libs.)
+
+[Verse 3]
+(16 bars total, split 8 + crew ad-lib/snare pocket + 8. Scene critique and self-positioning.)
+
+[Refrain]
+(4 bars. Final chant.)
+
+[Verse 4]
+(16 bars total, split 8 + crew ad-lib/snare pocket + 8. Final drill verse, sharper flow, block/code imagery, no explicit violence.)
+
+[Refrain]
+(4 bars. Final repeated chant with ad-libs.)
+
+[Outro]
+(Instrumental, same drill loop)
+
+=== META ===
+RUBRIC v1.3 목표 매칭: D K-Drill 액센트 (Rewrite 변주)
+작업 목적: Track 09로 이동해 S6 마지막 멜로딕 마무리와 충돌 제거
+운영 룰: D축 drill은 8마디마다 숨표/crew ad-lib/snare pocket을 둔다. 16마디를 무호흡으로 붙이지 않는다.
+길이 룰: 3분 미만 방지를 위해 Verse 4와 마지막 Refrain을 반드시 포함한다. 실제 출력 목표 3:30-3:50.
+톤 보정: guttural/raw 과잉은 낮추되 142 BPM·sliding 808·tresillo hi-hat은 유지한다.
+Suno 생성: 2-3회 생성 후 최선 1개 선택

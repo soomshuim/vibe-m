@@ -1,8 +1,82 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-26 (10차 업데이트 — 7곡 PASS 검토 + RUBRIC v1.3 + concept v0.3 + 13곡 분포 + F축 신설 + 변주 6곡 전략)
+> Last updated: 2026-04-28 (13차 업데이트 — 20-00 Track 06 클럽 열기 개사 + Ad-lib Pocket 구조)
 
 ## 진행 중
+
+- **20-00 Track 06 `Overtime Flame` 클럽 열기 개사 + 호흡 포켓 실험** (2026-04-28 13차)
+  - ✅ 사용자 요청 반영: `Overtime Flame`을 사무실 야근불 콘셉트에서 **after-hours club heat / neon / bass / floor 열기** 콘셉트로 개사
+  - ✅ 도입부 룰 확정: **8 bars instrumental, 808 bass lead only**, 보컬/애드립/훅/bell melody 금지. bell melody는 intro 이후 Verse 1부터 진입
+  - ✅ 호흡 이슈 대응: `No Vocal Break`가 Suno에서 잘 무시되어, 최종적으로 **A/B verse 구조 + [Ad-lib Pocket]** 방식 채택
+  - ✅ `chant`가 어색하다는 피드백 반영: `Stop Chant`, `Bridge Chant`, 파일 내 `chant` 표현 제거. 포켓은 구호가 아니라 짧은 rapper aside(`huh/yeah/uh`)로 처리
+  - ✅ `./MASTER/scripts/check_lyric_avoid.sh SERIES/20-00/input/tracks/06_Overtime Flame.txt` PASS
+  - **남은 TODO**: 현 버전으로 Suno 생성 후 도입부 808-only 준수 여부, bell melody 진입 타이밍, Ad-lib Pocket 호흡감, club heat 콘셉트 정합성 검수
+
+- **20-00 Track 03 `Bottom to the Top` 최종 PASS 기록** (2026-04-28)
+  - ✅ 사용자 제공 원본 6 Verse 전문 반영
+  - ✅ 8마디마다 `[Instrumental Break]` 1마디 구조를 넣었지만 실제 생성에서 호흡은 여전히 약함
+  - ✅ 사용자 결정: 호흡은 거의 안 쉬지만 **PASS 유지**
+  - ✅ 메타에 “호흡은 약하지만 최종 PASS” 기록
+
+- **20-00 최종 20곡 체제 + 남성 14 / 여성 6 확정** (2026-04-27 12차)
+  - ✅ **최종 트랙 수 복원**: 13곡은 현재 작업 세트, 최종은 **20곡**
+  - ✅ **최종 축 분포 확정**: **A 3 / B 4 / C 5 / D 3 / E 2 / F 3 = 20곡**
+    - Hard A+C+D+F = 14곡 (70%)
+    - Non-Hard B+E = 6곡 (30%)
+  - ✅ **보컬 성별 분포 확정**: **남성 14곡 / 여성 6곡**
+    - 현재 13곡 계획상 M9/F4
+    - 추가 7곡은 M5/F2로 배정
+    - 01/03/05/07/08/10 txt 헤더에 누락된 `Vocal: Male` 메타만 보강해 현재 13곡 S7 카운트와 concept를 일치시킴
+  - ✅ **추가 7곡 확장 슬롯**:
+    - 14 B 신규 3 — Male, 148-152 BPM
+    - 15 C 신규 5 — Male, 145-150 BPM
+    - 16 A 변주 2 — Male, 152-156 BPM
+    - 17 F 변주 2 — Male, 170-178 BPM
+    - 18 D 변주 3 — Female, 142-146 BPM
+    - 19 B 신규 4 — Female, 105-115 BPM
+    - 20 E 보너스 2 — Male, 92-96 BPM
+  - ✅ **문서/게이트 업데이트**:
+    - `SERIES/20-00/concept.md` v0.4 — 20곡 + 성별 분포 + 추가 7곡 슬롯
+    - `MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` v1.4 — S7 성별 게이트 추가
+    - `MASTER/scripts/check_series_gate.sh` v1.4 — TARGET 20곡 + S7 Vocal 메타 검사
+  - ✅ **검증**:
+    - `bash -n MASTER/scripts/check_series_gate.sh` PASS
+    - `./MASTER/scripts/check_lyric_avoid.sh SERIES/20-00/input/tracks` PASS 13/13
+    - `./MASTER/scripts/check_series_gate.sh SERIES/20-00/`는 20곡 기준 expected FAIL (현재 13곡, M9/F4, 길이 47:00)
+  - **남은 TODO**: (1) 현재 draft 5곡(02/06/09/12/13) Suno 생성/검수. (2) 추가 7곡 중 14-20 설계/작사. (3) 전곡 `Vocal:` 메타 정리 후 20곡 기준 게이트 검증. (4) 전곡 PASS 후 강-약-중-강-약 최종 순서 재배치.
+
+- **20-00 draft verse 길이 보강 룰 적용** (2026-04-28)
+  - ✅ 사용자 피드백 반영: "3분이 안되네 좀 짧아" → 신규/draft는 실제 출력 최소 **3:20** 목표
+  - ✅ `concept.md` LYRICS 작성 가이드 수정: `Length:` 메타만 믿지 말고 가사 본문에서 verse 분량 확보
+  - ✅ `LLC (Low Light Code)` Length 3:45 + Verse 3 + Final Chorus 추가
+  - ✅ `09_Block Signal` Length 3:45 + Verse 4 + 마지막 Refrain 추가
+  - ✅ `12_Black Interval` Length 3:45 + Verse 3 + 반복 Final Chorus 지시 추가
+  - ✅ `06_Overtime Flame`, `13_Dust Timer`에 3분 미만 방지 길이 룰 추가
+
+- **20-00 변주 6곡 Suno draft + Track Map S6 정합화** (2026-04-27 11차)
+  - ✅ **변주 6곡 draft txt 생성** (`SERIES/20-00/input/tracks/01/02/06/09/12/13_*.txt`)
+    - Night Rider — B Rage Tuned after-dark, 112 BPM, PASS / 번호 없는 파일명
+    - LLC (Low Light Code) — B Rage Tuned, 158 BPM, 번호 없는 파일명 + `Order: 02`
+    - 06 Overtime Flame — A Rage Dry, 152 BPM, Paycheck 변주
+    - 09 Block Signal — D K-Drill, 142 BPM, Rewrite 변주
+    - 12 Black Interval — F Faster Dark Trap, 175 BPM, Cold Stack 변주
+    - 13 Dust Timer — E 빡센 붐뱁, 92 BPM, 최종 쿨다운
+  - ✅ **Track Map 정합화** (`SERIES/20-00/concept.md`)
+    - 기존 13번 D축 마지막 배치가 S6와 충돌 → **E 붐뱁을 Track 13 최종 쿨다운으로 이동**
+    - D 변주를 Track 09로 이동해 A/B 인접 회피 + S6 마지막 B/E 조건 충족
+  - ✅ **`.gitignore` 보정**
+    - `SERIES/*/input/tracks/*`는 계속 미디어 무시
+    - `!SERIES/*/input/tracks/*.txt` 추가로 txt 프롬프트 추적 가능
+  - ✅ **검증 통과**
+    - `./MASTER/scripts/check_series_gate.sh SERIES/20-00/` → 당시 v1.3 기준 PASS 6/6 (draft 포함 13곡, 47:00)
+    - `./MASTER/scripts/check_lyric_avoid.sh SERIES/20-00/input/tracks` → PASS 13/13
+    - 이후 v1.4에서 20곡 기준으로 올라갔기 때문에 현재 13곡 세트는 `check_series_gate.sh` expected FAIL 상태
+  - ⚠️ **상태 주의**: Night Rider는 PASS. 02/06/09/12/13 5곡은 `Status: DRAFT - Suno test pending`.
+  - ✅ **2026-04-27 추가 운영 룰**: 타이트한 랩 스타일은 8마디마다 숨표/애드립/반마디 포켓을 둔다. 숨 없이 16마디 이상 밀지 않음. 01 Night Rider는 사용자 PASS 버전 유지, 02/06/09/12/13 draft에 호흡 룰 반영.
+  - ✅ **2026-04-27 추가 보정**: 01 제외 전체 txt(02-13)에 "덜 raw하되 BPM/808/hi-hat density 유지" 지시 반영. 기존 PASS 트랙은 결과물 유지, 재생성/변주용 운영 룰만 추가.
+  - ✅ **2026-04-27 순서 정책**: 현재 Track Map은 제작/검증용 임시 배치. 20곡 PASS 후 최종 순서는 **강-약-중-강-약** 흐름으로 다시 섞는다.
+  - ✅ **2026-04-27 보컬 성별 정책 정정**: 최종 20곡은 **남성 14 / 여성 6**. 기존 PASS 트랙은 txt에서 임의 성별 재라벨링 금지. 현재 13곡 계획상 M9/F4, 추가 7곡은 M5/F2.
+  - **남은 TODO**: (1) Suno V5.5에서 draft 5곡 각 2-3회 생성. (2) 사용자 정성 PASS/FAIL. (3) PASS 곡만 `Status/META` 확정. (4) 14-20 추가 7곡 설계/작사. (5) 20곡 오디오 파일 리네임 후 패키징.
 
 - **20-00 7곡 일괄 검토 + RUBRIC v1.3 + concept v0.3 + 13곡 분포 + F축 신설** (2026-04-26 10차)
   - ✅ **7곡 일괄 검토 PASS** (사용자 결과물 정성 평가 우선)

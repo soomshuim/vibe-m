@@ -3,13 +3,14 @@ Type: C
 BPM: 140
 Key: Minor
 Length: 3:30
+Vocal: Male
 
 === STYLE ===
-Trap, hip hop, rap, aggressive, 140BPM
+Trap, hip hop, rap, confident sarcastic, 140BPM, punchy 808, crisp hi-hats, controlled edge, less raw but still hard and rhythmic
 
 === LYRICS META ===
 [Rap Song]
-(Strict unpitched Korean boom bap rap only, flat cadence, no melody, no singing)
+(Strict unpitched Korean rap only, flat cadence, no melody, no singing. Keep 140 BPM trap bounce. For regeneration, split rap sections into 8-bar blocks with short breath/ad-lib pockets.)
 
 === LYRICS ===
 [Verse 1]
@@ -19,6 +20,7 @@ Trap, hip hop, rap, aggressive, 140BPM
 입만 열면 또 flex, 근데 속은 empty
 
 (생략 — 3 Verse + 3 Chorus "Fake! Fake!" 구조)
+(운영: 각 Verse는 8마디마다 숨표/애드립 포켓. Chorus는 짧게 반복해 호흡 확보)
 
 [Chorus]
 Fake (Fake) Fake (Fake) Fake (Fake) ...
@@ -30,3 +32,4 @@ No real pen, no real facts
 RUBRIC v1.3 매칭: C Hardcore Trap (sarcastic 디스 컨셉)
 PASS 일자: 2026-04-26
 사용자 평가: 결과물 괜찮음. 실제로는 trap.
+운영 룰: PASS 트랙 유지. sarcastic 디스 톤은 유지하되 raw 질감은 낮추고 140 BPM·punchy 808은 유지.

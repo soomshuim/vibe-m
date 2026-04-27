@@ -1,0 +1,52 @@
+Track: Black Interval (검은 인터벌)
+Type: F
+BPM: 175
+Key: E Minor
+Length: 3:45
+Vocal: Female
+Status: DRAFT - Suno test pending
+
+=== STYLE ===
+Even faster dark trap around 175 BPM with relentless rolling 808 basslines, ultra-tight triplet and stuttered hi-hats, and hard, punchy snares driving a nonstop forward momentum; verses ride on stripped-back, brooding drums and eerie detuned synth bells, with energy pushed by tempo and rhythmic density instead of EDM-style effects, while the hook drops into heavier sub-bass, controlled brass stabs, and stacked chant-style gang vocals on the main phrases, Female Korean-English bilingual rap with sharper double-time bursts, dense ad-libs tucked rhythmically around the lead, controlled low-register harmonies, subtle glitchy delay throws on key English words, high-contrast mix with heavy low-end impact and dark atmospheric textures, less raw but still fast and intense
+
+=== EXCLUDE ===
+beat switch into EDM drop, sung melodic hook, k-pop, slow tempo, ballad, acoustic, chill, pop chorus, four-on-the-floor, long riser, dance drop
+
+=== LYRICS ===
+[Rap Song]
+(Korean-English faster dark trap. High-tempo HIIT energy, stacked chant gang vocals, no EDM drop. Target actual runtime 3:20-3:45. Use three verse blocks and repeat the final hook; do not shorten to one verse plus hook. Fast rap bursts must be capped at 8 bars, then a breath/chant pocket before the next burst. Theme: black interval, timer, breath, night cardio, tunnel lights, one more round. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+
+[Verse 1]
+(12-16 bars, never continuous past 8 bars: 8-bar fast run + chant/breath pocket + 4-8-bar second run. Fast bilingual rap, Korean-dominant, sharp pockets.)
+
+[Pre-Chorus]
+(4 bars. Tension tightens with short repeated words.)
+
+[Chorus]
+(8 bars. Stacked chant hook: "black interval" / "검은 인터벌" / "one more round".)
+
+[Verse 2]
+(12-16 bars, never continuous past 8 bars: 8-bar double-time burst + chant/breath pocket + 4-8-bar second run. No beat switch.)
+
+[Pre-Chorus]
+(4 bars. Repeat or vary.)
+
+[Chorus]
+(8 bars. Heavier sub-bass, chant hook.)
+
+[Verse 3]
+(12-16 bars, never continuous past 8 bars: 8-bar fast run + chant/breath pocket + 4-8-bar second run. Final push, timer/interval imagery, no EDM switch.)
+
+[Bridge]
+(4-6 bars. Stripped-back chant, no EDM build.)
+
+[Chorus]
+(8 bars. Final hook, same trap sonics. Repeat once if output risks ending under 3:20.)
+
+=== META ===
+RUBRIC v1.3 목표 매칭: F Faster Dark Trap (Cold Stack 변주)
+작업 목적: Track 12 HIIT 피크 보강
+운영 룰: F축 faster trap은 빠른 랩을 8마디 단위로 끊고 chant/breath pocket을 둔다. 무호흡 double-time 금지.
+길이 룰: 3분 미만 방지를 위해 Verse 3와 반복 Final Chorus를 포함한다. 실제 출력 목표 3:20-3:45.
+톤 보정: gritty/raw 과잉은 낮추되 175 BPM·rolling 808·triplet/stutter hi-hat density는 유지한다.
+Suno 생성: 2-3회 생성 후 최선 1개 선택

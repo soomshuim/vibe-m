@@ -1,8 +1,15 @@
 # Korean Hard Hip-Hop Rubric
 
-Version: 1.3
-Last Updated: 2026-04-26
+Version: 1.4
+Last Updated: 2026-04-27
 Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
+
+> **v1.4 변경 (2026-04-27 — 최종 20곡 체제 복원 + 성별 분포 확정)**:
+> 1. **최종 20곡 확정**: A 3 / B 4 / C 5 / D 3 / E 2 / F 3 = 20곡
+> 2. **Hard 70%**: A+C+D+F = 14곡 / B+E = 6곡
+> 3. **보컬 성별 분포 확정**: 남성 14곡 / 여성 6곡
+> 4. **Series Gate S7 추가**: `Vocal:` 메타 기반 성별 분포 자동 검증
+> 5. **최종 순서 정책**: 전곡 PASS 후 강-약-중-강-약 흐름으로 재배치
 
 > **v1.3 변경 (2026-04-26 — 7곡 PASS 후 일괄 보정)**:
 > 1. **H4 한국어 비중 룰 → 권장만 (감점 X)** — 코드스위치는 한국 본가 표준 (사용자 정정)
@@ -17,14 +24,14 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 > **v1.1 변경 (2026-04-26)**: Hard 60% 정책 (A+C+D+F = 60% / B+E = 40%)
 
 > **Based on**:
-> - `SERIES/20-00/concept.md` v0.3 (13곡 분포, 변주 6곡)
+> - `SERIES/20-00/concept.md` v0.4 (20곡 분포, 13곡 작업 세트 + 추가 7곡 확장)
 > - `SERIES/20-00/report/2026-04-25_workout-tuned-rage-supplement.md` (Section A·B 통합)
 > - `meetings/2026-04-26_20-00-genre-gate-rubric-design.md` (/team 만장 합의)
 > - 7곡 PASS 사례 검증 (Rewrite·Bottom to the Top·Fake·Boomerang·Paycheck·Cold Stack·Yang Gang)
 >
 > **시리즈 정체성**: Korean Workout Hip-Hop 빈자리 (글로벌 Apple Music Hip-Hop Workout 외산 트랩 우세, Korean rap 0%)
 > **페르소나**: 25-35 한국 직장인, 저녁 8시 운동 (헬스/PT/홈트/러닝)
-> **최종 곡수 (v1.3)**: **13곡** (A 2 / B 2 / C 4 / D 2 / E 1 / F 2, Hard 10/13 = 77%)
+> **최종 곡수 (v1.4)**: **20곡** (A 3 / B 4 / C 5 / D 3 / E 2 / F 3, Hard 14/20 = 70%, 남성 14 / 여성 6)
 
 ---
 
@@ -50,7 +57,7 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 
 ## Style-Specific Gates (15개) — 7곡 PASS 사례 반영
 
-### Style A: Rage Dry Voice — 2곡 (Hard, 베이스: Paycheck)
+### Style A: Rage Dry Voice — 3곡 (Hard, 베이스: Paycheck)
 
 | # | Gate | 기준 |
 |---|------|------|
@@ -62,7 +69,7 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 > **Korean 토착 풀**: Loopy `MARNI` 일부 + Lil Moshpit 비트 (PUBLIC ENEMY 161 BPM)
 > **Wavvy PASS 사례**: Paycheck (2026-04-26, BPM 150, "softened tight 808 + introspective" Style + "Shouted dry voice" 가사 메타 충돌이지만 결과 rage 정합)
 
-### Style B: Rage Tuned Singing — 2곡 (Non-Hard, 신규 작성)
+### Style B: Rage Tuned Singing — 4곡 (Non-Hard, 신규 작성)
 
 | # | Gate | 기준 |
 |---|------|------|
@@ -78,7 +85,7 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 > **참조 (글로벌)**: Travis Scott / Don Toliver / SoFaygo / Destroy Lonely
 > **Korean 토착 풀**: Sik-K × HAON · Sik-K × Lil Moshpit `K-FLIP+` · MOLLAK (Female 인접)
 
-### Style C: Hardcore Trap — 4곡 (Hard, 베이스: Bottom to the Top·Fake·Boomerang·Yang Gang)
+### Style C: Hardcore Trap — 5곡 (Hard, 베이스: Bottom to the Top·Fake·Boomerang·Yang Gang)
 
 | # | Gate | 기준 |
 |---|------|------|
@@ -93,7 +100,7 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 >
 > **참조**: ZENE THE ZILLA · Ash Island · Loopy (UNWANTED WRLD) · EK · KWAII
 
-### Style D: K-Drill 액센트 — 2곡 (Hard, 베이스: Rewrite)
+### Style D: K-Drill 액센트 — 3곡 (Hard, 베이스: Rewrite)
 
 | # | Gate | 기준 |
 |---|------|------|
@@ -104,7 +111,7 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 > **참조**: Fleeky Bang · Blase · Silkybois · deadbois · NO:EL
 > **Wavvy PASS 사례**: Rewrite (2026-04-26, BPM 140, NY/Brooklyn drill hybrid, tresillo hi-hats, D minor, 90점)
 
-### Style E: 빡센 붐뱁 (Bonus) — 1곡
+### Style E: 빡센 붐뱁 (Bonus) — 2곡
 
 | # | Gate | 기준 |
 |---|------|------|
@@ -114,7 +121,7 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 > **참조**: 가리온 · Deepflow · Huckleberry P · Paloalto · Kid Milli · QM · 다이나믹 듀오
 > **Wavvy PASS 사례**: 없음 (변주 6곡에서 1곡 신규 작성 예정)
 
-### Style F: Faster Dark Trap (신규 v1.3) — 2곡 (Hard, 베이스: Cold Stack)
+### Style F: Faster Dark Trap (신규 v1.3) — 3곡 (Hard, 베이스: Cold Stack)
 
 | # | Gate | 기준 |
 |---|------|------|
@@ -156,20 +163,21 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 
 ---
 
-## Series Gates (6개) — 시리즈 단위 자동 검증 (v1.3 13곡 기준)
+## Series Gates (7개) — 시리즈 단위 자동 검증 (v1.4 20곡 기준)
 
 | # | Gate | 기준 | 자동/수동 |
 |---|------|------|----------|
-| S1 | **곡수 분포 + Hard 60%** | **A 2 / B 2 / C 4 / D 2 / E 1 / F 2 = 13곡 확정** + **Hard(A+C+D+F)=10곡(77%)** + **Non-Hard(B+E)=3곡(23%)**. Hard 60%+ 충족 | 자동 |
-| S2 | **BPM 분포** | 워밍업(100-120) 1-2곡 / 메인(130-150) 6-7곡 / HIIT(140-180) 3-4곡 / 쿨다운(90-110) 1-2곡 | 자동 |
+| S1 | **곡수 분포 + Hard 60%** | **A 3 / B 4 / C 5 / D 3 / E 2 / F 3 = 20곡 확정** + **Hard(A+C+D+F)=14곡(70%)** + **Non-Hard(B+E)=6곡(30%)**. Hard 60%+ 충족 | 자동 |
+| S2 | **BPM 분포** | 워밍업(100-120) 1-3곡 / 메인(130-150) 8-11곡 / HIIT(140-180) 5-7곡 / 쿨다운(90-110) 1-3곡 | 자동 |
 | S3 | **A·B 인접 회피** | A Dry Voice 트랙 직후 B Tuned Singing 트랙 직접 인접 배치 금지 | 자동 |
-| S4 | **시리즈 길이** | **40-65분** (13곡 기준, 곡당 평균 3:00-4:30) | 자동 |
+| S4 | **시리즈 길이** | **60-90분** (20곡 기준, 곡당 평균 3:00-4:30) | 자동 |
 | S5 | **Track 01 = 워밍업** | Track 01은 B축 멜로딕 (BPM 100-120) | 자동 |
-| S6 | **마지막 2-3곡 = 멜로딕 마무리** | Track N-1 / N-2는 B + 보너스 붐뱁 (BPM 90-115) | 자동 |
+| S6 | **마지막 2-3곡 = 멜로딕 마무리** | 마지막 2-3곡 중 하나는 B 또는 E + BPM 90-115 | 자동 |
+| S7 | **보컬 성별 분포** | 최종 20곡 기준 Male 14 / Female 6. 모든 트랙 `Vocal:` 메타 필요 | 자동 |
 
 ---
 
-## Style Checklist (수동 청취 보조, v1.3 5축+1보너스)
+## Style Checklist (수동 청취 보조, v1.4 5축+1보너스)
 
 | # | 항목 | A Dry | B Tuned | C Hardcore | D K-Drill | E 붐뱁 | F Faster | 체크 |
 |---|------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -204,7 +212,7 @@ Purpose: Korean Hard Hip-Hop · Workout 장르 게이트 (20-00 시리즈)
 
 ```
 6. check_series_gate.sh 실행
-   → S1-S6 6개 자동 검증 (13곡 기준)
+   → S1-S7 7개 자동 검증 (20곡 기준)
    → 1개라도 FAIL = Track Map 재조정
 7. 전곡 PASS + 시리즈 PASS → YouTube Metadata + 패키징
 ```
@@ -224,16 +232,17 @@ FAIL
   매칭 키워드: 마약 (3회: "코카인", "필로폰", "LSD")
 ```
 
-### `check_series_gate.sh` (v1.3 13곡 기준)
+### `check_series_gate.sh` (v1.4 20곡 기준)
 
 ```bash
 $ ./MASTER/scripts/check_series_gate.sh SERIES/20-00/
-S1 곡수 분포 + Hard 60%: PASS (A:2 B:2 C:4 D:2 E:1 F:2 = 13곡 / Hard:10 Non-Hard:3 = 77%)
-S2 BPM 분포: PASS (워밍업:2 메인:7 HIIT:3 쿨다운:1 = 13곡)
+S1 곡수 분포 + Hard 60%: PASS (A:3 B:4 C:5 D:3 E:2 F:3 = 20곡 / Hard:14 Non-Hard:6 = 70%)
+S2 BPM 분포: PASS (워밍업:2 메인:10 HIIT:6 쿨다운:2 = 20곡)
 S3 A·B 인접 회피: PASS
-S4 시리즈 길이: PASS (52분 30초)
+S4 시리즈 길이: PASS (74분 00초)
 S5 Track 01 워밍업: PASS (Track 01 B축, BPM 110)
-S6 마지막 2-3곡 멜로딕: PASS (Track 12 B BPM 105 / Track 13 E BPM 92)
+S6 마지막 2-3곡 멜로딕: PASS (Track 20 E BPM 94 / Track 19 B BPM 108)
+S7 보컬 성별 분포: PASS (Male:14 Female:6 Unknown:0 = 20곡)
 
 종합: PASS
 ```
@@ -264,14 +273,14 @@ S6 마지막 2-3곡 멜로딕: PASS (Track 12 B BPM 105 / Track 13 E BPM 92)
 
 | 문서 | 용도 |
 |------|------|
-| `SERIES/20-00/concept.md` v0.3 | 13곡 분포 + 변주 6곡 슬롯 + Track Details 7곡 누적 |
+| `SERIES/20-00/concept.md` v0.4 | 20곡 분포 + 남성 14 / 여성 6 + 13곡 작업 세트 + 추가 7곡 슬롯 |
 | `SERIES/20-00/report/2026-04-25_workout-tuned-rage-supplement.md` | Section A 키워드 분리표 + Section B 페르소나 검증 |
 | `SERIES/20-00/report/2026-04-24_hard-hiphop-4axis-musical-deep.md` | 1차 1162줄 딥리서치 |
 | `MASTER/rubrics/AFROBEATS_RUBRIC.md` | 12-00 형식 참고 |
 | `MASTER/scripts/check_lyric_avoid.sh` | 가사 회피 자동 검사 |
-| `MASTER/scripts/check_series_gate.sh` | 시리즈 게이트 자동 검사 (v1.3 13곡 기준) |
+| `MASTER/scripts/check_series_gate.sh` | 시리즈 게이트 자동 검사 (v1.4 20곡 기준 + S7 성별) |
 | 메모리 `feedback_wavvy-lyrics-vs-sound-separation.md` | 가사 vs 사운드 분리 룰 |
 
 ---
 
-*HARD_HIPHOP_RUBRIC v1.3 — 2026-04-26 작성. 7곡 PASS 사례 후행 검증 + 사용자 정정 통합.*
+*HARD_HIPHOP_RUBRIC v1.4 — 2026-04-27 작성. 최종 20곡 체제 + 남성 14 / 여성 6 + S7 성별 게이트 반영.*

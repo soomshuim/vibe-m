@@ -1,0 +1,178 @@
+Track: LLC (Low Light Code / 로우 라이트 코드)
+Order: 02
+Type: B
+BPM: 158
+Key: A Minor
+Length: 3:45
+Vocal: Female
+Status: DRAFT - Suno test pending
+
+=== STYLE ===
+Korean tuned singing rage trap, 158 BPM, melodic autotuned female vocal, workout-ready night trap pace, punchy tight 808 with controlled saturation, driving 1/16 hi-hats, short staccato rap pockets, clipped hook chants under the melodic lead, dark detuned synth pads, warm cathedral reverb large hall, focused forward energy, polished glossy mix, less raw but hard and BPM-locked, emotional but not ballad, hard rap verse with melodic chorus, Korean-English code-switch hook, after-dark city girl code, low light hip-hop mood
+
+=== EXCLUDE ===
+dry shouted vocals, raw screamed vocals, blown-out mix, punk vocal, growl, mumble rap, k-pop ballad, acoustic ballad, soft pop chorus, amapiano, jersey club, EDM drop, beat switch, drum fill
+
+=== LYRICS ===
+[Rap Song]
+(Korean-English autotuned female sing-rap. B-axis hip-hop, not workout lyrics, but workout-ready in sound. Target actual runtime 3:30-3:45. Use all three 16-bar verses plus repeated hooks; do not shorten to two verses. 158 BPM groove must stay locked with driving 1/16 hi-hats, punchy tight 808, and sharper staccato rap pockets. Tight cadence: short bars, clean pockets, no long prose lines, no slow-tempo wording. Heavy Korean rhyme density: every 2 bars must have audible Korean rhyme, every 4 bars keeps one rhyme family, every 8 bars resolves with a hook-like rhyme. English rhymes support the Korean rhymes: code / road / mode / glow. Split every 16-bar verse into 8 bars + half-bar breath/ad-lib pocket + 8 bars. Theme: LLC, low light city code, 낮에는 조용하지만 밤에는 자기 방식과 crew code로 움직이는 세련된 hip-hop character. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+
+[Intro]
+Yeah
+LLC
+low light code
+we stay on code
+
+[Verse 1]
+낮엔 low tone, 표정은 접어
+밤엔 low glow, 걸음은 걸어
+말수는 덜어, 시선은 걸어
+도시의 소음은 뒤로 넘겨
+
+네온은 낮아, 눈빛은 깊어
+골목은 좁아, 리듬은 밀어
+친구들 ping, 답장은 짧아
+같은 code면 눈빛만 알아
+
+(half-bar breath, low ad-lib: LLC)
+
+이건 과시 아냐, 방식은 낮춰
+허세는 접고, 보폭은 맞춰
+뒷말은 묻고, 시선은 감춰
+작게 불러도 분위기 바꿔
+
+계산은 cold, 감각은 clear
+낮의 내 face, 밤에는 real
+low light sign, 우리만 읽어
+조용한 rule, 발밑에 새겨
+
+[Pre-Chorus]
+불 꺼진 street, code가 떠
+숨긴 vibe, bass 위로 번져
+one more light, 색이 켜져
+말 없어도 밤이 먼저
+
+[Chorus]
+LLC, low light code
+낮은 fade, 밤은 download
+LLC, city girl mode
+발밑 bass, ride the road
+
+LLC, low light code
+밤은 짧고 vibe는 overflow
+묻지 마, we stay on code
+불 꺼진 city, ride the road
+
+[Verse 2]
+폰은 face down, 말은 줄여
+눈빛 하나로 판을 굴려
+선은 지켜, 태도는 굳혀
+웃음 뒤 리듬은 더 조여
+
+lowkey jacket, mood를 올려
+cheap talk skip, 시선을 돌려
+작은 방 나와 큰 길을 그려
+조용해도 속도는 늘려
+
+(half-bar breath, soft ad-lib: low light)
+
+밤은 짧아, tempo는 더 빨라
+긴 그림자 밟고 fast ride 달라
+말 많으면 색이 흐려져
+눈빛 하나로 장면을 넘겨
+
+no loud move, presence 남겨
+no fake proof, essence 남겨
+crew code lock, 침묵은 선명
+빛 없는 자리도 잔상은 선명
+
+[Pre-Chorus]
+불 꺼진 street, code가 떠
+숨긴 vibe, bass 위로 번져
+one more light, 색이 켜져
+말 없어도 밤이 먼저
+
+[Chorus]
+LLC, low light code
+낮은 fade, 밤은 download
+LLC, city girl mode
+발밑 bass, ride the road
+
+LLC, low light code
+밤은 짧고 vibe는 overflow
+묻지 마, we stay on code
+불 꺼진 city, ride the road
+
+[Verse 3]
+문 닫힌 lobby, echo는 낮아
+sneaker step은 더 빨라
+low light map, 손목에 감아
+city code flow, 밤길을 갈라
+
+거울 속 sign, 표정은 calm
+bassline 위로 심장은 drum
+too much talk, fade out, none
+짧은 breath 뒤에 다시 run
+
+(half-bar breath, clipped ad-lib: run it)
+
+빛보다 먼저 움직여 right
+눈빛은 sharp, silhouette tight
+검은 창 위 번지는 light
+low light code, we own the night
+
+no delay, no slowdown mode
+내 이름 없이도 열리는 road
+말은 줄이고 리듬은 bold
+LLC, we stay on code
+
+[Final Chorus]
+LLC, low light code
+낮은 fade, 밤은 download
+LLC, city girl mode
+발밑 bass, ride the road
+
+LLC, low light code
+밤은 짧고 vibe는 overflow
+묻지 마, we stay on code
+불 꺼진 city, ride the road
+
+[Outro]
+LLC
+we stay on code
+밤은 짧고
+we ride the road
+
+=== RHYME MAP ===
+- Verse 1 bars 1-2: 접어 / 걸어 (2-bar Korean rhyme) + low tone / low glow
+- Verse 1 bars 3-4: 걸어 / 넘겨 (2-bar Korean rhyme)
+- Verse 1 bars 5-6: 깊어 / 밀어 (2-bar Korean rhyme)
+- Verse 1 bars 7-8: 짧아 / 알아 (2-bar Korean rhyme, 8-bar resolve)
+- Verse 1 bars 9-10: 낮춰 / 맞춰 (2-bar Korean rhyme)
+- Verse 1 bars 11-12: 감춰 / 바꿔 (2-bar Korean rhyme)
+- Verse 1 bars 13-14: clear / real + cold / face
+- Verse 1 bars 15-16: 읽어 / 새겨 (2-bar Korean rhyme, 16-bar resolve)
+- Chorus bars 1-4: code / download / mode / road, short hook pockets
+- Chorus bars 5-8: code / overflow / on code / road + 짧고 / 묻지 마
+- Verse 2 bars 1-2: 줄여 / 굴려 (2-bar Korean rhyme)
+- Verse 2 bars 3-4: 굳혀 / 조여 (2-bar Korean rhyme)
+- Verse 2 bars 5-6: 올려 / 돌려 (2-bar Korean rhyme)
+- Verse 2 bars 7-8: 그려 / 늘려 (2-bar Korean rhyme, 8-bar resolve)
+- Verse 2 bars 9-10: 빨라 / 달라 + fast ride
+- Verse 2 bars 11-12: 흐려져 / 넘겨 (2-bar Korean rhyme)
+- Verse 2 bars 13-14: 남겨 / 남겨 (2-bar Korean rhyme)
+- Verse 2 bars 15-16: 선명 / 선명 (2-bar Korean rhyme, 16-bar resolve)
+- Verse 3 bars 1-4: 낮아 / 빨라 / 감아 / 갈라 (4-bar Korean rhyme)
+- Verse 3 bars 5-8: calm / drum / none / run (4-bar English rhyme, 8-bar resolve)
+- Verse 3 bars 9-12: right / tight / light / night
+- Verse 3 bars 13-16: mode / road / bold / code (16-bar resolve)
+- Final Chorus repeats code / download / mode / road and 짧고 / 묻지 마 pockets
+
+=== META ===
+RUBRIC v1.3 목표 매칭: B Rage Tuned Singing (introspective laid-back 변종)
+작업 목적: Track 02 텐션 빌드, Track 03 C축 진입 전 완충. 가사 컨셉은 workout 직접 묘사 대신 LLC / low light city code hip-hop.
+운영 룰: 16마디를 한 번에 밀지 말고 8마디마다 숨표/짧은 애드립 포켓을 둔다.
+길이 룰: 3분 미만 방지를 위해 Verse 3와 Final Chorus를 반드시 포함한다. 실제 출력 목표 3:30-3:45.
+라임 룰: 2마디마다 한글 라임을 들리게 하고, 영어 라임은 code/road/mode/glow 계열로 보조한다.
+톤 보정: raw 질감은 낮추되 158 BPM groove, driving 1/16 hi-hat pulse, punchy tight 808 drive는 유지한다.
+Suno 생성: 2-3회 생성 후 최선 1개 선택

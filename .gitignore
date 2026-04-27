@@ -29,7 +29,8 @@ venv/
 **/input/loop_xfade_test.mp4
 
 # Local media source assets
-SERIES/*/input/tracks/
+SERIES/*/input/tracks/*
+!SERIES/*/input/tracks/*.txt
 SERIES/*/input/loop.png
 SERIES/*/input/thumb.psd
 
