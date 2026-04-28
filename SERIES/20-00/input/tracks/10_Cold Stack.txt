@@ -6,7 +6,7 @@ Length: 3:00
 Vocal: Male
 
 === STYLE ===
-Even faster dark trap around 180 BPM with relentless rolling 808 basslines, ultra-tight triplet and stuttered hi-hats, and hard, punchy snares driving a nonstop forward momentum; verses ride on stripped-back, brooding drums and eerie detuned synth bells, with energy pushed by tempo and rhythmic density instead of EDM-style effects, while the hook drops into heavier sub-bass, controlled brass stabs, and stacked chant-style gang vocals on the main phrases, Male Korean-English bilingual rap with sharper double-time and occasional triple-time bursts, dense ad-libs tucked rhythmically around the lead, controlled low-register harmonies, subtle glitchy delay throws on key English words, and a high-contrast mix with heavy low-end impact and dark atmospheric textures, less raw but still fast and intense
+High-definition trap mix with ultra-clean, flat frequency balance, extended low-end clarity, and glassy high frequencies; tight 808 bass kept controlled and articulate, transient-shaped snares and hats with precise stereo placement, and subtle bus compression for a polished, modern loudness, Vocals delivered in heavily tuned melodic-rap style with maximum AutoTune effect, robotic note-locking on sustained syllables, smooth pitch transitions, and layered harmonies following precise scale tuning, while ad-libs and chant sections are stacked wide for an enveloping, glossy, radio-ready sound that maintains the original dark, fast trap aggression
 
 === LYRICS ===
 [Verse 1]
@@ -15,8 +15,55 @@ Even faster dark trap around 180 BPM with relentless rolling 808 basslines, ultr
 첫차 타고 출근, late-night grind
 작은 win 쌓아, one step at a time
 
-(생략 — 2 Verse + 2 Pre-Chorus + 3 Chorus + Bridge 구조)
-(운영: double/triple-time는 8마디 이상 연속 금지. 8마디마다 chant/breath pocket)
+엄마 말해, "아들, 머릴 들어"
+이젠 bread 오르니 phone이 울어
+손 벌린 적 없어, I built mine slow
+Brick by brick, 숫자 올라, watch it grow
+
+[Pre-Chorus]
+내 속도 봐, I don't rush
+조용히 움직여, still big touch
+모든 패배는 연료가 돼, fill the tank
+이젠 whole team eating off the bank
+
+[Chorus]
+Cold stack, cold stack, 쌓여 rise
+돈은 머릿속, clear eyes
+Cold stack, cold stack, never fold
+바닥에서 올려, now it's gold
+Cold stack, cold stack, 내 이름 말해
+I don't chase, I build my lane, yeah
+
+[Verse 2]
+새 신발 신고도 roots stay stained
+같은 kid, but a sharper frame
+밖에 crowd 향해 flex 안 해, nah
+일만 말하게 해, 결과가 답 다
+
+긴 밤 태웠지, make it count
+장부 check하고 double down
+모든 receipt 안에 story in it
+작은 win까지도 끝까지 I finish it
+
+[Pre-Chorus]
+내 속도 봐, I don't rush
+조용히 움직여, still big touch
+모든 패배는 연료가 돼, fill the tank
+이젠 whole team eating off the bank
+
+[Chorus]
+Cold stack, cold stack, 쌓여 rise
+돈은 머릿속, clear eyes
+Cold stack, cold stack, never fold
+바닥에서 올려, now it's gold
+Cold stack, cold stack, 내 이름 말해
+I don't chase, I build my lane, yeah
+
+[Bridge]
+떨어져도 봤지, now I'm locked in
+떨리던 손들이 이제 clocked in
+입에 fear 없어, when I speak
+이 crown 지켜, gotta keep this streak
 
 [Chorus]
 Cold stack, cold stack, 쌓여 rise
@@ -31,4 +78,4 @@ RUBRIC v1.3 매칭: F Faster Dark Trap (신규 축 신설)
 PASS 일자: 2026-04-26
 사용자 평가: 정성적으로 좋았어. 새로운 스타일.
 v0.3 변경: F축 신설 (165-180 BPM, rolling 808 + triplet hi-hats + chant gang vocals)
-운영 룰: PASS 트랙 유지. gritty/raw 과잉은 낮추되 180 BPM·rolling 808·triplet hi-hat density는 유지.
+운영 룰: PASS 트랙 유지. gritty/raw 과잉은 낮추고, high-definition glossy tuned melodic-rap mix로 고정하되 180 BPM·controlled 808·fast trap aggression은 유지.

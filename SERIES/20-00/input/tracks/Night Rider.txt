@@ -1,26 +1,26 @@
 Track: Night Rider (나이트 라이더)
 Order: 01
 Type: B
-BPM: 112
+BPM: 120
 Key: F Minor
 Length: 3:30
 Vocal: Male
 Status: PASS
 
 === STYLE ===
-Korean tuned singing rage trap after-dark, 112 BPM, melodic autotuned male vocal, smooth legato sing-rap delivery, softened tight 808 bass with controlled saturation, crisp half-time trap drums, restrained 1/16 hi-hats, mellow detuned synth pads, subtle Korean folk sample chop in the background, warm cathedral reverb large hall, polished glossy KC vangdale-style mix, close vocal with soft echo ad-libs, after-dark night rider gang mode energy, hard rap verses with melodic hook, Korean-English code-switch hook
+Korean tuned singing rage trap warmup, 120 BPM, melodic autotuned male vocal, smooth legato sing-rap delivery, softened tight 808 bass with controlled saturation, crisp half-time trap drums, restrained 1/16 hi-hats, mellow detuned synth pads, subtle Korean folk sample chop in the background, warm cathedral reverb large hall, polished glossy KC vangdale-style mix, close vocal with soft echo ad-libs, introspective night workout energy, hard rap verses with melodic hook, Korean-English code-switch hook
 
 === EXCLUDE ===
 dry shouted vocals, raw screamed vocals, blown-out mix, punk vocal, growl, mumble rap, k-pop ballad, acoustic ballad, soft pop chorus, amapiano, jersey club, EDM drop, beat switch, drum fill
 
 === LYRICS ===
 [Rap Song]
-(Korean-English tuned sing-rap. Melodic autotuned male vocal, smooth legato, no dry shouting. 2-bar, 4-bar, and 8-bar rhyme control. Theme: 낮엔 조용하지만 밤엔 night rider gang mode로 바뀌는 세련된 after-dark character. No explicit violence, drugs, hate, self-harm, or sexual content.)
+(Korean-English tuned sing-rap. Melodic autotuned male vocal, smooth legato, no dry shouting. 2-bar, 4-bar, and 8-bar rhyme control. Theme: 낮엔 조용하지만 밤엔 night rider ride on 바뀌는 세련된 after-dark character. No explicit violence, drugs, hate, self-harm, or sexual content.)
 
 [Intro]
 Yeah
 night rider
-gang mode
+ride on
 switch on
 
 [Verse 1]
@@ -102,7 +102,7 @@ night rider, street glider
 [Outro]
 night rider
 switch on
-밤 되면 gang mode
+밤 되면 ride on
 we ride out
 
 === RHYME MAP ===
@@ -116,6 +116,6 @@ we ride out
 - Verse 2 bars 13-16: 선명해 / 반응해 / 분명해 / 분명해
 
 === META ===
-RUBRIC v1.3 목표 매칭: B Rage Tuned Singing (warmup BPM exception, Track 01 S5 대응)
-작업 목적: 13곡 Track Map의 워밍업 진입 슬롯. 가사 컨셉은 workout 직접 묘사 대신 after-dark night rider gang mode.
+RUBRIC v1.3 목표 매칭: B Rage Tuned Singing (warmup BPM upper bound, Track 01 S5 대응)
+작업 목적: 20곡 Track Map의 워밍업 진입 슬롯. 가사 컨셉은 workout 직접 묘사 대신 after-dark night rider ride on.
 Suno 생성: 2-3회 생성 후 최선 1개 선택

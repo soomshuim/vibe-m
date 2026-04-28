@@ -1,8 +1,20 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-28 (15차 업데이트 — 20-00 컨셉 정합성 정비: 5곡 컨셉 교체 + 3곡 retheme + concept.md v0.5)
+> Last updated: 2026-04-28 (16차 업데이트 — 20-00 1-12 트랙 제목·가사·스타일 정합화 + Black Mirror femme fatale 보정)
 
 ## 진행 중
+
+- **20-00 PASS/DRAFT 1-12 제목·가사·스타일 정합화 + Black Mirror femme fatale 보정** (2026-04-28 16차)
+  - ✅ **사용자 제공 fixed 제목·스타일·가사 반영**: Night Rider, LLC, Bottom to the Top, Paycheck, Fake, Overtime Flame, Boomerang, Yang Gang, Cold Stack, Rewrite 중심으로 txt 본문/STYLE/LYRICS/META 정합화
+  - ✅ **09 rename**: `Block Signal` → **Bottom Line**. 파일명 `09_Bottom Line.txt`, Track Map, concept.md, Side Street 참조까지 동기화
+  - ✅ **12 Black Mirror 보정**: 기존 힙합 주제 보정 후 사용자 피드백 반영. `Black Mirror`는 영어 훅 키워드로 유지하고, 검은 화면 출근 같은 어색한 은유 제거. femme fatale club clock-in / red-light / seductive female dark trap 콘셉트로 재작성
+  - ✅ **라임 방향 보정**: 영어 라임 과다를 줄이고 `비춰/낮춰/맞춰/갇혀/끌려` 계열 한글 라임으로 hook rhyme 정리. 식상한 `낮동안 삼킨 말들`류 표현 제거
+  - ✅ **STYLE 동기화**: Black Mirror는 더 sexy/sultry한 female Korean dark trap 스타일로 조정. 단, 노골적 성적 묘사는 금지하고 차갑고 유혹적인 attitude로 제한
+  - ✅ **이미지 포함**: 사용자 첨부 loop 이미지 `SERIES/20-00/input/new_loop.png`를 이번 푸시에 포함
+  - ✅ **검증 PASS**:
+    - `check_lyric_avoid.sh SERIES/20-00/input/tracks` PASS 20/20
+    - `check_series_gate.sh SERIES/20-00/` PASS 7/7
+  - **남은 TODO**: (1) Suno V5.5에서 draft 12곡 생성/검수. (2) PASS 곡만 `Status` 확정. (3) 20곡 PASS 후 강-약-중-강-약 최종 셔플. (4) 오디오 리네임 + YouTube Metadata + 패키징.
 
 - **20-00 가사 = hip-hop 본연 정책 강화 + 5곡 교체 + 3곡 retheme** (2026-04-28 15차)
   - ✅ **사용자 피드백 반영**: "운동 컨셉보다 힙합 본연 주제로 조정. 안어울리는 트랙은 교체"

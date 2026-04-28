@@ -7,17 +7,21 @@ Vocal: Male
 Status: DRAFT - Suno test pending
 
 === STYLE ===
-Korean club rage trap, 152 BPM, fully instrumental intro led only by 808 bass, no vocal in intro, no ad-lib in intro, no bell melody in intro, bell melody enters after the intro, steady 2-bar trap drum loop, softened but tight 808 bass with controlled saturation, crisp 1/16 hi-hats locked to the grid, dark detuned synth pads, subtle bell stab after intro only, sweaty after-hours club floor energy, controlled shouted male Korean rap, dry close chest voice without over-screaming, short staccato bars, ad-lib pockets between 8-bar verse halves, polished but punchy mix, less raw but still hard, club heat theme, shouted refrain not sung, no beat switch no final lift
+Korean trap, 152 BPM, steady 2-bar drum loop, softened but tight 808 bass with controlled saturation, crisp but relaxed 1/16 hi-hats, mellow detuned synth pads replacing aggressive supersaw stabs, subtle dark bell melody, controlled shouted male Korean rap, dry voice without over-screaming, chest voice, same drum loop, close but gently compressed vocal, minimal ad-libs used as sharp echoes, restrained yet focused rage energy, less raw but still punchy, introspective hard rap feel, no beat switch no final lift
 
 === EXCLUDE ===
-autotune, pitch correction, melodic hooks, clean polished vocals, falsetto, formant shift, sung hook, k-pop, ballad, slow tempo, acoustic, chill, soft pop chorus, EDM drop, house drop, jersey club, amapiano, beat switch, drum fill, vocal in intro, ad-lib in intro, hook in intro, bell melody in intro, rapid-fire nonstop rap, continuous 16-bar vocal take, breathless rap, dense run-on vocals
+autotune, pitch correction, melodic hooks, clean polished vocals, falsetto, formant shift, sung hook, k-pop, ballad, slow tempo, acoustic, chill, soft pop chorus, EDM drop, beat switch, drum fill
 
 === LYRICS ===
 [Rap Song]
-(Controlled shouted male Korean rap, dry chest voice, same 2-bar drum loop. A Rage Dry variation from Paycheck, but club heat concept. Target actual runtime 3:30-4:00. Use all four 16-bar verses plus repeated refrains and bridge pocket; do not shorten to two verses. Tight cadence: short bars, clean pockets, no long prose lines. Every verse is split into Verse A, Ad-lib Pocket, Verse B. The Ad-lib Pocket is a quick rapper aside, not a hook. Korean rhyme every 2 bars, one rhyme family every 4 bars, 8-bar resolve. English rhyme support: flame / game / name / same, heat / beat / street / repeat. Theme: after-hours club floor, neon, bass pressure, crowd heat, overtime flame. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+(Controlled shouted male Korean rap, dry chest voice, same 2-bar drum loop. A Rage Dry variation from Paycheck, but club heat concept. Target actual runtime 3:30-4:00. Use all four 16-bar verses plus repeated refrains and bridge chant; do not shorten to two verses. Tight cadence: short bars, clean pockets, no long prose lines. Every verse is split into Verse A, one-bar no-vocal break, Verse B. Korean rhyme every 2 bars, one rhyme family every 4 bars, 8-bar resolve. English rhyme support: flame / game / name / same, heat / beat / street / repeat. Theme: after-hours club floor, neon, bass pressure, crowd heat, overtime flame. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
 
 [Intro]
-(8 bars instrumental. 808 bass lead only. Fully instrumental. No vocal. No ad-lib. No hook. No bell melody. Bell melody starts after the intro.)
+(Instrumental, same 2-bar drum loop, low crowd air)
+Overtime flame
+after hour, keep it lit
+club heat, no quit
+yeah
 
 [Verse 1A]
 (Controlled shouted rap, dry close voice)
@@ -31,8 +35,8 @@ overtime flame, floor 위로 번지
 cheap talk pass, 우리끼린 믿지
 lift 없이도 808로 밀지
 
-[Ad-lib Pocket]
-huh
+[Break 1 - No Vocal]
+(1 full bar. Drums and 808 only. No vocal. No rap. No ad-lib.)
 
 [Verse 1B]
 (Continue controlled shouted rap)
@@ -69,8 +73,8 @@ fake loud talk, 문밖으로 넘겨
 crew는 조용, 태도만 더 선명
 불 꺼진 길에도 잔상은 선명
 
-[Ad-lib Pocket]
-yeah
+[Break 2 - No Vocal]
+(1 full bar. Drums and 808 only. No vocal. No rap. No ad-lib.)
 
 [Verse 2B]
 (Continue controlled shouted rap)
@@ -95,15 +99,15 @@ Overtime flame, same old game
 bass on chest, locked in frame
 after hour, we stay the same
 
-[Bridge Pocket]
-(Solo dry rapper pocket, low voice)
-열기는 낮게 깔려
-floor 위로 천천히 말려
-발끝은 박자에 걸려
-808 밑으로 밀려
+[Bridge Chant]
+(Dry group chant, not sung)
+열기, 열기, floor 안에 열기
+걸지, 걸지, 발끝으로 걸지
+번지, 번지, low light에 번지
+밀지, 밀지, 808로 밀지
 
-heat on beat, street repeat
-flame in frame, same old name
+heat, beat, street, repeat
+flame, game, name, same
 밤은 짧고, bass는 깊이
 after hour, keep it lit
 
@@ -119,8 +123,8 @@ VIP 말고 floor 중앙 자리
 허세는 fade, 진짜만이 남지
 club heat 안에 태도만이 남지
 
-[Ad-lib Pocket]
-uh
+[Break 3 - No Vocal]
+(1 full bar. Drums and 808 only. No vocal. No rap. No ad-lib.)
 
 [Verse 3B]
 (Continue controlled shouted rap)
@@ -157,8 +161,8 @@ overtime flame, 끝까지 번지
 누가 묻는다면 대답은 뒤로
 내 밤은 말보다 더 빠른 기호
 
-[Ad-lib Pocket]
-huh
+[Break 4 - No Vocal]
+(1 full bar. Drums and 808 only. No vocal. No rap. No ad-lib.)
 
 [Verse 4B]
 (Continue controlled shouted rap)
@@ -196,10 +200,9 @@ keep it lit
 
 === META ===
 RUBRIC v1.3 목표 매칭: A Rage Dry Voice (Paycheck 변주)
-작업 목적: Track 06 메인 웨이트 A축 보강. 사용자 요청에 따라 사무실 야근불에서 after-hours club heat 콘셉트로 개사.
-도입 룰: 도입부는 808 bass lead only. 보컬/애드립/훅/벨 멜로디 금지. bell melody는 도입부 이후 Verse 1부터 진입한다.
-운영 룰: A/B verse 구조를 유지하되 Break - No Vocal 대신 Ad-lib Pocket을 사용한다. 포켓은 구호 느낌이 아니라 짧은 rapper aside로 처리한다.
+작업 목적: Track 06 메인 웨이트 A축 보강. after-hours club heat / neon / bass pressure / crowd heat 콘셉트.
+운영 룰: A/B verse 구조 사이에 1 full bar No Vocal Break를 둔다. Bridge Chant는 dry group chant이며 sung hook이 아니다.
 라임 룰: 한국어는 2마디 단위 청감 라임, 4마디 단위 라임 패밀리, 8마디 단위 hook-like resolve. 영어 보조 라임은 flame/game/name/same, heat/beat/street/repeat.
-길이 룰: 3분 미만 방지를 위해 4개 Verse + Refrain 4회 + Bridge Pocket + Final Refrain 반복을 유지한다. 실제 출력 목표 3:30-4:00.
-톤 보정: 과도한 raw/screamed 질감은 낮추되 152 BPM·tight 808·1/16 hi-hat drive는 유지한다.
+길이 룰: 3분 미만 방지를 위해 4개 Verse + Refrain 4회 + Bridge Chant + Final Refrain 반복을 유지한다. 실제 출력 목표 3:30-4:00.
+톤 보정: 과도한 raw/screamed 질감은 낮추되 152 BPM·tight 808·relaxed 1/16 hi-hat drive는 유지한다.
 Suno 생성: 2-3회 생성 후 최선 1개 선택

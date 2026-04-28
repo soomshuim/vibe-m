@@ -6,29 +6,104 @@ Length: 3:45
 Vocal: Male
 
 === STYLE ===
-confident flow, dark trap, rap, sarcastic attitude, hip-hop, 145 BPM, punchy 808, minimal, heavy bass, controlled edge, less raw but still hard and rhythmic, theme, fake, tone
+dark trap remix, woozy atmosphere, heavy sub 808s, detuned pads, sparse pluck motifs, slurred laid-back mumble rap delivery, hazy reverb, swung hi-hats, hypnotic repetitive ad-libs, confident yet nonchalant attitude
 
 === LYRICS ===
+〈부메랑〉
+
 [Intro]
 Boomerang, boomerang,
 네가 뱉은 말끝, 결국 전부 네 자리로 되돌아와 bang.
-쌓아 둔 비난과 얕은 웃음, 그대로 네 얼굴에 남아—
+쌓아 둔 비난과 얕은 웃음, 그대로 네 얼굴에 남아-
 네 입에서 나온 날선 말들, 부메랑처럼 튕겨, hater, you're a clown.
 
-[Verse 1] (12행)
-(운영: 8행 뒤 짧은 breath/ad-lib pocket)
-[Hook] (8행)
-[Verse 2] (12행)
-(운영: 8행 뒤 짧은 breath/ad-lib pocket)
-[Hook] (8행)
-[Bridge] (6행)
-[Outro] (5행)
+---
 
-(생략 — 가사 전문은 별도 보관)
+[Verse 1]
+뒤에서 떠들 땐 세상 다 아는 척, big flex
+앞에 서면 시선도 못 마주쳐, 현실은 weak vibe
+니가 던진 독한 말의 무게, 그게 니 마지막 trap
+부메랑처럼 넌 던진 순간 끝-되돌아와서 네 맘을 쳐, step back.
+
+사과 흉내? 우습지, 또 뒤에선 더 흐릿하게
+그 비뚤어진 혀로 남을 깎아도 결국 너만 초라해, cheap act
+"난 그런 뜻 아니었어"-그 말만 반복하면 laugh track
+기록만 봐도 네 가면 다 벗겨져, crash hit.
+
+허세로 세운 power trip? 네 판은 paper thin, not lit
+조금만 스쳐도 흔들려, 바람 한 번에 바로 split
+네가 던진 돌멩이, 네 이마에 직격-그게 니 skill set
+흐물흐물한 존재감, zero threat.
+
+---
+
+[Hook]
+부메랑, 부메랑,
+니 비난 한마디마다 또 니 쪽으로 돌아와 fall back.
+부메랑, 부메랑,
+네가 흩뿌린 헛소리, 결국 네 목에 걸려, payback.
+
+부메랑, 부메랑,
+네 서툰 말투도 이제 끝났어-no more.
+부메랑, 부메랑,
+마지막에 무너지는 건 너야, remember the downfall.
+
+---
+
+[Verse 2]
+"난 그런 의도 아니었어"-
+그 변명 자체가 더 보기 싫어, rotten frame
+니 이름만 들어도 늘어지는 핑계 drip,
+진짜 싸구려 냄새, bad taste.
+
+뒤에선 깎아내리고 앞에선 웃는 full set
+가해자는 너인데 피해자 코스프레, empty concept
+거짓 반반, 얄팍 반반, 니 정신은 discount set
+던진 말이 돌아오지? 그래서 trust는 zero percent.
+
+손가락질? yeah, 니 입에서 튄 boomerang effect
+내 자리는 안 흔들려, 난 fuckin' solid, flawless object
+근데 넌 왜 네가 먼저 맞아?-simple project
+네가 던진 혐오가 네 뒤통수 때리는 구조, direct.
+
+---
+
+[Hook]
+부메랑, 부메랑,
+불붙은 시선들이 널 태워, inferno.
+부메랑, 부메랑,
+네 평판 먼저 타들어가, internal.
+
+부메랑, 부메랑,
+하나둘 돌아오면 결국 남는 건 solo.
+부메랑, 부메랑,
+네가 던진 걸로 제일 먼저 무너지는 건 always you, bro.
+
+---
+
+[Bridge]
+남을 겨누던 네 말들이
+결국 네 가슴에 박혀-
+돌아온 부메랑, cheap fragment.
+네 입에서 튄 독기들이
+다시 네 얼굴에 꽂혀, boomerang magnet.
+부메랑처럼, 패턴 그대로-tragic.
+
+---
+
+[Outro]
+Boomerang, boomerang-
+내가 민 적 없다, 니가 니 손으로 throw that stone.
+난 그냥 witness mode,
+네 인생 흔들리는 소리 echo tone.
+
+Boomerang... fall.
+너 혼자 fall.
+이번엔 all.
 
 === META ===
 RUBRIC v1.3 매칭: C Hardcore Trap (sarcastic 디스 컨셉)
 PASS 일자: 2026-04-26
 사용자 평가: 부메랑 정성적으로 괜찮았어. 통과.
 v0.3 변경: [Bridge] 메타태그 인정
-운영 룰: PASS 트랙 유지. 부메랑 hook과 sarcastic 톤은 유지하되 raw 질감은 낮추고 145 BPM·punchy 808은 유지.
+운영 룰: PASS 트랙 유지. Dark trap remix, woozy atmosphere, heavy sub 808s, slurred laid-back mumble rap delivery, hypnotic repetitive ad-libs 기준.

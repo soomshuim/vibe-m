@@ -1,4 +1,14 @@
 ---
+HANDOFF: Codex -> User
+Date: 2026-04-28 22:57:31
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: 20-00 1-12 주요 트랙 txt를 사용자 확정 제목/가사/스타일 기준으로 정합화. 09 Block Signal→Bottom Line rename, 12 Black Mirror를 femme fatale club clock-in으로 재작성/스타일 보정. concept.md와 관련 meta 동기화. 사용자 첨부 loop 이미지 `SERIES/20-00/input/new_loop.png`도 이번 푸시에 포함. 검증 PASS 20/20 + gate 7/7.
+Next-TODO: Suno V5.5에서 draft 12곡 생성/검수, PASS 곡 Status 확정, 20곡 PASS 후 강-약-중-강-약 최종 셔플, 오디오 리네임/YouTube metadata/패키징.
+Commits: (이번 커밋)
+---
+
+---
 HANDOFF: Claude -> User (20-00 컨셉 정합성 정비 — 5곡 교체 + 3곡 retheme + concept.md v0.5 + Codex review 수용)
 Date: 2026-04-28
 Project: ~/Project/wavvy
