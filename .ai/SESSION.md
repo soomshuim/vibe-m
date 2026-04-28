@@ -1,8 +1,50 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-28 (13차 업데이트 — 20-00 Track 06 클럽 열기 개사 + Ad-lib Pocket 구조)
+> Last updated: 2026-04-28 (15차 업데이트 — 20-00 컨셉 정합성 정비: 5곡 컨셉 교체 + 3곡 retheme + concept.md v0.5)
 
 ## 진행 중
+
+- **20-00 가사 = hip-hop 본연 정책 강화 + 5곡 교체 + 3곡 retheme** (2026-04-28 15차)
+  - ✅ **사용자 피드백 반영**: "운동 컨셉보다 힙합 본연 주제로 조정. 안어울리는 트랙은 교체"
+  - ✅ **Codex peer review FAIL → 모든 finding 수용 후 정비**
+  - ✅ **5곡 컨셉 교체** (Style Prompt 그대로, lyrics 전체 새로):
+    - 12 Black Interval (HIIT cardio) → **Black Mirror** (vanity vs 진짜, 검은 거울 응시)
+    - 13 Dust Timer (locker post-workout) → **Old Cassette** (90s K-rap 회상 lyricism)
+    - 16 Iron Set (마지막 set) → **Real Talk** (씬 비판 직설 디스)
+    - 17 Tunnel Run (HIIT 터널) → **Late Lane** (새벽 도시 lane drive 자존)
+    - 20 Last Echo (locker walk back) → **Old Page** (무대/cypher ritual lyricism, 13과 차별화)
+  - ✅ **3곡 retheme** (제목·Style Prompt 유지, lyrics 운동 어휘 제거):
+    - 14 Engine — 헬스장/덤벨/플레이트/세트/rep/근육 제거 → 8시 도시 시동 / 야간 그라인드. 심장박동=808 메타포 유지
+    - 15 Concrete — 운동가방/단백질 셰이크/dumbbell/grip은 tax 제거 → 노동자 그라인드 (자수성가 = 힙합 코어) 강화
+    - 19 Slow Glow — stretching mat/warmup/플레이트/round 제거 → 새벽 도시 introspective glow
+  - ✅ **어색한 라인 정리**: 12 진짜 다리→진짜 자리 / 16 다 끝리→다 잠겨 / 15는 verse 3 전체 재작성으로 자연 해결
+  - ✅ **20 Old Page Verse 3+ 재작성** — 13 Old Cassette(female 90s nostalgia writer at desk)와 차별화, male battle/cypher ritual angle (mic check / 무대 직전·후 / 한 줄에 다 거는 ritual / 동료 cypher) 적용
+  - ✅ **concept.md v0.5 작성** — 라벨 정책(사운드 포지셔닝) 명문화, 최종 20곡 테마 표(hip-hop core), 4막 라벨 dual-read(사운드+narrative arc), Hard 70% 분배 검증 갱신, v0.5 정정 사항 5건 정리
+  - ✅ **검증 PASS**:
+    - `check_lyric_avoid.sh SERIES/20-00/input/tracks` PASS 20/20
+    - `check_series_gate.sh SERIES/20-00/` PASS 7/7 (S1-S7)
+  - **남은 TODO**: (1) 시리즈 라벨 최종 결정 — 현재 `💪 AFTER HOURS WORKOUT` 유지 권장 (Codex 의견). (2) 12곡 draft Suno V5.5 생성/검수. (3) PASS 곡만 `Status` 확정. (4) 20곡 PASS 후 강-약-중-강-약 최종 순서 셔플. (5) 오디오 리네임 + YouTube Metadata v0.5 + 패키징.
+
+- **20-00 추가 7곡 draft 작성 + 20곡 게이트 PASS** (2026-04-28 14차)
+  - ✅ **추가 7곡 draft txt 일괄 작성** (`SERIES/20-00/input/tracks/14-20_*.txt`)
+    - 14 Engine (엔진) — B Male 150 BPM, LLC와 다른 male hip-hop edge tuned trap
+    - 15 Concrete (콘크리트) — C Male 145 BPM, C4 husky/distorted/muddy 톤(미사용 분기) 콘크리트 그라인드
+    - 16 Iron Set (아이언 셋) — A Male 154 BPM, Paycheck 변주, 마지막 set 기록 갱신 narrative
+    - 17 Tunnel Run (터널 런) — F Male 175 BPM, Cold Stack 변주, HIIT 터널 시야 카운트다운
+    - 18 Side Street (사이드 스트릿) — D Female 144 BPM, Rewrite 변주, 메인 도로 옆길 K-drill female
+    - 19 Slow Glow (슬로우 글로우) — B Female 108 BPM, introspective 워밍업, 헤드폰 끼고 시동
+    - 20 Last Echo (라스트 에코) — E Male 94 BPM, Dust Timer 남성 카운터파트, 운동 후 거울/라커룸/walk back home
+  - ✅ **20곡 시리즈 게이트 7/7 PASS** (`./MASTER/scripts/check_series_gate.sh SERIES/20-00/`)
+    - S1 곡수 분포 + Hard 60%+: PASS (A:3 B:4 C:5 D:3 E:2 F:3 = 20곡 / Hard 14 = 70%)
+    - S2 BPM 분포: PASS (워밍업 2 / 메인 10 / HIIT 6 / 쿨다운 2)
+    - S3 A·B 인접 회피: PASS
+    - S4 시리즈 길이: PASS (73분 55초)
+    - S5 Track 01 워밍업 B축: PASS (Night Rider B 112 BPM)
+    - S6 마지막 멜로딕 마무리: PASS (Track 20 E 94 / 19 B 108 / 18 D 144)
+    - S7 보컬 성별 분포: PASS (Male 14 / Female 6)
+  - ✅ **20곡 가사 회피 PASS** (`./MASTER/scripts/check_lyric_avoid.sh SERIES/20-00/input/tracks` 20/20)
+  - ✅ **draft 작성 패턴**: LLC/Night Rider/Overtime Flame full-lyrics 패턴 채택. 모든 트랙 8마디 호흡 포켓 + 3:20 이상 길이 룰 + Verse 3 + Final Chorus 포함
+  - **남은 TODO**: (1) **Suno V5.5에서 12곡 draft 생성/검수** (02/06/09/12/13/14/15/16/17/18/19/20). (2) PASS 곡만 `Status` 확정. (3) 20곡 PASS 후 강-약-중-강-약 최종 순서 재배치. (4) 오디오 파일 리네임 (`NN__제목__영문__장르__BPM.wav`). (5) YouTube Metadata v0.4 확정 + 썸네일/loop.png + 패키징.
 
 - **20-00 Track 06 `Overtime Flame` 클럽 열기 개사 + 호흡 포켓 실험** (2026-04-28 13차)
   - ✅ 사용자 요청 반영: `Overtime Flame`을 사무실 야근불 콘셉트에서 **after-hours club heat / neon / bass / floor 열기** 콘셉트로 개사

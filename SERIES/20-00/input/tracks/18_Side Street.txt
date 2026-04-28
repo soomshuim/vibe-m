@@ -1,0 +1,162 @@
+Track: Side Street (사이드 스트릿)
+Order: 18
+Type: D
+BPM: 144
+Key: F Minor
+Length: 3:40
+Vocal: Female
+Status: DRAFT - Suno test pending
+
+=== STYLE ===
+NY drill, Brooklyn drill hybrid, 144 BPM, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop F minor, menacing but controlled atmosphere, deadpan female Korean drill rap with crisp articulation and 된소리/거센소리 accents, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, less raw but still tense, side-street late-night pace mood
+
+=== EXCLUDE ===
+amapiano, jersey club, trap 808 sustain, k-pop, sung hook, beat switch, EDM drop, melodic singing, autotune ballad, slow tempo, vocal chop, vocal stutter, pitch-shifted vocals, riser, glitch drums, halftime switch, breakbeat
+
+=== LYRICS ===
+[Rap Song]
+(Female Korean drill rap with deadpan crisp consonants. D-axis variation from Rewrite baseline. Target actual runtime 3:30-3:50. Use four 16-bar drill verses plus four refrains; do not shorten to two verses. Drill verses must breathe every 8 bars: 8-bar run, short crew ad-lib or snare pocket, then next 8-bar run. Theme: side street, 메인 도로 옆길로 빠지는 늦은 밤 페이스, 동네 발자국, 차가운 거리, 조용한 자신감 — preserve K-Drill mood. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+
+[Intro]
+(Instrumental, dark piano loop F minor and sliding 808)
+
+[Verse 1]
+(16 bars total, split 8 + crew ad-lib/snare pocket + 8. Korean-dominant. Deadpan, hard consonants, 된소리 악센트, no sung melody.)
+메인 도로 pass, 옆길로 step
+신호등 뒤로, low key 페이스
+짧은 골목 끝, 조용한 stage
+발 끝부터 박히는 cadence
+
+기름때 묻은 가게 간판 아래
+숨소리 줄이고 시선은 위로
+검은 fit, 신발끈 더 단단히
+차가운 공기 입김 위에 띄워
+
+(crew ad-lib pocket: side street, gang)
+
+낮의 소음 다 뒤로 cut
+혼자 걷는 길, 표정은 dust
+지하철 막차 지나간 자리
+나만 남아 새벽까지 walk
+
+번호 없는 출구로 빠져
+같은 동네, 다른 각도로
+도시 옆길에 박힌 발자국
+누구도 못 따라오는 step
+
+[Refrain]
+(4 bars chant phrase, deadpan not sung)
+사이드 스트릿, side street
+메인 뒤로 흐르는 beat
+발자국만 남기는 fit
+조용한 line, 다음 street
+
+[Verse 2]
+(16 bars total, split 8 + crew ad-lib/snare pocket + 8. More pressure, side-street imagery, 된소리 진해짐, no direct violent imagery.)
+한 블록 건너 두 블록 sign
+편의점 불빛 아래 line
+야간 cab 흘러가는 옆으로
+나는 더 깊은 골목 사이드
+
+뒷골목 차가운 공기 위에
+신발 위에 묻은 dust 그대로
+내가 걷는 길, 표정 cold
+허세 없이도 발끝은 sold
+
+(crew ad-lib pocket: gang on, side step)
+
+전봇대 그림자 위에 step
+가로등 깜빡이는 옆 lane
+조용한 vibe, 더 깊은 weight
+누가 봐도 멈추지 않는 pace
+
+상가 간판 뒤로 그림자
+네온 흐려진 거리 사잇길
+혼자라도 흔들리지 않아
+발자국이 더 또렷해져 가
+
+[Refrain]
+사이드 스트릿, side street
+메인 뒤로 흐르는 beat
+발자국만 남기는 fit
+조용한 line, 다음 street
+
+[Verse 3]
+(16 bars total, split 8 + crew ad-lib/snare pocket + 8. Scene critique, self-positioning, 된소리 강세.)
+누가 묻든 답은 짧아
+fake 톤은 다 빠져 떨어져
+같은 길 걸어도 자세 달라
+내 발자국엔 흔적 남아
+
+cheap talk fade, 시선은 cold
+네온 빛 아래 표정 hold
+옆길에서도 자리는 own
+조용한 face, 큰 zone
+
+(crew ad-lib pocket: side street, gang)
+
+겉만 번지르르 다 fake out
+조용한 진짜만이 stand out
+밤거리 위에 새겨, no doubt
+사이드 스트릿, 우리 route
+
+도시는 차가워도 발은 hot
+남들 보는 곳 뒤로 spot
+조용히 깊은 곳에 자리 박은 dot
+밤은 길어도 멈추지 않는 plot
+
+[Refrain]
+사이드 스트릿, side street
+메인 뒤로 흐르는 beat
+발자국만 남기는 fit
+조용한 line, 다음 street
+
+[Verse 4]
+(16 bars total, split 8 + crew ad-lib/snare pocket + 8. Final drill verse, sharper flow, side-street imagery, no explicit violence.)
+새벽 지하 입구 sign
+계단 끝까지 걷는 line
+loud talk fade, 시선은 forward
+조용한 zone에 박힌 sword
+
+뒷주머니 안 손은 차가워
+숨은 짧게 표정은 무거워
+혼자 걷는 길, vibe는 가벼워
+같은 골목 위 다른 색깔로 나아가
+
+(crew ad-lib pocket: locked, side street)
+
+검은 옷 위로 입김이 fade
+조용한 발끝, 다음 stage
+도시 옆길에 박힌 cadence
+누구도 못 따라오는 pace
+
+마지막 골목 끝, 빛은 멀어
+발자국 자리, 그대로 새겨
+사이드 스트릿, 내 line은 살아
+다음 블록까지 step은 가
+
+[Final Refrain]
+사이드 스트릿, side street
+메인 뒤로 흐르는 beat
+발자국만 남기는 fit
+조용한 line, 다음 street
+
+사이드 스트릿, side street
+메인 뒤로 흐르는 beat
+발자국만 남기는 fit
+조용한 line, 다음 street
+
+[Outro]
+(Instrumental, same drill loop)
+side street
+gang on
+locked in
+
+=== META ===
+RUBRIC v1.4 목표 매칭: D K-Drill 액센트 (Rewrite 변주 2, Female)
+작업 목적: Track 18 D축 3번째 보강. Rewrite(11 male)·Block Signal(09 female 차단 신호)과 다른 side-street late-night 페이스. 여성 drill 톤 두 곡째.
+운영 룰: 8마디마다 crew ad-lib/snare pocket. 16마디 무호흡 금지. 된소리/거센소리 악센트 강조.
+길이 룰: 3분 미만 방지를 위해 4 Verse + 4 Refrain 유지. 실제 출력 목표 3:30-3:50.
+라임 룰: 한국어 deadpan rhyme + 영어 line/sign/dust/cold/sold 보조.
+톤 보정: guttural/raw 과잉은 낮추되 144 BPM·sliding 808·tresillo hi-hat·F minor 다크 무드는 유지한다.
+Suno 생성: 2-3회 생성 후 최선 1개 선택

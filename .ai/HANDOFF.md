@@ -1,4 +1,35 @@
 ---
+HANDOFF: Claude -> User (20-00 컨셉 정합성 정비 — 5곡 교체 + 3곡 retheme + concept.md v0.5 + Codex review 수용)
+Date: 2026-04-28
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 사용자 피드백 "운동 컨셉보다 힙합 본연 주제로 조정. 안어울리는 트랙은 교체" 반영. Codex peer review가 FAIL 판정 (stale docs, 잔존 운동 어휘, 13/20 Verse 3 duplication, 어색한 라인) — 모든 finding 수용 후 일괄 정비. 5곡 컨셉 교체 (12 Black Interval→Black Mirror / 13 Dust Timer→Old Cassette / 16 Iron Set→Real Talk / 17 Tunnel Run→Late Lane / 20 Last Echo→Old Page), 3곡 retheme (14 Engine 도시 시동 / 15 Concrete 노동자 그라인드 / 19 Slow Glow 새벽 introspective). Style Prompt(BPM·사운드)는 모두 유지, lyrics만 hip-hop 본연 narrative로 새로. 13 Old Cassette(female 90s nostalgia writer at desk)와 20 Old Page(male battle/cypher ritual at mic) 차별화. concept.md v0.5 작성 (라벨 정책 명문화, 최종 20곡 테마 표, v0.5 정정 사항 5건).
+Concept-Policy: 시리즈 라벨 `💪 AFTER HOURS WORKOUT`은 사운드 포지셔닝(workout BGM 검색 노출). 가사는 hip-hop 본연 주제 (밤·도시·디스·자수성가·crew·내면·라이리시즘). 직접 운동 어휘는 모든 트랙에서 사용 금지. concept.md v0.4 "사운드 우선" 정책의 강화 버전.
+Track-Diversity: C축 5곡 톤 분기(C1 lazy 03 / C2 sarcastic 05·07 / C3 chant 08 / C4 husky 15) / F축 3곡 narrative 차별(10 stack money / 12 vanity / 17 lane drive) / E축 2곡 male/female 카운터파트 명확 차별(13 nostalgia at desk / 20 cypher at mic).
+Codex-Review: `.ai/peer-review/runs/20260428-145415-codex-review-98088.md` FAIL. High(stale docs)+Medium(workout vocab 잔존)+Medium(13/20 duplication)+Low(어색 라인)+Low(라벨) 모두 수용 후 정비 완료.
+
+---
+
+HANDOFF: Claude -> User (20-00 추가 7곡(14-20) draft 일괄 작성 + 20곡 게이트 7/7 PASS)
+Date: 2026-04-28
+Project: ~/Project/wavvy
+Agent: Claude (Opus 4.7 1M)
+Summary: 20-00 `AFTER HOURS WORKOUT` 이어작업. 추가 7곡(14-20) draft txt를 LLC/Night Rider/Overtime Flame full-lyrics 패턴으로 일괄 작성. 7곡 모두 8마디 호흡 포켓 + 3:20 이상 길이 룰 + Verse 3 + Final Chorus 포함. 컨셉은 14 Engine(B male tuned trap, 8시 운동 시동), 15 Concrete(C male husky/distorted/muddy 미사용 톤), 16 Iron Set(A male Paycheck 변주 마지막 set), 17 Tunnel Run(F male Cold Stack 변주 HIIT 터널), 18 Side Street(D female Rewrite 변주 옆길 K-drill), 19 Slow Glow(B female 워밍업 introspective), 20 Last Echo(E male Dust Timer 카운터파트 운동 후 거울/walk back). 20곡 시리즈 게이트 7/7 PASS, 가사 회피 20/20 PASS.
+Verification: `./MASTER/scripts/check_lyric_avoid.sh SERIES/20-00/input/tracks` PASS 20/20. `./MASTER/scripts/check_series_gate.sh SERIES/20-00/` PASS 7/7 (S1 A:3 B:4 C:5 D:3 E:2 F:3 = 20곡 / Hard 14 = 70% / S2 워밍업 2·메인 10·HIIT 6·쿨다운 2 / S3 A·B 인접 회피 / S4 73분 55초 / S5 Track 01 B축 BPM 112 / S6 Track 20 E 94·19 B 108·18 D 144 / S7 Male 14·Female 6).
+Next-TODO:
+  (1) **Suno V5.5에서 12곡 draft 생성/검수** (02/06/09/12/13 + 14/15/16/17/18/19/20). 곡당 2-3회 생성 후 최선 1개 선택. 8마디 호흡 룰 + 3:20 이상 길이 룰 유지
+  (2) PASS 곡만 `Status: PASS`로 메타 업데이트
+  (3) **20곡 Track Map 셔플** — 전곡 PASS 후 강-약-중-강-약 흐름으로 최종 순서 재배치 (현재 14-20 번호는 임시)
+  (4) 오디오 파일 리네임 (`NN__제목__영문__장르__BPM.wav`)
+  (5) YouTube Metadata v0.4 확정 + 썸네일/loop.png + 패키징
+Key-Files:
+  - 신규 7곡 draft: `SERIES/20-00/input/tracks/14_Engine.txt`, `15_Concrete.txt`, `16_Iron Set.txt`, `17_Tunnel Run.txt`, `18_Side Street.txt`, `19_Slow Glow.txt`, `20_Last Echo.txt`
+  - Track Map: `SERIES/20-00/concept.md` v0.4
+  - 검증 스크립트: `MASTER/scripts/check_series_gate.sh` v1.4, `check_lyric_avoid.sh`
+Commits: (미커밋)
+---
+
+---
 HANDOFF: Codex -> User (20-00 Track 06 클럽 열기 개사 + Ad-lib Pocket 버전)
 Date: 2026-04-28 01:24:18
 Project: ~/Project/wavvy
@@ -385,4 +416,15 @@ Agent: Claude
 Summary: 22-00 YouTube 제목 변경 (태그 세분화) + 업로드 완료 반영
 Next-TODO: brand/logo_wavvy.psd 삭제 의도 확인
 Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Claude -> Codex (peer review)
+Date: 2026-04-28 14:57:35
+Project: /Users/zenkim_office/Project/wavvy
+Agent: Claude via peer-agent-review
+Summary: codex peer review completed. Verdict: FAIL. Focus: 20-00 시리즈 `💪 AFTER HOURS WORKOUT` (Korean Hard Hip-Hop · Workout · Night Grind) 추가 7곡(14-20) draft 작성 + 5곡 컨셉 교체 작업에 대한 peer review. ## 컨텍스트 - 시리즈 정체성: Korean Workout Hip-Hop 빈자리 채우기. 20곡 최종 (Hard 70%, A 3 / B 4 / C 5 / D 3 / E 2 / F 3, 남성 
+Next-TODO: Review result file and address FAIL/NEEDS_USER_DECISION items before completion.
+Review-Result: /Users/zenkim_office/Project/wavvy/.ai/peer-review/runs/20260428-145415-codex-review-98088.md
+Commits: pending
 ---

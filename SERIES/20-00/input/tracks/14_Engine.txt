@@ -1,0 +1,163 @@
+Track: Engine (엔진)
+Order: 14
+Type: B
+BPM: 150
+Key: F# Minor
+Length: 3:45
+Vocal: Male
+Status: DRAFT - Suno test pending
+
+=== STYLE ===
+Korean tuned singing rage trap, 150 BPM, melodic autotuned male vocal with hip-hop edge harder than melodic ballad, smooth legato sing-rap with sharper rap pockets, supersaw lead 8-voice detuned arpeggiated, distorted 808 portamento moving bass, 1/16 hi-hat with 32nd triplet roll snare on 3, dark detuned synth pads, subtle Korean folk sample chop atmospheric texture, warm cathedral reverb large hall, candied melodic hook with high-density adlib stack, polished glossy KC vangdale-style mix, controlled forward energy, after-hours engine ignition mood, hard rap verses with melodic chorus, Korean-English code-switch hook, less raw but BPM-locked
+
+=== EXCLUDE ===
+dry shouted vocals, raw screamed vocals, blown-out mix, punk vocal, growl, mumble rap, k-pop ballad, acoustic ballad, soft pop chorus, amapiano, jersey club, EDM drop, beat switch, drum fill
+
+=== LYRICS ===
+[Rap Song]
+(Korean-English autotuned male sing-rap with sharper hip-hop rap edge. B-axis but harder than LLC, more rap less ballad. Target actual runtime 3:30-3:50. Use three 16-bar verses plus repeated hooks; do not shorten to two verses. 150 BPM groove must stay locked with driving 1/16 hi-hat, distorted 808 portamento, supersaw lead. Tight cadence: short bars, clean pockets, no long prose lines. Heavy Korean rhyme density: every 2 bars audible Korean rhyme, every 4 bars rhyme family, every 8 bars hook-like resolve. English rhymes support: engine / mission / friction / vision. Split every 16-bar verse into 8 bars + half-bar breath/ad-lib pocket + 8 bars. Theme: 저녁 8시 도시 시동, 퇴근 후 도시로 나가는 night ignition, 심장박동 = 808 메타포, 도시 위 그라인드 시작. NO workout vocabulary (no gym, no plate, no rep, no set, no protein, no mirror reflection of fit body). 도시·밤·차·hood·jacket·streetlight·crew 어휘 사용. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+
+[Intro]
+Yeah
+engine on
+eight pm
+ignite
+
+[Verse 1]
+시계가 여덟, 하루는 reset
+넥타이 풀고 hoodie zip up set
+폰은 silent, 머리는 quiet
+가방끈 메는 손은 더 단단히 tight
+
+엘리베이터 안, 표정은 calm
+지하 주차장 셔터 소리 drum
+첫 호흡 내쉬어, 시동은 hum
+밤은 길어, 출근은 done
+
+(half-bar breath, low ad-lib: engine)
+
+도시 입구 신호등 깜빡 list
+하루의 fatigue, 한 번에 fix
+gear 한 칸 더, 다음 lane mix
+작은 win 하나, 더 큰 grip
+
+차창 너머 fit, 야경은 cold
+손목 위 시계, 시선은 hold
+첫 turn 시작, 808 가 fold
+밤은 짧고 vibe만이 gold
+
+[Pre-Chorus]
+시동을 걸어, engine on
+바닥부터 내 base, on and on
+밤은 짧고 그라인드 long
+숨 한 번에 다음 turn goes wrong
+
+[Chorus]
+Engine on, eight pm
+심장 박동, same as 808
+Engine on, ignite the frame
+도시 위에 build my name
+
+Engine on, no need to flex
+한 블록씩 stack, 다음 step
+밤이 길어도 vibe는 next
+rhythm 위에 올라타 set
+
+[Verse 2]
+백미러 안 face, 어제와 다른 line
+헤드라이트 위, 호흡은 align
+도로 위 sign, 어깨는 fine
+한 lane 끝낼 때마다 climb
+
+고가도로 위 tick, 박자는 sync
+도시 야경 fit, 시선은 think
+물병 한 모금, 다음 drink
+또 한 lane, 누구도 안 blink
+
+(half-bar breath, soft ad-lib: keep it on)
+
+말 없는 ride, mile마다 print
+숫자는 줄여, 무게는 lift
+누가 쳐다봐도 mood는 swift
+어두운 도로 위 shadow가 shift
+
+작은 진동도 base에 새겨
+무거운 밤 안에서 자세 굳혀
+조용한 그라인드, 표정은 가려
+밤마다 같은 길, 이름을 새겨
+
+[Pre-Chorus]
+시동을 걸어, engine on
+바닥부터 내 base, on and on
+밤은 짧고 그라인드 long
+숨 한 번에 다음 turn goes wrong
+
+[Chorus]
+Engine on, eight pm
+심장 박동, same as 808
+Engine on, ignite the frame
+도시 위에 build my name
+
+Engine on, no need to flex
+한 블록씩 stack, 다음 step
+밤이 길어도 vibe는 next
+rhythm 위에 올라타 set
+
+[Verse 3]
+마지막 turn, 호흡은 더 깊어
+시야는 좁아져, 의지는 굳어
+백미러 안 sign, 표정은 무거워
+한 번 더 밀어, 끝까지 굴려
+
+(half-bar breath, clipped ad-lib: one more)
+
+시계가 열시, 도시는 깊어
+나만 남아 있는 footstep, 새겨
+주차장 안, 엔진 소리 차가워
+어제의 나를 두고, 새 frame을 걸쳐
+
+밤은 짧고 도시는 깊어
+헤드폰 다시 끼고 거리를 걸어
+오늘의 그라인드, 내일을 키워
+engine on 끝나도 vibe는 살려
+
+[Final Chorus]
+Engine on, eight pm
+심장 박동, same as 808
+Engine on, ignite the frame
+도시 위에 build my name
+
+Engine on, no need to flex
+한 블록씩 stack, 다음 step
+밤이 길어도 vibe는 next
+rhythm 위에 올라타 set
+
+[Outro]
+engine on
+eight pm
+keep it locked
+ignite
+
+=== RHYME MAP ===
+- Verse 1 bars 1-4: reset / set / quiet / tight
+- Verse 1 bars 5-8: calm / drum / hum / done
+- Verse 1 bars 9-12: list / fix / mix / grip
+- Verse 1 bars 13-16: cold / hold / fold / gold
+- Chorus bars 1-4: pm / 808 / frame / name
+- Chorus bars 5-8: flex / step / next / set
+- Verse 2 bars 1-4: line / align / fine / climb
+- Verse 2 bars 5-8: sync / think / drink / blink
+- Verse 2 bars 9-12: print / lift / swift / shift
+- Verse 2 bars 13-16: 새겨 / 굳혀 / 가려 / 새겨
+- Verse 3 bars 1-4: 깊어 / 굳어 / 무거워 / 굴려
+- Verse 3 bars 5-8: 깊어 / 새겨 / 차가워 / 걸쳐
+- Verse 3 bars 9-12: 깊어 / 걸어 / 키워 / 살려
+
+=== META ===
+RUBRIC v1.4 목표 매칭: B Rage Tuned Singing (LLC와 다른 male hip-hop edge)
+작업 목적: Track 14 메인 웨이트 진입 슬롯. LLC보다 BPM 유지 + 더 힙합스러운 male tuned trap. **2026-04-28 retheme**: 운동 어휘 제거 후 도시 시동 / 야간 그라인드 narrative로 reframe. 심장박동 = 808 메타포는 유지하되 헬스장/덤벨/세트/rep/근육 어휘 제거.
+운영 룰: 16마디를 한 번에 밀지 말고 8마디마다 숨표/짧은 애드립 포켓을 둔다. 멜로딕 chorus와 sharper rap verse 대비.
+길이 룰: 3분 미만 방지를 위해 Verse 3와 Final Chorus를 반드시 포함한다. 실제 출력 목표 3:30-3:50.
+라임 룰: 2마디마다 한글 라임을 들리게 하고, 영어 라임은 engine/mission/frame/name 계열로 보조한다.
+톤 보정: raw 질감은 낮추되 150 BPM groove, supersaw lead, distorted 808 portamento, 1/16 hi-hat drive는 유지한다.
+Suno 생성: 2-3회 생성 후 최선 1개 선택

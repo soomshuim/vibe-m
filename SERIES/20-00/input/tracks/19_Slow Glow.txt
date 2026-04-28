@@ -1,0 +1,163 @@
+Track: Slow Glow (슬로우 글로우)
+Order: 19
+Type: B
+BPM: 108
+Key: G Minor
+Length: 3:30
+Vocal: Female
+Status: DRAFT - Suno test pending
+
+=== STYLE ===
+Korean tuned singing rage trap introspective, 108 BPM, melodic autotuned female vocal, Don Toliver Hardstone Psycho-style light mix voice with smooth legato delivery, Sik-K introspective laid-back tone female counterpart, softened tight 808 with controlled saturation, half-time trap drums for slow cooldown pace, restrained 1/16 hi-hats, mellow detuned synth pads, warm cathedral reverb large hall, polished glossy KC vangdale-style mix, low-density adlib stack with soft echo treatment, restrained yet focused energy, late-night reflective glow mood, hard rap verses softened with melodic chorus, Korean-English code-switch hook, less raw and more atmospheric
+
+=== EXCLUDE ===
+dry shouted vocals, raw screamed vocals, blown-out mix, punk vocal, growl, mumble rap, k-pop ballad full sing, acoustic ballad, soft pop chorus, EDM drop, beat switch, drum fill, fast trap drums, double-time bursts, aggressive supersaw stab, harsh distorted 808
+
+=== LYRICS ===
+[Rap Song]
+(Korean-English autotuned female sing-rap, B-axis introspective laid-back. Target actual runtime 3:20-3:40. Use three 16-bar verses plus repeated hooks; do not shorten to two verses. 108 BPM half-time groove must stay locked with restrained 1/16 hi-hat, softened tight 808, mellow detuned synth pads. Loose cadence: medium bars, breathing pockets, warm legato over sharp staccato. Korean rhyme every 2 bars, rhyme family every 4 bars, 8-bar resolve. English rhymes support: glow / flow / slow / show, light / right / quiet / inside. Split every 16-bar verse into 8 bars + half-bar breath pocket + 8 bars. Theme: 새벽 도시 위 혼자 introspective, 헤드폰 안 차분한 vibe, 야경 위 첫 호흡, 하루 끝나고 자기 안으로 들어가는 reflective moment, melodic R&B-tinged hip-hop introspection. **NO workout vocabulary** (no warmup, no stretching, no mat, no plate, no set, no round, no rep, no gym). 새벽·헤드폰·야경·창가·도시 불빛·차분한 호흡·내면 어휘 사용. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+
+[Intro]
+Yeah
+slow glow
+late hours
+breathe in
+
+[Verse 1]
+헤드폰 위로 흐르는 첫 음
+어깨에 힘 빼고 천천히 hum
+창가 너머 face, 표정은 calm
+도시 야경 위 한 박
+
+긴 하루 끝, 발끝 닿아
+호흡 한 번 깊게 내려놓아
+조명은 낮게, 시선은 위로
+오늘은 천천히 가도록
+
+(half-bar breath, soft ad-lib: slow)
+
+이어폰 안에 흐르는 light
+어두운 방 위에 더 right
+slow glow track 위에 올라타
+첫 호흡, 마음은 천천히 돌아
+
+목 한 번 풀고, 어깨도 내려
+긴 하루 위에 첫 layer 새겨
+서두를 필요 없이 천천히
+slow glow 안으로 깊게 들어가
+
+[Pre-Chorus]
+조용한 빛이 번져
+방 안에 깔리는 글로우
+숨 한 번에 마음이 켜져
+아직 천천히, 다음 layer
+
+[Chorus]
+Slow glow, warm light
+조용히 깔리는 night
+Slow glow, breathe right
+첫 호흡, 마음을 light
+
+Slow glow, slow flow
+어두운 방 위 첫 show
+Slow glow, take it slow
+다음 hour 전에 한 번 더 glow
+
+[Verse 2]
+창문 한 번 열고, 어깨도 풀어
+도시 바람 한 번 들이켜
+새벽 페이스, 시동은 차분히
+호흡은 길게, 어둠은 가벼이
+
+거울 속 face, 표정은 따뜻
+밤은 길고 vibe는 따스
+서두름 없이 천천히 step
+늦은 hour 안에 한 번 더 hold
+
+(half-bar breath, light ad-lib: glow)
+
+머그 안 따뜻한 차 한 모금
+손목에 핏줄도 천천히 잡혀
+숨 한 번 들이켜, 다음 layer
+창가에서 야경 위로 흘러가
+
+차가운 floor 위 발자국 light
+어두운 방 위 작은 spot
+slow glow 안에서 마음이 켜져
+다음 hour 전에 한 번 더 glow
+
+[Pre-Chorus]
+조용한 빛이 번져
+방 안에 깔리는 글로우
+숨 한 번에 마음이 켜져
+아직 천천히, 다음 layer
+
+[Chorus]
+Slow glow, warm light
+조용히 깔리는 night
+Slow glow, breathe right
+첫 호흡, 마음을 light
+
+Slow glow, slow flow
+어두운 방 위 첫 show
+Slow glow, take it slow
+다음 hour 전에 한 번 더 glow
+
+[Verse 3]
+새벽 끝, 호흡은 정돈
+어깨는 내려, 표정은 차분
+창문 한 번 보고 다음 step
+slow glow 안에서 다음 frame
+
+이제는 조금 깊은 호흡으로
+다음 hour 전에 한 번 더 glow
+어두운 방 위에 첫 light
+다음 layer는 더 깊은 height
+
+(half-bar breath, soft ad-lib: keep glowing)
+
+도시 야경은 창 너머 still
+내 안의 vibe는 조용한 fill
+late hour 끝나도 vibe는 살아
+다음 layer로 천천히 가
+
+[Final Chorus]
+Slow glow, warm light
+조용히 깔리는 night
+Slow glow, breathe right
+첫 호흡, 마음을 light
+
+Slow glow, slow flow
+어두운 방 위 첫 show
+Slow glow, take it slow
+다음 hour 전에 한 번 더 glow
+
+[Outro]
+slow glow
+warm light
+breathe in
+late hours
+
+=== RHYME MAP ===
+- Verse 1 bars 1-4: 첫 음 / hum / calm / 한 박
+- Verse 1 bars 5-8: 닿아 / 놓아 / 위로 / 가도록
+- Verse 1 bars 9-12: light / right / 올라타 / 돌아
+- Verse 1 bars 13-16: 내려 / 새겨 / 천천히 / 들어가
+- Chorus bars 1-4: light / night / right / light
+- Chorus bars 5-8: flow / show / slow / glow
+- Verse 2 bars 1-4: 풀어 / 들이켜 / 차분히 / 가벼이
+- Verse 2 bars 5-8: 따뜻 / 따스 / step / hold
+- Verse 2 bars 9-12: 한 모금 / 잡혀 / layer / 흘러가
+- Verse 2 bars 13-16: light / spot / 켜져 / glow
+- Verse 3 bars 1-4: 정돈 / 차분 / step / frame
+- Verse 3 bars 5-8: 호흡으로 / glow / light / height
+- Verse 3 bars 9-12: still / fill / 살아 / 가
+
+=== META ===
+RUBRIC v1.4 목표 매칭: B Rage Tuned Singing (introspective laid-back 변종, female late-night reflective)
+작업 목적: Track 19 4막 강약 조절 진입 + 멜로딕 완충 슬롯. Night Rider(01 male warmup)와 다른 female melodic introspective. 강-약-중-강-약 흐름의 "약" 자리. **2026-04-28 retheme**: 운동 어휘 제거 후 새벽 도시 introspective narrative로 reframe. warmup/stretching mat/plate/set/round 제거.
+운영 룰: 16마디를 8마디씩 끊고 호흡 포켓을 둔다. 차분 페이스라 staccato pocket 대신 warm legato 유지.
+길이 룰: 3분 미만 방지를 위해 Verse 3와 Final Chorus를 반드시 포함한다. 실제 출력 목표 3:20-3:40.
+라임 룰: 2마디마다 한글 라임을 들리게 하고, 영어 라임은 glow/flow/slow/show, light/right/quiet/inside 계열로 보조한다.
+톤 보정: 108 BPM half-time pace 유지, half-time trap drums + softened 808 + mellow synth pads. raw/screamed 질감 진입 금지.
+Suno 생성: 2-3회 생성 후 최선 1개 선택

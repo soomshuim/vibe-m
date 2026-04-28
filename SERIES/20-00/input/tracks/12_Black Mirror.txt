@@ -1,0 +1,157 @@
+Track: Black Mirror (검은 거울)
+Order: 12
+Type: F
+BPM: 175
+Key: E Minor
+Length: 3:45
+Vocal: Female
+Status: DRAFT - Suno test pending
+
+=== STYLE ===
+Even faster dark trap around 175 BPM with relentless rolling 808 basslines, ultra-tight triplet and stuttered hi-hats, and hard, punchy snares driving a nonstop forward momentum; verses ride on stripped-back, brooding drums and eerie detuned synth bells, with energy pushed by tempo and rhythmic density instead of EDM-style effects, while the hook drops into heavier sub-bass, controlled brass stabs, and stacked chant-style gang vocals on the main phrases, Female Korean-English bilingual rap with sharper double-time bursts, dense ad-libs tucked rhythmically around the lead, controlled low-register harmonies, subtle glitchy delay throws on key English words, high-contrast mix with heavy low-end impact and dark atmospheric textures, less raw but still fast and intense
+
+=== EXCLUDE ===
+beat switch into EDM drop, sung melodic hook, k-pop, slow tempo, ballad, acoustic, chill, pop chorus, four-on-the-floor, long riser, dance drop
+
+=== LYRICS ===
+[Rap Song]
+(Korean-English faster dark trap. Female F-axis with stacked chant gang vocals. Target actual runtime 3:20-3:45. Use three verse blocks and repeat the final hook; do not shorten to one verse plus hook. Fast rap bursts capped at 8 bars, then chant/breath pocket before next burst. Theme: black mirror, vanity vs 진짜, 거울 속 자기 응시, 화려한 표면 안의 깊은 눈, 가짜와 자기 사이의 거리, 도시 야간 hip-hop femininity. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+
+[Verse 1]
+(8-bar fast bilingual run + chant/breath pocket + 4-8-bar second run)
+거울 안에 두 명, 하나는 fake
+hoop earring 옆 표정은 cake
+화장 위에 새겨진 또 다른 face
+누가 진짜냐, 답은 base
+
+립 라인 위에 번지는 lie
+검은 frame 안 두 눈은 dry
+유리 너머 fake smile, no high
+나는 안쪽 sign, 다른 type
+
+(chant pocket: black mirror, two faces, one)
+
+폰 카메라 앞 표정은 set
+필터 뒤로 숨긴 silhouette
+검은 거울 위 진짜 reflection
+허세 위에 박히는 question
+
+플래시 한 번에 fake glow
+다음 컷에 다시 cold
+나는 이미 알아 누가 fake gold
+거울 안 답은 oldest mode
+
+[Pre-Chorus]
+검은 거울 위 두 명
+하나는 화려, 하나는 quiet
+fake 위에 새겨진 plain
+진짜는 안쪽, 밖은 paint
+
+[Chorus]
+Black mirror, two faces
+한 쪽은 fake, 한 쪽은 traces
+Black mirror, no escape
+진짜 눈빛은 거기 stay
+
+Black mirror, frame on frame
+밖은 화려, 안은 same
+나만 아는 진짜 name
+거울 안에 새기는 frame
+
+[Verse 2]
+(8-bar double-time burst + chant/breath pocket + 4-8-bar second run)
+명품 위에 가려진 자국
+글로스 옆 굳어진 약속
+사람들 시선 위에 mask up
+내 안엔 다른 답이 stuck
+
+스튜디오 셀프 cam, take ten
+다 비슷한 face, 어디가 ten
+나는 안쪽 sign 안 미뤄
+거울 안 frame, 안 흐려
+
+(chant pocket: 거울 안, no fake, real one)
+
+다이아 옆 깊은 graphite
+빛나는 표면 아래 night
+거울 한 장 사이로 light
+fake와 진짜 사이 fight
+
+새벽 두 시 거울 앞 자리
+화장 다 지운 뒤 진짜 자리
+누구도 못 보는 silent sign
+검은 거울 위 살아 있는 line
+
+[Pre-Chorus]
+검은 거울 위 두 명
+하나는 화려, 하나는 quiet
+fake 위에 새겨진 plain
+진짜는 안쪽, 밖은 paint
+
+[Chorus]
+Black mirror, two faces
+한 쪽은 fake, 한 쪽은 traces
+Black mirror, no escape
+진짜 눈빛은 거기 stay
+
+Black mirror, frame on frame
+밖은 화려, 안은 same
+나만 아는 진짜 name
+거울 안에 새기는 frame
+
+[Verse 3]
+(8-bar fast run + chant/breath pocket + 4-8-bar final push)
+거울 깊은 곳에 다른 face
+밖은 fake glow, 안은 grace
+사람들 다 모르는 base
+나만 아는 진짜 place
+
+화장 다 지운 새벽 frame
+거울 안에 살아 있는 name
+fake 위에 박힌 plain
+진짜는 안쪽, 밖은 game
+
+(chant pocket: black mirror, real one stay)
+
+내가 누구인지 답은 inside
+밖에서 보이는 건 그냥 light
+검은 거울 깊이 새긴 sign
+다른 사람 모르는 line
+
+[Bridge]
+(4-6 bars stripped-back chant pocket, no EDM build)
+black mirror, two faces
+한 쪽은 fake, 한 쪽은 traces
+거울 깊이 새긴 진짜 frame
+밖은 화려, 안은 same
+
+[Final Chorus]
+Black mirror, two faces
+한 쪽은 fake, 한 쪽은 traces
+Black mirror, no escape
+진짜 눈빛은 거기 stay
+
+Black mirror, frame on frame
+밖은 화려, 안은 same
+나만 아는 진짜 name
+거울 안에 새기는 frame
+
+Black mirror, two faces
+한 쪽은 fake, 한 쪽은 traces
+Black mirror, no escape
+진짜 눈빛은 거기 stay
+
+[Outro]
+(Rolling 808 fade, triplet hi-hats hold)
+black mirror
+two faces
+real one
+stay
+
+=== META ===
+RUBRIC v1.4 목표 매칭: F Faster Dark Trap (Female, Cold Stack 변주)
+작업 목적: Track 12 HIIT 피크 보강. 가사 테마는 검은 거울 vanity/진짜 — hip-hop femininity, 도시 야간 자기 응시.
+운영 룰: 무호흡 double-time 금지. 8마디 fast run 후 chant/breath pocket. triple-time bursts 8마디 이상 연속 금지.
+길이 룰: 3분 미만 방지를 위해 Verse 3 + Bridge + Final Chorus 반복 유지. 실제 출력 목표 3:20-3:45.
+톤 보정: gritty/raw 과잉은 낮추되 175 BPM·rolling 808·triplet/stutter hi-hat density는 유지한다.
+Suno 생성: 2-3회 생성 후 최선 1개 선택
