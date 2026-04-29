@@ -438,3 +438,13 @@ Next-TODO: Review result file and address FAIL/NEEDS_USER_DECISION items before 
 Review-Result: /Users/zenkim_office/Project/wavvy/.ai/peer-review/runs/20260428-145415-codex-review-98088.md
 Commits: pending
 ---
+
+---
+HANDOFF: Codex -> User
+Date: 2026-04-29 23:47:56
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: 20-00 힙합 시리즈 트랙 프롬프트를 사용자 제공 본문 기준으로 정리. Black Mirror, Bottom Line, Old Cassette, Engine, Concrete, Real Talk를 반영하고 03-16 트랙 txt 파일명 넘버링을 제거함.
+Next-TODO: 17_Late Lane / 18_Side Street / 19_Slow Glow / 20_Old Page는 제외 상태 유지. 필요 시 남은 트랙도 사용자 최종 본문 기준으로 개별 정리.
+Commits: (이번 커밋)
+---

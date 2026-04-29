@@ -781,3 +781,11 @@
   - 루브릭: `MASTER/rubrics/INDIE_POP_RUBRIC.md`
   - 리서치: `report/2026-04-04_*.md` (2건)
 - 리서치 리포트: `report/2026-03-21_youtube-audio-quality-optimization.md`
+
+### 2026-04-29
+
+- [x] 20-00 힙합 시리즈 트랙 프롬프트 정리
+  - Black Mirror / Bottom Line / Old Cassette / Engine / Concrete / Real Talk 사용자 제공 최종 본문 반영
+  - `-` negative tag 항목은 `EXCLUDE`로 분리하는 규칙 재확인 및 Bottom Line 수정
+  - `17_Late Lane.txt`~`20_Old Page.txt` 제외, `03_`~`16_` 트랙 txt 파일명 넘버링 제거
+  - Concrete는 instrumental-only intro 및 hook dance 전환 방어 버전으로 정리

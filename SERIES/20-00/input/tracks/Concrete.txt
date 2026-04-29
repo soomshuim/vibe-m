@@ -1,0 +1,170 @@
+Track: Concrete (콘크리트)
+Order: 15
+Type: C
+BPM: 145
+Key: E Minor
+Length: 3:45
+Vocal: Male
+Status: DRAFT - Suno test pending
+
+=== STYLE ===
+Korean hardcore trap, 145 BPM, same stripped-back trap drum loop throughout, no chorus drum change, no tempo increase, no final lift, husky distorted muddy male Korean rap, ZENE THE ZILLA-style chest voice with rough edge, dark muddy 808 bass with low-mid saturation, sharp 1/16 hi-hats stay steady from intro to outro, dark piano loop in E minor with concrete grit texture, no synth bell, no melodic hook, dense ad-libs between rap lines tucked rhythmically, raw but controlled energy, locked drum pattern throughout no fills no switch-up, hard rap only no singing, dry close vocal with sharp articulation, less raw than full rage but still gritty, urban concrete late-night labor texture, intro is instrumental-only with no vocal tag no ad-lib no yeah no uh
+
+=== EXCLUDE ===
+melodic singing, autotune ballad, sung hook, falsetto, formant shift, k-pop, beat switch, drum fill, EDM drop, vocal chop, pitch-shifted vocals, glitch drums, riser, supersaw arp, glossy pop mix, soft pop chorus, ambient pad, slow tempo, dance beat, four-on-the-floor, tempo increase, chorus lift, faster hook drums, double-time drums, snare build, clap build, open-hat dance groove, shouted intro, yelled intro, loud intro tag, hype-man intro, repeated WAVVY tag, female lead vocal, female verse, female hook lead, intro vocal, intro ad-lib, spoken intro tag, WAVVY tag, yeah intro, uh intro, male-female intro call-and-response
+
+=== LYRICS ===
+[Rap Song]
+(Husky distorted male Korean rap, C-axis hardcore trap with C4 muddy/distorted tone unused in earlier C tracks. Lead vocal is male and starts only at Verse 1 after an instrumental-only intro. Target actual runtime 3:30-3:50. Use three 16-bar verses plus repeated hooks; do not shorten to two verses. Hooks are rap refrains, not dance choruses. The exact same stripped-back trap drum loop must continue through Pre-Hook, Hook, and Final Hook; no faster drums, no dance beat, no tempo lift, no chorus build. Tight cadence: short bars, gritty consonants, no long prose lines. Korean rhyme every 2 bars, rhyme family every 4 bars, 8-bar resolve. English rhymes support: concrete / complete / repeat / street, crack / track / block / mark, dust / rust / weight / ground. Avoid overused sign/grind/line rhyme family. Split every 16-bar verse into 8 bars + crew ad-lib/snare pocket + 8 bars. Theme: 도시 콘크리트 위 노동자 그라인드 (자수성가 = 힙합 코어), 작업장 손바닥 굳은살, 페인트·시멘트 자국, 가난한 자리에서 자기 이름 새기기. **NO workout vocabulary** (no gym, no plate, no rep, no set, no protein, no shake, no dumbbell, no mirror reflection of fit body, no shower stall). 노동자·작업복·콘크리트·시멘트·먼지·손바닥·도시 바닥 어휘 사용. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+
+[Intro]
+(Instrumental only. No vocal. No ad-lib. No spoken tag. No WAVVY. No yeah. No uh. No male-female call-and-response. Lead vocal starts only at Verse 1.)
+
+[Verse 1]
+콘크리트 위에 새기는 footstep
+어두운 길 따라 nighttime mindset
+숨은 짧게, 표정은 deadset
+한 발씩 깨고 나가는 next step
+
+벽돌 같은 무게, 어깨에 stack
+공구통 옆 작업복 안엔 black
+페인트 자국 옷, 다음 셔츠로 swap
+밤의 도시 위로 다시 step up
+
+(crew ad-lib pocket: gritty huh)
+
+손등에 굳은 흔적, 굳은살은 mark
+시멘트 가루 위로 남은 crack
+콘크리트 틈 사이로 버틴 track
+하루의 dust, 밤이면 payback
+
+말 짧게 cut, 시선은 forward
+fake talk fade, 진짜만 reward
+도시는 차가워도 가슴은 hot
+작업장 위에 자리 잡는 spot
+
+[Pre-Hook]
+(Same stripped-back drum loop as verse. No build.)
+콘크리트 위, 발자국 깊이
+dust 사이로 박힌 의지
+밤 늦게 더 또렷한 시계
+이름 위에 새기는 기록
+
+[Hook]
+(Rap refrain over same stripped-back drum loop. No dance beat, no faster drums, no lift.)
+Concrete, 깨고 나가
+밤마다 한 줄씩 새겨
+Concrete, 식지 않아
+바닥 위에 남겨진 mark
+
+Concrete, 멈추지 마
+어두운 길 위에 서
+Concrete, 밤이 길어도
+한 발 더, 끝까지 가
+
+[Verse 2]
+Glove 위에 묻은 cement dust
+손바닥 굳은 자국엔 must
+작업복 dust, 표정은 just
+오늘도 한 칸 더 trust
+
+작업장 옆 골목 형광등 불빛
+젖은 옷자락, 뜨거운 입김
+도시 위 차가운 night sky
+내 안엔 식지 않는 fire
+
+(crew ad-lib pocket: rough yeah)
+
+말 많은 놈은 다 fade out
+조용한 진짜만이 stand out
+자랑 없이도 자리는 clout
+콘크리트 새겨, no doubt
+
+밑바닥에서 올려, no rest
+이름 없이도 vibe는 best
+숨이 차도 다음 layer next
+콘크리트 위에 박히는 text
+
+[Pre-Hook]
+(Same stripped-back drum loop as verse. No build.)
+콘크리트 위, 발자국 깊이
+dust 사이로 박힌 의지
+밤 늦게 더 또렷한 시계
+이름 위에 새기는 기록
+
+[Hook]
+(Rap refrain over same stripped-back drum loop. No dance beat, no faster drums, no lift.)
+Concrete, 깨고 나가
+밤마다 한 줄씩 새겨
+Concrete, 식지 않아
+바닥 위에 남겨진 mark
+
+Concrete, 멈추지 마
+어두운 길 위에 서
+Concrete, 밤이 길어도
+한 발 더, 끝까지 가
+
+[Verse 3]
+마지막 골목, 발걸음 max
+손은 굳어도 마음은 fast
+숨 한 번에 다음 step
+어제의 나와 약속, 다음 frame
+
+(crew ad-lib pocket: locked yeah)
+
+새벽 두 시, 거리는 비어
+나만 남아 있는 발자국, 새겨
+가게 셔터 내려진 자리도
+콘크리트 위에 결국 새겨놓아
+
+도시 콘크리트 위로 걸어
+오늘의 weight, 내일 다시 그려
+새벽이 와도 거리는 잊지 않아
+바닥에 박힌 step은 안 닳아
+
+가난한 줄 알았던 자리도
+콘크리트 위에 결국 새겨놓아
+이름 없이도 자리는 분명해
+한 발자국 위에 다음 frame
+
+[Final Hook]
+(Rap refrain over same stripped-back drum loop. No dance beat, no faster drums, no tempo increase, no final lift.)
+Concrete, 깨고 나가
+밤마다 한 줄씩 새겨
+Concrete, 식지 않아
+바닥 위에 남겨진 mark
+
+Concrete, 멈추지 마
+어두운 길 위에 서
+Concrete, 밤이 길어도
+한 발 더, 끝까지 가
+
+[Outro]
+(Muddy 808 fade, dark piano hold)
+
+=== RHYME MAP ===
+- Verse 1 bars 1-4: footstep / mindset / deadset / next step
+- Verse 1 bars 5-8: stack / black / swap / step up
+- Verse 1 bars 9-12: mark / crack / track / payback
+- Verse 1 bars 13-16: forward / reward / hot / spot
+- Hook bars 1-4: 깨고 나가 / 새겨 / 식지 않아 / mark
+- Hook bars 5-8: 멈추지 마 / 서 / 길어도 / 가
+- Verse 2 bars 1-4: dust / must / just / trust
+- Verse 2 bars 5-8: 불빛 / 입김 / sky / fire
+- Verse 2 bars 9-12: fade out / stand out / clout / no doubt
+- Verse 2 bars 13-16: rest / best / next / text
+- Verse 3 bars 1-4: max / fast / step / frame
+- Verse 3 bars 5-8: 비어 / 새겨 / 자리도 / 새겨놓아
+- Verse 3 bars 9-12: 걸어 / 그려 / 잊지 않아 / 안 닳아
+- Verse 3 bars 13-16: 자리도 / 새겨놓아 / 분명해 / frame
+
+=== META ===
+RUBRIC v1.4 목표 매칭: C Hardcore Trap (C4 husky/distorted/muddy 톤 — 미사용 분기)
+작업 목적: Track 15 메인 웨이트 C축 5번째 보강. C1 lazy monotone(03), C2 sarcastic(05/07), C3 chant gang(08)과 다른 husky 톤. **2026-04-28 retheme**: 운동 어휘 제거 후 노동자 그라인드 narrative로 reframe (자수성가 = 힙합 코어). dumbbell/protein/shake/plate/rep/grip은 tax/거울 앞 약속 제거.
+운영 룰: 16마디를 한 번에 밀지 말고 8마디마다 crew ad-lib/snare pocket을 둔다. melodic 진입 금지.
+길이 룰: 3분 미만 방지를 위해 Verse 3와 Final Hook을 반드시 포함한다. 실제 출력 목표 3:30-3:50.
+라임 룰: 2마디마다 한글 라임을 들리게 하고, 영어 라임은 concrete/crack/track/block/mark/dust/weight 계열로 보조한다. sign/grind/line 계열은 다른 트랙과 겹치므로 최소화한다.
+톤 보정: raw/screamed 과잉은 낮추되 145 BPM groove, muddy 808, dark piano loop, husky chest voice는 유지한다.
+재생성 보정: Hook/Final Hook에서 드럼이 댄스곡처럼 바뀌거나 템포가 빨라지면 FAIL. Verse와 동일한 stripped-back trap drum loop, 동일한 145 BPM 체감, no build/no lift로 다시 생성한다.
+도입 보정: Intro에서 보컬, ad-lib, spoken tag, WAVVY, yeah, uh, 남녀 콜앤리스폰이 나오면 FAIL. 도입은 instrumental-only이고 첫 보컬은 Verse 1에서만 시작한다.
+Suno 생성: 2-3회 생성 후 최선 1개 선택

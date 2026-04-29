@@ -139,14 +139,3 @@ Real talk, eyes on the floor
 real talk
 no fake
 keep it real
-
-=== META ===
-RUBRIC v1.4 목표 매칭: A Rage Dry Voice (Paycheck 변주 2, real-talk dis)
-작업 목적: Track 16 HIIT 진입 A축 보강. Paycheck(04 paycheck)·Overtime Flame(06 club heat)과 다른 real-talk dis narrative.
-도입 룰: 도입부 8마디 instrumental, 808 bass lead only. 보컬/애드립/훅/벨 멜로디 금지.
-운영 룰: A/B verse 구조 + Ad-lib Pocket. 포켓은 짧은 rapper aside.
-디스 운영: 진짜 vs fake 직설적 dis, 그러나 personal-attack/slur/violence 금지. 씬 비판 + 자기 포지셔닝 톤.
-라임 룰: 한국어 2마디 청감 라임 + 4마디 패밀리. 영어 라임은 real/deal/steal/feel, talk/walk/flock/stop.
-길이 룰: 3분 미만 방지를 위해 4 Verse + Refrain 3회 + Bridge Pocket + Final Refrain 반복 유지. 실제 출력 목표 3:30-3:50.
-톤 보정: raw/screamed 과잉은 낮추되 154 BPM·tight 808·1/16 hi-hat drive는 유지한다.
-Suno 생성: 2-3회 생성 후 최선 1개 선택

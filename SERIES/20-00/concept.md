@@ -9,7 +9,7 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 ## Series Status
 
 - **착수**: 2026-04-25 / **현재 v0.5**: 2026-04-28 (5곡 컨셉 교체 + 14/15/19 retheme + 가사 = hip-hop 본연 주제 정책 강화)
-- **v0.4**: 2026-04-27 (최종 20곡 체제 복원 + 남성 14 / 여성 6 확정)
+- **v0.4**: 2026-04-27 (최종 20곡 체제 복원)
 - **시리즈 유형**: **Wavvy 첫 힙합 시리즈**
 - **시리즈 정체성**: **Korean Workout Hip-Hop 빈자리 채우기** — 글로벌 Apple Music Hip-Hop Workout 외산 트랩 우세, Korean rap 0%
 - **최종 트랙 수 (v0.4 확정)**: **20곡** (현재 13곡 작업 세트 + 추가 7곡)
@@ -17,7 +17,7 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
   - **Hard 14곡 (70%)** = A Rage Dry 3 + C Hardcore Trap 5 + D K-Drill 3 + F Faster Dark Trap 3
   - **Non-Hard 6곡 (30%)** = B Rage Tuned 4 + 보너스 빡센 붐뱁 2
   - Hard 60% 정책 충족
-- **보컬 성별 분포 (사용자 확정 2026-04-27)**: **남성 14곡 / 여성 6곡**
+- **보컬 성별 분포 (사용자 확정 2026-04-29)**: **남성 14곡 / 여성 6곡**
 - **워크플로우**: 15-00 모델 계승 + 7곡 PASS 베이스 변주 전략 + 20곡 최종 확장
 
 **현재 PASS 누적 (8/20)**:
@@ -43,7 +43,7 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 | 06 | Overtime Flame | A | Male | 152 | after-hours club heat | DRAFT |
 | 07 | Boomerang | C | Male | 145 | sarcastic 디스 부메랑 | PASS |
 | 08 | Yang Gang | C | Male | 150 | chant gang hook | PASS |
-| 09 | Bottom Line | D | Female | 142 | bottom-to-top female drill grind | DRAFT |
+| 09 | Bottom Line | D | Female | 120 | bottom-to-top female drill grind | DRAFT |
 | 10 | Cold Stack | F | Male | 180 | cold stack money grind | PASS |
 | 11 | Rewrite | D | Male | 140 | 씬에 침 뱉어 디스 | PASS |
 | 12 | Black Mirror | F | Female | 175 | femme fatale club clock-in | DRAFT |
@@ -127,7 +127,7 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 - BPM: 86-95 (붐뱁 E) / 140-180 (메인 5축)
 - Key: Minor 우세 (다크 무드)
 - 보컬: chest voice + sharp articulation
-- **보컬 성별 목표 (2026-04-27 확정)**: 최종 20곡 기준 **남성 14 / 여성 6**. 기존 PASS 트랙은 실제 음원 성별을 우선하고, txt에서 임의로 성별을 바꾸지 않는다. 현재 13곡 계획은 남성 9 / 여성 4로 두고, 추가 7곡은 남성 5 / 여성 2로 보정한다.
+- **보컬 성별 목표 (2026-04-29 확정)**: 최종 20곡 기준 **남성 14 / 여성 6**. 기존 PASS 트랙은 실제 음원 성별을 우선하고, txt에서 임의로 성별을 바꾸지 않는다. 13 Old Cassette는 사용자 최종안에 따라 Female로 확정한다.
 - 톤: 다크 + raw + workout 텐션
 
 ---
@@ -225,7 +225,7 @@ Korean hip-hop/trap with halftime bounce at a loose 150 BPM feel, punchy 808 sli
 NY drill, Brooklyn drill, dark drill rap
 ```
 
-> **변주 2곡 슬롯**: 09 female draft + 18 female 예정. BPM 142-146 / 다른 가사 컨셉 / Style Prompt 동일 (또는 UK Drill로 변경)
+> **변주 2곡 슬롯**: 09 female draft는 실제 결과 우선으로 120 BPM tuned rage warmup 스타일 수용 / 18 female 예정은 BPM 142-146 D축 drill 유지. 다른 가사 컨셉 / Style Prompt 동일 또는 UK Drill 변경 가능.
 
 ---
 
@@ -302,7 +302,7 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 06. Overtime Flame — A Rage Dry, BPM 152, Male (DRAFT) club heat
 07. Boomerang — C Hardcore (sarcastic 디스), BPM 145, Male ✅ 디스
 08. Yang Gang — C Hardcore (chant gang hook), BPM 150, Male ✅ chant
-09. Bottom Line — D K-Drill, BPM 142, Female (DRAFT) bottom-to-top grind
+09. Bottom Line — D K-Drill, BPM 120, Female (DRAFT) bottom-to-top grind
 10. Cold Stack — F Faster Dark Trap, BPM 180, Male ✅ stack money
 
 [3막. 피크 인텐시티] — 6곡 (사운드: HIIT/카디오)
@@ -401,6 +401,7 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 | FAIL 패턴 | 원인 | 대응 |
 |-----------|------|------|
 | 후반 EDM drop | vocal chop·riser 키워드 | EXCLUDE 명시 추가 |
+| Final Chorus에서 댄스곡처럼 드럼/템포 상승 | `Final Chorus`, ad-lib stack, build/lift 키워드 | `same drum loop throughout`, `no tempo increase`, `no faster final chorus`, `no final lift`, `no dance beat` 명시 |
 | 보컬 melodic화 (A축) | autotune 누출 | `no autotune, no pitch correction` 추가 |
 | 보컬 dry화 (B축) | mumble rap 진입 | `no dry shouted, no mumble rap` 추가 |
 | BPM 180 곡에서 double-time fill | F축 drop 유도 위험 | Style Prompt에서 "double-time bursts"만 (drop X) 명시 |

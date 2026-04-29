@@ -8,20 +8,18 @@ Vocal: Male
 Status: DRAFT - Suno test pending
 
 === STYLE ===
-Korean tuned singing rage trap, 150 BPM, melodic autotuned male vocal with hip-hop edge harder than melodic ballad, smooth legato sing-rap with sharper rap pockets, supersaw lead 8-voice detuned arpeggiated, distorted 808 portamento moving bass, 1/16 hi-hat with 32nd triplet roll snare on 3, dark detuned synth pads, subtle Korean folk sample chop atmospheric texture, warm cathedral reverb large hall, candied melodic hook with high-density adlib stack, polished glossy KC vangdale-style mix, controlled forward energy, after-hours engine ignition mood, hard rap verses with melodic chorus, Korean-English code-switch hook, less raw but BPM-locked
+Korean tuned singing rage trap, 150 BPM, same 16-bar trap drum loop throughout, no tempo increase, no final lift, melodic autotuned male vocal with hip-hop edge harder than melodic ballad, smooth legato sing-rap with sharper rap pockets, supersaw lead 8-voice detuned arpeggiated, distorted 808 portamento moving bass, 1/16 hi-hat stays steady from intro to outro, no faster drums in final chorus, dark detuned synth pads, subtle Korean folk sample chop atmospheric texture, warm cathedral reverb large hall, candied melodic hook with controlled adlibs only, polished glossy KC vangdale-style mix, controlled forward energy, after-hours engine ignition mood, hard rap verses with melodic chorus, Korean-English code-switch hook, dry male voice signature tag saying "wavvy" in the intro, less raw but BPM-locked
 
 === EXCLUDE ===
-dry shouted vocals, raw screamed vocals, blown-out mix, punk vocal, growl, mumble rap, k-pop ballad, acoustic ballad, soft pop chorus, amapiano, jersey club, EDM drop, beat switch, drum fill
+dry shouted vocals, raw screamed vocals, blown-out mix, punk vocal, growl, mumble rap, k-pop ballad, acoustic ballad, soft pop chorus, amapiano, jersey club, EDM drop, beat switch, drum fill, dance beat, four-on-the-floor, tempo increase, faster final chorus, double-time drums, final chorus lift, riser, snare build
 
 === LYRICS ===
 [Rap Song]
-(Korean-English autotuned male sing-rap with sharper hip-hop rap edge. B-axis but harder than LLC, more rap less ballad. Target actual runtime 3:30-3:50. Use three 16-bar verses plus repeated hooks; do not shorten to two verses. 150 BPM groove must stay locked with driving 1/16 hi-hat, distorted 808 portamento, supersaw lead. Tight cadence: short bars, clean pockets, no long prose lines. Heavy Korean rhyme density: every 2 bars audible Korean rhyme, every 4 bars rhyme family, every 8 bars hook-like resolve. English rhymes support: engine / mission / friction / vision. Split every 16-bar verse into 8 bars + half-bar breath/ad-lib pocket + 8 bars. Theme: 저녁 8시 도시 시동, 퇴근 후 도시로 나가는 night ignition, 심장박동 = 808 메타포, 도시 위 그라인드 시작. NO workout vocabulary (no gym, no plate, no rep, no set, no protein, no mirror reflection of fit body). 도시·밤·차·hood·jacket·streetlight·crew 어휘 사용. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
+(Korean-English autotuned male sing-rap with sharper hip-hop rap edge. B-axis but harder than LLC, more rap less ballad. Target actual runtime 3:30-3:50. Use three 16-bar verses plus repeated hooks; do not shorten to two verses. 150 BPM groove must stay locked with driving 1/16 hi-hat, distorted 808 portamento, supersaw lead. The same drum loop must continue through Final Chorus; no faster drums, no dance beat, no tempo lift, no final build. Tight cadence: short bars, clean pockets, no long prose lines. Heavy Korean rhyme density: every 2 bars audible Korean rhyme, every 4 bars rhyme family, every 8 bars hook-like resolve. English rhymes support: engine / mission / friction / vision. Split every 16-bar verse into 8 bars + half-bar breath/ad-lib pocket + 8 bars. Theme: 저녁 8시 도시 시동, 퇴근 후 도시로 나가는 night ignition, 심장박동 = 808 메타포, 도시 위 그라인드 시작. NO workout vocabulary (no gym, no plate, no rep, no set, no protein, no mirror reflection of fit body). 도시·밤·차·hood·jacket·streetlight·crew 어휘 사용. Avoid explicit violence, drugs, hate, self-harm, and sexual content.)
 
 [Intro]
-Yeah
-engine on
-eight pm
-ignite
+(Dry Female voice signature tag)
+WAVVY
 
 [Verse 1]
 시계가 여덟, 하루는 reset
@@ -122,6 +120,7 @@ rhythm 위에 올라타 set
 engine on 끝나도 vibe는 살려
 
 [Final Chorus]
+(Same drum loop as Chorus. No faster drums, no tempo increase, no dance beat, no final lift.)
 Engine on, eight pm
 심장 박동, same as 808
 Engine on, ignite the frame
@@ -160,4 +159,5 @@ RUBRIC v1.4 목표 매칭: B Rage Tuned Singing (LLC와 다른 male hip-hop edge
 길이 룰: 3분 미만 방지를 위해 Verse 3와 Final Chorus를 반드시 포함한다. 실제 출력 목표 3:30-3:50.
 라임 룰: 2마디마다 한글 라임을 들리게 하고, 영어 라임은 engine/mission/frame/name 계열로 보조한다.
 톤 보정: raw 질감은 낮추되 150 BPM groove, supersaw lead, distorted 808 portamento, 1/16 hi-hat drive는 유지한다.
+재생성 보정: Final Chorus부터 드럼비트가 빨라지거나 댄스곡처럼 템포가 들리면 FAIL. Chorus와 동일한 drum loop, 동일한 150 BPM 체감, no build/no lift로 다시 생성한다.
 Suno 생성: 2-3회 생성 후 최선 1개 선택

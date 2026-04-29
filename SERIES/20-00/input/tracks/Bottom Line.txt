@@ -1,16 +1,16 @@
 Track: Bottom Line
 Type: D
-BPM: 142
+BPM: 120
 Key: D Minor
 Length: 3:45
 Vocal: Female
 Status: DRAFT - Suno test pending
 
 === STYLE ===
-NY drill, Brooklyn drill hybrid, 142 BPM, sliding 808 bass portamento long notes, flipped soul sample melodic hook pitched-up chop, sharp tresillo hi-hats 3+3+2 polyrhythm, snare on beat 4 off-beat with reverb tail, dark orchestral strings cinematic piano loop D minor, menacing but controlled atmosphere, deadpan female Korean drill rap with crisp articulation, locked drum pattern throughout no fills no switch-up, hard rap only no singing, no arp synth no stutter loop, rapping in Korean, less raw but still tense
+Korean tuned singing rage trap warmup, 120 BPM, melodic autotuned male vocal, smooth legato sing-rap delivery, softened tight 808 bass with controlled saturation, crisp half-time trap drums, restrained 1/16 hi-hats, mellow detuned synth pads, subtle Korean folk sample chop in the background, warm cathedral reverb large hall, polished glossy KC vangdale-style mix, close vocal with soft echo ad-libs, introspective night workout energy, hard rap verses with melodic hook, Korean-English code-switch hook
 
 === EXCLUDE ===
-amapiano, jersey club, trap 808 sustain, k-pop, sung hook, beat switch, EDM drop, melodic singing, autotune ballad, slow tempo, vocal chop, vocal stutter, pitch-shifted vocals, riser
+dry shouted vocals, raw screamed vocals, blown-out mix, punk vocal, growl, mumble rap, k-pop ballad, acoustic ballad, soft pop chorus, amapiano, jersey club, EDM drop, beat switch, drum fill
 
 === LYRICS ===
 [Rap Song]
@@ -153,11 +153,3 @@ amapiano, jersey club, trap 808 sustain, k-pop, sung hook, beat switch, EDM drop
 
 [Outro]
 (Instrumental, same drill loop)
-
-=== META ===
-RUBRIC v1.3 목표 매칭: D K-Drill 액센트 (Rewrite 변주)
-작업 목적: Track 09 D축 female drill 슬롯. Bottom Line 제목/가사 확정.
-운영 룰: D축 drill은 8마디마다 crew ad-lib/snare pocket을 둔다. 16마디를 무호흡으로 붙이지 않는다.
-길이 룰: 3분 미만 방지를 위해 Verse 4와 마지막 Refrain 반복을 반드시 포함한다. 실제 출력 목표 3:30-3:50.
-톤 보정: guttural/raw 과잉은 낮추되 142 BPM·sliding 808·tresillo hi-hat은 유지한다.
-Suno 생성: 2-3회 생성 후 최선 1개 선택

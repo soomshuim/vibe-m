@@ -1,17 +1,14 @@
 Track: Black Mirror (검은 거울)
 Order: 12
 Type: F
-BPM: 175
+BPM: 150
 Key: E Minor
 Length: 3:45
 Vocal: Female
 Status: DRAFT - Suno test pending
 
 === STYLE ===
-Sultry female Korean dark trap at 175 BPM, red-light femme fatale club energy, rolling 808 bass with deep controlled sub pressure, tight triplet hi-hats and stuttered hats, smoky detuned synth pads, velvet dark bell motifs, low-register seductive rap delivery with crisp consonants, breath-close dry verses, whispered ad-libs tucked between lines, wide layered hook chants with glossy delay throws, hypnotic call-and-response pockets, slow-burn tension over fast drums, polished high-contrast mix with glassy top end and heavy low-end, sexy but not explicit, dangerous and controlled, no beat switch no EDM drop
-
-=== EXCLUDE ===
-beat switch into EDM drop, sung melodic hook, k-pop, slow tempo, ballad, acoustic, chill, pop chorus, four-on-the-floor, long riser, dance drop
+Sultry female Korean dark trap at 150BPM, red-light femme fatale club energy, rolling 808 bass with deep controlled sub pressure, tight triplet hi-hats and stuttered hats, smoky detuned synth pads, velvet dark bell motifs, low-register seductive rap delivery with crisp consonants, breath-close dry verses, whispered ad-libs tucked between lines, wide layered hook chants with glossy delay throws, hypnotic call-and-response pockets, slow-burn tension over fast drums, polished high-contrast mix with glassy top end and heavy low-end, sexy but not explicit, dangerous and controlled, no beat switch no EDM drop
 
 === LYRICS ===
 [Rap Song]
@@ -154,13 +151,3 @@ Black Mirror
 red light 비춰
 숨을 낮춰
 눈을 맞춰
-
-=== META ===
-RUBRIC v1.4 목표 매칭: F Faster Dark Trap (Female, Cold Stack 변주)
-작업 목적: Track 12 HIIT 피크 보강. 가사 테마는 Black Mirror phone screen + femme fatale club clock-in. 클럽은 party가 아니라 female rapper가 장악하는 밤의 무대/출근지로 처리한다.
-운영 룰: 무호흡 double-time 금지. 8마디 fast run 후 chant/breath pocket. triple-time bursts 8마디 이상 연속 금지.
-라임 룰: `Black Mirror` 뒤에 `비춰/낮춰/맞춰/갇혀/걸려/끌려` 계열 한글 라임을 붙여 hook phrase처럼 운용한다. 영어 라임은 최소화하고 한글 종성 라임/반복구 중심으로 운용한다.
-톤 룰: 서정적 고백보다 차갑고 유혹적인 femme fatale attitude. 단, 노골적인 성적 묘사는 금지.
-길이 룰: 3분 미만 방지를 위해 Verse 3 + Bridge + Final Chorus 반복 유지. 실제 출력 목표 3:20-3:45.
-톤 보정: gritty/raw 과잉은 낮추되 175 BPM·rolling 808·triplet/stutter hi-hat density는 유지한다.
-Suno 생성: 2-3회 생성 후 최선 1개 선택
