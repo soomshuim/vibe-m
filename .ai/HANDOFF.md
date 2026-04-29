@@ -9,6 +9,16 @@ Commits: (이번 커밋)
 ---
 
 ---
+HANDOFF: Codex -> User
+Date: 2026-04-29 23:51:26
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: 파일명 넘버링 제거로 깨진 20-00 series gate 검증을 복구. 번호 제거된 03-11 트랙 헤더에 Order 메타를 추가해 정렬 기준을 파일명 대신 내부 메타로 맞춤.
+Next-TODO: 없음
+Commits: (이번 커밋)
+---
+
+---
 HANDOFF: Claude -> User (20-00 컨셉 정합성 정비 — 5곡 교체 + 3곡 retheme + concept.md v0.5 + Codex review 수용)
 Date: 2026-04-28
 Project: ~/Project/wavvy

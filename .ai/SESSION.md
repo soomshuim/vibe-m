@@ -789,3 +789,7 @@
   - `-` negative tag 항목은 `EXCLUDE`로 분리하는 규칙 재확인 및 Bottom Line 수정
   - `17_Late Lane.txt`~`20_Old Page.txt` 제외, `03_`~`16_` 트랙 txt 파일명 넘버링 제거
   - Concrete는 instrumental-only intro 및 hook dance 전환 방어 버전으로 정리
+- [x] 20-00 트랙 파일명 넘버링 제거 후 gate 검증 복구
+  - 번호 제거된 03-11 트랙 헤더에 `Order:` 메타 추가
+  - `check_series_gate.sh SERIES/20-00/` PASS 7/7 복구
+  - `check_lyric_avoid.sh SERIES/20-00/input/tracks` PASS 20/20 확인

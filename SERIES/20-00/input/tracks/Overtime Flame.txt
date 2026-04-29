@@ -1,4 +1,5 @@
 Track: Overtime Flame (애프터아워 열기)
+Order: 06
 Type: A
 BPM: 152
 Key: C Minor

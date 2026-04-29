@@ -1,4 +1,5 @@
 Track: Yang Gang
+Order: 08
 Type: C
 BPM: 150
 Key: Minor

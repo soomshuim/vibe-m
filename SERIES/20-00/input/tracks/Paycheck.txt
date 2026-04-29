@@ -1,4 +1,5 @@
 Track: Paycheck (불붙은 paycheck)
+Order: 04
 Type: A
 BPM: 150
 Key: Minor
