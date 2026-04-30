@@ -1,5 +1,15 @@
 ---
 HANDOFF: Codex -> User
+Date: 2026-04-30 20:05:50
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: 20-00 `AFTER HOURS WORKOUT`을 v0.6 최종 러닝 오더로 정리. BPM 숫자만 보지 않고 장르·질감·체감 속도를 종합해 5곡 단위 `강-약-중-강-약` 파형으로 재배치했다. 최종 순서는 01 Paycheck / 02 Night Rider / 03 Bottom to the Top / 04 Yang Gang / 05 Old Cassette / 06 Real Talk / 07 LLC / 08 Boomerang / 09 Black Mirror / 10 Bottom Line / 11 Overtime Flame / 12 Small Talk / 13 Concrete / 14 Cold Stack / 15 Old Page / 16 Rewrite / 17 Fake / 18 Engine / 19 Side Street / 20 Slow Glow. Slow Glow는 108 BPM half-time melodic cooldown 체감상 최종 엔딩, Black Mirror는 150 BPM sultry female dark trap 질감 피크, Cold Stack은 180 BPM 속도 피크로 분리. `SERIES/20-00/input/tracks/*.txt`는 전부 삭제하고 `concept.md` v0.6 단일 관리로 전환.
+Next-TODO: draft 8곡(05 Old Cassette / 06 Real Talk / 07 LLC / 09 Black Mirror / 10 Bottom Line / 11 Overtime Flame / 13 Concrete / 18 Engine) Suno 생성/검수. PASS 곡은 `concept.md` Status만 갱신. 오디오 파일은 v0.6 순서 기준으로 리네임/패키징.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Codex -> User
 Date: 2026-04-30 17:09:12
 Project: /Users/zen/Project/wavvy
 Agent: Codex

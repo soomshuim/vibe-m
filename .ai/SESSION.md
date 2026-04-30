@@ -1,8 +1,18 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-30 (17차 업데이트 — 20-00 Track 17 Small Talk Rage Tuned 전환)
+> Last updated: 2026-04-30 (18차 업데이트 — 20-00 v0.6 최종 러닝 오더 + 트랙 txt 정리)
 
 ## 진행 중
+
+- **20-00 v0.6 최종 러닝 오더 확정 + 트랙 txt 삭제** (2026-04-30 18차)
+  - ✅ **최종 순서 확정**: 단순 번호/BPM이 아니라 장르·질감·체감 속도까지 종합해 5곡 단위 `강-약-중-강-약` 파형으로 재배치
+  - ✅ **최종 20곡 v0.6**: 01 Paycheck / 02 Night Rider / 03 Bottom to the Top / 04 Yang Gang / 05 Old Cassette / 06 Real Talk / 07 LLC / 08 Boomerang / 09 Black Mirror / 10 Bottom Line / 11 Overtime Flame / 12 Small Talk / 13 Concrete / 14 Cold Stack / 15 Old Page / 16 Rewrite / 17 Fake / 18 Engine / 19 Side Street / 20 Slow Glow
+  - ✅ **Slow Glow 엔딩 확정**: 108 BPM half-time melodic cooldown 체감이 가장 느려 20번 최종 엔딩으로 배치
+  - ✅ **피크 역할 분리**: Black Mirror는 150 BPM sultry female dark trap 질감 피크, Cold Stack은 180 BPM 속도 피크로 정리
+  - ✅ **분포 검증 문서화**: Hard 65% = A3+C5+D3+F2, Non-Hard 35% = B5+E2, 보컬 M14/F6 유지
+  - ✅ **개별 txt 프롬프트 정리**: `SERIES/20-00/input/tracks/*.txt` 전체 삭제. 이후 개별 프롬프트 복원이 필요하면 `concept.md` v0.6을 SSOT로 사용
+  - ⚠️ **상태 주의**: `SERIES/20-00/input/new_loop.png` 삭제와 `SERIES/20-00/input/thumb.jpg` 추가가 같은 워크트리에 남아 있어 이번 record 커밋에 포함됨
+  - **남은 TODO**: (1) draft 8곡(05/06/07/09/10/11/13/18) Suno 생성/검수. (2) PASS 곡 누적 시 concept.md Status만 갱신. (3) 오디오 파일은 v0.6 순서 기준으로 리네임/패키징.
 
 - **20-00 Track 17 `Small Talk` 리네임 + Rage Tuned sing-rap 전환** (2026-04-30 17차)
   - ✅ **제목/파일명 변경**: `17_Late Lane.txt` → `17_Small Talk.txt`, Track명 `Late Lane` → **Small Talk (스몰 토크)**
