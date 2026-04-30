@@ -1,5 +1,15 @@
 ---
 HANDOFF: Codex -> User
+Date: 2026-04-30 22:23:22 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: 20-00 업로드 전환용 `finalize-upload` 하네스 구현. txt 소스의 STYLE/LYRICS 계약을 검증하고, 현재 report와 제목 기반으로 매칭해 `concept.md` `## Final Track Sources`에 트랙별 타임스탬프/스타일/exclude/풀가사/source checksum을 아카이브하도록 했다. 이미 삭제된 20-00 txt는 `b6f13c4^` git tree에서 복원해 concept.md에 20블록으로 이식했고, 문서에는 `finalize-upload --check` PASS 전 txt 삭제 금지 규칙을 추가했다.
+Next-TODO: 20-00 자막 생성은 `SERIES/20-00/concept.md`의 `Final Track Sources` LYRICS 기준으로 진행. 영상이나 upload.csv가 다시 필요하면 `python3 wavvy.py pack SERIES/20-00 -y` 재실행.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Codex -> User
 Date: 2026-04-30 21:25:15
 Project: /Users/zen/Project/wavvy
 Agent: Codex

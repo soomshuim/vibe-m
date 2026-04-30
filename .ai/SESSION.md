@@ -1,8 +1,19 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-30 (20차 업데이트 — 20-00 YouTube Metadata SSOT 하네스 + 업로드 문안 확정)
+> Last updated: 2026-04-30 (21차 업데이트 — finalize-upload 하네스 + Final Track Sources 아카이브)
 
 ## 진행 중
+
+- **20-00 finalize-upload 하네스 + Final Track Sources 아카이브** (2026-04-30 21차)
+  - ✅ **업로드 전환 하네스 구현**: `wavvy.py finalize-upload <series>` 추가. `--check`, `--keep-txt`, `--restore-from COMMITISH` 지원
+  - ✅ **소스 계약 명문화**: `input/tracks/*.txt`의 `=== STYLE ===` + 비어 있지 않은 `=== LYRICS ===`를 필수로 검증. `=== EXCLUDE ===`는 선택이며 없으면 `None`으로 아카이브
+  - ✅ **복원/매칭 안정화**: 현재 파일시스템에 txt가 없을 때 `--restore-from 'b6f13c4^'` git tree에서 소스를 읽고, stale `Order`가 아니라 정규화한 제목으로 현재 `output/report.json` 트랙과 매칭
+  - ✅ **concept.md 업로드용 SSOT 확정**: `SERIES/20-00/concept.md`에 `## Final Track Sources` 20블록 생성. Timestamp, Repeat Timestamp, Filename, Title, Mood, Genre, Type, BPM, Key, Length, Vocal, audio SHA-256, Source Title, Source Checksum, STYLE, EXCLUDE, LYRICS, META 포함
+  - ✅ **삭제 안전장치**: 실제 run은 아카이브 검증 후에만 `input/tracks/*.txt` 삭제. 20-00은 이미 txt가 없어서 git 복원 소스를 concept에 이식하고 삭제 대상 0건으로 완료
+  - ✅ **운영 문서 보강**: `MASTER/WORKFLOWS.md`와 `MASTER/youtube/YOUTUBE.md`에 `finalize-upload --check` PASS 전 txt 삭제 금지, upload FINAL SSOT 전환 절차 기록
+  - ✅ **Peer review**: Claude plan review 1차 FAIL → 수정 후 PASS. 구현 review는 direct Claude CLI PASS
+  - ✅ **검증 PASS**: `py_compile`, 11-00/12-00/20-00 validate, `finalize-upload --check`, 실제 `finalize-upload`, negative fixture 3종, `git diff --check`
+  - **남은 TODO**: 20-00 자막 생성은 이제 `concept.md`의 `Final Track Sources` LYRICS를 기준으로 진행. 영상/`upload.csv`가 다시 필요하면 `wavvy.py pack SERIES/20-00 -y` 재실행.
 
 - **20-00 YouTube Metadata SSOT 하네스 + 업로드 문안 확정** (2026-04-30 20차)
   - ✅ **`concept.md` 최상단 배치**: `## YouTube Metadata v0.5 (FINAL)`를 문서 상단으로 이동해 업로드 직전 바로 확인 가능하게 정리

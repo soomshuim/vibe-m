@@ -162,11 +162,14 @@ Copyright Ⓒ wavvy. All rights reserved.
 2. 버전 태그 변경: `(v1 — 트랙 미완성)` → `(v2.1)`
 3. 해시태그/태그 최종 검토
 4. 장르 태그 매핑 테이블 참조 (§6)
+5. `python3 wavvy.py finalize-upload SERIES/[시리즈] --check` → PASS 후 `python3 wavvy.py finalize-upload SERIES/[시리즈]`
 
 **⚠️ 설명 작성 전 필수: 기존 시리즈 설명 참조**
 - 최소 2개 시리즈의 `concept.md > YouTube Metadata > 설명` 확인
 - 톤/길이/구조 맞추기: 2줄 훅 + 장면 묘사 6-8줄 + Wavvy 클로징
 - 장면 묘사는 해당 시간대의 구체적 행동/감각을 시간순으로 나열
+
+**Final Track Sources:** 업로드 FINAL 단계에서는 `input/tracks/*.txt`의 제목/스타일/EXCLUDE/풀가사를 `concept.md > Final Track Sources`로 병합한다. 이 섹션이 완전해야 txt 삭제가 허용되며, 이후 자막/아카이브 작업은 concept.md의 Final Track Sources를 기준으로 한다.
 
 ### 9.3 장르 혼동 방지 체크
 

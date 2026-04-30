@@ -112,6 +112,41 @@ class ValidationResult:
         self.warnings.append(msg)
 
 
+@dataclass
+class TrackSource:
+    """Parsed Style/Exclude/Lyrics source from an input txt file."""
+    label: str
+    content: str
+    metadata: dict
+    sections: dict
+    sha256: str
+
+    @property
+    def source_title(self) -> str:
+        return self.metadata.get("Track", "").strip()
+
+    @property
+    def style(self) -> str:
+        return self.sections.get("STYLE", "").strip()
+
+    @property
+    def exclude(self) -> str:
+        return self.sections.get("EXCLUDE", "").strip()
+
+    @property
+    def lyrics(self) -> str:
+        return self.sections.get("LYRICS", "").strip()
+
+    @property
+    def meta(self) -> str:
+        meta_sections = []
+        for name, body in self.sections.items():
+            if name in {"STYLE", "EXCLUDE", "LYRICS"}:
+                continue
+            meta_sections.append(f"=== {name} ===\n{body.strip()}".strip())
+        return "\n\n".join(meta_sections).strip()
+
+
 # =============================================================================
 # UTILITY FUNCTIONS
 # =============================================================================
@@ -1365,6 +1400,481 @@ def generate_report(
 
 
 # =============================================================================
+# UPLOAD FINAL SOURCE ARCHIVE
+# =============================================================================
+
+SOURCE_SECTION_RE = re.compile(r"^===\s*([^=]+?)\s*===\s*$", re.MULTILINE)
+
+
+class FinalizeUploadError(Exception):
+    """Raised when upload finalization cannot safely proceed."""
+
+
+def sha256_text(content: str) -> str:
+    """Compute SHA-256 for UTF-8 text content."""
+    return hashlib.sha256(content.encode("utf-8")).hexdigest()
+
+
+def parse_track_source(label: str, content: str) -> TrackSource:
+    """Parse a Wavvy track source txt file."""
+    matches = list(SOURCE_SECTION_RE.finditer(content))
+    header = content[:matches[0].start()] if matches else content
+    metadata = {}
+
+    for line in header.splitlines():
+        match = re.match(r"^([A-Za-z][A-Za-z0-9 _-]*):\s*(.*)$", line.strip())
+        if match:
+            metadata[match.group(1).strip()] = match.group(2).strip()
+
+    sections = {}
+    for idx, match in enumerate(matches):
+        name = match.group(1).strip().upper()
+        start = match.end()
+        end = matches[idx + 1].start() if idx + 1 < len(matches) else len(content)
+        sections[name] = content[start:end].strip()
+
+    source = TrackSource(
+        label=label,
+        content=content,
+        metadata=metadata,
+        sections=sections,
+        sha256=sha256_text(content),
+    )
+
+    if not source.style:
+        raise FinalizeUploadError(f"{label}: missing required === STYLE === section")
+    if not source.lyrics:
+        raise FinalizeUploadError(f"{label}: missing or empty required === LYRICS === section")
+
+    return source
+
+
+def normalize_track_title(value: str) -> str:
+    """Normalize a title for matching txt sources to final audio/report tracks."""
+    stem = Path(value).stem
+    stem = re.sub(r"^\d+[_\-\s]+", "", stem)
+    stem = re.sub(r"\([^)]*\)", "", stem)
+    stem = stem.lower()
+    stem = re.sub(r"[^0-9a-z가-힣]+", "", stem)
+    return stem
+
+
+def title_match_keys(value: str) -> set[str]:
+    """Return loose matching keys for titles with parenthetical subtitles."""
+    candidates = {value}
+    if "(" in value:
+        candidates.add(value.split("(", 1)[0])
+    candidates.add(re.sub(r"\([^)]*\)", "", value))
+    return {key for item in candidates if (key := normalize_track_title(item))}
+
+
+def format_timestamp(seconds: float) -> str:
+    """Format seconds as YouTube timestamp."""
+    total = max(0, int(round(seconds)))
+    hours = total // 3600
+    minutes = (total % 3600) // 60
+    secs = total % 60
+    if hours:
+        return f"{hours}:{minutes:02d}:{secs:02d}"
+    return f"{minutes:02d}:{secs:02d}"
+
+
+def load_finalize_report(paths: ProjectPaths) -> tuple[dict, list[dict]]:
+    """Load output/report.json and return sorted report tracks."""
+    if not paths.report_json.exists():
+        raise FinalizeUploadError(f"Missing report.json: {paths.report_json}")
+
+    try:
+        with open(paths.report_json, "r", encoding="utf-8") as f:
+            report = json.load(f)
+    except Exception as e:
+        raise FinalizeUploadError(f"Could not read report.json: {e}") from e
+
+    tracks = sorted(report.get("tracks", []), key=lambda item: item.get("order", 999))
+    if not tracks:
+        raise FinalizeUploadError("report.json has no tracks")
+
+    audio_files = sorted(list(paths.tracks_dir.glob("*.mp3")) + list(paths.tracks_dir.glob("*.wav")))
+    audio_names = {path.name for path in audio_files}
+    report_names = {track.get("filename") for track in tracks}
+
+    missing_audio = sorted(name for name in report_names if name not in audio_names)
+    extra_audio = sorted(name for name in audio_names if name not in report_names)
+    if missing_audio or extra_audio:
+        detail = []
+        if missing_audio:
+            detail.append(f"missing audio for report tracks: {', '.join(missing_audio)}")
+        if extra_audio:
+            detail.append(f"audio not present in report: {', '.join(extra_audio)}")
+        raise FinalizeUploadError("; ".join(detail))
+
+    return report, tracks
+
+
+def git_repo_root(path: Path) -> Path:
+    """Return git repository root for path."""
+    result = subprocess.run(
+        ["git", "-C", str(path), "rev-parse", "--show-toplevel"],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        raise FinalizeUploadError("Could not resolve git repository root")
+    return Path(result.stdout.strip())
+
+
+def read_git_track_sources(series_path: Path, commitish: str) -> list[TrackSource]:
+    """Read input/tracks/*.txt sources from a git tree."""
+    repo_root = git_repo_root(series_path)
+    try:
+        series_rel = series_path.resolve().relative_to(repo_root.resolve()).as_posix()
+    except ValueError as e:
+        raise FinalizeUploadError(f"Series path is not inside git repo: {series_path}") from e
+
+    tracks_rel = f"{series_rel}/input/tracks"
+    list_result = subprocess.run(
+        ["git", "-C", str(repo_root), "ls-tree", "-r", "--name-only", commitish, "--", tracks_rel],
+        capture_output=True,
+        text=True,
+    )
+    if list_result.returncode != 0:
+        raise FinalizeUploadError(
+            f"Could not read git tree '{commitish}': {list_result.stderr.strip() or list_result.stdout.strip()}"
+        )
+
+    paths = [line.strip() for line in list_result.stdout.splitlines() if line.strip().endswith(".txt")]
+    if not paths:
+        raise FinalizeUploadError(f"No txt sources found in git tree {commitish}:{tracks_rel}")
+
+    sources = []
+    for rel_path in paths:
+        show_result = subprocess.run(
+            ["git", "-C", str(repo_root), "show", f"{commitish}:{rel_path}"],
+            capture_output=True,
+            text=True,
+        )
+        if show_result.returncode != 0:
+            raise FinalizeUploadError(f"Could not restore {rel_path} from {commitish}")
+        sources.append(parse_track_source(rel_path, show_result.stdout))
+    return sources
+
+
+def read_filesystem_track_sources(paths: ProjectPaths) -> list[TrackSource]:
+    """Read existing input/tracks/*.txt sources from disk."""
+    sources = []
+    for txt_path in sorted(paths.tracks_dir.glob("*.txt")):
+        sources.append(parse_track_source(str(txt_path), txt_path.read_text(encoding="utf-8")))
+    return sources
+
+
+def collect_track_sources(paths: ProjectPaths, restore_from: Optional[str]) -> tuple[list[TrackSource], str]:
+    """Collect source txts from disk, or from git when disk txts are absent."""
+    filesystem_sources = read_filesystem_track_sources(paths)
+    if filesystem_sources:
+        return filesystem_sources, "filesystem"
+
+    if restore_from:
+        return read_git_track_sources(paths.base, restore_from), f"git:{restore_from}"
+
+    raise FinalizeUploadError(
+        "No input/tracks/*.txt sources found. Pass --restore-from <commitish> "
+        "or run after restoring txt sources."
+    )
+
+
+def match_sources_to_report_tracks(sources: list[TrackSource], report_tracks: list[dict]) -> dict[int, TrackSource]:
+    """Match parsed txt sources to final report tracks by normalized title."""
+    by_key: dict[str, TrackSource] = {}
+    duplicate_keys = set()
+
+    for source in sources:
+        labels = {source.source_title, source.label}
+        for label in labels:
+            for key in title_match_keys(label):
+                if key in by_key and by_key[key] is not source:
+                    duplicate_keys.add(key)
+                else:
+                    by_key[key] = source
+
+    if duplicate_keys:
+        raise FinalizeUploadError(f"Duplicate source title keys: {', '.join(sorted(duplicate_keys))}")
+
+    matched = {}
+    missing = []
+    for track in report_tracks:
+        keys = title_match_keys(track.get("title", ""))
+        source = next((by_key[key] for key in keys if key in by_key), None)
+        if not source:
+            missing.append(track.get("title", "(untitled)"))
+            continue
+        matched[int(track.get("order"))] = source
+
+    if missing:
+        raise FinalizeUploadError(f"Missing txt source for report track(s): {', '.join(missing)}")
+
+    if len(matched) != len(report_tracks):
+        raise FinalizeUploadError(
+            f"Source/report count mismatch: matched {len(matched)} of {len(report_tracks)} report tracks"
+        )
+
+    return matched
+
+
+def compute_track_timestamps(report: dict, report_tracks: list[dict]) -> tuple[dict[int, str], dict[int, str]]:
+    """Compute first-pass and repeat-pass timestamps from report.json."""
+    params = report.get("processing_params", {})
+    fade = float(params.get("fade", DEFAULT_CROSSFADE_SEC) or 0)
+    repeat = int(params.get("repeat", 1) or 1)
+
+    offsets = {}
+    current = 0.0
+    for idx, track in enumerate(report_tracks):
+        order = int(track.get("order"))
+        offsets[order] = current
+        current += float(track.get("duration", 0) or 0)
+        if idx < len(report_tracks) - 1:
+            current -= fade
+
+    first_pass_duration = current
+    first = {order: format_timestamp(offset) for order, offset in offsets.items()}
+    repeated = {}
+    if repeat >= 2:
+        repeated = {order: format_timestamp(first_pass_duration + offset) for order, offset in offsets.items()}
+    return first, repeated
+
+
+def extract_upload_tracklist_timestamps(concept_text: str) -> dict[int, str]:
+    """Extract first-pass upload-facing tracklist timestamps from concept.md, if present."""
+    timestamps = {}
+    pattern = re.compile(r"^[^\n\d]*(\d{1,2}:\d{2}(?::\d{2})?)\s*-\s*(\d{2})\.\s+", re.MULTILINE)
+    for match in pattern.finditer(concept_text):
+        order = int(match.group(2))
+        if order not in timestamps:
+            timestamps[order] = match.group(1)
+    return timestamps
+
+
+def fenced_text_block(value: str) -> list[str]:
+    """Return markdown fenced text block lines."""
+    safe = value.replace("```", "`\u200b``")
+    return ["```text", safe.rstrip(), "```"]
+
+
+def build_final_track_sources_section(
+    report: dict,
+    report_tracks: list[dict],
+    matched_sources: dict[int, TrackSource],
+    source_origin: str,
+) -> tuple[str, list[str]]:
+    """Build the concept.md Final Track Sources archive section."""
+    first_ts, repeat_ts = compute_track_timestamps(report, report_tracks)
+    warnings = []
+    generated_at = datetime.now().isoformat(timespec="seconds")
+
+    lines = [
+        "## Final Track Sources",
+        "",
+        f"> Generated by `wavvy.py finalize-upload` at {generated_at}.",
+        f"> Source origin: `{source_origin}`. `Source Checksum` is SHA-256 of the source txt content.",
+        "",
+    ]
+
+    for track in report_tracks:
+        order = int(track.get("order"))
+        source = matched_sources[order]
+        metadata = source.metadata
+        source_type = metadata.get("Type") or (str(track.get("mood", ""))[:1] if track.get("mood") else "")
+        source_bpm = metadata.get("BPM") or str(track.get("bpm", ""))
+        exclude = source.exclude or "None"
+
+        lines.extend([
+            f"### {order:02d}. {track.get('title', '')}",
+            "",
+            f"- Timestamp: {first_ts.get(order, '')}",
+        ])
+        if order in repeat_ts:
+            lines.append(f"- Repeat Timestamp: {repeat_ts[order]}")
+        lines.extend([
+            f"- Filename: `{track.get('filename', '')}`",
+            f"- Title: {track.get('title', '')}",
+            f"- Mood: {track.get('mood', '')}",
+            f"- Genre: {track.get('genre', '')}",
+            f"- Type: {source_type}",
+            f"- BPM: {track.get('bpm', source_bpm)}",
+            f"- Key: {metadata.get('Key', '') or 'Unknown'}",
+            f"- Length: {metadata.get('Length', '') or 'Unknown'}",
+            f"- Vocal: {metadata.get('Vocal', '') or 'Unknown'}",
+            f"- SHA-256: `{track.get('sha256', '')}`",
+            f"- Source Title: {source.source_title or 'Unknown'}",
+            f"- Source Checksum: `{source.sha256}`",
+            "",
+            "#### STYLE",
+            "",
+            *fenced_text_block(source.style),
+            "",
+            "#### EXCLUDE",
+            "",
+            *fenced_text_block(exclude),
+            "",
+            "#### LYRICS",
+            "",
+            *fenced_text_block(source.lyrics),
+            "",
+        ])
+        if source.meta:
+            lines.extend([
+                "#### META",
+                "",
+                *fenced_text_block(source.meta),
+                "",
+            ])
+
+    return "\n".join(lines).rstrip() + "\n", warnings
+
+
+def replace_final_track_sources_section(concept_text: str, section: str) -> str:
+    """Create or replace the Final Track Sources section in concept.md."""
+    heading = re.search(r"^## Final Track Sources\s*$", concept_text, flags=re.MULTILINE)
+    if heading:
+        next_heading = re.search(r"^## ", concept_text[heading.end():], flags=re.MULTILINE)
+        end = heading.end() + next_heading.start() if next_heading else len(concept_text)
+        return concept_text[:heading.start()].rstrip() + "\n\n" + section.rstrip() + "\n" + concept_text[end:].lstrip()
+
+    footer = re.search(r"\n\*concept\.md[^*]*\*\s*$", concept_text)
+    if footer:
+        return concept_text[:footer.start()].rstrip() + "\n\n" + section.rstrip() + "\n\n" + concept_text[footer.start() + 1:]
+
+    return concept_text.rstrip() + "\n\n" + section.rstrip() + "\n"
+
+
+def validate_final_track_sources_archive(concept_text: str, report_tracks: list[dict]) -> list[str]:
+    """Validate that concept.md contains a complete Final Track Sources archive."""
+    errors = []
+    heading = re.search(r"^## Final Track Sources\s*$", concept_text, flags=re.MULTILINE)
+    if not heading:
+        return ["Missing ## Final Track Sources section"]
+
+    next_heading = re.search(r"^## ", concept_text[heading.end():], flags=re.MULTILINE)
+    end = heading.end() + next_heading.start() if next_heading else len(concept_text)
+    section = concept_text[heading.start():end]
+
+    headings = re.findall(r"^### (\d{2})\. (.+)$", section, flags=re.MULTILINE)
+    if len(headings) != len(report_tracks):
+        errors.append(f"Final Track Sources count {len(headings)} != report track count {len(report_tracks)}")
+
+    for track in report_tracks:
+        order = int(track.get("order"))
+        title = track.get("title", "")
+        filename = track.get("filename", "")
+        block_match = re.search(
+            rf"^### {order:02d}\. .*$([\s\S]*?)(?=^### \d{{2}}\. |\Z)",
+            section,
+            flags=re.MULTILINE,
+        )
+        if not block_match:
+            errors.append(f"Missing archive block for track {order:02d}. {title}")
+            continue
+        block = block_match.group(0)
+        for required in [
+            f"- Filename: `{filename}`",
+            "#### STYLE",
+            "#### EXCLUDE",
+            "#### LYRICS",
+            "- Source Checksum: `",
+        ]:
+            if required not in block:
+                errors.append(f"Track {order:02d}. {title}: missing {required}")
+
+    return errors
+
+
+def materialize_restored_sources(
+    paths: ProjectPaths,
+    report_tracks: list[dict],
+    matched_sources: dict[int, TrackSource],
+) -> None:
+    """Write restored txt sources back to input/tracks with current order prefixes."""
+    ensure_dir(paths.tracks_dir)
+    for track in report_tracks:
+        order = int(track.get("order"))
+        source = matched_sources[order]
+        safe_title = re.sub(r"[/:]+", "-", track.get("title", "")).strip()
+        dest = paths.tracks_dir / f"{order:02d}_{safe_title}.txt"
+        content = source.content
+        if re.search(r"^Order:\s*.*$", content, flags=re.MULTILINE):
+            content = re.sub(r"^Order:\s*.*$", f"Order: {order:02d}", content, count=1, flags=re.MULTILINE)
+        else:
+            content = re.sub(r"^(Track:\s*.*)$", rf"\1\nOrder: {order:02d}", content, count=1, flags=re.MULTILINE)
+        dest.write_text(content, encoding="utf-8")
+
+
+def delete_track_txt_sources(paths: ProjectPaths) -> int:
+    """Delete filesystem txt sources after successful archive verification."""
+    deleted = 0
+    for txt_path in sorted(paths.tracks_dir.glob("*.txt")):
+        txt_path.unlink()
+        deleted += 1
+    return deleted
+
+
+def finalize_upload_sources(
+    paths: ProjectPaths,
+    check: bool = False,
+    keep_txt: bool = False,
+    restore_from: Optional[str] = None,
+) -> None:
+    """Archive final track sources into concept.md and optionally delete txt sources."""
+    concept_path = paths.base / "concept.md"
+    if not concept_path.exists():
+        raise FinalizeUploadError(f"Missing concept.md: {concept_path}")
+
+    report, report_tracks = load_finalize_report(paths)
+    sources, source_origin = collect_track_sources(paths, restore_from)
+    matched_sources = match_sources_to_report_tracks(sources, report_tracks)
+
+    concept_text = concept_path.read_text(encoding="utf-8")
+    upload_timestamps = extract_upload_tracklist_timestamps(concept_text)
+    computed_timestamps, _ = compute_track_timestamps(report, report_tracks)
+    for order, timestamp in upload_timestamps.items():
+        if order in computed_timestamps and computed_timestamps[order] != timestamp:
+            log_warning(
+                f"Track {order:02d} upload timestamp {timestamp} != report timestamp {computed_timestamps[order]}"
+            )
+
+    section, _ = build_final_track_sources_section(report, report_tracks, matched_sources, source_origin)
+    new_concept_text = replace_final_track_sources_section(concept_text, section)
+    archive_errors = validate_final_track_sources_archive(new_concept_text, report_tracks)
+    if archive_errors:
+        raise FinalizeUploadError("Archive validation failed:\n  - " + "\n  - ".join(archive_errors))
+
+    log_success(f"Final Track Sources archive ready ({len(report_tracks)} tracks, source={source_origin})")
+
+    if check:
+        log_info("Dry run only; concept.md and txt files were not changed.")
+        return
+
+    tmp_path = concept_path.with_name(f"{concept_path.name}.tmp")
+    tmp_path.write_text(new_concept_text, encoding="utf-8")
+    tmp_path.replace(concept_path)
+    log_success(f"Updated concept archive: {concept_path}")
+
+    filesystem_txts = list(paths.tracks_dir.glob("*.txt"))
+    if keep_txt:
+        if not filesystem_txts and restore_from:
+            materialize_restored_sources(paths, report_tracks, matched_sources)
+            log_success(f"Materialized restored txt sources in: {paths.tracks_dir}")
+        else:
+            log_info("Keeping existing txt sources.")
+        return
+
+    deleted = delete_track_txt_sources(paths)
+    if deleted:
+        log_success(f"Deleted archived txt sources: {deleted}")
+    else:
+        log_info("No filesystem txt sources to delete; archive was built from restored git sources.")
+
+
+# =============================================================================
 # UTILITY FUNCTIONS - TIME PARSING
 # =============================================================================
 
@@ -1445,6 +1955,33 @@ def validate(path: Path):
     click.echo(f"  Total Duration: {total_duration:.1f}s ({total_duration/60:.1f} min)")
     click.echo("")
     click.echo(click.style("VALIDATION PASSED", fg='green', bold=True))
+
+
+@cli.command("finalize-upload")
+@click.argument('path', type=click.Path(exists=True, file_okay=False, path_type=Path))
+@click.option('--check', is_flag=True, help='Dry run only; do not write concept.md or delete txt sources')
+@click.option('--keep-txt', is_flag=True, help='Keep txt sources after archiving')
+@click.option('--restore-from', default=None, help='Read missing input/tracks/*.txt sources from a git commitish')
+def finalize_upload(path: Path, check: bool, keep_txt: bool, restore_from: Optional[str]):
+    """
+    Archive final Style/Exclude/Lyrics sources into concept.md for upload.
+
+    This command is the only supported path for deleting input/tracks/*.txt
+    after all tracks have passed and report.json exists.
+    """
+    click.echo(click.style("\n=== WAVVY FINALIZE UPLOAD ===\n", fg='cyan', bold=True))
+
+    paths = ProjectPaths(path)
+    try:
+        finalize_upload_sources(paths, check=check, keep_txt=keep_txt, restore_from=restore_from)
+    except FinalizeUploadError as e:
+        log_error(str(e))
+        click.echo("")
+        click.echo(click.style("FINALIZE UPLOAD FAILED", fg='red', bold=True))
+        sys.exit(1)
+
+    click.echo("")
+    click.echo(click.style("FINALIZE UPLOAD PASSED", fg='green', bold=True))
 
 
 @cli.command()

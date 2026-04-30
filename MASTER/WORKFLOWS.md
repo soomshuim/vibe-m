@@ -21,6 +21,7 @@
 - ❌ txt와 concept.md 동시 수정
 - ❌ 컨펌 전 concept.md 반영
 - ❌ 채팅으로만 제시하고 txt 생성 안 함
+- ❌ `finalize-upload` PASS 없이 `input/tracks/*.txt` 삭제
 
 ### 파일 네이밍
 | 파일명 | 용도 |
@@ -55,6 +56,17 @@ Length: 3min+
 === LYRICS ===
 {작사 프롬프트 또는 비움 — LYRICS.md §1 참조}
 ```
+
+### 업로드 FINAL 시 SSOT 전환
+
+전곡 PASS + 패키징 완료 후에만 `concept.md`를 최종 아카이브 SSOT로 승격한다.
+
+```bash
+python3 wavvy.py finalize-upload SERIES/[시리즈] --check
+python3 wavvy.py finalize-upload SERIES/[시리즈]
+```
+
+`finalize-upload`는 `input/tracks/*.txt`의 STYLE/EXCLUDE/LYRICS와 `output/report.json`의 실제 타임스탬프를 `concept.md > Final Track Sources`로 병합한다. 병합 검증이 통과한 경우에만 txt 삭제가 허용된다. 삭제된 txt를 git history에서 복구해야 할 때는 `--restore-from <commitish>`를 사용한다.
 
 ---
 
