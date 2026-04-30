@@ -1,5 +1,15 @@
 ---
 HANDOFF: Codex -> User
+Date: 2026-04-30 23:34:54 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: 20-00 Final Track Sources를 사용자 제공 final prompt/lyrics 기준으로 보정했다. 12/15/19/20은 실제 교체, 05/06/13은 본문 일치 확인 후 manual final confirmation과 stale 트랙 번호를 정리했다. YouTube 자막 테스트용으로 타이밍 제외 transcript와 report 기반 추정 SRT를 생성했고, 비가사 마크업 제거/SRT 문법/시리즈 validate를 통과했다.
+Next-TODO: YouTube에 먼저 `SERIES/20-00/output/youtube_subtitles_ko_no_timing.txt`를 타이밍 제외로 업로드 테스트. 실패하거나 싱크가 낮으면 `SERIES/20-00/output/youtube_subtitles_ko_timed_estimated.srt`를 타이밍 포함으로 테스트. 더 정확한 방식으로 `wavvy-subtitles` 스킬/하네스화 후 남은 시리즈 일괄 생성.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Codex -> User
 Date: 2026-04-30 22:23:22 +0900
 Project: /Users/zen/Project/wavvy
 Agent: Codex

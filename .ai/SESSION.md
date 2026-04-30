@@ -1,8 +1,18 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-30 (21차 업데이트 — finalize-upload 하네스 + Final Track Sources 아카이브)
+> Last updated: 2026-04-30 (22차 업데이트 — 20-00 Final Track Sources 최종 보정 + YouTube 자막 테스트 산출물)
 
 ## 진행 중
+
+- **20-00 Final Track Sources 최종 보정 + YouTube 자막 테스트 산출물** (2026-04-30 22차)
+  - ✅ **최종 소스 보정**: 사용자 제공 final prompt/lyrics 기준으로 05 Old Cassette, 06 Real Talk, 12 Small Talk, 13 Concrete, 15 Old Page, 19 Side Street, 20 Slow Glow의 Final Track Sources를 정리
+  - ✅ **실제 교체**: 12/15/19/20은 STYLE/EXCLUDE/LYRICS 또는 LYRICS를 교체하고 manual final replacement META 추가
+  - ✅ **확인/메타 정정**: 05/06/13은 제공본과 본문 일치 확인 후 manual final confirmation META 추가, stale Track 13/15 표기를 현재 05/13 기준으로 수정
+  - ✅ **Source checksum 주석 보정**: Final Track Sources 상단에 manual override가 있는 track은 checksum이 pre-override git source checksum일 수 있음을 명시
+  - ✅ **YouTube 자막 테스트 산출물**: `output/youtube_subtitles_ko_no_timing.txt`(타이밍 제외 transcript)와 `output/youtube_subtitles_ko_timed_estimated.srt`(report 기반 추정 SRT) 생성. 둘 다 `output/` ignored 로컬 산출물
+  - ✅ **자막 정리 규칙**: 가사 외 `[section]`, 괄호 지시문, parens/brackets, STYLE/EXCLUDE/META, timestamps/source metadata 제거. 영상 2회 반복에 맞춰 20곡 x2 반영
+  - ✅ **검증 PASS**: no-timing 마크업 0건, SRT 1,732 cues 문법/시간 겹침 0건, `git diff --check`, `python3 wavvy.py validate SERIES/20-00`
+  - **남은 TODO**: YouTube에 `.txt` 먼저 업로드 테스트, 실패/끝부분 잘림 시 `.srt` 테스트. 실제 정확도가 높은 방식으로 `wavvy-subtitles` 스킬/하네스화 후 남은 시리즈 일괄 생성.
 
 - **20-00 finalize-upload 하네스 + Final Track Sources 아카이브** (2026-04-30 21차)
   - ✅ **업로드 전환 하네스 구현**: `wavvy.py finalize-upload <series>` 추가. `--check`, `--keep-txt`, `--restore-from COMMITISH` 지원
