@@ -412,17 +412,97 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 
 ---
 
-## YouTube Metadata v0.4 (초안)
+## YouTube Metadata v0.5 (FINAL)
 
-### 제목 후보
-- `[20:00] 💪 AFTER HOURS WORKOUT — KOREAN HARD HIP-HOP · 저녁 8시 운동`
-- `밤 여덟시 운동 BGM · KOREAN HARD HIP-HOP · 헬스장 · 러닝 · 홈트`
+### 제목
+```
+Playlist | 20:00 | 💪 앞으로 이 플리 없인 운동 못할걸?! | Rage · Trap · Boombap | 헬스장·러닝 BGM | Wavvy
+```
+
+### Context Mode
+After-Hours Workout — 퇴근 후 밤 운동. Rage · Trap · Boombap 중심의 강한 힙합 플리. 헬스장/러닝/홈트/클럽 무드까지 커버.
+
+### 설명
+```
+💪 20:00, 앞으로 이 플리 없인 운동 못할걸?!
+Rage · Trap · Boombap으로 밀어붙이는 밤 운동 플리 - Wavvy
+
+퇴근하고 몸은 무거운데,
+이어폰을 꽂는 순간 808이 먼저 몸을 깨우고,
+러닝머신 위에서는 발이 박자에 맞춰 붙고,
+마지막 세트 앞에서는 훅이 한 번 더 등을 밀어주는 시간.
+
+헬스장, 러닝, 홈트, 야간 드라이브,
+그리고 운동 끝나고도 쉽게 꺼지지 않는 클럽 무드까지.
+
+Wavvy는 우리말 가사로, 그 시간들의 에너지를 기록합니다.
+──────────────
+Track List
+💪 00:00 - 01. Paycheck
+💪 02:31 - 02. Night Rider
+💪 05:08 - 03. Bottom to the Top
+💪 08:50 - 04. Yang Gang
+💪 11:17 - 05. Old Cassette
+💪 15:05 - 06. Real Talk
+💪 17:32 - 07. LLC (Low Light Code)
+💪 20:05 - 08. Boomerang
+💪 22:54 - 09. Black Mirror
+💪 26:44 - 10. Bottom Line
+💪 31:18 - 11. Overtime Flame
+💪 35:06 - 12. Small Talk
+💪 38:54 - 13. Concrete
+💪 41:44 - 14. Cold Stack
+💪 44:50 - 15. Old Page
+💪 48:29 - 16. Rewrite
+💪 51:45 - 17. Fake
+💪 55:09 - 18. Engine
+💪 58:13 - 19. Side Street
+💪 1:01:39 - 20. Slow Glow
+─────────────
+💪 1:05:38 - 01. Paycheck (반복)
+💪 1:08:09 - 02. Night Rider
+💪 1:10:46 - 03. Bottom to the Top
+💪 1:14:28 - 04. Yang Gang
+💪 1:16:55 - 05. Old Cassette
+💪 1:20:43 - 06. Real Talk
+💪 1:23:10 - 07. LLC (Low Light Code)
+💪 1:25:42 - 08. Boomerang
+💪 1:28:31 - 09. Black Mirror
+💪 1:32:22 - 10. Bottom Line
+💪 1:36:56 - 11. Overtime Flame
+💪 1:40:44 - 12. Small Talk
+💪 1:44:31 - 13. Concrete
+💪 1:47:21 - 14. Cold Stack
+💪 1:50:28 - 15. Old Page
+💪 1:54:06 - 16. Rewrite
+💪 1:57:23 - 17. Fake
+💪 2:00:46 - 18. Engine
+💪 2:03:50 - 19. Side Street
+💪 2:07:17 - 20. Slow Glow
+──────────────
+Music for your space, 24 hours a day.
+All tracks feature Korean lyrics.
+
+🎵 Music: Wavvy
+Copyright Ⓒ Wavvy. All rights reserved.
+──────────────
+#운동BGM #헬스장BGM #러닝BGM #홈트BGM
+#KoreanHipHop #WorkoutHipHop #클럽음악
+#Rage #Trap #Boombap #Wavvy #웨이비
+```
 
 ### 태그
-`힙합` `한국힙합` `K-힙합` `운동BGM` `헬스장BGM` `러닝BGM` `홈트BGM` `트랩` `Rage` `Hardcore Trap` `K-Drill` `Faster Trap` `붐뱁` `퇴근후운동` `저녁운동` `그라인드` `Workout`
+```
+운동BGM, 헬스장BGM, 러닝BGM, 홈트BGM, 운동음악, 클럽음악, 저녁운동, 퇴근후운동, 밤운동, Workout Music, Gym Music, Running Music, Home Workout Music, Korean Hip Hop, Korean Trap, K HipHop, 한국힙합, 힙합믹스, Rage, Rage Trap, Trap, Boombap, Boom Bap, K-Drill, Dark Trap, Hard Hip Hop, Workout Hip Hop, Playlist, 플리, 음악추천, Wavvy, 웨이비, AI Music, PM2000
+```
 
-### 해시태그
-`#운동BGM #헬스장음악 #KoreanHipHop #WorkoutHipHop #저녁8시운동 #그라인드 #트랩 #Rage`
+### 고정 댓글
+```
+앞으로 이 플리 없인 운동 못할걸?! 💪
+
+오늘 운동에서 제일 잘 붙은 트랙은 몇 번이었나요?
+타임스탬프로 남겨주세요.
+```
 
 ### 썸네일 컨셉
 - 메인: 헬스장 어두운 배경 + 네온 악센트 + 실루엣

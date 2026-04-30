@@ -536,6 +536,15 @@ def validate_project(paths: ProjectPaths) -> ValidationResult:
     else:
         log_success(f"Thumbnail found: {paths.thumbnail.name}")
 
+    missing_metadata = validate_upload_metadata(paths)
+    if missing_metadata:
+        result.add_warning(
+            "Incomplete YouTube metadata in concept.md: "
+            f"missing {', '.join(missing_metadata)}"
+        )
+    else:
+        log_success("YouTube metadata found in concept.md")
+
     # Sort tracks by order
     result.tracks = sorted(tracks, key=lambda t: t.order)
 
@@ -1168,12 +1177,88 @@ def generate_provenance(
 # UPLOAD CSV GENERATION
 # =============================================================================
 
-# NOTE: draft_description.txt generation removed (2026-03-07)
-# Use concept.md YouTube Draft section instead
+# NOTE: draft_description.txt generation removed (2026-03-07).
+# concept.md is the SSOT for YouTube metadata.
 
 
-# Former TitleMeta, parse_title_meta, generate_title, generate_intro_and_comment,
-# and generate_description functions removed - concept.md is now SSOT for YouTube metadata
+def _strip_markdown_value(value: str) -> str:
+    """Normalize a markdown subsection value for upload metadata."""
+    value = value.strip()
+    if not value:
+        return ""
+
+    lines = value.splitlines()
+    if lines and lines[0].strip().startswith("```"):
+        if len(lines) >= 2 and lines[-1].strip().startswith("```"):
+            return "\n".join(lines[1:-1]).strip()
+        return "\n".join(lines[1:]).strip()
+
+    if value.startswith("`") and value.endswith("`") and value.count("`") == 2:
+        return value[1:-1].strip()
+
+    if value.startswith("- "):
+        bullets = [
+            line[2:].strip().strip("`")
+            for line in lines
+            if line.strip().startswith("- ")
+        ]
+        if len(bullets) == 1:
+            return bullets[0]
+
+    return value
+
+
+def parse_concept_youtube_metadata(paths: ProjectPaths) -> dict:
+    """Parse final YouTube metadata from the series concept.md section."""
+    concept_path = paths.base / "concept.md"
+    if not concept_path.exists():
+        return {}
+
+    try:
+        text = concept_path.read_text(encoding="utf-8")
+    except Exception as e:
+        log_warning(f"Could not read concept.md for upload metadata: {e}")
+        return {}
+
+    heading = re.search(r"^## YouTube (?:Metadata|Draft).*$", text, flags=re.MULTILINE)
+    if not heading:
+        return {}
+
+    section_start = heading.end()
+    next_heading = re.search(r"^## ", text[section_start:], flags=re.MULTILINE)
+    section_end = section_start + next_heading.start() if next_heading else len(text)
+    section = text[section_start:section_end]
+
+    labels = {
+        "title": [r"Title", r"제목"],
+        "description": [r"Description", r"설명"],
+        "tags": [r"Tags", r"태그(?:\s*\([^)]*\))?"],
+        "hashtags": [r"Hashtags", r"해시태그"],
+        "pinned_comment": [r"Pinned Comment", r"고정 댓글"],
+    }
+    metadata = {}
+
+    for key, label_patterns in labels.items():
+        for label_pattern in label_patterns:
+            match = re.search(
+                rf"^### {label_pattern}\s*$(.*?)(?=^### |\Z)",
+                section,
+                flags=re.MULTILINE | re.DOTALL,
+            )
+            if match:
+                value = _strip_markdown_value(match.group(1))
+                if value:
+                    metadata[key] = value
+                    break
+
+    return metadata
+
+
+def validate_upload_metadata(paths: ProjectPaths) -> list[str]:
+    """Return missing required YouTube metadata fields from concept.md."""
+    metadata = parse_concept_youtube_metadata(paths)
+    required = ["title", "description", "tags"]
+    return [field for field in required if not metadata.get(field)]
 
 
 def generate_upload_csv(
@@ -1182,22 +1267,45 @@ def generate_upload_csv(
     output_path: Path
 ) -> bool:
     """Generate upload.csv for batch uploading."""
-    # Generate title from first few tracks or folder name
+    metadata = parse_concept_youtube_metadata(paths)
+
+    # Fallback title from folder name
     series_name = paths.base.parent.name if paths.base.parent != paths.base else "Playlist"
     date_str = paths.base.name
     title = f"{series_name} - {date_str}"
+    description = ""
 
-    # Collect tags
+    # Fallback tags from parsed track filenames
     tags = set()
     for track in tracks:
         tags.add(track.mood)
         tags.add(track.genre)
+    tag_text = ','.join(sorted(tags))
+
+    if metadata:
+        title = metadata.get("title", title)
+        description = metadata.get("description", "")
+        tag_text = metadata.get("tags", tag_text)
+
+        missing = validate_upload_metadata(paths)
+        if missing:
+            log_warning(
+                "Incomplete YouTube metadata in concept.md "
+                f"(missing: {', '.join(missing)}); upload.csv used fallbacks where needed"
+            )
+        else:
+            log_success("YouTube metadata loaded from concept.md")
+    else:
+        log_warning(
+            "Missing YouTube Metadata section in concept.md; "
+            "upload.csv uses fallback title/tags and empty description"
+        )
 
     row = {
         'video_path': str(paths.final_mkv),
         'title': title,
-        'description': '',  # See concept.md "YouTube Draft" section for description
-        'tags': ','.join(sorted(tags)),
+        'description': description,
+        'tags': tag_text,
         'thumbnail_path': str(paths.thumbnail),
         'visibility': 'private'  # Default to private for safety
     }
