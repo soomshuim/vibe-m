@@ -1,5 +1,15 @@
 ---
 HANDOFF: Codex -> User
+Date: 2026-04-30 21:25:15
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: 20-00 YouTube 업로드 문안을 `concept.md` 최상단 SSOT로 확정. 최종 제목은 `Playlist | 20:00 | 💪 앞으로 이 플리 없이 절대 운동 못할걸?! | Drill · Rage · Trap · Boombap | 헬스·러닝 BGM | Wavvy`. 설명문은 `20:00, 앞으로는 이 플리 없이 절대 운동 못할 거예요.` + `아드레날린 강제 폭주시키는 Drill · Rage · Trap · Boombap Hiphop Mix Workout 플리 - Wavvy` 시작으로 정리했고, 사용자 제공 태그 리스트를 해시태그 블록으로 변환해 반영. `wavvy.py`는 이제 `concept.md`의 `## YouTube Metadata`/`## YouTube Draft`에서 `제목/설명/태그`를 읽어 validate warning 및 upload.csv 자동 생성에 사용한다. concept.md 외 YouTube 보조 파일(`youtube_*.txt`, `youtube_upload_info.md`, `upload.csv`)은 삭제했고, 사용자가 `final.mkv`도 삭제함.
+Next-TODO: 영상이나 upload.csv가 다시 필요하면 `wavvy.py pack SERIES/20-00 -y`로 재생성. 업로드 문안은 `SERIES/20-00/concept.md` 최상단 metadata를 SSOT로 사용.
+Commits: c9f2192, fe8239f, 5d699b1, 4314c21
+---
+
+---
+HANDOFF: Codex -> User
 Date: 2026-04-30 20:45:26
 Project: /Users/zen/Project/wavvy
 Agent: Codex

@@ -1,8 +1,18 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-30 (19차 업데이트 — 20-00 WAV 리네임 + YouTube 영상 패키징)
+> Last updated: 2026-04-30 (20차 업데이트 — 20-00 YouTube Metadata SSOT 하네스 + 업로드 문안 확정)
 
 ## 진행 중
+
+- **20-00 YouTube Metadata SSOT 하네스 + 업로드 문안 확정** (2026-04-30 20차)
+  - ✅ **`concept.md` 최상단 배치**: `## YouTube Metadata v0.5 (FINAL)`를 문서 상단으로 이동해 업로드 직전 바로 확인 가능하게 정리
+  - ✅ **최종 제목 확정**: `Playlist | 20:00 | 💪 앞으로 이 플리 없이 절대 운동 못할걸?! | Drill · Rage · Trap · Boombap | 헬스·러닝 BGM | Wavvy`
+  - ✅ **최종 설명문 확정**: `20:00, 앞으로는 이 플리 없이 절대 운동 못할 거예요.` + `아드레날린 강제 폭주시키는 Drill · Rage · Trap · Boombap Hiphop Mix Workout 플리 - Wavvy`로 시작
+  - ✅ **해시태그 블록 정리**: 사용자 제공 태그 리스트를 `#운동BGM ... #showmethemoney #쇼미더머니` 형태로 description 하단에 반영
+  - ✅ **하네스 보강**: `wavvy.py validate/pack`이 `concept.md`의 `## YouTube Metadata` 또는 `## YouTube Draft`에서 `제목/설명/태그`를 파싱. 누락 시 warning, pack 시 `upload.csv` 자동 채움
+  - ✅ **기존 포맷 호환 검증**: 12-00/14-00/15-00/18-00의 기존 `YouTube Draft/Metadata` 포맷도 파싱 PASS
+  - ✅ **출력 정리**: `concept.md`를 SSOT로 남기고 별도 YouTube 보조 파일(`youtube_*.txt`, `youtube_upload_info.md`, `upload.csv`) 삭제. 사용자가 `final.mkv`도 삭제 완료
+  - **남은 TODO**: 필요 시 `wavvy.py pack SERIES/20-00 -y`로 영상/`upload.csv` 재생성. 업로드 문안은 `concept.md` 최상단 metadata를 사용.
 
 - **20-00 WAV 리네임 + YouTube 영상 패키징 완료** (2026-04-30 19차)
   - ✅ **WAV 20곡 리네임 완료**: `concept.md` v0.6 최종 러닝 오더 기준 `NN__Title__Style__Genre__BPM.wav` 형식으로 정리
