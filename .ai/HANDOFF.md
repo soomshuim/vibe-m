@@ -1,5 +1,15 @@
 ---
 HANDOFF: Codex -> User
+Date: 2026-04-30 20:45:26
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: 20-00 다운로드 WAV 20개를 v0.6 최종 러닝 오더 기준으로 리네임하고 YouTube 영상 패키징 완료. 입력상 `17. Engine.wav` / `18. Fake.wav`는 concept 최종맵과 반대였으므로 제목 기준으로 `17 Fake` / `18 Engine`으로 교정. `wavvy.py validate` PASS 후 `wavvy.py pack SERIES/20-00 -y` 자동모드로 -14 LUFS 정규화, 0.8s 크로스페이드, 20곡 x2 반복 머지, `loop.png` 기반 H.264+FLAC `output/final.mkv` 생성. 초기 render의 61초 container tail은 remux-trim해 final duration 7,879s로 보정했고 video/audio decode QA PASS.
+Next-TODO: `SERIES/20-00/output/final.mkv`와 `SERIES/20-00/input/thumb.jpg`로 YouTube 업로드. 더 작은 파일이 필요하면 AAC MP4 copy/transcode 생성.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Codex -> User
 Date: 2026-04-30 20:05:50
 Project: /Users/zen/Project/wavvy
 Agent: Codex

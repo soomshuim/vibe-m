@@ -1,8 +1,18 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-30 (18차 업데이트 — 20-00 v0.6 최종 러닝 오더 + 트랙 txt 정리)
+> Last updated: 2026-04-30 (19차 업데이트 — 20-00 WAV 리네임 + YouTube 영상 패키징)
 
 ## 진행 중
+
+- **20-00 WAV 리네임 + YouTube 영상 패키징 완료** (2026-04-30 19차)
+  - ✅ **WAV 20곡 리네임 완료**: `concept.md` v0.6 최종 러닝 오더 기준 `NN__Title__Style__Genre__BPM.wav` 형식으로 정리
+  - ✅ **Fake/Engine 순서 교정**: 입력 폴더는 `17. Engine.wav` / `18. Fake.wav`였지만, 최종 맵 기준으로 `17 Fake (140 BPM)` / `18 Engine (150 BPM)`이 맞아 제목 기준으로 교환
+  - ✅ **검증 PASS**: `python3 wavvy.py validate SERIES/20-00` 통과. 20 tracks, 48kHz WAV, `loop.png`, `thumb.jpg` 확인
+  - ✅ **자동 패키징 완료**: `python3 wavvy.py pack SERIES/20-00 -y` 실행. -14 LUFS 정규화, 0.8s 크로스페이드, 20곡 x2 반복 머지
+  - ✅ **산출물 생성**: `SERIES/20-00/work/merged.wav` 7,876.24s / `SERIES/20-00/output/final.mkv` H.264 + FLAC / `provenance.md` / `upload.csv` / `report.json`
+  - ✅ **영상 QA PASS**: 초기 render의 61s container tail을 remux-trim해 최종 container duration 7,879s로 보정. `ffprobe`와 video/audio decode checks PASS
+  - ⚠️ **상태 주의**: WAV, merged WAV, MKV, output artifacts는 `.gitignore` 대상이므로 git 커밋에는 포함되지 않음. 업로드 파일은 로컬 산출물로 보존됨
+  - **남은 TODO**: (1) `output/final.mkv` + `input/thumb.jpg`로 YouTube 업로드. (2) 더 작은 업로드본이 필요하면 AAC MP4 copy/transcode 생성.
 
 - **20-00 v0.6 최종 러닝 오더 확정 + 트랙 txt 삭제** (2026-04-30 18차)
   - ✅ **최종 순서 확정**: 단순 번호/BPM이 아니라 장르·질감·체감 속도까지 종합해 5곡 단위 `강-약-중-강-약` 파형으로 재배치
