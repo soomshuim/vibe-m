@@ -1,6 +1,6 @@
 # 20-00 — 💪 AFTER HOURS WORKOUT
 
-Playlist | 20:00 | 💪 앞으로 이 플리 없이 운동 못할걸?! | Drill · Rage · Trap · Boombap | 헬스·러닝 BGM | Wavvy
+Playlist | 20:00 | 💪 앞으로 이 플리 없이 절대 운동 못할걸?! | Drill · Rage · Trap · Boombap | 헬스·러닝 BGM | Wavvy
 
 ---
 
@@ -8,7 +8,7 @@ Playlist | 20:00 | 💪 앞으로 이 플리 없이 운동 못할걸?! | Drill �
 
 ### 제목
 ```
-Playlist | 20:00 | 💪 앞으로 이 플리 없이 운동 못할걸?! | Drill · Rage · Trap · Boombap | 헬스·러닝 BGM | Wavvy
+Playlist | 20:00 | 💪 앞으로 이 플리 없이 절대 운동 못할걸?! | Drill · Rage · Trap · Boombap | 헬스·러닝 BGM | Wavvy
 ```
 
 ### Context Mode
@@ -16,7 +16,7 @@ After-Hours Workout — 퇴근 후 밤 운동. Rage · Trap · Boombap 중심의
 
 ### 설명
 ```
-20:00, 앞으로는 이 플리 없이 운동 못할 거예요.
+20:00, 앞으로는 이 플리 없이 절대 운동 못할 거예요.
 아드레날린 강제 폭주시키는 Drill · Rage · Trap · Boombap Hiphop Mix Workout 플리 - Wavvy
 
 퇴근하고 몸은 무거운데,
@@ -84,7 +84,7 @@ Copyright Ⓒ Wavvy. All rights reserved.
 #KoreanHipHop #KoreanTrap #KHipHop #한국힙합 #힙합믹스
 #Rage #RageTrap #Trap #Boombap #BoomBap #KDrill #DarkTrap
 #HardHipHop #WorkoutHipHop #Playlist #플리 #음악추천
-#Wavvy #웨이비 #AIMusic #PM2000
+#Wavvy #웨이비 #showmethemoney #쇼미더머니
 ```
 
 ### 태그
