@@ -13,9 +13,9 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 - **시리즈 유형**: **Wavvy 첫 힙합 시리즈**
 - **시리즈 정체성**: **Korean Workout Hip-Hop 빈자리 채우기** — 글로벌 Apple Music Hip-Hop Workout 외산 트랩 우세, Korean rap 0%
 - **최종 트랙 수 (v0.4 확정)**: **20곡** (현재 13곡 작업 세트 + 추가 7곡)
-- **곡수 분포 (v0.4 확정)**: **A 3 / B 4 / C 5 / D 3 / E 2 / F 3 = 20곡**
-  - **Hard 14곡 (70%)** = A Rage Dry 3 + C Hardcore Trap 5 + D K-Drill 3 + F Faster Dark Trap 3
-  - **Non-Hard 6곡 (30%)** = B Rage Tuned 4 + 보너스 빡센 붐뱁 2
+- **곡수 분포 (v0.5 현행)**: **A 3 / B 5 / C 5 / D 3 / E 2 / F 2 = 20곡**
+  - **Hard 13곡 (65%)** = A Rage Dry 3 + C Hardcore Trap 5 + D K-Drill 3 + F Faster Dark Trap 2
+  - **Non-Hard 7곡 (35%)** = B Rage Tuned 5 + 보너스 빡센 붐뱁 2
   - Hard 60% 정책 충족
 - **보컬 성별 분포 (사용자 확정 2026-04-29)**: **남성 14곡 / 여성 6곡**
 - **워크플로우**: 15-00 모델 계승 + 7곡 PASS 베이스 변주 전략 + 20곡 최종 확장
@@ -51,7 +51,7 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 | 14 | Engine | B | Male | 150 | 8시 도시 시동 그라인드 | DRAFT |
 | 15 | Concrete | C | Male | 145 | 노동자 그라인드 (자수성가) | DRAFT |
 | 16 | Real Talk | A | Male | 154 | 진짜 vs fake 직설 디스 | DRAFT |
-| 17 | Late Lane | F | Male | 175 | 새벽 도시 lane drive 자존 | DRAFT |
+| 17 | Small Talk | B | Male | 150 | 크루 편싸움 냉소 | DRAFT |
 | 18 | Side Street | D | Female | 144 | 옆길 K-drill 페이스 | DRAFT |
 | 19 | Slow Glow | B | Female | 108 | 새벽 introspective glow | DRAFT |
 | 20 | Old Page | E | Male | 94 | 무대/cypher ritual lyricism | DRAFT |
@@ -60,7 +60,7 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 > - 12 Black Interval(HIIT cardio) → **Black Mirror** (femme fatale club clock-in)
 > - 13 Dust Timer(locker post-workout) → **Old Cassette** (90s 회상)
 > - 16 Iron Set(마지막 set) → **Real Talk** (씬 비판)
-> - 17 Tunnel Run(HIIT 터널) → **Late Lane** (도시 lane drive)
+> - 17 Tunnel Run(HIIT 터널) → **Small Talk** (크루 편싸움 냉소)
 > - 20 Last Echo(locker walk back) → **Old Page** (무대 cypher ritual)
 > - 14 Engine: 헬스장/덤벨/세트/rep 어휘 제거 → 8시 도시 시동 / 야간 그라인드 retheme
 > - 15 Concrete: 운동가방/단백질/덤벨 어휘 제거 → 노동자 그라인드 강화
@@ -106,7 +106,7 @@ Playlist | 20:00 | 💪 AFTER HOURS WORKOUT | KOREAN HARD HIP-HOP · WORKOUT · 
 
 - **A. Rage Dry**: shouted/yelled/raw dry voice. autotune 의존 X
 - **B. Rage Tuned**: melodic autotuned sing-rap **OR introspective laid-back** (Travis Scott Astroworld 톤)
-- **C. Hardcore Trap (4가지 톤 분기)**: husky/distorted/muddy / lazy monotone deadpan / sarcastic 디스 컨셉 / chant gang hook 변종
+- **C. Hardcore Trap (4가지 톤 분기, 6곡)**: husky/distorted/muddy / lazy monotone deadpan / sarcastic 디스 컨셉 / chant gang hook 변종
 - **D. K-Drill 액센트**: NY/Brooklyn drill. 본가 무드 자유. 가사 리라이트 강제 X
 - **E. 빡센 붐뱁 (Bonus)**: 가리온·Huckleberry P 라이리시즘. 다음절 라임
 - **F. Faster Dark Trap (신규 v0.3)**: 165-180 BPM, rolling 808 + triplet/stutter hi-hats + stacked chant gang vocals + bilingual rap
@@ -157,7 +157,7 @@ Korean trap, 150 BPM, steady 2-bar drum loop, softened but tight 808 bass with c
 
 ---
 
-### Style B: Rage Tuned Singing (4곡, Non-Hard) — 신규 작성
+### Style B: Rage Tuned Singing (5곡, Non-Hard) — 신규 작성
 
 **참조**: Travis Scott `Astroworld` / Don Toliver `Hardstone Psycho` / Sik-K × HAON / Sik-K × Lil Moshpit `K-FLIP+`
 
@@ -179,7 +179,7 @@ Korean tuned singing rage trap introspective, 145 BPM, melodic autotuned male vo
 
 ---
 
-### Style C: Hardcore Trap (5곡, Hard) — 베이스: Bottom to the Top·Fake·Boomerang·Yang Gang
+### Style C: Hardcore Trap (6곡, Hard) — 베이스: Bottom to the Top·Fake·Boomerang·Yang Gang
 
 **참조**: ZENE THE ZILLA · Ash Island · Loopy (UNWANTED WRLD) · EK · KWAII
 
@@ -245,7 +245,7 @@ Korean modern hardcore boom bap, 92 BPM, dusty drums with vinyl crackle texture,
 
 ---
 
-### Style F: Faster Dark Trap (신규 v0.3, 3곡, Hard) — 베이스: Cold Stack
+### Style F: Faster Dark Trap (신규 v0.3, 2곡, Hard) — 베이스: Cold Stack
 
 **참조**: Playboi Carti `Music` (2025) 일부 / Yeat 빠른 트랙
 
@@ -258,7 +258,7 @@ Korean modern hardcore boom bap, 92 BPM, dusty drums with vinyl crackle texture,
 High-definition trap mix with ultra-clean, flat frequency balance, extended low-end clarity, and glassy high frequencies; tight 808 bass kept controlled and articulate, transient-shaped snares and hats with precise stereo placement, and subtle bus compression for a polished, modern loudness, Vocals delivered in heavily tuned melodic-rap style with maximum AutoTune effect, robotic note-locking on sustained syllables, smooth pitch transitions, and layered harmonies following precise scale tuning, while ad-libs and chant sections are stacked wide for an enveloping, glossy, radio-ready sound that maintains the original dark, fast trap aggression
 ```
 
-> **변주 2곡 슬롯**: 12 female draft + 17 male 예정. BPM 165-180 / 다른 가사 컨셉 / Style Prompt 동일
+> **변주 1곡 슬롯**: 12 female draft. BPM 165-180 / 다른 가사 컨셉 / Style Prompt 동일
 
 ---
 
@@ -277,7 +277,7 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 
 ---
 
-## Track Map v0.4 (20곡 최종, Hard 70%)
+## Track Map v0.5 (20곡 최종, Hard 65%)
 
 ### 운동 단계별 BPM 매칭
 
@@ -311,7 +311,7 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 14. Engine — B Rage Tuned, BPM 150, Male (DRAFT) 8시 도시 시동
 15. Concrete — C Hardcore (husky/distorted), BPM 145, Male (DRAFT) 노동자 그라인드
 16. Real Talk — A Rage Dry, BPM 154, Male (DRAFT) 진짜 vs fake 디스
-17. Late Lane — F Faster Dark Trap, BPM 175, Male (DRAFT) 도시 lane drive
+17. Small Talk — B Rage Tuned (young crew-chat sing-rap), BPM 150, Male (DRAFT) 크루 편싸움 냉소
 
 [4막. 마무리/회상] — 4곡 (사운드: 강약 조절 + 쿨다운)
 18. Side Street — D K-Drill, BPM 144, Female (DRAFT) 옆길 K-drill
@@ -331,7 +331,7 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 
 **운동 1회 = 60-90분 / 20곡 (1세션 확장형 정합)**
 
-**Hard 70% 분배 검증**: A 3(04 Paycheck·06 Overtime Flame·16 Real Talk) + C 5(03 Bottom to the Top·05 Fake·07 Boomerang·08 Yang Gang·15 Concrete) + D 3(09 Bottom Line·11 Rewrite·18 Side Street) + F 3(10 Cold Stack·12 Black Mirror·17 Late Lane) = 14곡 (70%) / B 4(01 Night Rider·02 LLC·14 Engine·19 Slow Glow) + E 2(13 Old Cassette·20 Old Page) = 6곡 (30%)
+**Hard 65% 분배 검증**: A 3(04 Paycheck·06 Overtime Flame·16 Real Talk) + C 5(03 Bottom to the Top·05 Fake·07 Boomerang·08 Yang Gang·15 Concrete) + D 3(09 Bottom Line·11 Rewrite·18 Side Street) + F 2(10 Cold Stack·12 Black Mirror) = 13곡 (65%) / B 5(01 Night Rider·02 LLC·14 Engine·17 Small Talk·19 Slow Glow) + E 2(13 Old Cassette·20 Old Page) = 7곡 (35%)
 
 ---
 
@@ -388,7 +388,7 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 
 ### 시리즈 PASS 기준 (20곡 기준)
 
-- [ ] S1 곡수 분포 + Hard 60% (A 3 / B 4 / C 5 / D 3 / E 2 / F 3 = 20곡, Hard 70%)
+- [ ] S1 곡수 분포 + Hard 60% (A 3 / B 5 / C 5 / D 3 / E 2 / F 2 = 20곡, Hard 65%)
 - [ ] S2 BPM 분포 (워밍업 1-3 / 메인 8-11 / HIIT 5-7 / 쿨다운 1-3)
 - [ ] S3 A·B 인접 회피
 - [ ] S4 시리즈 길이 60-90분
@@ -484,11 +484,12 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 
 ## v0.5 정정 사항 (2026-04-28)
 
-1. **5곡 컨셉 교체** — 12 Black Interval→Black Mirror / 13 Dust Timer→Old Cassette / 16 Iron Set→Real Talk / 17 Tunnel Run→Late Lane / 20 Last Echo→Old Page. 운동 직접 narrative(HIIT cardio/locker post-workout/마지막 set/터널 카운트다운/walk back)에서 hip-hop 본연 narrative(femme fatale club clock-in/90s 회상/씬 비판/도시 lane drive/무대 cypher ritual)로 전환
+1. **5곡 컨셉 교체** — 12 Black Interval→Black Mirror / 13 Dust Timer→Old Cassette / 16 Iron Set→Real Talk / 17 Tunnel Run→Small Talk / 20 Last Echo→Old Page. 운동 직접 narrative(HIIT cardio/locker post-workout/마지막 set/터널 카운트다운/walk back)에서 hip-hop 본연 narrative(femme fatale club clock-in/90s 회상/씬 비판/크루 편싸움 냉소/무대 cypher ritual)로 전환
 2. **3곡 retheme** — 14 Engine / 15 Concrete / 19 Slow Glow에서 운동 직접 어휘(헬스장·덤벨·플레이트·세트·rep·warmup·stretching·운동가방·단백질) 제거 → 도시 시동 / 노동자 그라인드 / 새벽 introspective로 reframe
 3. **가사 정책 강화** — concept.md v0.4 "사운드 우선" 정책에 따라 가사는 hip-hop 본연 주제만 사용. 직접 운동 어휘는 모든 트랙에서 사용 금지 (사운드 정합은 BPM·에너지·페이스·톤앤매너로만)
-4. **트랙 다양성 검증** — C축 5곡 톤 분기(C1 lazy monotone 03 / C2 sarcastic 05·07 / C3 chant gang 08 / C4 husky/distorted 15) / F축 3곡 narrative 차별(10 stack money / 12 femme fatale club clock-in / 17 lane drive) / E축 2곡 male/female 카운터파트(13 nostalgia writer / 20 battle cypher)
+4. **트랙 다양성 검증** — B축 5곡 톤 분기(01 warmup / 02 female low-light code / 14 engine ignition / 17 young crew-chat sing-rap / 19 introspective glow) + C축 5곡 톤 분기(C1 lazy monotone 03 / C2 sarcastic 05·07 / C3 chant gang 08 / C4 husky/distorted 15) / F축 2곡 narrative 차별(10 stack money / 12 femme fatale club clock-in) / E축 2곡 male/female 카운터파트(13 nostalgia writer / 20 battle cypher)
 5. **시리즈 라벨 유지** — `💪 AFTER HOURS WORKOUT` 유지 (YouTube 검색 노출 + workout BGM 포지셔닝). 가사는 hip-hop 본연이라도 사운드 포지셔닝은 workout 정합
+6. **17 Small Talk 사운드 정정** — 175 BPM F Faster Dark Trap에서 한국어 라임 발음 뭉개짐 + final hook 댄스화 발생 → 150 BPM B Rage Tuned sing-rap으로 전환. 같은 2-bar drum loop 유지, no final lift/no dance beat를 필수 보정으로 둔다.
 
 ## v0.4 정정 사항 (2026-04-27)
 

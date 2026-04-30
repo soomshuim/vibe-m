@@ -1,5 +1,15 @@
 ---
 HANDOFF: Codex -> User
+Date: 2026-04-30 17:09:12
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: 20-00 Track 17을 `Late Lane`에서 `Small Talk`로 리네임하고, 크루 간 단톡/DM/스토리/캡처 소모전 냉소 주제로 전환. 175 BPM F Faster Dark Trap에서 한국어 라임 발음 뭉개짐과 final hook 댄스화가 발생해 150 BPM B Rage Tuned sing-rap으로 재분류. `Final Chorus` 태그를 제거하고 반복 Chorus에 same locked 2-bar drum loop / no tempo increase / no final lift / no dance beat 보정을 반영. `concept.md`는 Track 17 `B | Male | 150`, 분포 `A3/B5/C5/D3/E2/F2`, Hard 65%로 동기화.
+Next-TODO: Suno V5.5에서 `17_Small Talk.txt` 현 버전 생성 후 sing-rap hook이 영하게 들리는지, 한국어 발음이 유지되는지, 반복 Chorus에서 드럼/템포가 댄스곡처럼 바뀌지 않는지 검수. 현재 `check_lyric_avoid.sh`는 PASS, `check_series_gate.sh`는 v1.4 목표(B4/F3, HIIT 5-7, A·B 인접 회피)와 충돌해 S1/S2/S3 FAIL이므로 Small Talk PASS 후 Track Map 순서/게이트 정책 재정렬 필요. PASS 시 Status/META 확정.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Codex -> User
 Date: 2026-04-28 22:57:31
 Project: /Users/zen/Project/wavvy
 Agent: Codex

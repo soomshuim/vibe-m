@@ -1,8 +1,18 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-28 (16차 업데이트 — 20-00 1-12 트랙 제목·가사·스타일 정합화 + Black Mirror femme fatale 보정)
+> Last updated: 2026-04-30 (17차 업데이트 — 20-00 Track 17 Small Talk Rage Tuned 전환)
 
 ## 진행 중
+
+- **20-00 Track 17 `Small Talk` 리네임 + Rage Tuned sing-rap 전환** (2026-04-30 17차)
+  - ✅ **제목/파일명 변경**: `17_Late Lane.txt` → `17_Small Talk.txt`, Track명 `Late Lane` → **Small Talk (스몰 토크)**
+  - ✅ **가사 주제 전환**: 새벽 lane drive 자존 → **크루끼리 편 갈라 싸우는 모습이 같잖다는 냉소**. 단톡/DM/스토리/캡처/타임라인으로 번지는 online crew-chat 정치 이미지로 정리
+  - ✅ **가사 톤 반복 보정**: 유치한 `안녕하세요/반갑습니다` 라임, 올드한 `잔/악수/체면/입술` 이미지, 식상한 `말끝만 갈라` 표현 제거. 현재 Verse 1 시작은 `피드는 새벽, DM은 빨라 / 스토리 위엔 불만 켜져`
+  - ✅ **사운드 전환**: 175 BPM F Faster Dark Trap → **150 BPM B Rage Tuned Singing**. 이유: 한국어 라임 발음 뭉개짐 + final hook 댄스화 발생
+  - ✅ **Suno 보정**: `[Final Chorus]` 제거, 반복 `[Chorus]`로 변경. `same locked 2-bar drum loop`, `no tempo increase`, `no final lift`, `no dance beat`, `no faster drums`를 STYLE/EXCLUDE/LYRICS/META에 모두 반영
+  - ✅ **concept.md 동기화**: Track 17 `B | Male | 150`, 분포 `A3/B5/C5/D3/E2/F2`, Hard 65%로 갱신. v0.5 정정 사항에 Small Talk 전환 사유 기록
+  - ⚠️ **검증 상태**: `check_lyric_avoid.sh 17_Small Talk.txt` PASS. `check_series_gate.sh SERIES/20-00/`는 현행 v1.4 목표(B4/F3, HIIT 5-7, A·B 인접 회피)와 충돌해 FAIL(S1/S2/S3). Small Talk를 B축으로 유지할지, 게이트/순서 재조정할지 다음 라운드 결정 필요.
+  - **남은 TODO**: (1) Suno V5.5에서 현 `Small Talk` 버전 생성. (2) sing-rap hook이 영하게 들리는지, 한국어 발음이 유지되는지 확인. (3) 반복 Chorus에서 드럼/템포가 댄스곡처럼 바뀌면 FAIL 처리. (4) Small Talk PASS 후 Track Map 최종 순서/게이트 정책 재정렬. (5) PASS 시 Status/META 확정.
 
 - **20-00 PASS/DRAFT 1-12 제목·가사·스타일 정합화 + Black Mirror femme fatale 보정** (2026-04-28 16차)
   - ✅ **사용자 제공 fixed 제목·스타일·가사 반영**: Night Rider, LLC, Bottom to the Top, Paycheck, Fake, Overtime Flame, Boomerang, Yang Gang, Cold Stack, Rewrite 중심으로 txt 본문/STYLE/LYRICS/META 정합화
