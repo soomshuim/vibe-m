@@ -10,8 +10,10 @@ License: MIT
 """
 
 import click
+import contextlib
 import csv
 import hashlib
+import io
 import json
 import os
 import re
@@ -25,6 +27,9 @@ from typing import Optional
 
 import ffmpeg
 import pandas as pd
+
+from wavvy_harness import build_state, check_state, load_state, run_doctor, run_gate, write_state
+from wavvy_harness.state import PHASES
 
 
 # =============================================================================
@@ -1364,14 +1369,16 @@ def generate_report(
     params: dict
 ) -> bool:
     """Generate report.json with technical statistics."""
+    repeat = int(params.get('repeat', 1) or 1)
+    total_original_duration = sum(t.duration for t in tracks)
     report = {
         'generated_at': datetime.now().isoformat(),
         'processing_params': params,
         'summary': {
             'total_tracks': len(tracks),
-            'total_original_duration': sum(t.duration for t in tracks),
+            'total_original_duration': total_original_duration,
             'final_duration': final_duration,
-            'crossfade_reduction': sum(t.duration for t in tracks) - final_duration,
+            'crossfade_reduction': total_original_duration * repeat - final_duration,
         },
         'tracks': [
             {
@@ -1914,6 +1921,110 @@ def cli():
     pass
 
 
+def _resolve_repo_root(path: Path) -> Path:
+    try:
+        return git_repo_root(path)
+    except Exception:
+        return Path.cwd()
+
+
+def _emit_payload(payload: dict, json_output: bool):
+    if json_output:
+        click.echo(json.dumps(payload, ensure_ascii=False, indent=2))
+        return
+
+    title = payload.get("schema", "wavvy")
+    result = payload.get("result", "UNKNOWN")
+    click.echo(click.style(f"{title}: {result}", fg='green' if result == "PASS" else 'red', bold=True))
+
+    for check in payload.get("checks", []):
+        status = check.get("status", "")
+        name = check.get("name", "")
+        detail = check.get("detail") or check.get("path") or ""
+        color = 'green' if status in {"PASS", "pass"} else ('yellow' if status in {"WARN", "warn"} else 'red')
+        click.echo(click.style(f"  {status} {name} {detail}".rstrip(), fg=color))
+
+    for warning in payload.get("warnings", []):
+        if isinstance(warning, dict):
+            warning = warning.get("name") or warning.get("detail") or json.dumps(warning, ensure_ascii=False)
+        log_warning(str(warning))
+    for blocker in payload.get("blockers", []):
+        if isinstance(blocker, dict):
+            blocker = blocker.get("name") or blocker.get("detail") or json.dumps(blocker, ensure_ascii=False)
+        log_error(str(blocker))
+
+
+@cli.command()
+@click.option('--json', 'json_output', is_flag=True, help='Print machine-readable JSON')
+def doctor(json_output: bool):
+    """Check local dependencies and harness prerequisites."""
+    payload = run_doctor(_resolve_repo_root(Path.cwd()))
+    _emit_payload(payload, json_output)
+    if payload.get("result") != "PASS":
+        sys.exit(1)
+
+
+@cli.command("state")
+@click.argument('path', type=click.Path(exists=True, file_okay=False, path_type=Path))
+@click.option('--check', is_flag=True, help='Validate .ai/state.json against current filesystem evidence')
+@click.option('--write', 'write_file', is_flag=True, help='Atomically write .ai/state.json from current evidence')
+@click.option('--phase', type=click.Choice(PHASES), default=None, help='Override/infer the phase for generated state')
+@click.option('--if-match', 'if_match', type=int, default=None, help='Only write when current state revision matches')
+@click.option('--json', 'json_output', is_flag=True, help='Print machine-readable JSON')
+def state_cmd(path: Path, check: bool, write_file: bool, phase: Optional[str], if_match: Optional[int], json_output: bool):
+    """Inspect or write the active Wavvy state contract."""
+    repo_root = _resolve_repo_root(path)
+    previous_state = load_state(repo_root)
+
+    if write_file:
+        payload = build_state(path, repo_root, phase=phase, previous_state=previous_state)
+        try:
+            state_path = write_state(repo_root, payload, if_match=if_match)
+        except ValueError as e:
+            log_error(str(e))
+            sys.exit(1)
+        if not json_output:
+            log_success(f"State written: {state_path}")
+        previous_state = load_state(repo_root)
+
+    if check:
+        payload = check_state(path, repo_root)
+        _emit_payload(payload, json_output)
+        if payload.get("result") != "PASS":
+            sys.exit(1)
+        return
+
+    payload = build_state(path, repo_root, phase=phase, previous_state=previous_state)
+    _emit_payload({"schema": "wavvy.state.v1", "result": "PASS", "state": payload}, json_output)
+
+
+@cli.command("gate")
+@click.argument('path', type=click.Path(exists=True, file_okay=False, path_type=Path))
+@click.option('--stage', required=True, type=click.Choice(['source-final', 'render-final', 'upload-ready', 'uploaded']), help='Stage gate to evaluate')
+@click.option('--json', 'json_output', is_flag=True, help='Print machine-readable JSON')
+def gate_cmd(path: Path, stage: str, json_output: bool):
+    """Run a deterministic stage gate for a series."""
+    repo_root = _resolve_repo_root(path)
+    paths = ProjectPaths(path)
+
+    if json_output:
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            validation_result = validate_project(paths)
+    else:
+        validation_result = validate_project(paths)
+
+    validation_payload = {
+        "is_valid": validation_result.is_valid,
+        "errors": validation_result.errors,
+        "warnings": validation_result.warnings,
+        "detail": f"{len(validation_result.tracks)} tracks",
+    }
+    payload = run_gate(path, repo_root, stage, validation_payload)
+    _emit_payload(payload, json_output)
+    if payload.get("result") != "PASS":
+        sys.exit(1)
+
+
 @cli.command()
 @click.argument('path', type=click.Path(exists=True, file_okay=False, path_type=Path))
 def validate(path: Path):
@@ -1926,7 +2037,7 @@ def validate(path: Path):
     - Validates required media files (loop.mp4, thumb.jpg)
     - Reports sample rate consistency
     """
-    click.echo(click.style("\n=== VIBEM VALIDATION ===\n", fg='cyan', bold=True))
+    click.echo(click.style("\n=== WAVVY VALIDATION ===\n", fg='cyan', bold=True))
 
     paths = ProjectPaths(path)
     result = validate_project(paths)
@@ -2001,7 +2112,7 @@ def preview(path: Path, sec: int, fade: float):
 
     Output: output/preview.mp4
     """
-    click.echo(click.style("\n=== VIBEM PREVIEW ===\n", fg='cyan', bold=True))
+    click.echo(click.style("\n=== WAVVY PREVIEW ===\n", fg='cyan', bold=True))
 
     paths = ProjectPaths(path)
 
@@ -2083,13 +2194,24 @@ def preview(path: Path, sec: int, fade: float):
     audio_duration = audio_info.get('duration', 0)
     log_info(f"Rendering video with audio duration: {audio_duration:.1f}s")
 
-    if not render_video(
-        trimmed_path,
-        paths.loop_video,
-        paths.thumbnail,
-        paths.preview_mp4,
-        use_shortest=True
-    ):
+    if paths.is_image_mode:
+        render_ok = render_video_from_image(
+            trimmed_path,
+            paths.loop_image,
+            paths.thumbnail,
+            paths.preview_mp4,
+            logo_path=paths.logo if paths.logo.exists() else None,
+        )
+    else:
+        render_ok = render_video(
+            trimmed_path,
+            paths.loop_video,
+            paths.thumbnail,
+            paths.preview_mp4,
+            use_shortest=True
+        )
+
+    if not render_ok:
         log_error("Failed to render video")
         sys.exit(1)
 
@@ -2125,7 +2247,7 @@ def interactive_pack_plan(paths: ProjectPaths) -> Optional[dict]:
         'image_mode': image_mode,
     }
 
-    click.echo(click.style("Configure final.mp4 settings:\n", fg='yellow'))
+    click.echo(click.style("Configure final.mkv settings:\n", fg='yellow'))
 
     # 1. Video crossfade
     click.echo(f"  1. Video crossfade (seamless loop)")
@@ -2195,9 +2317,9 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
 
     Use -y to skip confirmation and use defaults.
 
-    Output: output/final.mp4 + artifacts
+    Output: output/final.mkv + artifacts
     """
-    click.echo(click.style("\n=== VIBEM PACK ===\n", fg='cyan', bold=True))
+    click.echo(click.style("\n=== WAVVY PACK ===\n", fg='cyan', bold=True))
 
     paths = ProjectPaths(path)
 
@@ -2407,10 +2529,15 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
     final_duration = final_info.get('duration', 0)
 
     # Use original tracks for provenance (contains original hashes)
-    generate_provenance(result.tracks, paths.provenance_md, params)
-
-    generate_upload_csv(paths, result.tracks, paths.upload_csv)
-    generate_report(result.tracks, paths.report_json, final_duration, params)
+    artifact_steps = [
+        ("provenance", lambda: generate_provenance(result.tracks, paths.provenance_md, params)),
+        ("upload_csv", lambda: generate_upload_csv(paths, result.tracks, paths.upload_csv)),
+        ("report_json", lambda: generate_report(result.tracks, paths.report_json, final_duration, params)),
+    ]
+    for artifact_name, writer in artifact_steps:
+        if not writer():
+            log_error(f"Failed to generate required output artifact: {artifact_name}")
+            sys.exit(1)
 
     # Final summary
     click.echo("")
@@ -2461,7 +2588,7 @@ def vfade(path: Path, fade: float, duration: float, test: bool, crop: bool, logo
 
     Output: input/loop_xfade.mp4 (or loop_xfade_test.mp4 for test mode)
     """
-    click.echo(click.style("\n=== VIBEM VFADE ===\n", fg='cyan', bold=True))
+    click.echo(click.style("\n=== WAVVY VFADE ===\n", fg='cyan', bold=True))
 
     paths = ProjectPaths(path)
 
@@ -2577,7 +2704,7 @@ def vfade(path: Path, fade: float, duration: float, test: bool, crop: bool, logo
     else:
         click.echo("")
         click.echo(click.style("Next steps:", fg='yellow'))
-        click.echo(f"  Run: python3 wavvy.py pack {path} --use-xfade")
+        click.echo(f"  Run: python3 wavvy.py pack {path}")
 
 
 @cli.command()
@@ -2592,7 +2719,7 @@ def init(path: Path):
     - work/
     - output/
     """
-    click.echo(click.style("\n=== VIBEM INIT ===\n", fg='cyan', bold=True))
+    click.echo(click.style("\n=== WAVVY INIT ===\n", fg='cyan', bold=True))
 
     paths = ProjectPaths(path)
 
@@ -2624,7 +2751,7 @@ def clean(path: Path):
 
     Removes all generated files while preserving input files.
     """
-    click.echo(click.style("\n=== VIBEM CLEAN ===\n", fg='cyan', bold=True))
+    click.echo(click.style("\n=== WAVVY CLEAN ===\n", fg='cyan', bold=True))
 
     paths = ProjectPaths(path)
 

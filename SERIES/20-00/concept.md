@@ -110,57 +110,56 @@ Copyright Ⓒ Wavvy. All rights reserved.
 
 ---
 
+## Upload Status
+
+- **YouTube upload**: completed (2026-05-02 user correction)
+- **Local retention**: `output/final.mkv` deleted intentionally after upload to recover disk space.
+- **Regeneration**: local video/upload CSV can be recreated with `python3 wavvy.py pack SERIES/20-00 -y` if a future re-upload or audit requires it.
+- **URL**: not recorded in this file yet.
+
+---
+
 ## Series Status
 
-- **착수**: 2026-04-25 / **현재 v0.5**: 2026-04-28 (5곡 컨셉 교체 + 14/15/19 retheme + 가사 = hip-hop 본연 주제 정책 강화)
+- **착수**: 2026-04-25 / **현재 phase**: `uploaded` (2026-05-02)
+- **v0.8**: 2026-05-02 (YouTube 업로드 완료 반영. `final.mkv`는 대용량 로컬 산출물이라 업로드 후 의도적으로 삭제)
+- **v0.7**: 2026-05-02 (Final Track Sources / report / subtitle test artifacts 기준 source_final 상태 정리)
+- **v0.5**: 2026-04-28 (5곡 컨셉 교체 + 14/15/19 retheme + 가사 = hip-hop 본연 주제 정책 강화)
 - **v0.4**: 2026-04-27 (최종 20곡 체제 복원)
 - **시리즈 유형**: **Wavvy 첫 힙합 시리즈**
 - **시리즈 정체성**: **Korean Workout Hip-Hop 빈자리 채우기** — 글로벌 Apple Music Hip-Hop Workout 외산 트랩 우세, Korean rap 0%
-- **최종 트랙 수 (v0.4 확정)**: **20곡** (현재 13곡 작업 세트 + 추가 7곡)
+- **최종 트랙 수**: **20곡**
 - **곡수 분포 (v0.5 현행)**: **A 3 / B 5 / C 5 / D 3 / E 2 / F 2 = 20곡**
   - **Hard 13곡 (65%)** = A Rage Dry 3 + C Hardcore Trap 5 + D K-Drill 3 + F Dark Trap/Faster Trap 2
   - **Non-Hard 7곡 (35%)** = B Rage Tuned 5 + 보너스 빡센 붐뱁 2
   - Hard 60% 정책 충족
 - **보컬 성별 분포 (사용자 확정 2026-04-29)**: **남성 14곡 / 여성 6곡**
-- **워크플로우**: 15-00 모델 계승 + 7곡 PASS 베이스 변주 전략 + 20곡 최종 확장
+- **워크플로우**: 15-00 모델 계승 + 20곡 최종 확장 + Final Track Sources 아카이브 + YouTube 업로드 완료
+- **현재 로컬 산출물**: `output/report.json`, `output/youtube_subtitles_ko_no_timing.txt`, `output/youtube_subtitles_ko_timed_estimated.srt`
+- **현재 로컬 미보유 산출물**: `output/final.mkv`, `output/upload.csv` (업로드 후 용량 정리를 위해 로컬 삭제. 필요 시 `python3 wavvy.py pack SERIES/20-00 -y`로 재생성)
+- **다음 행동**: 없음. URL을 문서에 남기려면 `Upload Status`의 URL 필드만 갱신.
 
-**현재 PASS 누적 (12/20)**:
-| # | 곡 | 매칭 | 베이스 |
-|---|------|------|------|
-| 1 | Paycheck | A Rage Dry | 강한 시작 |
-| 2 | Night Rider | B Rage Tuned warmup | 첫 완충 |
-| 3 | Bottom to the Top | C Hardcore (lazy monotone) | C 베이스 풍부 |
-| 4 | Yang Gang | C Hardcore (chant gang hook) | 첫 피크 |
-| 5 | Boomerang | C Hardcore (sarcastic 디스) | bounce |
-| 6 | Small Talk | B Rage Tuned (young crew-chat sing-rap) | 크루 편싸움 냉소 |
-| 7 | Cold Stack | F Faster Dark Trap (180 BPM) | 전체 최고 피크 |
-| 8 | Old Page | E 빡센 붐뱁 | 랩 엔딩 전 cooldown |
-| 9 | Rewrite | D K-Drill | 마지막 랩 재진입 |
-| 10 | Fake | C Hardcore (sarcastic 디스) | 낮은 중간 강도 |
-| 11 | Side Street | D K-Drill | 마지막 긴장 |
-| 12 | Slow Glow | B Rage Tuned (introspective laid-back) | 최종 엔딩 |
-
-**최종 20곡 (v0.6 — 12 PASS + 8 draft)**:
+**최종 20곡 (v0.8 — uploaded 20/20)**:
 | Track | 곡 | 축 | Vocal | BPM | 테마 (hip-hop core) | Status |
 |---|------|------|------|------|------|------|
 | 01 | Paycheck | A | Male | 150 | 돈/그라인드 hustle | PASS |
 | 02 | Night Rider | B | Male | 120 | 밤 night rider ride on | PASS |
 | 03 | Bottom to the Top | C | Male | 150 | 자수성가 grind | PASS |
 | 04 | Yang Gang | C | Male | 150 | chant gang hook | PASS |
-| 05 | Old Cassette | E | Female | 92 | 90s K-rap 회상 lyricism | DRAFT |
-| 06 | Real Talk | A | Male | 154 | 진짜 vs fake 직설 디스 | DRAFT |
-| 07 | LLC (Low Light Code) | B | Female | 152 | low light city code | DRAFT |
+| 05 | Old Cassette | E | Female | 92 | 90s K-rap 회상 lyricism | FINAL |
+| 06 | Real Talk | A | Male | 154 | 진짜 vs fake 직설 디스 | FINAL |
+| 07 | LLC (Low Light Code) | B | Female | 152 | low light city code | FINAL |
 | 08 | Boomerang | C | Male | 145 | sarcastic 디스 부메랑 | PASS |
-| 09 | Black Mirror | F | Female | 150 | femme fatale club clock-in | DRAFT |
-| 10 | Bottom Line | D | Female | 120 | bottom-to-top female drill grind | DRAFT |
-| 11 | Overtime Flame | A | Male | 152 | after-hours club heat | DRAFT |
+| 09 | Black Mirror | F | Female | 150 | femme fatale club clock-in | FINAL |
+| 10 | Bottom Line | D | Female | 120 | bottom-to-top female drill grind | FINAL |
+| 11 | Overtime Flame | A | Male | 152 | after-hours club heat | FINAL |
 | 12 | Small Talk | B | Male | 150 | 크루 편싸움 냉소 | PASS |
-| 13 | Concrete | C | Male | 145 | 노동자 그라인드 (자수성가) | DRAFT |
+| 13 | Concrete | C | Male | 145 | 노동자 그라인드 (자수성가) | FINAL |
 | 14 | Cold Stack | F | Male | 180 | cold stack money grind | PASS |
 | 15 | Old Page | E | Male | 102 | 무대/cypher ritual lyricism | PASS |
 | 16 | Rewrite | D | Male | 140 | 씬에 침 뱉어 디스 | PASS |
 | 17 | Fake | C | Male | 140 | sarcastic 디스 | PASS |
-| 18 | Engine | B | Male | 150 | 8시 도시 시동 그라인드 | DRAFT |
+| 18 | Engine | B | Male | 150 | 8시 도시 시동 그라인드 | FINAL |
 | 19 | Side Street | D | Female | 144 | 옆길 K-drill 페이스 | PASS |
 | 20 | Slow Glow | B | Female | 108 | 새벽 introspective glow | PASS |
 
@@ -563,9 +562,9 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 
 ## 미해결 / 다음 라운드
 
-1. **현재 draft 8곡 Suno 생성/검수** — 05 Old Cassette / 06 Real Talk / 07 LLC / 09 Black Mirror / 10 Bottom Line / 11 Overtime Flame / 13 Concrete / 18 Engine
-2. **최종 Track Map v0.6 기준 검증** — 5곡 단위 강-약-중-강-약 파형 + Hard 65% + M14/F6 재확인
-3. **트랙 txt 프롬프트 파일 삭제 완료 후 concept.md 단일 관리** — 개별 txt 재생성 필요 시 concept.md 기준으로 복원
+1. **URL 기록** — 현재 업로드 완료 상태이나 YouTube URL은 이 파일에 아직 미기록. 확인되면 `Upload Status`에 추가
+2. **영상/업로드 CSV 재생성 필요 시** — 로컬 `final.mkv`는 용량 정리를 위해 삭제된 상태. 재업로드/감사 필요 시 `python3 wavvy.py pack SERIES/20-00 -y`
+3. **자막 하네스화** — 정확도가 높은 방식으로 `wavvy-subtitles` 또는 동등한 harness/eval 생성 후 남은 시리즈 일괄 적용
 4. **Loopy MARNI 청취 검증 / K-FLIP+ BPM** (다음 라운드)
 5. **헬스 인플루언서 BGM AHA Music** (다음 라운드)
 

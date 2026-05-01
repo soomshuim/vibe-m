@@ -73,7 +73,7 @@ brand/
 - 1. Re-Validate
 - 2. Normalize: -14 LUFS, -1.0 dBTP → `work/norm_tracks/`
 - 3. Merge: Sequential Acrossfade + repeat
-- 4. Render: `libx264`/`aac`, `-shortest`, → `output/final.mp4`
+- 4. Render: `libx264`/`flac` in MKV, `-shortest`, → `output/final.mkv`
 - 5. Artifacts: `provenance.md`, `upload.csv`, `report.json`
 
 ### E. `shorts`
@@ -102,6 +102,12 @@ python3 wavvy.py pack SERIES/[시리즈]
 
 # 패키징 (기본값으로 빠르게)
 python3 wavvy.py pack SERIES/[시리즈] -y
+
+# 하네스 점검
+python3 wavvy.py doctor
+python3 wavvy.py state SERIES/[시리즈] --check
+python3 wavvy.py gate SERIES/[시리즈] --stage source-final
+python3 wavvy.py gate SERIES/[시리즈] --stage uploaded
 
 # 정리
 python3 wavvy.py clean SERIES/[시리즈]

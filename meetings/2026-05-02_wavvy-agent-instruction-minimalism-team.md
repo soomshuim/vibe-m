@@ -1,0 +1,118 @@
+# 2026-05-02 Wavvy Agent Instruction Minimalism Team Review
+
+Date: 2026-05-02
+Mode: Team
+Pattern: Trade-off Discussion
+Topic: Wavvy의 CLAUDE.md/AGENTS.md를 최신 하네스 엔지니어링 원칙에 맞게 최소화하고, 상세 규칙을 맥락별 문서로 라우팅할지 검토
+
+## Pre-Research Check
+
+AI Ops Expert skill과 reference에 이미 해당 원칙이 포함되어 있었다.
+
+- `skills/ai-ops-expert/SKILL.md`: "CLAUDE.md는 100-200줄 이하", ".claude/rules/ 사용", "SSOT: 중복 대신 참조", "긴 지시문은 독이다 — 상시 규칙만, 나머지는 skill/reference"
+- `references/harness-engineering.md`: "상시 규칙은 짧게", "재사용 워크플로는 skill로", "거대한 지시문 하나에 다 몰아넣기" anti-pattern, AGENTS.md 최소 템플릿
+
+따라서 외부 research는 진행하지 않는다. 이번 작업은 이미 보유한 AI Ops 기준을 Wavvy에 적용하는 것이다.
+
+## Roles
+
+- AI Ops Expert
+- Engineering Lead
+- Product Leader
+- QA Reviewer
+
+## Round 1
+
+### AI Ops Expert
+
+현재 Wavvy `CLAUDE.md`는 104줄로 길이 자체는 과하지 않다. 문제는 길이가 아니라 역할이다. `CLAUDE.md`가 상시 규칙, workflow, CLI, media caution, project gotchas를 모두 직접 들고 있어서 시간이 지나면 drift가 생긴다.
+
+최신 하네스 원칙상 entrypoint 문서는 다음만 가져야 한다.
+
+1. 이 repo에서 무엇을 먼저 읽을지
+2. 어떤 작업에서 어떤 문서를 참조할지
+3. 실행 전후 어떤 deterministic gate를 돌릴지
+4. 어떤 행동은 절대 하지 않을지
+
+상세 절차는 `MASTER/WORKFLOWS.md`, `MASTER/SSOT.md`, `MASTER/cli/SPEC.md`, `MASTER/youtube/YOUTUBE.md`, genre/rubric 문서로 위임해야 한다.
+
+### Engineering Lead
+
+Wavvy에는 이미 상세 문서가 충분하다. 새 문서를 많이 만들면 오히려 SSOT가 늘어난다. 다만 `CLAUDE.md` 안에만 있던 media runtime caution, 예를 들어 Pydub 금지, acrossfade/xfade 구분, 복잡한 미디어 작업 시 작은 테스트 우선 같은 규칙은 기존 문서에 분산되어 있거나 최신 상태가 아니다.
+
+권장 구현은:
+
+- `CLAUDE.md`를 얇은 Claude용 router로 재작성
+- `AGENTS.md`를 Codex/도구 공통 router로 추가
+- `MASTER/ai/RUNTIME_RULES.md`를 새로 만들어 hard constraints와 media execution cautions를 수용
+- 사용자 확인/승인 규칙은 삭제하지 않는다. `CLAUDE.md`에서 중복 문구를 줄이더라도 `RUNTIME_RULES.md`로 보존하고 entrypoint에서 참조한다.
+- 기존 `MASTER/WORKFLOWS.md`, `MASTER/SSOT.md`, `MASTER/cli/SPEC.md`와 중복되지 않게 링크 중심으로 작성
+
+### Product Leader
+
+Wavvy는 음악 제작 프로젝트라 작업 맥락 전환이 잦다. 작사, style prompt, 패키징, YouTube metadata, upload-final archive, state/gate 확인이 서로 다르다. entrypoint가 라우터가 되면 다음 작업자가 실수할 확률이 줄어든다.
+
+특히 이번 20-00에서 드러난 문제는 "로컬 artifact 부재"를 "미완료"로 오해한 것이다. 이런 문제는 상세 규칙을 한 파일에 많이 쓰는 방식이 아니라, `SSOT.md`와 `state/gate`를 우선 읽게 만드는 방식으로 줄인다.
+
+### QA Reviewer
+
+변경의 PASS 기준은 단순하다.
+
+- `CLAUDE.md`는 80줄 이하 router가 되어야 한다.
+- Wavvy repo에 `AGENTS.md`가 생겨야 한다.
+- 두 entrypoint는 서로 충돌하지 않아야 한다.
+- 상세 규칙은 `MASTER/ai/RUNTIME_RULES.md` 또는 기존 MASTER 문서로 이동해야 한다.
+- `rg`로 stale instruction이 없어야 한다: `사용자 확인 필수`는 보존하되 단일 owner 문서로 이동해야 하며, `Video Crossfade 필수`가 이미지 모드/업로드 완료 상태에도 무조건 적용되는 표현이면 FAIL.
+- 기존 harness gate는 깨지면 안 된다.
+
+## Agreements
+
+- 외부 research는 생략한다. AI Ops skill/reference에 원칙이 이미 충분히 포함되어 있다.
+- Wavvy `CLAUDE.md`는 길이보다 역할 drift가 문제다.
+- `CLAUDE.md`와 `AGENTS.md`는 얇은 router로 만들고, 상세 규칙은 context docs로 이동한다.
+- 새 문서는 최소화한다. `MASTER/ai/RUNTIME_RULES.md` 하나만 추가하고, 나머지는 기존 MASTER 문서에 링크한다.
+- 20-00 업로드 완료/로컬 삭제 상태는 `MASTER/SSOT.md`와 `.ai/state.json`이 판단해야 한다.
+- `AGENTS.md`를 canonical router로 두고, `CLAUDE.md`는 Claude-specific overlay로 둔다. 두 파일이 서로 다른 절차를 직접 소유하지 않게 한다.
+- `MASTER/ai/RUNTIME_RULES.md`를 추가하면 `MASTER/SSOT.md` Conflict Order에 ownership을 등록한다.
+
+## Conflicts
+
+| Issue | AI Ops Expert | Engineering Lead | Resolution |
+|---|---|---|---|
+| `.claude/rules/`를 만들지 여부 | 일반론상 유리 | Wavvy는 MASTER 구조가 이미 있음 | 지금은 만들지 않는다. Wavvy 기존 SSOT 구조에 맞춰 `MASTER/ai/RUNTIME_RULES.md`를 쓰고 `MASTER/SSOT.md`에 편입 |
+| CLAUDE.md를 더 줄일지 | 가능한 짧게 | CLI quick reference는 유용 | CLI는 5개 핵심 gate만 남기고 상세는 SPEC로 보낸다 |
+| AGENTS.md 범위 | 공통 표준으로 추가 | 중복 위험 | AGENTS.md도 router로만 작성 |
+| 사용자 확인 필수 규칙 | entrypoint에서 중복 제거 가능 | 사용자 정책이라 삭제 위험 | 삭제하지 않는다. `RUNTIME_RULES.md`의 Safety/Approval 규칙으로 보존 |
+
+## Recommendation
+
+Wavvy는 `CLAUDE.md`/`AGENTS.md`를 "instruction store"가 아니라 "context router"로 전환한다.
+
+구현 순서:
+
+1. `MASTER/ai/RUNTIME_RULES.md` 생성: hard constraints, complex media caution, verification gates.
+2. `MASTER/SSOT.md`에 `RUNTIME_RULES.md` owner 등록: hard constraints, media execution cautions, approval/safety rules.
+3. `AGENTS.md` 추가: canonical agent router.
+4. `CLAUDE.md` 재작성: Claude-specific overlay. AGENTS와 동일한 router target을 참조하고 Claude 전용 차이만 둔다.
+5. stale unconditional rules 정리: 무조건 vfade 필수는 이미지 모드/업로드 완료 상태와 구분한다. 사용자 확인 필수는 삭제하지 않고 Safety/Approval 규칙으로 보존한다.
+6. deterministic drift check와 regression smoke를 추가한다: `doctor`, `state --check`, `gate --stage uploaded`, stale text `rg`, AGENTS/CLAUDE router target 일치 확인.
+7. Claude review/plan review 후 Director 구현 검증.
+
+## Claude Review Follow-Up
+
+1차 Claude review: `.ai/peer-review/runs/20260502-011506-claude-review-59099.md` — NEEDS_USER_DECISION.
+
+Resolved conservatively:
+
+- `사용자 확인 필수`는 제거하지 않는다. entrypoint 중복만 줄이고 `MASTER/ai/RUNTIME_RULES.md`로 보존한다.
+- `.claude/rules/` 대신 Wavvy의 기존 `MASTER/` SSOT 구조를 유지한다. 단, 새 runtime rules 문서는 `MASTER/SSOT.md` Conflict Order에 명시적으로 편입한다.
+- `AGENTS.md`를 canonical router로 두고 `CLAUDE.md`는 Claude overlay로 둔다.
+- plan에는 drift check와 regression smoke를 포함한다.
+
+## Next Actions (3)
+
+1. Claude peer review로 이 Team 분석이 AI Ops 기준을 제대로 해석했는지 확인한다.
+2. PASS 후 구현 계획을 작성하고 plan review를 받는다.
+3. Director로 `CLAUDE.md`, `AGENTS.md`, `MASTER/ai/RUNTIME_RULES.md`, 문서 기록/검증을 반영한다.
+
+*Generated by Lenny's Product Team — Team Mode*

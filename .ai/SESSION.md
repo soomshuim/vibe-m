@@ -1,6 +1,6 @@
 # Session State — Wavvy
 
-> Last updated: 2026-04-30 (22차 업데이트 — 20-00 Final Track Sources 최종 보정 + YouTube 자막 테스트 산출물)
+> Last updated: 2026-05-02 (23차 업데이트 — 20-00 uploaded 상태 및 로컬 대용량 artifact 삭제 반영)
 
 ## 진행 중
 
@@ -12,7 +12,7 @@
   - ✅ **YouTube 자막 테스트 산출물**: `output/youtube_subtitles_ko_no_timing.txt`(타이밍 제외 transcript)와 `output/youtube_subtitles_ko_timed_estimated.srt`(report 기반 추정 SRT) 생성. 둘 다 `output/` ignored 로컬 산출물
   - ✅ **자막 정리 규칙**: 가사 외 `[section]`, 괄호 지시문, parens/brackets, STYLE/EXCLUDE/META, timestamps/source metadata 제거. 영상 2회 반복에 맞춰 20곡 x2 반영
   - ✅ **검증 PASS**: no-timing 마크업 0건, SRT 1,732 cues 문법/시간 겹침 0건, `git diff --check`, `python3 wavvy.py validate SERIES/20-00`
-  - **남은 TODO**: YouTube에 `.txt` 먼저 업로드 테스트, 실패/끝부분 잘림 시 `.srt` 테스트. 실제 정확도가 높은 방식으로 `wavvy-subtitles` 스킬/하네스화 후 남은 시리즈 일괄 생성.
+  - **상태 보정**: 2026-05-02 사용자 정정에 따라 YouTube 업로드는 완료. 자막 산출물은 로컬 보조 artifact로 보존하며, 남은 TODO는 `wavvy-subtitles` 스킬/하네스화 후 남은 시리즈 일괄 적용.
 
 - **20-00 finalize-upload 하네스 + Final Track Sources 아카이브** (2026-04-30 21차)
   - ✅ **업로드 전환 하네스 구현**: `wavvy.py finalize-upload <series>` 추가. `--check`, `--keep-txt`, `--restore-from COMMITISH` 지원
@@ -43,7 +43,7 @@
   - ✅ **산출물 생성**: `SERIES/20-00/work/merged.wav` 7,876.24s / `SERIES/20-00/output/final.mkv` H.264 + FLAC / `provenance.md` / `upload.csv` / `report.json`
   - ✅ **영상 QA PASS**: 초기 render의 61s container tail을 remux-trim해 최종 container duration 7,879s로 보정. `ffprobe`와 video/audio decode checks PASS
   - ⚠️ **상태 주의**: WAV, merged WAV, MKV, output artifacts는 `.gitignore` 대상이므로 git 커밋에는 포함되지 않음. 업로드 파일은 로컬 산출물로 보존됨
-  - **남은 TODO**: (1) `output/final.mkv` + `input/thumb.jpg`로 YouTube 업로드. (2) 더 작은 업로드본이 필요하면 AAC MP4 copy/transcode 생성.
+  - **상태 보정**: 2026-05-02 사용자 정정에 따라 YouTube 업로드 완료. `output/final.mkv`는 로컬 용량 정리를 위해 삭제된 상태이며 필요 시 `pack`으로 재생성.
 
 - **20-00 v0.6 최종 러닝 오더 확정 + 트랙 txt 삭제** (2026-04-30 18차)
   - ✅ **최종 순서 확정**: 단순 번호/BPM이 아니라 장르·질감·체감 속도까지 종합해 5곡 단위 `강-약-중-강-약` 파형으로 재배치
@@ -854,3 +854,23 @@
   - 번호 제거된 03-11 트랙 헤더에 `Order:` 메타 추가
   - `check_series_gate.sh SERIES/20-00/` PASS 7/7 복구
   - `check_lyric_avoid.sh SERIES/20-00/input/tracks` PASS 20/20 확인
+
+### 2026-05-02
+
+- [x] Wavvy harness engineering 분석/계획/구현
+  - `/team` 관점 분석 산출: `meetings/2026-05-02_wavvy-harness-engineering-analysis.md`
+  - Claude analysis review 1차 NEEDS_USER_DECISION 보완 후 PASS: `.ai/peer-review/runs/20260502-003021-claude-review-49474.md`
+  - 구현 계획 산출/Claude plan PASS: `.ai/plans/PLAN_wavvy_harness_setting.md`, `.ai/peer-review/runs/20260502-003357-claude-plan-57722.md`
+  - `/director` 구현: `wavvy.py doctor/state/gate`, `wavvy_harness/`, `.ai/state.json`, `MASTER/SSOT.md`, 20-00 `uploaded` 정리, `tests/test_harness.py`
+  - 구현 Claude review PASS: `.ai/peer-review/runs/20260502-004637-claude-review-91756.md`
+  - 검증 PASS: `py_compile`, `unittest`, `doctor --json`, `validate`, `state --check --json`, `gate --stage upload-ready --json`, `gate --stage uploaded --json`, `git diff --check`
+  - 상태 보정: 20-00은 업로드 완료. `final.mkv`/`upload.csv` 부재는 업로드 후 용량 정리를 위한 `deleted_after_upload`로 처리
+
+- [x] Agent instruction minimalism refactor
+  - Pre-research check: AI Ops Expert skill/reference에 원칙이 이미 포함되어 있어 외부 research 생략
+  - Team review PASS: `meetings/2026-05-02_wavvy-agent-instruction-minimalism-team.md`, `.ai/peer-review/runs/20260502-011803-claude-review-65918.md`
+  - Plan review PASS: `.ai/plans/PLAN_wavvy_agent_instruction_minimalism.md`, `.ai/peer-review/runs/20260502-012050-claude-plan-72307.md`
+  - 구현: `AGENTS.md` canonical router, `CLAUDE.md` 29줄 Claude overlay, `MASTER/ai/RUNTIME_RULES.md`, `MASTER/SSOT.md` priority 4 integration
+  - 구현 review: 1차 records gap FAIL 후 보완, 최종 PASS `.ai/peer-review/runs/20260502-012932-claude-review-93881.md`
+  - 보존: `사용자 확인 필수`는 삭제하지 않고 `MASTER/ai/RUNTIME_RULES.md` Safety/Approval owner로 이동
+  - 검증 PASS: line-count/drift checks, `py_compile`, `unittest`, `doctor --json`, `validate`, `state --check --json`, `gate --stage uploaded --json`, `gate --stage upload-ready --json`, `git diff --check`

@@ -506,7 +506,7 @@ Agent: Claude via peer-agent-review
 Summary: codex peer review completed. Verdict: FAIL. Focus: 20-00 시리즈 `💪 AFTER HOURS WORKOUT` (Korean Hard Hip-Hop · Workout · Night Grind) 추가 7곡(14-20) draft 작성 + 5곡 컨셉 교체 작업에 대한 peer review. ## 컨텍스트 - 시리즈 정체성: Korean Workout Hip-Hop 빈자리 채우기. 20곡 최종 (Hard 70%, A 3 / B 4 / C 5 / D 3 / E 2 / F 3, 남성 
 Next-TODO: Review result file and address FAIL/NEEDS_USER_DECISION items before completion.
 Review-Result: /Users/zenkim_office/Project/wavvy/.ai/peer-review/runs/20260428-145415-codex-review-98088.md
-Commits: pending
+Commits: (이번 record commit)
 ---
 
 ---
@@ -517,4 +517,48 @@ Agent: Codex
 Summary: 20-00 힙합 시리즈 트랙 프롬프트를 사용자 제공 본문 기준으로 정리. Black Mirror, Bottom Line, Old Cassette, Engine, Concrete, Real Talk를 반영하고 03-16 트랙 txt 파일명 넘버링을 제거함.
 Next-TODO: 17_Late Lane / 18_Side Street / 19_Slow Glow / 20_Old Page는 제외 상태 유지. 필요 시 남은 트랙도 사용자 최종 본문 기준으로 개별 정리.
 Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Codex -> Claude (peer review)
+Date: 2026-05-02 00:29:11
+Project: /Users/zen/Project/wavvy
+Agent: Codex via peer-agent-review
+Summary: claude peer review completed. Verdict: NEEDS_USER_DECISION. Focus: Review this Wavvy harness-engineering analysis as Claude Opus 4.7 xhigh/max equivalent. Primary artifact: - meetings/2026-05-02_wavvy-harness-engineering-analysis.md Evaluate whether the analysis is correct, complete, and actionable for set
+Next-TODO: Review result file and address FAIL/NEEDS_USER_DECISION items before completion.
+Review-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260502-002626-claude-review-40431.md
+Commits: pending
+---
+
+---
+HANDOFF: Codex -> Claude (peer plan)
+Date: 2026-05-02 00:36:07
+Project: /Users/zen/Project/wavvy
+Agent: Codex via peer-agent-review
+Summary: claude peer plan completed. Verdict: unknown. Focus: Review this implementation plan as Claude Opus 4.7 xhigh/max equivalent. Plan artifact: - .ai/plans/PLAN_wavvy_harness_setting.md Source analysis: - meetings/2026-05-02_wavvy-harness-engineering-analysis.md Evaluate sequencing, feasibility,
+Next-TODO: Review result file and address FAIL/NEEDS_USER_DECISION items before completion.
+Review-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260502-003357-claude-plan-57722.md
+Commits: pending
+---
+
+---
+HANDOFF: Codex -> User
+Date: 2026-05-02 00:57:00
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: Wavvy harness engineering flow completed and corrected for 20-00 uploaded status. Added `doctor/state/gate` CLI, `wavvy_harness/`, `.ai/state.json`, `MASTER/SSOT.md`, tests, and peer-review artifacts. 20-00 is `uploaded`; missing `final.mkv/upload.csv` are intentional `deleted_after_upload` local cleanup, not blockers. Also added reusable cross-project team-director pipeline files in `/Users/zen/Project/claude-center`.
+Next-TODO: No active 20-00 upload blocker. If re-upload/audit is needed, regenerate local video artifacts with `python3 wavvy.py pack SERIES/20-00 -y`. If URL should be tracked, add it to `SERIES/20-00/concept.md` Upload Status.
+Review-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260502-004637-claude-review-91756.md
+Commits: (이번 record commit)
+---
+
+---
+HANDOFF: Codex -> User
+Date: 2026-05-02 01:29:00
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: Agent instruction minimalism refactor completed. Added `AGENTS.md` as canonical agent router, reduced `CLAUDE.md` to Claude-specific overlay, moved runtime hard constraints/media cautions/approval policy to `MASTER/ai/RUNTIME_RULES.md`, and registered that file in `MASTER/SSOT.md` priority 4. User confirmation policy preserved; unconditional video xfade rule removed from entrypoint docs.
+Next-TODO: None for this refactor. Continue using `AGENTS.md` as canonical router and `MASTER/ai/RUNTIME_RULES.md` for runtime safety/media rules.
+Review-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260502-012932-claude-review-93881.md
+Commits: (이번 record commit)
 ---

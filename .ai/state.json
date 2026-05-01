@@ -1,0 +1,32 @@
+{
+  "schema": "wavvy.state.v1",
+  "revision": 2,
+  "updated_at": "2026-05-02T01:05:02",
+  "active_series": "SERIES/20-00",
+  "phase": "uploaded",
+  "inferred_phase": "uploaded",
+  "next_action": "No active blocker. Local final.mkv/upload.csv are disposable after upload and can be regenerated with pack if needed.",
+  "artifact_status": {
+    "concept_md": "present",
+    "final_track_sources": "present",
+    "final_track_sources_count": 20,
+    "report_json": "present",
+    "report_tracks": 20,
+    "audio_files": 20,
+    "txt_sources": 0,
+    "final_mkv": "deleted_after_upload",
+    "upload_csv": "deleted_after_upload",
+    "subtitle_txt": "present",
+    "subtitle_srt": "present",
+    "youtube_metadata": "present",
+    "youtube_upload": "completed"
+  },
+  "authoritative_docs": [
+    "wavvy.md",
+    "MASTER/MANAGER.md",
+    "MASTER/WORKFLOWS.md",
+    "MASTER/youtube/YOUTUBE.md",
+    "SERIES/20-00/concept.md"
+  ],
+  "blocked_by": []
+}
