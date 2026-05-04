@@ -10,7 +10,7 @@ Purpose: 하네스가 문서/상태/산출물 충돌을 판정하기 위한 단�
 
 | Priority | File / Artifact | Owns | Notes |
 |---|---|---|---|
-| 1 | `.ai/state.json` | active series, phase, next action, local artifact availability | Machine-readable resume contract. Written only by `python3 wavvy.py state --write`. |
+| 1 | `.ai/state.json` | active series, phase, next action, local artifact availability, current authoritative doc pointers | Machine-readable resume contract. Written only by `python3 wavvy.py state --write`. |
 | 2 | `SERIES/[series]/concept.md` | per-series concept, YouTube metadata, Final Track Sources | Upload-final source archive after `finalize-upload`. |
 | 3 | `SERIES/[series]/output/report.json` | technical track durations, hashes, processing params | Local generated artifact. Regeneratable by `pack`. |
 | 4 | `MASTER/ai/RUNTIME_RULES.md` | runtime hard constraints, media execution cautions, approval/safety rules | Entry files route here; workflow details still live in `WORKFLOWS.md` / `cli/SPEC.md`. |
@@ -61,6 +61,7 @@ python3 wavvy.py state SERIES/[series] --write
 ```
 
 The writer uses temp-file plus atomic rename. Agents should not edit `.ai/state.json` manually.
+The `authoritative_docs` list in state should mirror the current conflict-owner docs in this file, plus the active series `concept.md`.
 
 `.ai/HANDOFF.md` remains append-only because claude-center hooks still read it. State augments handoff; it does not replace hook behavior yet.
 

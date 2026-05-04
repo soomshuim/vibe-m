@@ -1,8 +1,8 @@
 # Wavvy MANAGER.md
 
-Version: 2.0
-Last Updated: 2026-03-03
-Role: Quality Gatekeeper (최상위 통제)
+Version: 2.1
+Last Updated: 2026-05-02
+Role: Quality Gatekeeper (quality-gate fallback)
 
 ---
 
@@ -19,14 +19,17 @@ Role: Quality Gatekeeper (최상위 통제)
 ## 2. Document Hierarchy
 
 ```
-MANAGER.md (최상위)
-├── STYLE.md
-├── LYRICS.md
-├── ROLES.md
-└── CLAUDE.md (요약/실행용, SSOT 아님)
+MASTER/SSOT.md (conflict order / artifact policy)
+├── .ai/state.json (active machine state)
+├── MASTER/ai/RUNTIME_RULES.md (runtime constraints)
+├── MANAGER.md (quality gate fallback)
+│   ├── STYLE.md
+│   ├── LYRICS.md
+│   └── ROLES.md
+└── AGENTS.md / CLAUDE.md (router / overlay, SSOT 아님)
 ```
 
-**충돌 시:** MANAGER.md 우선, 명시 없으면 보수적 Fail
+**충돌 시:** 먼저 `MASTER/SSOT.md`의 Conflict Order를 적용한다. 이 문서는 품질 판단과 루브릭 fallback을 소유하며, 해당 영역에서 명시가 없으면 보수적 Fail을 적용한다.
 
 ---
 
@@ -34,7 +37,7 @@ MANAGER.md (최상위)
 
 ### Phase 0.3 New Genre Research
 > 트리거: `rubrics/`에 해당 장르 없을 때
-> SSOT: `RUBRICS_CREATION_PROCESS.md`
+> SSOT: `MASTER/rubrics/CREATION_PROCESS.md`
 
 ### Phase 0.4 New Series Bootstrap
 1. `SERIES/[시리즈]/concept.md` 먼저 생성

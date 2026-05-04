@@ -1,7 +1,7 @@
 # Wavvy — Project Identity
 
-Version: 1.0
-Last Updated: 2026-03-07
+Version: 1.1
+Last Updated: 2026-05-02
 Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
 
 ---
@@ -41,7 +41,7 @@ Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
 
 ## 4. 24H Station Concept
 
-11개 시간대 = 11개 감정 스테이션
+운영 시간대 = 감정 스테이션
 
 | Time | Station | Tone |
 |------|---------|------|
@@ -49,9 +49,15 @@ Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
 | 04:00 | 여명 | 고독, 여백 |
 | 07:00 | 기상 | 시작, 담담 |
 | 10:00 | 업무시간 | 지속, 루틴 |
+| 12:00 | 점심 | 열기, 리듬 |
+| 13:00 | 봄 산책 | 밝음, 산책 |
 | 14:00 | 오후햇살 | 나른, 따뜻 |
+| 15:00 | 라디오 드라이브 | 바람, 그루브 |
+| 16:00 | 퇴근 전 | 버팀, 교차 |
 | 18:30 | 퇴근길 | 해방, 전환 |
+| 20:00 | 저녁 운동 | 에너지, 몰입 |
 | 21:00 | 밤산책 | 고요, 사색 |
+| 22:00 | 수면 전 | 이완, 릴랙스 |
 | 23:30 | 불면 | 무게, 고백 |
 
 상세 설정은 각 `SERIES/[시리즈]/concept.md` 참조.
@@ -80,10 +86,15 @@ Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
 | 06-00 | 06:00 | Fast Lo-fi |
 | 10-00 | 10:00 | Chillhop |
 | 11-00 | 11:00 | Classic Lo-fi |
+| 12-00 | 12:00 | Korean Afrobeats |
+| 13-00 | 13:00 | Feel Good R&B / Urban Neo-Soul |
 | 14-00 | 14:00 | Soft R&B |
+| 15-00 | 15:00 | Funky R&B / Urban Neo-Soul |
 | 16-00 | 16:00 | 감성 락 |
 | 18-00 | 18:00 | Neo-Soul |
+| 20-00 | 20:00 | Korean Hip-Hop / Trap / Rage |
 | 21-00 | 21:00 | City Pop |
+| 22-00 | 22:00 | Chill R&B / Ambient Slow Jam |
 
 ---
 
@@ -98,10 +109,9 @@ Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
 | **시간 표기** | 24시간제 (00:00 ~ 23:00) |
 
 ### 타이틀 포맷
-```
-[Playlist] [HH:MM] Wavvy | {문구}, {장르}
-예: [Playlist] [04:00] Wavvy | 하루가 멈춘 시간, 새벽 Slow R&B 보컬
-```
+YouTube title/description/tag format SSOT: `MASTER/youtube/YOUTUBE.md`.
+
+Thumbnail text may keep the shorter `Wavvy {HH:MM}` branding treatment when the series design requires it.
 
 ### 영상 구성
 - **롱폼**: 좌상단 로고 워터마크 (인트로 없음)

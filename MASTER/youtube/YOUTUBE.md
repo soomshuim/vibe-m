@@ -1,10 +1,10 @@
 # YouTube Metadata (SSOT)
 
-Version: 2.0
-Last Updated: 2026-03-04
+Version: 2.1
+Last Updated: 2026-05-02
 Purpose: YouTube 제목/설명/태그 통합 규칙
 
-> 장르 상세: `reference/GENRES.md`
+> 장르 상세: `MASTER/reference/GENRES.md`
 
 ---
 
@@ -46,7 +46,9 @@ Playlist | {HH}:{MM} | {감정 훅 + 이모지} | {장르1} · {장르2} | {용�
 | 06:00 | 🌅 | 16:00 | 🎸 |
 | 10:00 | ☕ | 18:00 | 🚶 |
 | 11:00 | 🎯 | 21:00 | 🌙 |
-| 12:00 | 🍽️ | | |
+| 12:00 | 🍽️ | 13:00 | 🌸 |
+| 15:00 | 🕶️ | 20:00 | 💪 |
+| 22:00 | 🌙 | | |
 
 ---
 
@@ -80,12 +82,18 @@ Playlist | 10:00 | 오늘도 조용히 시작하는 중 ☕ | CHILLHOP · JAZZHO
 | 10-00 | Chillhop | chillhop, lofi, jazzhop, 칠홉, 노동요 | #chillhop #칠홉 #노동요 |
 | 11-00 | Classic Lo-fi | classic lofi, lofi hip hop, jazzhop, 클래식로파이, 딥워크 | #classiclofi #로파이 #딥워크 #몰입 |
 | 12-00 | Korean Afrobeats | afrobeats, afropop, korean afrobeats, 아프로비츠, 점심플리 | #afrobeats #아프로비츠 #점심플리 |
+| 13-00 | Feel Good R&B / Urban Neo-Soul | feel good rnb, urban neo soul, neo soul, r&b, 봄플리, 산책음악, 드라이브음악 | #feelgoodrnb #urbanneosoul #봄플리 #산책음악 |
 | 14-00 | Soft R&B | soft rnb, r&b, 소프트알앤비, 카페음악 | #softrnb #알앤비 #카페음악 |
+| 15-00 | Funky R&B / Urban Neo-Soul | funky rnb, urban neo soul, neo soul, drive music, 드라이브, 봄 | #funkyrnb #urbanneosoul #드라이브음악 #봄플리 |
 | 16-00 | 감성 락 | korean rock, indie rock, 감성락 | #koreanrock #감성락 #드라이브 |
 | 18-00 | Neo-Soul | neo soul, 네오소울, 퇴근길 | #neosoul #네오소울 #퇴근길 |
+| 20-00 | Korean Hip-Hop / Trap / Rage / Drill | korean hip hop, korean trap, rage trap, k-drill, workout music, 운동bgm | #KoreanHipHop #Trap #RageTrap #KDrill #운동BGM |
 | 21-00 | 시티팝 | city pop, 시티팝, 뉴트로, 밤감성 | #citypop #시티팝 #밤감성 |
+| 22-00 | Chill R&B / Ambient Slow Jam | chill rnb, ambient slow jam, acoustic chill rnb, 수면음악, 릴랙스 | #chillrnb #slowjam #수면음악 #릴랙스 |
 
 **공통:** `playlist, 플리, korean lyrics, 한국어가사, wavvy, 웨이비`
+
+시리즈 `concept.md`에 명시된 YouTube Metadata가 있으면 그 섹션이 해당 시리즈의 최종 업로드 문안이다. 위 표는 새 Draft 작성과 장르 혼동 방지용 기본값이다.
 
 ---
 
@@ -106,8 +114,8 @@ Track List
 Music for your space, 24 hours a day.
 All tracks feature Korean lyrics.
 
-🎵 Music: wavvy
-Copyright Ⓒ wavvy. All rights reserved.
+🎵 Music: Wavvy
+Copyright Ⓒ Wavvy. All rights reserved.
 ──────────────
 {해시태그}
 ```

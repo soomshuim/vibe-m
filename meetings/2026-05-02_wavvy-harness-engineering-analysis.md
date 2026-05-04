@@ -166,7 +166,7 @@ Wavvy용 하네스 셋팅은 다음 순서로 한다.
 ## Next Actions (3)
 
 1. 이 분석 파일을 `-claude-review` 게이트로 보내고, Claude finding을 반영해 분석을 보완한다.
-2. 보완된 분석을 바탕으로 `.ai/plans/PLAN_wavvy_harness_setting.md`를 작성하고 `-claude-plan` 게이트를 통과시킨다.
+2. 보완된 분석을 바탕으로 plan gate를 통과시킨다. 당시 draft plan 파일은 이후 구현/record 산출물로 대체되어 제거됐다.
 3. PASS된 플랜의 MVP 범위만 Director mode로 구현한다: `MASTER/SSOT.md`, `.ai/state.json`, Wavvy state/gate/doctor 중 P0 command, 그리고 cross-project pipeline harness spec.
 
 ---

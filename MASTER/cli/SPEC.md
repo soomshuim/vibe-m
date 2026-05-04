@@ -1,7 +1,7 @@
 # Project Wavvy: CLI Spec
 
-Version: 4.0
-Last Updated: 2026-03-07
+Version: 4.1
+Last Updated: 2026-05-02
 Purpose: wavvy CLI 시스템 명세
 
 ---
@@ -22,7 +22,8 @@ SERIES/[Series_Name]/
 ├── concept.md
 ├── input/
 │   ├── tracks/       # MP3/WAV (파일명 규칙 필수)
-│   ├── loop.mp4      # 배경 루프
+│   ├── loop.mp4      # 배경 비디오 루프 (선택: video mode)
+│   ├── loop.png/jpg  # 정적 배경 이미지 (선택: image mode)
 │   ├── shorts.mp4    # shorts용 (선택)
 │   └── thumb.jpg
 ├── work/             # (자동생성)
@@ -44,7 +45,7 @@ brand/
 ## 4. CLI 커맨드
 
 ### A. `validate`
-- File Check: tracks 1개+, loop.mp4, thumb.jpg
+- File Check: tracks 1개+, `loop.mp4` 또는 `loop.png/jpg/jpeg`, `thumb.jpg`
 - Naming Check: `__` 규칙
 - Audio Integrity: ffprobe (Duration, Decodable, Sample Rate)
 
@@ -55,7 +56,7 @@ brand/
 
 ### C. `vfade` (v3.0 — 자동 크롭/로고)
 - **옵션:** `--fade 0.5 --duration SEC --test --crop/--no-crop --logo/--no-logo`
-- loop.mp4에 FFmpeg xfade 필터 적용 → 끊김 없는 루프 영상 생성
+- video mode 전용: loop.mp4에 FFmpeg xfade 필터 적용 → 끊김 없는 루프 영상 생성
 - `--crop`: 자동 pillarbox 감지 및 제거 (기본: 활성화)
 - `--logo`: brand/logo_wavvy.png 오버레이 (기본: 활성화, 50% 크기)
 - `--test`: 30초 테스트 영상 생성 (loop_xfade_test.mp4)
@@ -64,12 +65,12 @@ brand/
 ### D. `pack` (v4.0 — 인터랙티브 모드)
 - **옵션:** `--lufs -14 --tp -1.0 --fade 0.8 --repeat N -y`
 - **인터랙티브 플랜 모드** (기본): 4가지 설정 확인 후 진행
-  1. Video crossfade 사용 여부 (loop_xfade.mp4 있으면 사용)
+  1. Video crossfade 사용 여부 (video mode에서 loop_xfade.mp4 있으면 사용, image mode는 스킵)
   2. Track repeat 횟수 (기본: 2)
   3. Pillarbox 자동 크롭 (감지 시)
   4. Logo 오버레이 (brand/logo_wavvy.png)
 - `-y`: 확인 없이 기본값으로 진행
-- 0. Pre-flight: 비디오 전처리 (크롭 + 로고)
+- 0. Pre-flight: image mode 감지 또는 비디오 전처리 (크롭 + 로고)
 - 1. Re-Validate
 - 2. Normalize: -14 LUFS, -1.0 dBTP → `work/norm_tracks/`
 - 3. Merge: Sequential Acrossfade + repeat
@@ -92,7 +93,7 @@ python3 wavvy.py validate SERIES/[시리즈]
 # 미리보기
 python3 wavvy.py preview SERIES/[시리즈] --sec 30
 
-# 비디오 크로스페이드 (긴 영상용 — vfade 별도 실행)
+# 비디오 크로스페이드 (video mode 긴 영상용 — vfade 별도 실행)
 python3 wavvy.py vfade SERIES/[시리즈] --test   # Step 1: 테스트
 open SERIES/[시리즈]/input/loop_xfade_test.mp4  # Step 2: 확인
 python3 wavvy.py vfade SERIES/[시리즈]          # Step 3: 본 생성
@@ -106,8 +107,12 @@ python3 wavvy.py pack SERIES/[시리즈] -y
 # 하네스 점검
 python3 wavvy.py doctor
 python3 wavvy.py state SERIES/[시리즈] --check
+python3 wavvy.py state SERIES/[시리즈] --write --phase uploaded --if-match N
 python3 wavvy.py gate SERIES/[시리즈] --stage source-final
 python3 wavvy.py gate SERIES/[시리즈] --stage uploaded
+
+# 업로드 FINAL 소스 아카이브
+python3 wavvy.py finalize-upload SERIES/[시리즈] --check
 
 # 정리
 python3 wavvy.py clean SERIES/[시리즈]
@@ -120,12 +125,16 @@ python3 wavvy.py shorts [track.mp3] --start 00:45 --duration 30
 
 ## 6. 영상 패키징 워크플로우
 
-> **⚠️ 크로스페이드 = 오디오 + 비디오 둘 다 필요**
+> **⚠️ 오디오 acrossfade와 비디오 xfade는 별개**
 > **⚠️ 플레이리스트 2회 반복 필수** (`--repeat 2`)
 
 ### 6.1 기본 워크플로우
 
-`vfade --test` → 확인 → `vfade` → `pack` (§5 사용 예시 참조)
+`pack`은 항상 오디오 acrossfade를 처리한다. 비디오 xfade는 `input/loop.mp4` 기반 video mode에서 루프 경계가 눈에 띄는 경우에만 별도로 만든다.
+
+- Video mode + seamless loop 필요: `vfade --test` → 확인 → `vfade` → `pack`
+- Image mode (`loop.png/jpg/jpeg`): `pack`만 실행. `vfade` 불필요
+- 이미 `uploaded` 상태인 시리즈 점검: `state/gate`로 확인. 로컬 `final.mkv`/`upload.csv`가 `deleted_after_upload`이면 재생성 불필요
 
 ### 6.2 Seamless Loop (81분+ 영상용 — 수동)
 
@@ -157,6 +166,6 @@ ffmpeg -i input/loop_xfade.mp4 -i work/xfade_bridge.mp4 -filter_complex \
 | 종류 | 명령어 | 설명 |
 |------|--------|------|
 | **오디오** | `pack --fade 0.5` | 트랙 간 오디오 전환 |
-| **비디오** | `vfade` → `pack` | 루프 영상 끊김 없는 반복 |
+| **비디오** | `vfade` → `pack` | video mode 루프 영상 끊김 없는 반복 |
 
-**⚠️ `pack` 단독 실행 = 오디오만 크로스페이드 (비디오 끊김 발생)**
+**주의:** video mode에서 `pack` 단독 실행은 오디오만 크로스페이드한다. image mode는 정적 이미지 렌더이므로 비디오 루프 xfade 문제가 없다.

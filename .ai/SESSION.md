@@ -1,8 +1,26 @@
 # Session State — Wavvy
 
-> Last updated: 2026-05-02 (23차 업데이트 — 20-00 uploaded 상태 및 로컬 대용량 artifact 삭제 반영)
+> Last updated: 2026-05-04 (25차 업데이트 — legacy markdown pruning + SSOT/harness hardening 커밋 준비)
 
 ## 진행 중
+
+- **Legacy markdown pruning + SSOT/harness hardening record** (2026-05-04 25차)
+  - ✅ **`-team` 검토**: `meetings/2026-05-04_legacy-doc-pruning.md`에 AI Ops / Engineering / Product / QA 관점으로 삭제 기준 기록
+  - ✅ **삭제 완료**: `.ai/plans/PLAN_wavvy_agent_instruction_minimalism.md`, `.ai/plans/PLAN_wavvy_harness_setting.md`, `meetings/2026-02-07_vibem-swot-analysis.md`, `meetings/2026-03-07_final-mp4-retrospective.md`, `reviews/2026-03-07_vibem-to-wavvy-rename.md`
+  - ✅ **보존 원칙**: `.ai/HANDOFF.md`, `.ai/SESSION.md`, `.ai/peer-review/*`, `.ai/pipeline/*`, MASTER SSOT 문서, active series concept/research는 유지
+  - ✅ **검증 PASS**: `py_compile`, `unittest`, `doctor --json`, `validate SERIES/20-00`, `state --check --json`, `gate --stage upload-ready --json`, `gate --stage uploaded --json`, `git diff --check`
+  - **남은 TODO**: 커밋/푸시
+
+- **SSOT/문서 중복·충돌 + 하네스 설정 점검/수정** (2026-05-02 24차)
+  - ✅ **`-play` 하네스 실행**: `.ai/pipeline/runs/20260502-025736_ssot-harness-audit/`에 team analysis, peer review, plan, plan review, implementation, record artifact 생성
+  - ✅ **Peer gates**: analysis review PASS, plan review PASS. Plan review의 Medium finding은 구현 전 반영 (`_upload_completed` 정확 패턴, `upload-ready` check UX, doctor stale scan scope)
+  - ✅ **State/SSOT 정합화**: `.ai/state.json` revision 3으로 재작성. `authoritative_docs`가 `MASTER/SSOT.md`, `MASTER/ai/RUNTIME_RULES.md`, `MASTER/MANAGER.md`, `MASTER/WORKFLOWS.md`, `MASTER/cli/SPEC.md`, `MASTER/youtube/YOUTUBE.md`, `wavvy.md`, active `concept.md`를 가리킴
+  - ✅ **Gate 의미 보정**: `upload-ready`는 업로드 전 준비 상태이므로 실패성 `youtube_upload_completed` 체크 대신 `youtube_upload_status: pending|completed` PASS check로 보고. `uploaded` stage만 upload completion을 필수로 유지
+  - ✅ **Upload inference 강화**: bare `uploaded`/`phase: uploaded` 텍스트만으로 업로드 완료 추론하지 않음. 명시적 `Upload Status`, YouTube URL, 업로드 완료 문구만 인정
+  - ✅ **Doctor hygiene 추가**: SSOT docs 존재, AGENTS/CLAUDE router target, entrypoint stale pattern, state authoritative docs, tracked `.DS_Store` absence를 검사
+  - ✅ **문서 drift 정리**: vfade는 video-loop packaging에만 scoped, image-mode/uploaded state exempt 명시. LYRICS 괄호 규칙, MANAGER hierarchy, YOUTUBE brand/tag mapping, wavvy title format 중복 정리
+  - ✅ **검증 PASS**: `py_compile`, `unittest`, `doctor --json`, `validate SERIES/20-00`, `state --check --json`, `gate --stage upload-ready --json`, `gate --stage uploaded --json`
+  - **남은 TODO**: 없음. 사용자 요청에 따라 2026-05-04 legacy pruning과 함께 커밋/푸시 예정.
 
 - **20-00 Final Track Sources 최종 보정 + YouTube 자막 테스트 산출물** (2026-04-30 22차)
   - ✅ **최종 소스 보정**: 사용자 제공 final prompt/lyrics 기준으로 05 Old Cassette, 06 Real Talk, 12 Small Talk, 13 Concrete, 15 Old Page, 19 Side Street, 20 Slow Glow의 Final Track Sources를 정리

@@ -20,10 +20,13 @@ DEFAULT_NEXT_ACTION = (
 )
 
 AUTHORITATIVE_DOCS = [
-    "wavvy.md",
+    "MASTER/SSOT.md",
+    "MASTER/ai/RUNTIME_RULES.md",
     "MASTER/MANAGER.md",
     "MASTER/WORKFLOWS.md",
+    "MASTER/cli/SPEC.md",
     "MASTER/youtube/YOUTUBE.md",
+    "wavvy.md",
 ]
 
 
@@ -72,15 +75,41 @@ def _final_track_sources_count(concept_text: str) -> int:
     return len(re.findall(r"^### \d{2}\. .+$", section, flags=re.MULTILINE))
 
 
+def _markdown_section(concept_text: str, heading_name: str) -> str:
+    heading = re.search(rf"^## {re.escape(heading_name)}\s*$", concept_text, flags=re.MULTILINE)
+    if not heading:
+        return ""
+    next_heading = re.search(r"^## ", concept_text[heading.end():], flags=re.MULTILINE)
+    end = heading.end() + next_heading.start() if next_heading else len(concept_text)
+    return concept_text[heading.end():end]
+
+
 def _upload_completed(concept_text: str) -> bool:
-    patterns = [
-        r"`uploaded`",
-        r"\buploaded\b",
+    upload_status = _markdown_section(concept_text, "Upload Status")
+    completion_patterns = [
+        r"\bcompleted\b",
         r"YouTube upload completed",
         r"YouTube 업로드 완료",
         r"업로드 완료",
     ]
-    return any(re.search(pattern, concept_text, flags=re.IGNORECASE) for pattern in patterns)
+    if upload_status:
+        negative_patterns = [
+            r"\bnot\s+(?:uploaded|completed)\b",
+            r"업로드\s*(?:전|미완료|안\s*됨)",
+        ]
+        if any(re.search(pattern, upload_status, flags=re.IGNORECASE) for pattern in negative_patterns):
+            return False
+        return any(re.search(pattern, upload_status, flags=re.IGNORECASE) for pattern in completion_patterns)
+
+    if re.search(r"https?://(?:www\.)?(?:youtube\.com|youtu\.be)/\S+", concept_text, flags=re.IGNORECASE):
+        return True
+
+    explicit_patterns = [
+        r"YouTube upload completed",
+        r"YouTube 업로드 완료",
+        r"업로드 완료",
+    ]
+    return any(re.search(pattern, concept_text, flags=re.IGNORECASE) for pattern in explicit_patterns)
 
 
 def _has_stale_final_todo(concept_text: str) -> bool:

@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -21,6 +23,35 @@ REQUIRED_MODULES = {
 REQUIRED_BINARIES = ["ffmpeg", "ffprobe", "git"]
 DEFAULT_PEER_REVIEW_SCRIPT = Path("~/Project/claude-center/scripts/peer-agent-review.sh").expanduser()
 DEFAULT_FFMPEG_FULL = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg")
+REQUIRED_SSOT_DOCS = [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "MASTER/SSOT.md",
+    "MASTER/ai/RUNTIME_RULES.md",
+    "MASTER/MANAGER.md",
+    "MASTER/WORKFLOWS.md",
+    "MASTER/cli/SPEC.md",
+    "MASTER/youtube/YOUTUBE.md",
+    "wavvy.md",
+]
+CORE_ROUTER_TARGETS = [
+    "MASTER/SSOT.md",
+    "MASTER/ai/RUNTIME_RULES.md",
+    "MASTER/MANAGER.md",
+    "MASTER/WORKFLOWS.md",
+    "MASTER/cli/SPEC.md",
+]
+ENTRYPOINT_DOCS = ["AGENTS.md", "CLAUDE.md", "MASTER/ai/RUNTIME_RULES.md"]
+STALE_ENTRYPOINT_PATTERNS = {
+    "stale_project_name_vibem": r"\bVIBEM\b",
+    "stale_output_final_mp4": r"final\.mp4",
+    "unconditional_video_crossfade": r"Video Crossfade 필수|vfade --test.*pack",
+}
+STATE_REQUIRED_DOCS = {
+    "MASTER/SSOT.md",
+    "MASTER/ai/RUNTIME_RULES.md",
+    "MASTER/cli/SPEC.md",
+}
 
 
 def _check_module(package_name: str, module_name: str) -> dict[str, Any]:
@@ -93,6 +124,112 @@ def _check_disk(repo_root: Path) -> dict[str, Any]:
     }
 
 
+def _read_text(path: Path) -> str:
+    try:
+        return path.read_text(encoding="utf-8")
+    except Exception:
+        return ""
+
+
+def _check_required_ssot_docs(repo_root: Path) -> dict[str, Any]:
+    missing = [rel for rel in REQUIRED_SSOT_DOCS if not (repo_root / rel).exists()]
+    return {
+        "name": "ssot_docs_present",
+        "required": True,
+        "status": "pass" if not missing else "fail",
+        "detail": "" if not missing else f"missing: {', '.join(missing)}",
+    }
+
+
+def _check_router_targets(repo_root: Path) -> dict[str, Any]:
+    missing = []
+    for router in ["AGENTS.md", "CLAUDE.md"]:
+        text = _read_text(repo_root / router)
+        for target in CORE_ROUTER_TARGETS:
+            if target not in text:
+                missing.append(f"{router}:{target}")
+    return {
+        "name": "router_targets_consistent",
+        "required": True,
+        "status": "pass" if not missing else "fail",
+        "detail": "" if not missing else f"missing: {', '.join(missing)}",
+    }
+
+
+def _check_entrypoint_stale_patterns(repo_root: Path) -> dict[str, Any]:
+    hits = []
+    for rel in ENTRYPOINT_DOCS:
+        text = _read_text(repo_root / rel)
+        for label, pattern in STALE_ENTRYPOINT_PATTERNS.items():
+            if re.search(pattern, text, flags=re.IGNORECASE | re.DOTALL):
+                hits.append(f"{rel}:{label}")
+    return {
+        "name": "entrypoint_stale_patterns_absent",
+        "required": True,
+        "status": "pass" if not hits else "fail",
+        "detail": "" if not hits else f"hits: {', '.join(hits)}",
+    }
+
+
+def _check_state_authoritative_docs(repo_root: Path) -> dict[str, Any]:
+    state_path = repo_root / ".ai" / "state.json"
+    try:
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return {
+            "name": "state_authoritative_docs_current",
+            "path": str(state_path),
+            "required": True,
+            "status": "fail",
+            "detail": f"cannot read state: {exc}",
+        }
+
+    authoritative_docs = set(state.get("authoritative_docs", []))
+    missing = sorted(STATE_REQUIRED_DOCS - authoritative_docs)
+    return {
+        "name": "state_authoritative_docs_current",
+        "path": str(state_path),
+        "required": True,
+        "status": "pass" if not missing else "fail",
+        "detail": "" if not missing else f"missing: {', '.join(missing)}",
+    }
+
+
+def _check_no_tracked_ds_store(repo_root: Path) -> dict[str, Any]:
+    result = subprocess.run(
+        ["git", "-C", str(repo_root), "ls-files"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        return {
+            "name": "tracked_ds_store_absent",
+            "required": False,
+            "status": "warn",
+            "detail": "not a git repository or git ls-files failed",
+        }
+    tracked = [line for line in result.stdout.splitlines() if line.endswith(".DS_Store")]
+    return {
+        "name": "tracked_ds_store_absent",
+        "required": True,
+        "status": "pass" if not tracked else "fail",
+        "detail": "" if not tracked else f"tracked: {', '.join(tracked)}",
+    }
+
+
+def run_ssot_hygiene(repo_root: Path) -> list[dict[str, Any]]:
+    """Run deterministic SSOT/router drift checks."""
+    repo_root = repo_root.resolve()
+    return [
+        _check_required_ssot_docs(repo_root),
+        _check_router_targets(repo_root),
+        _check_entrypoint_stale_patterns(repo_root),
+        _check_state_authoritative_docs(repo_root),
+        _check_no_tracked_ds_store(repo_root),
+    ]
+
+
 def run_doctor(repo_root: Path) -> dict[str, Any]:
     """Run deterministic local dependency checks."""
     repo_root = repo_root.resolve()
@@ -124,6 +261,7 @@ def run_doctor(repo_root: Path) -> dict[str, Any]:
     )
     checks.append(_check_disk(repo_root))
     checks.append(_check_writable_temp(repo_root))
+    checks.extend(run_ssot_hygiene(repo_root))
 
     blockers = [check for check in checks if check.get("required") and check.get("status") == "fail"]
     warnings = [check for check in checks if check.get("status") == "warn"]

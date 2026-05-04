@@ -1,7 +1,7 @@
 # Wavvy LYRICS.md
 
-Version: 4.1
-Last Updated: 2026-03-15
+Version: 4.2
+Last Updated: 2026-05-02
 Purpose: Suno 가사 입력(Lyrics) 규칙 SSOT
 
 ---
@@ -34,7 +34,7 @@ Purpose: Suno 가사 입력(Lyrics) 규칙 SSOT
 
 ### 1.2 Prompt 작성법
 
-- **괄호 없이** 영문으로 직접 작성 (소괄호 사용 금지 — Suno가 보컬로 읽음)
+- **Prompt-only 모드는 괄호 없이** 영문으로 직접 작성 (소괄호 기본 금지 — Suno가 보컬로 읽음)
 - 핵심 감정/장면 키워드 2-3개
 - 시리즈 `LYRICS_DNA.md` 있으면 참조 (톤, 이미지 소재 풀)
 - 길이: 1-3줄 (짧을수록 Suno 자유도 높음)
@@ -84,7 +84,7 @@ Minimal Korean, midday noon heat, harsh sunlight, lunch hour pause, scene not em
 | 분위기/장면 키워드 | 풀 가사 직접 작성 |
 | 영문 방향 지시 | 한국어 가사 행 나열 |
 | 짧고 추상적 | 구체적 운율/음절 지정 |
-| 괄호 없이 직접 작성 | `(...)` 소괄호로 감싸기 — Suno가 보컬로 읽음 |
+| Prompt-only 모드는 괄호 없이 직접 작성 | Prompt-only 내용을 `(...)` 소괄호로 감싸기 — Suno가 보컬로 읽음 |
 
 ---
 
@@ -98,8 +98,10 @@ Minimal Korean, midday noon heat, harsh sunlight, lunch hour pause, scene not em
 | 규칙 | 설명 |
 |------|------|
 | `[]` 대괄호 | 구조 태그 전용 |
-| `()` 소괄호 | 보컬 메타 + 작사 프롬프트 (한 줄 통합) |
-| 1행 원칙 | 구조 태그 뒤 `()` **1행만** |
+| `()` 소괄호 | 기본 금지. Structure 모드에서만 구조 태그 뒤 보컬 메타 + 작사 프롬프트를 한 줄로 통합할 때 예외 허용 |
+| 1행 원칙 | 예외 사용 시 구조 태그 뒤 `()` **1행만** |
+
+정리: §1 Prompt-only 모드는 괄호를 쓰지 않는다. §2 Structure 모드는 `[Verse]`, `[Chorus]` 같은 구조 태그 뒤에 한 번만 `(Direct vocal, Korean lyrics about...)` 형태의 메타 봉투를 둘 수 있다.
 
 ### 2.3 금지 태그
 `[Kick in]`, `[Drums enter]`, `[Pad widens]` → Style Prompt로

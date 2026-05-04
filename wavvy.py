@@ -488,9 +488,9 @@ def validate_project(paths: ProjectPaths) -> ValidationResult:
     Validate project structure and files.
 
     Checks:
-    1. tracks/ contains at least one MP3
-    2. Filename format matches spec (NN__Title__Mood__Genre__BPM.mp3)
-    3. loop.mp4 and thumb.jpg exist
+    1. tracks/ contains at least one MP3/WAV
+    2. Filename format matches spec (NN__Title__Mood__Genre__BPM.mp3 or .wav)
+    3. loop.mp4 or loop.png/jpg/jpeg, plus thumb.jpg, exist
     4. Audio integrity via ffprobe
     5. Sample rate consistency
     """
@@ -2034,7 +2034,7 @@ def validate(path: Path):
     Performs health checks before processing:
     - Verifies tracks exist with valid filenames
     - Checks audio integrity via ffprobe
-    - Validates required media files (loop.mp4, thumb.jpg)
+    - Validates required media files (loop.mp4 or loop.png/jpg/jpeg, thumb.jpg)
     - Reports sample rate consistency
     """
     click.echo(click.style("\n=== WAVVY VALIDATION ===\n", fg='cyan', bold=True))

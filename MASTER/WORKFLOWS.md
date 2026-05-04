@@ -2,8 +2,8 @@
 
 > **모든 작업 워크플로우 통합 문서**
 >
-> Version: 2.0
-> Last Updated: 2026-03-14
+> Version: 2.1
+> Last Updated: 2026-05-02
 
 ---
 
@@ -114,7 +114,11 @@ concept 작성 완료 후 검증: 편곡지시 분리, 글자수, 타이틀/Desc
 
 > **SSOT: `MASTER/cli/SPEC.md` §7**
 
-vfade(테스트) → vfade(본생성) → pack 순서. 상세 명령어와 옵션은 CLI SPEC.md 참조.
+비디오 루프(`input/loop.mp4`) 기반 패키징에서 끊김 없는 반복이 필요할 때만 `vfade --test` → 확인 → `vfade` → `pack` 순서를 사용한다.
+
+이미지 모드(`input/loop.png|jpg|jpeg`)는 `pack`이 정적 이미지 렌더링 경로를 사용하므로 `vfade`가 필요 없다. 이미 `uploaded` 상태로 기록된 시리즈의 state/gate 점검도 로컬 `final.mkv`/`upload.csv` 재생성을 요구하지 않는다.
+
+상세 명령어와 옵션은 CLI SPEC.md 참조.
 
 ---
 

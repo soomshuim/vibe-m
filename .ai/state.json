@@ -1,7 +1,7 @@
 {
   "schema": "wavvy.state.v1",
-  "revision": 2,
-  "updated_at": "2026-05-02T01:05:02",
+  "revision": 3,
+  "updated_at": "2026-05-02T03:11:31",
   "active_series": "SERIES/20-00",
   "phase": "uploaded",
   "inferred_phase": "uploaded",
@@ -22,10 +22,13 @@
     "youtube_upload": "completed"
   },
   "authoritative_docs": [
-    "wavvy.md",
+    "MASTER/SSOT.md",
+    "MASTER/ai/RUNTIME_RULES.md",
     "MASTER/MANAGER.md",
     "MASTER/WORKFLOWS.md",
+    "MASTER/cli/SPEC.md",
     "MASTER/youtube/YOUTUBE.md",
+    "wavvy.md",
     "SERIES/20-00/concept.md"
   ],
   "blocked_by": []

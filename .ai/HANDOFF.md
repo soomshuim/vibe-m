@@ -531,6 +531,16 @@ Commits: pending
 ---
 
 ---
+HANDOFF: Codex -> User
+Date: 2026-05-04 18:31:09 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: `-team` 기준으로 legacy/superseded markdown pruning을 수행했다. 최신 SSOT/하네스 운영에 쓰이지 않는 draft plan 2개, 과거 `vibem`/`final.mp4` 중심 회고·리네임 기록 3개를 삭제하고, 삭제 기준을 `meetings/2026-05-04_legacy-doc-pruning.md`에 기록했다. `.ai/peer-review/*`, `.ai/pipeline/*`, HANDOFF/SESSION, MASTER SSOT 문서, active series concept/research는 보존했다. 검증은 `py_compile`, `unittest`, `doctor`, `validate`, `state --check`, `gate upload-ready/uploaded`, `git diff --check` PASS.
+Next-TODO: 커밋/푸시.
+Commits: pending
+---
+
+---
 HANDOFF: Codex -> Claude (peer plan)
 Date: 2026-05-02 00:36:07
 Project: /Users/zen/Project/wavvy
@@ -561,4 +571,16 @@ Summary: Agent instruction minimalism refactor completed. Added `AGENTS.md` as c
 Next-TODO: None for this refactor. Continue using `AGENTS.md` as canonical router and `MASTER/ai/RUNTIME_RULES.md` for runtime safety/media rules.
 Review-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260502-012932-claude-review-93881.md
 Commits: (이번 record commit)
+---
+
+---
+HANDOFF: Codex -> User
+Date: 2026-05-02 03:15:00
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: `-play` 절차로 Wavvy 프로젝트 전반 SSOT/문서 중복·충돌/하네스 설정을 점검하고 하드닝 완료. `.ai/state.json` authoritative docs를 `MASTER/SSOT.md` conflict-owner 문서와 동기화했고, `doctor`에 SSOT docs/router/stale entrypoint/state/tracked `.DS_Store` hygiene 체크를 추가했다. `upload-ready` gate는 업로드 전 준비 상태에서 실패성 `youtube_upload_completed` 체크를 내지 않고 `youtube_upload_status`를 보고하도록 정리했다. Upload completion 추론은 명시적 Upload Status/YouTube URL/업로드 완료 문구만 인정하도록 강화했다. `WORKFLOWS`, `cli/SPEC`, `LYRICS`, `MANAGER`, `YOUTUBE`, `wavvy.md`의 vfade/image-mode/title/parentheses/hierarchy drift도 정리했다.
+Next-TODO: 없음. 커밋/푸시는 사용자 명시 요청 전까지 보류. 필요 시 `git diff` 확인 후 커밋.
+Review-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260502-030039-claude-review-54952.md; /Users/zen/Project/wavvy/.ai/peer-review/runs/20260502-030342-claude-plan-62270.md
+Play-Run: /Users/zen/Project/wavvy/.ai/pipeline/runs/20260502-025736_ssot-harness-audit
+Commits: pending
 ---

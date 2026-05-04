@@ -126,7 +126,7 @@ def run_gate(
                 artifacts["upload_csv"],
             )
         )
-        checks.append(_check("youtube_upload_completed", upload_completed))
+        checks.append(_check("youtube_upload_status", True, "completed" if upload_completed else "pending"))
         if final_mkv.exists():
             has_video = _has_media_stream(final_mkv, "video")
             has_audio = _has_media_stream(final_mkv, "audio")
