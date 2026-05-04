@@ -1,15 +1,22 @@
 # Session State — Wavvy
 
-> Last updated: 2026-05-04 (25차 업데이트 — legacy markdown pruning + SSOT/harness hardening 커밋 준비)
+> Last updated: 2026-05-04 (26차 업데이트 — record 완료)
 
 ## 진행 중
+
+- **Record checkpoint** (2026-05-04 26차)
+  - ✅ **작업 커밋/푸시 완료**: `0d78e41 docs: harden wavvy ssot and prune legacy docs`
+  - ✅ **원격 동기화**: `origin/master`와 local `master` 차이 0
+  - ✅ **검증 상태**: legacy pruning 전 검증 전체 PASS 유지 (`py_compile`, `unittest`, `doctor`, `validate`, `state`, `gate`, `git diff --check`)
+  - **남은 TODO**: 없음
 
 - **Legacy markdown pruning + SSOT/harness hardening record** (2026-05-04 25차)
   - ✅ **`-team` 검토**: `meetings/2026-05-04_legacy-doc-pruning.md`에 AI Ops / Engineering / Product / QA 관점으로 삭제 기준 기록
   - ✅ **삭제 완료**: `.ai/plans/PLAN_wavvy_agent_instruction_minimalism.md`, `.ai/plans/PLAN_wavvy_harness_setting.md`, `meetings/2026-02-07_vibem-swot-analysis.md`, `meetings/2026-03-07_final-mp4-retrospective.md`, `reviews/2026-03-07_vibem-to-wavvy-rename.md`
   - ✅ **보존 원칙**: `.ai/HANDOFF.md`, `.ai/SESSION.md`, `.ai/peer-review/*`, `.ai/pipeline/*`, MASTER SSOT 문서, active series concept/research는 유지
   - ✅ **검증 PASS**: `py_compile`, `unittest`, `doctor --json`, `validate SERIES/20-00`, `state --check --json`, `gate --stage upload-ready --json`, `gate --stage uploaded --json`, `git diff --check`
-  - **남은 TODO**: 커밋/푸시
+  - ✅ **커밋/푸시 완료**: `0d78e41 docs: harden wavvy ssot and prune legacy docs`
+  - **남은 TODO**: 없음
 
 - **SSOT/문서 중복·충돌 + 하네스 설정 점검/수정** (2026-05-02 24차)
   - ✅ **`-play` 하네스 실행**: `.ai/pipeline/runs/20260502-025736_ssot-harness-audit/`에 team analysis, peer review, plan, plan review, implementation, record artifact 생성

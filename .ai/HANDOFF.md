@@ -532,6 +532,16 @@ Commits: pending
 
 ---
 HANDOFF: Codex -> User
+Date: 2026-05-04 20:31:48 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: Session record after Wavvy SSOT/harness hardening and legacy markdown pruning. Work commit `0d78e41 docs: harden wavvy ssot and prune legacy docs` was pushed to `origin/master`; local and upstream are in sync.
+Next-TODO: 없음.
+Commits: 0d78e41; this record commit
+---
+
+---
+HANDOFF: Codex -> User
 Date: 2026-05-04 18:31:09 +0900
 Project: /Users/zen/Project/wavvy
 Agent: Codex
