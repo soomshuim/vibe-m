@@ -594,3 +594,26 @@ Review-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260502-030039-cla
 Play-Run: /Users/zen/Project/wavvy/.ai/pipeline/runs/20260502-025736_ssot-harness-audit
 Commits: pending
 ---
+
+---
+HANDOFF: Codex -> Claude (peer review)
+Date: 2026-05-07 21:38:45
+Project: /Users/zen/Project/wavvy
+Agent: Codex via peer-agent-review
+Summary: Actual Claude peer review completed for RNB-BEST renumbering. First dispatcher run produced an empty peer result and was not used as a verdict. Second dispatcher run returned PASS/high with one low-severity note: disambiguate duplicate `약속` in the YouTube Track List. Codex accepted the finding and changed item 24 to `약속 (Loneliness)`. Direct Claude read-only re-review then returned PASS/high with zero findings.
+Next-TODO: 없음. Packaging assets are still pending separately: `SERIES/RNB-BEST/input/loop.*` and `SERIES/RNB-BEST/input/thumb.jpg`.
+Review-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260507-213930-claude-review-60530.md
+ReReview-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260507-214414-claude-review-direct.md
+Commits: pending
+---
+
+---
+HANDOFF: Codex -> User
+Date: 2026-05-08 01:45:20 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: RNB-BEST compilation series prepared from existing Wavvy R&B/R&B-adjacent tracks. Final state has 33 selected tracks, finalized `concept.md` YouTube title/description/tags/hashtags/timestamp list with original-series labels, 4K image-mode packaging verified, and render `.mkv` files removed per user request. Local ignored `output/provenance.md`, `output/report.json`, and `output/upload.csv` were restored and preserved; they are not default git-tracked because `output/*` is ignored.
+Next-TODO: If an upload-ready video is needed again, regenerate with `python3 wavvy.py pack SERIES/RNB-BEST -y` or use an external retained video copy. Current tracked record should preserve `concept.md`, `input/thumb.jpg`, and `.ai` meeting/review/pipeline artifacts.
+Review-Result: /Users/zen/Project/wavvy/.ai/peer-review/runs/20260507-222711-claude-review-66991.md
+Commits: (이번 record commit)
+---

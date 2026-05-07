@@ -1,8 +1,15 @@
 # Session State — Wavvy
 
-> Last updated: 2026-05-04 (26차 업데이트 — record 완료)
+> Last updated: 2026-05-08 (27차 업데이트 — RNB-BEST record)
 
 ## 진행 중
+
+- **RNB-BEST compilation 패키징/메타데이터 정리** (2026-05-08 27차)
+  - ✅ **신규 시리즈 구성**: `SERIES/RNB-BEST`를 기존 Wavvy R&B/R&B-adjacent 곡 재활용 best compilation으로 구성. 사용자 선곡 33곡을 최종 러닝 오더로 재번호화하고 `concept.md`에 source map 기록
+  - ✅ **콘셉트/메타데이터 확정**: 제목 `Playlist | R&B Best | 와..이 노래 제목 뭐야? ✨ 틀자마자 리듬에 그루비 😎 | CHILL · R&B · SOUL | 카페 · 작업 · 매장 음악 | Wavvy` 확정. 한국어+영문 description, `🌊 Track List`, 원곡 시리즈 표기(`· 22:00` 등), `#` 해시태그 블록과 `#` 없는 tags 동기화
+  - ✅ **영상 제작/정리**: 4K image-mode 영상 제작 및 검증 완료 후 사용자 요청에 따라 `.mkv` 렌더 파일 삭제. `output/provenance.md`, `output/report.json`, `output/upload.csv`는 로컬 산출물로 복구/보존
+  - ✅ **검증 PASS**: `python3 wavvy.py validate SERIES/RNB-BEST` PASS. output 세 파일은 `.gitignore` 대상이라 커밋에는 포함되지 않으며, 필요 시 `python3 wavvy.py pack SERIES/RNB-BEST -y`로 재생성 가능
+  - **남은 TODO**: 실제 업로드가 필요하면 `.mkv`를 다시 생성하거나 별도 보관본을 사용. 현재 커밋 대상은 `concept.md`, `input/thumb.jpg`, `.ai` 회의/리뷰/파이프라인 기록 중심
 
 - **Record checkpoint** (2026-05-04 26차)
   - ✅ **작업 커밋/푸시 완료**: `0d78e41 docs: harden wavvy ssot and prune legacy docs`
