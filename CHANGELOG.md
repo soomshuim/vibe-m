@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **`/write` lyricist routing team decision** (2026-05-22) — `-team` 논의로 Wavvy 작사가 호출 UX를 검토. 결론은 Claude Code에서는 `/write`, Codex에서는 `-write`를 Wavvy lyric-only thin alias로 두고, 실제 규칙은 `skills/wavvy-lyricist`와 `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`에 유지하는 방향. 기록: `meetings/2026-05-22_write-command-lyricist-routing.md`.
 - **Wavvy lyricist skill release docs** (2026-05-22) — `-play` worker run의 작사 스킬 산출물을 Wavvy SSOT/가사/브랜드 문서에 연결하고 release readiness를 기록. `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`는 lyric skill output schema/self-gate/harness baseline owner로 등록하고, `MASTER/lyrics/LYRICS.md`와 `wavvy.md`는 `skills/wavvy-lyricist` 및 `lyrics-review` gate 진입점을 참조하도록 보강. 검증: lyric skill package/gate PASS, 기존 `doctor` peer script path와 17-00 source-final 상태는 별도 non-blocker로 유지.
 - **17-00 Main POP R&B concept draft** (2026-05-21) — 다음 신규 시리즈를 `SERIES/17-00`으로 만들고, 사용자 결정 `기분 좋은 POP(Main) R&B`, `최소 120 BPM`, `무조건 Major Key`를 hard gate로 반영. 17:00은 18:00 퇴근길 위로와 겹치지 않게 `퇴근 전부터 기분을 먼저 올리는 시간`으로 포지셔닝. Style A Main Pop R&B / Style B Bright Contemporary R&B / Style C Light Funk Pop R&B, 18트랙 draft map, YouTube Draft, Next Steps를 작성.
 - **17-00 Track 01 sample prompt** (2026-05-21) — 17-00 시리즈의 첫 Suno 테스트용 샘플을 `SERIES/17-00/input/tracks/01_올라가 (Up Again).txt`로 리디자인. 124 BPM, D Major, Female vocal, Main Pop R&B / Pop Neo-Soul. 목적은 `올라가` instant hook memory / mainstream polish / R&B verse pocket / no minor-dark drift 검증.

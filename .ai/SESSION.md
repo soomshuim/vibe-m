@@ -4,6 +4,12 @@
 
 ## 진행 중
 
+- **`/write` lyricist routing decision** (2026-05-22 31차, `-team`)
+  - ✅ **팀 결론**: Claude Code에서는 `/write`, Codex에서는 `-write`를 Wavvy lyric-only thin alias로 연결하는 방향이 적절
+  - ✅ **SSOT 원칙**: command에는 작사 규칙을 복사하지 않고 `skills/wavvy-lyricist/SKILL.md`, `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`, `wavvy.py lyrics-skill`로 라우팅
+  - ✅ **스코프 제한**: `/write`는 가사 작성/리라이트/리뷰 전용. YouTube copy, concept 문서, changelog 등 비가사 작성은 다른 라우터로 분리
+  - **남은 TODO**: 사용자가 "연결해줘"라고 확정하면 Wavvy-local `/write` / `-write` command shim 구현
+
 - **Wavvy lyricist skill + lyrics-review harness** (2026-05-22 30차, `-play` worker run)
   - ✅ **리서치 baseline 작성**: `.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/research/lyrics-skill-baseline.md`와 `source-index.md`에 2026 Pop R&B/Neo-soul 패턴, Wavvy SSOT, 이전 17-00 교정 포인트를 통합
   - ✅ **스킬/계약 추가**: `skills/wavvy-lyricist/SKILL.md`, `skills/wavvy-lyricist/references/patterns.md`, `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md` 생성. `full-lyric-draft` / `suno-prompt-only` / `review-only` 모드와 self-gate 계약 확정
