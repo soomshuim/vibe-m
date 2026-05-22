@@ -1,0 +1,14 @@
+{
+  "schema": "play.goal_orchestrator.daemon.v1",
+  "status": "done",
+  "pid": 7003,
+  "started_at": "2026-05-22T13:28:27+0900",
+  "updated_at": "2026-05-22T13:51:14+0900",
+  "repo": "/Users/zenkim_office/Project/wavvy",
+  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl",
+  "command": "",
+  "caffeinate_pid": null,
+  "last_stage": "record",
+  "exit_code": 0,
+  "detail": "Controller takeover completed Wavvy /write and -write lyricist command shim after dispatch scope-gate failure; implementation review and record guard passed."
+}

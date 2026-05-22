@@ -28,6 +28,7 @@ Canonical agent router for Wavvy. Keep this file small; route detailed rules to 
 | Resume project state | `.ai/state.json`, then `MASTER/SSOT.md` |
 | Resolve conflicting docs | `MASTER/SSOT.md` |
 | Track prompt/source work | `MASTER/WORKFLOWS.md` §0-2 |
+| Lyric writing/rewrite/review | `.claude/commands/write.md`, then `skills/wavvy-lyricist/SKILL.md` |
 | Packaging, preview, shorts, gates | `MASTER/cli/SPEC.md` |
 | Media runtime cautions | `MASTER/ai/RUNTIME_RULES.md` |
 | YouTube title/description/tags | `MASTER/youtube/YOUTUBE.md`, then series `concept.md` |

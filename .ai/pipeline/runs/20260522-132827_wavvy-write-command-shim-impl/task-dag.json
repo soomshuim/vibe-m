@@ -1,0 +1,180 @@
+{
+  "schema": "play.goal_orchestrator.task_dag.v1",
+  "created_at": "2026-05-22T13:28:27+0900",
+  "updated_at": "2026-05-22T13:44:44+0900",
+  "repo": "/Users/zenkim_office/Project/wavvy",
+  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl",
+  "request": "연결해줘 -director\n\nContext:\n- Wavvy repo already has the lyricist skill package and CLI harness:\n  - skills/wavvy-lyricist/SKILL.md\n  - skills/wavvy-lyricist/references/patterns.md\n  - MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md\n  - python3 wavvy.py lyrics-skill SERIES/[series] --json\n  - python3 wavvy.py gate SERIES/[series] --stage lyrics-review --json\n- .ai/SESSION.md says the remaining TODO is: if the user confirms \"연결해줘\", implement Wavvy-local /write and -write command shims.\n\nGoal:\n- Implement the Wavvy-local lyric-only command shim(s): Claude Code `/write` and Codex `-write`.\n- Keep the command thin. Do not copy lyric-writing rules into the command. Route users/agents to the existing Wavvy lyricist skill/spec/CLI harness.\n- Scope is lyric writing, rewrite, and lyric review only. Do not route YouTube copy, concept docs, changelog, or non-lyric writing through this command.\n- Preserve existing repo conventions and trigger policy.\n\nExpected output:\n- Add/update the minimum command/skill files needed so `/write` and `-write` resolve locally for Wavvy.\n- Update durable project docs/session/changelog only if appropriate for the repo workflow.\n- Verify with relevant lightweight checks, including command file discovery, python harness checks if touched, and git diff --check.",
+  "proposal_only": false,
+  "desktop_auto_confirm": false,
+  "desktop_approval_policy": null,
+  "desktop_auto_confirm_reason": null,
+  "preapproved_desktop_actions": [],
+  "publish_stage_enabled": false,
+  "publish_stage_reason": null,
+  "implicit_publish_stage": false,
+  "implicit_publish_stage_reason": null,
+  "current_stage": "dispatch",
+  "status": "failed",
+  "stages": [
+    {
+      "id": "analysis",
+      "label": "Team analysis",
+      "status": "done",
+      "depends_on": [],
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/01-team-analysis.md",
+      "fresh_context": true,
+      "executor": "headless",
+      "preferred_actuator": null,
+      "fallback_actuator": null,
+      "requires_user_approval": false,
+      "approval_reason": null,
+      "updated_at": "2026-05-22T13:29:47+0900",
+      "detail": null,
+      "runner_pid": null
+    },
+    {
+      "id": "review",
+      "label": "Analysis peer review",
+      "status": "done",
+      "depends_on": [
+        "analysis"
+      ],
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/02-review.md",
+      "fresh_context": false,
+      "executor": "headless",
+      "preferred_actuator": null,
+      "fallback_actuator": null,
+      "requires_user_approval": false,
+      "approval_reason": null,
+      "updated_at": "2026-05-22T13:31:33+0900",
+      "detail": null,
+      "runner_pid": null
+    },
+    {
+      "id": "plan",
+      "label": "Implementation plan",
+      "status": "done",
+      "depends_on": [
+        "review"
+      ],
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/03-plan.md",
+      "fresh_context": true,
+      "executor": "headless",
+      "preferred_actuator": null,
+      "fallback_actuator": null,
+      "requires_user_approval": false,
+      "approval_reason": null,
+      "updated_at": "2026-05-22T13:32:17+0900",
+      "detail": null,
+      "runner_pid": null
+    },
+    {
+      "id": "plan-review",
+      "label": "Plan peer review",
+      "status": "done",
+      "depends_on": [
+        "plan"
+      ],
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/04-plan-review.md",
+      "fresh_context": false,
+      "executor": "headless",
+      "preferred_actuator": null,
+      "fallback_actuator": null,
+      "requires_user_approval": false,
+      "approval_reason": null,
+      "updated_at": "2026-05-22T13:38:31+0900",
+      "detail": null,
+      "runner_pid": null
+    },
+    {
+      "id": "allocation",
+      "label": "Persona/model allocation",
+      "status": "done",
+      "depends_on": [
+        "plan-review"
+      ],
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/orchestrator/allocation.json",
+      "fresh_context": false,
+      "executor": "headless",
+      "preferred_actuator": null,
+      "fallback_actuator": null,
+      "requires_user_approval": false,
+      "approval_reason": null,
+      "updated_at": "2026-05-22T13:38:32+0900",
+      "detail": null,
+      "runner_pid": null
+    },
+    {
+      "id": "assignment-review",
+      "label": "Assignment peer review",
+      "status": "done",
+      "depends_on": [
+        "allocation"
+      ],
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/orchestrator/assignment-review-result.md",
+      "fresh_context": false,
+      "executor": "headless",
+      "preferred_actuator": null,
+      "fallback_actuator": null,
+      "requires_user_approval": false,
+      "approval_reason": null,
+      "updated_at": "2026-05-22T13:42:55+0900",
+      "detail": null,
+      "runner_pid": null
+    },
+    {
+      "id": "dispatch",
+      "label": "Worker dispatch",
+      "status": "failed",
+      "depends_on": [
+        "assignment-review"
+      ],
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/orchestrator/workers",
+      "fresh_context": true,
+      "executor": "headless",
+      "preferred_actuator": null,
+      "fallback_actuator": null,
+      "requires_user_approval": false,
+      "approval_reason": null,
+      "updated_at": "2026-05-22T13:44:44+0900",
+      "detail": "exit=1",
+      "runner_pid": null
+    },
+    {
+      "id": "integrate",
+      "label": "Integration and implementation peer gate",
+      "status": "pending",
+      "depends_on": [
+        "dispatch"
+      ],
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/orchestrator/implementation-review-result.md",
+      "fresh_context": true,
+      "executor": "headless",
+      "preferred_actuator": null,
+      "fallback_actuator": null,
+      "requires_user_approval": false,
+      "approval_reason": null
+    },
+    {
+      "id": "record",
+      "label": "Record summary",
+      "status": "pending",
+      "depends_on": [
+        "integrate"
+      ],
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/06-record.md",
+      "fresh_context": false,
+      "executor": "headless",
+      "preferred_actuator": null,
+      "fallback_actuator": null,
+      "requires_user_approval": false,
+      "approval_reason": null
+    }
+  ],
+  "orchestrator": {
+    "mode": "daemon",
+    "pid": 7003,
+    "updated_at": "2026-05-22T13:28:28+0900"
+  }
+}

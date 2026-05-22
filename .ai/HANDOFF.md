@@ -672,6 +672,19 @@ Commits: auto-record attempted after this entry; check git log and result.json
 ---
 
 ---
+HANDOFF: Codex -> User
+Date: 2026-05-22 14:22:23 +0900
+Project: /Users/zenkim_office/Project/wavvy
+Agent: Codex auto-continuation
+Summary: Fresh headless continuation resumed the Wavvy `-wavvy` context after the context-low handoff, confirmed the `wavvy-write-command-shim-impl` play run had completed, re-verified the Wavvy `/write` / `-write` lyric-only command shim, and prepared the implementation plus review/run artifacts for record. `.claude/commands/write.md` remains a thin router to `skills/wavvy-lyricist/SKILL.md`, `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`, `MASTER/lyrics/LYRICS.md`, and the `lyrics-skill`/`lyrics-review` harness.
+Next-TODO: 없음. 다음 작사 작업은 Codex `-write SERIES/17-00 ...` 또는 Claude Code `/write SERIES/17-00 ...`로 호출.
+Verification: `test -f .claude/commands/write.md`; `rg --files -uu | rg '(^|/)commands/write\.md$|(^|/)skills/.*/write'`; `python3 wavvy.py lyrics-skill SERIES/17-00 --json`; `python3 wavvy.py gate SERIES/17-00 --stage lyrics-review --json`; `PYTHONPYCACHEPREFIX=/private/tmp/wavvy-pycache python3 -m py_compile wavvy.py wavvy_harness/*.py`; `python3 -m unittest tests/test_harness.py`; `git diff --check`.
+Review-Result: /Users/zenkim_office/Project/wavvy/.ai/peer-review/runs/20260522-134926-claude-review-42185.md
+Play-Run: /Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl
+Commits: (이번 커밋)
+---
+
+---
 HANDOFF: Codex -> Codex
 Date: 2026-05-22 14:22:01 +0900
 Project: /Users/zenkim_office/Project/wavvy
