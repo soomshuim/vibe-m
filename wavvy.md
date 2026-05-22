@@ -1,7 +1,7 @@
 # Wavvy — Project Identity
 
-Version: 1.1
-Last Updated: 2026-05-02
+Version: 1.2
+Last Updated: 2026-05-22
 Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
 
 ---
@@ -85,6 +85,10 @@ Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
 - 한 문장 한 이미지
 - "가사 없는 듯 들리지만 읽으면 남는 가사"
 - 시간대 설명보다 사운드 Mood에 어울리는 보편적 이미지
+
+### 5.1 Lyric Skill Workflow
+
+Use `skills/wavvy-lyricist/SKILL.md` when writing, rewriting, or reviewing Wavvy lyrics. The durable contract lives at `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`; Suno prompt-only input rules remain in `MASTER/lyrics/LYRICS.md`.
 
 ---
 

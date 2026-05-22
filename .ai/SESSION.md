@@ -1,8 +1,17 @@
 # Session State — Wavvy
 
-> Last updated: 2026-05-21 (28차 업데이트 — RNB-BEST source-map harness)
+> Last updated: 2026-05-22 (30차 업데이트 — Wavvy lyricist skill harness)
 
 ## 진행 중
+
+- **Wavvy lyricist skill + lyrics-review harness** (2026-05-22 30차, `-play` worker run)
+  - ✅ **리서치 baseline 작성**: `.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/research/lyrics-skill-baseline.md`와 `source-index.md`에 2026 Pop R&B/Neo-soul 패턴, Wavvy SSOT, 이전 17-00 교정 포인트를 통합
+  - ✅ **스킬/계약 추가**: `skills/wavvy-lyricist/SKILL.md`, `skills/wavvy-lyricist/references/patterns.md`, `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md` 생성. `full-lyric-draft` / `suno-prompt-only` / `review-only` 모드와 self-gate 계약 확정
+  - ✅ **하네스/CLI 추가**: `python3 wavvy.py lyrics-skill SERIES/[series] --json`와 `python3 wavvy.py gate SERIES/[series] --stage lyrics-review --json`로 스킬 패키지와 optional lyric artifact를 검증
+  - ✅ **문서 연결**: `MASTER/SSOT.md`, `MASTER/lyrics/LYRICS.md`, `wavvy.md`, `CHANGELOG.md`, release notes에 새 skill/spec/gate의 권한 위치와 release readiness 기록
+  - ✅ **검증 PASS**: `PYTHONPYCACHEPREFIX=/private/tmp/wavvy-pycache python3 -m py_compile wavvy.py wavvy_harness/*.py`, `python3 -m unittest tests/test_harness.py` 15 tests, `python3 wavvy.py lyrics-skill SERIES/17-00 --json`, `python3 wavvy.py gate SERIES/17-00 --stage lyrics-review --json`, `git diff --check`
+  - ⚠️ **기존 blocker**: `python3 wavvy.py doctor --json`은 기존 `peer_review_script` 경로 `/Users/zenkim_office/Project/claude-center/scripts/peer-agent-review.sh` 부재로 FAIL. `state SERIES/17-00 --check`와 `source-final` gate는 17-00이 아직 draft source 단계라 FAIL
+  - **남은 TODO**: 다음 17-00 가사/프롬프트 작업부터 `skills/wavvy-lyricist`를 사용하고, lyric draft 산출물은 `lyrics-skill --artifact ... --mode full-lyric-draft`로 검증
 
 - **17-00 Main POP R&B concept draft** (2026-05-21 29차)
   - ✅ **사용자 방향 반영**: 다음 시리즈는 `기분 좋은 POP(Main) R&B`

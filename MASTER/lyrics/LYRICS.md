@@ -1,7 +1,7 @@
 # Wavvy LYRICS.md
 
-Version: 4.2
-Last Updated: 2026-05-02
+Version: 4.3
+Last Updated: 2026-05-22
 Purpose: Suno 가사 입력(Lyrics) 규칙 SSOT
 
 ---
@@ -94,6 +94,18 @@ Minimal Korean, midday noon heat, harsh sunlight, lunch hour pause, scene not em
 | 영문 방향 지시 | 한국어 가사 행 나열 |
 | 짧고 추상적 | 구체적 운율/음절 지정 |
 | Prompt-only 모드는 괄호 없이 직접 작성 | Prompt-only 내용을 `(...)` 소괄호로 감싸기 — Suno가 보컬로 읽음 |
+
+### 1.5 Wavvy Lyric Skill / Review Gate
+
+Full lyric drafting, rewrite, and review tasks should use `skills/wavvy-lyricist/SKILL.md`.
+
+- Contract: `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`
+- Pattern reference: `skills/wavvy-lyricist/references/patterns.md`
+- Package check: `python3 wavvy.py lyrics-skill SERIES/[series] --json`
+- Artifact check: `python3 wavvy.py lyrics-skill SERIES/[series] --artifact FILE --mode full-lyric-draft --json`
+- Gate stage: `python3 wavvy.py gate SERIES/[series] --stage lyrics-review --json`
+
+This document remains the SSOT for direct Suno Lyrics input. The skill must preserve the mode boundary: `full-lyric-draft` is for human/source review, while `suno-prompt-only` must stay short, English, and prompt/structure-only.
 
 ---
 

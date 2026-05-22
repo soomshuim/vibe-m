@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **Wavvy lyricist skill release docs** (2026-05-22) — `-play` worker run의 작사 스킬 산출물을 Wavvy SSOT/가사/브랜드 문서에 연결하고 release readiness를 기록. `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`는 lyric skill output schema/self-gate/harness baseline owner로 등록하고, `MASTER/lyrics/LYRICS.md`와 `wavvy.md`는 `skills/wavvy-lyricist` 및 `lyrics-review` gate 진입점을 참조하도록 보강. 검증: lyric skill package/gate PASS, 기존 `doctor` peer script path와 17-00 source-final 상태는 별도 non-blocker로 유지.
 - **17-00 Main POP R&B concept draft** (2026-05-21) — 다음 신규 시리즈를 `SERIES/17-00`으로 만들고, 사용자 결정 `기분 좋은 POP(Main) R&B`, `최소 120 BPM`, `무조건 Major Key`를 hard gate로 반영. 17:00은 18:00 퇴근길 위로와 겹치지 않게 `퇴근 전부터 기분을 먼저 올리는 시간`으로 포지셔닝. Style A Main Pop R&B / Style B Bright Contemporary R&B / Style C Light Funk Pop R&B, 18트랙 draft map, YouTube Draft, Next Steps를 작성.
 - **17-00 Track 01 sample prompt** (2026-05-21) — 17-00 시리즈의 첫 Suno 테스트용 샘플을 `SERIES/17-00/input/tracks/01_올라가 (Up Again).txt`로 리디자인. 124 BPM, D Major, Female vocal, Main Pop R&B / Pop Neo-Soul. 목적은 `올라가` instant hook memory / mainstream polish / R&B verse pocket / no minor-dark drift 검증.
 - **Time concept lyric policy** (2026-05-21) — 사용자 결정 반영: 시리즈 시간대는 가사 주제 강제가 아니라 BPM/Mood/Energy/Use Case 포지셔닝이다. 17:00도 퇴근/사무실 가사를 직접 다룰 필요 없이 퇴근 시간대 기분 전환에 도움이 되는 신나는 Pop R&B / Pop Neo-Soul이면 충분하다. `wavvy.md`, `MASTER/lyrics/LYRICS.md`, `SERIES/17-00/concept.md`에 정책을 추가하고 Track 01 샘플 가사에서 업무/퇴근 직전 소재를 제거.

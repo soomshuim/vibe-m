@@ -1,7 +1,7 @@
 # Wavvy SSOT Contract
 
-Version: 1.0
-Last Updated: 2026-05-02
+Version: 1.1
+Last Updated: 2026-05-22
 Purpose: 하네스가 문서/상태/산출물 충돌을 판정하기 위한 단일 기준
 
 ---
@@ -18,7 +18,8 @@ Purpose: 하네스가 문서/상태/산출물 충돌을 판정하기 위한 단�
 | 6 | `MASTER/WORKFLOWS.md` | operational workflow rules | txt-first, finalize-upload, packaging order. |
 | 7 | `MASTER/youtube/YOUTUBE.md` | YouTube title/description/tag format | Final metadata lives in series concept. |
 | 8 | `wavvy.md` | brand identity and global defaults | Per-series overrides must be explicit. |
-| 9 | `.ai/HANDOFF.md` / `.ai/SESSION.md` | historical handoff/session archive | Read newest-first; not the active-state SSOT. |
+| 9 | `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md` | Wavvy lyric skill output schema, self-gate contract, and static harness acceptance baseline | Subordinate to series concept, `MASTER/lyrics/LYRICS.md`, and brand docs. Routes to `skills/wavvy-lyricist/SKILL.md`. |
+| 10 | `.ai/HANDOFF.md` / `.ai/SESSION.md` | historical handoff/session archive | Read newest-first; not the active-state SSOT. |
 
 `MASTER/ai/RUNTIME_RULES.md` is priority 4 because runtime hard constraints and approval/safety rules are absolute execution bounds; `MASTER/MANAGER.md` remains the conservative-fail quality gate fallback inside those bounds.
 
@@ -51,6 +52,8 @@ Examples:
 Implicit overrides are not valid. If a global rule and a series concept conflict without a named override, `MASTER/MANAGER.md` conservative fail applies.
 
 Compilation / best-album series may use a `concept.md` `## Track Selection` table as the audio source map. In that case, `SERIES/[series]/input/tracks/` is only a local staging directory for materialized copies; it may be empty or absent when every `Source` path in the table resolves to an existing audio file. The compilation filename in `Copied Filename` remains the report/upload-facing filename.
+
+Wavvy lyric drafting and review tasks should use `skills/wavvy-lyricist/SKILL.md` and the contract in `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`. These files do not override the target series concept or `MASTER/lyrics/LYRICS.md`; they define the agent workflow, output sections, and `lyrics-review` harness expectations.
 
 ---
 
