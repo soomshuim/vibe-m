@@ -1,7 +1,7 @@
 {
   "schema": "play.goal_orchestrator.task_dag.v1",
   "created_at": "2026-05-22T09:50:08+0900",
-  "updated_at": "2026-05-22T10:12:16+0900",
+  "updated_at": "2026-05-22T10:55:07+0900",
   "repo": "/Users/zenkim_office/Project/wavvy",
   "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness",
   "request": "wavvy 전용 작사 스킬을 만들고 싶어. 필요한 자료를 리서치하고 스킬과 에이전트 하네스를 구성해줘. -play",
@@ -14,8 +14,8 @@
   "publish_stage_reason": null,
   "implicit_publish_stage": false,
   "implicit_publish_stage_reason": null,
-  "current_stage": "assignment-review",
-  "status": "failed",
+  "current_stage": "record",
+  "status": "done",
   "stages": [
     {
       "id": "analysis",
@@ -108,25 +108,25 @@
     {
       "id": "assignment-review",
       "label": "Assignment peer review",
-      "status": "failed",
+      "status": "done",
       "depends_on": [
         "allocation"
       ],
-      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/orchestrator/assignment-review-result.md",
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/peer-review/runs/20260522-101952-claude-plan-16033.md",
       "fresh_context": false,
       "executor": "headless",
       "preferred_actuator": null,
       "fallback_actuator": null,
       "requires_user_approval": false,
       "approval_reason": null,
-      "updated_at": "2026-05-22T10:12:16+0900",
-      "detail": "exit=1",
+      "updated_at": "2026-05-22T10:55:07+0900",
+      "detail": "Recovered after allocation repair; assignment review PASS",
       "runner_pid": null
     },
     {
       "id": "dispatch",
       "label": "Worker dispatch",
-      "status": "pending",
+      "status": "done",
       "depends_on": [
         "assignment-review"
       ],
@@ -136,27 +136,31 @@
       "preferred_actuator": null,
       "fallback_actuator": null,
       "requires_user_approval": false,
-      "approval_reason": null
+      "approval_reason": null,
+      "detail": "Four serial workers completed successfully",
+      "updated_at": "2026-05-22T10:55:07+0900"
     },
     {
       "id": "integrate",
       "label": "Integration and implementation peer gate",
-      "status": "pending",
+      "status": "done",
       "depends_on": [
         "dispatch"
       ],
-      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/orchestrator/implementation-review-result.md",
+      "artifact": "/Users/zenkim_office/Project/wavvy/.ai/peer-review/runs/20260522-104915-claude-review-21530.md",
       "fresh_context": true,
       "executor": "headless",
       "preferred_actuator": null,
       "fallback_actuator": null,
       "requires_user_approval": false,
-      "approval_reason": null
+      "approval_reason": null,
+      "detail": "Implementation review PASS",
+      "updated_at": "2026-05-22T10:55:07+0900"
     },
     {
       "id": "record",
       "label": "Record summary",
-      "status": "pending",
+      "status": "done",
       "depends_on": [
         "integrate"
       ],
@@ -166,7 +170,9 @@
       "preferred_actuator": null,
       "fallback_actuator": null,
       "requires_user_approval": false,
-      "approval_reason": null
+      "approval_reason": null,
+      "detail": "Recovered play run recorded by Codex controller",
+      "updated_at": "2026-05-22T10:55:07+0900"
     }
   ],
   "orchestrator": {

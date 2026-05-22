@@ -1,7 +1,7 @@
 {
   "schema": "play.pipeline.v1",
   "created_at": "2026-05-22T09:50:07+0900",
-  "updated_at": "2026-05-22T10:09:44+0900",
+  "updated_at": "2026-05-22T10:55:07+0900",
   "repo": "/Users/zenkim_office/Project/wavvy",
   "slug": "wavvy-lyrics-skill-harness",
   "request_type": "text",
@@ -18,5 +18,13 @@
   "review_exit_code": 0,
   "plan_review_verdict": "PASS",
   "plan_review_result_file": "/Users/zenkim_office/Project/wavvy/.ai/peer-review/runs/20260522-095549-claude-plan-12522.md",
-  "plan_review_exit_code": 0
+  "plan_review_exit_code": 0,
+  "status": "done",
+  "assignment_review_verdict": "PASS",
+  "assignment_review_result_file": "/Users/zenkim_office/Project/wavvy/.ai/peer-review/runs/20260522-101952-claude-plan-16033.md",
+  "assignment_review_exit_code": 0,
+  "implementation_review_verdict": "PASS",
+  "implementation_review_result_file": "/Users/zenkim_office/Project/wavvy/.ai/peer-review/runs/20260522-104915-claude-review-21530.md",
+  "implementation_review_exit_code": 0,
+  "recovered_after_assignment_review_fail": true
 }
