@@ -1,0 +1,9 @@
+.ai/auto-handoff/20260522-111333_codex-context-low/git-diff-staged.patch
+.ai/auto-handoff/20260522-111333_codex-context-low/git-diff.patch
+.ai/auto-handoff/20260522-111333_codex-context-low/git-log.txt
+.ai/auto-handoff/20260522-111333_codex-context-low/git-status.txt
+.ai/auto-handoff/20260522-111333_codex-context-low/guard.json
+.ai/auto-handoff/20260522-111333_codex-context-low/telegram-relay-context-status.json
+.ai/auto-handoff/20260522-111333_codex-context-low/telegram-relay-context.json
+.ai/auto-handoff/20260522-111333_codex-context-low/untracked-files.txt
+.ai/handoff/freeze.lock

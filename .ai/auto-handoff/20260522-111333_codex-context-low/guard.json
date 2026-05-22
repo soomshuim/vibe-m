@@ -1,0 +1,36 @@
+{
+  "agent": "codex",
+  "session_file": "/Users/zenkim_office/.codex/sessions/2026/05/21/rollout-2026-05-21T20-37-25-019e4a53-79a2-70f0-875e-456bec1b6670.jsonl",
+  "session_match": "visible-parent-cwd",
+  "session_id": "019e4a53-79a2-70f0-875e-456bec1b6670",
+  "session_started_at": "2026-05-21T11:37:25.154Z",
+  "session_originator": "codex-tui",
+  "session_source": "cli",
+  "turn_id": "019e4d75-3526-7ec3-b3d7-abf325887181",
+  "is_subagent": false,
+  "model": "gpt-5.5",
+  "effort": "xhigh",
+  "cwd": "/Users/zenkim_office/Project/wavvy",
+  "session_cwd": "/Users/zenkim_office",
+  "input_tokens": 198701,
+  "cached_tokens": 171904,
+  "window_tokens": 258400,
+  "remaining_pct": 24,
+  "commands": {
+    "codex": "-wavvy",
+    "claude": "/wavvy"
+  },
+  "reload_instruction": "Codex: -wavvy; Claude: /wavvy",
+  "codex_profile": {
+    "config_file": "/Users/zenkim_office/.codex/config.toml",
+    "config_present": true,
+    "enable_request_compression": {
+      "state": "unset",
+      "meaning": "request_body_compression_only",
+      "context_compaction_kill_switch": false
+    },
+    "handoff_first_required": true
+  },
+  "threshold": 25,
+  "below_threshold": true
+}

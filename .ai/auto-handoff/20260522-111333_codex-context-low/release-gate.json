@@ -1,0 +1,29 @@
+{
+  "policy": "hard_release_gates",
+  "status": "blocked",
+  "gates": {
+    "data_loss_zero": {
+      "status": "pass",
+      "loss_audit_status": "pass",
+      "missing": []
+    },
+    "run_id_traceability": {
+      "status": "pass",
+      "reason": "",
+      "run_id": "20260522-111333_599119f4",
+      "idempotency_key": "17300c06dbef0f24a25ebb6ca550a1f3a90679732b593a7b0437ec7ff73e39df",
+      "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+      "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+      "event_count": 3,
+      "bad_event_count": 0
+    },
+    "automatic_continuation_smoke": {
+      "status": "pending",
+      "continue_action": "pending",
+      "continue_exit_code": null,
+      "result_action": "",
+      "reason": "continuation_not_evaluated",
+      "continue_result": null
+    }
+  }
+}

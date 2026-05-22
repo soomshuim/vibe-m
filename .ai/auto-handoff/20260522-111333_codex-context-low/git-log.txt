@@ -1,0 +1,5 @@
+29d9c31 docs: record write command lyricist routing decision
+67e6206 fix: point wavvy doctor to agent-center
+c28b6c9 chore: record wavvy lyrics skill play artifacts
+f4a98bf docs: record wavvy lyrics skill release
+4504480 feat: add wavvy lyrics skill harness
