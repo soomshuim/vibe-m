@@ -1,0 +1,34 @@
+{
+  "decision_reason": "리서치 결과를 먼저 만든 뒤 그 결과를 가사 재작성에 반영해야 하므로 researcher → maker 직렬 실행으로 배정했습니다.",
+  "execution_mode": "serial",
+  "mode": "team_dispatch",
+  "needs_assignment_review": true,
+  "parallel_reason": null,
+  "parallelization": {
+    "considered": true,
+    "decision": "serial",
+    "execution_groups": [
+      {
+        "id": "serial-research",
+        "mode": "serial",
+        "reason": "2026 인기곡 가사 패턴 리서치를 먼저 완료합니다."
+      },
+      {
+        "depends_on": [
+          "serial-research"
+        ],
+        "id": "serial-rewrite",
+        "mode": "serial",
+        "reason": "리서치 산출물을 반영해 대상 가사 파일을 재작성합니다."
+      }
+    ],
+    "reason": "리서치 선행 의존성이 있어 병렬 실행하지 않습니다.",
+    "worker_count": 2
+  },
+  "primary_owner": "marketing-director",
+  "reason": "리서치 결과를 먼저 만든 뒤 그 결과를 가사 재작성에 반영해야 하므로 researcher → maker 직렬 실행으로 배정했습니다.",
+  "resolved_tier": "tier2",
+  "serial_reason": "Worker-02는 Worker-01의 리서치 산출물을 입력으로 사용해야 하므로 병렬 실행하지 않습니다.",
+  "solo_reason": null,
+  "tier": "tier2"
+}

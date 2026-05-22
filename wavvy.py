@@ -29,6 +29,7 @@ import ffmpeg
 import pandas as pd
 
 from wavvy_harness import build_state, check_state, load_state, run_doctor, run_gate, write_state
+from wavvy_harness.gate import run_lyrics_skill_gate
 from wavvy_harness.state import PHASES
 
 
@@ -84,6 +85,7 @@ class TrackInfo:
     duration: float = 0.0
     sample_rate: int = 0
     sha256: str = ""
+    report_filename: str = ""
 
     @classmethod
     def from_filename(cls, path: Path) -> Optional['TrackInfo']:
@@ -99,6 +101,16 @@ class TrackInfo:
             genre=match.group('genre'),
             bpm=int(match.group('bpm')),
         )
+
+
+@dataclass
+class CompilationSourceEntry:
+    """A compilation track sourced from another Wavvy series."""
+    order: int
+    title: str
+    source: str
+    copied_filename: str
+    source_path: Path
 
 
 @dataclass
@@ -180,6 +192,87 @@ def ensure_dir(path: Path) -> Path:
     """Ensure directory exists."""
     path.mkdir(parents=True, exist_ok=True)
     return path
+
+
+def read_text_if_exists(path: Path) -> str:
+    """Read UTF-8 text if the path exists."""
+    try:
+        return path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        return ""
+
+
+def concept_declares_compilation(concept_text: str) -> bool:
+    """Return True when concept.md describes a compilation/best album."""
+    return bool(re.search(r"\*\*Type\*\*:\s*Compilation\b", concept_text, flags=re.IGNORECASE))
+
+
+def markdown_section(text: str, heading_name: str) -> str:
+    """Extract a level-2 markdown section by exact heading text."""
+    heading = re.search(rf"^## {re.escape(heading_name)}\s*$", text, flags=re.MULTILINE)
+    if not heading:
+        return ""
+    next_heading = re.search(r"^## ", text[heading.end():], flags=re.MULTILINE)
+    end = heading.end() + next_heading.start() if next_heading else len(text)
+    return text[heading.end():end]
+
+
+def resolve_series_repo_root(series_path: Path) -> Path:
+    """Resolve repo root for a series path without requiring git in tests."""
+    try:
+        return git_repo_root(series_path)
+    except Exception:
+        resolved = series_path.resolve()
+        if resolved.parent.name == "SERIES":
+            return resolved.parent.parent
+        return Path.cwd()
+
+
+def parse_compilation_source_map(series_path: Path) -> list[CompilationSourceEntry]:
+    """Parse concept.md Track Selection rows that point to source audio elsewhere."""
+    concept_text = read_text_if_exists(series_path / "concept.md")
+    if not concept_declares_compilation(concept_text):
+        return []
+
+    section = markdown_section(concept_text, "Track Selection")
+    if not section:
+        return []
+
+    repo_root = resolve_series_repo_root(series_path)
+    entries: list[CompilationSourceEntry] = []
+    for line in section.splitlines():
+        if not line.startswith("|") or "`" not in line:
+            continue
+        parts = [part.strip() for part in line.strip().strip("|").split("|")]
+        if len(parts) < 4:
+            continue
+        if not re.fullmatch(r"\d{2}", parts[0]):
+            continue
+
+        source_match = re.search(r"`([^`]+\.(?:mp3|wav))`", parts[2], flags=re.IGNORECASE)
+        copied_match = re.search(r"`([^`]+\.(?:mp3|wav))`", parts[3], flags=re.IGNORECASE)
+        if not source_match or not copied_match:
+            continue
+
+        source = source_match.group(1)
+        source_path = Path(source)
+        if not source_path.is_absolute():
+            source_path = repo_root / source_path
+        entries.append(
+            CompilationSourceEntry(
+                order=int(parts[0]),
+                title=parts[1],
+                source=source,
+                copied_filename=copied_match.group(1),
+                source_path=source_path,
+            )
+        )
+    return entries
+
+
+def track_report_filename(track: TrackInfo) -> str:
+    """Return the canonical filename to write in reports/provenance."""
+    return track.report_filename or track.path.name
 
 
 def compute_sha256(filepath: Path) -> str:
@@ -458,6 +551,10 @@ class ProjectPaths:
             p = self.input_dir / f'loop.{ext}'
             if p.exists():
                 return p
+        thumb = self.input_dir / 'thumb.jpg'
+        concept_text = read_text_if_exists(self.base / "concept.md")
+        if thumb.exists() and concept_declares_compilation(concept_text):
+            return thumb
         return None
 
     @property
@@ -506,31 +603,59 @@ def validate_project(paths: ProjectPaths) -> ValidationResult:
         result.add_error(f"Input directory does not exist: {paths.input_dir}")
         return result
 
-    if not paths.tracks_dir.exists():
-        result.add_error(f"Tracks directory does not exist: {paths.tracks_dir}")
+    # Find audio files (MP3 or WAV). Compilation series may intentionally keep
+    # files in their original series and use concept.md Track Selection as the
+    # source map instead of materializing input/tracks.
+    local_audio_files = []
+    if paths.tracks_dir.exists():
+        local_audio_files = sorted(
+            list(paths.tracks_dir.glob('*.mp3')) + list(paths.tracks_dir.glob('*.wav'))
+        )
+
+    source_map_entries = []
+    if not local_audio_files:
+        source_map_entries = parse_compilation_source_map(paths.base)
+
+    if not local_audio_files and not source_map_entries:
+        if not paths.tracks_dir.exists():
+            result.add_error(f"Tracks directory does not exist: {paths.tracks_dir}")
+        else:
+            result.add_error(f"No audio files (MP3/WAV) found in: {paths.tracks_dir}")
         return result
 
-    # Find audio files (MP3 or WAV)
-    audio_files = sorted(
-        list(paths.tracks_dir.glob('*.mp3')) + list(paths.tracks_dir.glob('*.wav'))
-    )
-    if not audio_files:
-        result.add_error(f"No audio files (MP3/WAV) found in: {paths.tracks_dir}")
-        return result
-
-    log_info(f"Found {len(audio_files)} audio file(s)")
+    if local_audio_files:
+        log_info(f"Found {len(local_audio_files)} audio file(s)")
+    else:
+        result.add_warning(
+            "No local input/tracks audio found; using concept.md Track Selection source map"
+        )
+        log_info(f"Found {len(source_map_entries)} source-map audio reference(s)")
 
     # Validate filename format and parse tracks
     tracks = []
     sample_rates = set()
 
-    for audio_path in audio_files:
-        track = TrackInfo.from_filename(audio_path)
+    for item in (local_audio_files or source_map_entries):
+        if isinstance(item, CompilationSourceEntry):
+            audio_path = item.source_path
+            virtual_path = Path(item.copied_filename)
+        else:
+            audio_path = item
+            virtual_path = audio_path
+
+        track = TrackInfo.from_filename(virtual_path)
         if track is None:
             result.add_error(
-                f"Invalid filename format: {audio_path.name}\n"
+                f"Invalid filename format: {virtual_path.name}\n"
                 f"  Expected: NN__Title__Mood__Genre__BPM.mp3 (or .wav)"
             )
+            continue
+        track.path = audio_path
+        if isinstance(item, CompilationSourceEntry):
+            track.report_filename = item.copied_filename
+
+        if not audio_path.exists():
+            result.add_error(f"Source-map audio file does not exist: {item.source}")
             continue
 
         # Check audio integrity
@@ -1191,7 +1316,7 @@ def generate_provenance(
 
     for track in tracks:
         content.append(
-            f"| {track.order:02d} | {track.path.name} | `{track.sha256[:16]}...` | "
+            f"| {track.order:02d} | {track_report_filename(track)} | `{track.sha256[:16]}...` | "
             f"{track.duration:.1f}s | {track.sample_rate}Hz |"
         )
 
@@ -1202,7 +1327,7 @@ def generate_provenance(
     ])
 
     for track in tracks:
-        content.append(f"- `{track.path.name}`: `{track.sha256}`")
+        content.append(f"- `{track_report_filename(track)}`: `{track.sha256}`")
 
     try:
         output_path.write_text("\n".join(content), encoding='utf-8')
@@ -1390,7 +1515,7 @@ def generate_report(
                 'duration': t.duration,
                 'sample_rate': t.sample_rate,
                 'sha256': t.sha256,
-                'filename': t.path.name,
+                'filename': track_report_filename(t),
             }
             for t in tracks
         ]
@@ -1948,6 +2073,10 @@ def _emit_payload(payload: dict, json_output: bool):
         if isinstance(warning, dict):
             warning = warning.get("name") or warning.get("detail") or json.dumps(warning, ensure_ascii=False)
         log_warning(str(warning))
+    for decision in payload.get("user_decisions", []):
+        if isinstance(decision, dict):
+            decision = decision.get("name") or decision.get("detail") or json.dumps(decision, ensure_ascii=False)
+        log_warning(f"USER_DECISION: {decision}")
     for blocker in payload.get("blockers", []):
         if isinstance(blocker, dict):
             blocker = blocker.get("name") or blocker.get("detail") or json.dumps(blocker, ensure_ascii=False)
@@ -2000,14 +2129,21 @@ def state_cmd(path: Path, check: bool, write_file: bool, phase: Optional[str], i
 
 @cli.command("gate")
 @click.argument('path', type=click.Path(exists=True, file_okay=False, path_type=Path))
-@click.option('--stage', required=True, type=click.Choice(['source-final', 'render-final', 'upload-ready', 'uploaded']), help='Stage gate to evaluate')
+@click.option(
+    '--stage',
+    required=True,
+    type=click.Choice(['source-final', 'render-final', 'upload-ready', 'uploaded', 'lyrics-review']),
+    help='Stage gate to evaluate',
+)
 @click.option('--json', 'json_output', is_flag=True, help='Print machine-readable JSON')
 def gate_cmd(path: Path, stage: str, json_output: bool):
     """Run a deterministic stage gate for a series."""
     repo_root = _resolve_repo_root(path)
     paths = ProjectPaths(path)
 
-    if json_output:
+    if stage == "lyrics-review":
+        validation_result = ValidationResult(is_valid=True)
+    elif json_output:
         with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
             validation_result = validate_project(paths)
     else:
@@ -2023,6 +2159,23 @@ def gate_cmd(path: Path, stage: str, json_output: bool):
     _emit_payload(payload, json_output)
     if payload.get("result") != "PASS":
         sys.exit(1)
+
+
+@cli.command("lyrics-skill")
+@click.argument('path', required=False, type=click.Path(exists=True, file_okay=False, path_type=Path))
+@click.option('--artifact', type=click.Path(exists=True, dir_okay=False, path_type=Path), default=None, help='Optional lyric artifact to validate')
+@click.option('--mode', type=click.Choice(['full-lyric-draft', 'suno-prompt-only', 'review-only']), default=None, help='Expected output mode for --artifact')
+@click.option('--json', 'json_output', is_flag=True, help='Print machine-readable JSON')
+def lyrics_skill_cmd(path: Optional[Path], artifact: Optional[Path], mode: Optional[str], json_output: bool):
+    """Validate the Wavvy lyric skill package and optional lyric artifact."""
+    anchor = path or artifact or Path.cwd()
+    repo_root = _resolve_repo_root(anchor)
+    payload = run_lyrics_skill_gate(repo_root, path, artifact, mode)
+    _emit_payload(payload, json_output)
+    if payload.get("result") == "FAIL":
+        sys.exit(1)
+    if payload.get("result") == "USER_DECISION":
+        sys.exit(2)
 
 
 @cli.command()
@@ -2440,7 +2593,8 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
         normalized_tracks = result.tracks
     else:
         for i, track in enumerate(result.tracks, 1):
-            norm_path = paths.norm_tracks_dir / f"norm_{track.path.stem}.wav"
+            norm_stem = Path(track_report_filename(track)).stem
+            norm_path = paths.norm_tracks_dir / f"norm_{norm_stem}.wav"
             log_info(f"  [{i}/{len(result.tracks)}] Normalizing {track.path.name}...")
 
             if not normalize_track(track.path, norm_path, lufs, tp):
@@ -2458,6 +2612,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool, 
                 duration=track.duration,
                 sample_rate=track.sample_rate,
                 sha256=track.sha256,  # Keep original hash for provenance
+                report_filename=track.report_filename,
             )
             normalized_tracks.append(norm_track)
 

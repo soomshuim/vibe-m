@@ -1,0 +1,26 @@
+{
+  "chain": [
+    "orchestrator",
+    "lenny-team-owner",
+    "practical-workers"
+  ],
+  "co_owners": [
+    {
+      "effort": "high",
+      "label": "Researcher",
+      "level": "senior",
+      "model": "gpt-5.5",
+      "persona": "researcher",
+      "runtime": "codex"
+    }
+  ],
+  "owner": {
+    "effort": "xhigh",
+    "label": "Marketing Director",
+    "level": "director",
+    "model": "gpt-5.5",
+    "persona": "marketing-director",
+    "reason": "최종 가사 품질과 메시징/카피 판단을 맡습니다.",
+    "runtime": "codex"
+  }
+}

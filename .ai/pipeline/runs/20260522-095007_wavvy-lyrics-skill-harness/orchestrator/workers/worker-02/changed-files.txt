@@ -1,0 +1,5 @@
+.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/orchestrator/workers/worker-02/runtime-output.raw.md
+.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/orchestrator/workers/worker-02/runtime-prompt.md
+MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md
+skills/wavvy-lyricist/SKILL.md
+skills/wavvy-lyricist/references/patterns.md

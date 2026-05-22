@@ -1,0 +1,50 @@
+{
+  "decision_reason": "Research, skill/spec, harness implementation, and release documentation have hard dependencies, so execution is intentionally serial with disjoint write scopes.",
+  "execution_mode": "serial",
+  "mode": "team_dispatch",
+  "needs_assignment_review": true,
+  "parallel_reason": null,
+  "parallelization": {
+    "considered": true,
+    "decision": "serial",
+    "execution_groups": [
+      {
+        "id": "serial-research",
+        "mode": "serial",
+        "reason": "2026 Pop R&B/Neo-soul lyric evidence and local SSOT review must finish before skill writing."
+      },
+      {
+        "depends_on": [
+          "serial-research"
+        ],
+        "id": "serial-skill",
+        "mode": "serial",
+        "reason": "The Wavvy lyric skill/spec depends on the research baseline."
+      },
+      {
+        "depends_on": [
+          "serial-skill"
+        ],
+        "id": "serial-harness",
+        "mode": "serial",
+        "reason": "Harness implementation depends on the finalized skill/spec contract."
+      },
+      {
+        "depends_on": [
+          "serial-harness"
+        ],
+        "id": "serial-release",
+        "mode": "serial",
+        "reason": "Release notes and SSOT/session updates follow implementation and verification."
+      }
+    ],
+    "reason": "Parallel execution was rejected because the implementation depends on research and skill contract outputs, and shared docs must be updated last.",
+    "worker_count": 4
+  },
+  "primary_owner": "ai-ops-expert",
+  "reason": "Research, skill/spec, harness implementation, and release documentation have hard dependencies, so execution is intentionally serial with disjoint write scopes.",
+  "resolved_tier": "tier3",
+  "serial_reason": "Worker outputs must feed the next stage: research baseline -> skill/spec -> harness code/tests -> release docs.",
+  "solo_reason": null,
+  "tier": "tier3"
+}

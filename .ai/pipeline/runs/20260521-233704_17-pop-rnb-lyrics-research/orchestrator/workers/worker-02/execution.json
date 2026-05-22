@@ -1,0 +1,16 @@
+{
+  "worker_id": "worker-02",
+  "role": "senior",
+  "persona": "marketing-director",
+  "execution_profile": "senior",
+  "runtime": "codex",
+  "model": "gpt-5.5",
+  "effort": "high",
+  "exit_code": 2,
+  "context_blocked": true,
+  "timeout_seconds": 2700,
+  "updated_at": "2026-05-22T00:53:06+0900",
+  "prompt": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research/orchestrator/workers/worker-02/runtime-prompt.md",
+  "output": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research/orchestrator/workers/worker-02/output.md",
+  "log": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research/orchestrator/workers/worker-02/runtime.log"
+}

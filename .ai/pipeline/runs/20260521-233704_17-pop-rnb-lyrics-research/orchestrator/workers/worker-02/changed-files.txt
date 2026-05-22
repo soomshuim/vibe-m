@@ -1,0 +1,2 @@
+SERIES/17-00/input/tracks/01_올라가 (Up Again).txt
+.ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research/implementation/17-00-track-01-rewrite.md

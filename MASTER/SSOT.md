@@ -50,6 +50,8 @@ Examples:
 
 Implicit overrides are not valid. If a global rule and a series concept conflict without a named override, `MASTER/MANAGER.md` conservative fail applies.
 
+Compilation / best-album series may use a `concept.md` `## Track Selection` table as the audio source map. In that case, `SERIES/[series]/input/tracks/` is only a local staging directory for materialized copies; it may be empty or absent when every `Source` path in the table resolves to an existing audio file. The compilation filename in `Copied Filename` remains the report/upload-facing filename.
+
 ---
 
 ## State Writer Rule

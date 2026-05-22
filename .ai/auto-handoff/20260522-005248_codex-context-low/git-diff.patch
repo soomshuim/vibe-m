@@ -1,0 +1,682 @@
+diff --git a/.ai/SESSION.md b/.ai/SESSION.md
+index dc2d31a..671d337 100644
+--- a/.ai/SESSION.md
++++ b/.ai/SESSION.md
+@@ -1,9 +1,27 @@
+ # Session State — Wavvy
+ 
+-> Last updated: 2026-05-08 (27차 업데이트 — RNB-BEST record)
++> Last updated: 2026-05-21 (28차 업데이트 — RNB-BEST source-map harness)
+ 
+ ## 진행 중
+ 
++- **17-00 Main POP R&B concept draft** (2026-05-21 29차)
++  - ✅ **사용자 방향 반영**: 다음 시리즈는 `기분 좋은 POP(Main) R&B`
++  - ✅ **Hard gate 확정**: 최소 `120 BPM`, `Major key only`. 119 BPM 이하 / Minor key / dark late-night R&B / slow jam 금지
++  - ✅ **시간 슬롯 확정**: `17:00`. 18:00 퇴근길 위로와 겹치지 않게 `퇴근 전부터 기분을 먼저 올리는 시간`으로 포지셔닝
++  - ✅ **신규 시리즈 초안 생성**: `SERIES/17-00/concept.md` 작성. Style A Main Pop R&B, Style B Bright Contemporary R&B, Style C Light Funk Pop R&B, 18트랙 draft map, YouTube Draft 포함
++  - ✅ **샘플 곡 리디자인**: `SERIES/17-00/input/tracks/01_올라가 (Up Again).txt` 작성. 124 BPM, D Major, Female vocal, Main Pop R&B / Pop Neo-Soul. `올라가` 반복 훅 중심
++  - ✅ **가사 정책 보정**: 시간대는 BPM/Mood/Energy 포지셔닝이고 가사 주제 강제가 아님. `wavvy.md`, `MASTER/lyrics/LYRICS.md`, `SERIES/17-00/concept.md`에 반영하고 Track 01 가사에서 업무/퇴근 직전 소재를 제거
++  - **남은 TODO**: Track 01 Suno V5.5 샘플 생성 → `올라가` hook memorability / bright mood / R&B DNA / no minor-dark drift 기준 PASS 판정 → 18-track prompt batch 확장
++
++- **RNB-BEST source-map compilation 하네스 보강** (2026-05-21 28차)
++  - ✅ **트랙 폴더 부재 정책 반영**: `RNB-BEST`는 `input/tracks/`에 오디오를 복사하지 않아도 `concept.md`의 `## Track Selection` `Source` 경로를 오디오 SSOT로 인정하도록 정리
++  - ✅ **validate/pack 보강**: local tracks가 없으면 compilation source map을 읽어 원본 경로를 ffprobe/normalize 대상으로 사용하고, `Copied Filename`을 report/provenance filename으로 유지
++  - ✅ **state/gate 보강**: `available_audio_files`, `audio_source=concept_track_selection`, `source_map_*` 상태를 추가하고, source-final gate가 source map 기반 compilation을 PASS 처리
++  - ✅ **문서 보정**: `MASTER/SSOT.md`에 compilation source map 정책 추가. `SERIES/RNB-BEST/concept.md`의 stale source path 2건(`피크닉`, `약속`)을 실제 존재하는 13-00 norm track 경로로 수정
++  - ✅ **검증 PASS**: `python3 -m py_compile wavvy.py wavvy_harness/*.py`, `python3 -m unittest tests/test_harness.py`, `python3 wavvy.py validate SERIES/RNB-BEST`, `python3 wavvy.py gate SERIES/RNB-BEST --stage source-final --json`, `git diff --check`
++  - ⚠️ **Doctor 상태**: `python3 wavvy.py doctor --json`은 기존 환경 경로 `/Users/zenkim_office/Project/claude-center/scripts/peer-agent-review.sh` 부재로 FAIL. 이번 변경과 직접 관련 없는 required dependency blocker
++  - **남은 TODO**: 실제 render/upload-ready 검증이 필요하면 `python3 wavvy.py pack SERIES/RNB-BEST -y`로 output artifacts를 재생성
++
+ - **RNB-BEST compilation 패키징/메타데이터 정리** (2026-05-08 27차)
+   - ✅ **신규 시리즈 구성**: `SERIES/RNB-BEST`를 기존 Wavvy R&B/R&B-adjacent 곡 재활용 best compilation으로 구성. 사용자 선곡 33곡을 최종 러닝 오더로 재번호화하고 `concept.md`에 source map 기록
+   - ✅ **콘셉트/메타데이터 확정**: 제목 `Playlist | R&B Best | 와..이 노래 제목 뭐야? ✨ 틀자마자 리듬에 그루비 😎 | CHILL · R&B · SOUL | 카페 · 작업 · 매장 음악 | Wavvy` 확정. 한국어+영문 description, `🌊 Track List`, 원곡 시리즈 표기(`· 22:00` 등), `#` 해시태그 블록과 `#` 없는 tags 동기화
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index d303bdf..032ea26 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+ ## [Unreleased]
+ 
+ ### Added
++- **17-00 Main POP R&B concept draft** (2026-05-21) — 다음 신규 시리즈를 `SERIES/17-00`으로 만들고, 사용자 결정 `기분 좋은 POP(Main) R&B`, `최소 120 BPM`, `무조건 Major Key`를 hard gate로 반영. 17:00은 18:00 퇴근길 위로와 겹치지 않게 `퇴근 전부터 기분을 먼저 올리는 시간`으로 포지셔닝. Style A Main Pop R&B / Style B Bright Contemporary R&B / Style C Light Funk Pop R&B, 18트랙 draft map, YouTube Draft, Next Steps를 작성.
++- **17-00 Track 01 sample prompt** (2026-05-21) — 17-00 시리즈의 첫 Suno 테스트용 샘플을 `SERIES/17-00/input/tracks/01_올라가 (Up Again).txt`로 리디자인. 124 BPM, D Major, Female vocal, Main Pop R&B / Pop Neo-Soul. 목적은 `올라가` instant hook memory / mainstream polish / R&B verse pocket / no minor-dark drift 검증.
++- **Time concept lyric policy** (2026-05-21) — 사용자 결정 반영: 시리즈 시간대는 가사 주제 강제가 아니라 BPM/Mood/Energy/Use Case 포지셔닝이다. 17:00도 퇴근/사무실 가사를 직접 다룰 필요 없이 퇴근 시간대 기분 전환에 도움이 되는 신나는 Pop R&B / Pop Neo-Soul이면 충분하다. `wavvy.md`, `MASTER/lyrics/LYRICS.md`, `SERIES/17-00/concept.md`에 정책을 추가하고 Track 01 샘플 가사에서 업무/퇴근 직전 소재를 제거.
++- **RNB-BEST source-map compilation support** (2026-05-21) — Compilation/best-album 시리즈가 `input/tracks/`에 오디오를 복사하지 않아도 `concept.md`의 `## Track Selection` `Source` 경로를 오디오 SSOT로 사용하도록 `validate`, `pack`, `state`, `gate`를 보강. `Copied Filename`은 report/upload-facing filename으로 유지하고, thumb-only compilation은 static image mode로 검증 가능하게 처리. `SERIES/RNB-BEST` source map의 stale 13-00 norm track 경로 2건을 실제 존재 파일로 보정. 검증: `py_compile`, `unittest`, `validate SERIES/RNB-BEST`, `gate --stage source-final`, `git diff --check` PASS.
+ - **SSOT and harness hardening pass** (2026-05-02) — `-play` 절차로 프로젝트 전반 SSOT/문서 중복/하네스 설정을 점검하고 보강. `.ai/state.json`의 authoritative docs를 `MASTER/SSOT.md` conflict-owner 문서와 동기화하고, `doctor`에 SSOT 문서 존재/라우터 일관성/entrypoint stale pattern/state authoritative docs/tracked `.DS_Store` hygiene 체크를 추가. `upload-ready` gate는 업로드 전 준비 상태에서 실패성 `youtube_upload_completed` 체크를 표시하지 않고 `youtube_upload_status`로 상태를 보고하도록 수정. `uploaded` 추론은 명시적 Upload Status/YouTube URL/업로드 완료 문구만 인정하도록 강화. `WORKFLOWS`, `cli/SPEC`, `LYRICS`, `MANAGER`, `YOUTUBE`, `wavvy.md`의 vfade/image-mode/title/parentheses/문서 hierarchy drift를 정리. 검증: peer review PASS, plan review PASS, `py_compile`, `unittest`, `doctor`, `validate`, `state --check`, `gate upload-ready/uploaded` PASS.
+ - **Agent instruction minimalism refactor** (2026-05-02) — `AGENTS.md`를 canonical agent router로 추가하고 `CLAUDE.md`를 29줄 Claude overlay로 축소. 상세 hard constraints/media/approval 규칙은 `MASTER/ai/RUNTIME_RULES.md`로 분리하고 `MASTER/SSOT.md` Conflict Order priority 4에 등록. 사용자 확인 정책은 보존했고, video xfade는 image-mode/uploaded 상태에 무조건 적용되지 않도록 entrypoint에서 제거.
+ - **Wavvy harness engineering layer** (2026-05-02) — `/team` 분석 → Claude review PASS → plan → Claude plan PASS → `/director` 구현 흐름으로 `doctor/state/gate` CLI, `wavvy_harness/` helper package, `.ai/state.json`, `MASTER/SSOT.md`, 20-00 `uploaded` 상태 정리, harness unit tests, peer-review/plan artifacts를 추가. 업로드 완료 후 `final.mkv/upload.csv`를 용량 정리로 삭제한 상태를 `deleted_after_upload`로 구분. 검증: `py_compile`, `unittest`, `doctor --json`, `validate`, `state --check --json`, `gate --stage upload-ready --json`, `gate --stage uploaded --json` PASS.
+diff --git a/MASTER/SSOT.md b/MASTER/SSOT.md
+index 2897d44..d11ed78 100644
+--- a/MASTER/SSOT.md
++++ b/MASTER/SSOT.md
+@@ -50,6 +50,8 @@ Examples:
+ 
+ Implicit overrides are not valid. If a global rule and a series concept conflict without a named override, `MASTER/MANAGER.md` conservative fail applies.
+ 
++Compilation / best-album series may use a `concept.md` `## Track Selection` table as the audio source map. In that case, `SERIES/[series]/input/tracks/` is only a local staging directory for materialized copies; it may be empty or absent when every `Source` path in the table resolves to an existing audio file. The compilation filename in `Copied Filename` remains the report/upload-facing filename.
++
+ ---
+ 
+ ## State Writer Rule
+diff --git a/MASTER/lyrics/LYRICS.md b/MASTER/lyrics/LYRICS.md
+index 7e30198..b5ff2f4 100644
+--- a/MASTER/lyrics/LYRICS.md
++++ b/MASTER/lyrics/LYRICS.md
+@@ -14,9 +14,18 @@ Purpose: Suno 가사 입력(Lyrics) 규칙 SSOT
+ - 혼자 읽히고 혼자 들리는 언어
+ - 말보다 **소리가 먼저 닿는** 한국어
+ - 장르별 밀도 조절 (Chillhop=텍스처, R&B=서사)
++- 시간대 컨셉은 가사 주제 강제가 아니라 BPM/Mood/Energy 포지셔닝이다
+ 
+ **지향:** 사물·공간·현상 중심, "가사 없는 듯 들리지만 읽으면 남는 가사"
+ 
++### 0.1 Time Concept vs Lyrics
++
++- 각 시리즈의 시간대는 주로 사운드 톤앤매너를 정한다.
++- 가사가 반드시 `17:00`, `퇴근`, `점심`, `수면 전` 같은 시간/활동을 직접 다룰 필요는 없다.
++- 우선순위는 **BPM → Mood → 장르 에너지 → 보컬 톤 → 가사 주제**다.
++- 가사는 해당 시간대에 듣기 좋은 감정과 이미지만 맞으면 충분하다.
++- 시간/활동 소재를 쓰는 경우에도 hook이나 핵심 주제로 과하게 고정하지 않는다.
++
+ ---
+ 
+ ## 1. Lyric Prompt Guide
+diff --git a/SERIES/RNB-BEST/concept.md b/SERIES/RNB-BEST/concept.md
+index bdae898..0965e7e 100644
+--- a/SERIES/RNB-BEST/concept.md
++++ b/SERIES/RNB-BEST/concept.md
+@@ -85,12 +85,13 @@ Last Updated: 2026-05-07
+ 
+ ## Packaging Policy
+ 
+-- `SERIES/RNB-BEST/input/tracks/`에는 사용자 선곡 순서대로 복사한 오디오를 둔다.
++- `## Track Selection`의 `Source` 경로가 compilation의 오디오 SSOT다.
++- `SERIES/RNB-BEST/input/tracks/`는 렌더를 위해 필요할 때만 materialize하는 staging 폴더다. 비어 있거나 없어도 `Source` 경로가 존재하면 누락으로 보지 않는다.
+ - 파일명은 Wavvy 표준인 `NN__Title__Mood__Genre__BPM.ext`를 따른다.
+ - 기존 트랙의 원본 제목과 장르는 가능한 유지한다.
+ - 같은 곡을 다른 시리즈에서 가져오더라도 이 compilation 안에서는 새 순번만 부여한다.
+ - 사용자가 곡 이름만 말하면, 에이전트가 전체 `SERIES/*/input/tracks/`를 검색해 해당 음원을 찾는다.
+-- 매칭된 음원은 신규 시리즈 폴더에 실제 파일로 복사한다. 하드링크를 기본으로 쓰지 않는다.
++- 매칭된 음원은 `Source`에 기록하고, 필요할 때만 신규 시리즈 폴더에 실제 파일로 복사한다. 하드링크를 기본으로 쓰지 않는다.
+ - 동명의 곡이 여러 시리즈에 있거나 원본 오디오가 없으면, 복사 전 사용자에게 후보를 보여주고 확인받는다.
+ - `pack` 기본값은 repeat 2이므로, 곡 수가 많으면 최종 영상 길이를 별도로 확인한다.
+ 
+@@ -288,10 +289,10 @@ RnBBest, RnBPlaylist, KoreanRnB, KoreanRnBPlaylist, GroovyRnB, ChillRnB, SoftRnB
+ | 18 | 봄비같은 너 | `SERIES/13-00/work/norm_tracks/norm_16__봄비같은 너__You Like Spring Rain__Neo-Soul Funk__104.wav` | `18__봄비같은 너__You Like Spring Rain__Neo-Soul Funk__104.wav` |
+ | 19 | 밤거리 | `SERIES/21-00/input/tracks/03__밤거리__관조__CityPop-Ballad__90.wav` | `19__밤거리__관조__CityPop-Ballad__90.wav` |
+ | 20 | 잔상 | `SERIES/12-00/input/tracks/10__잔상__Afterimage__Afro-Drill__108.wav` | `20__잔상__Afterimage__Afro-Drill__108.wav` |
+-| 21 | 피크닉 | `SERIES/13-00/work/norm_tracks/norm_13__피크닉__Picnic__Neo-Soul Funk__102.wav` | `21__피크닉__Picnic__Neo-Soul Funk__102.wav` |
++| 21 | 피크닉 | `SERIES/13-00/work/norm_tracks/norm_11__피크닉__Picnic__Neo-Soul Funk__102.wav` | `21__피크닉__Picnic__Neo-Soul Funk__102.wav` |
+ | 22 | 멍 | `SERIES/14-00/input/tracks/01__멍__Chill__Alt-RnB__74.mp3` | `22__멍__Chill__Alt-RnB__74.mp3` |
+ | 23 | 진동 | `SERIES/12-00/input/tracks/17__진동__Vibration__Afro-Drill__109.wav` | `23__진동__Vibration__Afro-Drill__109.wav` |
+-| 24 | 약속 | `SERIES/13-00/work/norm_tracks/norm_12__약속__Promise__Neo-Soul__100.wav` | `24__약속__Promise__Neo-Soul__100.wav` |
++| 24 | 약속 | `SERIES/13-00/work/norm_tracks/norm_03__약속__Promise__Neo-Soul__100.wav` | `24__약속__Promise__Neo-Soul__100.wav` |
+ | 25 | 정류장 | `SERIES/18-00/input/tracks/03__정류장__Loneliness__Neo-soul__100.mp3` | `25__정류장__Loneliness__Neo-soul__100.mp3` |
+ | 26 | 마음밖 | `SERIES/04-00/input/tracks/01__마음밖__Sentimental__RnB-Ballad__90.mp3` | `26__마음밖__Sentimental__RnB-Ballad__90.mp3` |
+ | 27 | 얼룩 | `SERIES/12-00/input/tracks/18__얼룩__Stain__Afro-Drill__102.wav` | `27__얼룩__Stain__Afro-Drill__102.wav` |
+@@ -324,7 +325,7 @@ RnBBest, RnBPlaylist, KoreanRnB, KoreanRnBPlaylist, GroovyRnB, ChillRnB, SoftRnB
+ 
+ 1. 사용자 선곡 리스트 수령
+ 2. 로컬 오디오 존재 여부 확인
+-3. `input/tracks/`에 사용자 순서대로 링크 또는 복사
++3. `## Track Selection` Source Map에 사용자 순서대로 원본 경로와 compilation 파일명을 기록
+ 4. `python3 wavvy.py validate SERIES/RNB-BEST`
+ 5. 필요 시 사용자 요청에 따라 러닝 오더만 조정
+ 6. `python3 wavvy.py pack SERIES/RNB-BEST -y`
+diff --git a/tests/test_harness.py b/tests/test_harness.py
+index be72d3d..881f5b5 100644
+--- a/tests/test_harness.py
++++ b/tests/test_harness.py
+@@ -4,7 +4,7 @@ import unittest
+ from pathlib import Path
+ from unittest.mock import patch
+ 
+-from wavvy import TrackInfo, generate_report
++from wavvy import ProjectPaths, TrackInfo, generate_report, validate_project
+ from wavvy_harness.doctor import run_ssot_hygiene
+ from wavvy_harness.gate import run_gate
+ from wavvy_harness.state import build_state, check_state
+@@ -75,6 +75,37 @@ CONCEPT_UPLOADED = CONCEPT_FINAL.replace(
+     "## Upload Status\n\n- YouTube upload completed\n- Local final.mkv deleted intentionally after upload.\n\n## YouTube Metadata",
+ )
+ 
++CONCEPT_COMPILATION = """# R&B BEST
++
++## Series Type
++
++- **Type**: Compilation / Best Album
++
++## YouTube Draft
++
++### 제목
++```text
++Playlist | R&B Best | Wavvy
++```
++
++### 설명
++```text
++description
++```
++
++### 태그
++```text
++tag1,tag2
++```
++
++## Track Selection
++
++| # | Title | Source | Copied Filename |
++|---|---|---|---|
++| 01 | One | `SERIES/01/input/tracks/09__One__Warm__RnB__90.wav` | `01__One__Warm__RnB__90.wav` |
++| 02 | Two | `SERIES/02/work/norm_tracks/norm_03__Two__Cool__Soul__100.wav` | `02__Two__Cool__Soul__100.wav` |
++"""
++
+ 
+ def make_series(root: Path, concept_text: str = CONCEPT_FINAL) -> Path:
+     series = root / "SERIES" / "20-00"
+@@ -119,6 +150,54 @@ class HarnessTests(unittest.TestCase):
+             self.assertIn("MASTER/ai/RUNTIME_RULES.md", state["authoritative_docs"])
+             self.assertIn("MASTER/cli/SPEC.md", state["authoritative_docs"])
+ 
++    def test_compilation_source_map_counts_as_available_audio(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            root = Path(tmp)
++            series = root / "SERIES" / "RNB-BEST"
++            (series / "input").mkdir(parents=True)
++            (series / "input" / "thumb.jpg").write_bytes(b"thumb")
++            (series / "concept.md").write_text(CONCEPT_COMPILATION, encoding="utf-8")
++            source_one = root / "SERIES/01/input/tracks/09__One__Warm__RnB__90.wav"
++            source_two = root / "SERIES/02/work/norm_tracks/norm_03__Two__Cool__Soul__100.wav"
++            source_one.parent.mkdir(parents=True)
++            source_two.parent.mkdir(parents=True)
++            source_one.write_bytes(b"one")
++            source_two.write_bytes(b"two")
++
++            state = build_state(series, root)
++            self.assertEqual(state["phase"], "source_final")
++            self.assertEqual(state["artifact_status"]["audio_files"], 0)
++            self.assertEqual(state["artifact_status"]["available_audio_files"], 2)
++            self.assertEqual(state["artifact_status"]["audio_source"], "concept_track_selection")
++
++            result = check_state(series, root, {"phase": "source_final"})
++            self.assertEqual(result["result"], "PASS")
++
++    def test_validate_project_uses_compilation_source_map_when_tracks_dir_is_empty(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            root = Path(tmp)
++            series = root / "SERIES" / "RNB-BEST"
++            (series / "input").mkdir(parents=True)
++            (series / "input" / "thumb.jpg").write_bytes(b"thumb")
++            (series / "concept.md").write_text(CONCEPT_COMPILATION, encoding="utf-8")
++            source_one = root / "SERIES/01/input/tracks/09__One__Warm__RnB__90.wav"
++            source_two = root / "SERIES/02/work/norm_tracks/norm_03__Two__Cool__Soul__100.wav"
++            source_one.parent.mkdir(parents=True)
++            source_two.parent.mkdir(parents=True)
++            source_one.write_bytes(b"one")
++            source_two.write_bytes(b"two")
++
++            with patch("wavvy.git_repo_root", return_value=root), patch(
++                "wavvy.get_audio_info",
++                return_value={"duration": 120.0, "sample_rate": 48000},
++            ), patch("wavvy.compute_sha256", return_value="abc123"):
++                result = validate_project(ProjectPaths(series))
++
++            self.assertTrue(result.is_valid, result.errors)
++            self.assertEqual(len(result.tracks), 2)
++            self.assertEqual(result.tracks[0].path, source_one)
++            self.assertEqual(result.tracks[0].report_filename, "01__One__Warm__RnB__90.wav")
++
+     def test_check_state_warns_on_final_sources_with_stale_draft_text(self):
+         with tempfile.TemporaryDirectory() as tmp:
+             root = Path(tmp)
+diff --git a/wavvy.md b/wavvy.md
+index 229d7ea..e4026e6 100644
+--- a/wavvy.md
++++ b/wavvy.md
+@@ -13,7 +13,8 @@ Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
+ > "하루는 감정의 지도다."
+ > 시간은 가장 보편적인 감정 트리거.
+ 
+-청자의 현재 시간에 맞는 음악, "지금 이 순간"을 대변하는 한국어 가사.
++청자의 현재 시간에 맞는 음악. 시간대는 주로 BPM, Mood, 장르 에너지, 사용 상황을 정렬하기 위한 포지셔닝이다.
++가사가 반드시 해당 시간, 장소, 활동을 직접 설명할 필요는 없다.
+ 
+ ---
+ 
+@@ -54,6 +55,7 @@ Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
+ | 14:00 | 오후햇살 | 나른, 따뜻 |
+ | 15:00 | 라디오 드라이브 | 바람, 그루브 |
+ | 16:00 | 퇴근 전 | 버팀, 교차 |
++| 17:00 | 퇴근 전 기분전환 | 밝음, POP |
+ | 18:30 | 퇴근길 | 해방, 전환 |
+ | 20:00 | 저녁 운동 | 에너지, 몰입 |
+ | 21:00 | 밤산책 | 고요, 사색 |
+@@ -62,6 +64,13 @@ Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
+ 
+ 상세 설정은 각 `SERIES/[시리즈]/concept.md` 참조.
+ 
++### Time Concept Policy
++
++- 시간대는 **BPM / Mood / Energy / Use Case**의 기준이다.
++- 가사는 시간대나 활동을 직접 반영하지 않아도 된다.
++- 예: 17:00 시리즈는 `퇴근 전`이라는 단어를 가사에 넣는 것이 아니라, 퇴근 시간대에 기분 전환을 돕는 밝은 Pop R&B 사운드를 만드는 것이 핵심이다.
++- 시리즈별 예외가 명시되지 않는 한, 가사 주제보다 사운드 톤앤매너가 우선한다.
++
+ ---
+ 
+ ## 5. Lyric Philosophy
+@@ -75,6 +84,7 @@ Purpose: 프로젝트 전략/브랜드 정의 (What & Why)
+ - 사물·공간·현상 중심
+ - 한 문장 한 이미지
+ - "가사 없는 듯 들리지만 읽으면 남는 가사"
++- 시간대 설명보다 사운드 Mood에 어울리는 보편적 이미지
+ 
+ ---
+ 
+diff --git a/wavvy.py b/wavvy.py
+index 82b4b16..0ae689d 100755
+--- a/wavvy.py
++++ b/wavvy.py
+@@ -84,6 +84,7 @@ class TrackInfo:
+     duration: float = 0.0
+     sample_rate: int = 0
+     sha256: str = ""
++    report_filename: str = ""
+ 
+     @classmethod
+     def from_filename(cls, path: Path) -> Optional['TrackInfo']:
+@@ -101,6 +102,16 @@ class TrackInfo:
+         )
+ 
+ 
++@dataclass
++class CompilationSourceEntry:
++    """A compilation track sourced from another Wavvy series."""
++    order: int
++    title: str
++    source: str
++    copied_filename: str
++    source_path: Path
++
++
+ @dataclass
+ class ValidationResult:
+     """Result of validation checks."""
+@@ -182,6 +193,87 @@ def ensure_dir(path: Path) -> Path:
+     return path
+ 
+ 
++def read_text_if_exists(path: Path) -> str:
++    """Read UTF-8 text if the path exists."""
++    try:
++        return path.read_text(encoding="utf-8")
++    except FileNotFoundError:
++        return ""
++
++
++def concept_declares_compilation(concept_text: str) -> bool:
++    """Return True when concept.md describes a compilation/best album."""
++    return bool(re.search(r"\*\*Type\*\*:\s*Compilation\b", concept_text, flags=re.IGNORECASE))
++
++
++def markdown_section(text: str, heading_name: str) -> str:
++    """Extract a level-2 markdown section by exact heading text."""
++    heading = re.search(rf"^## {re.escape(heading_name)}\s*$", text, flags=re.MULTILINE)
++    if not heading:
++        return ""
++    next_heading = re.search(r"^## ", text[heading.end():], flags=re.MULTILINE)
++    end = heading.end() + next_heading.start() if next_heading else len(text)
++    return text[heading.end():end]
++
++
++def resolve_series_repo_root(series_path: Path) -> Path:
++    """Resolve repo root for a series path without requiring git in tests."""
++    try:
++        return git_repo_root(series_path)
++    except Exception:
++        resolved = series_path.resolve()
++        if resolved.parent.name == "SERIES":
++            return resolved.parent.parent
++        return Path.cwd()
++
++
++def parse_compilation_source_map(series_path: Path) -> list[CompilationSourceEntry]:
++    """Parse concept.md Track Selection rows that point to source audio elsewhere."""
++    concept_text = read_text_if_exists(series_path / "concept.md")
++    if not concept_declares_compilation(concept_text):
++        return []
++
++    section = markdown_section(concept_text, "Track Selection")
++    if not section:
++        return []
++
++    repo_root = resolve_series_repo_root(series_path)
++    entries: list[CompilationSourceEntry] = []
++    for line in section.splitlines():
++        if not line.startswith("|") or "`" not in line:
++            continue
++        parts = [part.strip() for part in line.strip().strip("|").split("|")]
++        if len(parts) < 4:
++            continue
++        if not re.fullmatch(r"\d{2}", parts[0]):
++            continue
++
++        source_match = re.search(r"`([^`]+\.(?:mp3|wav))`", parts[2], flags=re.IGNORECASE)
++        copied_match = re.search(r"`([^`]+\.(?:mp3|wav))`", parts[3], flags=re.IGNORECASE)
++        if not source_match or not copied_match:
++            continue
++
++        source = source_match.group(1)
++        source_path = Path(source)
++        if not source_path.is_absolute():
++            source_path = repo_root / source_path
++        entries.append(
++            CompilationSourceEntry(
++                order=int(parts[0]),
++                title=parts[1],
++                source=source,
++                copied_filename=copied_match.group(1),
++                source_path=source_path,
++            )
++        )
++    return entries
++
++
++def track_report_filename(track: TrackInfo) -> str:
++    """Return the canonical filename to write in reports/provenance."""
++    return track.report_filename or track.path.name
++
++
+ def compute_sha256(filepath: Path) -> str:
+     """Compute SHA-256 hash of a file."""
+     sha256_hash = hashlib.sha256()
+@@ -458,6 +550,10 @@ class ProjectPaths:
+             p = self.input_dir / f'loop.{ext}'
+             if p.exists():
+                 return p
++        thumb = self.input_dir / 'thumb.jpg'
++        concept_text = read_text_if_exists(self.base / "concept.md")
++        if thumb.exists() and concept_declares_compilation(concept_text):
++            return thumb
+         return None
+ 
+     @property
+@@ -506,32 +602,60 @@ def validate_project(paths: ProjectPaths) -> ValidationResult:
+         result.add_error(f"Input directory does not exist: {paths.input_dir}")
+         return result
+ 
+-    if not paths.tracks_dir.exists():
+-        result.add_error(f"Tracks directory does not exist: {paths.tracks_dir}")
+-        return result
++    # Find audio files (MP3 or WAV). Compilation series may intentionally keep
++    # files in their original series and use concept.md Track Selection as the
++    # source map instead of materializing input/tracks.
++    local_audio_files = []
++    if paths.tracks_dir.exists():
++        local_audio_files = sorted(
++            list(paths.tracks_dir.glob('*.mp3')) + list(paths.tracks_dir.glob('*.wav'))
++        )
+ 
+-    # Find audio files (MP3 or WAV)
+-    audio_files = sorted(
+-        list(paths.tracks_dir.glob('*.mp3')) + list(paths.tracks_dir.glob('*.wav'))
+-    )
+-    if not audio_files:
+-        result.add_error(f"No audio files (MP3/WAV) found in: {paths.tracks_dir}")
++    source_map_entries = []
++    if not local_audio_files:
++        source_map_entries = parse_compilation_source_map(paths.base)
++
++    if not local_audio_files and not source_map_entries:
++        if not paths.tracks_dir.exists():
++            result.add_error(f"Tracks directory does not exist: {paths.tracks_dir}")
++        else:
++            result.add_error(f"No audio files (MP3/WAV) found in: {paths.tracks_dir}")
+         return result
+ 
+-    log_info(f"Found {len(audio_files)} audio file(s)")
++    if local_audio_files:
++        log_info(f"Found {len(local_audio_files)} audio file(s)")
++    else:
++        result.add_warning(
++            "No local input/tracks audio found; using concept.md Track Selection source map"
++        )
++        log_info(f"Found {len(source_map_entries)} source-map audio reference(s)")
+ 
+     # Validate filename format and parse tracks
+     tracks = []
+     sample_rates = set()
+ 
+-    for audio_path in audio_files:
+-        track = TrackInfo.from_filename(audio_path)
++    for item in (local_audio_files or source_map_entries):
++        if isinstance(item, CompilationSourceEntry):
++            audio_path = item.source_path
++            virtual_path = Path(item.copied_filename)
++        else:
++            audio_path = item
++            virtual_path = audio_path
++
++        track = TrackInfo.from_filename(virtual_path)
+         if track is None:
+             result.add_error(
+-                f"Invalid filename format: {audio_path.name}\n"
++                f"Invalid filename format: {virtual_path.name}\n"
+                 f"  Expected: NN__Title__Mood__Genre__BPM.mp3 (or .wav)"
+             )
+             continue
++        track.path = audio_path
++        if isinstance(item, CompilationSourceEntry):
++            track.report_filename = item.copied_filename
++
++        if not audio_path.exists():
++            result.add_error(f"Source-map audio file does not exist: {item.source}")
++            continue
+ 
+         # Check audio integrity
+         audio_info = get_audio_info(audio_path)
+@@ -1191,7 +1315,7 @@ def generate_provenance(
+ 
+     for track in tracks:
+         content.append(
+-            f"| {track.order:02d} | {track.path.name} | `{track.sha256[:16]}...` | "
++            f"| {track.order:02d} | {track_report_filename(track)} | `{track.sha256[:16]}...` | "
+             f"{track.duration:.1f}s | {track.sample_rate}Hz |"
+         )
+ 
+@@ -1202,7 +1326,7 @@ def generate_provenance(
+     ])
+ 
+     for track in tracks:
+-        content.append(f"- `{track.path.name}`: `{track.sha256}`")
++        content.append(f"- `{track_report_filename(track)}`: `{track.sha256}`")
+ 
+     try:
+         output_path.write_text("\n".join(content), encoding='utf-8')
+@@ -1390,7 +1514,7 @@ def generate_report(
+                 'duration': t.duration,
+                 'sample_rate': t.sample_rate,
+                 'sha256': t.sha256,
+-                'filename': t.path.name,
++                'filename': track_report_filename(t),
+             }
+             for t in tracks
+         ]
+@@ -2440,7 +2564,8 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool,
+         normalized_tracks = result.tracks
+     else:
+         for i, track in enumerate(result.tracks, 1):
+-            norm_path = paths.norm_tracks_dir / f"norm_{track.path.stem}.wav"
++            norm_stem = Path(track_report_filename(track)).stem
++            norm_path = paths.norm_tracks_dir / f"norm_{norm_stem}.wav"
+             log_info(f"  [{i}/{len(result.tracks)}] Normalizing {track.path.name}...")
+ 
+             if not normalize_track(track.path, norm_path, lufs, tp):
+@@ -2458,6 +2583,7 @@ def pack(path: Path, lufs: float, tp: float, fade: float, skip_normalize: bool,
+                 duration=track.duration,
+                 sample_rate=track.sample_rate,
+                 sha256=track.sha256,  # Keep original hash for provenance
++                report_filename=track.report_filename,
+             )
+             normalized_tracks.append(norm_track)
+ 
+diff --git a/wavvy_harness/gate.py b/wavvy_harness/gate.py
+index a4fcd48..4592745 100644
+--- a/wavvy_harness/gate.py
++++ b/wavvy_harness/gate.py
+@@ -64,13 +64,22 @@ def run_gate(
+     artifacts = state["artifact_status"]
+     warnings.extend(state_result.get("warnings", []))
+     blockers.extend(state_result.get("blockers", []))
++    available_audio_files = artifacts.get("available_audio_files", artifacts.get("audio_files", 0))
++    audio_source = artifacts.get("audio_source", "input_tracks")
+ 
+     source_checks = [
+         ("concept_md_present", artifacts["concept_md"] == "present"),
+-        ("final_track_sources_present", artifacts["final_track_sources"] == "present"),
+-        ("report_json_present", artifacts["report_json"] == "present"),
++        (
++            "final_track_sources_or_source_map_present",
++            artifacts["final_track_sources"] == "present" or artifacts.get("source_map") == "present",
++        ),
++        (
++            "report_json_present_or_source_map_ready",
++            artifacts["report_json"] == "present"
++            or (artifacts.get("source_map") == "present" and not artifacts.get("source_map_missing")),
++        ),
+         ("youtube_metadata_present", artifacts["youtube_metadata"] == "present"),
+-        ("audio_files_present", artifacts["audio_files"] > 0, f"{artifacts['audio_files']} audio files"),
++        ("audio_files_present", available_audio_files > 0, f"{available_audio_files} audio files via {audio_source}"),
+     ]
+     for item in source_checks:
+         name, passed, *detail = item
+diff --git a/wavvy_harness/state.py b/wavvy_harness/state.py
+index be738ca..14e7c7e 100644
+--- a/wavvy_harness/state.py
++++ b/wavvy_harness/state.py
+@@ -49,6 +49,45 @@ def _status(path: Path) -> str:
+     return "present" if path.exists() else "missing"
+ 
+ 
++def _concept_declares_compilation(concept_text: str) -> bool:
++    return bool(re.search(r"\*\*Type\*\*:\s*Compilation\b", concept_text, flags=re.IGNORECASE))
++
++
++def _compilation_source_map_entries(concept_text: str) -> list[dict[str, str]]:
++    if not _concept_declares_compilation(concept_text):
++        return []
++    section = _markdown_section(concept_text, "Track Selection")
++    if not section:
++        return []
++
++    entries: list[dict[str, str]] = []
++    for line in section.splitlines():
++        if not line.startswith("|") or "`" not in line:
++            continue
++        parts = [part.strip() for part in line.strip().strip("|").split("|")]
++        if len(parts) < 4 or not re.fullmatch(r"\d{2}", parts[0]):
++            continue
++        source_match = re.search(r"`([^`]+\.(?:mp3|wav))`", parts[2], flags=re.IGNORECASE)
++        copied_match = re.search(r"`([^`]+\.(?:mp3|wav))`", parts[3], flags=re.IGNORECASE)
++        if source_match and copied_match:
++            entries.append(
++                {
++                    "order": parts[0],
++                    "title": parts[1],
++                    "source": source_match.group(1),
++                    "copied_filename": copied_match.group(1),
++                }
++            )
++    return entries
++
++
++def _resolve_source_path(repo_root: Path, source: str) -> Path:
++    path = Path(source)
++    if path.is_absolute():
++        return path
++    return repo_root / path
++
++
+ def _metadata_present(concept_text: str) -> bool:
+     heading = re.search(r"^## YouTube (?:Metadata|Draft).*$", concept_text, flags=re.MULTILINE)
+     if not heading:
+@@ -144,7 +183,14 @@ def _infer_phase(artifact_status: dict[str, Any], concept_text: str, report: dic
+         return "upload_ready"
+     if artifact_status.get("final_mkv") == "present" and artifact_status.get("upload_csv") == "present":
+         return "render_final"
+-    if "## Final Track Sources" in concept_text and report.get("tracks") and artifact_status.get("audio_files", 0) > 0:
++    if "## Final Track Sources" in concept_text and report.get("tracks") and artifact_status.get("available_audio_files", 0) > 0:
++        return "source_final"
++    if (
++        artifact_status.get("source_map") == "present"
++        and artifact_status.get("source_map_missing") == []
++        and artifact_status.get("youtube_metadata") == "present"
++        and artifact_status.get("available_audio_files", 0) > 0
++    ):
+         return "source_final"
+     if txt_sources:
+         return "track_source_draft"
+@@ -168,6 +214,15 @@ def build_state(
+     report = _load_report(report_path)
+     audio_files = sorted(list(tracks_dir.glob("*.mp3")) + list(tracks_dir.glob("*.wav"))) if tracks_dir.exists() else []
+     txt_sources = sorted(tracks_dir.glob("*.txt")) if tracks_dir.exists() else []
++    source_map_entries = _compilation_source_map_entries(concept_text)
++    missing_source_map = [
++        entry["source"]
++        for entry in source_map_entries
++        if not _resolve_source_path(repo_root, entry["source"]).exists()
++    ]
++    source_map_audio_files = len(source_map_entries) - len(missing_source_map)
++    available_audio_files = len(audio_files) if audio_files else source_map_audio_files
++    audio_source = "input_tracks" if audio_files else ("concept_track_selection" if source_map_entries else "missing")
+     upload_completed = _upload_completed(concept_text)
+     final_mkv_status = _status(output_dir / "final.mkv")
+     upload_csv_status = _status(output_dir / "upload.csv")
+@@ -183,6 +238,12 @@ def build_state(
+         "report_json": _status(report_path),
+         "report_tracks": len(report.get("tracks", [])) if isinstance(report.get("tracks"), list) else 0,
+         "audio_files": len(audio_files),
++        "available_audio_files": available_audio_files,
++        "audio_source": audio_source,
++        "source_map": "present" if source_map_entries else "missing",
++        "source_map_tracks": len(source_map_entries),
++        "source_map_audio_files": source_map_audio_files,
++        "source_map_missing": missing_source_map,
+         "txt_sources": len(txt_sources),
+         "final_mkv": final_mkv_status,
+         "upload_csv": upload_csv_status,
+@@ -267,14 +328,27 @@ def check_state(
+         warnings.append("state active_series differs from requested series")
+ 
+     if phase in SOURCE_FINAL_PHASES:
+-        if artifacts["final_track_sources"] == "missing":
+-            blockers.append("source_final requires concept.md ## Final Track Sources")
+-        if artifacts["report_json"] == "missing":
+-            blockers.append("source_final requires output/report.json")
++        source_map_complete = (
++            artifacts.get("source_map") == "present"
++            and artifacts.get("source_map_tracks", 0) > 0
++            and not artifacts.get("source_map_missing")
++        )
++        if not source_map_complete:
++            if artifacts["final_track_sources"] == "missing":
++                blockers.append("source_final requires concept.md ## Final Track Sources")
++            if artifacts["report_json"] == "missing":
++                blockers.append("source_final requires output/report.json")
++        elif artifacts["report_json"] == "missing":
++            warnings.append("compilation source map is complete; output/report.json will be regenerated by pack")
+         if artifacts["youtube_metadata"] == "missing":
+             blockers.append("source_final requires concept.md YouTube Metadata/Draft title, description, and tags")
+-        if artifacts["audio_files"] <= 0:
+-            blockers.append("source_final requires audio files in input/tracks")
++        if artifacts.get("source_map_missing"):
++            blockers.append(
++                "source_final requires existing source-map audio files: "
++                + ", ".join(artifacts["source_map_missing"])
++            )
++        if artifacts.get("available_audio_files", artifacts["audio_files"]) <= 0:
++            blockers.append("source_final requires audio files in input/tracks or concept.md Track Selection source map")
+         if artifacts["final_track_sources_count"] and artifacts["report_tracks"]:
+             if artifacts["final_track_sources_count"] != artifacts["report_tracks"]:
+                 blockers.append("Final Track Sources count differs from report track count")

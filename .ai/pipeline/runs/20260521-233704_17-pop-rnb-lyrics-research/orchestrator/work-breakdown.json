@@ -1,0 +1,64 @@
+{
+  "execution_groups": [
+    {
+      "id": "serial-research",
+      "mode": "serial",
+      "reason": "2026 인기곡 가사 패턴 리서치를 먼저 완료합니다."
+    },
+    {
+      "depends_on": [
+        "serial-research"
+      ],
+      "id": "serial-rewrite",
+      "mode": "serial",
+      "reason": "리서치 산출물을 반영해 대상 가사 파일을 재작성합니다."
+    }
+  ],
+  "workers": [
+    {
+      "depends_on": [],
+      "effort": "medium",
+      "execution_group": "serial-research",
+      "execution_profile": "junior",
+      "functional_role": "Researcher Worker",
+      "id": "worker-01",
+      "model": "gpt-5.3-codex",
+      "open_skill_source_ids": [
+        "agent-skills-open-standard"
+      ],
+      "persona": "researcher",
+      "responsibility": "Forced -research evidence pass: research 2026 streaming-popular Pop/R&B lyric narration patterns at source-summary level only, do not quote or store lyric lines, and write the abstract pattern/lexicon report for Worker-02. No lyric rewrite.",
+      "role": "junior",
+      "runtime": "codex",
+      "seniority": "junior",
+      "write_scope": [
+        ".ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research/research/2026-pop-rnb-lyric-patterns.md"
+      ]
+    },
+    {
+      "depends_on": [
+        "worker-01"
+      ],
+      "effort": "high",
+      "execution_group": "serial-rewrite",
+      "execution_profile": "senior",
+      "functional_role": "Marketing Director Worker",
+      "id": "worker-02",
+      "model": "gpt-5.5",
+      "open_skill_source_ids": [
+        "coreyhaines-marketingskills",
+        "ericosiu-ai-marketing-skills",
+        "wshobson-agents-business-product"
+      ],
+      "persona": "marketing-director",
+      "responsibility": "Rewrite SERIES/17-00/input/tracks/01_올라가 (Up Again).txt using Worker-01 pattern report, preserve 17:00 Major/120+BPM sound DNA and Wavvy lyric philosophy, avoid direct 17:00/commute/work lyrics, and document verification.",
+      "role": "senior",
+      "runtime": "codex",
+      "seniority": "senior",
+      "write_scope": [
+        "SERIES/17-00/input/tracks/01_올라가 (Up Again).txt",
+        ".ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research/implementation/17-00-track-01-rewrite.md"
+      ]
+    }
+  ]
+}

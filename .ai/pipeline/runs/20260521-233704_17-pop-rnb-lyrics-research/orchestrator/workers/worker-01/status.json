@@ -1,0 +1,12 @@
+{
+  "worker_id": "worker-01",
+  "role": "junior",
+  "persona": "researcher",
+  "execution_profile": "junior",
+  "difficulty": "medium",
+  "risk": "medium",
+  "status": "done",
+  "updated_at": "2026-05-22T00:51:54+0900",
+  "output_file": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research/orchestrator/workers/worker-01/output.md",
+  "changed_files_file": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research/orchestrator/workers/worker-01/changed-files.txt"
+}

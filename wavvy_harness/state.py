@@ -28,6 +28,11 @@ AUTHORITATIVE_DOCS = [
     "MASTER/youtube/YOUTUBE.md",
     "wavvy.md",
 ]
+LYRIC_SKILL_EVIDENCE_REFS = [
+    "MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md",
+    "skills/wavvy-lyricist/SKILL.md",
+    "skills/wavvy-lyricist/references/patterns.md",
+]
 
 
 def _read_text(path: Path) -> str:
@@ -47,6 +52,45 @@ def _load_report(report_path: Path) -> dict[str, Any]:
 
 def _status(path: Path) -> str:
     return "present" if path.exists() else "missing"
+
+
+def _concept_declares_compilation(concept_text: str) -> bool:
+    return bool(re.search(r"\*\*Type\*\*:\s*Compilation\b", concept_text, flags=re.IGNORECASE))
+
+
+def _compilation_source_map_entries(concept_text: str) -> list[dict[str, str]]:
+    if not _concept_declares_compilation(concept_text):
+        return []
+    section = _markdown_section(concept_text, "Track Selection")
+    if not section:
+        return []
+
+    entries: list[dict[str, str]] = []
+    for line in section.splitlines():
+        if not line.startswith("|") or "`" not in line:
+            continue
+        parts = [part.strip() for part in line.strip().strip("|").split("|")]
+        if len(parts) < 4 or not re.fullmatch(r"\d{2}", parts[0]):
+            continue
+        source_match = re.search(r"`([^`]+\.(?:mp3|wav))`", parts[2], flags=re.IGNORECASE)
+        copied_match = re.search(r"`([^`]+\.(?:mp3|wav))`", parts[3], flags=re.IGNORECASE)
+        if source_match and copied_match:
+            entries.append(
+                {
+                    "order": parts[0],
+                    "title": parts[1],
+                    "source": source_match.group(1),
+                    "copied_filename": copied_match.group(1),
+                }
+            )
+    return entries
+
+
+def _resolve_source_path(repo_root: Path, source: str) -> Path:
+    path = Path(source)
+    if path.is_absolute():
+        return path
+    return repo_root / path
 
 
 def _metadata_present(concept_text: str) -> bool:
@@ -144,7 +188,14 @@ def _infer_phase(artifact_status: dict[str, Any], concept_text: str, report: dic
         return "upload_ready"
     if artifact_status.get("final_mkv") == "present" and artifact_status.get("upload_csv") == "present":
         return "render_final"
-    if "## Final Track Sources" in concept_text and report.get("tracks") and artifact_status.get("audio_files", 0) > 0:
+    if "## Final Track Sources" in concept_text and report.get("tracks") and artifact_status.get("available_audio_files", 0) > 0:
+        return "source_final"
+    if (
+        artifact_status.get("source_map") == "present"
+        and artifact_status.get("source_map_missing") == []
+        and artifact_status.get("youtube_metadata") == "present"
+        and artifact_status.get("available_audio_files", 0) > 0
+    ):
         return "source_final"
     if txt_sources:
         return "track_source_draft"
@@ -168,6 +219,19 @@ def build_state(
     report = _load_report(report_path)
     audio_files = sorted(list(tracks_dir.glob("*.mp3")) + list(tracks_dir.glob("*.wav"))) if tracks_dir.exists() else []
     txt_sources = sorted(tracks_dir.glob("*.txt")) if tracks_dir.exists() else []
+    lyric_skill_files = {
+        rel_path: _status(repo_root / rel_path)
+        for rel_path in LYRIC_SKILL_EVIDENCE_REFS
+    }
+    source_map_entries = _compilation_source_map_entries(concept_text)
+    missing_source_map = [
+        entry["source"]
+        for entry in source_map_entries
+        if not _resolve_source_path(repo_root, entry["source"]).exists()
+    ]
+    source_map_audio_files = len(source_map_entries) - len(missing_source_map)
+    available_audio_files = len(audio_files) if audio_files else source_map_audio_files
+    audio_source = "input_tracks" if audio_files else ("concept_track_selection" if source_map_entries else "missing")
     upload_completed = _upload_completed(concept_text)
     final_mkv_status = _status(output_dir / "final.mkv")
     upload_csv_status = _status(output_dir / "upload.csv")
@@ -183,6 +247,12 @@ def build_state(
         "report_json": _status(report_path),
         "report_tracks": len(report.get("tracks", [])) if isinstance(report.get("tracks"), list) else 0,
         "audio_files": len(audio_files),
+        "available_audio_files": available_audio_files,
+        "audio_source": audio_source,
+        "source_map": "present" if source_map_entries else "missing",
+        "source_map_tracks": len(source_map_entries),
+        "source_map_audio_files": source_map_audio_files,
+        "source_map_missing": missing_source_map,
         "txt_sources": len(txt_sources),
         "final_mkv": final_mkv_status,
         "upload_csv": upload_csv_status,
@@ -190,6 +260,8 @@ def build_state(
         "subtitle_srt": _status(output_dir / "youtube_subtitles_ko_timed_estimated.srt"),
         "youtube_metadata": "present" if _metadata_present(concept_text) else "missing",
         "youtube_upload": "completed" if upload_completed else "missing",
+        "lyric_skill_package": "present" if all(status == "present" for status in lyric_skill_files.values()) else "missing",
+        "lyric_skill_files": lyric_skill_files,
     }
 
     inferred_phase = _infer_phase(artifact_status, concept_text, report)
@@ -234,6 +306,7 @@ def build_state(
         "next_action": next_action,
         "artifact_status": artifact_status,
         "authoritative_docs": [*AUTHORITATIVE_DOCS, f"{series_rel}/concept.md"],
+        "evidence_refs": [*AUTHORITATIVE_DOCS, f"{series_rel}/concept.md", *LYRIC_SKILL_EVIDENCE_REFS],
         "blocked_by": blocked_by,
     }
 
@@ -267,14 +340,27 @@ def check_state(
         warnings.append("state active_series differs from requested series")
 
     if phase in SOURCE_FINAL_PHASES:
-        if artifacts["final_track_sources"] == "missing":
-            blockers.append("source_final requires concept.md ## Final Track Sources")
-        if artifacts["report_json"] == "missing":
-            blockers.append("source_final requires output/report.json")
+        source_map_complete = (
+            artifacts.get("source_map") == "present"
+            and artifacts.get("source_map_tracks", 0) > 0
+            and not artifacts.get("source_map_missing")
+        )
+        if not source_map_complete:
+            if artifacts["final_track_sources"] == "missing":
+                blockers.append("source_final requires concept.md ## Final Track Sources")
+            if artifacts["report_json"] == "missing":
+                blockers.append("source_final requires output/report.json")
+        elif artifacts["report_json"] == "missing":
+            warnings.append("compilation source map is complete; output/report.json will be regenerated by pack")
         if artifacts["youtube_metadata"] == "missing":
             blockers.append("source_final requires concept.md YouTube Metadata/Draft title, description, and tags")
-        if artifacts["audio_files"] <= 0:
-            blockers.append("source_final requires audio files in input/tracks")
+        if artifacts.get("source_map_missing"):
+            blockers.append(
+                "source_final requires existing source-map audio files: "
+                + ", ".join(artifacts["source_map_missing"])
+            )
+        if artifacts.get("available_audio_files", artifacts["audio_files"]) <= 0:
+            blockers.append("source_final requires audio files in input/tracks or concept.md Track Selection source map")
         if artifacts["final_track_sources_count"] and artifacts["report_tracks"]:
             if artifacts["final_track_sources_count"] != artifacts["report_tracks"]:
                 blockers.append("Final Track Sources count differs from report track count")

@@ -1,0 +1,140 @@
+{
+  "execution_groups": [
+    {
+      "id": "serial-research",
+      "mode": "serial",
+      "reason": "2026 Pop R&B/Neo-soul lyric evidence and local SSOT review must finish before skill writing."
+    },
+    {
+      "depends_on": [
+        "serial-research"
+      ],
+      "id": "serial-skill",
+      "mode": "serial",
+      "reason": "The Wavvy lyric skill/spec depends on the research baseline."
+    },
+    {
+      "depends_on": [
+        "serial-skill"
+      ],
+      "id": "serial-harness",
+      "mode": "serial",
+      "reason": "Harness implementation depends on the finalized skill/spec contract."
+    },
+    {
+      "depends_on": [
+        "serial-harness"
+      ],
+      "id": "serial-release",
+      "mode": "serial",
+      "reason": "Release notes and SSOT/session updates follow implementation and verification."
+    }
+  ],
+  "workers": [
+    {
+      "depends_on": [],
+      "effort": "high",
+      "execution_group": "serial-research",
+      "execution_profile": "senior",
+      "functional_role": "Researcher Worker",
+      "id": "worker-01",
+      "model": "gpt-5.5",
+      "open_skill_source_ids": [
+        "agent-skills-open-standard"
+      ],
+      "persona": "researcher",
+      "responsibility": "Research Wavvy-specific lyric-writing evidence: synthesize current popular Pop/R&B/Neo-soul lyric narration patterns, local Wavvy SSOT rules, and prior 17-00 research into a bounded baseline. Write research artifacts only; do not implement the skill or harness.",
+      "role": "senior",
+      "runtime": "codex",
+      "seniority": "senior",
+      "write_scope": [
+        ".ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/research/lyrics-skill-baseline.md",
+        ".ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/research/source-index.md"
+      ]
+    },
+    {
+      "depends_on": [
+        "worker-01"
+      ],
+      "effort": "high",
+      "execution_group": "serial-skill",
+      "execution_profile": "senior",
+      "functional_role": "Skill/Spec Worker",
+      "id": "worker-02",
+      "model": "gpt-5.5",
+      "open_skill_source_ids": [
+        "wshobson-agents-orchestration",
+        "agent-skills-open-standard",
+        "nexus-agent-observability"
+      ],
+      "persona": "ai-ops-expert",
+      "responsibility": "Create the Wavvy lyric-writing skill and durable skill contract from the research baseline. Own only skill/spec files; do not edit CLI, harness code, tests, or release docs.",
+      "role": "senior",
+      "runtime": "codex",
+      "seniority": "senior",
+      "write_scope": [
+        "skills/wavvy-lyricist/SKILL.md",
+        "skills/wavvy-lyricist/references/patterns.md",
+        "MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md"
+      ]
+    },
+    {
+      "depends_on": [
+        "worker-02"
+      ],
+      "effort": "xhigh",
+      "execution_group": "serial-harness",
+      "execution_profile": "lead",
+      "functional_role": "Harness Implementation Worker",
+      "id": "worker-03",
+      "model": "gpt-5.5",
+      "open_skill_source_ids": [
+        "wshobson-agents-orchestration",
+        "agent-skills-open-standard",
+        "nexus-agent-observability"
+      ],
+      "persona": "engineering-lead",
+      "responsibility": "Implement and verify the Wavvy lyric-skill harness/CLI gates using the approved skill contract. Own only code, tests, and implementation evidence; do not change release docs or broad SSOT prose.",
+      "role": "lead",
+      "runtime": "codex",
+      "seniority": "lead",
+      "write_scope": [
+        "wavvy.py",
+        "wavvy_harness/gate.py",
+        "wavvy_harness/state.py",
+        "tests/test_harness.py",
+        ".ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/implementation/harness.md"
+      ]
+    },
+    {
+      "depends_on": [
+        "worker-03"
+      ],
+      "effort": "xhigh",
+      "execution_group": "serial-release",
+      "execution_profile": "lead",
+      "functional_role": "Release Readiness Worker",
+      "id": "worker-04",
+      "model": "gpt-5.5",
+      "open_skill_source_ids": [
+        "wshobson-agents-orchestration",
+        "agent-skills-open-standard",
+        "nexus-agent-observability"
+      ],
+      "persona": "ai-ops-expert",
+      "responsibility": "Check architecture/process fit, record release readiness, and update Wavvy-facing documentation/session notes after implementation. Own only docs and release trace files.",
+      "role": "lead",
+      "runtime": "codex",
+      "seniority": "lead",
+      "write_scope": [
+        "MASTER/SSOT.md",
+        "MASTER/lyrics/LYRICS.md",
+        "wavvy.md",
+        "CHANGELOG.md",
+        ".ai/SESSION.md",
+        ".ai/HANDOFF.md",
+        ".ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/release/release-notes.md"
+      ]
+    }
+  ]
+}

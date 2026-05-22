@@ -85,12 +85,13 @@ Last Updated: 2026-05-07
 
 ## Packaging Policy
 
-- `SERIES/RNB-BEST/input/tracks/`에는 사용자 선곡 순서대로 복사한 오디오를 둔다.
+- `## Track Selection`의 `Source` 경로가 compilation의 오디오 SSOT다.
+- `SERIES/RNB-BEST/input/tracks/`는 렌더를 위해 필요할 때만 materialize하는 staging 폴더다. 비어 있거나 없어도 `Source` 경로가 존재하면 누락으로 보지 않는다.
 - 파일명은 Wavvy 표준인 `NN__Title__Mood__Genre__BPM.ext`를 따른다.
 - 기존 트랙의 원본 제목과 장르는 가능한 유지한다.
 - 같은 곡을 다른 시리즈에서 가져오더라도 이 compilation 안에서는 새 순번만 부여한다.
 - 사용자가 곡 이름만 말하면, 에이전트가 전체 `SERIES/*/input/tracks/`를 검색해 해당 음원을 찾는다.
-- 매칭된 음원은 신규 시리즈 폴더에 실제 파일로 복사한다. 하드링크를 기본으로 쓰지 않는다.
+- 매칭된 음원은 `Source`에 기록하고, 필요할 때만 신규 시리즈 폴더에 실제 파일로 복사한다. 하드링크를 기본으로 쓰지 않는다.
 - 동명의 곡이 여러 시리즈에 있거나 원본 오디오가 없으면, 복사 전 사용자에게 후보를 보여주고 확인받는다.
 - `pack` 기본값은 repeat 2이므로, 곡 수가 많으면 최종 영상 길이를 별도로 확인한다.
 
@@ -288,10 +289,10 @@ RnBBest, RnBPlaylist, KoreanRnB, KoreanRnBPlaylist, GroovyRnB, ChillRnB, SoftRnB
 | 18 | 봄비같은 너 | `SERIES/13-00/work/norm_tracks/norm_16__봄비같은 너__You Like Spring Rain__Neo-Soul Funk__104.wav` | `18__봄비같은 너__You Like Spring Rain__Neo-Soul Funk__104.wav` |
 | 19 | 밤거리 | `SERIES/21-00/input/tracks/03__밤거리__관조__CityPop-Ballad__90.wav` | `19__밤거리__관조__CityPop-Ballad__90.wav` |
 | 20 | 잔상 | `SERIES/12-00/input/tracks/10__잔상__Afterimage__Afro-Drill__108.wav` | `20__잔상__Afterimage__Afro-Drill__108.wav` |
-| 21 | 피크닉 | `SERIES/13-00/work/norm_tracks/norm_13__피크닉__Picnic__Neo-Soul Funk__102.wav` | `21__피크닉__Picnic__Neo-Soul Funk__102.wav` |
+| 21 | 피크닉 | `SERIES/13-00/work/norm_tracks/norm_11__피크닉__Picnic__Neo-Soul Funk__102.wav` | `21__피크닉__Picnic__Neo-Soul Funk__102.wav` |
 | 22 | 멍 | `SERIES/14-00/input/tracks/01__멍__Chill__Alt-RnB__74.mp3` | `22__멍__Chill__Alt-RnB__74.mp3` |
 | 23 | 진동 | `SERIES/12-00/input/tracks/17__진동__Vibration__Afro-Drill__109.wav` | `23__진동__Vibration__Afro-Drill__109.wav` |
-| 24 | 약속 | `SERIES/13-00/work/norm_tracks/norm_12__약속__Promise__Neo-Soul__100.wav` | `24__약속__Promise__Neo-Soul__100.wav` |
+| 24 | 약속 | `SERIES/13-00/work/norm_tracks/norm_03__약속__Promise__Neo-Soul__100.wav` | `24__약속__Promise__Neo-Soul__100.wav` |
 | 25 | 정류장 | `SERIES/18-00/input/tracks/03__정류장__Loneliness__Neo-soul__100.mp3` | `25__정류장__Loneliness__Neo-soul__100.mp3` |
 | 26 | 마음밖 | `SERIES/04-00/input/tracks/01__마음밖__Sentimental__RnB-Ballad__90.mp3` | `26__마음밖__Sentimental__RnB-Ballad__90.mp3` |
 | 27 | 얼룩 | `SERIES/12-00/input/tracks/18__얼룩__Stain__Afro-Drill__102.wav` | `27__얼룩__Stain__Afro-Drill__102.wav` |
@@ -324,7 +325,7 @@ RnBBest, RnBPlaylist, KoreanRnB, KoreanRnBPlaylist, GroovyRnB, ChillRnB, SoftRnB
 
 1. 사용자 선곡 리스트 수령
 2. 로컬 오디오 존재 여부 확인
-3. `input/tracks/`에 사용자 순서대로 링크 또는 복사
+3. `## Track Selection` Source Map에 사용자 순서대로 원본 경로와 compilation 파일명을 기록
 4. `python3 wavvy.py validate SERIES/RNB-BEST`
 5. 필요 시 사용자 요청에 따라 러닝 오더만 조정
 6. `python3 wavvy.py pack SERIES/RNB-BEST -y`

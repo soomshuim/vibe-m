@@ -1,0 +1,14 @@
+{
+  "schema": "play.goal_orchestrator.daemon.v1",
+  "status": "blocked",
+  "pid": 62979,
+  "started_at": "2026-05-21T23:37:04+0900",
+  "updated_at": "2026-05-21T23:52:44+0900",
+  "repo": "/Users/zenkim_office/Project/wavvy",
+  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research",
+  "command": "bash /Users/zenkim_office/Project/agent-center/scripts/goal-orchestrator.sh run --daemon-worker --repo /Users/zenkim_office/Project/wavvy --run /Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research --runtime auto --target claude --timeout-seconds 2700 --max-repair-rounds 1 --fresh-runtime auto --desktop-controller codex",
+  "caffeinate_pid": 63032,
+  "last_stage": "assignment-review",
+  "exit_code": 2,
+  "detail": "needs_user_decision"
+}

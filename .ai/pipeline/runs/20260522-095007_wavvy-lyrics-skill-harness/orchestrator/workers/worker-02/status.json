@@ -1,0 +1,12 @@
+{
+  "worker_id": "worker-02",
+  "role": "senior",
+  "persona": "ai-ops-expert",
+  "execution_profile": "senior",
+  "difficulty": "medium",
+  "risk": "high",
+  "status": "done",
+  "updated_at": "2026-05-22T10:33:32+0900",
+  "output_file": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/orchestrator/workers/worker-02/output.md",
+  "changed_files_file": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/orchestrator/workers/worker-02/changed-files.txt"
+}

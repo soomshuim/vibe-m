@@ -1,0 +1,19 @@
+{
+  "schema": "play.final_result_notification.v1",
+  "repo": "/Users/zenkim_office/Project/wavvy",
+  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness",
+  "status": "failed",
+  "stage": "assignment-review",
+  "detail": "exit=1",
+  "channels": {
+    "primary": {
+      "outcome": "skipped"
+    },
+    "telegram": {
+      "required": false,
+      "outcome": null
+    }
+  },
+  "delivered": true,
+  "updated_at": "2026-05-22T10:12:16+0900"
+}

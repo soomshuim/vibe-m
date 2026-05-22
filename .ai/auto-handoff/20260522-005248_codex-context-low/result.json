@@ -1,0 +1,160 @@
+{
+  "action": "handoff_complete",
+  "created_at": "2026-05-22T00:52:48+0900",
+  "repo": "/Users/zenkim_office/Project/wavvy",
+  "repo_source": "cwd",
+  "repo_resolution_warning": "",
+  "active_repo_candidates": [],
+  "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260522-005248_codex-context-low",
+  "clear_file": "/Users/zenkim_office/.codex/auto-handoff/clear-required.json",
+  "done_file": "/Users/zenkim_office/.codex/auto-handoff/done/58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc.json",
+  "session_key": "58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc",
+  "idempotency_key_scope": "session-turn",
+  "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
+  "remaining_pct": 13,
+  "threshold": 25,
+  "record_mode": "commit_push",
+  "commit_status": "no_changes",
+  "commit_hash": "",
+  "push_status": "skipped",
+  "clear_action": "sentinel",
+  "clear_bridge": {
+    "action": "disabled",
+    "reason": "requires_continue_started_health_ok_active_tui_preflight",
+    "continue_started": false,
+    "health_ok": false,
+    "active_tui_preflight": "not_run"
+  },
+  "run_id": "20260522-005248_599119f4",
+  "idempotency_key": "58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc",
+  "continue_action": "command_failed",
+  "continue_disabled_reason": "",
+  "continuation_depth": 0,
+  "continuation_max_depth": 5,
+  "git_commit_stderr": "/Users/zenkim_office/.codex/auto-handoff/logs/58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc-git-commit.stderr",
+  "git_push_stderr": "/Users/zenkim_office/.codex/auto-handoff/logs/58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc-git-push.stderr",
+  "clear_command_stdout": "/Users/zenkim_office/.codex/auto-handoff/logs/58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc-clear-command.stdout",
+  "clear_command_stderr": "/Users/zenkim_office/.codex/auto-handoff/logs/58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc-clear-command.stderr",
+  "continue_command_stdout": "/Users/zenkim_office/.codex/auto-handoff/logs/58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc-continue-command.stdout",
+  "continue_command_stderr": "/Users/zenkim_office/.codex/auto-handoff/logs/58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc-continue-command.stderr",
+  "telegram_relay_context_source_file": null,
+  "telegram_relay_context_file": null,
+  "telegram_relay_context_reason": "not_found",
+  "telegram_relay_context_status": {
+    "status": "unavailable",
+    "reason": "not_found",
+    "fallback_invoked": false,
+    "fallback": "none"
+  },
+  "telegram_relay_context": null,
+  "visible_relay_context_file": null,
+  "visible_relay_context_reason": "retired",
+  "visible_relay_context": null,
+  "loss_audit": {
+    "status": "pass",
+    "policy": "runtime_warn_release_gate_block",
+    "missing": [],
+    "checked": [
+      "guard.json",
+      "session.jsonl",
+      "git-status.txt",
+      "git-diff.patch",
+      "git-diff-staged.patch",
+      "failed-commands.jsonl",
+      "user-decisions.md",
+      "HANDOFF.md",
+      "SESSION.md",
+      "resume.md",
+      "telegram-relay-context-status.json"
+    ]
+  },
+  "traceability": {
+    "status": "pass",
+    "reason": "",
+    "run_id": "20260522-005248_599119f4",
+    "idempotency_key": "58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc",
+    "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+    "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+    "event_count": 4,
+    "bad_event_count": 0
+  },
+  "continuation_health": {
+    "status": "blocked",
+    "health_ok": false,
+    "smoke": {
+      "status": "fail",
+      "continue_action": "command_failed",
+      "continue_exit_code": 1,
+      "result_action": "",
+      "reason": "continuation_command_failed",
+      "continue_result": null
+    }
+  },
+  "release_gate": {
+    "policy": "hard_release_gates",
+    "status": "blocked",
+    "gates": {
+      "data_loss_zero": {
+        "status": "pass",
+        "loss_audit_status": "pass",
+        "missing": []
+      },
+      "run_id_traceability": {
+        "status": "pass",
+        "reason": "",
+        "run_id": "20260522-005248_599119f4",
+        "idempotency_key": "58f0bf38f528951a083831ef06ed878b04d973c27c97b9a480c709af1d9275bc",
+        "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+        "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+        "event_count": 4,
+        "bad_event_count": 0
+      },
+      "automatic_continuation_smoke": {
+        "status": "fail",
+        "continue_action": "command_failed",
+        "continue_exit_code": 1,
+        "result_action": "",
+        "reason": "continuation_command_failed",
+        "continue_result": null
+      }
+    }
+  },
+  "guard": {
+    "agent": "codex",
+    "session_file": "/Users/zenkim_office/.codex/sessions/2026/05/21/rollout-2026-05-21T20-37-25-019e4a53-79a2-70f0-875e-456bec1b6670.jsonl",
+    "session_match": "visible-parent-cwd",
+    "session_id": "019e4a53-79a2-70f0-875e-456bec1b6670",
+    "session_started_at": "2026-05-21T11:37:25.154Z",
+    "session_originator": "codex-tui",
+    "session_source": "cli",
+    "turn_id": "019e4b29-809d-7221-8442-b1069ba2e24f",
+    "is_subagent": false,
+    "model": "gpt-5.5",
+    "effort": "xhigh",
+    "cwd": "/Users/zenkim_office/Project/wavvy",
+    "session_cwd": "/Users/zenkim_office",
+    "input_tokens": 226993,
+    "cached_tokens": 226176,
+    "window_tokens": 258400,
+    "remaining_pct": 13,
+    "commands": {
+      "codex": "-wavvy",
+      "claude": "/wavvy"
+    },
+    "reload_instruction": "Codex: -wavvy; Claude: /wavvy",
+    "codex_profile": {
+      "config_file": "/Users/zenkim_office/.codex/config.toml",
+      "config_present": true,
+      "enable_request_compression": {
+        "state": "unset",
+        "meaning": "request_body_compression_only",
+        "context_compaction_kill_switch": false
+      },
+      "handoff_first_required": true
+    },
+    "threshold": 25,
+    "below_threshold": true
+  },
+  "continue_exit_code": 1,
+  "continue_retry_count": 1
+}

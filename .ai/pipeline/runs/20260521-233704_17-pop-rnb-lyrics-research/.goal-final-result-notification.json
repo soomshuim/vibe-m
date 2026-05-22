@@ -1,0 +1,19 @@
+{
+  "schema": "play.final_result_notification.v1",
+  "repo": "/Users/zenkim_office/Project/wavvy",
+  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260521-233704_17-pop-rnb-lyrics-research",
+  "status": "needs_user_decision",
+  "stage": "assignment-review",
+  "detail": "exit=2",
+  "channels": {
+    "primary": {
+      "outcome": "skipped"
+    },
+    "telegram": {
+      "required": false,
+      "outcome": null
+    }
+  },
+  "delivered": true,
+  "updated_at": "2026-05-21T23:52:44+0900"
+}
