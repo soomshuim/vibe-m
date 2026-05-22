@@ -1,0 +1,196 @@
+diff --git a/.ai/auto-handoff/20260522-141842_codex-context-low/release-gate.json b/.ai/auto-handoff/20260522-141842_codex-context-low/release-gate.json
+index 84a2930..eabba7f 100644
+--- a/.ai/auto-handoff/20260522-141842_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260522-141842_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,37 @@
+       "idempotency_key": "955285a87cf0c9b680c2184e3f8c6a031f92ea12c139aef9d7b9f84d26811261",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-22T14:18:57+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260522-141842_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd/prompt.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260522-141842_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260522-141857_a550fe958286dafd/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260522-141857.a550fe958286dafd"
++      }
+     }
+   }
+ }
+diff --git a/.ai/codex-hyphen-trigger-guard.json b/.ai/codex-hyphen-trigger-guard.json
+index ed0463f..83e8916 100644
+--- a/.ai/codex-hyphen-trigger-guard.json
++++ b/.ai/codex-hyphen-trigger-guard.json
+@@ -1,8 +1,7 @@
+ {
+   "schema": "codex.hyphen_trigger_guard.v1",
+-  "status": "pending",
++  "status": "acknowledged",
+   "trigger": "play",
+-  "requires_director": false,
+-  "message": "# Team Model Orchestrator Worker Dispatch\nworker: worker-03\nRequest: wavvy 전용 작사 스킬을 만들고 싶어. 필요한 자료를 리서치하고 스킬과 에이전트 하네스를 구성해줘. -play\nResponsibility: Implement and verify the Wavvy lyric-skill harness/CLI gates using the approved skill contract.\nAssigned Write Scope: wavvy.py; wavvy_harness/gate.py; wavvy_harness/state.py; tests/test_harness.py; .ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness/implementation/harness.md\nAlready inside -play/-director worker dispatch; do not start a new play run.",
+-  "created_at": "2026-05-22T10:34:13+0900"
++  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl",
++  "acknowledged_at": "2026-05-22T13:28:27+0900"
+ }
+diff --git a/.ai/logs/codex-handoff-events.jsonl b/.ai/logs/codex-handoff-events.jsonl
+index a091713..2642f66 100644
+--- a/.ai/logs/codex-handoff-events.jsonl
++++ b/.ai/logs/codex-handoff-events.jsonl
+@@ -88,3 +88,73 @@
+   "continuation_max_depth": 5,
+   "message": "continuation smoke verified"
+ }
++{
++  "ts": "2026-05-22T14:18:42+0900",
++  "state": "freeze",
++  "run_id": "20260522-141842_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "955285a87cf0c9b680c2184e3f8c6a031f92ea12c139aef9d7b9f84d26811261",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-22T14:18:42+0900",
++  "state": "snapshot",
++  "run_id": "20260522-141842_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "955285a87cf0c9b680c2184e3f8c6a031f92ea12c139aef9d7b9f84d26811261",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260522-141842_codex-context-low"
++}
++{
++  "ts": "2026-05-22T14:18:42+0900",
++  "state": "resume-ready",
++  "run_id": "20260522-141842_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "955285a87cf0c9b680c2184e3f8c6a031f92ea12c139aef9d7b9f84d26811261",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-22T14:18:57+0900",
++  "state": "continue-started",
++  "run_id": "20260522-141842_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "955285a87cf0c9b680c2184e3f8c6a031f92ea12c139aef9d7b9f84d26811261",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-22T14:18:57+0900",
++  "state": "verified",
++  "run_id": "20260522-141842_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "955285a87cf0c9b680c2184e3f8c6a031f92ea12c139aef9d7b9f84d26811261",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-22T14:22:01+0900",
++  "state": "freeze",
++  "run_id": "20260522-142200_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "8d679e1f224ade8ce1ad1ec6e466b97e893c07cd7189e94591f7d29bb9096077",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-22T14:22:01+0900",
++  "state": "snapshot",
++  "run_id": "20260522-142200_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "8d679e1f224ade8ce1ad1ec6e466b97e893c07cd7189e94591f7d29bb9096077",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260522-142200_codex-context-low"
++}
+diff --git a/.ai/logs/codex-handoff-latest.json b/.ai/logs/codex-handoff-latest.json
+index 03d54ce..b435d55 100644
+--- a/.ai/logs/codex-handoff-latest.json
++++ b/.ai/logs/codex-handoff-latest.json
+@@ -1,10 +1,10 @@
+ {
+-  "ts": "2026-05-22T11:13:54+0900",
+-  "state": "verified",
+-  "run_id": "20260522-111333_599119f4",
+-  "step_id": "verify",
+-  "idempotency_key": "17300c06dbef0f24a25ebb6ca550a1f3a90679732b593a7b0437ec7ff73e39df",
++  "ts": "2026-05-22T14:22:01+0900",
++  "state": "snapshot",
++  "run_id": "20260522-142200_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "8d679e1f224ade8ce1ad1ec6e466b97e893c07cd7189e94591f7d29bb9096077",
+   "continuation_depth": 0,
+   "continuation_max_depth": 5,
+-  "message": "continuation smoke verified"
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260522-142200_codex-context-low"
+ }
+diff --git a/AGENTS.md b/AGENTS.md
+index 3fe5efa..3d17bca 100644
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -28,6 +28,7 @@ Canonical agent router for Wavvy. Keep this file small; route detailed rules to
+ | Resume project state | `.ai/state.json`, then `MASTER/SSOT.md` |
+ | Resolve conflicting docs | `MASTER/SSOT.md` |
+ | Track prompt/source work | `MASTER/WORKFLOWS.md` §0-2 |
++| Lyric writing/rewrite/review | `.claude/commands/write.md`, then `skills/wavvy-lyricist/SKILL.md` |
+ | Packaging, preview, shorts, gates | `MASTER/cli/SPEC.md` |
+ | Media runtime cautions | `MASTER/ai/RUNTIME_RULES.md` |
+ | YouTube title/description/tags | `MASTER/youtube/YOUTUBE.md`, then series `concept.md` |
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 8cb20c7..a76e147 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+ ## [Unreleased]
+ 
+ ### Added
++- **Wavvy `/write` / `-write` lyricist command shim** (2026-05-22) — `.claude/commands/write.md`를 추가해 Claude Code `/write`와 Codex `-write`를 Wavvy lyric-only thin alias로 연결. command는 가사 작성/리라이트/리뷰만 라우팅하고, 규칙은 `skills/wavvy-lyricist/SKILL.md`, `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`, `MASTER/lyrics/LYRICS.md`, `wavvy.py lyrics-skill` 하네스에 위임. YouTube copy, concept/changelog/session, 일반 문서 작성은 범위 밖으로 명시.
+ - **`/write` lyricist routing team decision** (2026-05-22) — `-team` 논의로 Wavvy 작사가 호출 UX를 검토. 결론은 Claude Code에서는 `/write`, Codex에서는 `-write`를 Wavvy lyric-only thin alias로 두고, 실제 규칙은 `skills/wavvy-lyricist`와 `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`에 유지하는 방향. 기록: `meetings/2026-05-22_write-command-lyricist-routing.md`.
+ - **Wavvy lyricist skill release docs** (2026-05-22) — `-play` worker run의 작사 스킬 산출물을 Wavvy SSOT/가사/브랜드 문서에 연결하고 release readiness를 기록. `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`는 lyric skill output schema/self-gate/harness baseline owner로 등록하고, `MASTER/lyrics/LYRICS.md`와 `wavvy.md`는 `skills/wavvy-lyricist` 및 `lyrics-review` gate 진입점을 참조하도록 보강. 검증: lyric skill package/gate PASS, 기존 `doctor` peer script path와 17-00 source-final 상태는 별도 non-blocker로 유지.
+ - **17-00 Main POP R&B concept draft** (2026-05-21) — 다음 신규 시리즈를 `SERIES/17-00`으로 만들고, 사용자 결정 `기분 좋은 POP(Main) R&B`, `최소 120 BPM`, `무조건 Major Key`를 hard gate로 반영. 17:00은 18:00 퇴근길 위로와 겹치지 않게 `퇴근 전부터 기분을 먼저 올리는 시간`으로 포지셔닝. Style A Main Pop R&B / Style B Bright Contemporary R&B / Style C Light Funk Pop R&B, 18트랙 draft map, YouTube Draft, Next Steps를 작성.
