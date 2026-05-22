@@ -41,9 +41,9 @@ Worker-04 re-run after documentation updates:
 - `PYTHONPYCACHEPREFIX=/private/tmp/wavvy-pycache python3 wavvy.py gate SERIES/17-00 --stage lyrics-review --json`: PASS
 - `git diff --check`: PASS
 
-## Known Non-Blocking Failures
+## Known Non-Blocking Notes
 
-- `python3 wavvy.py doctor --json` still fails because the existing `peer_review_script` config points to missing `/Users/zenkim_office/Project/claude-center/scripts/peer-agent-review.sh`.
+- `python3 wavvy.py doctor --json` no longer has the stale `claude-center` peer-review path after the post-release correction to `/Users/zenkim_office/Project/agent-center/scripts/peer-agent-review.sh`.
 - `python3 wavvy.py state SERIES/17-00 --check --json` and `python3 wavvy.py gate SERIES/17-00 --stage source-final --json` still fail because `SERIES/17-00` is currently a draft series without final track source/report/audio evidence.
 
 These are not regressions from the lyric skill harness.

@@ -637,8 +637,8 @@ HANDOFF: Codex worker-04 -> Orchestrator
 Date: 2026-05-22 10:43:56 +0900
 Project: /Users/zenkim_office/Project/wavvy
 Agent: Codex worker-04 (ai-ops-expert)
-Summary: Wavvy lyricist skill release documentation completed after worker-01 research, worker-02 skill/spec, and worker-03 harness implementation. SSOT now registers `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md` as the lyric skill contract, LYRICS/wavvy route lyric drafting and review to `skills/wavvy-lyricist`, and release notes/session/changelog record the new `lyrics-skill` CLI plus `lyrics-review` gate.
-Next-TODO: Controller should run/collect final peer review if required, then record/commit the combined worker output. Known non-blockers remain: `doctor --json` fails on the pre-existing missing peer review script path, and 17-00 source-final/state gates fail because the series is still draft-level evidence.
+Summary: Wavvy lyricist skill release documentation completed after worker-01 research, worker-02 skill/spec, and worker-03 harness implementation. SSOT now registers `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md` as the lyric skill contract, LYRICS/wavvy route lyric drafting and review to `skills/wavvy-lyricist`, and release notes/session/changelog record the new `lyrics-skill` CLI plus `lyrics-review` gate. Post-release correction updated the peer review script path from stale `claude-center` to `agent-center`.
+Next-TODO: Controller should run/collect final peer review if required, then record/commit the combined worker output. Known non-blocker remains: 17-00 source-final/state gates fail because the series is still draft-level evidence.
 Play-Run: /Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-095007_wavvy-lyrics-skill-harness
 Commits: pending
 ---

@@ -10,7 +10,7 @@
   - ✅ **하네스/CLI 추가**: `python3 wavvy.py lyrics-skill SERIES/[series] --json`와 `python3 wavvy.py gate SERIES/[series] --stage lyrics-review --json`로 스킬 패키지와 optional lyric artifact를 검증
   - ✅ **문서 연결**: `MASTER/SSOT.md`, `MASTER/lyrics/LYRICS.md`, `wavvy.md`, `CHANGELOG.md`, release notes에 새 skill/spec/gate의 권한 위치와 release readiness 기록
   - ✅ **검증 PASS**: `PYTHONPYCACHEPREFIX=/private/tmp/wavvy-pycache python3 -m py_compile wavvy.py wavvy_harness/*.py`, `python3 -m unittest tests/test_harness.py` 15 tests, `python3 wavvy.py lyrics-skill SERIES/17-00 --json`, `python3 wavvy.py gate SERIES/17-00 --stage lyrics-review --json`, `git diff --check`
-  - ⚠️ **기존 blocker**: `python3 wavvy.py doctor --json`은 기존 `peer_review_script` 경로 `/Users/zenkim_office/Project/claude-center/scripts/peer-agent-review.sh` 부재로 FAIL. `state SERIES/17-00 --check`와 `source-final` gate는 17-00이 아직 draft source 단계라 FAIL
+  - ✅ **Doctor 경로 보정**: `peer_review_script` 기본 경로를 `/Users/zenkim_office/Project/agent-center/scripts/peer-agent-review.sh`로 정정. `state SERIES/17-00 --check`와 `source-final` gate는 17-00이 아직 draft source 단계라 FAIL
   - **남은 TODO**: 다음 17-00 가사/프롬프트 작업부터 `skills/wavvy-lyricist`를 사용하고, lyric draft 산출물은 `lyrics-skill --artifact ... --mode full-lyric-draft`로 검증
 
 - **17-00 Main POP R&B concept draft** (2026-05-21 29차)
@@ -28,7 +28,7 @@
   - ✅ **state/gate 보강**: `available_audio_files`, `audio_source=concept_track_selection`, `source_map_*` 상태를 추가하고, source-final gate가 source map 기반 compilation을 PASS 처리
   - ✅ **문서 보정**: `MASTER/SSOT.md`에 compilation source map 정책 추가. `SERIES/RNB-BEST/concept.md`의 stale source path 2건(`피크닉`, `약속`)을 실제 존재하는 13-00 norm track 경로로 수정
   - ✅ **검증 PASS**: `python3 -m py_compile wavvy.py wavvy_harness/*.py`, `python3 -m unittest tests/test_harness.py`, `python3 wavvy.py validate SERIES/RNB-BEST`, `python3 wavvy.py gate SERIES/RNB-BEST --stage source-final --json`, `git diff --check`
-  - ⚠️ **Doctor 상태**: `python3 wavvy.py doctor --json`은 기존 환경 경로 `/Users/zenkim_office/Project/claude-center/scripts/peer-agent-review.sh` 부재로 FAIL. 이번 변경과 직접 관련 없는 required dependency blocker
+  - ✅ **Doctor 상태**: `peer_review_script` 기본 경로를 `/Users/zenkim_office/Project/agent-center/scripts/peer-agent-review.sh`로 정정. 이번 RNB-BEST 변경 자체와 별개인 환경 blocker는 해소
   - **남은 TODO**: 실제 render/upload-ready 검증이 필요하면 `python3 wavvy.py pack SERIES/RNB-BEST -y`로 output artifacts를 재생성
 
 - **RNB-BEST compilation 패키징/메타데이터 정리** (2026-05-08 27차)

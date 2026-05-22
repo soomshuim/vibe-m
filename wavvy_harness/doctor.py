@@ -21,7 +21,7 @@ REQUIRED_MODULES = {
 }
 
 REQUIRED_BINARIES = ["ffmpeg", "ffprobe", "git"]
-DEFAULT_PEER_REVIEW_SCRIPT = Path("~/Project/claude-center/scripts/peer-agent-review.sh").expanduser()
+DEFAULT_PEER_REVIEW_SCRIPT = Path("~/Project/agent-center/scripts/peer-agent-review.sh").expanduser()
 DEFAULT_FFMPEG_FULL = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg")
 REQUIRED_SSOT_DOCS = [
     "AGENTS.md",

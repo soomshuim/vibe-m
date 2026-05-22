@@ -36,7 +36,7 @@ Delivered:
 
 Known non-blockers:
 
-- `python3 wavvy.py doctor --json` still fails on the pre-existing missing `peer_review_script` path.
+- The stale `claude-center` peer-review script path was corrected to `agent-center` after the initial release record.
 - `SERIES/17-00` is not source-final yet, so source-final/state checks remain outside this release.
 
 ## Commits

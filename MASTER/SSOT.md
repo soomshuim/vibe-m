@@ -68,7 +68,7 @@ python3 wavvy.py state SERIES/[series] --write
 The writer uses temp-file plus atomic rename. Agents should not edit `.ai/state.json` manually.
 The `authoritative_docs` list in state should mirror the current conflict-owner docs in this file, plus the active series `concept.md`.
 
-`.ai/HANDOFF.md` remains append-only because claude-center hooks still read it. State augments handoff; it does not replace hook behavior yet.
+`.ai/HANDOFF.md` remains append-only because agent-center hooks still read it. State augments handoff; it does not replace hook behavior yet.
 
 ---
 
