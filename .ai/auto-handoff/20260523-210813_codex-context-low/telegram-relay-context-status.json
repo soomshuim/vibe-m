@@ -1,0 +1,8 @@
+{
+  "status": "available",
+  "reason": "fixed_hook_fallback",
+  "fallback_invoked": true,
+  "fallback": "fixed_telegram_hook",
+  "prior_reason": "not_found",
+  "snapshot_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210813_codex-context-low/telegram-relay-context.json"
+}
