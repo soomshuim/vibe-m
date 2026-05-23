@@ -1,0 +1,344 @@
+diff --git a/.ai/SESSION.md b/.ai/SESSION.md
+index d53359d..64d444d 100644
+--- a/.ai/SESSION.md
++++ b/.ai/SESSION.md
+@@ -1,9 +1,15 @@
+ # Session State — Wavvy
+ 
+-> Last updated: 2026-05-22 (32차 업데이트 — Wavvy write command shim)
++> Last updated: 2026-05-22 (33차 업데이트 — 17-00 Track 01 self-spell rewrite)
+ 
+ ## 진행 중
+ 
++- **17-00 Track 01 self-spell rewrite** (2026-05-22 33차)
++  - ✅ **사용자 피드백 반영**: `올라가` 훅 대신 `기분 좋아져라` 셀프 주문형 콘셉트로 변경
++  - ✅ **샘플 파일 갱신**: `SERIES/17-00/input/tracks/01_기분 좋아져라 (Feel Good Spell).txt`로 파일명/트랙명/Style hook phrase/가사/Listen For 동기화
++  - ✅ **concept 동기화**: `SERIES/17-00/concept.md` Track Map과 Next Steps의 Track 01 참조를 새 제목으로 변경
++  - **남은 TODO**: Track 01 Suno V5.5 샘플 생성 → `기분 좋아져라` hook memorability / bright mood / R&B DNA / no minor-dark drift 기준 PASS 판정
++
+ - **`/write` / `-write` lyricist command shim** (2026-05-22 32차, `-director`)
+   - ✅ **로컬 command 추가**: `.claude/commands/write.md` 생성. Claude Code `/write`와 Codex `-write`가 같은 Wavvy-local `write` command 이름으로 해석되도록 연결
+   - ✅ **thin shim 원칙 유지**: command 본문에는 작사 규칙을 복사하지 않고 `skills/wavvy-lyricist/SKILL.md`, `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`, `MASTER/lyrics/LYRICS.md`로 라우팅
+@@ -30,9 +36,9 @@
+   - ✅ **Hard gate 확정**: 최소 `120 BPM`, `Major key only`. 119 BPM 이하 / Minor key / dark late-night R&B / slow jam 금지
+   - ✅ **시간 슬롯 확정**: `17:00`. 18:00 퇴근길 위로와 겹치지 않게 `퇴근 전부터 기분을 먼저 올리는 시간`으로 포지셔닝
+   - ✅ **신규 시리즈 초안 생성**: `SERIES/17-00/concept.md` 작성. Style A Main Pop R&B, Style B Bright Contemporary R&B, Style C Light Funk Pop R&B, 18트랙 draft map, YouTube Draft 포함
+-  - ✅ **샘플 곡 리디자인**: `SERIES/17-00/input/tracks/01_올라가 (Up Again).txt` 작성. 124 BPM, D Major, Female vocal, Main Pop R&B / Pop Neo-Soul. `올라가` 반복 훅 중심
++  - ✅ **샘플 곡 리디자인**: 초기 `올라가 (Up Again)` 샘플 작성 후 2026-05-22 33차에서 `SERIES/17-00/input/tracks/01_기분 좋아져라 (Feel Good Spell).txt`로 변경. 124 BPM, D Major, Female vocal, Main Pop R&B / Pop Neo-Soul. `기분 좋아져라` 셀프 주문형 반복 훅 중심
+   - ✅ **가사 정책 보정**: 시간대는 BPM/Mood/Energy 포지셔닝이고 가사 주제 강제가 아님. `wavvy.md`, `MASTER/lyrics/LYRICS.md`, `SERIES/17-00/concept.md`에 반영하고 Track 01 가사에서 업무/퇴근 직전 소재를 제거
+-  - **남은 TODO**: Track 01 Suno V5.5 샘플 생성 → `올라가` hook memorability / bright mood / R&B DNA / no minor-dark drift 기준 PASS 판정 → 18-track prompt batch 확장
++  - **남은 TODO**: Track 01 Suno V5.5 샘플 생성 → `기분 좋아져라` hook memorability / bright mood / R&B DNA / no minor-dark drift 기준 PASS 판정 → 18-track prompt batch 확장
+ 
+ - **RNB-BEST source-map compilation 하네스 보강** (2026-05-21 28차)
+   - ✅ **트랙 폴더 부재 정책 반영**: `RNB-BEST`는 `input/tracks/`에 오디오를 복사하지 않아도 `concept.md`의 `## Track Selection` `Source` 경로를 오디오 SSOT로 인정하도록 정리
+diff --git a/.ai/codex-hyphen-trigger-guard.json b/.ai/codex-hyphen-trigger-guard.json
+index 83e8916..35f99b5 100644
+--- a/.ai/codex-hyphen-trigger-guard.json
++++ b/.ai/codex-hyphen-trigger-guard.json
+@@ -2,6 +2,6 @@
+   "schema": "codex.hyphen_trigger_guard.v1",
+   "status": "acknowledged",
+   "trigger": "play",
+-  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl",
+-  "acknowledged_at": "2026-05-22T13:28:27+0900"
++  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260523-183702_wavvy-17-00-20-track-design-retry",
++  "acknowledged_at": "2026-05-23T18:37:03+0900"
+ }
+diff --git a/.ai/logs/codex-handoff-events.jsonl b/.ai/logs/codex-handoff-events.jsonl
+index 4148725..64509a1 100644
+--- a/.ai/logs/codex-handoff-events.jsonl
++++ b/.ai/logs/codex-handoff-events.jsonl
+@@ -188,3 +188,23 @@
+   "continuation_max_depth": 5,
+   "message": "continuation smoke verified"
+ }
++{
++  "ts": "2026-05-23T18:48:05+0900",
++  "state": "freeze",
++  "run_id": "20260523-184805_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "84b8d18d06248993cc0be2fa48365fb7945ceece43bdfe0fdcf201942db92c6e",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-23T18:48:05+0900",
++  "state": "snapshot",
++  "run_id": "20260523-184805_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "84b8d18d06248993cc0be2fa48365fb7945ceece43bdfe0fdcf201942db92c6e",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-184805_codex-context-low"
++}
+diff --git a/.ai/logs/codex-handoff-latest.json b/.ai/logs/codex-handoff-latest.json
+index 51e06f5..2197f80 100644
+--- a/.ai/logs/codex-handoff-latest.json
++++ b/.ai/logs/codex-handoff-latest.json
+@@ -1,10 +1,10 @@
+ {
+-  "ts": "2026-05-22T14:22:16+0900",
+-  "state": "verified",
+-  "run_id": "20260522-142200_599119f4",
+-  "step_id": "verify",
+-  "idempotency_key": "8d679e1f224ade8ce1ad1ec6e466b97e893c07cd7189e94591f7d29bb9096077",
++  "ts": "2026-05-23T18:48:05+0900",
++  "state": "snapshot",
++  "run_id": "20260523-184805_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "84b8d18d06248993cc0be2fa48365fb7945ceece43bdfe0fdcf201942db92c6e",
+   "continuation_depth": 0,
+   "continuation_max_depth": 5,
+-  "message": "continuation smoke verified"
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-184805_codex-context-low"
+ }
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index a76e147..6694ff6 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+ 
+ ## [Unreleased]
+ 
++### Changed
++- **17-00 Track 01 self-spell lyric rewrite** (2026-05-22) — 사용자 피드백에 따라 Track 01 샘플을 `올라가 (Up Again)` 훅에서 `기분 좋아져라 (Feel Good Spell)` 셀프 주문형 훅으로 변경. 파일명/트랙명/Style hook phrase/가사/Listen For와 `SERIES/17-00/concept.md` Track Map·Next Steps 참조를 동기화. 124 BPM, D Major, 밝은 Main Pop R&B / Pop Neo-Soul, 시간대 직접 가사 금지 정책은 유지.
++
+ ### Added
+ - **Wavvy `/write` / `-write` lyricist command shim** (2026-05-22) — `.claude/commands/write.md`를 추가해 Claude Code `/write`와 Codex `-write`를 Wavvy lyric-only thin alias로 연결. command는 가사 작성/리라이트/리뷰만 라우팅하고, 규칙은 `skills/wavvy-lyricist/SKILL.md`, `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`, `MASTER/lyrics/LYRICS.md`, `wavvy.py lyrics-skill` 하네스에 위임. YouTube copy, concept/changelog/session, 일반 문서 작성은 범위 밖으로 명시.
+ - **`/write` lyricist routing team decision** (2026-05-22) — `-team` 논의로 Wavvy 작사가 호출 UX를 검토. 결론은 Claude Code에서는 `/write`, Codex에서는 `-write`를 Wavvy lyric-only thin alias로 두고, 실제 규칙은 `skills/wavvy-lyricist`와 `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`에 유지하는 방향. 기록: `meetings/2026-05-22_write-command-lyricist-routing.md`.
+diff --git a/SERIES/17-00/concept.md b/SERIES/17-00/concept.md
+index fb1c491..314c4b6 100644
+--- a/SERIES/17-00/concept.md
++++ b/SERIES/17-00/concept.md
+@@ -1,16 +1,16 @@
+ # 17:00 POP R&B
+ 
+-Version: 0.1
+-Last Updated: 2026-05-21
++Version: 0.2
++Last Updated: 2026-05-23
+ 
+ ---
+ 
+ ## Series Status
+ 
+-- **Status**: Concept draft + Track 01 sample prompt
++- **Status**: 20-track source prompt design in progress
+ - **Positioning**: 퇴근 직전 기분 먼저 올리는 Feel-good Main POP R&B
+ - **Core Constraint**: Minimum 120 BPM, Major key only
+-- **Track Count**: 18-20 tracks target
++- **Track Count**: 20 tracks target
+ - **New Song Generation**: Required
+ 
+ ---
+@@ -114,15 +114,15 @@ vocoder heavy, robotic autotune, experimental hyperpop
+ 
+ ## Track Map Draft
+ 
+-> 실제 제목/가사는 Suno 테스트 후 확정. 현재는 분포와 게이트용 스켈레톤이다.
++> 실제 음원 PASS 전까지 제목/가사는 draft다. 현재 목표는 20곡 전체 source prompt 설계와 에너지 아크 검증이다.
+ 
+ | # | Working Title | Style | BPM | Key | Vocal | Role |
+ |---|---|---|---:|---|---|---|
+-| 01 | 올라가 (Up Again) | A | 124 | D Major | F | SAMPLE REDESIGN - 오프닝, 바로 기분 좋아지는 훅 |
+-| 02 | Today Mode | B | 122 | G Major | M | 산뜻한 verse pocket |
+-| 03 | Window Up | C | 126 | A Major | F | light funk bounce |
++| 01 | 기분 좋아져라 (Feel Good Spell) | A | 124 | D Major | F | SAMPLE REDESIGN - 셀프 주문형 오프닝 훅 |
++| 02 | 가벼운 신호 (Light Signal) | B | 122 | G Major | M | 밝은 신호처럼 들어오는 verse pocket |
++| 03 | Window Pop | C | 126 | A Major | F | 창문/공기 이미지의 light funk bounce |
+ | 04 | New Color | A | 120 | E Major | M | 밝은 전환 |
+-| 05 | Replay | B | 128 | C Major | F | 반복성 강한 hook |
++| 05 | Replay Smile | B | 128 | C Major | F | 반복성 강한 hook |
+ | 06 | Easy Smile | A | 124 | F Major | F | pop chorus lift |
+ | 07 | Main Street | C | 126 | Bb Major | M | 도시 낮 드라이브 |
+ | 08 | Lemon Light | B | 122 | Ab Major | F | 밝은 synth/Rhodes |
+@@ -135,15 +135,29 @@ vocoder heavy, robotic autotune, experimental hyperpop
+ | 15 | Shine Back | B | 122 | Bb Major | F | 후반 감정선 |
+ | 16 | Sweet Run | C | 128 | D Major | F | final drive |
+ | 17 | Lucky Again | A | 124 | G Major | M | positive reset |
+-| 18 | One More Time | B | 126 | C Major | F+M | repeat-friendly closer |
++| 18 | One More Time | B | 126 | C Major | F+M | repeat-friendly duet lift |
++| 19 | 반짝 다시 (Bright Again) | A | 130 | A Major | F | 후반 재점화, 마지막 밝은 peak |
++| 20 | 좋은 쪽으로 (Good Side) | B | 124 | G Major | M | 리플레이 유도형 closer, 다운톤 금지 |
+ 
+ ### Distribution Targets
+ 
+ - **BPM**: 120-132 only. Center 124-128.
+-- **Key**: Major 18/18. Minor 0.
+-- **Style**: A 7 / B 6 / C 5.
+-- **Vocal**: Female 10 / Male 7 / Duet 1.
+-- **Energy Curve**: 01-06 bright entry, 07-12 pop peak, 13-18 replayable finish.
++- **Key**: Major 20/20. Minor 0.
++- **Style**: A 8 / B 7 / C 5.
++- **Vocal**: Female 11 / Male 8 / Duet 1.
++- **Energy Curve**:
++  - 01-04: bright entry. Track 01 hook memory를 기준으로 바로 기분을 여는 구간.
++  - 05-08: first lift. 반복 훅과 synth/Rhodes/guitar bounce로 가볍게 상승.
++  - 09-12: pop peak. 130-132 BPM 중심의 가장 메인스트림한 energy peak.
++  - 13-16: groove sustain. C축 funk/R&B groove로 밝기 유지, 과열 방지.
++  - 17-20: replay finish. positive reset → duet lift → bright re-peak → soft-bright closer.
++
++### Lyric Topic Guard
++
++- 17:00은 가사 주제가 아니라 **사운드 포지셔닝**이다.
++- `퇴근`, `업무`, `사무실`, `clock-out`, `commute`를 hook이나 핵심 소재로 강제하지 않는다.
++- 각 트랙 가사는 light, air, room, street, window, hand, rhythm, color 같은 사물/공간/현상과 작은 상태 변화 중심으로 설계한다.
++- 직접적인 시간대 설명보다, 들었을 때 기분이 밝아지는 Pop R&B hook memory를 우선한다.
+ 
+ ---
+ 
+@@ -210,8 +224,8 @@ pop rnb, main pop rnb, korean pop rnb, korean rnb, urban pop, contemporary rnb,
+ 
+ ## Next Steps
+ 
+-1. 18-track draft prompt batch 생성
+-2. Track 01 `올라가 (Up Again)` Suno V5.5 샘플 생성
++1. 20-track draft prompt batch 생성
++2. Track 01 `기분 좋아져라 (Feel Good Spell)` Suno V5.5 샘플 생성
+ 3. 각 트랙 `BPM >= 120`, `Major key only` 메타 검증
+ 4. Suno V5.5 생성 후 hook memorability / bright mood / R&B DNA 기준 PASS 판정
+ 5. PASS 곡 누적 후 최종 러닝 오더 재정렬
+diff --git "a/SERIES/17-00/input/tracks/01_\354\230\254\353\235\274\352\260\200 (Up Again).txt" "b/SERIES/17-00/input/tracks/01_\354\230\254\353\235\274\352\260\200 (Up Again).txt"
+deleted file mode 100644
+index 3ee7339..0000000
+--- "a/SERIES/17-00/input/tracks/01_\354\230\254\353\235\274\352\260\200 (Up Again).txt"	
++++ /dev/null
+@@ -1,137 +0,0 @@
+-Track: 올라가 (Up Again)
+-Order: 01
+-Status: SAMPLE REDESIGN - Suno test pending
+-Type: A
+-BPM: 124
+-Key: D Major
+-Vocal: Female
+-Length: 3:20+
+-
+-=== STYLE ===
+-Articulation. Korean Feel-good Main Pop R&B, Pop Neo-Soul, 124 BPM, D Major,
+-bright major-key chord progression with warm Rhodes and glossy electric piano,
+-clean two-step pop-R&B drums, tight kick, crisp clap, light shaker,
+-sunny funk guitar chops, bouncy round bassline, small synth sparkle accents,
+-Female vocal: clear close-mic Korean lead, smooth R&B verse pocket,
+-chorus opens into a bright mainstream pop hook with clean stacked harmonies,
+-short repeated hook phrase "올라가" should feel instantly memorable,
+-uplifting, breezy, replayable, polished urban pop mix,
+-wide stereo, clean low-end, radio-ready brightness, no dark atmosphere.
+-
+-=== EXCLUDE ===
+-minor key, dark key, sad ballad, slow jam, sleepy, gloomy, late-night sadness,
+-heavy 808, trap hi-hats, drill bass, dark moody R&B, toxic R&B,
+-lo-fi, raw demo, noisy production, shoegaze, distortion,
+-EDM drop, big room, festival build, idol chant, aggressive rap,
+-vocoder heavy, robotic autotune, experimental hyperpop,
+-office theme, commute lyric, clock-out lyric, direct time concept
+-
+-=== LYRICS ===
+-[Intro]
+-la la la, 올라가
+-yeah, yeah, up again
+-어제보다 가볍게
+-나 오늘 좀 괜찮아
+-
+-[Verse 1]
+-별일 아닌 한마디
+-괜히 오래 남아서
+-걷는 길도 평소보다
+-조금 더 빠른 것 같아
+-
+-폰은 뒤집어 놔도
+-입꼬리는 안 숨겨져
+-나도 몰래 흥얼대
+-이 노래처럼, yeah
+-
+-[Pre-Chorus]
+-딱히 이유 없어도
+-그게 더 좋잖아
+-작은 예감 하나에
+-발걸음이 달라져
+-
+-[Chorus]
+-올라가, 올라가
+-기분이 자꾸 위로 올라가
+-좋아져, 좋아져
+-너도 알잖아, 이런 날 있잖아
+-
+-올라가, 올라가
+-괜히 더 크게 웃고 싶어져
+-괜찮아, 괜찮아
+-오늘은 나를 좀 믿어볼래
+-
+-[Post-Chorus]
+-up, up, 올라가
+-기분 따라 올라가
+-la la la, 올라가
+-말보다 먼저 올라가
+-
+-[Verse 2]
+-새로 산 티셔츠처럼
+-마음이 잘 맞는 날
+-거울 속의 나도 왠지
+-조금 더 나 같아
+-
+-무심코 튼 노래가
+-공기를 바꿔 놔
+-너무 애쓰지 않아도
+-흐름이 맞아, yeah
+-
+-[Pre-Chorus]
+-딱히 이유 없어도
+-그게 더 좋잖아
+-작은 예감 하나에
+-발걸음이 달라져
+-
+-[Chorus]
+-올라가, 올라가
+-기분이 자꾸 위로 올라가
+-좋아져, 좋아져
+-너도 알잖아, 이런 날 있잖아
+-
+-올라가, 올라가
+-괜히 더 크게 웃고 싶어져
+-괜찮아, 괜찮아
+-오늘은 나를 좀 믿어볼래
+-
+-[Post-Chorus]
+-up, up, 올라가
+-기분 따라 올라가
+-la la la, 올라가
+-말보다 먼저 올라가
+-
+-[Bridge]
+-크게 바뀐 건 없어
+-근데 다르게 보여
+-내가 나를 재촉하던
+-소리도 잠깐 멀어져
+-
+-한 번 더 불러줘
+-멜로디 위로
+-작은 웃음 하나가
+-다음 장면을 열어
+-
+-[Final Chorus]
+-올라가, 올라가
+-기분이 자꾸 위로 올라가
+-좋아져, 좋아져
+-너도 알잖아, 이런 날 있잖아
+-
+-올라가, 올라가
+-괜히 더 크게 웃고 싶어져
+-괜찮아, 괜찮아
+-오늘은 나를 좀 믿어볼래
+-
+-[Outro]
+-la la la, 올라가
+-yeah, yeah, up again
+-어제보다 가볍게
+-나 오늘 좀 괜찮아
+-
+-=== META ===
+-Purpose: 17-00 opening sample redesign for Main POP R&B / Pop Neo-Soul gate testing.
+-Gate: BPM >= 120 PASS, Major key only PASS, bright mood PASS.
+-Lyric Policy: no direct 17:00, office, commute, or clock-out concept. Mood and sound carry the time slot.
+-Research Applied: 2026 streaming Pop/R&B pattern report applied at narration-pattern level: conversational first-person lines, small everyday scenes, phrase-first hook, light before/after emotional curve. No external lyric lines copied or paraphrased.
+-Listen For: instant "올라가" hook memory, natural Korean spoken-pop delivery, mainstream polish, R&B verse pocket, bright Pop Neo-Soul bounce, no minor/dark drift.
