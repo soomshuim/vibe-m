@@ -1,0 +1,1297 @@
+diff --git a/.ai/auto-handoff/20260523-184805_codex-context-low/release-gate.json b/.ai/auto-handoff/20260523-184805_codex-context-low/release-gate.json
+index ad46f13..7ff3d5d 100644
+--- a/.ai/auto-handoff/20260523-184805_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260523-184805_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,38 @@
+       "idempotency_key": "84b8d18d06248993cc0be2fa48365fb7945ceece43bdfe0fdcf201942db92c6e",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-23T18:48:20+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-184805_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0/prompt.md",
++        "pending_user_requests_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-184805_codex-context-low/pending-user-requests.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-184805_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-184819_9a3ceac306ecb5e0/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260523-184819.9a3ceac306ecb5e0"
++      }
+     }
+   }
+ }
+diff --git a/.ai/auto-handoff/20260523-195613_codex-context-low/release-gate.json b/.ai/auto-handoff/20260523-195613_codex-context-low/release-gate.json
+index 955edbe..2635fa0 100644
+--- a/.ai/auto-handoff/20260523-195613_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260523-195613_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,38 @@
+       "idempotency_key": "fdd10cd1713faaa4fa3dc2a57e1ff37ece931755938ac626f3f84de9db1f29ca",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-23T19:56:29+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195613_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d/prompt.md",
++        "pending_user_requests_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195613_codex-context-low/pending-user-requests.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195613_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195629_8e382acb4b3da40d/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260523-195629.8e382acb4b3da40d"
++      }
+     }
+   }
+ }
+diff --git a/.ai/auto-handoff/20260523-195713_codex-context-low/release-gate.json b/.ai/auto-handoff/20260523-195713_codex-context-low/release-gate.json
+index 9d329da..f9671e7 100644
+--- a/.ai/auto-handoff/20260523-195713_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260523-195713_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,38 @@
+       "idempotency_key": "4f3325719f9d7779833ada3356665d850069f008ee46266b15683f4da6d8aa4b",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-23T19:57:28+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195713_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19/prompt.md",
++        "pending_user_requests_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195713_codex-context-low/pending-user-requests.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195713_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195728_b803e45b72f94f19/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260523-195728.b803e45b72f94f19"
++      }
+     }
+   }
+ }
+diff --git a/.ai/auto-handoff/20260523-195806_codex-context-low/release-gate.json b/.ai/auto-handoff/20260523-195806_codex-context-low/release-gate.json
+index baf4f5b..1713901 100644
+--- a/.ai/auto-handoff/20260523-195806_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260523-195806_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,38 @@
+       "idempotency_key": "6b3f104badf36458b87f1c2179a9347b0841ca1f485c2d0f0a4719485e63152b",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-23T19:58:21+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195806_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2/prompt.md",
++        "pending_user_requests_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195806_codex-context-low/pending-user-requests.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195806_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-195821_df3f03e11d7f10b2/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260523-195821.df3f03e11d7f10b2"
++      }
+     }
+   }
+ }
+diff --git a/.ai/auto-handoff/20260523-210813_codex-context-low/release-gate.json b/.ai/auto-handoff/20260523-210813_codex-context-low/release-gate.json
+index ad4e6d4..8f537b6 100644
+--- a/.ai/auto-handoff/20260523-210813_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260523-210813_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,38 @@
+       "idempotency_key": "8556a52c5716afb5b0b261b7119eb47c7cd86900e1957eca01514f861f40c64f",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-23T21:08:29+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210813_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10/prompt.md",
++        "pending_user_requests_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210813_codex-context-low/pending-user-requests.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210813_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210829_ea3e522ed2d6ac10/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260523-210829.ea3e522ed2d6ac10"
++      }
+     }
+   }
+ }
+diff --git a/.ai/auto-handoff/20260523-210904_codex-context-low/release-gate.json b/.ai/auto-handoff/20260523-210904_codex-context-low/release-gate.json
+index dd33f66..03325ea 100644
+--- a/.ai/auto-handoff/20260523-210904_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260523-210904_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,38 @@
+       "idempotency_key": "49c323f9b2dfe789ac6e405e53134bb2ab3cca389f82830abf16cea3a2b7cb5d",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-23T21:09:20+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210904_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a/prompt.md",
++        "pending_user_requests_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210904_codex-context-low/pending-user-requests.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210904_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-210920_a5e96a39c865ed7a/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260523-210920.a5e96a39c865ed7a"
++      }
+     }
+   }
+ }
+diff --git a/.ai/auto-handoff/20260523-210950_codex-context-low/release-gate.json b/.ai/auto-handoff/20260523-210950_codex-context-low/release-gate.json
+index 7dffd99..a079212 100644
+--- a/.ai/auto-handoff/20260523-210950_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260523-210950_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,38 @@
+       "idempotency_key": "fc9735142353ffbcd371583c62772301e273b05a4547dcd1f02b6b159c8104db",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-23T21:10:07+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210950_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1/prompt.md",
++        "pending_user_requests_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210950_codex-context-low/pending-user-requests.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210950_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211007_1fe0706d459ed9d1/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260523-211007.1fe0706d459ed9d1"
++      }
+     }
+   }
+ }
+diff --git a/.ai/auto-handoff/20260523-211035_codex-context-low/release-gate.json b/.ai/auto-handoff/20260523-211035_codex-context-low/release-gate.json
+index 48704ae..1d1f858 100644
+--- a/.ai/auto-handoff/20260523-211035_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260523-211035_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,38 @@
+       "idempotency_key": "2a620f847353b9e2be0eb6563f6845d887a14531277a9073459c6fa9635070f7",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-23T21:10:51+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-211035_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a/prompt.md",
++        "pending_user_requests_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-211035_codex-context-low/pending-user-requests.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-211035_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260523-211051_e34740f66cb8972a/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260523-211051.e34740f66cb8972a"
++      }
+     }
+   }
+ }
+diff --git a/.ai/auto-handoff/20260524-133726_codex-context-low/release-gate.json b/.ai/auto-handoff/20260524-133726_codex-context-low/release-gate.json
+index 285e15d..86e336c 100644
+--- a/.ai/auto-handoff/20260524-133726_codex-context-low/release-gate.json
++++ b/.ai/auto-handoff/20260524-133726_codex-context-low/release-gate.json
+@@ -1,6 +1,6 @@
+ {
+   "policy": "hard_release_gates",
+-  "status": "blocked",
++  "status": "pass",
+   "gates": {
+     "data_loss_zero": {
+       "status": "pass",
+@@ -14,16 +14,38 @@
+       "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
+       "events_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
+       "latest_file": "/Users/zenkim_office/Project/wavvy/.ai/logs/codex-handoff-latest.json",
+-      "event_count": 3,
++      "event_count": 4,
+       "bad_event_count": 0
+     },
+     "automatic_continuation_smoke": {
+-      "status": "pending",
+-      "continue_action": "pending",
+-      "continue_exit_code": null,
+-      "result_action": "",
+-      "reason": "continuation_not_evaluated",
+-      "continue_result": null
++      "status": "pass",
++      "continue_action": "started",
++      "continue_exit_code": 0,
++      "result_action": "continued",
++      "reason": "",
++      "continue_result": {
++        "action": "continued",
++        "created_at": "2026-05-24T13:37:45+0900",
++        "repo": "/Users/zenkim_office/Project/wavvy",
++        "snapshot_dir": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260524-133726_codex-context-low",
++        "resume_trigger": "Codex: -wavvy; Claude: /wavvy",
++        "run_dir": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca",
++        "prompt_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca/prompt.md",
++        "pending_user_requests_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260524-133726_codex-context-low/pending-user-requests.md",
++        "stdout_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca/stdout.log",
++        "stderr_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca/stderr.log",
++        "last_message_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca/last-message.md",
++        "status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca/status.json",
++        "ack_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca/ack-clear.json",
++        "command_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca/command.txt",
++        "telegram_relay_context_file": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260524-133726_codex-context-low/telegram-relay-context.json",
++        "telegram_relay_status_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca/telegram-relay/status.json",
++        "telegram_relay_log_file": "/Users/zenkim_office/.codex/auto-handoff/continuations/20260524-133745_06d676b3b74cdaca/telegram-relay.log",
++        "start_method": "launchctl",
++        "continuation_depth": 1,
++        "continuation_max_depth": 5,
++        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260524-133745.06d676b3b74cdaca"
++      }
+     }
+   }
+ }
+diff --git a/.ai/codex-hyphen-trigger-guard.json b/.ai/codex-hyphen-trigger-guard.json
+index 83e8916..4b68a36 100644
+--- a/.ai/codex-hyphen-trigger-guard.json
++++ b/.ai/codex-hyphen-trigger-guard.json
+@@ -2,6 +2,6 @@
+   "schema": "codex.hyphen_trigger_guard.v1",
+   "status": "acknowledged",
+   "trigger": "play",
+-  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl",
+-  "acknowledged_at": "2026-05-22T13:28:27+0900"
++  "run_dir": "/Users/zenkim_office/Project/wavvy/.ai/pipeline/runs/20260524-131549_wavvy-17-acoustic-rnb-redesign-codex",
++  "acknowledged_at": "2026-05-24T13:15:50+0900"
+ }
+diff --git a/.ai/logs/codex-handoff-events.jsonl b/.ai/logs/codex-handoff-events.jsonl
+index 4148725..af10aaf 100644
+--- a/.ai/logs/codex-handoff-events.jsonl
++++ b/.ai/logs/codex-handoff-events.jsonl
+@@ -188,3 +188,513 @@
+   "continuation_max_depth": 5,
+   "message": "continuation smoke verified"
+ }
++{
++  "ts": "2026-05-23T18:48:05+0900",
++  "state": "freeze",
++  "run_id": "20260523-184805_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "84b8d18d06248993cc0be2fa48365fb7945ceece43bdfe0fdcf201942db92c6e",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-23T18:48:05+0900",
++  "state": "snapshot",
++  "run_id": "20260523-184805_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "84b8d18d06248993cc0be2fa48365fb7945ceece43bdfe0fdcf201942db92c6e",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-184805_codex-context-low"
++}
++{
++  "ts": "2026-05-23T18:48:05+0900",
++  "state": "resume-ready",
++  "run_id": "20260523-184805_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "84b8d18d06248993cc0be2fa48365fb7945ceece43bdfe0fdcf201942db92c6e",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-23T18:48:20+0900",
++  "state": "continue-started",
++  "run_id": "20260523-184805_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "84b8d18d06248993cc0be2fa48365fb7945ceece43bdfe0fdcf201942db92c6e",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-23T18:48:20+0900",
++  "state": "verified",
++  "run_id": "20260523-184805_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "84b8d18d06248993cc0be2fa48365fb7945ceece43bdfe0fdcf201942db92c6e",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-23T19:56:13+0900",
++  "state": "freeze",
++  "run_id": "20260523-195613_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "fdd10cd1713faaa4fa3dc2a57e1ff37ece931755938ac626f3f84de9db1f29ca",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-23T19:56:13+0900",
++  "state": "snapshot",
++  "run_id": "20260523-195613_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "fdd10cd1713faaa4fa3dc2a57e1ff37ece931755938ac626f3f84de9db1f29ca",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195613_codex-context-low"
++}
++{
++  "ts": "2026-05-23T19:56:14+0900",
++  "state": "resume-ready",
++  "run_id": "20260523-195613_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "fdd10cd1713faaa4fa3dc2a57e1ff37ece931755938ac626f3f84de9db1f29ca",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-23T19:56:29+0900",
++  "state": "continue-started",
++  "run_id": "20260523-195613_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "fdd10cd1713faaa4fa3dc2a57e1ff37ece931755938ac626f3f84de9db1f29ca",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-23T19:56:29+0900",
++  "state": "verified",
++  "run_id": "20260523-195613_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "fdd10cd1713faaa4fa3dc2a57e1ff37ece931755938ac626f3f84de9db1f29ca",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-23T19:57:13+0900",
++  "state": "freeze",
++  "run_id": "20260523-195713_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "4f3325719f9d7779833ada3356665d850069f008ee46266b15683f4da6d8aa4b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-23T19:57:13+0900",
++  "state": "snapshot",
++  "run_id": "20260523-195713_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "4f3325719f9d7779833ada3356665d850069f008ee46266b15683f4da6d8aa4b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195713_codex-context-low"
++}
++{
++  "ts": "2026-05-23T19:57:13+0900",
++  "state": "resume-ready",
++  "run_id": "20260523-195713_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "4f3325719f9d7779833ada3356665d850069f008ee46266b15683f4da6d8aa4b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-23T19:57:28+0900",
++  "state": "continue-started",
++  "run_id": "20260523-195713_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "4f3325719f9d7779833ada3356665d850069f008ee46266b15683f4da6d8aa4b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-23T19:57:28+0900",
++  "state": "verified",
++  "run_id": "20260523-195713_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "4f3325719f9d7779833ada3356665d850069f008ee46266b15683f4da6d8aa4b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-23T19:58:06+0900",
++  "state": "freeze",
++  "run_id": "20260523-195806_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "6b3f104badf36458b87f1c2179a9347b0841ca1f485c2d0f0a4719485e63152b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-23T19:58:06+0900",
++  "state": "snapshot",
++  "run_id": "20260523-195806_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "6b3f104badf36458b87f1c2179a9347b0841ca1f485c2d0f0a4719485e63152b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-195806_codex-context-low"
++}
++{
++  "ts": "2026-05-23T19:58:06+0900",
++  "state": "resume-ready",
++  "run_id": "20260523-195806_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "6b3f104badf36458b87f1c2179a9347b0841ca1f485c2d0f0a4719485e63152b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-23T19:58:21+0900",
++  "state": "continue-started",
++  "run_id": "20260523-195806_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "6b3f104badf36458b87f1c2179a9347b0841ca1f485c2d0f0a4719485e63152b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-23T19:58:21+0900",
++  "state": "verified",
++  "run_id": "20260523-195806_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "6b3f104badf36458b87f1c2179a9347b0841ca1f485c2d0f0a4719485e63152b",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-23T21:08:13+0900",
++  "state": "freeze",
++  "run_id": "20260523-210813_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "8556a52c5716afb5b0b261b7119eb47c7cd86900e1957eca01514f861f40c64f",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-23T21:08:13+0900",
++  "state": "snapshot",
++  "run_id": "20260523-210813_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "8556a52c5716afb5b0b261b7119eb47c7cd86900e1957eca01514f861f40c64f",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210813_codex-context-low"
++}
++{
++  "ts": "2026-05-23T21:08:13+0900",
++  "state": "resume-ready",
++  "run_id": "20260523-210813_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "8556a52c5716afb5b0b261b7119eb47c7cd86900e1957eca01514f861f40c64f",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-23T21:08:29+0900",
++  "state": "continue-started",
++  "run_id": "20260523-210813_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "8556a52c5716afb5b0b261b7119eb47c7cd86900e1957eca01514f861f40c64f",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-23T21:08:29+0900",
++  "state": "verified",
++  "run_id": "20260523-210813_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "8556a52c5716afb5b0b261b7119eb47c7cd86900e1957eca01514f861f40c64f",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-23T21:09:04+0900",
++  "state": "freeze",
++  "run_id": "20260523-210904_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "49c323f9b2dfe789ac6e405e53134bb2ab3cca389f82830abf16cea3a2b7cb5d",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-23T21:09:04+0900",
++  "state": "snapshot",
++  "run_id": "20260523-210904_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "49c323f9b2dfe789ac6e405e53134bb2ab3cca389f82830abf16cea3a2b7cb5d",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210904_codex-context-low"
++}
++{
++  "ts": "2026-05-23T21:09:04+0900",
++  "state": "resume-ready",
++  "run_id": "20260523-210904_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "49c323f9b2dfe789ac6e405e53134bb2ab3cca389f82830abf16cea3a2b7cb5d",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-23T21:09:20+0900",
++  "state": "continue-started",
++  "run_id": "20260523-210904_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "49c323f9b2dfe789ac6e405e53134bb2ab3cca389f82830abf16cea3a2b7cb5d",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-23T21:09:20+0900",
++  "state": "verified",
++  "run_id": "20260523-210904_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "49c323f9b2dfe789ac6e405e53134bb2ab3cca389f82830abf16cea3a2b7cb5d",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-23T21:09:50+0900",
++  "state": "freeze",
++  "run_id": "20260523-210950_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "fc9735142353ffbcd371583c62772301e273b05a4547dcd1f02b6b159c8104db",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-23T21:09:50+0900",
++  "state": "snapshot",
++  "run_id": "20260523-210950_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "fc9735142353ffbcd371583c62772301e273b05a4547dcd1f02b6b159c8104db",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-210950_codex-context-low"
++}
++{
++  "ts": "2026-05-23T21:09:50+0900",
++  "state": "resume-ready",
++  "run_id": "20260523-210950_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "fc9735142353ffbcd371583c62772301e273b05a4547dcd1f02b6b159c8104db",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-23T21:10:07+0900",
++  "state": "continue-started",
++  "run_id": "20260523-210950_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "fc9735142353ffbcd371583c62772301e273b05a4547dcd1f02b6b159c8104db",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-23T21:10:07+0900",
++  "state": "verified",
++  "run_id": "20260523-210950_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "fc9735142353ffbcd371583c62772301e273b05a4547dcd1f02b6b159c8104db",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-23T21:10:35+0900",
++  "state": "freeze",
++  "run_id": "20260523-211035_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "2a620f847353b9e2be0eb6563f6845d887a14531277a9073459c6fa9635070f7",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-23T21:10:35+0900",
++  "state": "snapshot",
++  "run_id": "20260523-211035_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "2a620f847353b9e2be0eb6563f6845d887a14531277a9073459c6fa9635070f7",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260523-211035_codex-context-low"
++}
++{
++  "ts": "2026-05-23T21:10:36+0900",
++  "state": "resume-ready",
++  "run_id": "20260523-211035_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "2a620f847353b9e2be0eb6563f6845d887a14531277a9073459c6fa9635070f7",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-23T21:10:51+0900",
++  "state": "continue-started",
++  "run_id": "20260523-211035_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "2a620f847353b9e2be0eb6563f6845d887a14531277a9073459c6fa9635070f7",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-23T21:10:51+0900",
++  "state": "verified",
++  "run_id": "20260523-211035_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "2a620f847353b9e2be0eb6563f6845d887a14531277a9073459c6fa9635070f7",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-24T13:35:12+0900",
++  "state": "freeze",
++  "run_id": "20260524-133512_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-24T13:35:12+0900",
++  "state": "snapshot",
++  "run_id": "20260524-133512_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260524-133512_codex-context-low"
++}
++{
++  "ts": "2026-05-24T13:35:13+0900",
++  "state": "resume-ready",
++  "run_id": "20260524-133512_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-24T13:35:13+0900",
++  "state": "blocked",
++  "run_id": "20260524-133512_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation failed after retry"
++}
++{
++  "ts": "2026-05-24T13:37:26+0900",
++  "state": "freeze",
++  "run_id": "20260524-133726_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-24T13:37:26+0900",
++  "state": "snapshot",
++  "run_id": "20260524-133726_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260524-133726_codex-context-low"
++}
++{
++  "ts": "2026-05-24T13:37:26+0900",
++  "state": "resume-ready",
++  "run_id": "20260524-133726_599119f4",
++  "step_id": "resume-ready",
++  "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "resume artifacts prepared"
++}
++{
++  "ts": "2026-05-24T13:37:45+0900",
++  "state": "continue-started",
++  "run_id": "20260524-133726_599119f4",
++  "step_id": "continue",
++  "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "headless continuation bridge started"
++}
++{
++  "ts": "2026-05-24T13:37:45+0900",
++  "state": "verified",
++  "run_id": "20260524-133726_599119f4",
++  "step_id": "verify",
++  "idempotency_key": "79713671db4fc805d499091520e995f65d0fc276919488fc76f5f962e484fc70",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "continuation smoke verified"
++}
++{
++  "ts": "2026-05-24T13:42:38+0900",
++  "state": "freeze",
++  "run_id": "20260524-134238_599119f4",
++  "step_id": "freeze",
++  "idempotency_key": "72998847cd9f0bcfce4617c3d435432886ba83506e734b6b599b0c9c036d71cf",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-05-24T13:42:38+0900",
++  "state": "snapshot",
++  "run_id": "20260524-134238_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "72998847cd9f0bcfce4617c3d435432886ba83506e734b6b599b0c9c036d71cf",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260524-134238_codex-context-low"
++}
+diff --git a/.ai/logs/codex-handoff-latest.json b/.ai/logs/codex-handoff-latest.json
+index 51e06f5..c16ef69 100644
+--- a/.ai/logs/codex-handoff-latest.json
++++ b/.ai/logs/codex-handoff-latest.json
+@@ -1,10 +1,10 @@
+ {
+-  "ts": "2026-05-22T14:22:16+0900",
+-  "state": "verified",
+-  "run_id": "20260522-142200_599119f4",
+-  "step_id": "verify",
+-  "idempotency_key": "8d679e1f224ade8ce1ad1ec6e466b97e893c07cd7189e94591f7d29bb9096077",
++  "ts": "2026-05-24T13:42:38+0900",
++  "state": "snapshot",
++  "run_id": "20260524-134238_599119f4",
++  "step_id": "snapshot",
++  "idempotency_key": "72998847cd9f0bcfce4617c3d435432886ba83506e734b6b599b0c9c036d71cf",
+   "continuation_depth": 0,
+   "continuation_max_depth": 5,
+-  "message": "continuation smoke verified"
++  "message": "/Users/zenkim_office/Project/wavvy/.ai/auto-handoff/20260524-134238_codex-context-low"
+ }
+diff --git a/.ai/state.json b/.ai/state.json
+index ff6b5b9..92e851c 100644
+--- a/.ai/state.json
++++ b/.ai/state.json
+@@ -1,25 +1,37 @@
+ {
+   "schema": "wavvy.state.v1",
+-  "revision": 3,
+-  "updated_at": "2026-05-02T03:11:31",
+-  "active_series": "SERIES/20-00",
+-  "phase": "uploaded",
+-  "inferred_phase": "uploaded",
++  "revision": 4,
++  "updated_at": "2026-05-23T21:18:34",
++  "active_series": "SERIES/17-00",
++  "phase": "track_source_draft",
++  "inferred_phase": "track_source_draft",
+   "next_action": "No active blocker. Local final.mkv/upload.csv are disposable after upload and can be regenerated with pack if needed.",
+   "artifact_status": {
+     "concept_md": "present",
+-    "final_track_sources": "present",
+-    "final_track_sources_count": 20,
+-    "report_json": "present",
+-    "report_tracks": 20,
+-    "audio_files": 20,
+-    "txt_sources": 0,
+-    "final_mkv": "deleted_after_upload",
+-    "upload_csv": "deleted_after_upload",
+-    "subtitle_txt": "present",
+-    "subtitle_srt": "present",
++    "final_track_sources": "missing",
++    "final_track_sources_count": 0,
++    "report_json": "missing",
++    "report_tracks": 0,
++    "audio_files": 0,
++    "available_audio_files": 0,
++    "audio_source": "missing",
++    "source_map": "missing",
++    "source_map_tracks": 0,
++    "source_map_audio_files": 0,
++    "source_map_missing": [],
++    "txt_sources": 20,
++    "final_mkv": "missing",
++    "upload_csv": "missing",
++    "subtitle_txt": "missing",
++    "subtitle_srt": "missing",
+     "youtube_metadata": "present",
+-    "youtube_upload": "completed"
++    "youtube_upload": "missing",
++    "lyric_skill_package": "present",
++    "lyric_skill_files": {
++      "MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md": "present",
++      "skills/wavvy-lyricist/SKILL.md": "present",
++      "skills/wavvy-lyricist/references/patterns.md": "present"
++    }
+   },
+   "authoritative_docs": [
+     "MASTER/SSOT.md",
+@@ -29,7 +41,20 @@
+     "MASTER/cli/SPEC.md",
+     "MASTER/youtube/YOUTUBE.md",
+     "wavvy.md",
+-    "SERIES/20-00/concept.md"
++    "SERIES/17-00/concept.md"
++  ],
++  "evidence_refs": [
++    "MASTER/SSOT.md",
++    "MASTER/ai/RUNTIME_RULES.md",
++    "MASTER/MANAGER.md",
++    "MASTER/WORKFLOWS.md",
++    "MASTER/cli/SPEC.md",
++    "MASTER/youtube/YOUTUBE.md",
++    "wavvy.md",
++    "SERIES/17-00/concept.md",
++    "MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md",
++    "skills/wavvy-lyricist/SKILL.md",
++    "skills/wavvy-lyricist/references/patterns.md"
+   ],
+   "blocked_by": []
+ }
+diff --git "a/SERIES/17-00/input/tracks/01_\354\230\254\353\235\274\352\260\200 (Up Again).txt" "b/SERIES/17-00/input/tracks/01_\354\230\254\353\235\274\352\260\200 (Up Again).txt"
+deleted file mode 100644
+index 3ee7339..0000000
+--- "a/SERIES/17-00/input/tracks/01_\354\230\254\353\235\274\352\260\200 (Up Again).txt"	
++++ /dev/null
+@@ -1,137 +0,0 @@
+-Track: 올라가 (Up Again)
+-Order: 01
+-Status: SAMPLE REDESIGN - Suno test pending
+-Type: A
+-BPM: 124
+-Key: D Major
+-Vocal: Female
+-Length: 3:20+
+-
+-=== STYLE ===
+-Articulation. Korean Feel-good Main Pop R&B, Pop Neo-Soul, 124 BPM, D Major,
+-bright major-key chord progression with warm Rhodes and glossy electric piano,
+-clean two-step pop-R&B drums, tight kick, crisp clap, light shaker,
+-sunny funk guitar chops, bouncy round bassline, small synth sparkle accents,
+-Female vocal: clear close-mic Korean lead, smooth R&B verse pocket,
+-chorus opens into a bright mainstream pop hook with clean stacked harmonies,
+-short repeated hook phrase "올라가" should feel instantly memorable,
+-uplifting, breezy, replayable, polished urban pop mix,
+-wide stereo, clean low-end, radio-ready brightness, no dark atmosphere.
+-
+-=== EXCLUDE ===
+-minor key, dark key, sad ballad, slow jam, sleepy, gloomy, late-night sadness,
+-heavy 808, trap hi-hats, drill bass, dark moody R&B, toxic R&B,
+-lo-fi, raw demo, noisy production, shoegaze, distortion,
+-EDM drop, big room, festival build, idol chant, aggressive rap,
+-vocoder heavy, robotic autotune, experimental hyperpop,
+-office theme, commute lyric, clock-out lyric, direct time concept
+-
+-=== LYRICS ===
+-[Intro]
+-la la la, 올라가
+-yeah, yeah, up again
+-어제보다 가볍게
+-나 오늘 좀 괜찮아
+-
+-[Verse 1]
+-별일 아닌 한마디
+-괜히 오래 남아서
+-걷는 길도 평소보다
+-조금 더 빠른 것 같아
+-
+-폰은 뒤집어 놔도
+-입꼬리는 안 숨겨져
+-나도 몰래 흥얼대
+-이 노래처럼, yeah
+-
+-[Pre-Chorus]
+-딱히 이유 없어도
+-그게 더 좋잖아
+-작은 예감 하나에
+-발걸음이 달라져
+-
+-[Chorus]
+-올라가, 올라가
+-기분이 자꾸 위로 올라가
+-좋아져, 좋아져
+-너도 알잖아, 이런 날 있잖아
+-
+-올라가, 올라가
+-괜히 더 크게 웃고 싶어져
+-괜찮아, 괜찮아
+-오늘은 나를 좀 믿어볼래
+-
+-[Post-Chorus]
+-up, up, 올라가
+-기분 따라 올라가
+-la la la, 올라가
+-말보다 먼저 올라가
+-
+-[Verse 2]
+-새로 산 티셔츠처럼
+-마음이 잘 맞는 날
+-거울 속의 나도 왠지
+-조금 더 나 같아
+-
+-무심코 튼 노래가
+-공기를 바꿔 놔
+-너무 애쓰지 않아도
+-흐름이 맞아, yeah
+-
+-[Pre-Chorus]
+-딱히 이유 없어도
+-그게 더 좋잖아
+-작은 예감 하나에
+-발걸음이 달라져
+-
+-[Chorus]
+-올라가, 올라가
+-기분이 자꾸 위로 올라가
+-좋아져, 좋아져
+-너도 알잖아, 이런 날 있잖아
+-
+-올라가, 올라가
+-괜히 더 크게 웃고 싶어져
+-괜찮아, 괜찮아
+-오늘은 나를 좀 믿어볼래
+-
+-[Post-Chorus]
+-up, up, 올라가
+-기분 따라 올라가
+-la la la, 올라가
+-말보다 먼저 올라가
+-
+-[Bridge]
+-크게 바뀐 건 없어
+-근데 다르게 보여
+-내가 나를 재촉하던
+-소리도 잠깐 멀어져
+-
+-한 번 더 불러줘
+-멜로디 위로
+-작은 웃음 하나가
+-다음 장면을 열어
+-
+-[Final Chorus]
+-올라가, 올라가
+-기분이 자꾸 위로 올라가
+-좋아져, 좋아져
+-너도 알잖아, 이런 날 있잖아
+-
+-올라가, 올라가
+-괜히 더 크게 웃고 싶어져
+-괜찮아, 괜찮아
+-오늘은 나를 좀 믿어볼래
+-
+-[Outro]
+-la la la, 올라가
+-yeah, yeah, up again
+-어제보다 가볍게
+-나 오늘 좀 괜찮아
+-
+-=== META ===
+-Purpose: 17-00 opening sample redesign for Main POP R&B / Pop Neo-Soul gate testing.
+-Gate: BPM >= 120 PASS, Major key only PASS, bright mood PASS.
+-Lyric Policy: no direct 17:00, office, commute, or clock-out concept. Mood and sound carry the time slot.
+-Research Applied: 2026 streaming Pop/R&B pattern report applied at narration-pattern level: conversational first-person lines, small everyday scenes, phrase-first hook, light before/after emotional curve. No external lyric lines copied or paraphrased.
+-Listen For: instant "올라가" hook memory, natural Korean spoken-pop delivery, mainstream polish, R&B verse pocket, bright Pop Neo-Soul bounce, no minor/dark drift.
