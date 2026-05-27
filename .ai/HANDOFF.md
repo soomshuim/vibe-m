@@ -633,6 +633,16 @@ Commits: auto-record attempted after this entry; check git log and result.json
 ---
 
 ---
+HANDOFF: Codex -> Codex
+Date: 2026-05-27 17:28:20 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: Updated stale claude-center references to agent-center in Wavvy harness engineering notes.
+Next-TODO: 없음
+Commits: (이번 커밋)
+---
+
+---
 HANDOFF: Codex worker-04 -> Orchestrator
 Date: 2026-05-22 10:43:56 +0900
 Project: /Users/zenkim_office/Project/wavvy

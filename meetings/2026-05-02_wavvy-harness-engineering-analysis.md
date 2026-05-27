@@ -105,7 +105,7 @@ Wavvy의 product problem은 "음악을 만드는 것"만이 아니라 "한 시�
 - `finalize-upload`는 좋은 하네스 패턴이다. "소스 txt + report.json -> concept Final Track Sources" 전환은 다른 단계에도 재사용할 만하다.
 - 다음 개선은 문서 추가보다 실행 가능한 deterministic checks가 우선이다.
 - 상태는 `.ai/SESSION.md`만으로 부족하다. active state를 기계 판독 가능한 파일로 분리해야 한다.
-- peer review는 이미 claude-center에 있으므로 새로 만들기보다 `peer-agent-review.sh`를 재사용한다.
+- peer review는 이미 agent-center에 있으므로 새로 만들기보다 `peer-agent-review.sh`를 재사용한다.
 
 ---
 
@@ -139,7 +139,7 @@ Wavvy용 하네스 셋팅은 다음 순서로 한다.
 
 3. **Deterministic Gate Surface**
    - `wavvy.py doctor`: ffmpeg/ffprobe/ffmpeg_normalize/git/font/disk/output writability 점검.
-   - `doctor`는 cross-repo dependency인 `~/Project/claude-center/scripts/peer-agent-review.sh`도 점검한다.
+   - `doctor`는 cross-repo dependency인 `~/Project/agent-center/scripts/peer-agent-review.sh`도 점검한다.
    - `wavvy.py state SERIES/20-00 --check --json`: concept/report/artifact/current-state drift 점검.
    - `wavvy.py gate SERIES/20-00 --stage source-final|render-final|upload-ready --json`: validate + final archive + artifact readiness + stale TODO scan 통합.
    - Final archive 이후에는 txt 기반 `check_series_gate.sh`를 다시 실행하지 않는다. 대신 pre-finalize rubric result를 `report.json` 또는 `rubric_snapshot.json`에 저장하고 post-final gate가 그 snapshot을 검증한다.
@@ -151,7 +151,7 @@ Wavvy용 하네스 셋팅은 다음 순서로 한다.
    - `generate_report`의 `crossfade_reduction` 계산을 repeat-aware로 수정한다. 기존 historical report backfill은 선택 사항이며, gate는 stale report를 warning으로 표시한다.
 
 5. **Cross-Project Pipeline Harness**
-   - `claude-center/scripts/peer-agent-review.sh`를 peer gate API로 재사용.
+   - `agent-center/scripts/peer-agent-review.sh`를 peer gate API로 재사용.
    - `team`/`director`는 직접 slash/hyphen trigger로 부르지 않고 artifact-mode adapter로 감싼다.
    - run directory: `.ai/pipeline/runs/YYYYMMDD-HHMMSS_<slug>/`.
    - stages: `team_analysis -> claude_review -> plan -> claude_plan -> director_implementation`.
@@ -180,7 +180,7 @@ Accepted changes:
 - Final semantics split: `source_final` / `render_final` / `upload_ready` / `published`.
 - 20-00 current phase: `source_final`.
 - Missing `final.mkv` is not a source-final failure. It is a render/upload readiness blocker.
-- HANDOFF is not demoted until claude-center hooks are updated or a generator exists.
+- HANDOFF is not demoted until agent-center hooks are updated or a generator exists.
 - `.ai/state.json` needs schema, single writer, and atomic writes.
 - `pack` artifact writer return values and `crossfade_reduction` are P0 code fixes.
 - Post-final rubric gates need snapshots because txt sources are intentionally deleted after finalize.

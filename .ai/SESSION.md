@@ -1145,3 +1145,8 @@
 - Continuation sentinel: `/Users/zenkim_office/.codex/auto-handoff/clear-required.json`
 - Record mode: `commit_push`
 - Continuation: headless continuation starts by default after checkpoint and must read `pending-user-requests.md` before older TODOs. Manual resume is fallback only if `continue_action` is not `started`.
+
+### 2026-05-27 17:28:20 +0900 Agent Center Path Reference Cleanup
+
+- Updated stale `claude-center` references to `agent-center` in the Wavvy harness engineering meeting notes.
+- Kept the change scoped to documentation path references only.
