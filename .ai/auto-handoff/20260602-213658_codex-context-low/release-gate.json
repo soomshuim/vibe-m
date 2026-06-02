@@ -1,6 +1,6 @@
 {
   "policy": "hard_release_gates",
-  "status": "blocked",
+  "status": "pass",
   "gates": {
     "data_loss_zero": {
       "status": "pass",
@@ -14,16 +14,133 @@
       "idempotency_key": "24cb7f871919746b3148374a524fb0b1206ab1444d97ac767264eb2f17019b17",
       "events_file": "/Users/zen/Project/wavvy/.ai/logs/codex-handoff-events.jsonl",
       "latest_file": "/Users/zen/Project/wavvy/.ai/logs/codex-handoff-latest.json",
-      "event_count": 3,
+      "event_count": 4,
       "bad_event_count": 0
     },
     "automatic_continuation_smoke": {
-      "status": "pending",
-      "continue_action": "pending",
-      "continue_exit_code": null,
-      "result_action": "",
-      "reason": "continuation_not_evaluated",
-      "continue_result": null
+      "status": "pass",
+      "continue_action": "started",
+      "continue_exit_code": 0,
+      "result_action": "continued",
+      "reason": "",
+      "continue_result": {
+        "action": "continued",
+        "created_at": "2026-06-02T21:37:05+0900",
+        "repo": "/Users/zen/Project/wavvy",
+        "target_repo": "/Users/zen/Project/wavvy",
+        "primary_repo_root": "/Users/zen/Project/wavvy",
+        "primary_repo_role": "implementation",
+        "workspace_root": "/Users/zen/Project",
+        "secondary_repos": [
+          {
+            "path": "/Users/zen/Project/agent-center",
+            "role": "audit_record_only",
+            "dirty_mtime": 1780403502
+          }
+        ],
+        "repo_source": "snapshot-primary_repo_root",
+        "snapshot_dir": "/Users/zen/Project/wavvy/.ai/auto-handoff/20260602-213658_codex-context-low",
+        "resume_trigger": "cd /Users/zen/Project/wavvy && cat /Users/zen/Project/wavvy/.ai/HANDOFF.md",
+        "run_dir": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9",
+        "prompt_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/prompt.md",
+        "pending_user_requests_file": "/Users/zen/Project/wavvy/.ai/auto-handoff/20260602-213658_codex-context-low/pending-user-requests.md",
+        "latest_request_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/latest-executable-request.md",
+        "latest_request_json_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/latest-executable-request.json",
+        "context_prior_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/context-only-prior-requests.md",
+        "selected_request_id": "pending-user-requests.json#REQ5@2026-06-02T12:36:30.270Z",
+        "selected_request_kind": "implementation",
+        "target_commit_or_run": null,
+        "repo_bind_result": "snapshot_primary_bound",
+        "repo_resolution_failure_reason": null,
+        "repo_candidate_count": 1,
+        "stale_pending_play_ignored": false,
+        "continuation_target": {
+          "schema": "agent_center.codex_auto_handoff.continuation_target.v1",
+          "selected_request_id": "pending-user-requests.json#REQ5@2026-06-02T12:36:30.270Z",
+          "latest_executable_request": {
+            "timestamp": "2026-06-02T12:36:30.270Z",
+            "source": "response_item",
+            "text": "뭘 수정한거야? 쉽게 설명해봐. 왜 수정한건지도",
+            "request_index": 4,
+            "request_id": "pending-user-requests.json#REQ5@2026-06-02T12:36:30.270Z",
+            "task_kind": "implementation",
+            "target_commit_or_run": null
+          },
+          "target_repo": "/Users/zen/Project/wavvy",
+          "repo_source": "snapshot-primary_repo_root",
+          "task_kind": "implementation",
+          "target_commit_or_run": null,
+          "context_only_prior_requests": [
+            {
+              "timestamp": "2026-06-02T12:24:55.051Z",
+              "source": "response_item",
+              "text": "Primary repo는 wavvy",
+              "request_index": 1,
+              "request_id": "pending-user-requests.json#REQ2@2026-06-02T12:24:55.051Z",
+              "task_kind": "context",
+              "target_commit_or_run": null
+            },
+            {
+              "timestamp": "2026-06-02T12:27:31.961Z",
+              "source": "response_item",
+              "text": "Headless로 진행",
+              "request_index": 2,
+              "request_id": "pending-user-requests.json#REQ3@2026-06-02T12:27:31.961Z",
+              "task_kind": "context",
+              "target_commit_or_run": null
+            },
+            {
+              "timestamp": "2026-06-02T12:27:52.005Z",
+              "source": "response_item",
+              "text": "<hook_prompt hook_run_id=\"stop:0:/Users/zen/.codex/hooks.json\">최종 답변 차단: 전문 용어 설명 정규화 필요\n\n이전 답변 전체를 반복하지 마세요. 사용자에게 이미 보였을 수 있습니다.\n짧은 수정 메모만 제출하세요. 누락된 용어는 아래 첫 등장 위치 기준으로 설명하세요.\n\n누락 항목:\n- missing_term: headless(화면 없이 실행됨)\n  term: \"headless\"\n  first_seen:\n    line: 15\n    region: \"body\"\n    context: \"::archive{reason=\\\"context&lt;25 auto-handoff pending; headless continuation requires fresh wavvy repo session\\\"}\"\n    snippet: \"::archive{reason=\\\"context&lt;25 auto-handoff pending; headless continuation requires fresh wavvy repo session\\\"}\"\n  권장 수정: 첫 등장 위치에서 설명을 붙이세요.</hook_prompt>",
+              "request_index": 3,
+              "request_id": "pending-user-requests.json#REQ4@2026-06-02T12:27:52.005Z",
+              "task_kind": "context",
+              "target_commit_or_run": null
+            }
+          ],
+          "stale_pending_play_ignored": false,
+          "repo_candidate_count": 1,
+          "repo_bind_result": "snapshot_primary_bound",
+          "needs_user_decision": false,
+          "candidate_repos": [
+            {
+              "dirty_mtime": 1780403502,
+              "repo": "/Users/zen/Project/agent-center"
+            }
+          ],
+          "next_action": "continue_latest_executable_request",
+          "user_message": null,
+          "primary_repo_root": "/Users/zen/Project/wavvy",
+          "primary_repo_name": "wavvy",
+          "primary_repo_role": "implementation",
+          "primary_repo_commit": "5297e6005fd8468e2eb2b4c316a64c307c10b46d",
+          "primary_repo_branch": "master",
+          "primary_repo_remote": "https://github.com/soomshuim/wavvy.git",
+          "workspace_root": "/Users/zen/Project",
+          "secondary_repos": [
+            {
+              "path": "/Users/zen/Project/agent-center",
+              "role": "audit_record_only",
+              "dirty_mtime": 1780403502
+            }
+          ],
+          "repo_resolution_failure_reason": null
+        },
+        "stdout_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/stdout.log",
+        "stderr_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/stderr.log",
+        "last_message_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/last-message.md",
+        "status_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/status.json",
+        "ack_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/ack-clear.json",
+        "command_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/command.txt",
+        "telegram_relay_context_file": "/Users/zen/Project/wavvy/.ai/auto-handoff/20260602-213658_codex-context-low/telegram-relay-context.json",
+        "telegram_relay_status_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/telegram-relay/status.json",
+        "telegram_relay_log_file": "/Users/zen/.codex/auto-handoff/continuations/20260602-213705_6bca3c5d0fc44ec9/telegram-relay.log",
+        "start_method": "launchctl",
+        "continuation_depth": 1,
+        "continuation_max_depth": 5,
+        "detail": "gui/501/com.soomshuim.agent-center.codex-auto-continue.20260602-213705.6bca3c5d0fc44ec9"
+      }
     }
   }
 }

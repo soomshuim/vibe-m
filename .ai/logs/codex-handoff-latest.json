@@ -1,9 +1,9 @@
 {
-  "ts": "2026-06-02T19:57:36+0900",
+  "ts": "2026-06-02T21:37:06+0900",
   "state": "verified",
-  "run_id": "20260602-195730_46fff7d7",
+  "run_id": "20260602-213658_46fff7d7",
   "step_id": "verify",
-  "idempotency_key": "fbd00c48f264c21b83995031a755cb902eadbbaf9487a7de8ede7e7d95901f8e",
+  "idempotency_key": "24cb7f871919746b3148374a524fb0b1206ab1444d97ac767264eb2f17019b17",
   "continuation_depth": 0,
   "continuation_max_depth": 5,
   "message": "continuation smoke verified"
