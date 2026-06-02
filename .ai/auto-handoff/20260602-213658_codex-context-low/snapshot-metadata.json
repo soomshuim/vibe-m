@@ -1,0 +1,16 @@
+{
+  "primary_repo_root": "/Users/zen/Project/wavvy",
+  "primary_repo_name": "wavvy",
+  "primary_repo_role": "implementation",
+  "primary_repo_commit": "5297e6005fd8468e2eb2b4c316a64c307c10b46d",
+  "primary_repo_branch": "master",
+  "primary_repo_remote": "https://github.com/soomshuim/wavvy.git",
+  "workspace_root": "/Users/zen/Project",
+  "secondary_repos": [
+    {
+      "path": "/Users/zen/Project/agent-center",
+      "role": "audit_record_only",
+      "dirty_mtime": 1780403502
+    }
+  ]
+}

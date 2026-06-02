@@ -1,0 +1,36 @@
+{
+  "agent": "codex",
+  "session_file": "/Users/zen/.codex/sessions/2026/06/02/rollout-2026-06-02T18-49-12-019e87bc-b687-7ae2-8393-cb8e7be596bd.jsonl",
+  "session_match": "cwd",
+  "session_id": "019e87bc-b687-7ae2-8393-cb8e7be596bd",
+  "session_started_at": "2026-06-02T09:49:12.200Z",
+  "session_originator": "codex-tui",
+  "session_source": "cli",
+  "turn_id": "019e8855-e18d-7db3-ba62-3f715fcfa240",
+  "is_subagent": false,
+  "model": "gpt-5.5",
+  "effort": "xhigh",
+  "cwd": "/Users/zen",
+  "session_cwd": "/Users/zen",
+  "input_tokens": 217423,
+  "cached_tokens": 216448,
+  "window_tokens": 258400,
+  "remaining_pct": 16,
+  "commands": {
+    "codex": "",
+    "claude": ""
+  },
+  "reload_instruction": "cd ~ && read .ai/HANDOFF.md",
+  "codex_profile": {
+    "config_file": "/Users/zen/.codex/config.toml",
+    "config_present": true,
+    "enable_request_compression": {
+      "state": "false",
+      "meaning": "request_body_compression_only",
+      "context_compaction_kill_switch": false
+    },
+    "handoff_first_required": true
+  },
+  "threshold": 25,
+  "below_threshold": true
+}

@@ -1,0 +1,31 @@
+{
+  "status": "available",
+  "count": 5,
+  "requests": [
+    {
+      "timestamp": "2026-06-02T12:22:40.187Z",
+      "source": "response_item",
+      "text": "우리가 wavvy 프로젝트에서 한 일을 다른 프로젝트에도 동일하고 하고 싶어. 방법을 찾아줘 /plan"
+    },
+    {
+      "timestamp": "2026-06-02T12:24:55.051Z",
+      "source": "response_item",
+      "text": "Primary repo는 wavvy"
+    },
+    {
+      "timestamp": "2026-06-02T12:27:31.961Z",
+      "source": "response_item",
+      "text": "Headless로 진행"
+    },
+    {
+      "timestamp": "2026-06-02T12:27:52.005Z",
+      "source": "response_item",
+      "text": "<hook_prompt hook_run_id=\"stop:0:/Users/zen/.codex/hooks.json\">최종 답변 차단: 전문 용어 설명 정규화 필요\n\n이전 답변 전체를 반복하지 마세요. 사용자에게 이미 보였을 수 있습니다.\n짧은 수정 메모만 제출하세요. 누락된 용어는 아래 첫 등장 위치 기준으로 설명하세요.\n\n누락 항목:\n- missing_term: headless(화면 없이 실행됨)\n  term: \"headless\"\n  first_seen:\n    line: 15\n    region: \"body\"\n    context: \"::archive{reason=\\\"context&lt;25 auto-handoff pending; headless continuation requires fresh wavvy repo session\\\"}\"\n    snippet: \"::archive{reason=\\\"context&lt;25 auto-handoff pending; headless continuation requires fresh wavvy repo session\\\"}\"\n  권장 수정: 첫 등장 위치에서 설명을 붙이세요.</hook_prompt>"
+    },
+    {
+      "timestamp": "2026-06-02T12:36:30.270Z",
+      "source": "response_item",
+      "text": "뭘 수정한거야? 쉽게 설명해봐. 왜 수정한건지도"
+    }
+  ]
+}
