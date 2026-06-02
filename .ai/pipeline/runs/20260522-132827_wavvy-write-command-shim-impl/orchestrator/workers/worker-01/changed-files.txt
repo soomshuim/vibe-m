@@ -1,2 +1,0 @@
-.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/orchestrator/workers/worker-01/runtime-output.raw.md
-.ai/pipeline/runs/20260522-132827_wavvy-write-command-shim-impl/orchestrator/workers/worker-01/runtime-prompt.md

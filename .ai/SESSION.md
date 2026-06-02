@@ -1,8 +1,15 @@
 # Session State — Wavvy
 
-> Last updated: 2026-05-22 (33차 업데이트 — 17-00 Track 01 self-spell rewrite)
+> Last updated: 2026-06-02 (34차 업데이트 — historical artifact pruning)
 
 ## 진행 중
+
+- **Historical artifact pruning** (2026-06-02 34차, `-record`)
+  - ✅ **삭제 기준 확인**: `concept.md`는 시리즈별 전곡 정보 원장으로 보존. 하네스/스킬/에이전트 라우팅 참조가 없는 과거 기록만 삭제 대상으로 분류
+  - ✅ **삭제 완료**: `.ai/auto-handoff/`, `.ai/peer-review/runs/`, 미참조 `.ai/pipeline/runs/*`, `.ai/meetings/`, `reviews/`, `Reference/`, 미참조 `meetings/*.md`, 미참조 `report/*.md`, `.ai/lessons-learned.md`
+  - ✅ **보존 확인**: `.ai/state.json`, `.ai/HANDOFF.md`, `.ai/SESSION.md`, 전체 `concept.md`, MASTER/스킬/하네스 문서, lyricist 스킬이 직접 참조하는 리서치 run 2개, 20-00 루브릭/컨셉 근거 리포트와 회의록
+  - ✅ **검증 PASS**: `py_compile`, `unittest` 15개, `doctor`, `state --check`, `validate SERIES/20-00`, `gate --stage uploaded`, `git diff --check`, `git diff --cached --check`
+  - **남은 TODO**: 없음. 향후 과거 기록이 필요하면 git history에서 확인
 
 - **17-00 Track 01 self-spell rewrite** (2026-05-22 33차)
   - ✅ **사용자 피드백 반영**: `올라가` 훅 대신 `기분 좋아져라` 셀프 주문형 콘셉트로 변경

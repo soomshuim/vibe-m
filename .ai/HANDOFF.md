@@ -1,5 +1,15 @@
 ---
 HANDOFF: Codex -> User
+Date: 2026-06-02 21:13:45 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: Pruned Wavvy historical artifacts after checking active harness, skill, and agent-routing references. Preserved `concept.md`, state/session/handoff, MASTER/skill/harness docs, lyricist baseline research runs, and 20-00 rubric/concept evidence while deleting stale auto-handoff, peer-review, pipeline, meeting, review, reference, and unreferenced report records.
+Next-TODO: 없음. Deleted records remain recoverable through git history if needed.
+Commits: (이번 커밋)
+---
+
+---
+HANDOFF: Codex -> User
 Date: 2026-04-30 23:34:54 +0900
 Project: /Users/zen/Project/wavvy
 Agent: Codex

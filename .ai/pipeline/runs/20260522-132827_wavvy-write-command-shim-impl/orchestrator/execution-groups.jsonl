@@ -1,1 +1,0 @@
-{"group":"parallel-1","planned_mode":"parallel","actual_mode":"serial","conflict_reason":"missing_write_scope","workers":"worker-01 worker-02","started_at":"2026-05-22T13:42:55+0900"}

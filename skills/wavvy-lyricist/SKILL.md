@@ -88,6 +88,7 @@ Mark each gate `PASS`, `HOLD`, or `FAIL`:
 - Copyright Safety: no copied, translated, closely paraphrased, or famous-cadence material.
 - Wavvy Identity: Korean, single-lead, chest-dominant, no harmony dependency.
 - Series DNA: matches the concept's BPM/mood/genre/vocal constraints.
+- Time Policy: direct time/activity terms are absent unless explicitly allowed by the series concept.
 - Lyric Philosophy: object/space/phenomenon based, not explanatory or slogan-driven.
 - Natural Korean: lines can be spoken and sung without awkward image stacking.
 - Hook Clarity: a compact hook exists for pop/R&B lanes, or the series concept explains why not.

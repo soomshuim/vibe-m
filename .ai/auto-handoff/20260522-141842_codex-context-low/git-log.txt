@@ -1,5 +1,0 @@
-d7ab693 chore: record auto handoff verification
-70f359a chore: auto context handoff
-3c7fd25 docs: record write command lyricist routing decision
-d0e5b9f fix: point wavvy doctor to agent-center
-d80b78e chore: record wavvy lyrics skill play artifacts

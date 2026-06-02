@@ -86,8 +86,8 @@ Purpose: 새 장르 루브릭 생성 표준
 ## Phase 4: SSOT Integration
 
 1. `MASTER/rubrics/[GENRE]_RUBRIC.md` 저장
-2. `_INDEX.md` 행 추가
-3. `CLAUDE.md` Auto Reference 추가
+2. 실제 사용처(`SERIES/[series]/concept.md` 등)에 새 루브릭 경로 명시
+3. 프로젝트 동작이 바뀌면 변경 기록(`CHANGELOG.md` 또는 회의록)에 근거와 검증 결과 기록
 
 ---
 
@@ -101,8 +101,9 @@ Purpose: 새 장르 루브릭 생성 표준
 □ 6-Factor 100점
 □ Critical Fail 규칙
 □ References URL
-□ rubrics/ 저장
-□ _INDEX.md 업데이트
+□ `MASTER/rubrics/` 저장
+□ 실제 사용처에 루브릭 경로 명시
+□ 동작 변경 시 변경 기록에 근거와 검증 결과 기록
 ```
 
 ---
