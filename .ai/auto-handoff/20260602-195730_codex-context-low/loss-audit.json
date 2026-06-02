@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "policy": "runtime_warn_release_gate_block",
+  "missing": [],
+  "checked": [
+    "guard.json",
+    "session.jsonl",
+    "git-status.txt",
+    "git-diff.patch",
+    "git-diff-staged.patch",
+    "failed-commands.jsonl",
+    "pending-user-requests.json",
+    "pending-user-requests.md",
+    "continuation-target.json",
+    "snapshot-metadata.json",
+    "user-decisions.md",
+    "HANDOFF.md",
+    "SESSION.md",
+    "resume.md",
+    "telegram-relay-context-status.json"
+  ]
+}
