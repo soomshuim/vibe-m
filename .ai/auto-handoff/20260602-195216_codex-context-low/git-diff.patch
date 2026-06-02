@@ -1,0 +1,88 @@
+diff --git a/.ai/logs/codex-handoff-events.jsonl b/.ai/logs/codex-handoff-events.jsonl
+index 4148725..a43786a 100644
+--- a/.ai/logs/codex-handoff-events.jsonl
++++ b/.ai/logs/codex-handoff-events.jsonl
+@@ -188,3 +188,23 @@
+   "continuation_max_depth": 5,
+   "message": "continuation smoke verified"
+ }
++{
++  "ts": "2026-06-02T19:52:16+0900",
++  "state": "freeze",
++  "run_id": "20260602-195216_46fff7d7",
++  "step_id": "freeze",
++  "idempotency_key": "68943f4d2de345faf30962613c5ed6c56710e3e3654d441c5fabeaa06e8eda78",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "context low handoff started"
++}
++{
++  "ts": "2026-06-02T19:52:16+0900",
++  "state": "snapshot",
++  "run_id": "20260602-195216_46fff7d7",
++  "step_id": "snapshot",
++  "idempotency_key": "68943f4d2de345faf30962613c5ed6c56710e3e3654d441c5fabeaa06e8eda78",
++  "continuation_depth": 0,
++  "continuation_max_depth": 5,
++  "message": "/Users/zen/Project/wavvy/.ai/auto-handoff/20260602-195216_codex-context-low"
++}
+diff --git a/.ai/logs/codex-handoff-latest.json b/.ai/logs/codex-handoff-latest.json
+index 51e06f5..df8e188 100644
+--- a/.ai/logs/codex-handoff-latest.json
++++ b/.ai/logs/codex-handoff-latest.json
+@@ -1,10 +1,10 @@
+ {
+-  "ts": "2026-05-22T14:22:16+0900",
+-  "state": "verified",
+-  "run_id": "20260522-142200_599119f4",
+-  "step_id": "verify",
+-  "idempotency_key": "8d679e1f224ade8ce1ad1ec6e466b97e893c07cd7189e94591f7d29bb9096077",
++  "ts": "2026-06-02T19:52:16+0900",
++  "state": "snapshot",
++  "run_id": "20260602-195216_46fff7d7",
++  "step_id": "snapshot",
++  "idempotency_key": "68943f4d2de345faf30962613c5ed6c56710e3e3654d441c5fabeaa06e8eda78",
+   "continuation_depth": 0,
+   "continuation_max_depth": 5,
+-  "message": "continuation smoke verified"
++  "message": "/Users/zen/Project/wavvy/.ai/auto-handoff/20260602-195216_codex-context-low"
+ }
+diff --git a/MASTER/rubrics/CREATION_PROCESS.md b/MASTER/rubrics/CREATION_PROCESS.md
+index c1d9e83..7cd7c4b 100644
+--- a/MASTER/rubrics/CREATION_PROCESS.md
++++ b/MASTER/rubrics/CREATION_PROCESS.md
+@@ -86,8 +86,8 @@ Purpose: 새 장르 루브릭 생성 표준
+ ## Phase 4: SSOT Integration
+ 
+ 1. `MASTER/rubrics/[GENRE]_RUBRIC.md` 저장
+-2. `_INDEX.md` 행 추가
+-3. `CLAUDE.md` Auto Reference 추가
++2. 실제 사용처(`SERIES/[series]/concept.md` 등)에 새 루브릭 경로 명시
++3. 프로젝트 동작이 바뀌면 변경 기록(`CHANGELOG.md` 또는 회의록)에 근거와 검증 결과 기록
+ 
+ ---
+ 
+@@ -101,8 +101,9 @@ Purpose: 새 장르 루브릭 생성 표준
+ □ 6-Factor 100점
+ □ Critical Fail 규칙
+ □ References URL
+-□ rubrics/ 저장
+-□ _INDEX.md 업데이트
++□ `MASTER/rubrics/` 저장
++□ 실제 사용처에 루브릭 경로 명시
++□ 동작 변경 시 변경 기록에 근거와 검증 결과 기록
+ ```
+ 
+ ---
+diff --git a/skills/wavvy-lyricist/SKILL.md b/skills/wavvy-lyricist/SKILL.md
+index 109efd2..4c82af6 100644
+--- a/skills/wavvy-lyricist/SKILL.md
++++ b/skills/wavvy-lyricist/SKILL.md
+@@ -88,6 +88,7 @@ Mark each gate `PASS`, `HOLD`, or `FAIL`:
+ - Copyright Safety: no copied, translated, closely paraphrased, or famous-cadence material.
+ - Wavvy Identity: Korean, single-lead, chest-dominant, no harmony dependency.
+ - Series DNA: matches the concept's BPM/mood/genre/vocal constraints.
++- Time Policy: direct time/activity terms are absent unless explicitly allowed by the series concept.
+ - Lyric Philosophy: object/space/phenomenon based, not explanatory or slogan-driven.
+ - Natural Korean: lines can be spoken and sung without awkward image stacking.
+ - Hook Clarity: a compact hook exists for pop/R&B lanes, or the series concept explains why not.
