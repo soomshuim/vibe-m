@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+- **20-00 policy audit final concept sync** (2026-06-03) — `-director` read-only audit에서 확인된 20-00 최종 분포 충돌을 정리. `SERIES/20-00/concept.md`의 v0.4 과거 분포 문장을 현재 v0.5/v0.8 기준(A 3 / B 5 / C 5 / D 3 / E 2 / F 2, Hard 65%)으로 보정 표기하고, `MASTER/rubrics/HARD_HIPHOP_RUBRIC.md`를 v1.5로 갱신. `MASTER/scripts/check_series_gate.sh`는 pre-final txt source draft용 legacy validator로 명시하고 S1/S2/S3/S5를 current concept 기준으로 최소 동기화. 삭제/아카이브는 수행하지 않음.
+- **20-00 series gate S2 safety correction** (2026-06-03) — reviewer 지적을 반영해 legacy `check_series_gate.sh`의 S2 BPM/체감 단계 정합을 ADVISORY로 출력하도록 보정. S2 판정 기준 SSOT는 `MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` section `S2 Advisory Disposition`.
+
 ### Added
 - **Wavvy `/write` / `-write` lyricist command shim** (2026-05-22) — `.claude/commands/write.md`를 추가해 Claude Code `/write`와 Codex `-write`를 Wavvy lyric-only thin alias로 연결. command는 가사 작성/리라이트/리뷰만 라우팅하고, 규칙은 `skills/wavvy-lyricist/SKILL.md`, `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`, `MASTER/lyrics/LYRICS.md`, `wavvy.py lyrics-skill` 하네스에 위임. YouTube copy, concept/changelog/session, 일반 문서 작성은 범위 밖으로 명시.
 - **`/write` lyricist routing team decision** (2026-05-22) — `-team` 논의로 Wavvy 작사가 호출 UX를 검토. 결론은 Claude Code에서는 `/write`, Codex에서는 `-write`를 Wavvy lyric-only thin alias로 두고, 실제 규칙은 `skills/wavvy-lyricist`와 `MASTER/lyrics/skills/WAVVY_LYRIC_SKILL_SPEC.md`에 유지하는 방향. 기록: `meetings/2026-05-22_write-command-lyricist-routing.md`.

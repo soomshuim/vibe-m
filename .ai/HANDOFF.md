@@ -956,6 +956,17 @@ Commits: auto-record attempted after this entry; check git log and result.json
 
 ---
 HANDOFF: Codex -> Codex
+Date: 2026-06-03 15:22:17 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex Director
+Summary: Completed a read-only policy/document/harness audit followed by user-approved safe mutation. The audit found one actionable SSOT consistency issue: `SERIES/20-00/concept.md` current final state is A 3 / B 5 / C 5 / D 3 / E 2 / F 2 with Hard 65%, while older v0.4 concept notes, `MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` v1.4, and `MASTER/scripts/check_series_gate.sh` still reflected A 3 / B 4 / C 5 / D 3 / E 2 / F 3 with Hard 70%. Updated the concept note to mark the old distribution superseded, updated the rubric to v1.5, marked `check_series_gate.sh` as a legacy pre-final txt source validator, aligned S1/S2/S3/S5 with the current concept, added `.ai/plans/2026-06-03_policy-audit-mutation.md`, and recorded the change in `CHANGELOG.md` / `.ai/SESSION.md`.
+Next-TODO: Run verification: `bash -n MASTER/scripts/check_series_gate.sh MASTER/scripts/check_lyric_avoid.sh`, `python3 -m py_compile wavvy.py wavvy_harness/*.py`, `python3 -m unittest tests/test_harness.py`, `python3 wavvy.py doctor --json`, `python3 wavvy.py state SERIES/20-00 --check --json`, `python3 wavvy.py gate SERIES/20-00 --stage uploaded --json`, `git diff --check`, and `git status --short --branch`. No deletion/archive was performed; do not delete `meetings/`, `report/`, or referenced `.ai/pipeline/runs` artifacts without a new manifest.
+Resume-Trigger: -wavvy
+Commits: not committed; Wavvy runtime says do not commit/push unless explicitly requested.
+---
+
+---
+HANDOFF: Codex -> Codex
 Date: 2026-06-02 19:57:30 +0900
 Project: /Users/zen/Project/wavvy
 Agent: Codex auto-handoff
@@ -1006,4 +1017,26 @@ Pending-User-Requests: /Users/zen/Project/wavvy/.ai/auto-handoff/20260602-213658
 Context-Remaining: 16%
 Clear-Required: /Users/zen/.codex/auto-handoff/clear-required.json
 Commits: auto-record attempted after this entry; check git log and result.json
+---
+
+---
+HANDOFF: Codex -> Codex
+Date: 2026-06-03 15:34:00 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: Addressed reviewer concern that the 20-00 legacy series gate mutation could weaken validation. Reconstructed the current final 20-track fixture and confirmed original HEAD `check_series_gate.sh` failed S1/S2/S3/S5. `check_series_gate.sh` now emits S2 as ADVISORY and does not count it as a hard gate. S2 decision SSOT is `MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` section `S2 Advisory Disposition`; planning/session/changelog records intentionally point there instead of restating the policy.
+Next-TODO: No code/test blocker. Verification passed: bash syntax, py_compile, unit tests, doctor/state/gate, legacy fixture check, and `git diff --check`. Uploaded gate warnings remain non-blocking: local `final.mkv`/`upload.csv` deleted after upload and `rubric_unverified_after_finalize`. Do not commit/push unless explicitly requested.
+Resume-Trigger: -wavvy
+Commits: not committed; Wavvy runtime says do not commit/push unless explicitly requested.
+---
+
+---
+HANDOFF: Codex -> Codex
+Date: 2026-06-03 16:05:30 +0900
+Project: /Users/zen/Project/wavvy
+Agent: Codex
+Summary: Recording completed Wavvy policy audit/safe mutation work. Includes 20-00 final concept sync, rubric v1.5 S2 Advisory Disposition, legacy gate script update, and audit/session/handoff records.
+Next-TODO: 없음
+Resume-Trigger: -wavvy
+Commits: (이번 커밋)
 ---

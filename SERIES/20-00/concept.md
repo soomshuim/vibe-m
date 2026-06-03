@@ -496,7 +496,7 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 ### 시리즈 PASS 기준 (20곡 기준)
 
 - [ ] S1 곡수 분포 + Hard 60% (A 3 / B 5 / C 5 / D 3 / E 2 / F 2 = 20곡, Hard 65%)
-- [ ] S2 BPM 분포 (워밍업 1-3 / 메인 8-11 / HIIT 5-7 / 쿨다운 1-3)
+- [ ] S2 BPM/체감 단계 정합 (Track Map v0.6의 워밍업/메인/HIIT/쿨다운 설명 기준. BPM 숫자만으로 단독 FAIL 금지)
 - [ ] S3 장르 완충 파형 (5곡 단위 강-약-중-강-약, Hard 사이 B/E 배치)
 - [ ] S4 시리즈 길이 60-90분
 - [ ] S5 opener/closer 체감 정합 (01 A 강한 시작, 20 B 108 BPM 최종 cooldown)
@@ -582,8 +582,8 @@ High-definition trap mix with ultra-clean, flat frequency balance, extended low-
 ## v0.4 정정 사항 (2026-04-27)
 
 1. **최종 곡수 20곡 복원** — 13곡은 현재 작업 세트, 최종은 20곡
-2. **최종 분포 확정** — A 3 / B 4 / C 5 / D 3 / E 2 / F 3 = 20곡
-3. **Hard 70% 확정** — Hard A+C+D+F 14/20 = 70%
+2. **당시 분포 확정 (v0.5에서 보정됨)** — v0.4 당시 A 3 / B 4 / C 5 / D 3 / E 2 / F 3 = 20곡이었으나, 현재 기준은 v0.5/v0.8의 A 3 / B 5 / C 5 / D 3 / E 2 / F 2 = 20곡
+3. **Hard 비율 보정 (v0.5에서 보정됨)** — v0.4 당시 Hard A+C+D+F 14/20 = 70%였으나, 현재 기준은 Hard 13/20 = 65%
 4. **보컬 성별 확정** — 남성 14 / 여성 6
 5. **최종 순서 정책 반영** — v0.6에서 강-약-중-강-약 러닝 오더 확정
 6. **가사 룰 유지** — 영어 라임 + 한글 라임, 2/4/8마디 단위 라임 통제, 타이트 랩은 8마디마다 호흡 포켓

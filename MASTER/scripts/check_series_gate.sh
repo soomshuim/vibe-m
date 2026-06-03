@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # check_series_gate.sh
-# 시리즈 단위 게이트 자동 검증 (HARD_HIPHOP_RUBRIC v1.4 S1-S7, 20곡 기준)
+# Legacy pre-final txt source draft gate validator
+# HARD_HIPHOP_RUBRIC v1.5 / 20-00 final concept sync
 #
 # 사용법:
 #   ./check_series_gate.sh <시리즈 디렉토리>
@@ -22,17 +23,17 @@
 
 set -uo pipefail
 
-# === 정책 (HARD_HIPHOP_RUBRIC v1.4, 20곡 분포) ===
+# === 정책 (HARD_HIPHOP_RUBRIC v1.5, 20곡 최종 분포) ===
 TARGET_TOTAL=20
 TARGET_A=3
-TARGET_B=4
+TARGET_B=5
 TARGET_C=5
 TARGET_D=3
 TARGET_E=2
-TARGET_F=3
+TARGET_F=2
 TARGET_MALE=14
 TARGET_FEMALE=6
-HARD_PCT_MIN=60   # Hard A+C+D+F 최소 60% (실제 v1.4 = 70%)
+HARD_PCT_MIN=60   # Hard A+C+D+F 최소 60% (현재 final concept = 65%)
 
 # BPM 영역
 WARMUP_MIN=100;  WARMUP_MAX=120
@@ -66,6 +67,7 @@ track_order() {
 # === 검증 ===
 PASS_COUNT=0
 FAIL_COUNT=0
+ADVISORY_COUNT=0
 RESULTS=""
 
 check_pass() {
@@ -78,6 +80,11 @@ check_fail() {
   RESULTS="${RESULTS}$1: FAIL$2\n"
 }
 
+check_advisory() {
+  ADVISORY_COUNT=$((ADVISORY_COUNT + 1))
+  RESULTS="${RESULTS}$1: ADVISORY$2\n"
+}
+
 main() {
   if [ $# -lt 1 ]; then
     echo "사용법: $0 <시리즈 디렉토리>" >&2
@@ -86,6 +93,7 @@ main() {
 
   local series_dir="$1"
   local tracks_dir="${series_dir%/}/input/tracks"
+  echo "WARN: check_series_gate.sh is a legacy pre-final txt validator. For source-final/uploaded state, prefer: python3 wavvy.py state/gate" >&2
 
   if [ ! -d "$tracks_dir" ]; then
     echo "ERROR: '$tracks_dir' 디렉토리 없음" >&2
@@ -178,28 +186,31 @@ main() {
     check_fail "S1 곡수 분포 + Hard 60%+" "  $s1_detail (목표: A:${TARGET_A} B:${TARGET_B} C:${TARGET_C} D:${TARGET_D} E:${TARGET_E} F:${TARGET_F} = ${TARGET_TOTAL}곡 / Hard ${HARD_PCT_MIN}%+)"
   fi
 
-  # === S2: BPM 분포 (v1.4 20곡 기준) ===
+  # === S2: BPM/체감 단계 정합 (legacy 참고) ===
   local bpm_classified=$((count_warmup + count_main + count_hiit + count_cooldown))
   local s2_detail="(워밍업:$count_warmup 메인:$count_main HIIT:$count_hiit 쿨다운:$count_cooldown = ${bpm_classified}곡)"
-  if [ "$count_warmup" -ge 1 ] && [ "$count_warmup" -le 3 ] && [ "$count_main" -ge 8 ] && [ "$count_main" -le 11 ] && [ "$count_hiit" -ge 5 ] && [ "$count_hiit" -le 7 ] && [ "$count_cooldown" -ge 1 ] && [ "$count_cooldown" -le 3 ]; then
-    check_pass "S2 BPM 분포" "  $s2_detail"
-  else
-    check_fail "S2 BPM 분포" "  $s2_detail (목표 v1.4: 워밍업 1-3 / 메인 8-11 / HIIT 5-7 / 쿨다운 1-3)"
-  fi
+  check_advisory "S2 BPM/체감 단계 정합" "  $s2_detail (legacy numeric count only; see HARD_HIPHOP_RUBRIC.md S2 Advisory Disposition)"
 
-  # === S3: A·B 인접 회피 ===
+  # === S3: 장르 완충 파형 ===
   local s3_violations=()
-  for ((i=0; i<${#seq_types[@]}-1; i++)); do
-    local cur="${seq_types[$i]}"
-    local nxt="${seq_types[$i+1]}"
-    if { [ "$cur" = "A" ] && [ "$nxt" = "B" ]; } || { [ "$cur" = "B" ] && [ "$nxt" = "A" ]; }; then
-      s3_violations+=("Track $((i+1))($cur)→Track $((i+2))($nxt)")
+  local wave_start wave_end wave_num idx has_buffer
+  for wave_start in 0 5 10 15; do
+    wave_end=$((wave_start + 4))
+    wave_num=$((wave_start / 5 + 1))
+    has_buffer=0
+    for ((idx=wave_start; idx<=wave_end && idx<total; idx++)); do
+      if [ "${seq_types[$idx]}" = "B" ] || [ "${seq_types[$idx]}" = "E" ]; then
+        has_buffer=1
+      fi
+    done
+    if [ "$has_buffer" -eq 0 ]; then
+      s3_violations+=("Wave ${wave_num}(Track $((wave_start+1))-$((wave_end+1))) has no B/E buffer")
     fi
   done
   if [ "${#s3_violations[@]}" -eq 0 ]; then
-    check_pass "S3 A·B 인접 회피" ""
+    check_pass "S3 장르 완충 파형" ""
   else
-    check_fail "S3 A·B 인접 회피" "  위반: ${s3_violations[*]}"
+    check_fail "S3 장르 완충 파형" "  위반: ${s3_violations[*]}"
   fi
 
   # === S4: 시리즈 길이 60-90분 ===
@@ -212,14 +223,17 @@ main() {
     check_fail "S4 시리즈 길이" "  $s4_detail (목표: ${LENGTH_MIN_MIN}-${LENGTH_MAX_MIN}분)"
   fi
 
-  # === S5: Track 01 = 워밍업 B축 ===
+  # === S5: Opener/Closer 체감 정합 ===
   local first_type="${seq_types[0]:-?}"
   local first_bpm="${seq_bpms[0]:-0}"
-  local s5_detail="(Track 01 ${first_type}축, BPM ${first_bpm})"
-  if [ "$first_type" = "B" ] && [ "$first_bpm" -ge "$WARMUP_MIN" ] && [ "$first_bpm" -le "$WARMUP_MAX" ]; then
-    check_pass "S5 Track 01 워밍업 B축" "  $s5_detail"
+  local s5_last_idx=$((total - 1))
+  local closer_type="${seq_types[$s5_last_idx]:-?}"
+  local closer_bpm="${seq_bpms[$s5_last_idx]:-0}"
+  local s5_detail="(Track 01 ${first_type}축, BPM ${first_bpm} / Track ${total} ${closer_type}축, BPM ${closer_bpm})"
+  if [ "$first_type" = "A" ] && [ "$first_bpm" -ge 140 ] && [ "$first_bpm" -le 180 ] && { [ "$closer_type" = "B" ] || [ "$closer_type" = "E" ]; } && [ "$closer_bpm" -ge 90 ] && [ "$closer_bpm" -le 115 ]; then
+    check_pass "S5 Opener/Closer 체감 정합" "  $s5_detail"
   else
-    check_fail "S5 Track 01 워밍업 B축" "  $s5_detail (목표: B축 BPM ${WARMUP_MIN}-${WARMUP_MAX})"
+    check_fail "S5 Opener/Closer 체감 정합" "  $s5_detail (목표: Track 01 A축 강한 시작 / Track ${total} B 또는 E + BPM 90-115)"
   fi
 
   # === S6: 마지막 2-3곡 = 멜로딕 마무리 (B+E 권장, BPM 90-115) ===
@@ -273,10 +287,10 @@ main() {
   echo ""
   local total_gates=$((PASS_COUNT + FAIL_COUNT))
   if [ "$FAIL_COUNT" -eq 0 ]; then
-    echo "종합: PASS (${PASS_COUNT}/${total_gates} 게이트)"
+    echo "종합: PASS (${PASS_COUNT}/${total_gates} hard gates, ${ADVISORY_COUNT} advisory)"
     exit 0
   else
-    echo "종합: FAIL (${FAIL_COUNT}/${total_gates} 게이트 FAIL)"
+    echo "종합: FAIL (${FAIL_COUNT}/${total_gates} hard gates FAIL, ${ADVISORY_COUNT} advisory)"
     exit 1
   fi
 }

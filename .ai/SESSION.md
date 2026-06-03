@@ -1172,6 +1172,23 @@
 - Record mode: `commit_push`
 - Continuation: headless continuation starts by default after checkpoint and must read `continuation-target.json` before older TODOs. Treat `pending-user-requests.md` as context-only prior requests unless the target file is missing. Manual resume is fallback only if `continue_action` is not `started`.
 
+### 2026-06-03 15:22:17 +0900 Policy Audit + Safe Mutation
+
+- Trigger: `-director`
+- Project: `/Users/zen/Project/wavvy`
+- Audit mode: read-only audit first, then user-approved safe mutation.
+- Scope checked: 236 document candidates (`.md`, `.txt`, `.json`, `.yml/.yaml`, `.toml`) under repo root, excluding `.git`, dependency/cache/build/vendor paths, binaries, and large media artifacts.
+- Precedence used: repository-defined `MASTER/SSOT.md` Conflict Order. `SERIES/20-00/concept.md` has higher authority than `MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` and legacy shell validators for per-series final distribution.
+- Main finding: `SERIES/20-00/concept.md` current final state says A 3 / B 5 / C 5 / D 3 / E 2 / F 2 = 20 tracks and Hard 65%, while older v0.4 notes, `HARD_HIPHOP_RUBRIC.md` v1.4, and `check_series_gate.sh` still implied A 3 / B 4 / C 5 / D 3 / E 2 / F 3 and Hard 70%.
+- Mutations:
+  - Added `.ai/plans/2026-06-03_policy-audit-mutation.md`.
+  - Marked the stale v0.4 distribution lines in `SERIES/20-00/concept.md` as superseded by v0.5/v0.8.
+  - Updated `MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` to v1.5 with current 20-00 final distribution and state/gate priority.
+  - Marked `MASTER/scripts/check_series_gate.sh` as a legacy pre-final txt source validator and aligned S1/S2/S3/S5 with current final concept.
+  - Added this session record and `CHANGELOG.md` entry.
+- Deletion/archive: none. `meetings/`, `report/`, and selected `.ai/pipeline/runs` artifacts remain referenced by current rubric or lyric pattern docs, so they were not deleted.
+- Pending verification: bash syntax, `py_compile`, unit tests, `doctor`, `state/gate`, `git diff --check`, and `git status`.
+
 ### 2026-06-02 19:57:30 +0900 Auto Context Handoff
 
 - Trigger: Codex context below `25%` (`18%` remaining)
@@ -1199,3 +1216,22 @@
 - Continuation sentinel: `/Users/zen/.codex/auto-handoff/clear-required.json`
 - Record mode: `commit_push`
 - Continuation: headless continuation starts by default after checkpoint and must read `continuation-target.json` before older TODOs. Treat `pending-user-requests.md` as context-only prior requests unless the target file is missing. Manual resume is fallback only if `continue_action` is not `started`.
+
+### 2026-06-03 15:34:00 +0900 Policy Audit Post-Review Safety Correction
+
+- Trigger: user/reviewer feedback on possible gate weakening in `MASTER/scripts/check_series_gate.sh`.
+- Evidence check: reconstructed the current 20-00 final fixture from `SERIES/20-00/concept.md`; the original HEAD script failed S1/S2/S3/S5.
+- Correction:
+  - `check_series_gate.sh` emits S2 as ADVISORY and does not count it as a hard gate.
+  - S2 decision SSOT: `MASTER/rubrics/HARD_HIPHOP_RUBRIC.md` section `S2 Advisory Disposition`.
+  - S1/S3/S5 precedence evidence is documented in the final user report for this turn.
+- Verification: bash syntax, `py_compile`, unit tests, doctor, state, uploaded gate, legacy fixture check, and `git diff --check` passed. Uploaded gate warnings remain non-blocking: local `final.mkv`/`upload.csv` deleted after upload and `rubric_unverified_after_finalize`.
+
+### 2026-06-03 16:05:30 +0900 Record
+
+- Trigger: `-record`
+- Project: `/Users/zen/Project/wavvy`
+- Mode: session record; no extra CHANGELOG entry was needed because the policy audit and S2 safety correction were already recorded in `CHANGELOG.md`.
+- Scope committed: 20-00 final concept sync, `HARD_HIPHOP_RUBRIC.md` v1.5, legacy `check_series_gate.sh` S2 advisory handling, local audit plan, SESSION/HANDOFF records.
+- Remote check: `origin/master` ahead/behind was `0/0` before commit.
+- Verification before record: bash syntax, `py_compile`, unit tests, doctor, state, uploaded gate, legacy fixture check, and `git diff --check` passed.
