@@ -42,3 +42,6 @@ SERIES/*/input/thumb.psd
 
 # Logs
 *.log
+
+# Telegram 릴레이 런타임 로그 (Stop hook 자동 생성, 추적 대상 아님)
+.ai/remote-control/direct-answer-relay/events.jsonl
